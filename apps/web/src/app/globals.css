@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta BebesFelices (Fase 2) */
+  --color-primary-700: #0f766e;
+  --color-primary-600: #0d9488;
+  --color-primary-500: #14b8a6;
+  --color-primary-100: #ccfbf1;
+  --color-primary-50: #f0fdfa;
+
+  --color-secondary-600: #ea6852;
+  --color-secondary-500: #f27d68;
+  --color-secondary-100: #fde2dc;
+
+  --color-accent-500: #f4c95d;
+  --color-accent-100: #fef3c7;
+
+  --color-text: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+
+  --font-display: var(--font-nunito-sans);
+  --font-body: var(--font-inter);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary-700);
+  --color-primary-soft: var(--color-primary-50);
+  --color-secondary: var(--color-secondary-600);
+  --color-accent: var(--color-accent-500);
+  --color-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+  --color-surface: var(--color-bg-alt);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+@keyframes home-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-up {
+  animation: home-fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: home-fade-up 0.7s ease-out 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: home-fade-up 0.7s ease-out 0.24s both;
+}
+
+.animate-kenburns {
+  animation: home-kenburns 18s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .animate-kenburns {
+    animation: none;
+  }
+}
+
+/* Anclas de páginas por edad: compensa cabecera sticky + nav rápida */
+.age-scroll-target {
+  scroll-margin-top: 7.5rem;
+}

@@ -1,0 +1,16 @@
+# Node / Next
+node_modules/
+.nvm/
+apps/web/.next/
+apps/web/out/
+
+# Maven (repo local del workspace)
+.m2/
+apps/api/target/
+
+# OS / IDE
+.DS_Store
+*.iml
+.idea/
+.vscode/
+.cursor/
