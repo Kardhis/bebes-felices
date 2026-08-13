@@ -5,3 +5,15 @@ spring:
   application:
     name: bebesfelices-api
 
+amazon:
+  creators:
+    credential-id: ${AMAZON_CREATORS_CREDENTIAL_ID:}
+    credential-secret: ${AMAZON_CREATORS_CREDENTIAL_SECRET:}
+    credential-version: ${AMAZON_CREATORS_CREDENTIAL_VERSION:3.2}
+    partner-tag: ${AMAZON_CREATORS_PARTNER_TAG:}
+    marketplace: ${AMAZON_CREATORS_MARKETPLACE:www.amazon.es}
+    api-base-url: ${AMAZON_CREATORS_API_BASE_URL:https://creatorsapi.amazon}
+    product-cache-ttl: ${AMAZON_CREATORS_PRODUCT_CACHE_TTL:1h}
+    product-asins:
+      juego-montessori-formas: ${AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN:}
+      bici-sin-pedales-basica: ${AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN:}

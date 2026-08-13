@@ -133,6 +133,36 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 | `NEXT_PUBLIC_API_BASE_URL`  | Origen de la API REST                            | `http://localhost:8080`        |
 | `NEXT_PUBLIC_SITE_URL`      | URL pública del sitio                            | `https://bebesfelices.es`      |
 
+### Amazon Creators API
+
+El backend activa automáticamente el enriquecimiento de productos cuando
+encuentra todas las credenciales necesarias. Para Amazon España, exporta las
+variables antes de arrancar Spring Boot:
+
+```bash
+export AMAZON_CREATORS_CREDENTIAL_ID="..."
+export AMAZON_CREATORS_CREDENTIAL_SECRET="..."
+export AMAZON_CREATORS_CREDENTIAL_VERSION="3.2"
+export AMAZON_CREATORS_PARTNER_TAG="..."
+export AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN="..."
+export AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN="..."
+```
+
+| Variable | Descripción | Valor por defecto |
+|----------|-------------|-------------------|
+| `AMAZON_CREATORS_CREDENTIAL_ID` | Credential ID OAuth 2.0 | Sin configurar |
+| `AMAZON_CREATORS_CREDENTIAL_SECRET` | Credential Secret OAuth 2.0 | Sin configurar |
+| `AMAZON_CREATORS_CREDENTIAL_VERSION` | Región de la credencial (`3.2` para UE) | `3.2` |
+| `AMAZON_CREATORS_PARTNER_TAG` | Tracking ID de Afiliados para Amazon España | Sin configurar |
+| `AMAZON_CREATORS_MARKETPLACE` | Marketplace consultado | `www.amazon.es` |
+| `AMAZON_CREATORS_PRODUCT_CACHE_TTL` | Tiempo de caché de productos | `1h` |
+| `AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN` | ASIN piloto para el juego Montessori | Sin configurar |
+| `AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN` | ASIN piloto para la bicicleta | Sin configurar |
+
+No guardes credenciales en el repositorio ni las expongas como variables
+`NEXT_PUBLIC_*`. Si faltan credenciales, un ASIN o Amazon no responde, la API
+sigue sirviendo el contenido editorial sin mostrar el botón de compra.
+
 ---
 
 ## Scripts disponibles
@@ -180,7 +210,8 @@ cd apps/api
 mvn test
 ```
 
-Los tests cubren clientes API, componentes clave, esquemas JSON-LD, controladores REST y el catálogo de productos.
+Los tests cubren clientes API, OAuth y mapeo de Amazon Creators, componentes
+clave, esquemas JSON-LD, controladores REST y el catálogo de productos.
 
 ---
 
@@ -227,7 +258,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 
 **Próximos pasos previstos** (según la arquitectura actual):
 
-- Integración con Amazon Creators API (`AmazonCatalogClient`)
+- Activación de Amazon Creators API con credenciales y ASIN reales
 - Persistencia de contenido / CMS
 - Páginas de categorías, guías y comparativas referenciadas en la home
 - Despliegue en producción con variables de entorno definitivas

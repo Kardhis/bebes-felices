@@ -1,12 +1,16 @@
 package com.bebesfelices.api.service;
 
+import com.bebesfelices.api.catalog.AmazonEnrichedProductCatalog;
 import com.bebesfelices.api.catalog.ManualProductCatalog;
+import com.bebesfelices.api.catalog.amazon.AmazonCreatorsProperties;
+import com.bebesfelices.api.catalog.amazon.AmazonProductSnapshot;
 import com.bebesfelices.api.dto.AgePageResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -65,6 +69,34 @@ class AgePageServiceTest {
         assertThat(page.featuredSelection()).isNotEmpty();
         assertThat(page.featuredSelection())
                 .allSatisfy(product -> assertThat(product.affiliateHref()).isNull());
+    }
+
+    @Test
+    void exposesOnlyAffiliateLinksValidatedByTheCatalog() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setCredentialId("credential-id");
+        properties.setCredentialSecret("credential-secret");
+        properties.setPartnerTag("bebesfelices-21");
+        properties.setProductAsins(Map.of("bici-sin-pedales-basica", "B012345678"));
+        AmazonEnrichedProductCatalog catalog = new AmazonEnrichedProductCatalog(
+                new ManualProductCatalog(),
+                (asin, marketplace) -> Optional.of(new AmazonProductSnapshot(
+                        asin,
+                        marketplace,
+                        "Título de Amazon",
+                        "https://www.amazon.es/dp/" + asin + "?tag=bebesfelices-21",
+                        null
+                )),
+                properties
+        );
+
+        AgePageResponse page =
+                new AgePageService(catalog).getBySlug("3-anos").orElseThrow();
+
+        assertThat(page.featuredSelection())
+                .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
+                .extracting(AgePageResponse.FeaturedProduct::affiliateHref)
+                .containsExactly("https://www.amazon.es/dp/B012345678?tag=bebesfelices-21");
     }
 
     @Test

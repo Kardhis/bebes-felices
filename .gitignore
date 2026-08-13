@@ -3,6 +3,9 @@ node_modules/
 .nvm/
 apps/web/.next/
 apps/web/out/
+.env
+.env.*
+!.env.example
 
 # Maven (repo local del workspace)
 .m2/
