@@ -64,6 +64,71 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 7, 22)
         ));
         register(new Product(
+                "bici-chicco-red-bullet",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Chicco Red Bullet",
+                "Bicicleta sin pedales para 2 a 5 años, con ruedas antipinchazos de 10 pulgadas, sillín y manillar ajustables y carga máxima de 25 kg.",
+                2, 5,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
+                "bici-kinderkraft-tove",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Kinderkraft TOVE",
+                "Bicicleta sin pedales desde 18 meses, de 2 kg, con sillín regulable de 31 a 34,5 cm, ruedas EVA, límite de giro y carga máxima de 25 kg.",
+                2, Integer.MAX_VALUE,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
+                "bici-kinderkraft-fly-plus-2",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Kinderkraft FLY PLUS 2",
+                "Bicicleta sin pedales desde 2 años, de 2,7-2,8 kg, con sillín regulable de 34 a 42 cm, ruedas de espuma de 30 cm, límite de giro y carga máxima de 35 kg.",
+                2, Integer.MAX_VALUE,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
+                "bici-kinderkraft-goswift",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Kinderkraft GOSWIFT",
+                "Bicicleta sin pedales para 3 a 6 años, de 3,8 kg, con sillín regulable de 34 a 42 cm, ruedas inflables de 30 cm y cuadro de magnesio.",
+                3, 6,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
+                "bici-puky-lr-m",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "PUKY LR M",
+                "Bicicleta sin pedales desde 2 años, de 3,5 kg, para entrepiernas de 30 a 43 cm, con sillín y manillar ajustables, ruedas EVA sin aire y reposapiés.",
+                2, Integer.MAX_VALUE,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
                 "patinete-3-ruedas",
                 ProductSource.MANUAL,
                 null,

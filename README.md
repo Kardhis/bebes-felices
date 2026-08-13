@@ -146,6 +146,11 @@ export AMAZON_CREATORS_CREDENTIAL_VERSION="3.2"
 export AMAZON_CREATORS_PARTNER_TAG="..."
 export AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN="..."
 export AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN="..."
+export AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN="B004MW55Z2"
+export AMAZON_PRODUCT_BICI_KINDERKRAFT_TOVE_ASIN="B0CF5XRJ6S"
+export AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN="B0CZTVT1DN"
+export AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN="B092JTG2YL"
+export AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN="B0DJ7DS33P"
 ```
 
 | Variable | Descripción | Valor por defecto |
@@ -158,10 +163,22 @@ export AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN="..."
 | `AMAZON_CREATORS_PRODUCT_CACHE_TTL` | Tiempo de caché de productos | `1h` |
 | `AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN` | ASIN piloto para el juego Montessori | Sin configurar |
 | `AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN` | ASIN piloto para la bicicleta | Sin configurar |
+| `AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN` | ASIN de Chicco Red Bullet | `B004MW55Z2` |
+| `AMAZON_PRODUCT_BICI_KINDERKRAFT_TOVE_ASIN` | ASIN de Kinderkraft TOVE | `B0CF5XRJ6S` |
+| `AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN` | ASIN de Kinderkraft FLY PLUS 2 | `B0CZTVT1DN` |
+| `AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN` | ASIN de Kinderkraft GOSWIFT | `B092JTG2YL` |
+| `AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN` | ASIN de PUKY LR M | `B0DJ7DS33P` |
 
 No guardes credenciales en el repositorio ni las expongas como variables
-`NEXT_PUBLIC_*`. Si faltan credenciales, un ASIN o Amazon no responde, la API
-sigue sirviendo el contenido editorial sin mostrar el botón de compra.
+`NEXT_PUBLIC_*`. El backend dispone de un fallback manual que no necesita
+Creators API: si están configurados `AMAZON_CREATORS_PARTNER_TAG` y el ASIN del
+producto, construye y valida un enlace `https://www.amazon.es/dp/{ASIN}?tag={TAG}`.
+Los cinco ASIN de la primera comparativa están verificados y configurados por
+defecto; sus variables permiten sustituirlos sin modificar el código.
+Si falta cualquiera de ellos, sirve el contenido editorial con
+`affiliateHref: null`. Cuando sí existen todas las credenciales de Creators API,
+el catálogo intenta enriquecer el producto y vuelve al mismo enlace manual si
+Amazon no responde o devuelve una URL no válida.
 
 ---
 
@@ -223,11 +240,13 @@ Base URL: `http://localhost:8080/api`
 |--------|-------------------------|------------------------------------------|
 | `GET`  | `/api/home`             | Contenido de la página de inicio         |
 | `GET`  | `/api/age-pages/{slug}` | Página hub por edad (`3-anos`, `4-anos`, `5-anos`) |
+| `GET`  | `/api/comparison-pages/{slug}` | Comparativa editorial; disponible `mejores-bicicletas-sin-pedales-3-anos` |
 
 Ejemplo:
 
 ```bash
 curl http://localhost:8080/api/age-pages/3-anos
+curl http://localhost:8080/api/comparison-pages/mejores-bicicletas-sin-pedales-3-anos
 ```
 
 En desarrollo, CORS permite peticiones desde `http://localhost:3000`.
