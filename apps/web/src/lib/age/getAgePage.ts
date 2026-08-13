@@ -16,6 +16,7 @@ export type FeaturedProduct = {
   ageRange: string;
   href: string;
   affiliateHref: string | null;
+  ctaLabel: string;
 };
 
 export type AgePageResponse = {

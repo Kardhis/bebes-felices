@@ -8,6 +8,7 @@ type FeaturedProduct = {
   ageRange: string;
   href: string;
   affiliateHref: string | null;
+  ctaLabel: string;
 };
 
 type ProductCardProps = {
@@ -43,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
           href={product.href}
           className="text-sm font-semibold text-[var(--color-primary-700)] transition group-hover:underline"
         >
-          Ver análisis completo →
+          {product.ctaLabel} →
         </Link>
       </div>
     </article>

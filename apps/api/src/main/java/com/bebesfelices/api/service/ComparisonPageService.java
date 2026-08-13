@@ -229,7 +229,7 @@ public class ComparisonPageService {
     private List<ComparisonPageResponse.Breadcrumb> breadcrumbs() {
         return List.of(
                 new ComparisonPageResponse.Breadcrumb("Inicio", "/"),
-                new ComparisonPageResponse.Breadcrumb("Comparativas", "/comparativas/"),
+                new ComparisonPageResponse.Breadcrumb("3 años", "/por-edad/3-anos/"),
                 new ComparisonPageResponse.Breadcrumb(
                         "Bicicletas sin pedales para 3 años",
                         CANONICAL_URL

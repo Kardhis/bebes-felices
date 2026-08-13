@@ -9,6 +9,7 @@ const baseProduct = {
   ageRange: "3-5 años",
   href: "/analisis/bici-sin-pedales-basica/",
   affiliateHref: null as string | null,
+  ctaLabel: "Ver análisis completo",
 };
 
 describe("ProductCard", () => {
@@ -21,6 +22,27 @@ describe("ProductCard", () => {
     const analysisLink = screen.getByRole("link", { name: /ver análisis completo/i });
     // next/link normaliza la barra final fuera del contexto de la app real.
     expect(analysisLink.getAttribute("href")).toBe(baseProduct.href.replace(/\/$/, ""));
+  });
+
+  it("uses the API-provided CTA for a product linked to a comparison", () => {
+    const comparisonHref =
+      "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet";
+
+    render(
+      <ProductCard
+        product={{
+          ...baseProduct,
+          title: "Chicco Red Bullet",
+          href: comparisonHref,
+          ctaLabel: "Ver comparativa completa",
+        }}
+      />,
+    );
+
+    expect(screen.getByRole("link", { name: /ver comparativa completa/i })).toHaveAttribute(
+      "href",
+      comparisonHref.replace("/#", "#"),
+    );
   });
 
   it("renders the sponsored Amazon button when a validated affiliate link is present", () => {

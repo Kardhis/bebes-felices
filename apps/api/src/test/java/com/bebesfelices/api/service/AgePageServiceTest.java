@@ -17,6 +17,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class AgePageServiceTest {
 
+    private static final String BALANCE_BIKES_HREF =
+            "/comparativas/mejores-bicicletas-sin-pedales-3-anos/";
     private final AgePageService service = new AgePageService(new ManualProductCatalog());
 
     @ParameterizedTest
@@ -63,6 +65,115 @@ class AgePageServiceTest {
     }
 
     @Test
+    void closesTheBalanceBikeCircuitForThreeYearOlds() {
+        AgePageResponse page = service.getBySlug("3-anos").orElseThrow();
+
+        AgePageResponse.NeedGroup movement = page.optionsByNeed().stream()
+                .filter(group -> group.anchor().equals("#para-moverse"))
+                .findFirst()
+                .orElseThrow();
+        assertThat(movement.items().get(0).href()).isEqualTo(BALANCE_BIKES_HREF);
+        assertThat(page.quickNavigation())
+                .anySatisfy(item -> {
+                    assertThat(item.label()).isEqualTo("Comparativa bicicletas");
+                    assertThat(item.anchor()).isEqualTo("#rankings-destacados");
+                });
+
+        assertThat(page.featuredSelection())
+                .noneMatch(product -> product.title().equals("Bicicleta sin pedales básica"))
+                .anySatisfy(product -> {
+                    assertThat(product.title()).isEqualTo("Chicco Red Bullet");
+                    assertThat(product.href()).isEqualTo(
+                            BALANCE_BIKES_HREF + "#producto-bici-chicco-red-bullet"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page.featuredRankings())
+                .extracting(link -> link.href())
+                .containsExactly(BALANCE_BIKES_HREF);
+        assertThat(page.featuredSelection())
+                .filteredOn(product -> !product.title().equals("Chicco Red Bullet"))
+                .allSatisfy(product -> {
+                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
+                    assertThat(product.href()).startsWith("/analisis/");
+                });
+    }
+
+    @Test
+    void keepsFourAndFiveYearOldContentUnchanged() {
+        AgePageResponse page4 = service.getBySlug("4-anos").orElseThrow();
+        AgePageResponse page5 = service.getBySlug("5-anos").orElseThrow();
+        List<String> defaultQuickNavigation = List.of(
+                "Selección destacada",
+                "Juguetes educativos",
+                "Movimiento",
+                "Autonomía",
+                "Regalos",
+                "Cómo elegir",
+                "Preguntas frecuentes"
+        );
+
+        assertThat(page4.featuredSelection())
+                .extracting(AgePageResponse.FeaturedProduct::title)
+                .containsExactly(
+                        "Juego Montessori de formas y encajes",
+                        "Puzle de madera de animales",
+                        "Bicicleta sin pedales básica",
+                        "Patinete de 3 ruedas",
+                        "Torre de aprendizaje de madera",
+                        "Set de vajilla infantil irrompible",
+                        "Set de construcción magnético",
+                        "Juego de mesa cooperativo",
+                        "Kit de manualidades con materiales naturales"
+                );
+        assertThat(page5.featuredSelection())
+                .extracting(AgePageResponse.FeaturedProduct::title)
+                .containsExactly(
+                        "Puzle de madera de animales",
+                        "Bicicleta sin pedales básica",
+                        "Torre de aprendizaje de madera",
+                        "Set de vajilla infantil irrompible",
+                        "Set de construcción magnético",
+                        "Juego de mesa cooperativo",
+                        "Kit de manualidades con materiales naturales"
+                );
+        assertThat(page4.quickNavigation())
+                .extracting(AgePageResponse.QuickNavItem::label)
+                .containsExactlyElementsOf(defaultQuickNavigation);
+        assertThat(page5.quickNavigation())
+                .extracting(AgePageResponse.QuickNavItem::label)
+                .containsExactlyElementsOf(defaultQuickNavigation);
+        assertThat(page4.featuredRankings().get(0).href())
+                .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
+        assertThat(page5.featuredRankings().get(0).href())
+                .isEqualTo("/comparativas/mejores-juguetes-stem-5-anos/");
+        assertThat(movementHref(page4)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
+        assertThat(movementHref(page5)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
+        assertThat(page4.featuredSelection())
+                .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo("/analisis/bici-sin-pedales-basica/");
+                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
+                });
+        assertThat(page5.featuredSelection())
+                .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo("/analisis/bici-sin-pedales-basica/");
+                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
+                });
+    }
+
+    private static String movementHref(AgePageResponse page) {
+        return page.optionsByNeed().stream()
+                .filter(group -> group.anchor().equals("#para-moverse"))
+                .findFirst()
+                .orElseThrow()
+                .items()
+                .get(0)
+                .href();
+    }
+
+    @Test
     void doesNotInventCommercialDataInFeaturedSelection() {
         AgePageResponse page = service.getBySlug("4-anos").orElseThrow();
 
@@ -77,7 +188,7 @@ class AgePageServiceTest {
         properties.setCredentialId("credential-id");
         properties.setCredentialSecret("credential-secret");
         properties.setPartnerTag("bebesfelices-21");
-        properties.setProductAsins(Map.of("bici-sin-pedales-basica", "B012345678"));
+        properties.setProductAsins(Map.of("bici-chicco-red-bullet", "B012345678"));
         AmazonEnrichedProductCatalog catalog = new AmazonEnrichedProductCatalog(
                 new ManualProductCatalog(),
                 (asin, marketplace) -> Optional.of(new AmazonProductSnapshot(
@@ -94,7 +205,7 @@ class AgePageServiceTest {
                 new AgePageService(catalog).getBySlug("3-anos").orElseThrow();
 
         assertThat(page.featuredSelection())
-                .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
+                .filteredOn(product -> product.title().equals("Chicco Red Bullet"))
                 .extracting(AgePageResponse.FeaturedProduct::affiliateHref)
                 .containsExactly("https://www.amazon.es/dp/B012345678?tag=bebesfelices-21");
     }

@@ -71,6 +71,14 @@ export default async function AgePage({ params }: Props) {
     title: item.title,
     href: item.href,
   }));
+  const rankingsSection = (
+    <ContentLinkSection
+      id="rankings-destacados"
+      title="Rankings destacados"
+      description="Comparativas con selección razonada para esta edad."
+      items={page.featuredRankings}
+    />
+  );
 
   return (
     <>
@@ -87,6 +95,7 @@ export default async function AgePage({ params }: Props) {
         <QuickNavigation items={page.quickNavigation} />
         <QuickSummary items={page.quickSummary} />
         <OptionsByNeed groups={page.optionsByNeed} />
+        {ageSlug === "3-anos" && rankingsSection}
         <FeaturedSelection items={page.featuredSelection} />
         <DevelopmentSkills items={page.developmentSkills} />
         <BuyingConsiderations items={page.buyingConsiderations} />
@@ -96,12 +105,7 @@ export default async function AgePage({ params }: Props) {
           description="Contexto editorial para decidir con más información antes de comprar."
           items={page.featuredGuides}
         />
-        <ContentLinkSection
-          id="rankings-destacados"
-          title="Rankings destacados"
-          description="Comparativas con selección razonada para esta edad."
-          items={page.featuredRankings}
-        />
+        {ageSlug !== "3-anos" && rankingsSection}
         <ContentLinkSection
           id="ideas-de-regalo"
           title="Ideas de regalo"

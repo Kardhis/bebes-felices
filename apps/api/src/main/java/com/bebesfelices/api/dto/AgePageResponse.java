@@ -65,7 +65,8 @@ public record AgePageResponse(
             String reason,
             String ageRange,
             String href,
-            String affiliateHref
+            String affiliateHref,
+            String ctaLabel
     ) {
     }
 

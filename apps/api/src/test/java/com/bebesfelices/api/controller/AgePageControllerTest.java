@@ -53,6 +53,21 @@ class AgePageControllerTest {
     }
 
     @Test
+    void exposesTheBalanceBikeCircuitForThreeYearOlds() throws Exception {
+        mockMvc.perform(get("/api/age-pages/3-anos"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.optionsByNeed[1].items[0].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-3-anos/"))
+                .andExpect(jsonPath("$.featuredRankings[0].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-3-anos/"))
+                .andExpect(jsonPath("$.featuredSelection[2].title").value("Chicco Red Bullet"))
+                .andExpect(jsonPath("$.featuredSelection[2].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet"))
+                .andExpect(jsonPath("$.featuredSelection[2].ctaLabel")
+                        .value("Ver comparativa completa"));
+    }
+
+    @Test
     void contentDiffersBetweenAges() throws Exception {
         String h1For3 = mockMvc.perform(get("/api/age-pages/3-anos"))
                 .andReturn().getResponse().getContentAsString();

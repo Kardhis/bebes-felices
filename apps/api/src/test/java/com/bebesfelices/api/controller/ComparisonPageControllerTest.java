@@ -41,7 +41,10 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.methodology.criteria[0].name",
                         not(isEmptyOrNullString())))
                 .andExpect(jsonPath("$.entries[*].affiliateHref",
-                        everyItem(nullValue())));
+                        everyItem(nullValue())))
+                .andExpect(jsonPath("$.breadcrumbs[1].label").value("3 años"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/3-anos/"))
+                .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/3-anos/"));
     }
 
     @Test

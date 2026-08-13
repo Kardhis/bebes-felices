@@ -52,6 +52,10 @@ class ComparisonPageServiceTest {
         assertThat(page.methodology().criteria()).hasSizeGreaterThanOrEqualTo(4);
         assertThat(page.buyingGuide().sections()).isNotEmpty();
         assertThat(page.faq()).isNotEmpty();
+        assertThat(page.breadcrumbs()).hasSize(3);
+        assertThat(page.breadcrumbs().get(1).label()).isEqualTo("3 años");
+        assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/3-anos/");
+        assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/3-anos/");
     }
 
     @Test

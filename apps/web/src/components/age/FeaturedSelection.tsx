@@ -8,6 +8,7 @@ type FeaturedProduct = {
   ageRange: string;
   href: string;
   affiliateHref: string | null;
+  ctaLabel: string;
 };
 
 type FeaturedSelectionProps = {
