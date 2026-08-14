@@ -108,9 +108,7 @@ class AgePageServiceTest {
                 "Juguetes educativos",
                 "Movimiento",
                 "Autonomía",
-                "Regalos",
-                "Cómo elegir",
-                "Preguntas frecuentes"
+                "Regalos"
         );
 
         assertThat(page4.featuredSelection())

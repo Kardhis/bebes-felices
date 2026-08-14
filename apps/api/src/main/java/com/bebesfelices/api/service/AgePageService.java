@@ -187,9 +187,7 @@ public class AgePageService {
                     new AgePageResponse.QuickNavItem("Movimiento", "#para-moverse"),
                     new AgePageResponse.QuickNavItem("Comparativa bicicletas", "#rankings-destacados"),
                     new AgePageResponse.QuickNavItem("Autonomía", "#para-autonomia"),
-                    new AgePageResponse.QuickNavItem("Regalos", "#para-regalar"),
-                    new AgePageResponse.QuickNavItem("Cómo elegir", "#como-elegir"),
-                    new AgePageResponse.QuickNavItem("Preguntas frecuentes", "#faq")
+                    new AgePageResponse.QuickNavItem("Regalos", "#para-regalar")
             );
         }
 
@@ -198,9 +196,7 @@ public class AgePageService {
                 new AgePageResponse.QuickNavItem("Juguetes educativos", "#para-aprender"),
                 new AgePageResponse.QuickNavItem("Movimiento", "#para-moverse"),
                 new AgePageResponse.QuickNavItem("Autonomía", "#para-autonomia"),
-                new AgePageResponse.QuickNavItem("Regalos", "#para-regalar"),
-                new AgePageResponse.QuickNavItem("Cómo elegir", "#como-elegir"),
-                new AgePageResponse.QuickNavItem("Preguntas frecuentes", "#faq")
+                new AgePageResponse.QuickNavItem("Regalos", "#para-regalar")
         );
     }
 

@@ -7,7 +7,7 @@ export function AffiliationNotice({ noticeText, variant = "default" }: Affiliati
   if (variant === "compact") {
     return (
       <aside
-        className="border-b border-[var(--color-border)] bg-[var(--color-accent-100)]/50"
+        className="border-y border-[var(--color-primary-100)] bg-[var(--color-primary-50)]"
         aria-label="Aviso de afiliación"
       >
         <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6">

@@ -87,16 +87,10 @@ export default async function AgePage({ params }: Props) {
         <Breadcrumbs items={page.breadcrumbs} />
         <AgePageHero
           h1={page.header.h1}
+          age={page.age}
           ageLabel={page.ageLabel}
           introductionParagraphs={page.header.introductionParagraphs}
-          shortAffiliationNotice={page.affiliation.shortNoticeText}
         />
-        <AffiliationNotice noticeText={page.affiliation.noticeText} variant="compact" />
-        <QuickNavigation items={page.quickNavigation} />
-        <QuickSummary items={page.quickSummary} />
-        <OptionsByNeed groups={page.optionsByNeed} />
-        {ageSlug === "3-anos" && rankingsSection}
-        <FeaturedSelection items={page.featuredSelection} />
         <DevelopmentSkills items={page.developmentSkills} />
         <BuyingConsiderations items={page.buyingConsiderations} />
         <ContentLinkSection
@@ -105,18 +99,24 @@ export default async function AgePage({ params }: Props) {
           description="Contexto editorial para decidir con más información antes de comprar."
           items={page.featuredGuides}
         />
+        <ContentLinkSection
+          id="articulos-informativos"
+          title="Contenidos informativos"
+          description="Artículos sobre desarrollo y expectativas a esta edad."
+          items={page.informativeArticles}
+        />
+        <AffiliationNotice noticeText={page.affiliation.noticeText} variant="compact" />
+        <QuickNavigation items={page.quickNavigation} />
+        <QuickSummary items={page.quickSummary} />
+        <OptionsByNeed groups={page.optionsByNeed} />
+        {ageSlug === "3-anos" && rankingsSection}
+        <FeaturedSelection items={page.featuredSelection} />
         {ageSlug !== "3-anos" && rankingsSection}
         <ContentLinkSection
           id="ideas-de-regalo"
           title="Ideas de regalo"
           description="Inspiración por ocasión y presupuesto, sin perder utilidad."
           items={page.giftIdeas}
-        />
-        <ContentLinkSection
-          id="articulos-informativos"
-          title="Contenidos informativos"
-          description="Artículos sobre desarrollo y expectativas a esta edad."
-          items={page.informativeArticles}
         />
         <AgeFaq items={page.faq} />
         <OtherAges items={page.otherAges} currentAgeLabel={page.ageLabel} />
