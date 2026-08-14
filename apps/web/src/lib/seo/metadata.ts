@@ -13,6 +13,14 @@ export function buildPageMetadata(seo: PageSeo): Metadata {
     alternates: {
       canonical: seo.canonicalUrl,
     },
+    openGraph: {
+      title: seo.title,
+      description: seo.metaDescription,
+      url: seo.canonicalUrl,
+      locale: "es_ES",
+      siteName: "Bebes Felices",
+      type: "website",
+    },
   };
 }
 

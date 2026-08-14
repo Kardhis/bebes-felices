@@ -90,6 +90,37 @@ export function buildItemListSchema(items: ItemListEntry[], siteUrl: string) {
   };
 }
 
+type ArticleInput = {
+  url: string;
+  name: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+};
+
+export function buildArticleSchema({
+  url,
+  name,
+  description,
+  datePublished,
+  dateModified,
+}: ArticleInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: name,
+    description,
+    url,
+    datePublished,
+    dateModified,
+    inLanguage: "es-ES",
+    publisher: {
+      "@type": "Organization",
+      name: "BebesFelices",
+    },
+  };
+}
+
 type FaqEntry = {
   question: string;
   answer: string;

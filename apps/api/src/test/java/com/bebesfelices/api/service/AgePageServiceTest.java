@@ -97,16 +97,47 @@ class AgePageServiceTest {
     }
 
     @Test
-    void keepsFourAndFiveYearOldContentUnchanged() {
+    void threeYearBodyDestinationsStayInsideThePublishedCircuit() {
+        AgePageResponse page = service.getBySlug("3-anos").orElseThrow();
+        List<String> hrefs = new java.util.ArrayList<>();
+        page.optionsByNeed().forEach(group ->
+                group.items().forEach(item -> hrefs.add(item.href())));
+        page.featuredGuides().forEach(item -> hrefs.add(item.href()));
+        page.featuredRankings().forEach(item -> hrefs.add(item.href()));
+        page.giftIdeas().forEach(item -> hrefs.add(item.href()));
+        page.informativeArticles().forEach(item -> hrefs.add(item.href()));
+        page.featuredSelection().forEach(item -> hrefs.add(item.href()));
+
+        List<String> published = List.of(
+                "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
+                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/habilidades-3-anos/",
+                "/juguetes-educativos/juegos-montessori/",
+                "/juguetes-educativos/puzles/",
+                "/movimiento/patinetes/",
+                "/autonomia/torres-de-aprendizaje/",
+                "/autonomia/vajilla-infantil/",
+                "/sostenibles/",
+                "/regalos/ideas-regalo-3-anos/",
+                "/analisis/juego-montessori-formas/",
+                "/analisis/puzle-madera-animales/",
+                "/analisis/patinete-3-ruedas/",
+                "/analisis/torre-aprendizaje-madera/",
+                "/analisis/set-vajilla-infantil/",
+                "/analisis/kit-manualidades-natural/"
+        );
+
+        assertThat(hrefs).isNotEmpty();
+        assertThat(hrefs).allSatisfy(href -> {
+            String path = href.split("#", 2)[0];
+            assertThat(published).contains(path);
+        });
+    }
+
+    @Test
+    void keepsFourAndFiveYearOldEditorialContent() {
         AgePageResponse page4 = service.getBySlug("4-anos").orElseThrow();
         AgePageResponse page5 = service.getBySlug("5-anos").orElseThrow();
-        List<String> defaultQuickNavigation = List.of(
-                "Selección destacada",
-                "Juguetes educativos",
-                "Movimiento",
-                "Autonomía",
-                "Regalos"
-        );
 
         assertThat(page4.featuredSelection())
                 .extracting(AgePageResponse.FeaturedProduct::title)
@@ -132,14 +163,10 @@ class AgePageServiceTest {
                         "Juego de mesa cooperativo",
                         "Kit de manualidades con materiales naturales"
                 );
-        assertThat(page4.quickNavigation())
-                .extracting(AgePageResponse.QuickNavItem::label)
-                .containsExactlyElementsOf(defaultQuickNavigation);
-        assertThat(page5.quickNavigation())
-                .extracting(AgePageResponse.QuickNavItem::label)
-                .containsExactlyElementsOf(defaultQuickNavigation);
-        assertThat(page4.quickSummary()).isNotEmpty();
-        assertThat(page5.quickSummary()).isNotEmpty();
+        assertThat(page4.quickNavigation()).isEmpty();
+        assertThat(page5.quickNavigation()).isEmpty();
+        assertThat(page4.quickSummary()).isEmpty();
+        assertThat(page5.quickSummary()).isEmpty();
         assertThat(page4.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
         assertThat(page5.featuredRankings().get(0).href())
@@ -231,6 +258,8 @@ class AgePageServiceTest {
             AgePageResponse page = service.getBySlug(slug).orElseThrow();
             assertThat(page.faq()).isNotEmpty();
             assertThat(page.affiliation().noticeText()).isNotBlank();
+            assertThat(page.quickNavigation()).isEmpty();
+            assertThat(page.quickSummary()).isEmpty();
         }
     }
 }

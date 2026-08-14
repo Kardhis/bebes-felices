@@ -9,8 +9,6 @@ import { DevelopmentSkills } from "@/components/age/DevelopmentSkills";
 import { FeaturedSelection } from "@/components/age/FeaturedSelection";
 import { OptionsByNeed } from "@/components/age/OptionsByNeed";
 import { OtherAges } from "@/components/age/OtherAges";
-import { QuickNavigation } from "@/components/age/QuickNavigation";
-import { QuickSummary } from "@/components/age/QuickSummary";
 import { AffiliationNotice } from "@/components/home/AffiliationNotice";
 import { SiteFooter } from "@/components/home/SiteFooter";
 import { SiteHeader } from "@/components/home/SiteHeader";
@@ -71,15 +69,6 @@ export default async function AgePage({ params }: Props) {
     title: item.title,
     href: item.href,
   }));
-  const rankingsSection = (
-    <ContentLinkSection
-      id="rankings-destacados"
-      title="Rankings destacados"
-      description="Comparativas con selección razonada para esta edad."
-      items={page.featuredRankings}
-    />
-  );
-
   return (
     <>
       <SiteHeader variant="inner" />
@@ -107,12 +96,14 @@ export default async function AgePage({ params }: Props) {
           items={page.informativeArticles}
         />
         <AffiliationNotice noticeText={page.affiliation.noticeText} variant="compact" />
-        {ageSlug !== "3-anos" && <QuickNavigation items={page.quickNavigation} />}
-        {ageSlug !== "3-anos" && <QuickSummary items={page.quickSummary} />}
         <OptionsByNeed groups={page.optionsByNeed} />
-        {ageSlug === "3-anos" && rankingsSection}
+        <ContentLinkSection
+          id="rankings-destacados"
+          title="Rankings destacados"
+          description="Comparativas con selección razonada para esta edad."
+          items={page.featuredRankings}
+        />
         <FeaturedSelection items={page.featuredSelection} />
-        {ageSlug !== "3-anos" && rankingsSection}
         <ContentLinkSection
           id="ideas-de-regalo"
           title="Ideas de regalo"

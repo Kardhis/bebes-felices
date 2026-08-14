@@ -61,7 +61,7 @@ BebesFelices/
 │   ├── web/                          # Frontend Next.js
 │   │   ├── src/
 │   │   │   ├── app/                  # App Router (páginas, sitemap, robots)
-│   │   │   ├── components/           # UI (home, age, SEO)
+│   │   │   ├── components/           # UI (home, age, comparison, editorial)
 │   │   │   └── lib/                  # Clientes API, SEO, utilidades
 │   │   └── package.json
 │   └── api/                          # Backend Spring Boot
@@ -241,12 +241,18 @@ Base URL: `http://localhost:8080/api`
 | `GET`  | `/api/home`             | Contenido de la página de inicio         |
 | `GET`  | `/api/age-pages/{slug}` | Página hub por edad (`3-anos`, `4-anos`, `5-anos`) |
 | `GET`  | `/api/comparison-pages/{slug}` | Comparativa editorial; disponible `mejores-bicicletas-sin-pedales-3-anos` |
+| `GET`  | `/api/article-pages/{slug}` | Guías y metodología (`como-elegir-juguetes-por-edad`, `habilidades-3-anos`, `como-analizamos`) |
+| `GET`  | `/api/collection-pages/{slug}` | Categorías, regalos y sostenibles del circuito de 3 años |
+| `GET`  | `/api/product-pages/{id}` | Análisis editorial de un producto del catálogo |
 
 Ejemplo:
 
 ```bash
 curl http://localhost:8080/api/age-pages/3-anos
 curl http://localhost:8080/api/comparison-pages/mejores-bicicletas-sin-pedales-3-anos
+curl http://localhost:8080/api/article-pages/habilidades-3-anos
+curl http://localhost:8080/api/collection-pages/puzles
+curl http://localhost:8080/api/product-pages/patinete-3-ruedas
 ```
 
 En desarrollo, CORS permite peticiones desde `http://localhost:3000`.
@@ -257,11 +263,11 @@ En desarrollo, CORS permite peticiones desde `http://localhost:3000`.
 
 El frontend incluye:
 
-- Metadatos dinámicos (`title`, `description`, URL canónica) por página
-- JSON-LD: `Organization`, `WebSite`, `BreadcrumbList`, `CollectionPage`, `FAQPage`, `ItemList`
+- Metadatos dinámicos (`title`, `description`, URL canónica, Open Graph) por página
+- JSON-LD: `Organization`, `WebSite`, `BreadcrumbList`, `CollectionPage`, `FAQPage`, `ItemList`, `Article`
 - `sitemap.xml` y `robots.txt` generados automáticamente
 - Rutas con barra final (`trailingSlash: true`)
-- Generación estática de páginas por edad con `generateStaticParams`
+- Generación estática de páginas por edad, comparativas, guías, colecciones y análisis con `generateStaticParams`
 
 ---
 
@@ -271,6 +277,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 
 - Home editorial con navegación por edad y categorías
 - Páginas hub completas para 3, 4 y 5 años (selección destacada, FAQ, guías, rankings)
+- Circuito editorial de 3 años: guías, categorías, regalos, análisis y metodología
 - Catálogo de productos manual en memoria
 - Avisos de afiliación Amazon visibles
 - Infraestructura de tests en frontend y backend
@@ -279,7 +286,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 
 - Activación de Amazon Creators API con credenciales y ASIN reales
 - Persistencia de contenido / CMS
-- Páginas de categorías, guías y comparativas referenciadas en la home
+- Páginas de categorías, guías y comparativas de 4 y 5 años
 - Despliegue en producción con variables de entorno definitivas
 
 ---

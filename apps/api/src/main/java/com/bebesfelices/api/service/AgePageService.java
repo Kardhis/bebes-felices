@@ -179,39 +179,12 @@ public class AgePageService {
         return new AgePageResponse.Header(h1, introductionParagraphs);
     }
 
-    private List<AgePageResponse.QuickNavItem> quickNavigationFor(int age) {
-        if (age == 3) {
-            return List.of();
-        }
-
-        return List.of(
-                new AgePageResponse.QuickNavItem("Selección destacada", "#seleccion-destacada"),
-                new AgePageResponse.QuickNavItem("Juguetes educativos", "#para-aprender"),
-                new AgePageResponse.QuickNavItem("Movimiento", "#para-moverse"),
-                new AgePageResponse.QuickNavItem("Autonomía", "#para-autonomia"),
-                new AgePageResponse.QuickNavItem("Regalos", "#para-regalar")
-        );
+    private List<AgePageResponse.QuickNavItem> quickNavigationFor(@SuppressWarnings("unused") int age) {
+        return List.of();
     }
 
-    private List<AgePageResponse.QuickSummaryItem> quickSummaryFor(int age) {
-        return switch (age) {
-            case 3 -> List.of();
-            case 4 -> List.of(
-                    new AgePageResponse.QuickSummaryItem("Avanzar en juego educativo", "Juguetes STEM y de construcción", "#para-aprender"),
-                    new AgePageResponse.QuickSummaryItem("Ganar seguridad en bicicleta sin pedales", "Bicicletas sin pedales para 4 años", "#para-moverse"),
-                    new AgePageResponse.QuickSummaryItem("Reforzar autonomía diaria", "Mobiliario y utensilios adaptados", "#para-autonomia"),
-                    new AgePageResponse.QuickSummaryItem("Buscar un regalo", "Ideas de regalo para 4 años", "#para-regalar"),
-                    new AgePageResponse.QuickSummaryItem("Elegir con seguridad", "Qué revisar antes de comprar", "#como-elegir")
-            );
-            case 5 -> List.of(
-                    new AgePageResponse.QuickSummaryItem("Plantear retos educativos", "Construcción avanzada y juegos de mesa cooperativos", "#para-aprender"),
-                    new AgePageResponse.QuickSummaryItem("Consolidar el equilibrio", "Movimiento y bicicletas sin pedales para 5 años", "#para-moverse"),
-                    new AgePageResponse.QuickSummaryItem("Ampliar la autonomía", "Tareas domésticas y organización personal", "#para-autonomia"),
-                    new AgePageResponse.QuickSummaryItem("Buscar un regalo", "Ideas de regalo para 5 años", "#para-regalar"),
-                    new AgePageResponse.QuickSummaryItem("Elegir con seguridad", "Qué revisar antes de comprar", "#como-elegir")
-            );
-            default -> throw new IllegalArgumentException("Edad no soportada: " + age);
-        };
+    private List<AgePageResponse.QuickSummaryItem> quickSummaryFor(@SuppressWarnings("unused") int age) {
+        return List.of();
     }
 
     private List<AgePageResponse.NeedGroup> optionsByNeedFor(int age) {

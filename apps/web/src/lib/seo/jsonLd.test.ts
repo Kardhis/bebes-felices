@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  buildArticleSchema,
   buildBreadcrumbListSchema,
   buildCollectionPageSchema,
   buildFaqPageSchema,
@@ -77,5 +78,22 @@ describe("buildFaqPageSchema", () => {
         acceptedAnswer: { "@type": "Answer", text: "Sí, con supervisión." },
       },
     ]);
+  });
+});
+
+describe("buildArticleSchema", () => {
+  it("builds an Article without offers or ratings", () => {
+    const schema = buildArticleSchema({
+      url: `${SITE_URL}/guias/habilidades-3-anos/`,
+      name: "Qué habilidades desarrolla un niño de 3 años",
+      description: "Desarrollo esperable a esta edad.",
+      datePublished: "2026-08-14",
+      dateModified: "2026-08-14",
+    });
+
+    expect(schema["@type"]).toBe("Article");
+    expect(schema.headline).toContain("habilidades");
+    expect(schema).not.toHaveProperty("aggregateRating");
+    expect(schema).not.toHaveProperty("offers");
   });
 });
