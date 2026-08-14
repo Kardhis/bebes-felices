@@ -181,14 +181,7 @@ public class AgePageService {
 
     private List<AgePageResponse.QuickNavItem> quickNavigationFor(int age) {
         if (age == 3) {
-            return List.of(
-                    new AgePageResponse.QuickNavItem("Selección destacada", "#seleccion-destacada"),
-                    new AgePageResponse.QuickNavItem("Juguetes educativos", "#para-aprender"),
-                    new AgePageResponse.QuickNavItem("Movimiento", "#para-moverse"),
-                    new AgePageResponse.QuickNavItem("Comparativa bicicletas", "#rankings-destacados"),
-                    new AgePageResponse.QuickNavItem("Autonomía", "#para-autonomia"),
-                    new AgePageResponse.QuickNavItem("Regalos", "#para-regalar")
-            );
+            return List.of();
         }
 
         return List.of(
@@ -202,13 +195,7 @@ public class AgePageService {
 
     private List<AgePageResponse.QuickSummaryItem> quickSummaryFor(int age) {
         return switch (age) {
-            case 3 -> List.of(
-                    new AgePageResponse.QuickSummaryItem("Aprender jugando", "Juguetes educativos y Montessori", "#para-aprender"),
-                    new AgePageResponse.QuickSummaryItem("Empezar a moverse con seguridad", "Primeras bicicletas sin pedales y patinetes estables", "#para-moverse"),
-                    new AgePageResponse.QuickSummaryItem("Ganar autonomía en casa", "Torres de aprendizaje y vajilla adaptada", "#para-autonomia"),
-                    new AgePageResponse.QuickSummaryItem("Buscar un regalo", "Ideas de regalo para 3 años", "#para-regalar"),
-                    new AgePageResponse.QuickSummaryItem("Elegir con seguridad", "Qué revisar antes de comprar", "#como-elegir")
-            );
+            case 3 -> List.of();
             case 4 -> List.of(
                     new AgePageResponse.QuickSummaryItem("Avanzar en juego educativo", "Juguetes STEM y de construcción", "#para-aprender"),
                     new AgePageResponse.QuickSummaryItem("Ganar seguridad en bicicleta sin pedales", "Bicicletas sin pedales para 4 años", "#para-moverse"),

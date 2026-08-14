@@ -73,11 +73,8 @@ class AgePageServiceTest {
                 .findFirst()
                 .orElseThrow();
         assertThat(movement.items().get(0).href()).isEqualTo(BALANCE_BIKES_HREF);
-        assertThat(page.quickNavigation())
-                .anySatisfy(item -> {
-                    assertThat(item.label()).isEqualTo("Comparativa bicicletas");
-                    assertThat(item.anchor()).isEqualTo("#rankings-destacados");
-                });
+        assertThat(page.quickNavigation()).isEmpty();
+        assertThat(page.quickSummary()).isEmpty();
 
         assertThat(page.featuredSelection())
                 .noneMatch(product -> product.title().equals("Bicicleta sin pedales básica"))
@@ -141,6 +138,8 @@ class AgePageServiceTest {
         assertThat(page5.quickNavigation())
                 .extracting(AgePageResponse.QuickNavItem::label)
                 .containsExactlyElementsOf(defaultQuickNavigation);
+        assertThat(page4.quickSummary()).isNotEmpty();
+        assertThat(page5.quickSummary()).isNotEmpty();
         assertThat(page4.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
         assertThat(page5.featuredRankings().get(0).href())

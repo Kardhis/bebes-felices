@@ -12,17 +12,28 @@ type ContentLinkSectionProps = {
   title: string;
   description?: string;
   items: LinkItem[];
+  tone?: "default" | "alt";
 };
 
-export function ContentLinkSection({ id, title, description, items }: ContentLinkSectionProps) {
+export function ContentLinkSection({
+  id,
+  title,
+  description,
+  items,
+  tone = "default",
+}: ContentLinkSectionProps) {
   if (items.length === 0) {
     return null;
   }
 
+  const isAlt = tone === "alt";
+
   return (
     <section
       id={id}
-      className="age-scroll-target border-t border-[var(--color-border)] bg-white"
+      className={`age-scroll-target border-t border-[var(--color-border)] ${
+        isAlt ? "bg-[var(--color-bg-alt)]" : "bg-white"
+      }`}
       aria-labelledby={`${id}-heading`}
     >
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14">
@@ -32,7 +43,9 @@ export function ContentLinkSection({ id, title, description, items }: ContentLin
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="group flex h-full flex-col rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-alt)] p-5 transition hover:border-[var(--color-primary-200)] hover:bg-[var(--color-primary-50)] hover:shadow-sm"
+                className={`group flex h-full flex-col rounded-xl border border-[var(--color-border)] p-5 transition hover:border-[var(--color-primary-200)] hover:bg-[var(--color-primary-50)] hover:shadow-sm ${
+                  isAlt ? "bg-white" : "bg-[var(--color-bg-alt)]"
+                }`}
               >
                 <span className="font-[family-name:var(--font-nunito-sans)] text-base font-bold text-[var(--color-primary-700)] group-hover:underline">
                   {item.title}

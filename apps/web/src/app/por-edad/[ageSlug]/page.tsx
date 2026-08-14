@@ -98,6 +98,7 @@ export default async function AgePage({ params }: Props) {
           title="Guías destacadas para esta edad"
           description="Contexto editorial para decidir con más información antes de comprar."
           items={page.featuredGuides}
+          tone="alt"
         />
         <ContentLinkSection
           id="articulos-informativos"
@@ -106,8 +107,8 @@ export default async function AgePage({ params }: Props) {
           items={page.informativeArticles}
         />
         <AffiliationNotice noticeText={page.affiliation.noticeText} variant="compact" />
-        <QuickNavigation items={page.quickNavigation} />
-        <QuickSummary items={page.quickSummary} />
+        {ageSlug !== "3-anos" && <QuickNavigation items={page.quickNavigation} />}
+        {ageSlug !== "3-anos" && <QuickSummary items={page.quickSummary} />}
         <OptionsByNeed groups={page.optionsByNeed} />
         {ageSlug === "3-anos" && rankingsSection}
         <FeaturedSelection items={page.featuredSelection} />
