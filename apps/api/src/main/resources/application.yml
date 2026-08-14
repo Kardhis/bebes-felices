@@ -15,10 +15,15 @@ amazon:
     api-base-url: ${AMAZON_CREATORS_API_BASE_URL:https://creatorsapi.amazon}
     product-cache-ttl: ${AMAZON_CREATORS_PRODUCT_CACHE_TTL:1h}
     product-asins:
-      juego-montessori-formas: ${AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN:}
+      juego-montessori-formas: ${AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN:B095H1CPCD}
+      puzle-madera-animales: ${AMAZON_PRODUCT_PUZLE_MADERA_ANIMALES_ASIN:B00HWHNNRG}
       bici-sin-pedales-basica: ${AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN:}
       bici-chicco-red-bullet: ${AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN:B004MW55Z2}
       bici-kinderkraft-tove: ${AMAZON_PRODUCT_BICI_KINDERKRAFT_TOVE_ASIN:B0CF5XRJ6S}
       bici-kinderkraft-fly-plus-2: ${AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN:B0CZTVT1DN}
       bici-kinderkraft-goswift: ${AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN:B092JTG2YL}
       bici-puky-lr-m: ${AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN:B0DJ7DS33P}
+      patinete-3-ruedas: ${AMAZON_PRODUCT_PATINETE_3_RUEDAS_ASIN:B09PRNX4HX}
+      torre-aprendizaje-madera: ${AMAZON_PRODUCT_TORRE_APRENDIZAJE_MADERA_ASIN:B0B7RFPP5Z}
+      set-vajilla-infantil: ${AMAZON_PRODUCT_SET_VAJILLA_INFANTIL_ASIN:B0CZTZ917D}
+      kit-manualidades-natural: ${AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN:B0015XJUV6}

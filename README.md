@@ -144,13 +144,18 @@ export AMAZON_CREATORS_CREDENTIAL_ID="..."
 export AMAZON_CREATORS_CREDENTIAL_SECRET="..."
 export AMAZON_CREATORS_CREDENTIAL_VERSION="3.2"
 export AMAZON_CREATORS_PARTNER_TAG="..."
-export AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN="..."
+export AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN="B095H1CPCD"
+export AMAZON_PRODUCT_PUZLE_MADERA_ANIMALES_ASIN="B00HWHNNRG"
 export AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN="..."
 export AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN="B004MW55Z2"
 export AMAZON_PRODUCT_BICI_KINDERKRAFT_TOVE_ASIN="B0CF5XRJ6S"
 export AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN="B0CZTVT1DN"
 export AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN="B092JTG2YL"
 export AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN="B0DJ7DS33P"
+export AMAZON_PRODUCT_PATINETE_3_RUEDAS_ASIN="B09PRNX4HX"
+export AMAZON_PRODUCT_TORRE_APRENDIZAJE_MADERA_ASIN="B0B7RFPP5Z"
+export AMAZON_PRODUCT_SET_VAJILLA_INFANTIL_ASIN="B0CZTZ917D"
+export AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN="B0015XJUV6"
 ```
 
 | Variable | Descripción | Valor por defecto |
@@ -161,20 +166,26 @@ export AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN="B0DJ7DS33P"
 | `AMAZON_CREATORS_PARTNER_TAG` | Tracking ID de Afiliados para Amazon España | Sin configurar |
 | `AMAZON_CREATORS_MARKETPLACE` | Marketplace consultado | `www.amazon.es` |
 | `AMAZON_CREATORS_PRODUCT_CACHE_TTL` | Tiempo de caché de productos | `1h` |
-| `AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN` | ASIN piloto para el juego Montessori | Sin configurar |
-| `AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN` | ASIN piloto para la bicicleta | Sin configurar |
+| `AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN` | ASIN del juego Montessori de formas | `B095H1CPCD` |
+| `AMAZON_PRODUCT_PUZLE_MADERA_ANIMALES_ASIN` | ASIN del puzle de madera de animales | `B00HWHNNRG` |
+| `AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN` | ASIN piloto para la bicicleta genérica | Sin configurar |
 | `AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN` | ASIN de Chicco Red Bullet | `B004MW55Z2` |
 | `AMAZON_PRODUCT_BICI_KINDERKRAFT_TOVE_ASIN` | ASIN de Kinderkraft TOVE | `B0CF5XRJ6S` |
 | `AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN` | ASIN de Kinderkraft FLY PLUS 2 | `B0CZTVT1DN` |
 | `AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN` | ASIN de Kinderkraft GOSWIFT | `B092JTG2YL` |
 | `AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN` | ASIN de PUKY LR M | `B0DJ7DS33P` |
+| `AMAZON_PRODUCT_PATINETE_3_RUEDAS_ASIN` | ASIN del patinete de 3 ruedas | `B09PRNX4HX` |
+| `AMAZON_PRODUCT_TORRE_APRENDIZAJE_MADERA_ASIN` | ASIN de la torre de aprendizaje | `B0B7RFPP5Z` |
+| `AMAZON_PRODUCT_SET_VAJILLA_INFANTIL_ASIN` | ASIN del set de vajilla infantil | `B0CZTZ917D` |
+| `AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN` | ASIN del kit de manualidades | `B0015XJUV6` |
 
 No guardes credenciales en el repositorio ni las expongas como variables
 `NEXT_PUBLIC_*`. El backend dispone de un fallback manual que no necesita
 Creators API: si están configurados `AMAZON_CREATORS_PARTNER_TAG` y el ASIN del
 producto, construye y valida un enlace `https://www.amazon.es/dp/{ASIN}?tag={TAG}`.
-Los cinco ASIN de la primera comparativa están verificados y configurados por
-defecto; sus variables permiten sustituirlos sin modificar el código.
+Los ASIN de la comparativa de bicicletas y de la selección destacada de 3 años
+están verificados y configurados por defecto; sus variables permiten
+sustituirlos sin modificar el código.
 Si falta cualquiera de ellos, sirve el contenido editorial con
 `affiliateHref: null`. Cuando sí existen todas las credenciales de Creators API,
 el catálogo intenta enriquecer el producto y vuelve al mismo enlace manual si

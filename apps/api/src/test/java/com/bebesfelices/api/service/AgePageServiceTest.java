@@ -235,6 +235,41 @@ class AgePageServiceTest {
     }
 
     @Test
+    void createsManualAffiliateLinksForTheThreeYearFeaturedSelection() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setPartnerTag("bebesfelice0c-21");
+        properties.setProductAsins(Map.of(
+                "juego-montessori-formas", "B095H1CPCD",
+                "puzle-madera-animales", "B00HWHNNRG",
+                "bici-chicco-red-bullet", "B004MW55Z2",
+                "patinete-3-ruedas", "B09PRNX4HX",
+                "torre-aprendizaje-madera", "B0B7RFPP5Z",
+                "set-vajilla-infantil", "B0CZTZ917D",
+                "kit-manualidades-natural", "B0015XJUV6"
+        ));
+        AmazonEnrichedProductCatalog catalog = new AmazonEnrichedProductCatalog(
+                new ManualProductCatalog(),
+                (asin, marketplace) -> Optional.empty(),
+                properties
+        );
+
+        AgePageResponse page =
+                new AgePageService(catalog).getBySlug("3-anos").orElseThrow();
+
+        assertThat(page.featuredSelection())
+                .extracting(AgePageResponse.FeaturedProduct::affiliateHref)
+                .containsExactly(
+                        "https://www.amazon.es/dp/B095H1CPCD?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B00HWHNNRG?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B004MW55Z2?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B0B7RFPP5Z?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B0CZTZ917D?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B0015XJUV6?tag=bebesfelice0c-21"
+                );
+    }
+
+    @Test
     void breadcrumbsHaveHomeAgeHubAndCurrentAge() {
         AgePageResponse page = service.getBySlug("5-anos").orElseThrow();
 
