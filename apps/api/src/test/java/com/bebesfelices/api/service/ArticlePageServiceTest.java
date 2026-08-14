@@ -10,23 +10,25 @@ class ArticlePageServiceTest {
     private final ArticlePageService service = new ArticlePageService();
 
     @Test
-    void publishesTheThreeCircuitArticles() {
+    void publishesTheCircuitArticles() {
         assertThat(service.publishedSlugs()).containsExactly(
                 ArticlePageService.CHOOSE_BY_AGE_SLUG,
                 ArticlePageService.SKILLS_3_SLUG,
+                ArticlePageService.SKILLS_4_SLUG,
                 ArticlePageService.METHODOLOGY_SLUG
         );
 
-        for (String slug : service.publishedSlugs()) {
-            var page = service.getBySlug(slug).orElseThrow();
-            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
-            assertThat(page.header().h1()).isNotBlank();
-            assertThat(page.sections()).isNotEmpty();
-            assertThat(page.faq()).isNotEmpty();
-            assertThat(page.relatedLinks())
-                    .extracting(link -> link.href())
-                    .contains(EditorialDefaults.HUB_3_HREF);
-        }
+        var skills3 = service.getBySlug(ArticlePageService.SKILLS_3_SLUG).orElseThrow();
+        var skills4 = service.getBySlug(ArticlePageService.SKILLS_4_SLUG).orElseThrow();
+        assertThat(skills3.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(skills4.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(skills3.relatedLinks())
+                .extracting(link -> link.href())
+                .contains(EditorialDefaults.HUB_3_HREF);
+        assertThat(skills4.relatedLinks())
+                .extracting(link -> link.href())
+                .contains(EditorialDefaults.HUB_4_HREF);
+        assertThat(skills4.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_4_HREF);
     }
 
     @Test

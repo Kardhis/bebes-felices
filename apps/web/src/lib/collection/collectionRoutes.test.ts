@@ -10,17 +10,22 @@ describe("collectionRoutes", () => {
     expect(collectionsForPrefix("juguetes-educativos")).toEqual([
       "juegos-montessori",
       "puzles",
+      "juegos-stem",
     ]);
-    expect(collectionsForPrefix("movimiento")).toEqual(["patinetes"]);
+    expect(collectionsForPrefix("movimiento")).toEqual([
+      "patinetes",
+      "bicicletas-sin-pedales",
+    ]);
     expect(isCollectionSlugForPrefix("autonomia", "vajilla-infantil")).toBe(
       true,
     );
     expect(isCollectionSlug("sostenibles")).toBe(true);
     expect(isCollectionSlug("ideas-regalo-3-anos")).toBe(true);
+    expect(isCollectionSlug("ideas-regalo-4-anos")).toBe(true);
   });
 
   it("rejects a valid slug on the wrong prefix", () => {
     expect(isCollectionSlugForPrefix("movimiento", "puzles")).toBe(false);
-    expect(isCollectionSlug("bicicletas-sin-pedales")).toBe(false);
+    expect(isCollectionSlug("juegos-de-mesa")).toBe(false);
   });
 });

@@ -5,6 +5,8 @@ export const ANALYSIS_PRODUCT_IDS = [
   "torre-aprendizaje-madera",
   "set-vajilla-infantil",
   "kit-manualidades-natural",
+  "set-construccion-magnetico",
+  "bici-sin-pedales-basica",
 ] as const;
 
 export type AnalysisProductId = (typeof ANALYSIS_PRODUCT_IDS)[number];

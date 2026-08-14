@@ -146,4 +146,178 @@ class ComparisonPageServiceTest {
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
                 .containsExactly(1, 2, 3, 4);
     }
+
+    @Test
+    void buildsThePublishedBoardGameComparisonForFourYearOlds() {
+        ComparisonPageResponse page = new ComparisonPageService(new ManualProductCatalog())
+                .getBySlug(ComparisonPageService.BOARD_GAMES_SLUG)
+                .orElseThrow();
+
+        assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(page.targetAge()).isEqualTo(4);
+        assertThat(page.updatedAt()).isEqualTo("2026-08-14");
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "juego-mesa-el-frutal-mini",
+                        "juego-mesa-unicornio-tesoro",
+                        "juego-mesa-animal-sobre-animal",
+                        "juego-mesa-dobble-kids",
+                        "juego-mesa-unicornio-fiesta-rosalie"
+                );
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
+                .containsExactly(1, 2, 3, 4, 5);
+        assertThat(page.entries()).allSatisfy(entry -> {
+            assertThat(entry.title()).isNotBlank();
+            assertThat(entry.pros()).isNotEmpty();
+            assertThat(entry.cons()).isNotEmpty();
+            assertThat(entry.affiliateHref()).isNull();
+        });
+        assertThat(page.breadcrumbs().get(1).label()).isEqualTo("4 años");
+        assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/4-anos/");
+    }
+
+    @Test
+    void buildsThePublishedScooterComparisonForFourYearOlds() {
+        ComparisonPageResponse page = new ComparisonPageService(new ManualProductCatalog())
+                .getBySlug(ComparisonPageService.SCOOTERS_SLUG)
+                .orElseThrow();
+
+        assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(page.targetAge()).isEqualTo(4);
+        assertThat(page.updatedAt()).isEqualTo("2026-08-14");
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "patinete-micro-mini-deluxe",
+                        "patinete-molto-maxi",
+                        "patinete-globber-junior-foldable",
+                        "patinete-globber-master-lights",
+                        "triciclo-chicco-u-go"
+                );
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
+                .containsExactly(1, 2, 3, 4, 5);
+        assertThat(page.entries()).allSatisfy(entry -> {
+            assertThat(entry.title()).isNotBlank();
+            assertThat(entry.pros()).isNotEmpty();
+            assertThat(entry.cons()).isNotEmpty();
+            assertThat(entry.affiliateHref()).isNull();
+        });
+        assertThat(page.header().h1()).isEqualTo("Mejores patinetes y triciclos para 4 años");
+        assertThat(page.breadcrumbs().get(1).label()).isEqualTo("4 años");
+        assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/4-anos/");
+    }
+
+    @Test
+    void buildsThePublishedFourYearAutonomyAndSustainableComparisons() {
+        ComparisonPageService service = new ComparisonPageService(new ManualProductCatalog());
+
+        ComparisonPageResponse towers = service.getBySlug(ComparisonPageService.TOWERS_SLUG).orElseThrow();
+        ComparisonPageResponse tableware = service.getBySlug(ComparisonPageService.TABLEWARE_SLUG).orElseThrow();
+        ComparisonPageResponse sustainable = service.getBySlug(ComparisonPageService.SUSTAINABLE_SLUG).orElseThrow();
+
+        assertThat(towers.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "torre-yoleo-transformer",
+                        "torre-bianconiglio-evo",
+                        "torre-kleiner-riese",
+                        "torre-bey-co",
+                        "torre-bianconiglio-transformer"
+                );
+        assertThat(tableware.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "vajilla-twistshake-dividido",
+                        "vajilla-stor-mickey",
+                        "vaso-munchkin-miracle-360",
+                        "vajilla-fun-house",
+                        "cuenco-twistshake-tapa"
+                );
+        assertThat(sustainable.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "small-foot-grua",
+                        "green-toys-construccion"
+                );
+        assertThat(List.of(towers, tableware, sustainable)).allSatisfy(page -> {
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.targetAge()).isEqualTo(4);
+            assertThat(page.entries()).hasSize(5);
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+            assertThat(page.entries()).allSatisfy(entry -> assertThat(entry.affiliateHref()).isNull());
+        });
+    }
+
+    @Test
+    void createsManualAffiliateLinksForBoardGamesWithoutCallingCreatorsApi() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setPartnerTag("bebesfelices-21");
+        properties.setProductAsins(Map.of(
+                "juego-mesa-el-frutal-mini", "B08R3YTDPQ",
+                "juego-mesa-unicornio-tesoro", "B01MRA4YCR",
+                "juego-mesa-animal-sobre-animal", "B00D6J9SJQ",
+                "juego-mesa-dobble-kids", "B00OM7VIC6",
+                "juego-mesa-unicornio-fiesta-rosalie", "B06XCLF568"
+        ));
+        AtomicInteger creatorsApiCalls = new AtomicInteger();
+        ProductCatalog catalog = new AmazonEnrichedProductCatalog(
+                new ManualProductCatalog(),
+                (asin, marketplace) -> {
+                    creatorsApiCalls.incrementAndGet();
+                    return Optional.empty();
+                },
+                properties
+        );
+
+        ComparisonPageResponse page = new ComparisonPageService(catalog)
+                .getBySlug(ComparisonPageService.BOARD_GAMES_SLUG)
+                .orElseThrow();
+
+        assertThat(creatorsApiCalls).hasValue(0);
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
+                .containsExactly(
+                        "https://www.amazon.es/dp/B08R3YTDPQ?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B01MRA4YCR?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B00D6J9SJQ?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B00OM7VIC6?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B06XCLF568?tag=bebesfelices-21"
+                );
+    }
+
+    @Test
+    void createsManualAffiliateLinksForScootersWithoutCallingCreatorsApi() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setPartnerTag("bebesfelices-21");
+        properties.setProductAsins(Map.of(
+                "patinete-micro-mini-deluxe", "B09PRNX4HX",
+                "patinete-molto-maxi", "B09WMPSMM4",
+                "patinete-globber-junior-foldable", "B09CQDGBJ3",
+                "patinete-globber-master-lights", "B08G19X6GK",
+                "triciclo-chicco-u-go", "B00URLWKYG"
+        ));
+        AtomicInteger creatorsApiCalls = new AtomicInteger();
+        ProductCatalog catalog = new AmazonEnrichedProductCatalog(
+                new ManualProductCatalog(),
+                (asin, marketplace) -> {
+                    creatorsApiCalls.incrementAndGet();
+                    return Optional.empty();
+                },
+                properties
+        );
+
+        ComparisonPageResponse page = new ComparisonPageService(catalog)
+                .getBySlug(ComparisonPageService.SCOOTERS_SLUG)
+                .orElseThrow();
+
+        assertThat(creatorsApiCalls).hasValue(0);
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
+                .containsExactly(
+                        "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B09WMPSMM4?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B09CQDGBJ3?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B08G19X6GK?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B00URLWKYG?tag=bebesfelices-21"
+                );
+    }
 }

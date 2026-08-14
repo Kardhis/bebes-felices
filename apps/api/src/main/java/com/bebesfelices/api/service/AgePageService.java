@@ -29,8 +29,23 @@ public class AgePageService {
     private static final String PUBLISHED_AT = "2026-08-11";
     private static final String UPDATED_AT = "2026-08-11";
     private static final String BALANCE_BIKE_SPOTLIGHT_ID = "bici-chicco-red-bullet";
+    private static final String BOARD_GAME_SPOTLIGHT_ID = "juego-mesa-el-frutal-mini";
+    private static final String SCOOTER_SPOTLIGHT_ID = "patinete-micro-mini-deluxe";
+    private static final String TOWER_SPOTLIGHT_ID = "torre-yoleo-transformer";
+    private static final String TABLEWARE_SPOTLIGHT_ID = "vajilla-twistshake-dividido";
+    private static final String SUSTAINABLE_SPOTLIGHT_ID = "cuentas-melissa-doug";
     private static final String BALANCE_BIKES_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.BALANCE_BIKES_SLUG + "/";
+    private static final String BOARD_GAMES_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.BOARD_GAMES_SLUG + "/";
+    private static final String SCOOTERS_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SCOOTERS_SLUG + "/";
+    private static final String TOWERS_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TOWERS_SLUG + "/";
+    private static final String TABLEWARE_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TABLEWARE_SLUG + "/";
+    private static final String SUSTAINABLE_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SUSTAINABLE_SLUG + "/";
 
     private static final List<String> ALL_PRODUCT_IDS = List.of(
             "juego-montessori-formas",
@@ -51,6 +66,17 @@ public class AgePageService {
             "torre-aprendizaje-madera",
             "set-vajilla-infantil",
             "kit-manualidades-natural"
+    );
+    private static final List<String> AGE_4_PRODUCT_IDS = List.of(
+            "juego-montessori-formas",
+            "puzle-madera-animales",
+            "bici-sin-pedales-basica",
+            SCOOTER_SPOTLIGHT_ID,
+            TOWER_SPOTLIGHT_ID,
+            TABLEWARE_SPOTLIGHT_ID,
+            "set-construccion-magnetico",
+            BOARD_GAME_SPOTLIGHT_ID,
+            SUSTAINABLE_SPOTLIGHT_ID
     );
 
     private static final Map<Integer, String> AGE_LABELS = Map.of(
@@ -211,19 +237,19 @@ public class AgePageService {
             case 4 -> List.of(
                     new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
                             new LinkItem("Sets de construcción magnética", "/juguetes-educativos/juegos-stem/", "Lógica espacial y estructuras estables."),
-                            new LinkItem("Juegos de mesa cooperativos", "/juguetes-educativos/juegos-de-mesa/", "Turnos, reglas sencillas y partidas cortas.")
+                            new LinkItem("Juegos de mesa cooperativos", BOARD_GAMES_COMPARISON_HREF, "Comparativa de opciones cooperativas y de turnos cortos.")
                     )),
                     new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
                             new LinkItem("Bicicletas sin pedales para ganar seguridad", "/movimiento/bicicletas-sin-pedales/", "Modelos para consolidar el equilibrio antes de la bici con pedales."),
-                            new LinkItem("Patinetes y triciclos", "/movimiento/patinetes/", "Más autonomía en el juego activo al aire libre.")
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo para más autonomía al aire libre.")
                     )),
                     new AgePageResponse.NeedGroup("Para ganar autonomía", "#para-autonomia", List.of(
-                            new LinkItem("Mobiliario infantil adaptado", "/autonomia/torres-de-aprendizaje/", "Participación en tareas domésticas con seguridad."),
-                            new LinkItem("Utensilios para la rutina diaria", "/autonomia/vajilla-infantil/", "Comer, vestirse y ordenar con menos ayuda.")
+                            new LinkItem("Mobiliario infantil adaptado", TOWERS_COMPARISON_HREF, "Comparativa de torres de aprendizaje para participar en la cocina con seguridad."),
+                            new LinkItem("Utensilios para la rutina diaria", TABLEWARE_COMPARISON_HREF, "Comparativa de vajilla y vasos para comer y beber con menos ayuda.")
                     )),
                     new AgePageResponse.NeedGroup("Para regalar", "#para-regalar", List.of(
                             new LinkItem("Ideas de regalo para 4 años", giftHref, "Selección por ocasión y presupuesto."),
-                            new LinkItem("Regalos sostenibles", "/sostenibles/", "Opciones más duraderas y materiales responsables.")
+                            new LinkItem("Regalos sostenibles", SUSTAINABLE_COMPARISON_HREF, "Comparativa de madera certificada y plástico reciclado.")
                     ))
             );
             case 5 -> List.of(
@@ -249,7 +275,11 @@ public class AgePageService {
     }
 
     private List<AgePageResponse.FeaturedProduct> featuredSelectionFor(int age) {
-        List<String> productIds = age == 3 ? AGE_3_PRODUCT_IDS : ALL_PRODUCT_IDS;
+        List<String> productIds = switch (age) {
+            case 3 -> AGE_3_PRODUCT_IDS;
+            case 4 -> AGE_4_PRODUCT_IDS;
+            default -> ALL_PRODUCT_IDS;
+        };
         return productCatalog.findByIds(productIds).stream()
                 .filter(product -> product.isAvailableForAge(age))
                 .map(product -> toFeaturedProduct(product, age))
@@ -260,20 +290,41 @@ public class AgePageService {
         String affiliateHref = product.hasValidatedAffiliateLink()
                 ? product.affiliateLink().url()
                 : null;
-        boolean linksToComparison = age == 3 && product.id().equals(BALANCE_BIKE_SPOTLIGHT_ID);
+        String comparisonHref = comparisonHrefFor(product.id(), age);
+        boolean linksToComparison = comparisonHref != null;
         String href = linksToComparison
-                ? BALANCE_BIKES_COMPARISON_HREF + "#producto-" + product.id()
+                ? comparisonHref + "#producto-" + product.id()
                 : "/analisis/" + product.id() + "/";
         String ctaLabel = linksToComparison ? "Ver comparativa completa" : "Ver análisis completo";
+        String ageRange = product.maxAge() == Integer.MAX_VALUE
+                ? "Desde " + product.minAge() + " años"
+                : product.minAge() + "-" + product.maxAge() + " años";
         return new AgePageResponse.FeaturedProduct(
                 product.title(),
                 product.categories().get(0),
                 reasonFor(product.id()),
-                product.minAge() + "-" + product.maxAge() + " años",
+                ageRange,
                 href,
                 affiliateHref,
                 ctaLabel
         );
+    }
+
+    private String comparisonHrefFor(String productId, int age) {
+        if (age == 3 && BALANCE_BIKE_SPOTLIGHT_ID.equals(productId)) {
+            return BALANCE_BIKES_COMPARISON_HREF;
+        }
+        if (age != 4) {
+            return null;
+        }
+        return switch (productId) {
+            case BOARD_GAME_SPOTLIGHT_ID -> BOARD_GAMES_COMPARISON_HREF;
+            case SCOOTER_SPOTLIGHT_ID -> SCOOTERS_COMPARISON_HREF;
+            case TOWER_SPOTLIGHT_ID -> TOWERS_COMPARISON_HREF;
+            case TABLEWARE_SPOTLIGHT_ID -> TABLEWARE_COMPARISON_HREF;
+            case SUSTAINABLE_SPOTLIGHT_ID -> SUSTAINABLE_COMPARISON_HREF;
+            default -> null;
+        };
     }
 
     private String reasonFor(String productId) {
@@ -282,6 +333,11 @@ public class AgePageService {
             case "puzle-madera-animales" -> "Piezas grandes y resistentes, ideales para practicar motricidad fina sin piezas pequeñas de riesgo.";
             case "bici-sin-pedales-basica" -> "Cuadro ligero y sillín regulable en altura, pensado para progresar en equilibrio de forma segura.";
             case BALANCE_BIKE_SPOTLIGHT_ID -> "Una bicicleta ligera con sillín y manillar ajustables, incluida en nuestra comparativa para iniciarse con seguridad.";
+            case BOARD_GAME_SPOTLIGHT_ID -> "Un cooperativo de reglas mínimas, con fruta de madera y un cuervo al que hay que adelantarse, incluido en nuestra comparativa para 4 años.";
+            case SCOOTER_SPOTLIGHT_ID -> "Un patinete ligero de tres ruedas con giro por inclinación, incluido en nuestra comparativa para moverse de pie con más autonomía.";
+            case TOWER_SPOTLIGHT_ID -> "Torre plegable convertible en escritorio, incluida en nuestra comparativa para participar en la cocina con un adulto.";
+            case TABLEWARE_SPOTLIGHT_ID -> "Plato con compartimentos y tapa, incluido en nuestra comparativa para comer con más autonomía.";
+            case SUSTAINABLE_SPOTLIGHT_ID -> "Cuentas de madera para ensartar y contar, incluidas en nuestra comparativa de regalos de materiales declarados.";
             case "patinete-3-ruedas" -> "Base de tres ruedas que aporta estabilidad extra mientras se afianza el equilibrio.";
             case "torre-aprendizaje-madera" -> "Plataforma con barandilla que permite participar en la cocina con una altura segura y regulable.";
             case "set-vajilla-infantil" -> "Piezas irrompibles y de tamaño adaptado para practicar comer de forma autónoma.";
@@ -366,11 +422,33 @@ public class AgePageService {
                     BALANCE_BIKES_COMPARISON_HREF,
                     "Comparativa por seguridad, talla y facilidad de uso."
             ));
-            case 4 -> List.of(new LinkItem(
-                    "Mejores juegos de mesa para 4 años",
-                    "/comparativas/mejores-juegos-de-mesa-4-anos/",
-                    "Opciones cooperativas y de turnos cortos."
-            ));
+            case 4 -> List.of(
+                    new LinkItem(
+                            "Mejores juegos de mesa para 4 años",
+                            BOARD_GAMES_COMPARISON_HREF,
+                            "Opciones cooperativas y de turnos cortos."
+                    ),
+                    new LinkItem(
+                            "Mejores patinetes y triciclos para 4 años",
+                            SCOOTERS_COMPARISON_HREF,
+                            "Tres ruedas de pie o triciclo sentado, según la necesidad."
+                    ),
+                    new LinkItem(
+                            "Mejores torres de aprendizaje para 4 años",
+                            TOWERS_COMPARISON_HREF,
+                            "Estabilidad, altura y plegado para la cocina."
+                    ),
+                    new LinkItem(
+                            "Mejores vajillas infantiles para 4 años",
+                            TABLEWARE_COMPARISON_HREF,
+                            "Platos, vasos y cuencos para la mesa diaria."
+                    ),
+                    new LinkItem(
+                            "Mejores regalos sostenibles para 4 años",
+                            SUSTAINABLE_COMPARISON_HREF,
+                            "Madera certificada o plástico reciclado, sin pantallas."
+                    )
+            );
             case 5 -> List.of(new LinkItem(
                     "Mejores juguetes STEM para 5 años",
                     "/comparativas/mejores-juguetes-stem-5-anos/",

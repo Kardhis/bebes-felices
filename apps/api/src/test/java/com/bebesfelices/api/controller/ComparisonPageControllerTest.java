@@ -48,6 +48,57 @@ class ComparisonPageControllerTest {
     }
 
     @Test
+    void returnsThePublishedBoardGameComparison() throws Exception {
+        mockMvc.perform(get(
+                        "/api/comparison-pages/{slug}",
+                        ComparisonPageService.BOARD_GAMES_SLUG
+                ))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.slug")
+                        .value(ComparisonPageService.BOARD_GAMES_SLUG))
+                .andExpect(jsonPath("$.targetAge").value(4))
+                .andExpect(jsonPath("$.entries.length()").value(5))
+                .andExpect(jsonPath("$.entries[0].productId")
+                        .value("juego-mesa-el-frutal-mini"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"))
+                .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/4-anos/"));
+    }
+
+    @Test
+    void returnsThePublishedScooterComparison() throws Exception {
+        mockMvc.perform(get(
+                        "/api/comparison-pages/{slug}",
+                        ComparisonPageService.SCOOTERS_SLUG
+                ))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.slug")
+                        .value(ComparisonPageService.SCOOTERS_SLUG))
+                .andExpect(jsonPath("$.targetAge").value(4))
+                .andExpect(jsonPath("$.entries.length()").value(5))
+                .andExpect(jsonPath("$.entries[0].productId")
+                        .value("patinete-micro-mini-deluxe"))
+                .andExpect(jsonPath("$.entries[4].productId")
+                        .value("triciclo-chicco-u-go"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"))
+                .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/4-anos/"));
+    }
+
+    @Test
+    void returnsThePublishedFourYearAutonomyComparisons() throws Exception {
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("torre-yoleo-transformer"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TABLEWARE_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("vajilla-twistshake-dividido"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SUSTAINABLE_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("cuentas-melissa-doug"));
+    }
+
+    @Test
     void returnsNotFoundForAnUnknownComparison() throws Exception {
         mockMvc.perform(get("/api/comparison-pages/no-existe"))
                 .andExpect(status().isNotFound());

@@ -42,6 +42,18 @@ class ProductAnalysisControllerTest {
                 .andExpect(jsonPath("$.editorialSummary", not(emptyOrNullString())));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "set-construccion-magnetico",
+            "bici-sin-pedales-basica"
+    })
+    void returnsPublishedFourYearAnalyses(String productId) throws Exception {
+        mockMvc.perform(get("/api/product-pages/{productId}", productId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"));
+    }
+
     @Test
     void returnsNotFoundForTheComparisonSpotlight() throws Exception {
         mockMvc.perform(get("/api/product-pages/bici-chicco-red-bullet"))

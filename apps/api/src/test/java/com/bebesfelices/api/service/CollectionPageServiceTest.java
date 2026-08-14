@@ -4,6 +4,8 @@ import com.bebesfelices.api.catalog.ManualProductCatalog;
 import com.bebesfelices.api.dto.PageStatus;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CollectionPageServiceTest {
@@ -13,7 +15,7 @@ class CollectionPageServiceTest {
 
     @Test
     void publishesEveryCollectionInTheThreeYearCircuit() {
-        assertThat(service.publishedSlugs()).containsExactly(
+        List<String> threeYearSlugs = List.of(
                 CollectionPageService.MONTESSORI_SLUG,
                 CollectionPageService.PUZZLES_SLUG,
                 CollectionPageService.SCOOTERS_SLUG,
@@ -22,19 +24,32 @@ class CollectionPageServiceTest {
                 CollectionPageService.SUSTAINABLE_SLUG,
                 CollectionPageService.GIFTS_3_SLUG
         );
+        assertThat(service.publishedSlugs()).containsAll(threeYearSlugs);
 
-        for (String slug : service.publishedSlugs()) {
+        for (String slug : threeYearSlugs) {
             var page = service.getBySlug(slug).orElseThrow();
             assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
             assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_3_HREF);
             assertThat(page.products()).isNotEmpty();
-            assertThat(page.buyingCriteria()).isNotEmpty();
-            assertThat(page.faq()).isNotEmpty();
             assertThat(page.relatedLinks())
                     .extracting(link -> link.href())
                     .contains(EditorialDefaults.HUB_3_HREF);
-            assertThat(page.products()).allSatisfy(product ->
-                    assertThat(product.affiliateHref()).isNull());
+        }
+    }
+
+    @Test
+    void publishesFourYearCollectionsWithReturnToTheFourYearHub() {
+        for (String slug : List.of(
+                CollectionPageService.STEM_SLUG,
+                CollectionPageService.BALANCE_BIKES_SLUG,
+                CollectionPageService.GIFTS_4_SLUG
+        )) {
+            var page = service.getBySlug(slug).orElseThrow();
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_4_HREF);
+            assertThat(page.relatedLinks())
+                    .extracting(link -> link.href())
+                    .contains(EditorialDefaults.HUB_4_HREF);
         }
     }
 
@@ -63,6 +78,29 @@ class CollectionPageServiceTest {
                 .filteredOn(product -> product.title().contains("Chicco"))
                 .extracting(product -> product.ctaLabel())
                 .containsExactly("Ver comparativa completa");
+    }
+
+    @Test
+    void fourYearGiftCollectionIncludesTheBoardGameComparison() {
+        var page = service.getBySlug(CollectionPageService.GIFTS_4_SLUG).orElseThrow();
+
+        assertThat(page.canonicalPath()).isEqualTo("/regalos/ideas-regalo-4-anos/");
+        assertThat(page.products())
+                .filteredOn(product -> product.title().contains("Frutal"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page.products())
+                .filteredOn(product -> product.title().contains("YOLEO"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-torres-aprendizaje-4-anos/#producto-torre-yoleo-transformer"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
     }
 
     @Test

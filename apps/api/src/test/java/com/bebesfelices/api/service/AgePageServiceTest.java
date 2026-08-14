@@ -135,6 +135,42 @@ class AgePageServiceTest {
     }
 
     @Test
+    void fourYearBodyDestinationsStayInsideThePublishedCircuit() {
+        AgePageResponse page = service.getBySlug("4-anos").orElseThrow();
+        List<String> hrefs = new java.util.ArrayList<>();
+        page.optionsByNeed().forEach(group ->
+                group.items().forEach(item -> hrefs.add(item.href())));
+        page.featuredGuides().forEach(item -> hrefs.add(item.href()));
+        page.featuredRankings().forEach(item -> hrefs.add(item.href()));
+        page.giftIdeas().forEach(item -> hrefs.add(item.href()));
+        page.informativeArticles().forEach(item -> hrefs.add(item.href()));
+        page.featuredSelection().forEach(item -> hrefs.add(item.href()));
+
+        List<String> published = List.of(
+                "/comparativas/mejores-juegos-de-mesa-4-anos/",
+                "/comparativas/mejores-patinetes-4-anos/",
+                "/comparativas/mejores-torres-aprendizaje-4-anos/",
+                "/comparativas/mejores-vajillas-infantiles-4-anos/",
+                "/comparativas/mejores-regalos-sostenibles-4-anos/",
+                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/habilidades-4-anos/",
+                "/juguetes-educativos/juegos-stem/",
+                "/movimiento/bicicletas-sin-pedales/",
+                "/regalos/ideas-regalo-4-anos/",
+                "/analisis/juego-montessori-formas/",
+                "/analisis/puzle-madera-animales/",
+                "/analisis/bici-sin-pedales-basica/",
+                "/analisis/set-construccion-magnetico/"
+        );
+
+        assertThat(hrefs).isNotEmpty();
+        assertThat(hrefs).allSatisfy(href -> {
+            String path = href.split("#", 2)[0];
+            assertThat(published).contains(path);
+        });
+    }
+
+    @Test
     void keepsFourAndFiveYearOldEditorialContent() {
         AgePageResponse page4 = service.getBySlug("4-anos").orElseThrow();
         AgePageResponse page5 = service.getBySlug("5-anos").orElseThrow();
@@ -145,12 +181,12 @@ class AgePageServiceTest {
                         "Juego Montessori de formas y encajes",
                         "Puzle de madera de animales",
                         "Bicicleta sin pedales básica",
-                        "Patinete de 3 ruedas",
-                        "Torre de aprendizaje de madera",
-                        "Set de vajilla infantil irrompible",
+                        "Micro Mini Deluxe LED",
+                        "YOLEO Transformer",
+                        "Twistshake plato con compartimentos",
                         "Set de construcción magnético",
-                        "Juego de mesa cooperativo",
-                        "Kit de manualidades con materiales naturales"
+                        "HABA El Frutal Mini",
+                        "Melissa & Doug cuentas de madera"
                 );
         assertThat(page5.featuredSelection())
                 .extracting(AgePageResponse.FeaturedProduct::title)
@@ -169,9 +205,69 @@ class AgePageServiceTest {
         assertThat(page5.quickSummary()).isEmpty();
         assertThat(page4.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
+        assertThat(page4.featuredRankings().get(1).href())
+                .isEqualTo("/comparativas/mejores-patinetes-4-anos/");
         assertThat(page5.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juguetes-stem-5-anos/");
         assertThat(movementHref(page4)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
+        assertThat(page4.optionsByNeed().stream()
+                        .filter(group -> group.anchor().equals("#para-aprender"))
+                        .findFirst()
+                        .orElseThrow()
+                        .items()
+                        .get(1)
+                        .href())
+                .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
+        assertThat(page4.optionsByNeed().stream()
+                        .filter(group -> group.anchor().equals("#para-moverse"))
+                        .findFirst()
+                        .orElseThrow()
+                        .items()
+                        .get(1)
+                        .href())
+                .isEqualTo("/comparativas/mejores-patinetes-4-anos/");
+        assertThat(page4.featuredSelection())
+                .filteredOn(product -> product.title().equals("HABA El Frutal Mini"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page4.featuredSelection())
+                .filteredOn(product -> product.title().equals("Micro Mini Deluxe LED"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-patinetes-4-anos/#producto-patinete-micro-mini-deluxe"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page4.optionsByNeed().stream()
+                        .filter(group -> group.anchor().equals("#para-autonomia"))
+                        .findFirst()
+                        .orElseThrow()
+                        .items())
+                .extracting(item -> item.href())
+                .containsExactly(
+                        "/comparativas/mejores-torres-aprendizaje-4-anos/",
+                        "/comparativas/mejores-vajillas-infantiles-4-anos/"
+                );
+        assertThat(page4.optionsByNeed().stream()
+                        .filter(group -> group.anchor().equals("#para-regalar"))
+                        .findFirst()
+                        .orElseThrow()
+                        .items()
+                        .get(1)
+                        .href())
+                .isEqualTo("/comparativas/mejores-regalos-sostenibles-4-anos/");
+        assertThat(page4.featuredSelection())
+                .filteredOn(product -> product.title().equals("YOLEO Transformer"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-torres-aprendizaje-4-anos/#producto-torre-yoleo-transformer"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
         assertThat(movementHref(page5)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
         assertThat(page4.featuredSelection())
                 .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))

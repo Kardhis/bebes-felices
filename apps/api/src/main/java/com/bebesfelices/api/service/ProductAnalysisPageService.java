@@ -22,7 +22,9 @@ public class ProductAnalysisPageService {
             "patinete-3-ruedas",
             "torre-aprendizaje-madera",
             "set-vajilla-infantil",
-            "kit-manualidades-natural"
+            "kit-manualidades-natural",
+            "set-construccion-magnetico",
+            "bici-sin-pedales-basica"
     );
 
     private final Map<String, EditorialAnalysis> analyses = new LinkedHashMap<>();
@@ -203,6 +205,60 @@ public class ProductAnalysisPageService {
                         "Caja o bolsa para no perder componentes."
                 )
         ));
+        register(new EditorialAnalysis(
+                "set-construccion-magnetico",
+                "/juguetes-educativos/juegos-stem/",
+                "Sets de construcción magnética",
+                "Niños de 4 años que quieren construir estructuras que se tengan en pie",
+                "Un set magnético permite probar formas y tumbarlas sin que las piezas se deslicen como en un encaje plano. Encaja cuando ya hay un poco más de atención y se tolera un reto espacial, con imanes que no se puedan extraer.",
+                List.of(
+                        "Las piezas se sujetan entre sí y permiten torres o casas simples.",
+                        "Se puede subir la dificultad añadiendo piezas, no cambiando de juguete.",
+                        "Útil para nombrar formas y probar equilibrio."
+                ),
+                List.of(
+                        "Si el set es enorme, se desborda y se deja a medias.",
+                        "No sustituye el juego al aire libre ni un juego de mesa de reglas."
+                ),
+                List.of(
+                        "Mantén el juego fuera del alcance de menores de 3 años.",
+                        "Revisa que los imanes no se desprendan de las piezas.",
+                        "Recoge las piezas al terminar; un imán suelto es un riesgo grave."
+                ),
+                List.of(
+                        "Edad mínima del fabricante compatible con 4 años.",
+                        "Imanes encapsulados, no sueltos.",
+                        "Un número de piezas que quepa en una sesión."
+                ),
+                4
+        ));
+        register(new EditorialAnalysis(
+                "bici-sin-pedales-basica",
+                "/movimiento/bicicletas-sin-pedales/",
+                "Bicicletas sin pedales",
+                "Consolidar el equilibrio a los 4 años antes de plantear pedales",
+                "Una bicicleta sin pedales de cuadro ligero y sillín regulable sirve para practicar el apoyo de ambos pies. A los 4 años el uso suele ser de consolidación, no de primer contacto; la talla sigue siendo más útil que la edad.",
+                List.of(
+                        "Sillín regulable para acompañar el crecimiento.",
+                        "Cuadro ligero pensado para que el niño dirija y recupere.",
+                        "Complementa el patinete: aquí el equilibrio es sentado."
+                ),
+                List.of(
+                        "No enseña a pedalear; es el paso previo.",
+                        "Si el modelo es pesado o el sillín queda alto, se deja de usar."
+                ),
+                List.of(
+                        "Casco homologado y calzado cerrado en cada uso.",
+                        "Espacio sin tráfico ni pendientes pronunciadas.",
+                        "Un adulto mantiene supervisión activa."
+                ),
+                List.of(
+                        "Altura de sillín que permita apoyar ambos pies.",
+                        "Peso que se pueda levantar sin ayuda constante.",
+                        "Ruedas acordes al terreno habitual."
+                ),
+                4
+        ));
     }
 
     private void register(EditorialAnalysis analysis) {
@@ -229,8 +285,8 @@ public class ProductAnalysisPageService {
                 List.of(
                         new ProductAnalysisResponse.Breadcrumb("Inicio", "/"),
                         new ProductAnalysisResponse.Breadcrumb(
-                                EditorialDefaults.HUB_3_LABEL,
-                                EditorialDefaults.HUB_3_HREF
+                                EditorialDefaults.hubLabel(editorial.hubAge()),
+                                EditorialDefaults.hubHref(editorial.hubAge())
                         ),
                         new ProductAnalysisResponse.Breadcrumb(product.title(), path)
                 ),
@@ -255,8 +311,8 @@ public class ProductAnalysisPageService {
                                 "Volver a la categoría y a los criterios de compra."
                         ),
                         new LinkItem(
-                                "Juguetes y regalos para niños de 3 años",
-                                EditorialDefaults.HUB_3_HREF,
+                                "Juguetes y regalos para niños de " + editorial.hubAge() + " años",
+                                EditorialDefaults.hubHref(editorial.hubAge()),
                                 "Hub por edad con el resto de la selección."
                         ),
                         new LinkItem(
@@ -286,7 +342,32 @@ public class ProductAnalysisPageService {
             List<String> pros,
             List<String> cons,
             List<String> safetyNotes,
-            List<String> buyingChecks
+            List<String> buyingChecks,
+            int hubAge
     ) {
+        EditorialAnalysis(
+                String productId,
+                String collectionHref,
+                String collectionTitle,
+                String forWhom,
+                String editorialSummary,
+                List<String> pros,
+                List<String> cons,
+                List<String> safetyNotes,
+                List<String> buyingChecks
+        ) {
+            this(
+                    productId,
+                    collectionHref,
+                    collectionTitle,
+                    forWhom,
+                    editorialSummary,
+                    pros,
+                    cons,
+                    safetyNotes,
+                    buyingChecks,
+                    3
+            );
+        }
     }
 }

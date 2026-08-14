@@ -8,7 +8,15 @@ export const COLLECTION_PAGES = [
     prefix: "juguetes-educativos",
   },
   {
+    slug: "juegos-stem",
+    prefix: "juguetes-educativos",
+  },
+  {
     slug: "patinetes",
+    prefix: "movimiento",
+  },
+  {
+    slug: "bicicletas-sin-pedales",
     prefix: "movimiento",
   },
   {
@@ -21,6 +29,10 @@ export const COLLECTION_PAGES = [
   },
   {
     slug: "ideas-regalo-3-anos",
+    prefix: "regalos",
+  },
+  {
+    slug: "ideas-regalo-4-anos",
     prefix: "regalos",
   },
   {

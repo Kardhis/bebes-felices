@@ -153,9 +153,19 @@ export AMAZON_PRODUCT_BICI_KINDERKRAFT_FLY_PLUS_2_ASIN="B0CZTVT1DN"
 export AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN="B092JTG2YL"
 export AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN="B0DJ7DS33P"
 export AMAZON_PRODUCT_PATINETE_3_RUEDAS_ASIN="B09PRNX4HX"
+export AMAZON_PRODUCT_PATINETE_MICRO_MINI_DELUXE_ASIN="B09PRNX4HX"
+export AMAZON_PRODUCT_PATINETE_MOLTO_MAXI_ASIN="B09WMPSMM4"
+export AMAZON_PRODUCT_PATINETE_GLOBBER_JUNIOR_FOLDABLE_ASIN="B09CQDGBJ3"
+export AMAZON_PRODUCT_PATINETE_GLOBBER_MASTER_LIGHTS_ASIN="B08G19X6GK"
+export AMAZON_PRODUCT_TRICICLO_CHICCO_U_GO_ASIN="B00URLWKYG"
 export AMAZON_PRODUCT_TORRE_APRENDIZAJE_MADERA_ASIN="B0B7RFPP5Z"
 export AMAZON_PRODUCT_SET_VAJILLA_INFANTIL_ASIN="B0CZTZ917D"
 export AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN="B0015XJUV6"
+export AMAZON_PRODUCT_JUEGO_MESA_EL_FRUTAL_MINI_ASIN="B08R3YTDPQ"
+export AMAZON_PRODUCT_JUEGO_MESA_UNICORNIO_TESORO_ASIN="B01MRA4YCR"
+export AMAZON_PRODUCT_JUEGO_MESA_ANIMAL_SOBRE_ANIMAL_ASIN="B00D6J9SJQ"
+export AMAZON_PRODUCT_JUEGO_MESA_DOBBLE_KIDS_ASIN="B00OM7VIC6"
+export AMAZON_PRODUCT_JUEGO_MESA_UNICORNIO_FIESTA_ROSALIE_ASIN="B06XCLF568"
 ```
 
 | Variable | Descripción | Valor por defecto |
@@ -175,17 +185,40 @@ export AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN="B0015XJUV6"
 | `AMAZON_PRODUCT_BICI_KINDERKRAFT_GOSWIFT_ASIN` | ASIN de Kinderkraft GOSWIFT | `B092JTG2YL` |
 | `AMAZON_PRODUCT_BICI_PUKY_LR_M_ASIN` | ASIN de PUKY LR M | `B0DJ7DS33P` |
 | `AMAZON_PRODUCT_PATINETE_3_RUEDAS_ASIN` | ASIN del patinete de 3 ruedas | `B09PRNX4HX` |
+| `AMAZON_PRODUCT_PATINETE_MICRO_MINI_DELUXE_ASIN` | ASIN de Micro Mini Deluxe LED | `B09PRNX4HX` |
+| `AMAZON_PRODUCT_PATINETE_MOLTO_MAXI_ASIN` | ASIN de MOLTO Maxi Scooter | `B09WMPSMM4` |
+| `AMAZON_PRODUCT_PATINETE_GLOBBER_JUNIOR_FOLDABLE_ASIN` | ASIN de Globber Junior Foldable Lights | `B09CQDGBJ3` |
+| `AMAZON_PRODUCT_PATINETE_GLOBBER_MASTER_LIGHTS_ASIN` | ASIN de Globber Master Lights | `B08G19X6GK` |
+| `AMAZON_PRODUCT_TRICICLO_CHICCO_U_GO_ASIN` | ASIN de Chicco U-GO 2en1 | `B00URLWKYG` |
 | `AMAZON_PRODUCT_TORRE_APRENDIZAJE_MADERA_ASIN` | ASIN de la torre de aprendizaje | `B0B7RFPP5Z` |
+| `AMAZON_PRODUCT_TORRE_YOLEO_TRANSFORMER_ASIN` | ASIN de YOLEO Transformer | `B0B7RFPP5Z` |
+| `AMAZON_PRODUCT_TORRE_BIANCONIGLIO_EVO_ASIN` | ASIN de Bianconiglio Kids EVO | `B07YZQHPYL` |
+| `AMAZON_PRODUCT_TORRE_KLEINER_RIESE_ASIN` | ASIN de Kleiner Riese 4 en 1 | `B0912P2C8G` |
+| `AMAZON_PRODUCT_TORRE_BEY_CO_ASIN` | ASIN de BEY & CO | `B09BRF6D95` |
+| `AMAZON_PRODUCT_TORRE_BIANCONIGLIO_TRANSFORMER_ASIN` | ASIN de Bianconiglio Transformer Ajustable | `B09X7BK69T` |
 | `AMAZON_PRODUCT_SET_VAJILLA_INFANTIL_ASIN` | ASIN del set de vajilla infantil | `B0CZTZ917D` |
+| `AMAZON_PRODUCT_VAJILLA_STOR_MICKEY_ASIN` | ASIN de Stor vajilla Mickey Mouse | `B0CZTZ917D` |
+| `AMAZON_PRODUCT_VAJILLA_TWISTSHAKE_DIVIDIDO_ASIN` | ASIN de Twistshake plato con compartimentos | `B0799HW4HR` |
+| `AMAZON_PRODUCT_VASO_MUNCHKIN_MIRACLE_360_ASIN` | ASIN de Munchkin Miracle 360 | `B07HZQTB3V` |
+| `AMAZON_PRODUCT_VAJILLA_FUN_HOUSE_ASIN` | ASIN de Fun House vajilla 3 piezas | `B07T9M3JLV` |
+| `AMAZON_PRODUCT_CUENCO_TWISTSHAKE_TAPA_ASIN` | ASIN de Twistshake cuenco con tapa | `B0799J4GNK` |
 | `AMAZON_PRODUCT_KIT_MANUALIDADES_NATURAL_ASIN` | ASIN del kit de manualidades | `B0015XJUV6` |
+| `AMAZON_PRODUCT_CUENTAS_MELISSA_DOUG_ASIN` | ASIN de Melissa & Doug cuentas de madera | `B0015XJUV6` |
+| `AMAZON_PRODUCT_PLANTOYS_ATA_ZAPATO_ASIN` | ASIN de PlanToys Ata el zapato | `B092HVBGB3` |
+| `AMAZON_PRODUCT_HABA_PUZLES_CUATRO_ESTACIONES_ASIN` | ASIN de HABA Puzzles Las Cuatro Estaciones | `B01CSUXO2U` |
+| `AMAZON_PRODUCT_SMALL_FOOT_GRUA_ASIN` | ASIN de Small Foot grúa | `B07MVR126C` |
+| `AMAZON_PRODUCT_GREEN_TOYS_CONSTRUCCION_ASIN` | ASIN de Green Toys vehículos de construcción | `B01KJNM7O4` |
+| `AMAZON_PRODUCT_JUEGO_MESA_EL_FRUTAL_MINI_ASIN` | ASIN de HABA El Frutal Mini | `B08R3YTDPQ` |
+| `AMAZON_PRODUCT_JUEGO_MESA_UNICORNIO_TESORO_ASIN` | ASIN de Unicornio Destello El Tesoro de las Nubes | `B01MRA4YCR` |
+| `AMAZON_PRODUCT_JUEGO_MESA_ANIMAL_SOBRE_ANIMAL_ASIN` | ASIN de HABA Animal sobre Animal | `B00D6J9SJQ` |
+| `AMAZON_PRODUCT_JUEGO_MESA_DOBBLE_KIDS_ASIN` | ASIN de Dobble Kids (DOKI01ES) | `B00OM7VIC6` |
+| `AMAZON_PRODUCT_JUEGO_MESA_UNICORNIO_FIESTA_ROSALIE_ASIN` | ASIN de Unicornio Destello Una Fiesta para Rosalie | `B06XCLF568` |
 
 No guardes credenciales en el repositorio ni las expongas como variables
 `NEXT_PUBLIC_*`. El backend dispone de un fallback manual que no necesita
 Creators API: si están configurados `AMAZON_CREATORS_PARTNER_TAG` y el ASIN del
 producto, construye y valida un enlace `https://www.amazon.es/dp/{ASIN}?tag={TAG}`.
-Los ASIN de la comparativa de bicicletas y de la selección destacada de 3 años
-están verificados y configurados por defecto; sus variables permiten
-sustituirlos sin modificar el código.
+Los ASIN de la comparativa de bicicletas, de las comparativas de juegos de mesa y de patinetes para 4 años y de la selección destacada de 3 años están verificados y configurados por defecto; sus variables permiten sustituirlos sin modificar el código.
 Si falta cualquiera de ellos, sirve el contenido editorial con
 `affiliateHref: null`. Cuando sí existen todas las credenciales de Creators API,
 el catálogo intenta enriquecer el producto y vuelve al mismo enlace manual si
@@ -251,9 +284,9 @@ Base URL: `http://localhost:8080/api`
 |--------|-------------------------|------------------------------------------|
 | `GET`  | `/api/home`             | Contenido de la página de inicio         |
 | `GET`  | `/api/age-pages/{slug}` | Página hub por edad (`3-anos`, `4-anos`, `5-anos`) |
-| `GET`  | `/api/comparison-pages/{slug}` | Comparativa editorial; disponible `mejores-bicicletas-sin-pedales-3-anos` |
-| `GET`  | `/api/article-pages/{slug}` | Guías y metodología (`como-elegir-juguetes-por-edad`, `habilidades-3-anos`, `como-analizamos`) |
-| `GET`  | `/api/collection-pages/{slug}` | Categorías, regalos y sostenibles del circuito de 3 años |
+| `GET`  | `/api/comparison-pages/{slug}` | Comparativa editorial (`mejores-bicicletas-sin-pedales-3-anos`, `mejores-juegos-de-mesa-4-anos`, `mejores-patinetes-4-anos`, `mejores-torres-aprendizaje-4-anos`, `mejores-vajillas-infantiles-4-anos`, `mejores-regalos-sostenibles-4-anos`) |
+| `GET`  | `/api/article-pages/{slug}` | Guías y metodología (`como-elegir-juguetes-por-edad`, `habilidades-3-anos`, `habilidades-4-anos`, `como-analizamos`) |
+| `GET`  | `/api/collection-pages/{slug}` | Categorías, regalos y sostenibles de los circuitos de 3 y 4 años |
 | `GET`  | `/api/product-pages/{id}` | Análisis editorial de un producto del catálogo |
 
 Ejemplo:
@@ -261,6 +294,9 @@ Ejemplo:
 ```bash
 curl http://localhost:8080/api/age-pages/3-anos
 curl http://localhost:8080/api/comparison-pages/mejores-bicicletas-sin-pedales-3-anos
+curl http://localhost:8080/api/comparison-pages/mejores-juegos-de-mesa-4-anos
+curl http://localhost:8080/api/comparison-pages/mejores-patinetes-4-anos
+curl http://localhost:8080/api/article-pages/habilidades-4-anos
 curl http://localhost:8080/api/article-pages/habilidades-3-anos
 curl http://localhost:8080/api/collection-pages/puzles
 curl http://localhost:8080/api/product-pages/patinete-3-ruedas
@@ -289,6 +325,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 - Home editorial con navegación por edad y categorías
 - Páginas hub completas para 3, 4 y 5 años (selección destacada, FAQ, guías, rankings)
 - Circuito editorial de 3 años: guías, categorías, regalos, análisis y metodología
+- Circuito editorial de 4 años: comparativas de juegos de mesa, patinetes, torres, vajilla y regalos sostenibles, guía de habilidades, STEM, bicicletas, regalos y análisis
 - Catálogo de productos manual en memoria
 - Avisos de afiliación Amazon visibles
 - Infraestructura de tests en frontend y backend
@@ -297,7 +334,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 
 - Activación de Amazon Creators API con credenciales y ASIN reales
 - Persistencia de contenido / CMS
-- Páginas de categorías, guías y comparativas de 4 y 5 años
+- Páginas de categorías, guías y comparativas de 5 años
 - Despliegue en producción con variables de entorno definitivas
 
 ---

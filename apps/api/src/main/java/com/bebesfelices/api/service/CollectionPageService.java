@@ -23,6 +23,9 @@ public class CollectionPageService {
     public static final String TABLEWARE_SLUG = "vajilla-infantil";
     public static final String SUSTAINABLE_SLUG = "sostenibles";
     public static final String GIFTS_3_SLUG = "ideas-regalo-3-anos";
+    public static final String STEM_SLUG = "juegos-stem";
+    public static final String BALANCE_BIKES_SLUG = "bicicletas-sin-pedales";
+    public static final String GIFTS_4_SLUG = "ideas-regalo-4-anos";
 
     private final Map<String, EditorialCollection> collections = new LinkedHashMap<>();
     private final ProductCatalog productCatalog;
@@ -305,6 +308,144 @@ public class CollectionPageService {
                         chooseByAgeLink()
                 )
         ));
+        register(new EditorialCollection(
+                STEM_SLUG,
+                "/juguetes-educativos/juegos-stem/",
+                "Juguetes educativos",
+                "Sets de construcción magnética para 4 años",
+                "Lógica espacial y estructuras estables, con piezas que se sujetan entre sí y un reto que puede crecer.",
+                List.of(
+                        "A los 4 años la construcción deja de ser solo apilar: las piezas magnéticas permiten formas que se tienen en pie y se pueden deshacer sin frustración inmediata.",
+                        "Busca un número de piezas manejable, imanes que no se desprendan y un tamaño que no acabe en la boca de un hermano pequeño."
+                ),
+                List.of(
+                        "Piezas grandes o medianas, no un set de cientos de fichas diminutas.",
+                        "Imanes encapsulados, no sueltos.",
+                        "Un objetivo claro: construir y tumbar, no diez modos en el manual.",
+                        "Edad mínima del fabricante compatible con 4 años."
+                ),
+                List.of("set-construccion-magnetico"),
+                Map.of(),
+                List.of(
+                        faq("¿Es lo mismo que un puzle?",
+                                "No. El puzle encaja una imagen; el set magnético prueba equilibrio y formas en el espacio. A los 4 años ambos pueden convivir."),
+                        faq("¿Cuántas piezas hacen falta?",
+                                "Las justas para terminar una torre o una casa en una sesión. Un set enorme se desborda sobre la mesa y se deja a medias."),
+                        faq("¿Hay riesgo con los imanes?",
+                                "Sí si se desprenden. Elige piezas en las que el imán no se pueda sacar y mantén el juego fuera del alcance de menores de 3 años.")
+                ),
+                List.of(
+                        hubLink(4),
+                        analysisLink("set-construccion-magnetico", "Set de construcción magnético"),
+                        chooseByAgeLink()
+                ),
+                4
+        ));
+        register(new EditorialCollection(
+                BALANCE_BIKES_SLUG,
+                "/movimiento/bicicletas-sin-pedales/",
+                "Movimiento",
+                "Bicicletas sin pedales para ganar seguridad a los 4 años",
+                "Modelos para consolidar el equilibrio antes de la bici con pedales, con talla, peso y supervisión.",
+                List.of(
+                        "A los 4 años muchos niños ya no están iniciándose: están ganando confianza para ir más lejos. Sigue importando que los pies lleguen al suelo y que el cuadro no pese de más.",
+                        "Esta página cubre el criterio de uso. Si buscas un ranking de modelos reales, la comparativa de bicicletas sin pedales para 3 años incluye fichas que también cubren esta edad."
+                ),
+                List.of(
+                        "Sillín a una altura que permita apoyar ambos pies.",
+                        "Peso que el niño pueda levantar y dirigir.",
+                        "Ruedas adecuadas al terreno habitual (sin aire o inflables).",
+                        "Casco, calzado cerrado y un espacio sin tráfico."
+                ),
+                List.of("bici-sin-pedales-basica"),
+                Map.of(),
+                List.of(
+                        faq("¿A los 4 años sigue teniendo sentido una bici sin pedales?",
+                                "Sí, si el equilibrio aún no está listo para pedales. No hay una fecha fija; el salto se ve en el control, no en el cumpleaños."),
+                        faq("¿Dónde comparáis modelos concretos?",
+                                "En la comparativa de bicicletas sin pedales para 3 años, con cinco modelos reales. Varios cubren también los 4 años según la ficha del fabricante."),
+                        faq("¿Hace falta casco?",
+                                "Sí. También supervisión y un espacio sin coches. La bici sin pedales no elimina el riesgo de caída.")
+                ),
+                List.of(
+                        hubLink(4),
+                        analysisLink("bici-sin-pedales-basica", "Bicicleta sin pedales básica"),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 3 años",
+                                "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
+                                "Ranking de cinco modelos reales, útil también si el niño ya tiene 4."
+                        )
+                ),
+                4
+        ));
+        register(new EditorialCollection(
+                GIFTS_4_SLUG,
+                "/regalos/ideas-regalo-4-anos/",
+                "Regalos",
+                "Ideas de regalo para niños de 4 años",
+                "Selección por ocasión y presupuesto, sin perder utilidad: construir, jugar una partida corta, moverse o ganar autonomía.",
+                List.of(
+                        "Un buen regalo a los 4 años se usa durante semanas: un set que se puede complicar, un juego de mesa de reglas cortas o un objeto de la rutina. Evitamos lo puramente decorativo.",
+                        "El juego de mesa, el patinete, la torre, la vajilla y las cuentas destacados se recomiendan desde sus comparativas; el resto tiene análisis propio."
+                ),
+                List.of(
+                        "Que resuelva una necesidad: aprender, moverse, autonomía o crear.",
+                        "Un margen de dificultad para que no se quede pequeño en un mes.",
+                        "Reglas o gestos explicables en pocos minutos.",
+                        "Revisa la fecha de la ficha y la edad mínima del fabricante."
+                ),
+                List.of(
+                        "juego-montessori-formas",
+                        "puzle-madera-animales",
+                        "bici-sin-pedales-basica",
+                        "patinete-micro-mini-deluxe",
+                        "torre-yoleo-transformer",
+                        "vajilla-twistshake-dividido",
+                        "set-construccion-magnetico",
+                        "juego-mesa-el-frutal-mini",
+                        "cuentas-melissa-doug"
+                ),
+                Map.of(
+                        "juego-mesa-el-frutal-mini",
+                        "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini",
+                        "patinete-micro-mini-deluxe",
+                        "/comparativas/mejores-patinetes-4-anos/#producto-patinete-micro-mini-deluxe",
+                        "torre-yoleo-transformer",
+                        "/comparativas/mejores-torres-aprendizaje-4-anos/#producto-torre-yoleo-transformer",
+                        "vajilla-twistshake-dividido",
+                        "/comparativas/mejores-vajillas-infantiles-4-anos/#producto-vajilla-twistshake-dividido",
+                        "cuentas-melissa-doug",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-cuentas-melissa-doug"
+                ),
+                List.of(
+                        faq("¿Qué regalo no falla a esta edad?",
+                                "Uno que ya pueda usar: construir, una partida corta o moverse con más seguridad. Si dudas, un cooperativo de reglas mínimas o un set magnético suele ser más útil que un juguete de personaje."),
+                        faq("¿Y si ya tiene muchos juguetes?",
+                                "Prioriza un juego de mesa que se saque en familia o un producto de autonomía. Evita duplicar lo que ya cubre una necesidad."),
+                        faq("¿Incluís rangos de precio?",
+                                "No publicamos importes. Comparamos utilidad y durabilidad; el presupuesto lo decides tú en el momento de compra.")
+                ),
+                List.of(
+                        hubLink(4),
+                        new LinkItem(
+                                "Mejores juegos de mesa para 4 años",
+                                "/comparativas/mejores-juegos-de-mesa-4-anos/",
+                                "Cinco juegos reales si el regalo es una partida en familia."
+                        ),
+                        new LinkItem(
+                                "Mejores patinetes y triciclos para 4 años",
+                                "/comparativas/mejores-patinetes-4-anos/",
+                                "Cinco modelos reales si el regalo es moverse al aire libre."
+                        ),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 4 años",
+                                "/comparativas/mejores-regalos-sostenibles-4-anos/",
+                                "Madera o plástico reciclado si priorizas materiales declarados."
+                        ),
+                        chooseByAgeLink()
+                ),
+                4
+        ));
     }
 
     private void register(EditorialCollection collection) {
@@ -327,8 +468,8 @@ public class CollectionPageService {
                 List.of(
                         new CollectionPageResponse.Breadcrumb("Inicio", "/"),
                         new CollectionPageResponse.Breadcrumb(
-                                EditorialDefaults.HUB_3_LABEL,
-                                EditorialDefaults.HUB_3_HREF
+                                EditorialDefaults.hubLabel(editorial.hubAge()),
+                                EditorialDefaults.hubHref(editorial.hubAge())
                         ),
                         new CollectionPageResponse.Breadcrumb(editorial.h1(), editorial.path())
                 ),
@@ -377,9 +518,13 @@ public class CollectionPageService {
     }
 
     private static LinkItem hubLink() {
+        return hubLink(3);
+    }
+
+    private static LinkItem hubLink(int age) {
         return new LinkItem(
-                "Juguetes y regalos para niños de 3 años",
-                EditorialDefaults.HUB_3_HREF,
+                "Juguetes y regalos para niños de " + age + " años",
+                EditorialDefaults.hubHref(age),
                 "Volver al hub por edad."
         );
     }
@@ -415,8 +560,38 @@ public class CollectionPageService {
             List<String> productIds,
             Map<String, String> hrefOverrides,
             List<CollectionPageResponse.Faq> faq,
-            List<LinkItem> related
+            List<LinkItem> related,
+            int hubAge
     ) {
+        EditorialCollection(
+                String slug,
+                String path,
+                String kicker,
+                String h1,
+                String metaDescription,
+                List<String> introduction,
+                List<String> buyingCriteria,
+                List<String> productIds,
+                Map<String, String> hrefOverrides,
+                List<CollectionPageResponse.Faq> faq,
+                List<LinkItem> related
+        ) {
+            this(
+                    slug,
+                    path,
+                    kicker,
+                    h1,
+                    metaDescription,
+                    introduction,
+                    buyingCriteria,
+                    productIds,
+                    hrefOverrides,
+                    faq,
+                    related,
+                    3
+            );
+        }
+
         String productHref(String productId) {
             return hrefOverrides.getOrDefault(productId, "/analisis/" + productId + "/");
         }

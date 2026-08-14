@@ -14,19 +14,21 @@ public class ArticlePageService {
 
     public static final String CHOOSE_BY_AGE_SLUG = "como-elegir-juguetes-por-edad";
     public static final String SKILLS_3_SLUG = "habilidades-3-anos";
+    public static final String SKILLS_4_SLUG = "habilidades-4-anos";
     public static final String METHODOLOGY_SLUG = "como-analizamos";
 
     public Optional<ArticlePageResponse> getBySlug(String slug) {
         return switch (slug) {
             case CHOOSE_BY_AGE_SLUG -> Optional.of(chooseByAge());
             case SKILLS_3_SLUG -> Optional.of(skillsThreeYears());
+            case SKILLS_4_SLUG -> Optional.of(skillsFourYears());
             case METHODOLOGY_SLUG -> Optional.of(methodology());
             default -> Optional.empty();
         };
     }
 
     public List<String> publishedSlugs() {
-        return List.of(CHOOSE_BY_AGE_SLUG, SKILLS_3_SLUG, METHODOLOGY_SLUG);
+        return List.of(CHOOSE_BY_AGE_SLUG, SKILLS_3_SLUG, SKILLS_4_SLUG, METHODOLOGY_SLUG);
     }
 
     private ArticlePageResponse chooseByAge() {
@@ -155,6 +157,70 @@ public class ArticlePageService {
         );
     }
 
+    private ArticlePageResponse skillsFourYears() {
+        String path = "/guias/" + SKILLS_4_SLUG + "/";
+        return article(
+                SKILLS_4_SLUG,
+                path,
+                "Desarrollo",
+                "Qué habilidades desarrolla un niño de 4 años",
+                "Explicación práctica del desarrollo esperable a esta edad, con ejemplos de juego y sin convertir cada hito en una norma rígida.",
+                List.of(
+                        "A los 4 años suele mejorar la atención, el control de la mano y el equilibrio. Aparecen las reglas sencillas y la curiosidad por letras, números y retos de construcción.",
+                        "Este artículo amplía el bloque de habilidades del hub de 4 años: qué suele estar aprendiendo un niño y qué tipo de objetos le ayudan sin exigir de más."
+                ),
+                hubBreadcrumbs(4, "Qué habilidades desarrolla un niño de 4 años", path),
+                List.of(
+                        section("atencion", "Atención sostenida y reglas sencillas",
+                                "Puede mantenerse en una actividad algo más tiempo que el año anterior y empezar a respetar turnos. Un juego cooperativo de partida corta o un set de construcción con un objetivo claro encajan mejor que un reglamento largo.",
+                                "Si se rinde a los dos minutos, reduce piezas a la vista y termina juntos. El éxito repetible importa más que completar el modo «experto» de la caja."),
+                        section("motricidad-fina", "Motricidad fina más precisa",
+                                "Recortar, enhebrar o dibujar formas reconocibles pide un control que a los 3 años aún no estaba asentado. Los puzles de más piezas, la construcción magnética y los juegos de apilar practican esa precisión.",
+                                "Siguen existiendo riesgos de piezas pequeñas si hay hermanos menores. Revisa la edad mínima del fabricante aunque el niño de 4 años ya manipule con soltura."),
+                        section("equilibrio", "Equilibrio y movimiento más exigente",
+                                "Gana estabilidad para la bicicleta sin pedales y, en algunos casos, para un patinete con menos apoyo. No hay una edad fija para pasar de tres ruedas a dos o de bici sin pedales a bici con pedales.",
+                                "Elige talla, peso y un espacio sin tráfico. La comparativa de bicicletas sin pedales para 3 años sigue siendo útil si el modelo cubre también los 4."),
+                        section("letras", "Interés por letras, números y patrones",
+                                "La curiosidad por contar, reconocer símbolos o repetir patrones no obliga a un juguete «de aprender a leer». Un dado de colores, un cooperativo de recoger fruta o un Dobble de animales ya entrenan mirar, nombrar y esperar turno.",
+                                "Evita convertir cada tarde en una ficha escolar. El juego sirve cuando el niño quiere repetir, no cuando el adulto quiere adelantar curso."),
+                        section("limites", "Qué no esperar todavía",
+                                "No es razonable exigir partidas competitivas largas, estrategia de adulto o construcción de muchas piezas diminutas sin frustración.",
+                                "Si un juego solo funciona con un adulto leyendo el reglamento en cada turno, probablemente llegue mejor más adelante. Prioriza reglas visibles y una necesidad concreta.")
+                ),
+                List.of(
+                        faq(
+                                "¿Todos los niños de 4 años desarrollan lo mismo al mismo tiempo?",
+                                "No. Estas descripciones son orientativas. Observa qué ya hace el niño —turnos, pulso, equilibrio— y elige objetos que lo acompañen, no que lo adelanten."
+                        ),
+                        faq(
+                                "¿Qué juguetes encajan mejor con este momento?",
+                                "Construcción con piezas manejables, juegos de mesa de reglas cortas, movimiento para consolidar equilibrio y autonomía de la rutina. Evita instrucciones largas y piezas diminutas si hay hermanos pequeños."
+                        ),
+                        faq(
+                                "¿Es buena edad para los juegos de mesa cooperativos?",
+                                "Sí, cuando las reglas se explican en pocos minutos y se gana o se pierde en equipo. La comparativa de juegos de mesa para 4 años cubre cooperativos y también opciones de observación o pulso."
+                        ),
+                        faq(
+                                "¿Cómo se relaciona esto con un regalo?",
+                                "Un buen regalo a esta edad se usa durante semanas: construir, jugar una partida corta o moverse. Las ideas de regalo para 4 años siguen ese criterio."
+                        )
+                ),
+                List.of(
+                        hubLink(4),
+                        new LinkItem(
+                                "Mejores juegos de mesa para 4 años",
+                                "/comparativas/mejores-juegos-de-mesa-4-anos/",
+                                "Comparativa con productos reales, sin precios ni estrellas."
+                        ),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/",
+                                "Checklist práctico antes de comprar."
+                        )
+                )
+        );
+    }
+
     private ArticlePageResponse methodology() {
         String path = "/como-analizamos/";
         return article(
@@ -257,21 +323,29 @@ public class ArticlePageService {
     }
 
     private List<ArticlePageResponse.Breadcrumb> hubBreadcrumbs(String current, String path) {
+        return hubBreadcrumbs(3, current, path);
+    }
+
+    private List<ArticlePageResponse.Breadcrumb> hubBreadcrumbs(int age, String current, String path) {
         return List.of(
                 new ArticlePageResponse.Breadcrumb("Inicio", "/"),
                 new ArticlePageResponse.Breadcrumb(
-                        EditorialDefaults.HUB_3_LABEL,
-                        EditorialDefaults.HUB_3_HREF
+                        EditorialDefaults.hubLabel(age),
+                        EditorialDefaults.hubHref(age)
                 ),
                 new ArticlePageResponse.Breadcrumb(current, path)
         );
     }
 
     private LinkItem hubLink() {
+        return hubLink(3);
+    }
+
+    private LinkItem hubLink(int age) {
         return new LinkItem(
-                "Juguetes y regalos para niños de 3 años",
-                EditorialDefaults.HUB_3_HREF,
-                "Hub por edad con necesidades, selección y comparativa de bicicletas."
+                "Juguetes y regalos para niños de " + age + " años",
+                EditorialDefaults.hubHref(age),
+                "Hub por edad con necesidades, selección y contenidos de esta etapa."
         );
     }
 

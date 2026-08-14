@@ -142,6 +142,71 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 7, 22)
         ));
         register(new Product(
+                "patinete-micro-mini-deluxe",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Micro Mini Deluxe LED",
+                "Patinete de tres ruedas para 2 a 5 años, de 1,95 kg, con giro por inclinación, manillar ajustable, luces LED sin pilas y carga máxima de 50 kg.",
+                2, 5,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "patinete-molto-maxi",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "MOLTO Maxi Scooter",
+                "Patinete de tres ruedas para 3 a 5 años, con luces LED en las ruedas, manillar regulable de 57 a 67 cm, freno trasero y montaje sin herramientas.",
+                3, 5,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "patinete-globber-junior-foldable",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Globber Junior Foldable Lights",
+                "Patinete plegable de tres ruedas desde 2 años, con luces LED por dinamo, bloqueo de dirección, manillar de 3 alturas y carga máxima de 50 kg.",
+                2, 6,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "patinete-globber-master-lights",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Globber Master Lights",
+                "Patinete plegable de tres ruedas desde 4 años, con manillar de 5 alturas entre 74 y 94 cm, luces LED por dinamo y carga máxima de 50 kg.",
+                4, 14,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "triciclo-chicco-u-go",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Chicco U-GO 2en1",
+                "Triciclo de 18 meses a 5 años y hasta 20 kg, con mango telescópico para el adulto, modo de pedaleo libre, cinturón y estructura metálica.",
+                2, 5,
+                List.of("Movimiento", "Triciclos"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
                 "torre-aprendizaje-madera",
                 ProductSource.MANUAL,
                 null,
@@ -194,6 +259,71 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 7, 23)
         ));
         register(new Product(
+                "juego-mesa-el-frutal-mini",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA El Frutal Mini",
+                "Juego cooperativo a partir de 3 años: recoger la fruta de madera antes de que el cuervo Teo llegue a los árboles, en formato mini de 1 a 4 jugadores.",
+                3, Integer.MAX_VALUE,
+                List.of("Juguetes educativos", "Juegos de mesa"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "juego-mesa-unicornio-tesoro",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Unicornio Destello El Tesoro de las Nubes",
+                "Juego de dados y acumulación a partir de 3 años, con tablero a doble cara para primeros conteos, 4 unicornios de madera y 60 cristales de nube.",
+                3, Integer.MAX_VALUE,
+                List.of("Juguetes educativos", "Juegos de mesa"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "juego-mesa-animal-sobre-animal",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Animal sobre Animal",
+                "Juego de habilidad y apilamiento a partir de 4 años, con 29 figuras de madera y un dado de símbolos.",
+                4, Integer.MAX_VALUE,
+                List.of("Juguetes educativos", "Juegos de mesa"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "juego-mesa-dobble-kids",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Dobble Kids",
+                "Juego de cartas de observación y reflejos en español, a partir de 4 años, de 2 a 8 jugadores y partidas de unos 15 minutos.",
+                4, Integer.MAX_VALUE,
+                List.of("Juguetes educativos", "Juegos de mesa"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "juego-mesa-unicornio-fiesta-rosalie",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Unicornio Destello Una Fiesta para Rosalie",
+                "Juego cooperativo de recolección y movimiento a partir de 4 años, para 2 a 4 jugadores, con dados, ruleta y unicornios de madera.",
+                4, Integer.MAX_VALUE,
+                List.of("Juguetes educativos", "Juegos de mesa"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
                 "kit-manualidades-natural",
                 ProductSource.MANUAL,
                 null,
@@ -205,6 +335,201 @@ public class ManualProductCatalog implements ProductCatalog {
                 ProductStatus.ACTIVE,
                 null,
                 LocalDate.of(2026, 7, 24)
+        ));
+        register(new Product(
+                "torre-yoleo-transformer",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "YOLEO Transformer",
+                "Torre de aprendizaje plegable de madera de nogal, de 42 x 45 x 86 cm, convertible en silla y escritorio, con pizarra magnética de doble cara.",
+                2, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "torre-bianconiglio-evo",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Bianconiglio Kids EVO",
+                "Torre de aprendizaje de madera de abedul fabricada en Italia, regulable en 3 alturas, de 40 x 42 x 88 cm y 7,5 kg, compatible con el sistema anticaídas KidSafe.",
+                1, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "torre-kleiner-riese",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Kleiner Riese 4 en 1",
+                "Torre de aprendizaje plegable de contrachapado de abedul de 18 mm y 6,5 kg, con barra de seguridad NFS, uso como taburete y carga de adulto hasta 80 kg.",
+                1, Integer.MAX_VALUE,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "torre-bey-co",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "BEY & CO Torre de aprendizaje",
+                "Torre de madera con 3 alturas ajustables, superficie antideslizante, patas anticaída y certificación EN-71, indicada desde que el niño se mantiene de pie.",
+                1, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "torre-bianconiglio-transformer",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Bianconiglio Kids Transformer Ajustable",
+                "Torre de aprendizaje convertible en mesa, reposapiés y escritorio, con ajuste de altura, 45 x 41 x 90 cm y 10 kg, fabricada en Italia.",
+                1, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "vajilla-stor-mickey",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Stor vajilla 3 piezas Mickey Mouse",
+                "Set de plato, cuenco y vaso de 260 ml de plástico libre de BPA, con base antideslizante y apto para microondas.",
+                3, 6,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "vajilla-twistshake-dividido",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Twistshake plato con compartimentos",
+                "Plato de 20 cm con 3 compartimentos, tapa, base antideslizante, plástico PP y TPE libre de BPA, apto para microondas y lavavajillas desde 6 meses.",
+                1, Integer.MAX_VALUE,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "vaso-munchkin-miracle-360",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Munchkin Miracle 360 con asas",
+                "Set de 2 vasos de aprendizaje de 207 ml con borde 360°, válvula antigoteo, asas y plástico libre de BPA, aptos para lavavajillas.",
+                1, Integer.MAX_VALUE,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "vajilla-fun-house",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Fun House vajilla 3 piezas",
+                "Set reutilizable con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, apto para microondas.",
+                3, 8,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "cuenco-twistshake-tapa",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Twistshake cuenco con tapa",
+                "Cuenco de PP y silicona con tapa, libre de BPA, indicado desde 6 meses para guardar o llevar.",
+                1, Integer.MAX_VALUE,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "cuentas-melissa-doug",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Melissa & Doug cuentas de madera",
+                "Juego de 27 cuentas de madera con formas, números del 1 al 10 y 2 cordones, para ensartar a partir de 3 años.",
+                3, 6,
+                List.of("Regalos", "Sostenibles"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "plantoys-ata-zapato",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "PlanToys Ata el zapato",
+                "Juguete de madera de caucho para practicar nudos, de 3 a 8 años, fabricado en Tailandia con pegamento sin formaldehído y tintes al agua.",
+                3, 8,
+                List.of("Regalos", "Sostenibles"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "haba-puzles-cuatro-estaciones",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Puzzles Las Cuatro Estaciones",
+                "Cuatro rompecabezas de 15 piezas a partir de 3 años, con figuras de madera de haya sostenible y cartón resistente.",
+                3, Integer.MAX_VALUE,
+                List.of("Regalos", "Sostenibles"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "small-foot-grua",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Small Foot grúa de construcción",
+                "Juego de madera FSC 100 % a partir de 3 años, con grúa giratoria 360°, manivela y accesorios de obra.",
+                3, Integer.MAX_VALUE,
+                List.of("Regalos", "Sostenibles"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "green-toys-construccion",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Green Toys vehículos de construcción",
+                "Tres vehículos de plástico 100 % reciclado, sin BPA, ftalatos ni PVC, lavables en lavavajillas, para 24 a 72 meses.",
+                2, 6,
+                List.of("Regalos", "Sostenibles"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 14)
         ));
     }
 

@@ -14,6 +14,8 @@ final class EditorialDefaults {
     static final String SITE_URL = "https://bebesfelices.es";
     static final String HUB_3_HREF = "/por-edad/3-anos/";
     static final String HUB_3_LABEL = "3 años";
+    static final String HUB_4_HREF = "/por-edad/4-anos/";
+    static final String HUB_4_LABEL = "4 años";
     static final String PUBLISHED_AT = "2026-08-14";
     static final String UPDATED_AT = "2026-08-14";
     static final String AUTHOR_NAME = "Equipo editorial BebesFelices";
@@ -55,6 +57,14 @@ final class EditorialDefaults {
                 new LegalLink("Condiciones de uso", "/condiciones-uso/"),
                 new LegalLink("Información sobre afiliación", "/informacion-afiliacion/")
         );
+    }
+
+    static String hubHref(int age) {
+        return "/por-edad/" + age + "-anos/";
+    }
+
+    static String hubLabel(int age) {
+        return age + " años";
     }
 
     static String canonical(String path) {
