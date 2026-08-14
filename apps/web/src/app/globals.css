@@ -22,6 +22,12 @@
   --color-bg: #ffffff;
   --color-bg-alt: #f8fafc;
 
+  --color-footer-bg: #134e4a;
+  --color-footer-text: #f8fafc;
+  --color-footer-text-secondary: #ccfbf1;
+  --color-footer-text-muted: #8ec4bf;
+  --color-footer-border: rgb(255 255 255 / 0.12);
+
   --background: var(--color-bg);
   --foreground: var(--color-text);
 
