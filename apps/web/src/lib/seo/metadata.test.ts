@@ -16,6 +16,8 @@ describe("buildPageMetadata", () => {
       "https://bebesfelices.es/juguetes-educativos/puzles/",
     );
     expect(metadata.openGraph?.locale).toBe("es_ES");
+    expect(metadata.openGraph?.images).toBeDefined();
+    expect(metadata.twitter?.card).toBe("summary_large_image");
     expect(metadata.openGraph).not.toHaveProperty("offers");
   });
 });

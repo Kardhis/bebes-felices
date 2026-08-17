@@ -8,9 +8,25 @@ type LegalLink = {
 type SiteFooterProps = {
   legalLinks: LegalLink[];
   updatedAt: string;
+  discoverLinks?: Array<{ label: string; href: string }>;
 };
 
-export function SiteFooter({ legalLinks, updatedAt }: SiteFooterProps) {
+const defaultDiscoverLinks = [
+  { label: "Por edad", href: "/#por-edad" },
+  { label: "Juguetes educativos", href: "/juguetes-educativos/" },
+  { label: "Movimiento", href: "/movimiento/" },
+  { label: "Autonomía", href: "/autonomia/" },
+  { label: "Regalos", href: "/regalos/" },
+  { label: "Sostenibles", href: "/sostenibles/" },
+  { label: "Comparativas", href: "/#comparativas" },
+  { label: "Guías", href: "/#guias" },
+];
+
+export function SiteFooter({
+  legalLinks,
+  updatedAt,
+  discoverLinks = defaultDiscoverLinks,
+}: SiteFooterProps) {
   return (
     <footer className="bg-[var(--color-footer-bg)] text-[var(--color-footer-text)]">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
@@ -32,64 +48,24 @@ export function SiteFooter({ legalLinks, updatedAt }: SiteFooterProps) {
             Descubre
           </h2>
           <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/por-edad/3-anos/">
-                Por edad
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/juguetes-educativos/">
-                Juguetes educativos
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/movimiento/">
-                Movimiento
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/autonomia/">
-                Autonomía
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/regalos/">
-                Regalos
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/sostenibles/">
-                Sostenibles
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/#comparativas">
-                Comparativas
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/#guias">
-                Guías
-              </Link>
-            </li>
+            {discoverLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]"
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
           <h2 className="font-[family-name:var(--font-nunito-sans)] text-sm font-bold uppercase tracking-wide text-[var(--color-footer-text)]">
-            Sobre BebesFelices
+            Sobre Bebes Felices
           </h2>
           <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/quienes-somos/">
-                Sobre nosotros
-              </Link>
-            </li>
-            <li>
-              <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/como-analizamos/">
-                Metodología
-              </Link>
-            </li>
             <li>
               <Link className="text-[var(--color-footer-text-secondary)] transition hover:text-[var(--color-accent-500)]" href="/contacto/">
                 Contacto
@@ -118,7 +94,7 @@ export function SiteFooter({ legalLinks, updatedAt }: SiteFooterProps) {
       </div>
 
       <div className="border-t border-[var(--color-footer-border)] px-4 py-4 text-center text-xs text-[var(--color-footer-text-muted)] sm:px-6">
-        © {new Date().getFullYear()} BebesFelices
+        © {new Date().getFullYear()} Bebes Felices
       </div>
     </footer>
   );

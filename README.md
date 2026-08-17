@@ -95,6 +95,14 @@ npm install
 
 ### 2. Arrancar la API
 
+Para arrancar API y frontend juntos desde la raíz:
+
+```bash
+npm run dev
+```
+
+También se pueden ejecutar por separado:
+
 ```bash
 cd apps/api
 mvn spring-boot:run
@@ -112,13 +120,13 @@ npm run dev:web
 
 Abre [http://localhost:3000](http://localhost:3000).
 
-> El frontend espera la API en `http://localhost:8080` por defecto. Si la API no está en marcha, las páginas que consumen datos fallarán en tiempo de renderizado.
+> El frontend espera la API en `http://localhost:8080` por defecto. Si no está disponible, la Home muestra una pantalla controlada con una acción de reintento, sin exponer detalles técnicos.
 
 ---
 
 ## Variables de entorno
 
-Crea un archivo `apps/web/.env.local` para desarrollo:
+Copia `.env.example` a `apps/web/.env.local` para el frontend y exporta las variables `APP_*` en el entorno de la API:
 
 ```env
 # URL base de la API (obligatoria en producción)
@@ -132,6 +140,8 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 |-----------------------------|--------------------------------------------------|--------------------------------|
 | `NEXT_PUBLIC_API_BASE_URL`  | Origen de la API REST                            | `http://localhost:8080`        |
 | `NEXT_PUBLIC_SITE_URL`      | URL pública del sitio                            | `https://bebesfelices.es`      |
+| `APP_SITE_URL`              | URL canónica que emite la API                    | `https://bebesfelices.es`      |
+| `APP_CORS_ALLOWED_ORIGINS`  | Orígenes web permitidos, separados por comas     | URLs locales de Next.js        |
 
 ### Amazon Creators API
 
@@ -232,9 +242,12 @@ Desde la raíz del monorepo:
 
 | Comando           | Descripción                          |
 |-------------------|--------------------------------------|
+| `npm run dev`     | API y frontend coordinados           |
 | `npm run dev:web` | Servidor de desarrollo Next.js       |
 | `npm run build:web` | Build de producción del frontend   |
 | `npm run lint:web`  | ESLint sobre `apps/web`            |
+| `npm run validate`  | Tests, lint y build con la API activa |
+| `npm run verify`    | Validación completa, incluido E2E   |
 
 Dentro de `apps/web`:
 
@@ -244,6 +257,7 @@ Dentro de `apps/web`:
 | `npm run build`| Build de producción            |
 | `npm run start`| Servidor de producción         |
 | `npm run test` | Vitest (unit tests)            |
+| `npm run test:e2e` | Smoke tests Playwright      |
 
 Dentro de `apps/api`:
 
@@ -272,7 +286,8 @@ mvn test
 ```
 
 Los tests cubren clientes API, OAuth y mapeo de Amazon Creators, componentes
-clave, esquemas JSON-LD, controladores REST y el catálogo de productos.
+clave, esquemas JSON-LD, controladores REST, Home y el catálogo de productos.
+Antes del primer E2E instala Chromium con `npx playwright install chromium`.
 
 ---
 
@@ -311,7 +326,7 @@ En desarrollo, CORS permite peticiones desde `http://localhost:3000`.
 El frontend incluye:
 
 - Metadatos dinámicos (`title`, `description`, URL canónica, Open Graph) por página
-- JSON-LD: `Organization`, `WebSite`, `BreadcrumbList`, `CollectionPage`, `FAQPage`, `ItemList`, `Article`
+- JSON-LD: `Organization`, `WebSite`, `WebPage`, `BreadcrumbList`, `CollectionPage`, `FAQPage`, `ItemList`, `Article`
 - `sitemap.xml` y `robots.txt` generados automáticamente
 - Rutas con barra final (`trailingSlash: true`)
 - Generación estática de páginas por edad, comparativas, guías, colecciones y análisis con `generateStaticParams`

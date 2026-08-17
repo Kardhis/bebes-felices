@@ -11,9 +11,6 @@ import java.util.List;
 
 /**
  * Respuesta de datos para la home (página inicial SEO).
- * <p>
- * Inicialmente usa datos mockados; cuando el editor esté listo,
- * se sustituirá por persistencia real.
  */
 public record HomeResponse(
         Seo seo,

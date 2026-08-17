@@ -5,8 +5,14 @@
     "apps/web"
   ],
   "scripts": {
+    "dev": "sh scripts/dev.sh",
     "dev:web": "npm run dev --workspace=web",
     "build:web": "npm run build --workspace=web",
-    "lint:web": "npm run lint --workspace=web"
+    "lint:web": "npm run lint --workspace=web",
+    "test:api": "mvn -f apps/api/pom.xml test",
+    "test:web": "npm run test --workspace=web",
+    "test:e2e": "npm run test:e2e --workspace=web",
+    "validate": "sh scripts/validate.sh",
+    "verify": "npm run validate && npm run test:e2e"
   }
 }

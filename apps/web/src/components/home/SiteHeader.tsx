@@ -1,15 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 
-const navItems = [
-  { label: "Por edad", href: "/#por-edad" },
+export type NavigationItem = {
+  label: string;
+  href: string;
+};
+
+const defaultCategories: NavigationItem[] = [
   { label: "Juguetes educativos", href: "/juguetes-educativos/" },
   { label: "Movimiento", href: "/movimiento/" },
   { label: "Autonomía", href: "/autonomia/" },
   { label: "Regalos", href: "/regalos/" },
   { label: "Sostenibles", href: "/sostenibles/" },
+];
+
+const editorialItems: NavigationItem[] = [
+  { label: "Contacto", href: "/contacto/" },
+];
+
+const sectionItems: NavigationItem[] = [
+  { label: "Por edad", href: "/#por-edad" },
   { label: "Comparativas", href: "/#comparativas" },
   { label: "Guías", href: "/#guias" },
 ];
@@ -20,20 +32,48 @@ type SiteHeaderProps = {
    * "inner": cabecera sólida para páginas sin hero fotográfico.
    */
   variant?: "hero" | "inner";
+  categoryItems?: NavigationItem[];
 };
 
-export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
+export function SiteHeader({ variant = "hero", categoryItems = defaultCategories }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const isInner = variant === "inner";
+  const navItems = useMemo(
+    () => [sectionItems[0], ...categoryItems, ...sectionItems.slice(1)],
+    [categoryItems],
+  );
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
+      if (e.key !== "Tab" || !panelRef.current) return;
+
+      const focusable = panelRef.current.querySelectorAll<HTMLElement>("a, button");
+      const first = focusable.item(0);
+      const last = focusable.item(focusable.length - 1);
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    panelRef.current?.querySelector<HTMLElement>("a")?.focus();
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open]);
 
   return (
@@ -73,6 +113,19 @@ export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
               {item.label}
             </Link>
           ))}
+          {editorialItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={
+                isInner
+                  ? "hidden text-sm font-medium text-[var(--color-text-secondary)] transition hover:text-[var(--color-primary-700)] 2xl:inline"
+                  : "hidden text-sm font-medium text-white/90 transition hover:text-white 2xl:inline"
+              }
+            >
+              {item.label}
+            </Link>
+          ))}
           <Link
             href="/#por-edad"
             className={
@@ -86,6 +139,7 @@ export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
         </nav>
 
         <button
+          ref={triggerRef}
           type="button"
           className={
             isInner
@@ -109,6 +163,7 @@ export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
             onClick={() => setOpen(false)}
           />
           <div
+            ref={panelRef}
             id={panelId}
             className="absolute inset-x-3 top-16 z-50 rounded-2xl border border-[var(--color-border)] bg-white p-4 shadow-lg lg:hidden"
           >
@@ -123,20 +178,16 @@ export function SiteHeader({ variant = "hero" }: SiteHeaderProps) {
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href="/como-analizamos/"
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
-                onClick={() => setOpen(false)}
-              >
-                Metodología
-              </Link>
-              <Link
-                href="/quienes-somos/"
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
-                onClick={() => setOpen(false)}
-              >
-                Sobre BebesFelices
-              </Link>
+              {editorialItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </>

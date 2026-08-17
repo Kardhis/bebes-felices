@@ -32,8 +32,14 @@ class HomeControllerTest {
                 .andExpect(jsonPath("$.hero.h1", not(emptyOrNullString())))
                 .andExpect(jsonPath("$.ageNavigation.length()").value(3))
                 .andExpect(jsonPath("$.ageNavigation[0].href").value("/por-edad/3-anos/"))
-                .andExpect(jsonPath("$.legalLinks", org.hamcrest.Matchers.not(org.hamcrest.Matchers.empty())))
+                .andExpect(jsonPath("$.mainCategories.length()").value(5))
+                .andExpect(jsonPath("$.mainCategories[4].href").value("/sostenibles/"))
+                .andExpect(jsonPath("$.recentComparisons.length()").value(3))
+                .andExpect(jsonPath("$.affiliation.noticeText", not(emptyOrNullString())))
+                .andExpect(jsonPath("$.trustAuthority.analysisCriteria.length()").value(4))
+                .andExpect(jsonPath("$.legalLinks.length()").value(5))
                 .andExpect(jsonPath("$.featuredGuides[1].title").value("Ideas de regalo por edad"))
-                .andExpect(jsonPath("$.featuredGuides[1].href").value("/regalos/"));
+                .andExpect(jsonPath("$.featuredGuides[1].href").value("/regalos/"))
+                .andExpect(jsonPath("$.updatedAt").value("2026-08-17"));
     }
 }

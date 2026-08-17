@@ -36,6 +36,12 @@ export default function RootLayout({
       className={`${nunitoSans.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--color-bg)] text-[var(--color-text)]">
+        <a
+          href="#contenido-principal"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-white px-4 py-2 font-semibold text-[var(--color-primary-700)] shadow-lg transition focus:translate-y-0"
+        >
+          Saltar al contenido
+        </a>
         {children}
       </body>
     </html>

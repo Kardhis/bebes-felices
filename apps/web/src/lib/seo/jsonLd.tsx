@@ -26,6 +26,30 @@ export function buildWebSiteSchema(url: string) {
   };
 }
 
+type WebPageInput = {
+  url: string;
+  name: string;
+  description: string;
+  dateModified: string;
+};
+
+export function buildWebPageSchema({
+  url,
+  name,
+  description,
+  dateModified,
+}: WebPageInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url,
+    name,
+    description,
+    dateModified,
+    inLanguage: "es-ES",
+  };
+}
+
 type BreadcrumbItem = {
   label: string;
   href: string;

@@ -5,9 +5,31 @@ import {
   buildCollectionPageSchema,
   buildFaqPageSchema,
   buildItemListSchema,
+  buildOrganizationSchema,
+  buildWebPageSchema,
+  buildWebSiteSchema,
 } from "./jsonLd";
 
 const SITE_URL = "https://bebesfelices.es";
+
+describe("Home schemas", () => {
+  it("builds organization, website and dated webpage schemas", () => {
+    expect(buildOrganizationSchema(SITE_URL)["@type"]).toBe("Organization");
+    expect(buildWebSiteSchema(SITE_URL)["@type"]).toBe("WebSite");
+    expect(
+      buildWebPageSchema({
+        url: SITE_URL,
+        name: "Bebes Felices",
+        description: "Guías y comparativas",
+        dateModified: "2026-08-17",
+      }),
+    ).toMatchObject({
+      "@type": "WebPage",
+      dateModified: "2026-08-17",
+      inLanguage: "es-ES",
+    });
+  });
+});
 
 describe("buildBreadcrumbListSchema", () => {
   it("builds a BreadcrumbList with absolute URLs and 1-based positions", () => {
