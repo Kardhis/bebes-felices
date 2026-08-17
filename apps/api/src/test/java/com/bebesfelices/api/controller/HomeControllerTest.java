@@ -32,6 +32,8 @@ class HomeControllerTest {
                 .andExpect(jsonPath("$.hero.h1", not(emptyOrNullString())))
                 .andExpect(jsonPath("$.ageNavigation.length()").value(3))
                 .andExpect(jsonPath("$.ageNavigation[0].href").value("/por-edad/3-anos/"))
-                .andExpect(jsonPath("$.legalLinks", org.hamcrest.Matchers.not(org.hamcrest.Matchers.empty())));
+                .andExpect(jsonPath("$.legalLinks", org.hamcrest.Matchers.not(org.hamcrest.Matchers.empty())))
+                .andExpect(jsonPath("$.featuredGuides[1].title").value("Ideas de regalo por edad"))
+                .andExpect(jsonPath("$.featuredGuides[1].href").value("/regalos/"));
     }
 }

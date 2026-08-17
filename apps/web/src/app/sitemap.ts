@@ -4,10 +4,15 @@ import { ANALYSIS_PRODUCT_IDS } from "@/lib/analysis/analysisProductIds";
 import { getProductPage } from "@/lib/analysis/getProductPage";
 import { ARTICLE_SLUGS } from "@/lib/article/articleSlugs";
 import { getArticlePage } from "@/lib/article/getArticlePage";
+import {
+  CATEGORY_PAGE_SLUGS,
+  categoryPath,
+} from "@/lib/category/categoryRoutes";
 import { COLLECTION_PAGES } from "@/lib/collection/collectionRoutes";
 import { getCollectionPage } from "@/lib/collection/getCollectionPage";
 import { COMPARISON_SLUGS } from "@/lib/comparison/comparisonSlugs";
 import { getComparisonPage } from "@/lib/comparison/getComparisonPage";
+import { getInfoPage, INFO_PAGE_SLUGS } from "@/lib/info/infoPages";
 import { LEGAL_PAGES } from "@/lib/legal/legalPages";
 import { SITE_URL } from "@/lib/seo/metadata";
 
@@ -63,6 +68,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })),
+    ...CATEGORY_PAGE_SLUGS.map((slug) => ({
+      url: `${SITE_URL}${categoryPath(slug)}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
+    ...INFO_PAGE_SLUGS.map((slug) => {
+      const page = getInfoPage(slug);
+      return {
+        url: page.canonicalUrl,
+        lastModified: new Date(page.updatedAt),
+        changeFrequency: "yearly" as const,
+        priority: 0.3,
+      };
+    }),
     ...LEGAL_PAGES.map((page) => ({
       url: page.canonicalUrl,
       lastModified: new Date(page.updatedAt),

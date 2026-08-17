@@ -76,9 +76,9 @@ public class HomeController {
                                 "Criterios prácticos para 3, 4 y 5 años."
                         ),
                         new LinkItem(
-                                "Guía de regalos de cumpleaños",
-                                "/guias/regalos-cumpleanos-3-a-5-anos/",
-                                "Ideas útiles que no acaban en el fondo del armario."
+                                "Ideas de regalo por edad",
+                                "/regalos/",
+                                "Selecciones por edad y ocasión con utilidad real."
                         ),
                         new LinkItem(
                                 "Cómo analizamos en Bebes Felices",
