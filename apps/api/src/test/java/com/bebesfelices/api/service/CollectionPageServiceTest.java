@@ -54,6 +54,33 @@ class CollectionPageServiceTest {
     }
 
     @Test
+    void publishesFiveYearGiftAndBoardGameCollections() {
+        assertThat(service.publishedSlugs()).contains(
+                CollectionPageService.GIFTS_5_SLUG,
+                CollectionPageService.BOARD_GAMES_SLUG
+        );
+
+        var gifts = service.getBySlug(CollectionPageService.GIFTS_5_SLUG).orElseThrow();
+        var games = service.getBySlug(CollectionPageService.BOARD_GAMES_SLUG).orElseThrow();
+
+        assertThat(List.of(gifts, games)).allSatisfy(page -> {
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+            assertThat(page.products()).isNotEmpty();
+        });
+        assertThat(gifts.products())
+                .filteredOn(product -> product.title().equals("Set de construcción magnético"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-juguetes-stem-5-anos/#producto-set-construccion-magnetico"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(games.products()).singleElement().satisfies(product ->
+                assertThat(product.href()).isEqualTo("/analisis/juego-mesa-cooperativo/"));
+    }
+
+    @Test
     void montessoriCollectionLinksToItsAnalysis() {
         var page = service.getBySlug(CollectionPageService.MONTESSORI_SLUG).orElseThrow();
 

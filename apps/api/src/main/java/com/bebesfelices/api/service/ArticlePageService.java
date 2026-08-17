@@ -15,6 +15,7 @@ public class ArticlePageService {
     public static final String CHOOSE_BY_AGE_SLUG = "como-elegir-juguetes-por-edad";
     public static final String SKILLS_3_SLUG = "habilidades-3-anos";
     public static final String SKILLS_4_SLUG = "habilidades-4-anos";
+    public static final String SKILLS_5_SLUG = "habilidades-5-anos";
     public static final String METHODOLOGY_SLUG = "como-analizamos";
 
     public Optional<ArticlePageResponse> getBySlug(String slug) {
@@ -22,13 +23,14 @@ public class ArticlePageService {
             case CHOOSE_BY_AGE_SLUG -> Optional.of(chooseByAge());
             case SKILLS_3_SLUG -> Optional.of(skillsThreeYears());
             case SKILLS_4_SLUG -> Optional.of(skillsFourYears());
+            case SKILLS_5_SLUG -> Optional.of(skillsFiveYears());
             case METHODOLOGY_SLUG -> Optional.of(methodology());
             default -> Optional.empty();
         };
     }
 
     public List<String> publishedSlugs() {
-        return List.of(CHOOSE_BY_AGE_SLUG, SKILLS_3_SLUG, SKILLS_4_SLUG, METHODOLOGY_SLUG);
+        return List.of(CHOOSE_BY_AGE_SLUG, SKILLS_3_SLUG, SKILLS_4_SLUG, SKILLS_5_SLUG, METHODOLOGY_SLUG);
     }
 
     private ArticlePageResponse chooseByAge() {
@@ -216,6 +218,58 @@ public class ArticlePageService {
                                 "Cómo elegir juguetes según la edad",
                                 "/guias/como-elegir-juguetes-por-edad/",
                                 "Checklist práctico antes de comprar."
+                        )
+                )
+        );
+    }
+
+    private ArticlePageResponse skillsFiveYears() {
+        String path = "/guias/" + SKILLS_5_SLUG + "/";
+        return article(
+                SKILLS_5_SLUG,
+                path,
+                "Desarrollo",
+                "Qué habilidades desarrolla un niño de 5 años",
+                "Pensamiento lógico, cooperación, coordinación y autonomía a los 5 años, con ejemplos de juego y ritmos orientativos.",
+                List.of(
+                        "A los 5 años suele aumentar el tiempo de concentración y la capacidad de planificar una construcción, seguir varias reglas sencillas y colaborar hacia un objetivo común.",
+                        "Estas referencias son orientativas: sirven para elegir un reto que acompañe lo que el niño ya hace, no para convertir cada habilidad en una prueba."
+                ),
+                hubBreadcrumbs(5, "Qué habilidades desarrolla un niño de 5 años", path),
+                List.of(
+                        section("pensamiento-logico", "Pensamiento lógico y resolución de problemas",
+                                "Puede anticipar algunos pasos, clasificar por más de un criterio y corregir una construcción después de observar por qué falla.",
+                                "Los sets magnéticos, puzles y mecanismos sencillos funcionan mejor cuando el reto es visible y se puede ajustar con menos o más piezas."),
+                        section("atencion", "Atención para proyectos más largos",
+                                "La actividad puede durar más que a los 4 años, aunque sigue necesitando una meta alcanzable. Terminar una estructura o una partida corta aporta más que dejar abierto un reto enorme.",
+                                "Divide los proyectos largos en pasos y deja que explique qué quiere probar antes de intervenir."),
+                        section("cooperacion", "Cooperación, turnos y reglas",
+                                "Ya puede coordinarse con otros hacia un objetivo común y recordar varias reglas sencillas. Un juego cooperativo permite practicar acuerdos sin centrar toda la partida en ganar a otra persona.",
+                                "Un adulto sigue ayudando a resolver conflictos y a adaptar la duración cuando baja la atención."),
+                        section("motricidad", "Coordinación y motricidad fina",
+                                "Mejoran el equilibrio, el pulso y la orientación espacial. Apilar, encajar, dibujar y construir pueden exigir más precisión, siempre dentro del rango de seguridad del fabricante.",
+                                "La dificultad debe subir por el reto, no por introducir piezas peligrosamente pequeñas."),
+                        section("autonomia", "Autonomía con responsabilidad gradual",
+                                "Puede completar tareas sencillas de principio a fin, recoger componentes y participar en decisiones sobre el juego.",
+                                "Autonomía no significa ausencia de supervisión: imanes, accesorios pequeños y actividades de movimiento conservan sus precauciones.")
+                ),
+                List.of(
+                        faq("¿Todos los niños de 5 años dominan estas habilidades?", "No. Son referencias orientativas y el desarrollo varía. Observa lo que ya hace y ofrece el siguiente reto asumible."),
+                        faq("¿Qué juguetes apoyan el pensamiento lógico?", "Construcciones, puzles, mecanismos sencillos y juegos de patrones con dificultad ajustable."),
+                        faq("¿Ya puede jugar partidas largas?", "Puede mantener más atención, pero sigue siendo preferible una partida que se pueda terminar y adaptar."),
+                        faq("¿Cómo se relacionan estas habilidades con un regalo?", "Un buen regalo admite repetición, dificultad creciente y responde a un interés real del niño.")
+                ),
+                List.of(
+                        hubLink(5),
+                        new LinkItem(
+                                "Mejores juguetes STEM para 5 años",
+                                "/comparativas/mejores-juguetes-stem-5-anos/",
+                                "Construcción, mecanismos, equilibrio y patrones."
+                        ),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/regalos/ideas-regalo-5-anos/",
+                                "Selección por necesidad y uso evolutivo."
                         )
                 )
         );

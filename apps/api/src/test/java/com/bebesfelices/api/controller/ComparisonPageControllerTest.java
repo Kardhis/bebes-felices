@@ -99,6 +99,22 @@ class ComparisonPageControllerTest {
     }
 
     @Test
+    void returnsThePublishedFiveYearStemComparison() throws Exception {
+        mockMvc.perform(get(
+                        "/api/comparison-pages/{slug}",
+                        ComparisonPageService.STEM_5_SLUG
+                ))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.targetAge").value(5))
+                .andExpect(jsonPath("$.entries.length()").value(5))
+                .andExpect(jsonPath("$.entries[0].productId")
+                        .value("set-construccion-magnetico"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"))
+                .andExpect(jsonPath("$.entries[*].affiliateHref", everyItem(nullValue())));
+    }
+
+    @Test
     void returnsNotFoundForAnUnknownComparison() throws Exception {
         mockMvc.perform(get("/api/comparison-pages/no-existe"))
                 .andExpect(status().isNotFound());

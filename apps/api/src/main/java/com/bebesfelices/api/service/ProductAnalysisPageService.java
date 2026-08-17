@@ -24,7 +24,8 @@ public class ProductAnalysisPageService {
             "set-vajilla-infantil",
             "kit-manualidades-natural",
             "set-construccion-magnetico",
-            "bici-sin-pedales-basica"
+            "bici-sin-pedales-basica",
+            "juego-mesa-cooperativo"
     );
 
     private final Map<String, EditorialAnalysis> analyses = new LinkedHashMap<>();
@@ -258,6 +259,33 @@ public class ProductAnalysisPageService {
                         "Ruedas acordes al terreno habitual."
                 ),
                 4
+        ));
+        register(new EditorialAnalysis(
+                "juego-mesa-cooperativo",
+                "/juguetes-educativos/juegos-de-mesa/",
+                "Juegos de mesa para 5 años",
+                "Niños de 5 años que ya siguen turnos y quieren resolver una partida en equipo",
+                "Este juego cooperativo propone partidas cortas en las que todos ganan o pierden juntos. A los 5 años sirve para practicar acuerdos, anticipar un turno y aceptar un resultado común sin exigir lectura compleja.",
+                List.of(
+                        "Objetivo compartido que favorece hablar antes de actuar.",
+                        "Partidas cortas y reglas asumibles para esta edad.",
+                        "Permite practicar turnos sin un ganador individual."
+                ),
+                List.of(
+                        "La ficha genérica no permite afirmar duración, número de jugadores ni componentes concretos.",
+                        "Un adulto debe explicar las reglas de la edición elegida."
+                ),
+                List.of(
+                        "Comprueba la edad mínima y los avisos de piezas pequeñas del producto concreto.",
+                        "Guarda dados, fichas y cartas fuera del alcance de menores de 3 años.",
+                        "Adapta la partida si la atención baja; no fuerces terminarla."
+                ),
+                List.of(
+                        "Reglas explicables en pocos minutos.",
+                        "Duración compatible con una sesión familiar.",
+                        "Variantes o dificultad suficiente para poder repetir."
+                ),
+                5
         ));
     }
 

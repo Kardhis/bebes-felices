@@ -11,10 +11,12 @@ describe("articleSlugs", () => {
       "como-elegir-juguetes-por-edad",
       "habilidades-3-anos",
       "habilidades-4-anos",
+      "habilidades-5-anos",
       "como-analizamos",
     ]);
     expect(isGuideSlug("habilidades-3-anos")).toBe(true);
     expect(isGuideSlug("habilidades-4-anos")).toBe(true);
+    expect(isGuideSlug("habilidades-5-anos")).toBe(true);
     expect(isArticleSlug("como-analizamos")).toBe(true);
   });
 

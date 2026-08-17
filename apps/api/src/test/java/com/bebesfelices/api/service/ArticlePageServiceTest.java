@@ -15,11 +15,13 @@ class ArticlePageServiceTest {
                 ArticlePageService.CHOOSE_BY_AGE_SLUG,
                 ArticlePageService.SKILLS_3_SLUG,
                 ArticlePageService.SKILLS_4_SLUG,
+                ArticlePageService.SKILLS_5_SLUG,
                 ArticlePageService.METHODOLOGY_SLUG
         );
 
         var skills3 = service.getBySlug(ArticlePageService.SKILLS_3_SLUG).orElseThrow();
         var skills4 = service.getBySlug(ArticlePageService.SKILLS_4_SLUG).orElseThrow();
+        var skills5 = service.getBySlug(ArticlePageService.SKILLS_5_SLUG).orElseThrow();
         assertThat(skills3.status()).isEqualTo(PageStatus.PUBLISHED);
         assertThat(skills4.status()).isEqualTo(PageStatus.PUBLISHED);
         assertThat(skills3.relatedLinks())
@@ -29,6 +31,14 @@ class ArticlePageServiceTest {
                 .extracting(link -> link.href())
                 .contains(EditorialDefaults.HUB_4_HREF);
         assertThat(skills4.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_4_HREF);
+        assertThat(skills5.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(skills5.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+        assertThat(skills5.relatedLinks()).extracting(link -> link.href())
+                .contains(
+                        EditorialDefaults.hubHref(5),
+                        "/comparativas/mejores-juguetes-stem-5-anos/",
+                        "/regalos/ideas-regalo-5-anos/"
+                );
     }
 
     @Test

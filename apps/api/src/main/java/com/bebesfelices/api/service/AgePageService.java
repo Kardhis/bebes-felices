@@ -34,6 +34,7 @@ public class AgePageService {
     private static final String TOWER_SPOTLIGHT_ID = "torre-yoleo-transformer";
     private static final String TABLEWARE_SPOTLIGHT_ID = "vajilla-twistshake-dividido";
     private static final String SUSTAINABLE_SPOTLIGHT_ID = "cuentas-melissa-doug";
+    private static final String STEM_5_SPOTLIGHT_ID = "set-construccion-magnetico";
     private static final String BALANCE_BIKES_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.BALANCE_BIKES_SLUG + "/";
     private static final String BOARD_GAMES_COMPARISON_HREF = "/comparativas/"
@@ -46,18 +47,9 @@ public class AgePageService {
             + ComparisonPageService.TABLEWARE_SLUG + "/";
     private static final String SUSTAINABLE_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SUSTAINABLE_SLUG + "/";
+    private static final String STEM_5_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.STEM_5_SLUG + "/";
 
-    private static final List<String> ALL_PRODUCT_IDS = List.of(
-            "juego-montessori-formas",
-            "puzle-madera-animales",
-            "bici-sin-pedales-basica",
-            "patinete-3-ruedas",
-            "torre-aprendizaje-madera",
-            "set-vajilla-infantil",
-            "set-construccion-magnetico",
-            "juego-mesa-cooperativo",
-            "kit-manualidades-natural"
-    );
     private static final List<String> AGE_3_PRODUCT_IDS = List.of(
             "juego-montessori-formas",
             "puzle-madera-animales",
@@ -77,6 +69,15 @@ public class AgePageService {
             "set-construccion-magnetico",
             BOARD_GAME_SPOTLIGHT_ID,
             SUSTAINABLE_SPOTLIGHT_ID
+    );
+    private static final List<String> AGE_5_PRODUCT_IDS = List.of(
+            "puzle-madera-animales",
+            "bici-sin-pedales-basica",
+            "torre-aprendizaje-madera",
+            "set-vajilla-infantil",
+            STEM_5_SPOTLIGHT_ID,
+            "juego-mesa-cooperativo",
+            "kit-manualidades-natural"
     );
 
     private static final Map<Integer, String> AGE_LABELS = Map.of(
@@ -254,7 +255,7 @@ public class AgePageService {
             );
             case 5 -> List.of(
                     new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
-                            new LinkItem("Construcción avanzada", "/juguetes-educativos/juegos-stem/", "Retos de lógica y estructuras más complejas."),
+                            new LinkItem("Construcción avanzada", STEM_5_COMPARISON_HREF, "Comparativa de retos de lógica, mecanismos y estructuras."),
                             new LinkItem("Juegos de mesa cooperativos", "/juguetes-educativos/juegos-de-mesa/", "Partidas más largas con estrategia compartida.")
                     )),
                     new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
@@ -278,7 +279,8 @@ public class AgePageService {
         List<String> productIds = switch (age) {
             case 3 -> AGE_3_PRODUCT_IDS;
             case 4 -> AGE_4_PRODUCT_IDS;
-            default -> ALL_PRODUCT_IDS;
+            case 5 -> AGE_5_PRODUCT_IDS;
+            default -> throw new IllegalArgumentException("Edad no soportada: " + age);
         };
         return productCatalog.findByIds(productIds).stream()
                 .filter(product -> product.isAvailableForAge(age))
@@ -313,6 +315,9 @@ public class AgePageService {
     private String comparisonHrefFor(String productId, int age) {
         if (age == 3 && BALANCE_BIKE_SPOTLIGHT_ID.equals(productId)) {
             return BALANCE_BIKES_COMPARISON_HREF;
+        }
+        if (age == 5 && STEM_5_SPOTLIGHT_ID.equals(productId)) {
+            return STEM_5_COMPARISON_HREF;
         }
         if (age != 4) {
             return null;
@@ -451,7 +456,7 @@ public class AgePageService {
             );
             case 5 -> List.of(new LinkItem(
                     "Mejores juguetes STEM para 5 años",
-                    "/comparativas/mejores-juguetes-stem-5-anos/",
+                    STEM_5_COMPARISON_HREF,
                     "Construcción, lógica y experimentación."
             ));
             default -> throw new IllegalArgumentException("Edad no soportada: " + age);

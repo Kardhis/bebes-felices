@@ -250,6 +250,70 @@ class ComparisonPageServiceTest {
     }
 
     @Test
+    void buildsThePublishedStemComparisonForFiveYearOlds() {
+        ComparisonPageResponse page = new ComparisonPageService(new ManualProductCatalog())
+                .getBySlug(ComparisonPageService.STEM_5_SLUG)
+                .orElseThrow();
+
+        assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(page.targetAge()).isEqualTo(5);
+        assertThat(page.publishedAt()).isEqualTo("2026-08-17");
+        assertThat(page.updatedAt()).isEqualTo("2026-08-17");
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "set-construccion-magnetico",
+                        "small-foot-grua",
+                        "juego-mesa-animal-sobre-animal",
+                        "haba-puzles-cuatro-estaciones",
+                        "juego-mesa-dobble-kids"
+                );
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
+                .containsExactly(1, 2, 3, 4, 5);
+        assertThat(page.entries()).allSatisfy(entry -> {
+            assertThat(entry.editorialSummary()).isNotBlank();
+            assertThat(entry.criteriaNotes()).isNotEmpty();
+            assertThat(entry.affiliateHref()).isNull();
+        });
+        assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/5-anos/");
+        assertThat(page.relatedLinks()).extracting(link -> link.href())
+                .contains(
+                        "/por-edad/5-anos/",
+                        "/regalos/ideas-regalo-5-anos/",
+                        "/guias/habilidades-5-anos/"
+                );
+    }
+
+    @Test
+    void createsValidatedManualAffiliateLinksForFiveYearStemProducts() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setPartnerTag("bebesfelices-21");
+        properties.setProductAsins(Map.of(
+                "small-foot-grua", "B07MVR126C",
+                "juego-mesa-animal-sobre-animal", "B00D6J9SJQ",
+                "haba-puzles-cuatro-estaciones", "B01CSUXO2U",
+                "juego-mesa-dobble-kids", "B00OM7VIC6"
+        ));
+        ProductCatalog catalog = new AmazonEnrichedProductCatalog(
+                new ManualProductCatalog(),
+                (asin, marketplace) -> Optional.empty(),
+                properties
+        );
+
+        ComparisonPageResponse page = new ComparisonPageService(catalog)
+                .getBySlug(ComparisonPageService.STEM_5_SLUG)
+                .orElseThrow();
+
+        assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
+                .containsExactly(
+                        null,
+                        "https://www.amazon.es/dp/B07MVR126C?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B00D6J9SJQ?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B01CSUXO2U?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B00OM7VIC6?tag=bebesfelices-21"
+                );
+    }
+
+    @Test
     void createsManualAffiliateLinksForBoardGamesWithoutCallingCreatorsApi() {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelices-21");

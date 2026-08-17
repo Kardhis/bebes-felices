@@ -19,6 +19,8 @@ class AgePageServiceTest {
 
     private static final String BALANCE_BIKES_HREF =
             "/comparativas/mejores-bicicletas-sin-pedales-3-anos/";
+    private static final String STEM_5_HREF =
+            "/comparativas/mejores-juguetes-stem-5-anos/";
     private final AgePageService service = new AgePageService(new ManualProductCatalog());
 
     @ParameterizedTest
@@ -168,6 +170,50 @@ class AgePageServiceTest {
             String path = href.split("#", 2)[0];
             assertThat(published).contains(path);
         });
+    }
+
+    @Test
+    void fiveYearBodyDestinationsStayInsideThePublishedCircuit() {
+        AgePageResponse page = service.getBySlug("5-anos").orElseThrow();
+        List<String> hrefs = new java.util.ArrayList<>();
+        page.optionsByNeed().forEach(group ->
+                group.items().forEach(item -> hrefs.add(item.href())));
+        page.featuredGuides().forEach(item -> hrefs.add(item.href()));
+        page.featuredRankings().forEach(item -> hrefs.add(item.href()));
+        page.giftIdeas().forEach(item -> hrefs.add(item.href()));
+        page.informativeArticles().forEach(item -> hrefs.add(item.href()));
+        page.featuredSelection().forEach(item -> hrefs.add(item.href()));
+
+        List<String> published = List.of(
+                STEM_5_HREF,
+                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/habilidades-5-anos/",
+                "/juguetes-educativos/juegos-de-mesa/",
+                "/movimiento/bicicletas-sin-pedales/",
+                "/movimiento/patinetes/",
+                "/autonomia/torres-de-aprendizaje/",
+                "/autonomia/vajilla-infantil/",
+                "/sostenibles/",
+                "/regalos/ideas-regalo-5-anos/",
+                "/analisis/puzle-madera-animales/",
+                "/analisis/bici-sin-pedales-basica/",
+                "/analisis/torre-aprendizaje-madera/",
+                "/analisis/set-vajilla-infantil/",
+                "/analisis/juego-mesa-cooperativo/",
+                "/analisis/kit-manualidades-natural/"
+        );
+
+        assertThat(hrefs).isNotEmpty();
+        assertThat(hrefs).allSatisfy(href ->
+                assertThat(published).contains(href.split("#", 2)[0]));
+        assertThat(page.featuredSelection())
+                .filteredOn(product -> product.title().equals("Set de construcción magnético"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            STEM_5_HREF + "#producto-set-construccion-magnetico"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
     }
 
     @Test

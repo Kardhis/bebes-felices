@@ -2,6 +2,7 @@ export const GUIDE_SLUGS = [
   "como-elegir-juguetes-por-edad",
   "habilidades-3-anos",
   "habilidades-4-anos",
+  "habilidades-5-anos",
 ] as const;
 
 export const METHODOLOGY_SLUG = "como-analizamos";

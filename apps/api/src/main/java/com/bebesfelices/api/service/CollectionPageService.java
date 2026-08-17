@@ -26,6 +26,8 @@ public class CollectionPageService {
     public static final String STEM_SLUG = "juegos-stem";
     public static final String BALANCE_BIKES_SLUG = "bicicletas-sin-pedales";
     public static final String GIFTS_4_SLUG = "ideas-regalo-4-anos";
+    public static final String GIFTS_5_SLUG = "ideas-regalo-5-anos";
+    public static final String BOARD_GAMES_SLUG = "juegos-de-mesa";
 
     private final Map<String, EditorialCollection> collections = new LinkedHashMap<>();
     private final ProductCatalog productCatalog;
@@ -445,6 +447,96 @@ public class CollectionPageService {
                         chooseByAgeLink()
                 ),
                 4
+        ));
+        register(new EditorialCollection(
+                GIFTS_5_SLUG,
+                "/regalos/ideas-regalo-5-anos/",
+                "Regalos",
+                "Ideas de regalo para niños de 5 años",
+                "Regalos para 5 años elegidos por reto, cooperación, creatividad y uso evolutivo.",
+                List.of(
+                        "A los 5 años conviene regalar un reto que se pueda terminar y volver a complicar: construir, resolver, cooperar o crear.",
+                        "La construcción magnética enlaza a la comparativa STEM; el resto de productos tiene una comparativa o un análisis ya publicado."
+                ),
+                List.of(
+                        "Encaje con los intereses reales del niño.",
+                        "Dificultad que se pueda ajustar sin cambiar de producto.",
+                        "Reglas o proyectos que terminen en una sesión razonable.",
+                        "Edad mínima, piezas e imanes revisados antes del uso."
+                ),
+                List.of(
+                        "set-construccion-magnetico",
+                        "juego-mesa-cooperativo",
+                        "puzle-madera-animales",
+                        "bici-sin-pedales-basica",
+                        "torre-aprendizaje-madera",
+                        "set-vajilla-infantil",
+                        "kit-manualidades-natural"
+                ),
+                Map.of(
+                        "set-construccion-magnetico",
+                        "/comparativas/mejores-juguetes-stem-5-anos/#producto-set-construccion-magnetico"
+                ),
+                List.of(
+                        faq("¿Qué regalo educativo encaja a los 5 años?",
+                                "Uno que plantee un problema asumible y permita subir la dificultad: construir, completar un puzle o coordinar una partida."),
+                        faq("¿Es mejor un juego cooperativo?",
+                                "Es útil si quieres practicar acuerdos y turnos sin un ganador individual, pero debe encajar con los intereses del niño."),
+                        faq("¿Incluís precios o estrellas?",
+                                "No. Son datos variables y no forman parte de esta selección editorial.")
+                ),
+                List.of(
+                        hubLink(5),
+                        new LinkItem(
+                                "Mejores juguetes STEM para 5 años",
+                                "/comparativas/mejores-juguetes-stem-5-anos/",
+                                "Cinco opciones existentes para construir y resolver problemas."
+                        ),
+                        new LinkItem(
+                                "Juegos de mesa para 5 años",
+                                "/juguetes-educativos/juegos-de-mesa/",
+                                "Cooperación, turnos y reglas asumibles."
+                        ),
+                        chooseByAgeLink()
+                ),
+                5
+        ));
+        register(new EditorialCollection(
+                BOARD_GAMES_SLUG,
+                "/juguetes-educativos/juegos-de-mesa/",
+                "Juguetes educativos",
+                "Juegos de mesa para niños de 5 años",
+                "Juegos cooperativos para practicar turnos, acuerdos y una estrategia sencilla a los 5 años.",
+                List.of(
+                        "A esta edad ya se pueden encadenar varias reglas breves y tomar decisiones en grupo, siempre con una partida que se pueda terminar.",
+                        "La selección usa el juego cooperativo ya presente en el catálogo y enlaza a su análisis editorial."
+                ),
+                List.of(
+                        "Objetivo y turno explicables en pocos minutos.",
+                        "Duración compatible con la atención del grupo.",
+                        "Componentes seguros para la edad y para hermanos menores.",
+                        "Posibilidad de ajustar la dificultad o simplificar reglas."
+                ),
+                List.of("juego-mesa-cooperativo"),
+                Map.of(),
+                List.of(
+                        faq("¿Cooperativo significa que nadie pierde?",
+                                "El grupo gana o pierde unido. Sigue habiendo un resultado, pero no un ganador individual."),
+                        faq("¿Puede jugar sin adulto?",
+                                "Conviene que un adulto explique la primera partida y ayude a resolver dudas o conflictos."),
+                        faq("¿Cuánto debe durar?",
+                                "Lo suficiente para terminar antes de que desaparezca la atención. Comprueba la duración del producto concreto.")
+                ),
+                List.of(
+                        hubLink(5),
+                        analysisLink("juego-mesa-cooperativo", "Juego de mesa cooperativo"),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/regalos/ideas-regalo-5-anos/",
+                                "Más opciones por necesidad e interés."
+                        )
+                ),
+                5
         ));
     }
 

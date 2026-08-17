@@ -6,11 +6,12 @@ import {
 } from "./collectionRoutes";
 
 describe("collectionRoutes", () => {
-  it("maps each prefix to the slugs used by the 3-year hub", () => {
+  it("maps each prefix to the published collection slugs", () => {
     expect(collectionsForPrefix("juguetes-educativos")).toEqual([
       "juegos-montessori",
       "puzles",
       "juegos-stem",
+      "juegos-de-mesa",
     ]);
     expect(collectionsForPrefix("movimiento")).toEqual([
       "patinetes",
@@ -22,10 +23,11 @@ describe("collectionRoutes", () => {
     expect(isCollectionSlug("sostenibles")).toBe(true);
     expect(isCollectionSlug("ideas-regalo-3-anos")).toBe(true);
     expect(isCollectionSlug("ideas-regalo-4-anos")).toBe(true);
+    expect(isCollectionSlug("ideas-regalo-5-anos")).toBe(true);
   });
 
   it("rejects a valid slug on the wrong prefix", () => {
     expect(isCollectionSlugForPrefix("movimiento", "puzles")).toBe(false);
-    expect(isCollectionSlug("juegos-de-mesa")).toBe(false);
+    expect(isCollectionSlug("juegos-de-mesa")).toBe(true);
   });
 });

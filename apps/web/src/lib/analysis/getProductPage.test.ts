@@ -70,6 +70,7 @@ describe("analysis product pages", () => {
 
   it("does not treat the Chicco comparison spotlight as an analysis route", () => {
     expect(isAnalysisProductId("patinete-3-ruedas")).toBe(true);
+    expect(isAnalysisProductId("juego-mesa-cooperativo")).toBe(true);
     expect(isAnalysisProductId("bici-chicco-red-bullet")).toBe(false);
   });
 });

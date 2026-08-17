@@ -115,6 +115,28 @@ class AgePageControllerTest {
     }
 
     @Test
+    void exposesTheCompleteFiveYearEditorialCircuit() throws Exception {
+        mockMvc.perform(get("/api/age-pages/5-anos"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.optionsByNeed[0].items[0].href")
+                        .value("/comparativas/mejores-juguetes-stem-5-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[1].href")
+                        .value("/juguetes-educativos/juegos-de-mesa/"))
+                .andExpect(jsonPath("$.featuredRankings[0].href")
+                        .value("/comparativas/mejores-juguetes-stem-5-anos/"))
+                .andExpect(jsonPath("$.giftIdeas[0].href")
+                        .value("/regalos/ideas-regalo-5-anos/"))
+                .andExpect(jsonPath("$.informativeArticles[0].href")
+                        .value("/guias/habilidades-5-anos/"))
+                .andExpect(jsonPath("$.featuredSelection[4].title")
+                        .value("Set de construcción magnético"))
+                .andExpect(jsonPath("$.featuredSelection[4].href")
+                        .value("/comparativas/mejores-juguetes-stem-5-anos/#producto-set-construccion-magnetico"))
+                .andExpect(jsonPath("$.featuredSelection[4].ctaLabel")
+                        .value("Ver comparativa completa"));
+    }
+
+    @Test
     void contentDiffersBetweenAges() throws Exception {
         String h1For3 = mockMvc.perform(get("/api/age-pages/3-anos"))
                 .andReturn().getResponse().getContentAsString();

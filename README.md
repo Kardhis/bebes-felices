@@ -326,6 +326,7 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 - Páginas hub completas para 3, 4 y 5 años (selección destacada, FAQ, guías, rankings)
 - Circuito editorial de 3 años: guías, categorías, regalos, análisis y metodología
 - Circuito editorial de 4 años: comparativas de juegos de mesa, patinetes, torres, vajilla y regalos sostenibles, guía de habilidades, STEM, bicicletas, regalos y análisis
+- Circuito editorial de 5 años: comparativa STEM, juegos de mesa, guía de habilidades, regalos y análisis
 - Catálogo de productos manual en memoria
 - Avisos de afiliación Amazon visibles
 - Infraestructura de tests en frontend y backend
@@ -334,7 +335,6 @@ Este repositorio contiene el **MVP funcional** del proyecto:
 
 - Activación de Amazon Creators API con credenciales y ASIN reales
 - Persistencia de contenido / CMS
-- Páginas de categorías, guías y comparativas de 5 años
 - Despliegue en producción con variables de entorno definitivas
 
 ---

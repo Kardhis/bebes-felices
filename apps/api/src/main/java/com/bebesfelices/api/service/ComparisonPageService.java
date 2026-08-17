@@ -26,12 +26,14 @@ public class ComparisonPageService {
     public static final String TOWERS_SLUG = "mejores-torres-aprendizaje-4-anos";
     public static final String TABLEWARE_SLUG = "mejores-vajillas-infantiles-4-anos";
     public static final String SUSTAINABLE_SLUG = "mejores-regalos-sostenibles-4-anos";
+    public static final String STEM_5_SLUG = "mejores-juguetes-stem-5-anos";
     private static final int BALANCE_BIKES_AGE = 3;
     private static final int BOARD_GAMES_AGE = 4;
     private static final int SCOOTERS_AGE = 4;
     private static final int TOWERS_AGE = 4;
     private static final int TABLEWARE_AGE = 4;
     private static final int SUSTAINABLE_AGE = 4;
+    private static final int STEM_5_AGE = 5;
     private static final String BIKES_PUBLISHED_AT = "2026-08-13";
     private static final String BIKES_UPDATED_AT = "2026-08-13";
     private static final String BOARD_GAMES_PUBLISHED_AT = "2026-08-14";
@@ -40,6 +42,8 @@ public class ComparisonPageService {
     private static final String SCOOTERS_UPDATED_AT = "2026-08-14";
     private static final String FOUR_YEAR_PUBLISHED_AT = "2026-08-14";
     private static final String FOUR_YEAR_UPDATED_AT = "2026-08-14";
+    private static final String STEM_5_PUBLISHED_AT = "2026-08-17";
+    private static final String STEM_5_UPDATED_AT = "2026-08-17";
     private static final String BALANCE_BIKES_CANONICAL = "https://bebesfelices.es/comparativas/"
             + BALANCE_BIKES_SLUG + "/";
     private static final String BOARD_GAMES_CANONICAL = "https://bebesfelices.es/comparativas/"
@@ -52,6 +56,8 @@ public class ComparisonPageService {
             + TABLEWARE_SLUG + "/";
     private static final String SUSTAINABLE_CANONICAL = "https://bebesfelices.es/comparativas/"
             + SUSTAINABLE_SLUG + "/";
+    private static final String STEM_5_CANONICAL = "https://bebesfelices.es/comparativas/"
+            + STEM_5_SLUG + "/";
 
     private static final List<EditorialEntry> BALANCE_BIKES = List.of(
             new EditorialEntry(
@@ -753,6 +759,114 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> STEM_5 = List.of(
+            new EditorialEntry(
+                    "set-construccion-magnetico",
+                    "Set de construcción magnético",
+                    "Construir estructuras y explorar geometría",
+                    "Las piezas magnéticas permiten probar formas, simetrías y estabilidad con un reto que puede crecer añadiendo componentes.",
+                    List.of(
+                            "Permite construir en tres dimensiones.",
+                            "La dificultad se adapta al número de piezas.",
+                            "Practica lógica espacial y planificación."
+                    ),
+                    List.of(
+                            "Los imanes deben permanecer encapsulados.",
+                            "Un set demasiado grande puede dificultar terminar un proyecto."
+                    ),
+                    "4-5 años",
+                    List.of(
+                            note("Reto STEM", "Construcción, geometría y estabilidad."),
+                            note("Uso evolutivo", "Se puede aumentar la dificultad añadiendo piezas."),
+                            note("Seguridad", "Requiere revisar que ningún imán se desprenda.")
+                    )
+            ),
+            new EditorialEntry(
+                    "small-foot-grua",
+                    "Small Foot grúa de construcción",
+                    "Comprender poleas, giro y causa-efecto",
+                    "La grúa incorpora giro de 360 grados y manivela para observar cómo un mecanismo sencillo eleva y desplaza una carga.",
+                    List.of(
+                            "Manivela y grúa giratoria para experimentar con movimiento.",
+                            "Juego abierto con accesorios de obra.",
+                            "Madera FSC 100 % declarada en la ficha."
+                    ),
+                    List.of(
+                            "El aprendizaje depende de proponer retos, no solo de mover accesorios.",
+                            "Las piezas se deben recoger si hay hermanos pequeños."
+                    ),
+                    "Desde 3 años",
+                    List.of(
+                            note("Reto STEM", "Mecanismos simples y relación causa-efecto."),
+                            note("Uso evolutivo", "Admite juego libre y pequeños retos de transporte."),
+                            note("Seguridad", "Supervisión por sus accesorios sueltos.")
+                    )
+            ),
+            new EditorialEntry(
+                    "juego-mesa-animal-sobre-animal",
+                    "HABA Animal sobre Animal",
+                    "Experimentar equilibrio y centro de gravedad",
+                    "Apilar figuras según el dado convierte el equilibrio en un problema visible: probar una posición, observar por qué cae y corregirla.",
+                    List.of(
+                            "Reto directo de equilibrio y planificación espacial.",
+                            "29 figuras de madera para configuraciones variadas.",
+                            "Reglas breves, sin lectura durante el turno."
+                    ),
+                    List.of(
+                            "Es competitivo y exige tolerar que una torre se derrumbe.",
+                            "No desarrolla construcción estructural al nivel de un set de piezas."
+                    ),
+                    "Desde 4 años",
+                    List.of(
+                            note("Reto STEM", "Equilibrio, apoyo y distribución del peso."),
+                            note("Uso evolutivo", "La dificultad cambia con cada apilado."),
+                            note("Seguridad", "No apto para menores de 3 años por piezas pequeñas.")
+                    )
+            ),
+            new EditorialEntry(
+                    "haba-puzles-cuatro-estaciones",
+                    "HABA Puzzles Las Cuatro Estaciones",
+                    "Practicar análisis visual y orientación espacial",
+                    "Cuatro puzles de 15 piezas permiten comparar patrones, rotar piezas y completar una tarea con una dificultad acotada.",
+                    List.of(
+                            "Cuatro escenas para alternar el reto.",
+                            "Quince piezas por puzle, asumibles en una sesión.",
+                            "Cartón resistente y figuras de madera declaradas."
+                    ),
+                    List.of(
+                            "El reto puede quedarse corto si ya completa puzles mayores.",
+                            "No incluye un mecanismo ni experimentos científicos."
+                    ),
+                    "Desde 3 años",
+                    List.of(
+                            note("Reto STEM", "Patrones, rotación mental y resolución de problemas."),
+                            note("Uso evolutivo", "Cuatro puzles permiten progresar sin mezclar todas las piezas."),
+                            note("Seguridad", "Conviene guardar cada conjunto por separado.")
+                    )
+            ),
+            new EditorialEntry(
+                    "juego-mesa-dobble-kids",
+                    "Dobble Kids",
+                    "Reconocer patrones con rapidez",
+                    "Buscar el símbolo común entre cartas entrena comparación visual, atención selectiva y clasificación bajo una regla sencilla.",
+                    List.of(
+                            "Partidas declaradas de unos 15 minutos.",
+                            "Regla visual sin necesidad de leer.",
+                            "De 2 a 8 jugadores."
+                    ),
+                    List.of(
+                            "La rapidez puede frustrar a quien necesita más tiempo.",
+                            "Es un juego de observación, no un kit de experimentación."
+                    ),
+                    "Desde 4 años",
+                    List.of(
+                            note("Reto STEM", "Reconocimiento de patrones y clasificación visual."),
+                            note("Uso evolutivo", "La velocidad aumenta con la práctica."),
+                            note("Seguridad", "Las cartas deben mantenerse lejos de menores que puedan morderlas.")
+                    )
+            )
+    );
+
     private final ProductCatalog productCatalog;
 
     public ComparisonPageService(ProductCatalog productCatalog) {
@@ -767,6 +881,7 @@ public class ComparisonPageService {
             case TOWERS_SLUG -> Optional.of(buildTowersPage());
             case TABLEWARE_SLUG -> Optional.of(buildTablewarePage());
             case SUSTAINABLE_SLUG -> Optional.of(buildSustainablePage());
+            case STEM_5_SLUG -> Optional.of(buildStemFivePage());
             default -> Optional.empty();
         };
     }
@@ -1189,7 +1304,7 @@ public class ComparisonPageService {
     }
 
     private ComparisonPageResponse buildTowersPage() {
-        return fourYearComparison(
+        return ageComparison(
                 TOWERS_SLUG,
                 TOWERS_CANONICAL,
                 TOWERS_AGE,
@@ -1263,7 +1378,7 @@ public class ComparisonPageService {
     }
 
     private ComparisonPageResponse buildTablewarePage() {
-        return fourYearComparison(
+        return ageComparison(
                 TABLEWARE_SLUG,
                 TABLEWARE_CANONICAL,
                 TABLEWARE_AGE,
@@ -1337,7 +1452,7 @@ public class ComparisonPageService {
     }
 
     private ComparisonPageResponse buildSustainablePage() {
-        return fourYearComparison(
+        return ageComparison(
                 SUSTAINABLE_SLUG,
                 SUSTAINABLE_CANONICAL,
                 SUSTAINABLE_AGE,
@@ -1409,7 +1524,73 @@ public class ComparisonPageService {
         );
     }
 
-    private ComparisonPageResponse fourYearComparison(
+    private ComparisonPageResponse buildStemFivePage() {
+        return ageComparison(
+                STEM_5_SLUG,
+                STEM_5_CANONICAL,
+                STEM_5_AGE,
+                STEM_5,
+                "Mejores juguetes STEM para 5 años | Bebes Felices",
+                "Comparamos cinco juguetes existentes aptos para 5 años por lógica, construcción, patrones y uso evolutivo.",
+                "Juguetes STEM para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores juguetes STEM para 5 años",
+                        "Cinco opciones reales para construir, observar patrones y resolver problemas",
+                        List.of(
+                                "A los 5 años un juguete STEM útil plantea un problema visible: levantar una carga, mantener una torre, completar un patrón o construir una estructura.",
+                                "Reutilizamos productos ya presentes en el catálogo y aptos para esta edad. No añadimos precios, estrellas ni enlaces comerciales inventados.",
+                                "STEM no significa dejar al niño solo: los imanes, piezas y reglas requieren revisar la seguridad y acompañar el primer uso."
+                        )
+                ),
+                "Los cinco juguetes",
+                List.of(
+                        summary("Para construcción tridimensional", "set-construccion-magnetico", "Formas, simetría y estabilidad con piezas magnéticas."),
+                        summary("Para mecanismos sencillos", "small-foot-grua", "Giro, manivela y transporte de cargas."),
+                        summary("Para equilibrio", "juego-mesa-animal-sobre-animal", "Apilado, apoyo y distribución del peso."),
+                        summary("Para orientación espacial", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas."),
+                        summary("Para reconocer patrones", "juego-mesa-dobble-kids", "Comparación visual con una regla breve.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el tipo de reto, la autonomía posible y la seguridad para un niño de 5 años. La selección no presupone que todo juguete educativo sea STEM.",
+                        List.of(
+                                criterion("Reto STEM", "Debe practicar construcción, mecanismos, equilibrio, orientación o patrones de forma observable."),
+                                criterion("Encaje a los 5 años", "Todos los productos incluyen esta edad en el rango del catálogo."),
+                                criterion("Uso evolutivo", "Valoramos si el reto admite repetición o dificultad creciente."),
+                                criterion("Dependencia del adulto", "Indicamos cuándo hace falta explicar reglas o proponer el primer reto."),
+                                criterion("Seguridad", "Revisamos imanes, piezas sueltas y la presencia de menores de 3 años.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el tipo de problema", List.of(
+                                "Para construir, prioriza el set magnético; para mecanismos, la grúa; para equilibrio, Animal sobre Animal.",
+                                "Los puzles y Dobble cubren orientación y patrones, pero no sustituyen una experiencia de construcción."
+                        )),
+                        section("Busca dificultad ajustable", List.of(
+                                "Empieza con pocas piezas o una regla y aumenta el reto cuando pueda terminar sin ayuda constante.",
+                                "Un producto evolutivo permite cambiar la consigna sin comprar otro juguete."
+                        )),
+                        section("Revisa piezas e imanes", List.of(
+                                "Los imanes deben estar encapsulados y las piezas sueltas fuera del alcance de menores de 3 años.",
+                                "La edad recomendada no sustituye revisar el estado del producto antes de cada uso."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué significa STEM a los 5 años?", "Resolver problemas de ciencia, tecnología, ingeniería o matemáticas mediante juego: construir, observar mecanismos, equilibrar o reconocer patrones."),
+                        faqItem("¿Hace falta un juguete electrónico?", "No. Una grúa con manivela, un apilado o una construcción magnética permiten observar principios físicos sin pantalla."),
+                        faqItem("¿Cuál admite más dificultad?", "La construcción magnética ofrece el margen más directo: se pueden añadir piezas, restricciones y estructuras más complejas."),
+                        faqItem("¿Todos sirven para jugar sin adulto?", "No. Conviene explicar el primer reto, acompañar las reglas y revisar imanes y piezas."),
+                        faqItem("¿Por qué no aparecen precios ni estrellas?", "Porque cambian y no forman parte del criterio editorial estable.")
+                ),
+                List.of(
+                        new LinkItem("Juguetes y regalos para niños de 5 años", EditorialDefaults.hubHref(5), "Volver al hub de esta edad."),
+                        new LinkItem("Ideas de regalo para 5 años", "/regalos/ideas-regalo-5-anos/", "Selección más amplia por necesidad."),
+                        new LinkItem("Qué habilidades desarrolla un niño de 5 años", "/guias/habilidades-5-anos/", "Pensamiento lógico, cooperación y autonomía."),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse ageComparison(
             String slug,
             String canonical,
             int age,
@@ -1425,6 +1606,8 @@ public class ComparisonPageService {
             List<ComparisonPageResponse.Faq> faq,
             List<LinkItem> relatedLinks
     ) {
+        String publishedAt = age == STEM_5_AGE ? STEM_5_PUBLISHED_AT : FOUR_YEAR_PUBLISHED_AT;
+        String updatedAt = age == STEM_5_AGE ? STEM_5_UPDATED_AT : FOUR_YEAR_UPDATED_AT;
         return new ComparisonPageResponse(
                 new Seo(canonical, seoTitle, seoDescription),
                 PageStatus.PUBLISHED,
@@ -1433,8 +1616,8 @@ public class ComparisonPageService {
                 List.of(
                         new ComparisonPageResponse.Breadcrumb("Inicio", "/"),
                         new ComparisonPageResponse.Breadcrumb(
-                                EditorialDefaults.HUB_4_LABEL,
-                                EditorialDefaults.HUB_4_HREF
+                                EditorialDefaults.hubLabel(age),
+                                EditorialDefaults.hubHref(age)
                         ),
                         new ComparisonPageResponse.Breadcrumb(breadcrumbLabel, canonical)
                 ),
@@ -1453,9 +1636,9 @@ public class ComparisonPageService {
                 faq,
                 relatedLinks,
                 new TrustAuthority(
-                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y solo mostramos hechos revisados el 14 de agosto de 2026.",
+                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y evitamos datos comerciales no verificables.",
                         List.of(
-                                "Edad o uso declarado para 4 años.",
+                                "Edad o uso declarado para " + age + " años.",
                                 "Especificaciones de la ficha consultada.",
                                 "Materiales y certificaciones solo cuando figuran.",
                                 "Límites de seguridad sin sustituir la supervisión."
@@ -1470,8 +1653,8 @@ public class ComparisonPageService {
                 affiliation(),
                 legalLinks(),
                 new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
-                FOUR_YEAR_PUBLISHED_AT,
-                FOUR_YEAR_UPDATED_AT
+                publishedAt,
+                updatedAt
         );
     }
 

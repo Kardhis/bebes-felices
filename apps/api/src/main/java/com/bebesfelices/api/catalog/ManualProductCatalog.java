@@ -295,7 +295,7 @@ public class ManualProductCatalog implements ProductCatalog {
                 List.of("Juguetes educativos", "Juegos de mesa"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 8, 17)
         ));
         register(new Product(
                 "juego-mesa-dobble-kids",
@@ -308,7 +308,7 @@ public class ManualProductCatalog implements ProductCatalog {
                 List.of("Juguetes educativos", "Juegos de mesa"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 8, 17)
         ));
         register(new Product(
                 "juego-mesa-unicornio-fiesta-rosalie",
@@ -503,7 +503,7 @@ public class ManualProductCatalog implements ProductCatalog {
                 List.of("Regalos", "Sostenibles"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 8, 17)
         ));
         register(new Product(
                 "small-foot-grua",
@@ -516,7 +516,7 @@ public class ManualProductCatalog implements ProductCatalog {
                 List.of("Regalos", "Sostenibles"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 8, 17)
         ));
         register(new Product(
                 "green-toys-construccion",

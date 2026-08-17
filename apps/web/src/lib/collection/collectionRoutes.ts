@@ -12,6 +12,10 @@ export const COLLECTION_PAGES = [
     prefix: "juguetes-educativos",
   },
   {
+    slug: "juegos-de-mesa",
+    prefix: "juguetes-educativos",
+  },
+  {
     slug: "patinetes",
     prefix: "movimiento",
   },
@@ -33,6 +37,10 @@ export const COLLECTION_PAGES = [
   },
   {
     slug: "ideas-regalo-4-anos",
+    prefix: "regalos",
+  },
+  {
+    slug: "ideas-regalo-5-anos",
     prefix: "regalos",
   },
   {

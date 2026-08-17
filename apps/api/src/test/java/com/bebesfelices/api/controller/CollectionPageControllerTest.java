@@ -57,6 +57,20 @@ class CollectionPageControllerTest {
                 .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {
+            CollectionPageService.GIFTS_5_SLUG,
+            CollectionPageService.BOARD_GAMES_SLUG
+    })
+    void returnsPublishedFiveYearCollections(String slug) throws Exception {
+        mockMvc.perform(get("/api/collection-pages/{slug}", slug))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"))
+                .andExpect(jsonPath("$.products", not(empty())))
+                .andExpect(jsonPath("$.products[*].affiliateHref", everyItem(nullValue())));
+    }
+
     @Test
     void returnsNotFoundForAnUnknownCollection() throws Exception {
         mockMvc.perform(get("/api/collection-pages/no-existe"))

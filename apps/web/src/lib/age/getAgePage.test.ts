@@ -58,6 +58,33 @@ describe("getAgePage", () => {
     );
   });
 
+  it("fetches the five-year hub with ISR", async () => {
+    vi.mocked(fetch).mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          ...minimalAgePageResponse,
+          seo: {
+            ...minimalAgePageResponse.seo,
+            canonicalUrl: "https://bebesfelices.es/por-edad/5-anos/",
+          },
+          age: 5,
+          ageLabel: "5 años",
+          slug: "5-anos",
+        }),
+        { status: 200 },
+      ),
+    );
+
+    const page = await getAgePage("5-anos");
+
+    expect(page.slug).toBe("5-anos");
+    expect(page.age).toBe(5);
+    expect(fetch).toHaveBeenCalledWith(
+      expect.stringContaining("/api/age-pages/5-anos"),
+      expect.objectContaining({ next: { revalidate: 60 } }),
+    );
+  });
+
   it("normalizes legacy introduction string into introductionParagraphs", async () => {
     vi.mocked(fetch).mockResolvedValue(
       new Response(

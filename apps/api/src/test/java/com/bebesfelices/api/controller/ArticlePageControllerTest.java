@@ -47,6 +47,16 @@ class ArticlePageControllerTest {
     }
 
     @Test
+    void returnsTheFiveYearSkillsGuide() throws Exception {
+        mockMvc.perform(get("/api/article-pages/{slug}", ArticlePageService.SKILLS_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.canonicalPath").value("/guias/habilidades-5-anos/"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"))
+                .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/5-anos/"));
+    }
+
+    @Test
     void returnsNotFoundForAnUnknownArticle() throws Exception {
         mockMvc.perform(get("/api/article-pages/no-existe"))
                 .andExpect(status().isNotFound());

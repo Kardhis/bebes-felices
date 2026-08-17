@@ -54,6 +54,20 @@ class ProductAnalysisPageServiceTest {
     }
 
     @Test
+    void publishesTheFiveYearCooperativeBoardGameAnalysis() {
+        var page = service.getByProductId("juego-mesa-cooperativo").orElseThrow();
+
+        assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+        assertThat(page.relatedLinks()).extracting(link -> link.href())
+                .contains(
+                        EditorialDefaults.hubHref(5),
+                        "/juguetes-educativos/juegos-de-mesa/"
+                );
+        assertThat(page.affiliateHref()).isNull();
+    }
+
+    @Test
     void returnsEmptyForProductsOutsideThisPhase() {
         assertThat(service.getByProductId("bici-chicco-red-bullet")).isEmpty();
         assertThat(service.getByProductId("juego-mesa-el-frutal-mini")).isEmpty();

@@ -9,6 +9,7 @@ describe("comparisonSlugs", () => {
     for (const slug of COMPARISON_SLUGS) {
       expect(isComparisonSlug(slug)).toBe(true);
     }
+    expect(isComparisonSlug("mejores-juguetes-stem-5-anos")).toBe(true);
   });
 
   it("rejects unknown comparisons", () => {

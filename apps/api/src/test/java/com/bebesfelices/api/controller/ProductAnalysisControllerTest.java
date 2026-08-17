@@ -55,6 +55,17 @@ class ProductAnalysisControllerTest {
     }
 
     @Test
+    void returnsThePublishedFiveYearCooperativeGameAnalysis() throws Exception {
+        mockMvc.perform(get("/api/product-pages/juego-mesa-cooperativo"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PUBLISHED"))
+                .andExpect(jsonPath("$.canonicalPath")
+                        .value("/analisis/juego-mesa-cooperativo/"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"))
+                .andExpect(jsonPath("$.affiliateHref").value(nullValue()));
+    }
+
+    @Test
     void returnsNotFoundForTheComparisonSpotlight() throws Exception {
         mockMvc.perform(get("/api/product-pages/bici-chicco-red-bullet"))
                 .andExpect(status().isNotFound());

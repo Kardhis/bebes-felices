@@ -5,6 +5,7 @@ export const COMPARISON_SLUGS = [
   "mejores-torres-aprendizaje-4-anos",
   "mejores-vajillas-infantiles-4-anos",
   "mejores-regalos-sostenibles-4-anos",
+  "mejores-juguetes-stem-5-anos",
 ] as const;
 
 export type ComparisonSlug = (typeof COMPARISON_SLUGS)[number];
