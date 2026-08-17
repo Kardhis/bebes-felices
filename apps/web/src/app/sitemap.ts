@@ -8,6 +8,7 @@ import { COLLECTION_PAGES } from "@/lib/collection/collectionRoutes";
 import { getCollectionPage } from "@/lib/collection/getCollectionPage";
 import { COMPARISON_SLUGS } from "@/lib/comparison/comparisonSlugs";
 import { getComparisonPage } from "@/lib/comparison/getComparisonPage";
+import { LEGAL_PAGES } from "@/lib/legal/legalPages";
 import { SITE_URL } from "@/lib/seo/metadata";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
@@ -61,6 +62,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...LEGAL_PAGES.map((page) => ({
+      url: page.canonicalUrl,
+      lastModified: new Date(page.updatedAt),
+      changeFrequency: "yearly" as const,
+      priority: 0.2,
     })),
     ...editorial.filter((entry): entry is SitemapEntry => entry !== null),
   ];
