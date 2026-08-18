@@ -61,6 +61,9 @@ public class AmazonEnrichedProductCatalog implements ProductCatalog {
 
     private Product enrich(Product product) {
         String asin = properties.asinFor(product.id());
+        if (asin == null && product.asin() != null && !product.asin().isBlank()) {
+            asin = product.asin().trim();
+        }
         if (asin == null) {
             return product;
         }
@@ -95,18 +98,18 @@ public class AmazonEnrichedProductCatalog implements ProductCatalog {
     }
 
     private Product withManualAffiliateLink(Product product, String asin) {
-        if (properties.getPartnerTag() == null
-                || properties.getPartnerTag().isBlank()
-                || !asin.matches("[A-Z0-9]{10}")) {
+        if (!asin.matches("[A-Z0-9]{10}")) {
             return product;
         }
 
-        String partnerTag = URLEncoder.encode(
-                properties.getPartnerTag().trim(),
-                StandardCharsets.UTF_8
-        );
-        String detailPageUrl = "https://" + properties.getMarketplace()
-                + "/dp/" + asin + "?tag=" + partnerTag;
+        String detailPageUrl = "https://" + properties.getMarketplace() + "/dp/" + asin;
+        if (properties.getPartnerTag() != null && !properties.getPartnerTag().isBlank()) {
+            String partnerTag = URLEncoder.encode(
+                    properties.getPartnerTag().trim(),
+                    StandardCharsets.UTF_8
+            );
+            detailPageUrl += "?tag=" + partnerTag;
+        }
         try {
             return new Product(
                     product.id(),

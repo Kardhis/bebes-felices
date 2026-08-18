@@ -27,11 +27,11 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-montessori-formas",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B00005RF5G",
+                "www.amazon.es",
                 "Juego Montessori de formas y encajes",
-                "Piezas de madera para clasificar formas, colores y tamaños de forma autónoma.",
-                3, 4,
+                "Cubo de madera Melissa & Doug con 12 piezas grandes para clasificar formas y colores.",
+                2, 4,
                 List.of("Juguetes educativos", "Montessori"),
                 ProductStatus.ACTIVE,
                 null,
@@ -40,11 +40,11 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "puzle-madera-animales",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B00HWHNNRG",
+                "www.amazon.es",
                 "Puzle de madera de animales",
-                "Piezas grandes y resistentes pensadas para manos pequeñas.",
-                3, 5,
+                "Puzle Melissa & Doug de animales del safari con piezas grandes para manos pequeñas.",
+                2, 5,
                 List.of("Juguetes educativos", "Puzles"),
                 ProductStatus.ACTIVE,
                 null,
@@ -261,8 +261,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-mesa-el-frutal-mini",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B08R3YTDPQ",
+                "www.amazon.es",
                 "HABA El Frutal Mini",
                 "Juego cooperativo a partir de 3 años: recoger la fruta de madera antes de que el cuervo Teo llegue a los árboles, en formato mini de 1 a 4 jugadores.",
                 3, Integer.MAX_VALUE,
@@ -274,8 +274,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-mesa-unicornio-tesoro",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B01MRA4YCR",
+                "www.amazon.es",
                 "HABA Unicornio Destello El Tesoro de las Nubes",
                 "Juego de dados y acumulación a partir de 3 años, con tablero a doble cara para primeros conteos, 4 unicornios de madera y 60 cristales de nube.",
                 3, Integer.MAX_VALUE,
@@ -287,8 +287,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-mesa-animal-sobre-animal",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B00D6J9SJQ",
+                "www.amazon.es",
                 "HABA Animal sobre Animal",
                 "Juego de habilidad y apilamiento a partir de 4 años, con 29 figuras de madera y un dado de símbolos.",
                 4, Integer.MAX_VALUE,
@@ -300,8 +300,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-mesa-dobble-kids",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B00OM7VIC6",
+                "www.amazon.es",
                 "Dobble Kids",
                 "Juego de cartas de observación y reflejos en español, a partir de 4 años, de 2 a 8 jugadores y partidas de unos 15 minutos.",
                 4, Integer.MAX_VALUE,
@@ -313,8 +313,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "juego-mesa-unicornio-fiesta-rosalie",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B06XCLF568",
+                "www.amazon.es",
                 "HABA Unicornio Destello Una Fiesta para Rosalie",
                 "Juego cooperativo de recolección y movimiento a partir de 4 años, para 2 a 4 jugadores, con dados, ruleta y unicornios de madera.",
                 4, Integer.MAX_VALUE,
@@ -482,8 +482,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "plantoys-ata-zapato",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B092HVBGB3",
+                "www.amazon.es",
                 "PlanToys Ata el zapato",
                 "Juguete de madera de caucho para practicar nudos, de 3 a 8 años, fabricado en Tailandia con pegamento sin formaldehído y tintes al agua.",
                 3, 8,
@@ -495,8 +495,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "haba-puzles-cuatro-estaciones",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B01CSUXO2U",
+                "www.amazon.es",
                 "HABA Puzzles Las Cuatro Estaciones",
                 "Cuatro rompecabezas de 15 piezas a partir de 3 años, con figuras de madera de haya sostenible y cartón resistente.",
                 3, Integer.MAX_VALUE,
@@ -531,6 +531,397 @@ public class ManualProductCatalog implements ProductCatalog {
                 null,
                 LocalDate.of(2026, 8, 14)
         ));
+        register(new Product(
+                "hape-doctor-on-call",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Doctor on Call",
+                "Maletín con estetoscopio, termómetro, jeringa y otros accesorios para representar una consulta.",
+                3, 8,
+                List.of("Juguetes educativos", "Juego simbólico"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "hape-little-doctor",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Little Doctor's Medical Set",
+                "Set de imitación médica con instrumental y elementos interactivos para representar revisiones.",
+                3, 8,
+                List.of("Juguetes educativos", "Juego simbólico"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "hape-gourmet-kitchen",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Gourmet Kitchen",
+                "Cocina de madera con horno, fregadero y mandos para recrear rutinas domésticas.",
+                3, 8,
+                List.of("Juguetes educativos", "Juego simbólico"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-sensory-fidget-tubes",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Sensory Trio Fidget Tubes",
+                "Tres tubos sensoriales sellados con movimientos visuales diferentes para observar y manipular.",
+                3, 8,
+                List.of("Juguetes educativos", "Sensoriales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-sensory-scoops",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Helping Hands Sensory Scoops",
+                "Cuatro herramientas para recoger, verter y transferir materiales sensoriales con supervisión.",
+                3, 8,
+                List.of("Juguetes educativos", "Sensoriales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-emotion-fidget-poppers",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Rainbow Emotion Fidget Poppers",
+                "Piezas de silicona manipulables con seis colores y expresiones emocionales.",
+                3, 8,
+                List.of("Juguetes educativos", "Sensoriales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "schleich-farm-starter-42729",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Schleich Farm World Farm Starter Set",
+                "Cuatro figuras de animales de granja para montar escenas y crear historias propias.",
+                3, 8,
+                List.of("Juguetes educativos", "Pequeños mundos"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "schleich-wild-life-42387",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Schleich Wild Life Starter Set",
+                "Figuras de fauna salvaje con las que construir un pequeño mundo de safari.",
+                3, 8,
+                List.of("Juguetes educativos", "Pequeños mundos"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "schleich-africa-starter-42721",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Schleich Wild Life Africa Starter Set",
+                "Cuatro figuras de animales para recrear escenas y relatos de fauna africana.",
+                3, 8,
+                List.of("Juguetes educativos", "Pequeños mundos"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "hape-rock-ukulele",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Rock Ukulele",
+                "Ukelele infantil con cuatro cuerdas afinables, asa y guía para los primeros ritmos.",
+                3, 8,
+                List.of("Juguetes educativos", "Musicales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "hape-lights-ukulele",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Learn with Lights Ukulele",
+                "Instrumento de cuerdas con guía luminosa y canciones para practicar pulsación y ritmo.",
+                3, 8,
+                List.of("Juguetes educativos", "Musicales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "hape-electronic-ukulele",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Hape Electronic Ukulele",
+                "Ukelele con cuerdas, guía de luces y dos modos de práctica musical.",
+                3, 8,
+                List.of("Juguetes educativos", "Musicales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "magna-tiles-classic-32",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "MAGNA-TILES Classic 32-Piece Set",
+                "Piezas magnéticas geométricas para crear diseños planos y estructuras tridimensionales.",
+                3, 10,
+                List.of("Juguetes educativos", "Construcción"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "magna-tiles-builder-32",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "MAGNA-TILES Builder 32-Piece Set",
+                "Piezas magnéticas con elementos de obra para construir vehículos y estructuras abiertas.",
+                3, 10,
+                List.of("Juguetes educativos", "Construcción"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "magna-tiles-metropolis-110",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "MAGNA-TILES Metropolis 110-Piece Set",
+                "Set amplio de formas magnéticas para levantar estructuras de distintas escalas.",
+                3, 10,
+                List.of("Juguetes educativos", "Construcción"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "crayola-washable-paint-set",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Crayola Washable Paint Set",
+                "Conjunto de pinturas lavables, pinceles, papel y esponjas para creación libre.",
+                4, 10,
+                List.of("Juguetes educativos", "Arte y manualidades"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "crayola-pumpkin-painting",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Crayola Creature Pumpkin Painting Kit",
+                "Manualidad guiada con pintura lavable, Model Magic, pincel y piezas decorativas.",
+                4, 10,
+                List.of("Juguetes educativos", "Arte y manualidades"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "crayola-light-ups-owl",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Crayola Light-Ups Owl",
+                "Superficie reutilizable para dibujar con rotuladores lavables, borrar y volver a crear.",
+                4, 10,
+                List.of("Juguetes educativos", "Arte y manualidades"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-magnet-movers",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources STEM Explorers Magnet Movers",
+                "Material guiado para experimentar con atracción, repulsión y objetos magnéticos.",
+                4, 8,
+                List.of("Juguetes educativos", "Experimentación"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-tumble-trax",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Tumble Trax Magnetic Marble Run",
+                "Pistas magnéticas configurables para observar recorridos, velocidad y cambios de dirección.",
+                4, 10,
+                List.of("Juguetes educativos", "Experimentación"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-gears-machines-motion",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Gears! Gears! Gears! Machines in Motion",
+                "Engranajes, ruedas y ejes para construir mecanismos cuyo movimiento resulta visible.",
+                4, 10,
+                List.of("Juguetes educativos", "Experimentación"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-word-construction",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Word Construction",
+                "Piezas giratorias para formar palabras sencillas y cambiar consonantes y vocales.",
+                5, 9,
+                List.of("Juguetes educativos", "Lectoescritura"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-magnetic-lowercase-letters",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Jumbo Lowercase Magnetic Letters",
+                "Letras minúsculas grandes y manipulables para ordenar y formar palabras sencillas.",
+                5, 9,
+                List.of("Juguetes educativos", "Lectoescritura"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-spell-smores",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Let's Spell S'Mores!",
+                "Juego por niveles para construir palabras de tres letras con piezas manipulables.",
+                5, 9,
+                List.of("Juguetes educativos", "Lectoescritura"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-sum-swamp",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Sum Swamp",
+                "Juego de recorrido que introduce sumas y restas mediante dados y decisiones sencillas.",
+                5, 9,
+                List.of("Juguetes educativos", "Matemáticas y lógica"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-dumpling-dash",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Dumpling Dash",
+                "Juego de conteo, reconocimiento numérico y operaciones iniciales con piezas manipulables.",
+                5, 9,
+                List.of("Juguetes educativos", "Matemáticas y lógica"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "lr-ten-frame-trays",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Learning Resources Connecting Ten-Frame Trays",
+                "Marcos de diez y fichas para visualizar cantidades, patrones y relaciones numéricas.",
+                5, 9,
+                List.of("Juguetes educativos", "Matemáticas y lógica"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "haba-orchard",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Orchard",
+                "Juego cooperativo en el que el grupo recoge la fruta antes de que llegue el cuervo.",
+                3, 6,
+                List.of("Juguetes educativos", "Cooperativos y socioemocionales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "haba-prima-ballerina",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "HABA Prima Ballerina",
+                "Juego cooperativo de movimiento en el que se completa una secuencia de baile en grupo.",
+                4, 8,
+                List.of("Juguetes educativos", "Cooperativos y socioemocionales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        register(new Product(
+                "peaceable-race-treasure",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Peaceable Kingdom Race to the Treasure!",
+                "Juego cooperativo para construir un camino, reunir llaves y decidir juntos antes de que llegue el ogro.",
+                5, 9,
+                List.of("Juguetes educativos", "Cooperativos y socioemocionales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 18)
+        ));
+        EducationalAmazonProducts.all().forEach(this::register);
     }
 
     private void register(Product product) {

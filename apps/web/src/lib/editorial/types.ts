@@ -52,10 +52,17 @@ export type EditorialChrome = {
 
 export const defaultApiBaseUrl = "http://localhost:8080";
 
-export async function fetchEditorialJson<T>(path: string, notFoundError: Error): Promise<T> {
+export async function fetchEditorialJson<T>(
+  path: string,
+  notFoundError: Error,
+  options?: { revalidate?: number },
+): Promise<T> {
   const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? defaultApiBaseUrl;
+  const revalidate = options?.revalidate ?? 60;
   const res = await fetch(`${apiBaseUrl}${path}`, {
-    next: { revalidate: 60 },
+    ...(revalidate === 0
+      ? { cache: "no-store" as const }
+      : { next: { revalidate } }),
   });
 
   if (res.status === 404) {

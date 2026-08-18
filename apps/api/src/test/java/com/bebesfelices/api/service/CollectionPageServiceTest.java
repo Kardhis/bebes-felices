@@ -1,10 +1,13 @@
 package com.bebesfelices.api.service;
 
+import com.bebesfelices.api.catalog.AmazonEnrichedProductCatalog;
 import com.bebesfelices.api.catalog.ManualProductCatalog;
+import com.bebesfelices.api.catalog.amazon.AmazonCreatorsProperties;
 import com.bebesfelices.api.dto.PageStatus;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,18 +18,25 @@ class CollectionPageServiceTest {
 
     @Test
     void publishesEveryCollectionInTheThreeYearCircuit() {
-        List<String> threeYearSlugs = List.of(
-                CollectionPageService.MONTESSORI_SLUG,
-                CollectionPageService.PUZZLES_SLUG,
+        List<String> threeYearHubSlugs = List.of(
                 CollectionPageService.SCOOTERS_SLUG,
                 CollectionPageService.TOWERS_SLUG,
                 CollectionPageService.TABLEWARE_SLUG,
                 CollectionPageService.SUSTAINABLE_SLUG,
                 CollectionPageService.GIFTS_3_SLUG
         );
-        assertThat(service.publishedSlugs()).containsAll(threeYearSlugs);
+        List<String> threeYearEducationalSlugs = List.of(
+                CollectionPageService.MONTESSORI_SLUG,
+                CollectionPageService.PUZZLES_SLUG,
+                CollectionPageService.SYMBOLIC_PLAY_SLUG,
+                CollectionPageService.SENSORY_TOYS_SLUG,
+                CollectionPageService.SMALL_WORLDS_SLUG,
+                CollectionPageService.MUSICAL_TOYS_SLUG
+        );
+        assertThat(service.publishedSlugs()).containsAll(threeYearHubSlugs);
+        assertThat(service.publishedSlugs()).containsAll(threeYearEducationalSlugs);
 
-        for (String slug : threeYearSlugs) {
+        for (String slug : threeYearHubSlugs) {
             var page = service.getBySlug(slug).orElseThrow();
             assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
             assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_3_HREF);
@@ -35,12 +45,21 @@ class CollectionPageServiceTest {
                     .extracting(link -> link.href())
                     .contains(EditorialDefaults.HUB_3_HREF);
         }
+        for (String slug : threeYearEducationalSlugs) {
+            var page = service.getBySlug(slug).orElseThrow();
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.breadcrumbs().get(1).href())
+                    .isEqualTo("/juguetes-educativos/?edad=3");
+            assertThat(page.products()).isNotEmpty();
+            assertThat(page.relatedLinks())
+                    .extracting(link -> link.href())
+                    .contains("/juguetes-educativos/?edad=3");
+        }
     }
 
     @Test
     void publishesFourYearCollectionsWithReturnToTheFourYearHub() {
         for (String slug : List.of(
-                CollectionPageService.STEM_SLUG,
                 CollectionPageService.BALANCE_BIKES_SLUG,
                 CollectionPageService.GIFTS_4_SLUG
         )) {
@@ -50,6 +69,20 @@ class CollectionPageServiceTest {
             assertThat(page.relatedLinks())
                     .extracting(link -> link.href())
                     .contains(EditorialDefaults.HUB_4_HREF);
+        }
+        for (String slug : List.of(
+                CollectionPageService.STEM_SLUG,
+                CollectionPageService.CONSTRUCTION_TOYS_SLUG,
+                CollectionPageService.ARTS_CRAFTS_SLUG,
+                CollectionPageService.EXPERIMENTATION_SLUG
+        )) {
+            var page = service.getBySlug(slug).orElseThrow();
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.breadcrumbs().get(1).href())
+                    .isEqualTo("/juguetes-educativos/?edad=4");
+            assertThat(page.relatedLinks())
+                    .extracting(link -> link.href())
+                    .contains("/juguetes-educativos/?edad=4");
         }
     }
 
@@ -63,11 +96,15 @@ class CollectionPageServiceTest {
         var gifts = service.getBySlug(CollectionPageService.GIFTS_5_SLUG).orElseThrow();
         var games = service.getBySlug(CollectionPageService.BOARD_GAMES_SLUG).orElseThrow();
 
-        assertThat(List.of(gifts, games)).allSatisfy(page -> {
-            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
-            assertThat(page.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
-            assertThat(page.products()).isNotEmpty();
-        });
+        assertThat(gifts.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(games.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(gifts.products()).isNotEmpty();
+        assertThat(gifts.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+        assertThat(games.breadcrumbs().get(1).href())
+                .isEqualTo("/juguetes-educativos/?edad=5");
+        assertThat(games.relatedLinks())
+                .extracting(link -> link.href())
+                .contains("/juguetes-educativos/?edad=5");
         assertThat(gifts.products())
                 .filteredOn(product -> product.title().equals("Set de construcción magnético"))
                 .allSatisfy(product -> {
@@ -76,8 +113,9 @@ class CollectionPageServiceTest {
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
-        assertThat(games.products()).singleElement().satisfies(product ->
-                assertThat(product.href()).isEqualTo("/analisis/juego-mesa-cooperativo/"));
+        assertThat(games.products()).hasSize(6);
+        assertThat(games.products()).allSatisfy(product ->
+                assertThat(product.href()).isNull());
     }
 
     @Test
@@ -85,7 +123,7 @@ class CollectionPageServiceTest {
         var page = service.getBySlug(CollectionPageService.MONTESSORI_SLUG).orElseThrow();
 
         assertThat(page.canonicalPath()).isEqualTo("/juguetes-educativos/juegos-montessori/");
-        assertThat(page.products()).hasSize(1);
+        assertThat(page.products()).hasSize(6);
         assertThat(page.products().get(0).href())
                 .isEqualTo("/analisis/juego-montessori-formas/");
         assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver análisis completo");
@@ -133,5 +171,61 @@ class CollectionPageServiceTest {
     @Test
     void returnsEmptyForAnUnknownSlug() {
         assertThat(service.getBySlug("no-existe")).isEmpty();
+    }
+
+    @Test
+    void newEducationalCollectionsContainSixMatchingProductsWithAmazonLinks() {
+        AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
+        properties.setPartnerTag("bebesfelice0c-21");
+        CollectionPageService educationalService = new CollectionPageService(
+                new AmazonEnrichedProductCatalog(
+                        new ManualProductCatalog(),
+                        (asin, marketplace) -> Optional.empty(),
+                        properties
+                )
+        );
+        var expectedCategories = java.util.Map.of(
+                CollectionPageService.SYMBOLIC_PLAY_SLUG, "Juego simbólico",
+                CollectionPageService.SENSORY_TOYS_SLUG, "Sensoriales",
+                CollectionPageService.SMALL_WORLDS_SLUG, "Pequeños mundos",
+                CollectionPageService.MUSICAL_TOYS_SLUG, "Musicales",
+                CollectionPageService.CONSTRUCTION_TOYS_SLUG, "Construcción",
+                CollectionPageService.ARTS_CRAFTS_SLUG, "Arte y manualidades",
+                CollectionPageService.LITERACY_SLUG, "Lectoescritura"
+        );
+        var mixedCategorySlugs = List.of(
+                CollectionPageService.MONTESSORI_SLUG,
+                CollectionPageService.PUZZLES_SLUG,
+                CollectionPageService.STEM_SLUG,
+                CollectionPageService.BOARD_GAMES_SLUG,
+                CollectionPageService.EXPERIMENTATION_SLUG,
+                CollectionPageService.MATH_LOGIC_SLUG,
+                CollectionPageService.COOPERATIVE_SEL_SLUG
+        );
+
+        expectedCategories.forEach((slug, category) -> {
+            var page = educationalService.getBySlug(slug).orElseThrow();
+            assertThat(page.products()).hasSize(6);
+            assertThat(page.breadcrumbs().get(1).href())
+                    .isEqualTo("/juguetes-educativos/?edad=" + page.hubAge());
+            assertThat(page.products()).allSatisfy(product -> {
+                assertThat(product.category()).isEqualTo(category);
+                assertThat(product.href()).isNull();
+                assertThat(product.ctaLabel()).isNull();
+                assertThat(product.affiliateHref())
+                        .startsWith("https://www.amazon.es/dp/")
+                        .contains("tag=bebesfelice0c-21");
+            });
+        });
+        for (String slug : mixedCategorySlugs) {
+            var page = educationalService.getBySlug(slug).orElseThrow();
+            assertThat(page.products()).hasSize(6);
+            assertThat(page.breadcrumbs().get(1).href())
+                    .isEqualTo("/juguetes-educativos/?edad=" + page.hubAge());
+            assertThat(page.products()).allSatisfy(product ->
+                    assertThat(product.affiliateHref())
+                            .startsWith("https://www.amazon.es/dp/")
+                            .contains("tag=bebesfelice0c-21"));
+        }
     }
 }

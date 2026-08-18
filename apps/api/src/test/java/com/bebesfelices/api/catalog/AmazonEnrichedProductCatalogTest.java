@@ -75,7 +75,7 @@ class AmazonEnrichedProductCatalogTest {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelice0c-21");
         properties.setProductAsins(Map.of(
-                "juego-montessori-formas", "B095H1CPCD",
+                "juego-montessori-formas", "B00005RF5G",
                 "bici-sin-pedales-basica", "B004MW55Z2"
         ));
         AtomicInteger calls = new AtomicInteger();
@@ -93,7 +93,7 @@ class AmazonEnrichedProductCatalogTest {
 
         assertThat(calls).hasValue(0);
         assertThat(montessori.affiliateLink().url())
-                .isEqualTo("https://www.amazon.es/dp/B095H1CPCD?tag=bebesfelice0c-21");
+                .isEqualTo("https://www.amazon.es/dp/B00005RF5G?tag=bebesfelice0c-21");
         assertThat(bike.affiliateLink().url())
                 .isEqualTo("https://www.amazon.es/dp/B004MW55Z2?tag=bebesfelice0c-21");
     }

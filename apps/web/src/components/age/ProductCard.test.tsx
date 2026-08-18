@@ -45,6 +45,17 @@ describe("ProductCard", () => {
     );
   });
 
+  it("does not render a dead detail link when no analysis is published", () => {
+    render(
+      <ProductCard
+        product={{ ...baseProduct, href: null, ctaLabel: null }}
+      />,
+    );
+
+    expect(screen.queryByRole("link", { name: /ver análisis/i })).not.toBeInTheDocument();
+    expect(screen.getByText(/disponible próximamente/i)).toBeInTheDocument();
+  });
+
   it("renders the sponsored Amazon button when a validated affiliate link is present", () => {
     render(
       <ProductCard

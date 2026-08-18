@@ -7,7 +7,7 @@ import {
 export type CategoryPageResponse = EditorialChrome & {
   slug: string;
   canonicalPath: string;
-  childCollections: EditorialLink[];
+  childCollections: Array<EditorialLink & { hubAge: 3 | 4 | 5 }>;
 };
 
 export class CategoryPageNotFoundError extends Error {

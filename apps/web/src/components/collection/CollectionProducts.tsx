@@ -21,11 +21,11 @@ export function CollectionProducts({ items }: CollectionProductsProps) {
         <AgeSectionHeading
           id="productos-heading"
           title="Opciones revisadas"
-          description="Fichas editoriales del catálogo. El botón de Amazon solo aparece cuando el enlace está validado."
+          description="Seis productos de esta categoría, cada uno con su enlace revisado a Amazon España."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
-            <ProductCard key={item.href} product={item} />
+            <ProductCard key={`${item.title}-${item.ageRange}`} product={item} />
           ))}
         </div>
       </div>

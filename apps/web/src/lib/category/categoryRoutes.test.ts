@@ -24,6 +24,16 @@ describe("categoryRoutes", () => {
       "puzles",
       "juegos-stem",
       "juegos-de-mesa",
+      "juego-simbolico",
+      "juguetes-sensoriales",
+      "munecos-figuras-pequenos-mundos",
+      "juguetes-musicales",
+      "juguetes-construccion",
+      "arte-manualidades",
+      "causa-efecto-experimentacion",
+      "lenguaje-lectoescritura",
+      "matematicas-logica",
+      "juegos-cooperativos-socioemocionales",
     ]);
     expect(collectionsForPrefix("movimiento")).toEqual([
       "patinetes",

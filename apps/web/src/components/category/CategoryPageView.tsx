@@ -4,6 +4,8 @@ import { EditorialHero } from "@/components/editorial/EditorialHero";
 import { EditorialPageShell } from "@/components/editorial/EditorialPageShell";
 import { AffiliationNotice } from "@/components/home/AffiliationNotice";
 import { TrustAuthority } from "@/components/home/TrustAuthority";
+import { CategoryCollectionGroups } from "./CategoryCollectionGroups";
+import type { CategoryAge } from "@/lib/category/categoryAge";
 import type { CategoryPageResponse } from "@/lib/category/getCategoryPage";
 import {
   buildBreadcrumbListSchema,
@@ -16,9 +18,10 @@ import { SITE_URL } from "@/lib/seo/metadata";
 
 type CategoryPageViewProps = {
   page: CategoryPageResponse;
+  initialAge?: CategoryAge;
 };
 
-export function CategoryPageView({ page }: CategoryPageViewProps) {
+export function CategoryPageView({ page, initialAge = 3 }: CategoryPageViewProps) {
   const itemListEntries = page.childCollections.map((item) => ({
     title: item.title,
     href: item.href,
@@ -39,12 +42,7 @@ export function CategoryPageView({ page }: CategoryPageViewProps) {
         noticeText={page.affiliation.noticeText}
         variant="compact"
       />
-      <ContentLinkSection
-        id="colecciones"
-        title="Selecciones de esta categoría"
-        description="Páginas editoriales con criterios de compra y enlaces a comparativas o análisis cuando existen."
-        items={page.childCollections}
-      />
+      <CategoryCollectionGroups items={page.childCollections} initialAge={initialAge} />
       {page.relatedLinks.length > 0 && (
         <ContentLinkSection
           id="contenidos-relacionados"

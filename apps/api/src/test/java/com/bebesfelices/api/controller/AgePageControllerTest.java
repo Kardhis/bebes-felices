@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.emptyOrNullString;
 import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.startsWith;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -46,10 +46,11 @@ class AgePageControllerTest {
     }
 
     @Test
-    void doesNotInventAffiliateLinksInTheFeaturedSelection() throws Exception {
+    void publishesReviewedAmazonLinksInTheFeaturedSelection() throws Exception {
         mockMvc.perform(get("/api/age-pages/3-anos"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.featuredSelection[*].affiliateHref", everyItem(nullValue())));
+                .andExpect(jsonPath("$.featuredSelection[*].affiliateHref",
+                        everyItem(startsWith("https://www.amazon.es/dp/"))));
     }
 
     @Test

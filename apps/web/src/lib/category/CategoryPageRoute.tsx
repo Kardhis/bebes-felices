@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CategoryPageView } from "@/components/category/CategoryPageView";
 import { isCategoryPageSlug } from "@/lib/category/categoryRoutes";
+import type { CategoryAge } from "@/lib/category/categoryAge";
 import {
   CategoryPageNotFoundError,
   getCategoryPage,
@@ -27,9 +28,10 @@ export async function categoryMetadata(slug: string): Promise<Metadata> {
 
 type CategoryPageProps = {
   slug: string;
+  initialAge?: CategoryAge;
 };
 
-export async function CategoryPage({ slug }: CategoryPageProps) {
+export async function CategoryPage({ slug, initialAge = 3 }: CategoryPageProps) {
   if (!isCategoryPageSlug(slug)) {
     notFound();
   }
@@ -38,5 +40,5 @@ export async function CategoryPage({ slug }: CategoryPageProps) {
     () => getCategoryPage(slug),
     (error) => error instanceof CategoryPageNotFoundError,
   );
-  return <CategoryPageView page={page} />;
+  return <CategoryPageView page={page} initialAge={initialAge} />;
 }

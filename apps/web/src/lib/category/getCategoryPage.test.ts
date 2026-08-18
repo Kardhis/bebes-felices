@@ -27,6 +27,7 @@ const minimalResponse = {
       title: "Ideas de regalo para niños de 3 años",
       href: "/regalos/ideas-regalo-3-anos/",
       description: "Selección por ocasión.",
+      hubAge: 3,
     },
   ],
   faq: [],

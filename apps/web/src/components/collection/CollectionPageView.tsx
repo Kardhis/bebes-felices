@@ -21,10 +21,9 @@ type CollectionPageViewProps = {
 };
 
 export function CollectionPageView({ page }: CollectionPageViewProps) {
-  const itemListEntries = page.products.map((item) => ({
-    title: item.title,
-    href: item.href,
-  }));
+  const itemListEntries = page.products.flatMap((item) =>
+    item.href ? [{ title: item.title, href: item.href }] : [],
+  );
 
   return (
     <EditorialPageShell
@@ -46,7 +45,7 @@ export function CollectionPageView({ page }: CollectionPageViewProps) {
       <ContentLinkSection
         id="contenidos-relacionados"
         title="Contenidos relacionados"
-        description="Vuelve al hub de 3 años o sigue al análisis de cada opción."
+        description="Vuelve a la categoría o amplía la información con estas páginas relacionadas."
         items={page.relatedLinks}
       />
       <AgeFaq items={page.faq} />

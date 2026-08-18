@@ -40,7 +40,7 @@ describe("getCollectionPage", () => {
     vi.unstubAllGlobals();
   });
 
-  it("returns the collection and uses ISR", async () => {
+  it("returns the collection without caching stale Amazon links", async () => {
     vi.mocked(fetch).mockResolvedValue(
       new Response(JSON.stringify(minimalResponse), { status: 200 }),
     );
@@ -50,7 +50,7 @@ describe("getCollectionPage", () => {
     expect(page.slug).toBe("puzles");
     expect(fetch).toHaveBeenCalledWith(
       expect.stringContaining("/api/collection-pages/puzles"),
-      expect.objectContaining({ next: { revalidate: 60 } }),
+      expect.objectContaining({ cache: "no-store" }),
     );
   });
 

@@ -20,7 +20,7 @@ amazon:
     api-base-url: ${AMAZON_CREATORS_API_BASE_URL:https://creatorsapi.amazon}
     product-cache-ttl: ${AMAZON_CREATORS_PRODUCT_CACHE_TTL:1h}
     product-asins:
-      juego-montessori-formas: ${AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN:B095H1CPCD}
+      juego-montessori-formas: ${AMAZON_PRODUCT_JUEGO_MONTESSORI_FORMAS_ASIN:B00005RF5G}
       puzle-madera-animales: ${AMAZON_PRODUCT_PUZLE_MADERA_ANIMALES_ASIN:B00HWHNNRG}
       bici-sin-pedales-basica: ${AMAZON_PRODUCT_BICI_SIN_PEDALES_BASICA_ASIN:}
       bici-chicco-red-bullet: ${AMAZON_PRODUCT_BICI_CHICCO_RED_BULLET_ASIN:B004MW55Z2}

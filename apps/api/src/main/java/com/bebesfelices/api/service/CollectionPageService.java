@@ -28,6 +28,16 @@ public class CollectionPageService {
     public static final String GIFTS_4_SLUG = "ideas-regalo-4-anos";
     public static final String GIFTS_5_SLUG = "ideas-regalo-5-anos";
     public static final String BOARD_GAMES_SLUG = "juegos-de-mesa";
+    public static final String SYMBOLIC_PLAY_SLUG = "juego-simbolico";
+    public static final String SENSORY_TOYS_SLUG = "juguetes-sensoriales";
+    public static final String SMALL_WORLDS_SLUG = "munecos-figuras-pequenos-mundos";
+    public static final String MUSICAL_TOYS_SLUG = "juguetes-musicales";
+    public static final String CONSTRUCTION_TOYS_SLUG = "juguetes-construccion";
+    public static final String ARTS_CRAFTS_SLUG = "arte-manualidades";
+    public static final String EXPERIMENTATION_SLUG = "causa-efecto-experimentacion";
+    public static final String LITERACY_SLUG = "lenguaje-lectoescritura";
+    public static final String MATH_LOGIC_SLUG = "matematicas-logica";
+    public static final String COOPERATIVE_SEL_SLUG = "juegos-cooperativos-socioemocionales";
 
     private final Map<String, EditorialCollection> collections = new LinkedHashMap<>();
     private final ProductCatalog productCatalog;
@@ -43,8 +53,7 @@ public class CollectionPageService {
             return Optional.empty();
         }
         List<CollectionPageResponse.CollectionProduct> products = editorial.productIds().stream()
-                .map(productCatalog::findById)
-                .flatMap(Optional::stream)
+                .map(productId -> validatedProduct(editorial, productId))
                 .map(product -> toCollectionProduct(product, editorial.productHref(product.id())))
                 .toList();
         return Optional.of(toResponse(editorial, products));
@@ -71,8 +80,21 @@ public class CollectionPageService {
                         "Material que aguante el uso en el suelo y en la mesa.",
                         "Edad mínima del fabricante compatible con 3 años."
                 ),
-                List.of("juego-montessori-formas"),
-                Map.of(),
+                List.of(
+                        "juego-montessori-formas",
+                        "montessori-goula-baby-shapes",
+                        "montessori-janod-tropik",
+                        "montessori-noah-ark",
+                        "montessori-formas-geometricas",
+                        "plantoys-ata-zapato"
+                ),
+                hideAnalysisHrefs(
+                        "montessori-goula-baby-shapes",
+                        "montessori-janod-tropik",
+                        "montessori-noah-ark",
+                        "montessori-formas-geometricas",
+                        "plantoys-ata-zapato"
+                ),
                 List.of(
                         faq("¿Hace falta un material «Montessori» certificado?",
                                 "No. Lo útil es la actividad: clasificar y encajar con autonomía y piezas seguras. El nombre comercial no sustituye el criterio de edad y seguridad."),
@@ -82,7 +104,7 @@ public class CollectionPageService {
                                 "Con supervisión cercana, sí, cuando las piezas son grandes y la actividad es evidente. No es un juguete para dejar solo en una habitación.")
                 ),
                 List.of(
-                        hubLink(),
+                        educationalToysLink(3),
                         analysisLink("juego-montessori-formas", "Juego Montessori de formas y encajes"),
                         chooseByAgeLink()
                 )
@@ -103,8 +125,21 @@ public class CollectionPageService {
                         "Tablero o marco que sujete las piezas mientras se completa.",
                         "Sin piezas sueltas del tamaño de un tapón si hay hermanos más pequeños."
                 ),
-                List.of("puzle-madera-animales"),
-                Map.of(),
+                List.of(
+                        "puzle-madera-animales",
+                        "haba-puzles-cuatro-estaciones",
+                        "puzle-educa-disney-madera",
+                        "puzle-educa-selva",
+                        "puzle-melissa-granja",
+                        "montessori-formas-geometricas"
+                ),
+                hideAnalysisHrefs(
+                        "haba-puzles-cuatro-estaciones",
+                        "puzle-educa-disney-madera",
+                        "puzle-educa-selva",
+                        "puzle-melissa-granja",
+                        "montessori-formas-geometricas"
+                ),
                 List.of(
                         faq("¿Cuántas piezas recomendáis a los 3 años?",
                                 "Las justas para terminar en una sesión corta. Un puzle de madera de animales con piezas grandes suele encajar mejor que uno de decenas de piezas pequeñas."),
@@ -114,7 +149,7 @@ public class CollectionPageService {
                                 "Reduce el número de piezas a la vista, nombra lo que falta y termina juntos. El objetivo es el éxito repetible, no el récord.")
                 ),
                 List.of(
-                        hubLink(),
+                        educationalToysLink(3),
                         analysisLink("puzle-madera-animales", "Puzle de madera de animales"),
                         chooseByAgeLink()
                 )
@@ -317,7 +352,7 @@ public class CollectionPageService {
                 "Sets de construcción magnética para 4 años",
                 "Lógica espacial y estructuras estables, con piezas que se sujetan entre sí y un reto que puede crecer.",
                 List.of(
-                        "A los 4 años la construcción deja de ser solo apilar: las piezas magnéticas permiten formas que se tienen en pie y se pueden deshacer sin frustración inmediata.",
+                        "A los 4 años la construcción deja de ser solo apilar: las piezas magnéticas y los engranajes permiten formas que se tienen en pie y se pueden deshacer sin frustración inmediata.",
                         "Busca un número de piezas manejable, imanes que no se desprendan y un tamaño que no acabe en la boca de un hermano pequeño."
                 ),
                 List.of(
@@ -326,8 +361,22 @@ public class CollectionPageService {
                         "Un objetivo claro: construir y tumbar, no diez modos en el manual.",
                         "Edad mínima del fabricante compatible con 4 años."
                 ),
-                List.of("set-construccion-magnetico"),
-                Map.of(),
+                List.of(
+                        "stem-geomag-rainbow",
+                        "stem-gears-beginners",
+                        "stem-code-go-mouse",
+                        "stem-gravitrax-junior",
+                        "construccion-playmags-32",
+                        "construccion-desire-magnetic"
+                ),
+                hideAnalysisHrefs(
+                        "stem-geomag-rainbow",
+                        "stem-gears-beginners",
+                        "stem-code-go-mouse",
+                        "stem-gravitrax-junior",
+                        "construccion-playmags-32",
+                        "construccion-desire-magnetic"
+                ),
                 List.of(
                         faq("¿Es lo mismo que un puzle?",
                                 "No. El puzle encaja una imagen; el set magnético prueba equilibrio y formas en el espacio. A los 4 años ambos pueden convivir."),
@@ -337,7 +386,7 @@ public class CollectionPageService {
                                 "Sí si se desprenden. Elige piezas en las que el imán no se pueda sacar y mantén el juego fuera del alcance de menores de 3 años.")
                 ),
                 List.of(
-                        hubLink(4),
+                        educationalToysLink(4),
                         analysisLink("set-construccion-magnetico", "Set de construcción magnético"),
                         chooseByAgeLink()
                 ),
@@ -509,7 +558,7 @@ public class CollectionPageService {
                 "Juegos cooperativos para practicar turnos, acuerdos y una estrategia sencilla a los 5 años.",
                 List.of(
                         "A esta edad ya se pueden encadenar varias reglas breves y tomar decisiones en grupo, siempre con una partida que se pueda terminar.",
-                        "La selección usa el juego cooperativo ya presente en el catálogo y enlaza a su análisis editorial."
+                        "La selección reúne seis juegos con ficha viva en Amazon España. El análisis editorial del cooperativo genérico sigue enlazado más abajo."
                 ),
                 List.of(
                         "Objetivo y turno explicables en pocos minutos.",
@@ -517,8 +566,22 @@ public class CollectionPageService {
                         "Componentes seguros para la edad y para hermanos menores.",
                         "Posibilidad de ajustar la dificultad o simplificar reglas."
                 ),
-                List.of("juego-mesa-cooperativo"),
-                Map.of(),
+                List.of(
+                        "juego-mesa-el-frutal-mini",
+                        "juego-mesa-unicornio-tesoro",
+                        "juego-mesa-animal-sobre-animal",
+                        "juego-mesa-dobble-kids",
+                        "juego-mesa-unicornio-fiesta-rosalie",
+                        "mesa-animal-mini"
+                ),
+                hideAnalysisHrefs(
+                        "juego-mesa-el-frutal-mini",
+                        "juego-mesa-unicornio-tesoro",
+                        "juego-mesa-animal-sobre-animal",
+                        "juego-mesa-dobble-kids",
+                        "juego-mesa-unicornio-fiesta-rosalie",
+                        "mesa-animal-mini"
+                ),
                 List.of(
                         faq("¿Cooperativo significa que nadie pierde?",
                                 "El grupo gana o pierde unido. Sigue habiendo un resultado, pero no un ganador individual."),
@@ -528,7 +591,7 @@ public class CollectionPageService {
                                 "Lo suficiente para terminar antes de que desaparezca la atención. Comprueba la duración del producto concreto.")
                 ),
                 List.of(
-                        hubLink(5),
+                        educationalToysLink(5),
                         analysisLink("juego-mesa-cooperativo", "Juego de mesa cooperativo"),
                         new LinkItem(
                                 "Ideas de regalo para 5 años",
@@ -538,10 +601,278 @@ public class CollectionPageService {
                 ),
                 5
         ));
+        registerEducationalCollection(
+                SYMBOLIC_PLAY_SLUG,
+                "Juguetes de juego simbólico para niños de 3 años",
+                "Cocinas y maletines de profesiones para representar situaciones cotidianas a partir de 3 años.",
+                "El juego de imitación permite recrear escenas conocidas con objetos claros y manejables.",
+                "Revisamos sets de cocina y medicina con funciones comprensibles, piezas resistentes y edad declarada.",
+                "Juego simbólico",
+                3,
+                List.of(
+                        "Accesorios reconocibles y adecuados para manos pequeñas.",
+                        "Escenario abierto que admita historias diferentes.",
+                        "Piezas resistentes y advertencias de seguridad claras.",
+                        "Montaje, tamaño y espacio necesarios en casa."
+                ),
+                List.of(
+                        "simbolico-theo-klein-miele", "simbolico-kidkraft-vintage",
+                        "simbolico-deao-cocina", "simbolico-beeloom-babycue",
+                        "simbolico-sundaymot-32", "simbolico-sundaymot-33"
+                )
+        );
+        registerEducationalCollection(
+                SENSORY_TOYS_SLUG,
+                "Juguetes sensoriales para niños de 3 años",
+                "Tubos, herramientas y piezas manipulables para explorar movimiento, tacto y transferencia a los 3 años.",
+                "Una propuesta sensorial debe ofrecer una acción concreta sin depender de luces o estímulos intensos.",
+                "Estas opciones se usan con supervisión y respetando la respuesta individual de cada niño.",
+                "Sensoriales",
+                3,
+                List.of(
+                        "Materiales lavables, sellados o fáciles de revisar.",
+                        "Tamaño compatible con la edad y ausencia de piezas sueltas peligrosas.",
+                        "Actividad sensorial identificable: observar, presionar o transferir.",
+                        "Supervisión necesaria y facilidad de recogida."
+                ),
+                List.of(
+                        "sensorial-emotion-bottles", "sensorial-playfoam",
+                        "sensorial-fidget-tubes", "sensorial-scoops",
+                        "sensorial-pinzas-jumbo", "sensorial-hundred-board"
+                )
+        );
+        registerEducationalCollection(
+                SMALL_WORLDS_SLUG,
+                "Muñecos, figuras y pequeños mundos para niños de 3 años",
+                "Figuras de animales para crear escenas, ampliar vocabulario y contar historias desde los 3 años.",
+                "Los pequeños mundos funcionan mejor con pocas figuras reconocibles y espacio para inventar.",
+                "La selección reúne sets de inicio con edad 3-8 años declarada por el fabricante.",
+                "Pequeños mundos",
+                3,
+                List.of(
+                        "Figuras estables y de tamaño seguro para la edad.",
+                        "Detalles reconocibles sin mecanismos frágiles.",
+                        "Conjunto inicial manejable y ampliable.",
+                        "Temática que facilite historias variadas."
+                ),
+                List.of(
+                        "mundos-schleich-foal", "mundos-terra-wild",
+                        "mundos-schleich-farm", "mundos-schleich-shire",
+                        "mundos-schleich-barn", "mundos-schleich-farm-set"
+                )
+        );
+        registerEducationalCollection(
+                MUSICAL_TOYS_SLUG,
+                "Juguetes musicales para niños de 3 años",
+                "Instrumentos infantiles para explorar pulsación, ritmo y escucha a partir de 3 años.",
+                "Un instrumento infantil debe poder producir sonido con una acción sencilla y repetible.",
+                "Comparamos seis instrumentos con acciones sencillas, edades compatibles y formatos diferentes.",
+                "Musicales",
+                3,
+                List.of(
+                        "Edad del fabricante y advertencias sobre cuerdas o volumen.",
+                        "Tamaño y agarre adaptados al niño.",
+                        "Sonido controlable y acción musical real.",
+                        "Guía de inicio comprensible con ayuda adulta."
+                ),
+                List.of(
+                        "musical-hape-piano", "musical-hape-xylophone",
+                        "musical-percussion-8", "musical-hape-drum",
+                        "musical-hape-ukulele", "musical-hape-guitar"
+                )
+        );
+        registerEducationalCollection(
+                CONSTRUCTION_TOYS_SLUG,
+                "Juguetes de construcción para niños de 4 años",
+                "Piezas magnéticas para planificar y levantar estructuras abiertas a los 4 años.",
+                "La construcción libre permite empezar con formas planas y avanzar hacia volúmenes sencillos.",
+                "Las seis opciones combinan ladrillos y piezas magnéticas con distintos tamaños y posibilidades.",
+                "Construcción",
+                4,
+                List.of(
+                        "Piezas certificadas y sin daños en bordes o uniones.",
+                        "Cantidad suficiente sin abrumar en la primera sesión.",
+                        "Compatibilidad para ampliar el set.",
+                        "Posibilidades de construcción abierta, no un único modelo."
+                ),
+                List.of(
+                        "construccion-lego-classic-10698", "construccion-lego-classic-10696",
+                        "construccion-duplo-10909", "construccion-playmags-32",
+                        "construccion-desire-magnetic", "construccion-gears-super"
+                )
+        );
+        registerEducationalCollection(
+                ARTS_CRAFTS_SLUG,
+                "Arte y manualidades para niños de 4 años",
+                "Pintura, modelado y superficies reutilizables para crear con materiales adecuados desde 4 años.",
+                "A los 4 años convienen herramientas fáciles de agarrar y proyectos que admitan resultados distintos.",
+                "Priorizamos materiales no tóxicos, lavables y con una edad declarada compatible.",
+                "Arte y manualidades",
+                4,
+                List.of(
+                        "Materiales no tóxicos y edad indicada por el fabricante.",
+                        "Lavabilidad de piel, ropa y superficie de trabajo.",
+                        "Herramientas manejables y consumibles identificados.",
+                        "Actividad abierta o instrucciones breves."
+                ),
+                List.of(
+                        "arte-crayola-pokemon-5in1", "arte-crayola-case-100",
+                        "arte-crayola-paw-patrol", "arte-crayola-tempera-6",
+                        "arte-crayola-effects", "arte-crayola-metallic"
+                )
+        );
+        registerEducationalCollection(
+                EXPERIMENTATION_SLUG,
+                "Juguetes de causa y efecto para niños de 4 años",
+                "Imanes, pistas y engranajes para observar relaciones de causa y efecto a los 4 años.",
+                "La experimentación resulta visible cuando una acción cambia el recorrido, la atracción o el movimiento.",
+                "Revisamos propuestas manipulables con actividades abiertas y edad compatible.",
+                null,
+                4,
+                List.of(
+                        "Relación clara entre la acción y el resultado.",
+                        "Piezas y advertencias compatibles con 4 años.",
+                        "Posibilidad de repetir cambiando una variable.",
+                        "Guía útil sin convertir el juego en una ficha escolar."
+                ),
+                List.of(
+                        "experimenta-numberblocks", "experimenta-cuisenaire",
+                        "stem-gravitrax-junior", "stem-code-go-mouse",
+                        "construccion-gears-super", "stem-geomag-rainbow"
+                )
+        );
+        registerEducationalCollection(
+                LITERACY_SLUG,
+                "Juegos de lenguaje y lectoescritura para niños de 5 años",
+                "Letras y juegos de palabras para reconocer grafías y formar palabras sencillas a los 5 años.",
+                "Estas propuestas acompañan el interés por las letras sin exigir que todos los niños lean al mismo ritmo.",
+                "Seleccionamos materiales manipulables con niveles breves y acompañamiento adulto posible.",
+                "Lectoescritura",
+                5,
+                List.of(
+                        "Idioma de las letras, tarjetas e instrucciones.",
+                        "Nivel inicial compatible con reconocimiento de letras.",
+                        "Piezas grandes y fáciles de ordenar.",
+                        "Progresión sin presión ni ejercicios repetitivos largos."
+                ),
+                List.of(
+                        "lectura-educa-writing", "lectura-smart-panda-magnets",
+                        "lectura-diset-leer", "lectura-unicornio-memo",
+                        "lectura-frutalito", "lectura-three-pigs"
+                )
+        );
+        registerEducationalCollection(
+                MATH_LOGIC_SLUG,
+                "Juegos de matemáticas y lógica para niños de 5 años",
+                "Conteo, cantidades y operaciones iniciales mediante juegos manipulables para 5 años.",
+                "El material concreto ayuda a ver cantidades antes de pasar a símbolos y operaciones.",
+                "Las opciones elegidas permiten contar, comparar y resolver retos cortos con dificultad graduable.",
+                null,
+                5,
+                List.of(
+                        "Reto inicial explicable con ejemplos concretos.",
+                        "Números y cantidades visibles y manipulables.",
+                        "Dificultad ajustable sin depender de lectura avanzada.",
+                        "Partidas o actividades de duración breve."
+                ),
+                List.of(
+                        "matematicas-sum-swamp", "matematicas-lets-go-code",
+                        "experimenta-numberblocks", "experimenta-cuisenaire",
+                        "sensorial-hundred-board", "stem-code-go-mouse"
+                )
+        );
+        registerEducationalCollection(
+                COOPERATIVE_SEL_SLUG,
+                "Juegos cooperativos y socioemocionales para niños de 5 años",
+                "Juegos con objetivo compartido para practicar acuerdos, turnos y decisiones en grupo a los 5 años.",
+                "En un juego cooperativo el grupo toma decisiones y comparte el resultado de la partida.",
+                "Revisamos seis propuestas reales cuya edad declarada incluye los 5 años.",
+                null,
+                5,
+                List.of(
+                        "Objetivo común explícito y reglas asumibles.",
+                        "Participación de todos durante la partida.",
+                        "Duración compatible con la atención del grupo.",
+                        "Resultado compartido sin eliminar la necesidad de decidir."
+                ),
+                List.of(
+                        "juego-mesa-el-frutal-mini", "juego-mesa-unicornio-fiesta-rosalie",
+                        "juego-mesa-unicornio-tesoro", "lectura-three-pigs",
+                        "lectura-unicornio-memo", "lectura-frutalito"
+                )
+        );
+    }
+
+    private void registerEducationalCollection(
+            String slug,
+            String h1,
+            String metaDescription,
+            String introduction,
+            String reviewScope,
+            String expectedProductCategory,
+            int hubAge,
+            List<String> buyingCriteria,
+            List<String> productIds
+    ) {
+        register(new EditorialCollection(
+                slug,
+                "/juguetes-educativos/" + slug + "/",
+                "Juguetes educativos",
+                h1,
+                metaDescription,
+                List.of(introduction, reviewScope),
+                buyingCriteria,
+                productIds,
+                productIds.stream().collect(java.util.stream.Collectors.toMap(
+                        productId -> productId,
+                        productId -> "",
+                        (first, second) -> first,
+                        LinkedHashMap::new
+                )),
+                List.of(
+                        faq("¿Es una lista ordenada de mejor a peor?",
+                                "No. Son opciones revisadas que cumplen la edad y la categoría; la elección depende del niño y del contexto."),
+                        faq("¿Cómo comprobáis la edad?",
+                                "Contrastamos la recomendación publicada por el fabricante o una ficha comercial identificada."),
+                        faq("¿Los enlaces de Amazon están revisados?",
+                                "Sí. Cada opción de esta página apunta a un ASIN concreto de Amazon España. El botón solo aparece cuando ese destino ha sido validado.")
+                ),
+                List.of(educationalToysLink(hubAge), chooseByAgeLink()),
+                hubAge,
+                expectedProductCategory
+        ));
     }
 
     private void register(EditorialCollection collection) {
         collections.put(collection.slug(), collection);
+    }
+
+    private static Map<String, String> hideAnalysisHrefs(String... productIds) {
+        Map<String, String> hrefs = new LinkedHashMap<>();
+        for (String productId : productIds) {
+            hrefs.put(productId, "");
+        }
+        return hrefs;
+    }
+
+    private Product validatedProduct(EditorialCollection editorial, String productId) {
+        Product product = productCatalog.findById(productId)
+                .orElseThrow(() -> new IllegalStateException(
+                        "Unknown product '" + productId + "' in collection '" + editorial.slug() + "'"
+                ));
+        if (!product.isAvailableForAge(editorial.hubAge())) {
+            throw new IllegalStateException(
+                    "Product '" + productId + "' does not support age " + editorial.hubAge()
+            );
+        }
+        if (editorial.expectedProductCategory() != null
+                && !product.categories().contains(editorial.expectedProductCategory())) {
+            throw new IllegalStateException(
+                    "Product '" + productId + "' does not belong to category '"
+                            + editorial.expectedProductCategory() + "'"
+            );
+        }
+        return product;
     }
 
     private CollectionPageResponse toResponse(
@@ -557,12 +888,10 @@ public class CollectionPageService {
                 PageStatus.PUBLISHED,
                 editorial.slug(),
                 editorial.path(),
+                editorial.hubAge(),
                 List.of(
                         new CollectionPageResponse.Breadcrumb("Inicio", "/"),
-                        new CollectionPageResponse.Breadcrumb(
-                                EditorialDefaults.hubLabel(editorial.hubAge()),
-                                EditorialDefaults.hubHref(editorial.hubAge())
-                        ),
+                        parentBreadcrumb(editorial),
                         new CollectionPageResponse.Breadcrumb(editorial.h1(), editorial.path())
                 ),
                 new CollectionPageResponse.Header(
@@ -587,18 +916,18 @@ public class CollectionPageService {
     }
 
     private CollectionPageResponse.CollectionProduct toCollectionProduct(Product product, String href) {
-        boolean comparison = href.contains("/comparativas/");
+        boolean comparison = href != null && href.contains("/comparativas/");
         String affiliateHref = product.hasValidatedAffiliateLink()
                 ? product.affiliateLink().url()
                 : null;
         return new CollectionPageResponse.CollectionProduct(
                 product.title(),
-                product.categories().get(0),
+                product.categories().size() > 1 ? product.categories().get(1) : product.categories().get(0),
                 product.description(),
                 ageRange(product),
                 href,
                 affiliateHref,
-                comparison ? "Ver comparativa completa" : "Ver análisis completo"
+                href == null ? null : comparison ? "Ver comparativa completa" : "Ver análisis completo"
         );
     }
 
@@ -607,6 +936,35 @@ public class CollectionPageService {
             return "Desde " + product.minAge() + " años";
         }
         return product.minAge() + "-" + product.maxAge() + " años";
+    }
+
+    private static CollectionPageResponse.Breadcrumb parentBreadcrumb(EditorialCollection editorial) {
+        if (isEducationalToysCollection(editorial)) {
+            return new CollectionPageResponse.Breadcrumb(
+                    "Juguetes educativos",
+                    educationalToysHref(editorial.hubAge())
+            );
+        }
+        return new CollectionPageResponse.Breadcrumb(
+                EditorialDefaults.hubLabel(editorial.hubAge()),
+                EditorialDefaults.hubHref(editorial.hubAge())
+        );
+    }
+
+    private static boolean isEducationalToysCollection(EditorialCollection editorial) {
+        return editorial.path().startsWith("/juguetes-educativos/");
+    }
+
+    private static String educationalToysHref(int age) {
+        return "/juguetes-educativos/?edad=" + age;
+    }
+
+    private static LinkItem educationalToysLink(int age) {
+        return new LinkItem(
+                "Juguetes educativos para " + age + " años",
+                educationalToysHref(age),
+                "Volver a las selecciones educativas de esta edad."
+        );
     }
 
     private static LinkItem hubLink() {
@@ -653,7 +1011,8 @@ public class CollectionPageService {
             Map<String, String> hrefOverrides,
             List<CollectionPageResponse.Faq> faq,
             List<LinkItem> related,
-            int hubAge
+            int hubAge,
+            String expectedProductCategory
     ) {
         EditorialCollection(
                 String slug,
@@ -680,12 +1039,45 @@ public class CollectionPageService {
                     hrefOverrides,
                     faq,
                     related,
-                    3
+                    3,
+                    null
+            );
+        }
+
+        EditorialCollection(
+                String slug,
+                String path,
+                String kicker,
+                String h1,
+                String metaDescription,
+                List<String> introduction,
+                List<String> buyingCriteria,
+                List<String> productIds,
+                Map<String, String> hrefOverrides,
+                List<CollectionPageResponse.Faq> faq,
+                List<LinkItem> related,
+                int hubAge
+        ) {
+            this(
+                    slug,
+                    path,
+                    kicker,
+                    h1,
+                    metaDescription,
+                    introduction,
+                    buyingCriteria,
+                    productIds,
+                    hrefOverrides,
+                    faq,
+                    related,
+                    hubAge,
+                    null
             );
         }
 
         String productHref(String productId) {
-            return hrefOverrides.getOrDefault(productId, "/analisis/" + productId + "/");
+            String href = hrefOverrides.getOrDefault(productId, "/analisis/" + productId + "/");
+            return href.isBlank() ? null : href;
         }
     }
 }

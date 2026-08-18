@@ -34,7 +34,7 @@ public class CategoryPageService {
             return Optional.empty();
         }
 
-        List<LinkItem> childCollections = definition.collectionSlugs().stream()
+        List<CategoryPageResponse.ChildCollection> childCollections = definition.collectionSlugs().stream()
                 .map(collectionPageService::getBySlug)
                 .flatMap(Optional::stream)
                 .filter(page -> page.status() == PageStatus.PUBLISHED)
@@ -67,14 +67,24 @@ public class CategoryPageService {
                 "Juguetes educativos",
                 "Juguetes educativos para niños de 3 a 5 años",
                 List.of(
-                        "Esta categoría reúne selecciones editoriales para aprender mediante el juego: Montessori, puzles, STEM y juegos de mesa.",
-                        "Cada página enlaza a comparativas o análisis cuando existe contenido publicado. Empieza por la edad del niño si dudas entre varias opciones."
+                        "Esta categoría reúne selecciones editoriales por edad: juego simbólico, construcción, música, creatividad, lenguaje, lógica y juego compartido.",
+                        "Las páginas se agrupan por una edad principal de 3, 4 o 5 años y muestran productos cuya categoría y rango de edad han sido revisados."
                 ),
                 List.of(
                         CollectionPageService.MONTESSORI_SLUG,
                         CollectionPageService.PUZZLES_SLUG,
                         CollectionPageService.STEM_SLUG,
-                        CollectionPageService.BOARD_GAMES_SLUG
+                        CollectionPageService.BOARD_GAMES_SLUG,
+                        CollectionPageService.SYMBOLIC_PLAY_SLUG,
+                        CollectionPageService.SENSORY_TOYS_SLUG,
+                        CollectionPageService.SMALL_WORLDS_SLUG,
+                        CollectionPageService.MUSICAL_TOYS_SLUG,
+                        CollectionPageService.CONSTRUCTION_TOYS_SLUG,
+                        CollectionPageService.ARTS_CRAFTS_SLUG,
+                        CollectionPageService.EXPERIMENTATION_SLUG,
+                        CollectionPageService.LITERACY_SLUG,
+                        CollectionPageService.MATH_LOGIC_SLUG,
+                        CollectionPageService.COOPERATIVE_SEL_SLUG
                 ),
                 List.of(
                         faq(
@@ -217,20 +227,21 @@ public class CategoryPageService {
         categories.put(definition.slug(), definition);
     }
 
-    private LinkItem toChildLink(CollectionPageResponse collection) {
+    private CategoryPageResponse.ChildCollection toChildLink(CollectionPageResponse collection) {
         String description = collection.header().introductionParagraphs().isEmpty()
                 ? collection.seo().metaDescription()
                 : collection.header().introductionParagraphs().get(0);
-        return new LinkItem(
+        return new CategoryPageResponse.ChildCollection(
                 collection.header().h1(),
                 collection.canonicalPath(),
-                description
+                description,
+                collection.hubAge()
         );
     }
 
     private CategoryPageResponse toResponse(
             CategoryDefinition definition,
-            List<LinkItem> childCollections
+            List<CategoryPageResponse.ChildCollection> childCollections
     ) {
         return new CategoryPageResponse(
                 new Seo(

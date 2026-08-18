@@ -9,7 +9,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.startsWith;
 import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -41,7 +41,7 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.methodology.criteria[0].name",
                         not(isEmptyOrNullString())))
                 .andExpect(jsonPath("$.entries[*].affiliateHref",
-                        everyItem(nullValue())))
+                        everyItem(startsWith("https://www.amazon.es/dp/"))))
                 .andExpect(jsonPath("$.breadcrumbs[1].label").value("3 años"))
                 .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/3-anos/"))
                 .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/3-anos/"));
@@ -110,8 +110,7 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.entries.length()").value(5))
                 .andExpect(jsonPath("$.entries[0].productId")
                         .value("set-construccion-magnetico"))
-                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"))
-                .andExpect(jsonPath("$.entries[*].affiliateHref", everyItem(nullValue())));
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/5-anos/"));
     }
 
     @Test

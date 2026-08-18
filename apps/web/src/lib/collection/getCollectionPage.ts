@@ -8,14 +8,15 @@ export type CollectionProduct = {
   category: string;
   reason: string;
   ageRange: string;
-  href: string;
+  href: string | null;
   affiliateHref: string | null;
-  ctaLabel: string;
+  ctaLabel: string | null;
 };
 
 export type CollectionPageResponse = EditorialChrome & {
   slug: string;
   canonicalPath: string;
+  hubAge: 3 | 4 | 5;
   buyingCriteria: string[];
   products: CollectionProduct[];
 };
@@ -33,5 +34,6 @@ export async function getCollectionPage(
   return fetchEditorialJson<CollectionPageResponse>(
     `/api/collection-pages/${slug}`,
     new CollectionPageNotFoundError(slug),
+    { revalidate: 0 },
   );
 }

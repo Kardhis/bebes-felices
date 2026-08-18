@@ -6,9 +6,9 @@ type FeaturedProduct = {
   category: string;
   reason: string;
   ageRange: string;
-  href: string;
+  href: string | null;
   affiliateHref: string | null;
-  ctaLabel: string;
+  ctaLabel: string | null;
 };
 
 type ProductCardProps = {
@@ -40,12 +40,14 @@ export function ProductCard({ product }: ProductCardProps) {
             Enlace a Amazon disponible próximamente.
           </span>
         )}
-        <Link
-          href={product.href}
-          className="text-sm font-semibold text-[var(--color-primary-700)] transition group-hover:underline"
-        >
-          {product.ctaLabel} →
-        </Link>
+        {product.href && product.ctaLabel && (
+          <Link
+            href={product.href}
+            className="text-sm font-semibold text-[var(--color-primary-700)] transition group-hover:underline"
+          >
+            {product.ctaLabel} →
+          </Link>
+        )}
       </div>
     </article>
   );

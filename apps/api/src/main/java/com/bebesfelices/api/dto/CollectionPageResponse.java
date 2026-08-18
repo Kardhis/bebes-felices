@@ -17,6 +17,7 @@ public record CollectionPageResponse(
         PageStatus status,
         String slug,
         String canonicalPath,
+        int hubAge,
         List<Breadcrumb> breadcrumbs,
         Header header,
         List<String> buyingCriteria,

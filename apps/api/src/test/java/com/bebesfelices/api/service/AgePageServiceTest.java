@@ -381,7 +381,7 @@ class AgePageServiceTest {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelice0c-21");
         properties.setProductAsins(Map.of(
-                "juego-montessori-formas", "B095H1CPCD",
+                "juego-montessori-formas", "B00005RF5G",
                 "puzle-madera-animales", "B00HWHNNRG",
                 "bici-chicco-red-bullet", "B004MW55Z2",
                 "patinete-3-ruedas", "B09PRNX4HX",
@@ -401,7 +401,7 @@ class AgePageServiceTest {
         assertThat(page.featuredSelection())
                 .extracting(AgePageResponse.FeaturedProduct::affiliateHref)
                 .containsExactly(
-                        "https://www.amazon.es/dp/B095H1CPCD?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B00005RF5G?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B00HWHNNRG?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B004MW55Z2?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelice0c-21",

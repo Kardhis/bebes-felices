@@ -11,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matchers.emptyOrNullString;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.startsWith;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -38,7 +39,7 @@ class ProductAnalysisControllerTest {
                 .andExpect(jsonPath("$.productId").value(productId))
                 .andExpect(jsonPath("$.canonicalPath").value("/analisis/" + productId + "/"))
                 .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/3-anos/"))
-                .andExpect(jsonPath("$.affiliateHref").value(nullValue()))
+                .andExpect(jsonPath("$.affiliateHref", startsWith("https://www.amazon.es/dp/")))
                 .andExpect(jsonPath("$.editorialSummary", not(emptyOrNullString())));
     }
 

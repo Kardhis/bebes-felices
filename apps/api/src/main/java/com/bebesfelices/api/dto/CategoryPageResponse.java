@@ -18,7 +18,7 @@ public record CategoryPageResponse(
         String canonicalPath,
         List<Breadcrumb> breadcrumbs,
         Header header,
-        List<LinkItem> childCollections,
+        List<ChildCollection> childCollections,
         List<Faq> faq,
         List<LinkItem> relatedLinks,
         TrustAuthority trustAuthority,
@@ -35,6 +35,14 @@ public record CategoryPageResponse(
             String kicker,
             String h1,
             List<String> introductionParagraphs
+    ) {
+    }
+
+    public record ChildCollection(
+            String title,
+            String href,
+            String description,
+            int hubAge
     ) {
     }
 

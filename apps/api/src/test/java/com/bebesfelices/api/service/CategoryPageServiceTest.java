@@ -33,7 +33,17 @@ class CategoryPageServiceTest {
                         "/juguetes-educativos/juegos-montessori/",
                         "/juguetes-educativos/puzles/",
                         "/juguetes-educativos/juegos-stem/",
-                        "/juguetes-educativos/juegos-de-mesa/"
+                        "/juguetes-educativos/juegos-de-mesa/",
+                        "/juguetes-educativos/juego-simbolico/",
+                        "/juguetes-educativos/juguetes-sensoriales/",
+                        "/juguetes-educativos/munecos-figuras-pequenos-mundos/",
+                        "/juguetes-educativos/juguetes-musicales/",
+                        "/juguetes-educativos/juguetes-construccion/",
+                        "/juguetes-educativos/arte-manualidades/",
+                        "/juguetes-educativos/causa-efecto-experimentacion/",
+                        "/juguetes-educativos/lenguaje-lectoescritura/",
+                        "/juguetes-educativos/matematicas-logica/",
+                        "/juguetes-educativos/juegos-cooperativos-socioemocionales/"
                 );
     }
 
@@ -93,7 +103,17 @@ class CategoryPageServiceTest {
                         CollectionPageService.MONTESSORI_SLUG,
                         CollectionPageService.PUZZLES_SLUG,
                         CollectionPageService.STEM_SLUG,
-                        CollectionPageService.BOARD_GAMES_SLUG
+                        CollectionPageService.BOARD_GAMES_SLUG,
+                        CollectionPageService.SYMBOLIC_PLAY_SLUG,
+                        CollectionPageService.SENSORY_TOYS_SLUG,
+                        CollectionPageService.SMALL_WORLDS_SLUG,
+                        CollectionPageService.MUSICAL_TOYS_SLUG,
+                        CollectionPageService.CONSTRUCTION_TOYS_SLUG,
+                        CollectionPageService.ARTS_CRAFTS_SLUG,
+                        CollectionPageService.EXPERIMENTATION_SLUG,
+                        CollectionPageService.LITERACY_SLUG,
+                        CollectionPageService.MATH_LOGIC_SLUG,
+                        CollectionPageService.COOPERATIVE_SEL_SLUG
                 );
         assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.MOVEMENT_SLUG))
                 .containsExactly(

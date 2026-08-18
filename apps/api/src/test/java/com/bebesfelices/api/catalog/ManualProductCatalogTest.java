@@ -54,7 +54,42 @@ class ManualProductCatalogTest {
         assertThat(products).allSatisfy(product -> {
             assertThat(product.affiliateLink()).isNull();
             assertThat(product.source()).isEqualTo(ProductSource.MANUAL);
-            assertThat(product.asin()).isNull();
         });
+    }
+
+    @Test
+    void researchedEducationalProductsMatchTheirDeclaredAgeAndSubcategory() {
+        var products = catalog.findByIds(List.of(
+                "simbolico-theo-klein-miele",
+                "sensorial-emotion-bottles",
+                "mundos-schleich-foal",
+                "musical-hape-piano",
+                "construccion-lego-classic-10698",
+                "arte-crayola-pokemon-5in1",
+                "experimenta-numberblocks",
+                "lectura-diset-leer",
+                "matematicas-sum-swamp",
+                "mesa-animal-mini"
+        ));
+
+        assertThat(products).hasSize(10);
+        assertThat(products).allSatisfy(product -> {
+            assertThat(product.categories()).hasSize(2);
+            assertThat(product.categories().get(0)).isEqualTo("Juguetes educativos");
+            assertThat(product.asin()).matches("[A-Z0-9]{10}");
+            assertThat(product.isAvailableForAge(product.minAge())).isTrue();
+            assertThat(product.affiliateLink()).isNull();
+        });
+    }
+
+    @Test
+    void educationalAmazonProductsHaveUniqueIdsAndAsins() {
+        var products = EducationalAmazonProducts.all();
+
+        assertThat(products).hasSize(58);
+        assertThat(products).extracting(Product::id).doesNotHaveDuplicates();
+        assertThat(products).extracting(Product::asin).doesNotHaveDuplicates();
+        assertThat(products).allSatisfy(product ->
+                assertThat(product.marketplace()).isEqualTo("www.amazon.es"));
     }
 }
