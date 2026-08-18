@@ -1,8 +1,20 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { SiteHeader } from "./SiteHeader";
 
+const { mockPathname } = vi.hoisted(() => ({
+  mockPathname: vi.fn(() => "/"),
+}));
+
+vi.mock("next/navigation", () => ({
+  usePathname: mockPathname,
+}));
+
 describe("SiteHeader", () => {
+  beforeEach(() => {
+    mockPathname.mockReturnValue("/");
+  });
+
   it("uses supplied category navigation", () => {
     render(
       <SiteHeader
@@ -30,5 +42,30 @@ describe("SiteHeader", () => {
     fireEvent.keyDown(document, { key: "Escape" });
     expect(screen.queryByRole("navigation", { name: "Menú móvil" })).not.toBeInTheDocument();
     expect(trigger).toHaveFocus();
+  });
+
+  it("highlights the menu item for the current page", () => {
+    mockPathname.mockReturnValue("/movimiento/");
+
+    render(<SiteHeader variant="inner" />);
+
+    expect(screen.getAllByRole("link", { name: "Movimiento" })[0]).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    expect(screen.getAllByRole("link", { name: "Autonomía" })[0]).not.toHaveAttribute(
+      "aria-current",
+    );
+  });
+
+  it("highlights Contacto on its page", () => {
+    mockPathname.mockReturnValue("/contacto/");
+
+    render(<SiteHeader variant="inner" />);
+
+    expect(screen.getAllByRole("link", { name: "Contacto" })[0]).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
   });
 });

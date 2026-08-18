@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 
 export type NavigationItem = {
@@ -37,6 +38,8 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ variant = "hero", categoryItems = defaultCategories }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const pathname = usePathname();
   const panelId = useId();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -45,6 +48,44 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
     () => [sectionItems[0], ...categoryItems, ...sectionItems.slice(1)],
     [categoryItems],
   );
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const sectionIds = sectionItems.map((item) => item.href.split("#")[1]).filter(Boolean);
+    const updateFromHash = () => setActiveSection(window.location.hash.slice(1));
+    const Observer = window.IntersectionObserver as typeof IntersectionObserver | undefined;
+    updateFromHash();
+
+    if (!Observer) {
+      window.addEventListener("hashchange", updateFromHash);
+      return () => window.removeEventListener("hashchange", updateFromHash);
+    }
+
+    const observer = new Observer(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActiveSection(visible[0].target.id);
+      },
+      { rootMargin: "-20% 0px -65% 0px" },
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+    window.addEventListener("hashchange", updateFromHash);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", updateFromHash);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -76,63 +117,72 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
     };
   }, [open]);
 
+  const isActive = (href: string) => {
+    const [itemPath, hash] = href.split("#");
+    const normalizedItemPath = itemPath.replace(/\/+$/, "") || "/";
+    const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+    return hash
+      ? normalizedPathname === normalizedItemPath && activeSection === hash
+      : normalizedPathname === normalizedItemPath;
+  };
+
   return (
     <header
       className={
         isInner
-          ? "sticky top-0 z-30 border-b border-[var(--color-border)] bg-white"
+          ? "sticky top-0 z-30 bg-[var(--color-primary-700)] shadow-sm"
           : "absolute inset-x-0 top-0 z-30"
       }
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <Link
           href="/"
-          className={
-            isInner
-              ? "font-[family-name:var(--font-nunito-sans)] text-lg font-extrabold tracking-tight text-[var(--color-primary-700)]"
-              : "font-[family-name:var(--font-nunito-sans)] text-lg font-extrabold tracking-tight text-white drop-shadow-sm"
-          }
+          className="shrink-0 whitespace-nowrap font-[family-name:var(--font-nunito-sans)] text-lg font-extrabold tracking-tight text-white drop-shadow-sm"
         >
           Bebes Felices
         </Link>
 
         <nav
-          className="hidden items-center gap-4 lg:flex"
+          className="hidden items-center gap-3 lg:flex"
           aria-label="Navegación principal"
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.href + item.label}
-              href={item.href}
-              className={
-                isInner
-                  ? "text-sm font-medium text-[var(--color-text-secondary)] transition hover:text-[var(--color-primary-700)]"
-                  : "text-sm font-medium text-white/90 transition hover:text-white"
-              }
-            >
-              {item.label}
-            </Link>
-          ))}
-          {editorialItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={
-                isInner
-                  ? "hidden text-sm font-medium text-[var(--color-text-secondary)] transition hover:text-[var(--color-primary-700)] 2xl:inline"
-                  : "hidden text-sm font-medium text-white/90 transition hover:text-white 2xl:inline"
-              }
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href + item.label}
+                href={item.href}
+                aria-current={active ? (item.href.includes("#") ? "location" : "page") : undefined}
+                className={
+                  active
+                    ? "border-b-2 border-white px-1 py-1 text-sm font-bold text-white"
+                    : "px-1 py-1 text-sm font-medium text-white/90 transition hover:text-white"
+                }
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+          {editorialItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={
+                  active
+                    ? "hidden border-b-2 border-white px-1 py-1 text-sm font-bold text-white 2xl:inline"
+                    : "hidden px-1 py-1 text-sm font-medium text-white/90 transition hover:text-white 2xl:inline"
+                }
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="/#por-edad"
-            className={
-              isInner
-                ? "rounded-lg bg-[var(--color-primary-700)] px-3 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--color-primary-600)]"
-                : "rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-[var(--color-primary-700)] shadow-sm transition hover:bg-[var(--color-primary-50)]"
-            }
+            className="rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-[var(--color-primary-700)] shadow-sm transition hover:bg-[var(--color-primary-50)]"
           >
             Buscar
           </Link>
@@ -141,11 +191,7 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
         <button
           ref={triggerRef}
           type="button"
-          className={
-            isInner
-              ? "inline-flex items-center justify-center rounded-lg border border-[var(--color-border)] bg-white px-3 py-2 text-sm font-semibold text-[var(--color-text)] lg:hidden"
-              : "inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-sm font-semibold text-white backdrop-blur lg:hidden"
-          }
+          className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-sm font-semibold text-white backdrop-blur lg:hidden"
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
@@ -168,26 +214,44 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
             className="absolute inset-x-3 top-16 z-50 rounded-2xl border border-[var(--color-border)] bg-white p-4 shadow-lg lg:hidden"
           >
             <nav className="flex flex-col gap-1" aria-label="Menú móvil">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text)] hover:bg-[var(--color-primary-50)]"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              {editorialItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link
+                    key={item.href + item.label}
+                    href={item.href}
+                    aria-current={
+                      active ? (item.href.includes("#") ? "location" : "page") : undefined
+                    }
+                    className={
+                      active
+                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-sm font-bold text-[var(--color-primary-700)]"
+                        : "rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text)] hover:bg-[var(--color-primary-50)]"
+                    }
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+              {editorialItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={
+                      active
+                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-sm font-bold text-[var(--color-primary-700)]"
+                        : "rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
+                    }
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </nav>
           </div>
         </>

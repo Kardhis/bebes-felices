@@ -11,7 +11,6 @@ type HomeHeroProps = {
   secondaryCtaHref: string;
   imageUrl: string;
   imageAlt: string;
-  affiliationShortNotice: string;
 };
 
 export function HomeHero({
@@ -24,7 +23,6 @@ export function HomeHero({
   secondaryCtaHref,
   imageUrl,
   imageAlt,
-  affiliationShortNotice,
 }: HomeHeroProps) {
   return (
     <section className="relative min-h-[88vh] overflow-hidden bg-[var(--color-primary-700)]">
@@ -66,8 +64,6 @@ export function HomeHero({
             {secondaryCtaLabel}
           </Link>
         </div>
-
-        <p className="mt-6 max-w-xl text-xs text-white/70">{affiliationShortNotice}</p>
       </div>
     </section>
   );

@@ -65,7 +65,6 @@ export default async function Home() {
           secondaryCtaHref={home.hero.secondaryCtaHref}
           imageUrl={home.hero.imageUrl}
           imageAlt={home.hero.imageAlt}
-          affiliationShortNotice={home.affiliation.shortNoticeText}
         />
 
         <AgeNavigation items={home.ageNavigation} />

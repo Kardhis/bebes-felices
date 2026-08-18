@@ -15,7 +15,6 @@ describe("HomeHero", () => {
         secondaryCtaHref="/#categorias"
         imageUrl="/images/home-hero.jpg"
         imageAlt="Juguetes educativos"
-        affiliationShortNotice="Algunos enlaces son de afiliado."
       />,
     );
 
