@@ -51,6 +51,13 @@ describe("sitemap", () => {
         }),
       );
     }
+    expect(entries).toContainEqual(
+      expect.objectContaining({
+        url: `${SITE_URL}/guias/`,
+        changeFrequency: "weekly",
+        priority: 0.85,
+      }),
+    );
 
     for (const slug of INFO_PAGE_SLUGS) {
       const page = getInfoPage(slug);

@@ -414,7 +414,7 @@ public class AgePageService {
         return List.of(
                 new LinkItem(
                         "Cómo elegir juguetes según la edad",
-                        "/guias/como-elegir-juguetes-por-edad/",
+                        "/guias/como-elegir-juguetes-por-edad/?edad=" + age,
                         "Criterios prácticos para 3, 4 y 5 años."
                 )
         );

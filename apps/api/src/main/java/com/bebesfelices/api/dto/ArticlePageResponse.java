@@ -21,6 +21,7 @@ public record ArticlePageResponse(
         List<Section> sections,
         List<Faq> faq,
         List<LinkItem> relatedLinks,
+        List<AgeVariant> ageVariants,
         TrustAuthority trustAuthority,
         Affiliation affiliation,
         List<LegalLink> legalLinks,
@@ -39,6 +40,15 @@ public record ArticlePageResponse(
     }
 
     public record Section(String id, String title, List<String> paragraphs) {
+    }
+
+    public record AgeVariant(
+            int hubAge,
+            List<String> introductionParagraphs,
+            List<Section> sections,
+            List<Faq> faq,
+            List<LinkItem> relatedLinks
+    ) {
     }
 
     public record Faq(String question, String answer) {

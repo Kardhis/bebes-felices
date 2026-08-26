@@ -9,10 +9,19 @@ export type ArticleSection = {
   paragraphs: string[];
 };
 
+export type ArticleAgeVariant = {
+  hubAge: number;
+  introductionParagraphs: string[];
+  sections: ArticleSection[];
+  faq: EditorialChrome["faq"];
+  relatedLinks: EditorialChrome["relatedLinks"];
+};
+
 export type ArticlePageResponse = EditorialChrome & {
   slug: string;
   canonicalPath: string;
   sections: ArticleSection[];
+  ageVariants: ArticleAgeVariant[];
 };
 
 export class ArticlePageNotFoundError extends Error {

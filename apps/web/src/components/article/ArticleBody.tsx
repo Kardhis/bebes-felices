@@ -1,17 +1,22 @@
+import type { ReactNode } from "react";
 import type { ArticleSection } from "@/lib/article/getArticlePage";
 
 type ArticleBodyProps = {
   sections: ArticleSection[];
+  ageFilter?: ReactNode;
 };
 
-export function ArticleBody({ sections }: ArticleBodyProps) {
+export function ArticleBody({ sections, ageFilter }: ArticleBodyProps) {
   if (sections.length === 0) {
     return null;
   }
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[16rem_minmax(0,1fr)] lg:py-16">
+    <div className="border-t border-[var(--color-border)] bg-white">
+      <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:pt-16">
+        {ageFilter}
+      </div>
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-12 sm:px-6 lg:grid-cols-[16rem_minmax(0,1fr)] lg:pb-16">
         <nav aria-label="Índice del artículo" className="lg:pt-2">
           <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-muted)]">
             En esta guía

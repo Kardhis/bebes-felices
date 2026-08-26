@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
-import { CollectionPageView } from "@/components/collection/CollectionPageView";
-import {
-  CollectionPageNotFoundError,
-  getCollectionPage,
-} from "@/lib/collection/getCollectionPage";
-import { loadOrNotFound } from "@/lib/editorial/loadOrNotFound";
-import { buildPageMetadata } from "@/lib/seo/metadata";
-
-const SLUG = "sostenibles";
+import { CategoryPage, categoryMetadata } from "@/lib/category/CategoryPageRoute";
+import { parseCategoryAge } from "@/lib/category/categoryAge";
 
 export async function generateMetadata(): Promise<Metadata> {
-  try {
-    const page = await getCollectionPage(SLUG);
-    return buildPageMetadata(page.seo);
-  } catch (error) {
-    if (error instanceof CollectionPageNotFoundError) {
-      return { title: "Página no encontrada | BebesFelices" };
-    }
-    throw error;
-  }
+  return categoryMetadata("sostenibles");
 }
 
-export default async function SustainablePage() {
-  const page = await loadOrNotFound(
-    () => getCollectionPage(SLUG),
-    (error) => error instanceof CollectionPageNotFoundError,
+type Props = {
+  searchParams: Promise<{ edad?: string }>;
+};
+
+export default async function SustainableCategoryPage({ searchParams }: Props) {
+  const { edad } = await searchParams;
+  return (
+    <CategoryPage slug="sostenibles" initialAge={parseCategoryAge(edad)} />
   );
-  return <CollectionPageView page={page} />;
 }

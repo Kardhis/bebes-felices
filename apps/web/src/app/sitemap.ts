@@ -74,6 +74,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.85,
     })),
+    {
+      url: `${SITE_URL}/guias/`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
     ...INFO_PAGE_SLUGS.map((slug) => {
       const page = getInfoPage(slug);
       return {

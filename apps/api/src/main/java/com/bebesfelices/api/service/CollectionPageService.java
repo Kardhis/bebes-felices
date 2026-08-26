@@ -21,7 +21,9 @@ public class CollectionPageService {
     public static final String SCOOTERS_SLUG = "patinetes";
     public static final String TOWERS_SLUG = "torres-de-aprendizaje";
     public static final String TABLEWARE_SLUG = "vajilla-infantil";
-    public static final String SUSTAINABLE_SLUG = "sostenibles";
+    public static final String SUSTAINABLE_3_SLUG = "regalos-duraderos-3-anos";
+    public static final String SUSTAINABLE_4_SLUG = "regalos-duraderos-4-anos";
+    public static final String SUSTAINABLE_5_SLUG = "regalos-duraderos-5-anos";
     public static final String GIFTS_3_SLUG = "ideas-regalo-3-anos";
     public static final String STEM_SLUG = "juegos-stem";
     public static final String BALANCE_BIKES_SLUG = "bicicletas-sin-pedales";
@@ -263,8 +265,8 @@ public class CollectionPageService {
                 )
         ));
         register(new EditorialCollection(
-                SUSTAINABLE_SLUG,
-                "/sostenibles/",
+                SUSTAINABLE_3_SLUG,
+                "/sostenibles/regalos-duraderos-3-anos/",
                 "Sostenibles",
                 "Regalos y juguetes más duraderos para 3 años",
                 "Opciones pensadas para durar: materiales resistentes, menos piezas de usar y tirar, y un uso que no dependa de pantallas.",
@@ -496,6 +498,114 @@ public class CollectionPageService {
                         chooseByAgeLink()
                 ),
                 4
+        ));
+        register(new EditorialCollection(
+                SUSTAINABLE_4_SLUG,
+                "/sostenibles/regalos-duraderos-4-anos/",
+                "Sostenibles",
+                "Regalos y juguetes más duraderos para 4 años",
+                "Madera certificada, plástico reciclado y objetos que se pueden repetir, sin depender de pantallas.",
+                List.of(
+                        "A los 4 años la durabilidad se nota en el uso diario: ensartar, encajar, imitar oficios o practicar un nudo. Sostenible, aquí, es material declarado y un objeto que se saca muchas veces.",
+                        "Las cinco opciones de esta página están desarrolladas en la comparativa de regalos sostenibles para 4 años. No afirmamos ecoetiquetas que no hayamos contrastado en ficha."
+                ),
+                List.of(
+                        "Material declarado: madera, FSC o plástico reciclado, según la ficha.",
+                        "Uso que no dependa de pilas ni de una app.",
+                        "Un margen de dificultad para que no se quede pequeño en un mes.",
+                        "Supervisión si hay cordones, cuentas o piezas sueltas."
+                ),
+                List.of(
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "small-foot-grua",
+                        "green-toys-construccion"
+                ),
+                Map.of(
+                        "cuentas-melissa-doug",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-haba-puzles-cuatro-estaciones",
+                        "small-foot-grua",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-small-foot-grua",
+                        "green-toys-construccion",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-green-toys-construccion"
+                ),
+                List.of(
+                        faq("¿Todo lo de madera es sostenible?",
+                                "No. La madera ayuda a la durabilidad, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."),
+                        faq("¿Qué evitáis?",
+                                "Productos de un solo uso y juguetes que solo funcionan con pantalla. Tampoco afirmamos ecoetiquetas que no hayamos contrastado."),
+                        faq("¿Sirve como regalo?",
+                                "Sí, si la familia va a repetir esas actividades. Un objeto de madera o plástico reciclado encaja cuando hay un uso real, no solo el día del cumpleaños.")
+                ),
+                List.of(
+                        hubLink(4),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 4 años",
+                                "/comparativas/mejores-regalos-sostenibles-4-anos/",
+                                "Comparativa de madera certificada y plástico reciclado."
+                        ),
+                        new LinkItem(
+                                "Ideas de regalo para 4 años",
+                                "/regalos/ideas-regalo-4-anos/",
+                                "Más opciones por ocasión, no solo por material."
+                        )
+                ),
+                4
+        ));
+        register(new EditorialCollection(
+                SUSTAINABLE_5_SLUG,
+                "/sostenibles/regalos-duraderos-5-anos/",
+                "Sostenibles",
+                "Regalos y juguetes más duraderos para 5 años",
+                "Objetos que se pueden complicar: crear, construir, ensartar o encajar, con materiales pensados para repetir.",
+                List.of(
+                        "A los 5 años conviene un reto que se pueda terminar y volver a sacar: crear sin pantallas, construir o completar un puzle. La durabilidad cuenta si el objeto acompaña varios meses.",
+                        "Priorizamos madera, fieltro, cartón grueso o plástico reciclado declarado, frente a sets de un solo uso. El kit de manualidades tiene análisis propio; el resto del catálogo sostenible cubre esta edad."
+                ),
+                List.of(
+                        "Material que aguante un uso más intenso y sesiones más largas.",
+                        "Dificultad que se pueda ajustar sin cambiar de producto.",
+                        "Uso que no dependa de pilas ni de una app.",
+                        "Edad mínima, piezas y supervisión revisadas antes del uso."
+                ),
+                List.of(
+                        "kit-manualidades-natural",
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "small-foot-grua",
+                        "green-toys-construccion"
+                ),
+                hideAnalysisHrefs(
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "small-foot-grua",
+                        "green-toys-construccion"
+                ),
+                List.of(
+                        faq("¿Qué encaja a los 5 años si buscamos durar?",
+                                "Un objeto que se pueda complicar: crear, construir o completar. Si ya monta puzles de 15 piezas, elige un reto que no se agote en una tarde."),
+                        faq("¿Todo lo de madera es sostenible?",
+                                "No. La madera ayuda a la durabilidad, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."),
+                        faq("¿Incluís precios o certificaciones una a una?",
+                                "No publicamos importes. Tampoco afirmamos ecoetiquetas que no hayamos contrastado en ficha.")
+                ),
+                List.of(
+                        hubLink(5),
+                        analysisLink("kit-manualidades-natural", "Kit de manualidades con materiales naturales"),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/regalos/ideas-regalo-5-anos/",
+                                "Más opciones por ocasión, no solo por material."
+                        )
+                ),
+                5
         ));
         register(new EditorialCollection(
                 GIFTS_5_SLUG,

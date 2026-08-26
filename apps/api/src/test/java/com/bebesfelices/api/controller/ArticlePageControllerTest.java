@@ -10,6 +10,7 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.emptyOrNullString;
+import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.not;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -36,6 +37,18 @@ class ArticlePageControllerTest {
                 .andExpect(jsonPath("$.header.h1", not(emptyOrNullString())))
                 .andExpect(jsonPath("$.sections", not(org.hamcrest.Matchers.empty())))
                 .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/3-anos/"));
+    }
+
+    @Test
+    void buyingGuideExposesAgeVariantsAndGuidesBreadcrumbs() throws Exception {
+        mockMvc.perform(get("/api/article-pages/{slug}", ArticlePageService.CHOOSE_BY_AGE_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.breadcrumbs[1].label").value("Guías"))
+                .andExpect(jsonPath("$.breadcrumbs[1].href").value("/guias/"))
+                .andExpect(jsonPath("$.ageVariants", hasSize(3)))
+                .andExpect(jsonPath("$.ageVariants[0].hubAge").value(3))
+                .andExpect(jsonPath("$.ageVariants[1].hubAge").value(4))
+                .andExpect(jsonPath("$.ageVariants[2].hubAge").value(5));
     }
 
     @Test

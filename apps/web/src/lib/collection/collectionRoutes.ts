@@ -105,9 +105,19 @@ export const COLLECTION_PAGES = [
     hubAge: 5,
   },
   {
-    slug: "sostenibles",
-    prefix: null,
+    slug: "regalos-duraderos-3-anos",
+    prefix: "sostenibles",
     hubAge: 3,
+  },
+  {
+    slug: "regalos-duraderos-4-anos",
+    prefix: "sostenibles",
+    hubAge: 4,
+  },
+  {
+    slug: "regalos-duraderos-5-anos",
+    prefix: "sostenibles",
+    hubAge: 5,
   },
 ] as const;
 

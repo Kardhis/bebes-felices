@@ -42,13 +42,21 @@ class ArticlePageServiceTest {
     }
 
     @Test
-    void skillsAndBuyingGuideBreadcrumbsReturnToTheThreeYearHub() {
+    void buyingGuideUsesGuidesIndexBreadcrumbsAndAgeVariants() {
         var guide = service.getBySlug(ArticlePageService.CHOOSE_BY_AGE_SLUG).orElseThrow();
         var skills = service.getBySlug(ArticlePageService.SKILLS_3_SLUG).orElseThrow();
 
-        assertThat(guide.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_3_HREF);
-        assertThat(skills.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_3_HREF);
+        assertThat(guide.breadcrumbs())
+                .extracting(crumb -> crumb.label())
+                .containsExactly("Inicio", "Guías", "Cómo elegir juguetes según la edad");
+        assertThat(guide.breadcrumbs().get(1).href()).isEqualTo("/guias/");
         assertThat(guide.canonicalPath()).isEqualTo("/guias/como-elegir-juguetes-por-edad/");
+        assertThat(guide.ageVariants()).extracting(variant -> variant.hubAge()).containsExactly(3, 4, 5);
+        assertThat(guide.ageVariants().get(0).sections()).extracting(section -> section.id())
+                .containsExactly("edad-real", "seguridad", "atencion", "necesidad", "actualizar");
+        assertThat(guide.ageVariants().get(1).sections().get(0).paragraphs().get(0)).contains("4 años");
+        assertThat(guide.ageVariants().get(2).sections().get(0).paragraphs().get(0)).contains("5 años");
+        assertThat(skills.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.HUB_3_HREF);
         assertThat(skills.canonicalPath()).isEqualTo("/guias/habilidades-3-anos/");
     }
 

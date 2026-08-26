@@ -30,7 +30,7 @@ class CollectionPageControllerTest {
             CollectionPageService.SCOOTERS_SLUG,
             CollectionPageService.TOWERS_SLUG,
             CollectionPageService.TABLEWARE_SLUG,
-            CollectionPageService.SUSTAINABLE_SLUG,
+            CollectionPageService.SUSTAINABLE_3_SLUG,
             CollectionPageService.GIFTS_3_SLUG
     })
     void returnsPublishedCollections(String slug) throws Exception {
@@ -45,7 +45,8 @@ class CollectionPageControllerTest {
     @ParameterizedTest
     @ValueSource(strings = {
             CollectionPageService.BALANCE_BIKES_SLUG,
-            CollectionPageService.GIFTS_4_SLUG
+            CollectionPageService.GIFTS_4_SLUG,
+            CollectionPageService.SUSTAINABLE_4_SLUG
     })
     void returnsPublishedFourYearCollections(String slug) throws Exception {
         mockMvc.perform(get("/api/collection-pages/{slug}", slug))
@@ -56,7 +57,8 @@ class CollectionPageControllerTest {
 
     @ParameterizedTest
     @ValueSource(strings = {
-            CollectionPageService.GIFTS_5_SLUG
+            CollectionPageService.GIFTS_5_SLUG,
+            CollectionPageService.SUSTAINABLE_5_SLUG
     })
     void returnsPublishedFiveYearCollections(String slug) throws Exception {
         mockMvc.perform(get("/api/collection-pages/{slug}", slug))

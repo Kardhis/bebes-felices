@@ -81,7 +81,7 @@ public class HomeService {
                 ),
                 new LinkItem(
                         "Sostenibles",
-                        "/" + CollectionPageService.SUSTAINABLE_SLUG + "/",
+                        "/" + CategoryPageService.SUSTAINABLE_SLUG + "/",
                         "Opciones más duraderas y materiales pensados a largo plazo."
                 )
         );

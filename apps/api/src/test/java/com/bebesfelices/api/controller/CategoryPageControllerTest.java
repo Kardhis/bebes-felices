@@ -27,7 +27,8 @@ class CategoryPageControllerTest {
             CategoryPageService.EDUCATIONAL_TOYS_SLUG,
             CategoryPageService.MOVEMENT_SLUG,
             CategoryPageService.AUTONOMY_SLUG,
-            CategoryPageService.GIFTS_SLUG
+            CategoryPageService.GIFTS_SLUG,
+            CategoryPageService.SUSTAINABLE_SLUG
     })
     void returnsPublishedCategoryIndexes(String slug) throws Exception {
         mockMvc.perform(get("/api/category-pages/{slug}", slug))

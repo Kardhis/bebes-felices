@@ -3,6 +3,7 @@ export const CATEGORY_PAGE_SLUGS = [
   "movimiento",
   "autonomia",
   "regalos",
+  "sostenibles",
 ] as const;
 
 export type CategoryPageSlug = (typeof CATEGORY_PAGE_SLUGS)[number];

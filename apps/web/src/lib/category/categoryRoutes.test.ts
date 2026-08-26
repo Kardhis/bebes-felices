@@ -8,12 +8,13 @@ import {
 } from "./categoryRoutes";
 
 describe("categoryRoutes", () => {
-  it("defines the four published category indexes", () => {
+  it("defines the published category indexes", () => {
     expect(CATEGORY_PAGE_SLUGS).toEqual([
       "juguetes-educativos",
       "movimiento",
       "autonomia",
       "regalos",
+      "sostenibles",
     ]);
     expect(CATEGORY_PREFIXES).toEqual(CATEGORY_PAGE_SLUGS);
   });
@@ -48,11 +49,17 @@ describe("categoryRoutes", () => {
       "ideas-regalo-4-anos",
       "ideas-regalo-5-anos",
     ]);
+    expect(collectionsForPrefix("sostenibles")).toEqual([
+      "regalos-duraderos-3-anos",
+      "regalos-duraderos-4-anos",
+      "regalos-duraderos-5-anos",
+    ]);
   });
 
   it("builds canonical paths with trailing slash", () => {
     expect(categoryPath("regalos")).toBe("/regalos/");
     expect(isCategoryPageSlug("regalos")).toBe(true);
-    expect(isCategoryPageSlug("sostenibles")).toBe(false);
+    expect(isCategoryPageSlug("sostenibles")).toBe(true);
+    expect(isCategoryPageSlug("ideas-regalo-3-anos")).toBe(false);
   });
 });

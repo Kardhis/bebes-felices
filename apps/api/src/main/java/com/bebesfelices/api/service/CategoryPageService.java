@@ -19,6 +19,7 @@ public class CategoryPageService {
     public static final String MOVEMENT_SLUG = "movimiento";
     public static final String AUTONOMY_SLUG = "autonomia";
     public static final String GIFTS_SLUG = "regalos";
+    public static final String SUSTAINABLE_SLUG = "sostenibles";
 
     private final Map<String, CategoryDefinition> categories = new LinkedHashMap<>();
     private final CollectionPageService collectionPageService;
@@ -218,6 +219,49 @@ public class CategoryPageService {
                                 "Regalos más duraderos",
                                 "/sostenibles/",
                                 "Enfoque en materiales y uso a largo plazo."
+                        )
+                )
+        ));
+
+        register(new CategoryDefinition(
+                SUSTAINABLE_SLUG,
+                "/sostenibles/",
+                "Sostenibles",
+                "Regalos y juguetes más duraderos para niños de 3 a 5 años",
+                List.of(
+                        "Esta categoría reúne selecciones por edad de regalos y juguetes pensados para durar: materiales resistentes, menos piezas de usar y tirar, y un uso que no dependa de pantallas.",
+                        "Las páginas se agrupan por una edad principal de 3, 4 o 5 años. Sostenible, aquí, significa sobre todo durabilidad y materiales contrastados en ficha, no un sello publicitario."
+                ),
+                List.of(
+                        CollectionPageService.SUSTAINABLE_3_SLUG,
+                        CollectionPageService.SUSTAINABLE_4_SLUG,
+                        CollectionPageService.SUSTAINABLE_5_SLUG
+                ),
+                List.of(
+                        faq(
+                                "¿Todo lo de madera es sostenible?",
+                                "No. La madera ayuda a la durabilidad, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."
+                        ),
+                        faq(
+                                "¿Publicáis certificaciones una a una?",
+                                "No afirmamos ecoetiquetas que no hayamos contrastado en ficha. Cada selección explica qué material está declarado y qué queda fuera."
+                        )
+                ),
+                List.of(
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/",
+                                "Criterios prácticos para 3, 4 y 5 años."
+                        ),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 4 años",
+                                "/comparativas/mejores-regalos-sostenibles-4-anos/",
+                                "Comparativa de madera certificada y plástico reciclado."
+                        ),
+                        new LinkItem(
+                                "Ideas de regalo por edad",
+                                "/regalos/",
+                                "Selecciones por ocasión, no solo por material."
                         )
                 )
         ));

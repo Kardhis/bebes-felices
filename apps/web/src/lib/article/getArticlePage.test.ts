@@ -16,6 +16,7 @@ const minimalResponse = {
   breadcrumbs: [],
   header: { kicker: "Guía", h1: "Habilidades", introductionParagraphs: [] },
   sections: [],
+  ageVariants: [],
   faq: [],
   relatedLinks: [],
   trustAuthority: {

@@ -182,7 +182,7 @@ public class ProductAnalysisPageService {
         ));
         register(new EditorialAnalysis(
                 "kit-manualidades-natural",
-                "/sostenibles/",
+                "/sostenibles/regalos-duraderos-3-anos/",
                 "Regalos más duraderos",
                 "Crear en sesiones cortas con madera, fieltro o cartón, sin depender de una pantalla",
                 "El kit de manualidades con materiales naturales propone actividades de dificultad progresiva. Encaja cuando hay un adulto dispuesto a sentarse un rato; no es un juguete de dejar solo sobre la mesa.",

@@ -97,6 +97,29 @@ class CategoryPageServiceTest {
     }
 
     @Test
+    void returnsSustainableIndexWithPublishedChildren() {
+        Optional<CategoryPageResponse> page = categoryPageService.getBySlug(
+                CategoryPageService.SUSTAINABLE_SLUG
+        );
+
+        assertThat(page).isPresent();
+        assertThat(page.get().canonicalPath()).isEqualTo("/sostenibles/");
+        assertThat(page.get().header().h1()).isEqualTo(
+                "Regalos y juguetes más duraderos para niños de 3 a 5 años"
+        );
+        assertThat(page.get().breadcrumbs())
+                .extracting(crumb -> crumb.label())
+                .containsExactly("Inicio", "Sostenibles");
+        assertThat(page.get().childCollections())
+                .extracting(link -> link.href())
+                .containsExactly(
+                        "/sostenibles/regalos-duraderos-3-anos/",
+                        "/sostenibles/regalos-duraderos-4-anos/",
+                        "/sostenibles/regalos-duraderos-5-anos/"
+                );
+    }
+
+    @Test
     void collectionMembershipMatchesFrontendRegistry() {
         assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.EDUCATIONAL_TOYS_SLUG))
                 .containsExactly(
@@ -131,6 +154,12 @@ class CategoryPageServiceTest {
                         CollectionPageService.GIFTS_4_SLUG,
                         CollectionPageService.GIFTS_5_SLUG
                 );
+        assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.SUSTAINABLE_SLUG))
+                .containsExactly(
+                        CollectionPageService.SUSTAINABLE_3_SLUG,
+                        CollectionPageService.SUSTAINABLE_4_SLUG,
+                        CollectionPageService.SUSTAINABLE_5_SLUG
+                );
     }
 
     @Test
@@ -144,7 +173,8 @@ class CategoryPageServiceTest {
                 CategoryPageService.EDUCATIONAL_TOYS_SLUG,
                 CategoryPageService.MOVEMENT_SLUG,
                 CategoryPageService.AUTONOMY_SLUG,
-                CategoryPageService.GIFTS_SLUG
+                CategoryPageService.GIFTS_SLUG,
+                CategoryPageService.SUSTAINABLE_SLUG
         );
     }
 

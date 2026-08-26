@@ -30,7 +30,11 @@ describe("collectionRoutes", () => {
     expect(isCollectionSlugForPrefix("autonomia", "vajilla-infantil")).toBe(
       true,
     );
-    expect(isCollectionSlug("sostenibles")).toBe(true);
+    expect(isCollectionSlug("sostenibles")).toBe(false);
+    expect(isCollectionSlug("regalos-duraderos-3-anos")).toBe(true);
+    expect(isCollectionSlugForPrefix("sostenibles", "regalos-duraderos-4-anos")).toBe(
+      true,
+    );
     expect(isCollectionSlug("ideas-regalo-3-anos")).toBe(true);
     expect(isCollectionSlug("ideas-regalo-4-anos")).toBe(true);
     expect(isCollectionSlug("ideas-regalo-5-anos")).toBe(true);

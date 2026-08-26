@@ -112,7 +112,7 @@ class AgePageServiceTest {
 
         List<String> published = List.of(
                 "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
-                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/como-elegir-juguetes-por-edad/?edad=3",
                 "/guias/habilidades-3-anos/",
                 "/juguetes-educativos/juegos-montessori/",
                 "/juguetes-educativos/puzles/",
@@ -154,7 +154,7 @@ class AgePageServiceTest {
                 "/comparativas/mejores-torres-aprendizaje-4-anos/",
                 "/comparativas/mejores-vajillas-infantiles-4-anos/",
                 "/comparativas/mejores-regalos-sostenibles-4-anos/",
-                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/como-elegir-juguetes-por-edad/?edad=4",
                 "/guias/habilidades-4-anos/",
                 "/juguetes-educativos/juegos-stem/",
                 "/movimiento/bicicletas-sin-pedales/",
@@ -186,7 +186,7 @@ class AgePageServiceTest {
 
         List<String> published = List.of(
                 STEM_5_HREF,
-                "/guias/como-elegir-juguetes-por-edad/",
+                "/guias/como-elegir-juguetes-por-edad/?edad=5",
                 "/guias/habilidades-5-anos/",
                 "/juguetes-educativos/juegos-de-mesa/",
                 "/movimiento/bicicletas-sin-pedales/",

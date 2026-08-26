@@ -35,65 +35,192 @@ public class ArticlePageService {
 
     private ArticlePageResponse chooseByAge() {
         String path = "/guias/" + CHOOSE_BY_AGE_SLUG + "/";
+        ArticlePageResponse.AgeVariant age3 = chooseByAgeVariant(3);
+        ArticlePageResponse.AgeVariant age4 = chooseByAgeVariant(4);
+        ArticlePageResponse.AgeVariant age5 = chooseByAgeVariant(5);
         return article(
                 CHOOSE_BY_AGE_SLUG,
                 path,
                 "Guía de compra",
                 "Cómo elegir juguetes según la edad",
                 "Criterios prácticos para 3, 4 y 5 años, sin depender solo del diseño o de la edad impresa en la caja.",
-                List.of(
-                        "Elegir un juguete útil empieza por observar al niño, no por el estante más llamativo. La edad del fabricante es una pista de seguridad, no una garantía de que el producto encaje con el desarrollo real.",
-                        "Esta guía resume qué revisar antes de comprar y cómo usar las páginas por edad de Bebes Felices para decidir con criterio."
-                ),
-                hubBreadcrumbs("Cómo elegir juguetes según la edad", path),
-                List.of(
-                        section("edad-real", "Empieza por lo que ya hace, no solo por los años",
-                                "Un niño de 3 años puede estar empezando a clasificar formas mientras otro ya imita tareas de casa. Mira si encaja, apila, corre con estabilidad o aguanta un juego con turnos cortos.",
-                                "Si el producto exige instrucciones largas, piezas diminutas o equilibrio consolidado, probablemente llegue pronto, pero no ahora. Es mejor un objeto que permita éxito rápido y repetición que uno «para crecer» que frustre."),
-                        section("seguridad", "Seguridad antes que el diseño",
-                                "Comprueba la edad mínima del fabricante y evita piezas pequeñas a los 3 años. Prioriza materiales resistentes, bordes redondeados y un peso que el niño pueda manejar sin ayuda constante.",
-                                "En movimiento, la supervisión no se sustituye con el producto: casco, calzado cerrado y un espacio sin tráfico siguen siendo la base, también en bicicletas sin pedales o patinetes."),
-                        section("atencion", "Sesiones cortas y reglas simples",
-                                "A los 3 años el juego autónomo suele ser breve. A los 4 aumenta la atención y aparecen reglas sencillas. A los 5 ya hay margen para partidas o construcciones más largas.",
-                                "Elige según esa duración real: un puzle de pocas piezas grandes, un juego cooperativo de turnos cortos o un reto STEM con más piezas no sirven para la misma tarde."),
-                        section("necesidad", "Elige por la necesidad que quieres cubrir",
-                                "Aprender, moverse, ganar autonomía o acertar un regalo no se resuelven con el mismo tipo de producto. Las páginas por edad de Bebes Felices organizan las opciones así, no por precio.",
-                                "Si buscas movimiento a los 3 años, empieza por la comparativa de bicicletas sin pedales. Si buscas clasificación o motricidad fina, ve a Montessori o puzles. Si el objetivo es la rutina diaria, mira torres de aprendizaje o vajilla adaptada."),
-                        section("actualizar", "Revisa la fecha y no inventes datos",
-                                "Los catálogos cambian. Mira la fecha de actualización, la metodología y si el enlace de Amazon está validado. Si no hay precio ni valoración en la página, es deliberado: no los mantenemos porque varían y no forman parte del criterio editorial.")
-                ),
-                List.of(
-                        faq(
-                                "¿La edad de la caja es suficiente para decidir?",
-                                "Es imprescindible para seguridad, pero no basta. Contrástala con lo que el niño ya hace: encajar, equilibrarse, seguir turnos o participar en la cocina."
-                        ),
-                        faq(
-                                "¿Qué debo evitar a los 3 años?",
-                                "Piezas pequeñas, materiales frágiles, instrucciones complejas y juguetes de movimiento sin supervisión. También los productos sin rango de edad claro."
-                        ),
-                        faq(
-                                "¿Cómo uso las páginas de Bebes Felices?",
-                                "Entra por la edad, elige la necesidad (aprender, moverse, autonomía o regalo) y sigue la comparativa, la categoría o el análisis. Cada página debe devolverte al hub con el contexto de esa edad."
-                        ),
-                        faq(
-                                "¿Por qué no hay precios ni estrellas?",
-                                "Porque cambian con frecuencia y no los verificamos como dato estable. Evaluamos encaje, seguridad, utilidad y durabilidad con información que podemos sostener."
-                        )
-                ),
-                List.of(
-                        hubLink(),
-                        new LinkItem(
-                                "Qué habilidades desarrolla un niño de 3 años",
-                                "/guias/habilidades-3-anos/",
-                                "Desarrollo esperable a esta edad y cómo encaja con el juego."
-                        ),
-                        new LinkItem(
-                                "Cómo analizamos en Bebes Felices",
-                                "/como-analizamos/",
-                                "Metodología, límites y transparencia de afiliación."
-                        )
-                )
+                age3.introductionParagraphs(),
+                guidesBreadcrumbs("Cómo elegir juguetes según la edad", path),
+                age3.sections(),
+                age3.faq(),
+                age3.relatedLinks(),
+                List.of(age3, age4, age5)
         );
+    }
+
+    private ArticlePageResponse.AgeVariant chooseByAgeVariant(int age) {
+        return switch (age) {
+            case 4 -> new ArticlePageResponse.AgeVariant(
+                    4,
+                    List.of(
+                            "A los 4 años elige por lo que ya sostiene: turnos cortos, un poco más de pulso y un equilibrio más estable. La edad de la caja sigue siendo una pista de seguridad, no una garantía de encaje.",
+                            "Esta guía concreta qué revisar a esta edad y cómo usar las páginas de 4 años de Bebes Felices para decidir con criterio."
+                    ),
+                    List.of(
+                            section("edad-real", "Empieza por lo que ya hace, no solo por los años",
+                                    "Un niño de 4 años puede estar empezando a respetar turnos mientras otro ya construye con un objetivo claro. Mira si aguanta una partida corta, encaja más piezas o se mueve con más seguridad.",
+                                    "Si el producto exige un reglamento largo, estrategia de adulto o equilibrio de bici con pedales, probablemente llegue pronto, pero no ahora. Es mejor un objeto que permita éxito repetible que uno «para mayores» que frustre."),
+                            section("seguridad", "Seguridad antes que el diseño",
+                                    "Sigue comprobando la edad mínima del fabricante. A los 4 años el pulso mejora, pero las piezas pequeñas siguen siendo un riesgo si hay hermanos menores. Revisa imanes encapsulados y un peso que el niño pueda manejar.",
+                                    "En movimiento, la supervisión no se sustituye con el producto: casco, calzado cerrado y un espacio sin tráfico. El paso a dos ruedas o a un patinete más ágil depende del equilibrio real, no del cumpleaños."),
+                            section("atencion", "Sesiones cortas y reglas simples",
+                                    "A los 4 años aumenta la atención y aparecen reglas sencillas que se pueden explicar en pocos minutos. Todavía no es una tarde de partida competitiva larga.",
+                                    "Elige según esa duración real: un cooperativo de turnos cortos, un set de construcción con un objetivo visible o un puzle con más piezas que a los 3 años, no un reto que no se pueda terminar."),
+                            section("necesidad", "Elige por la necesidad que quieres cubrir",
+                                    "Aprender, moverse, ganar autonomía o acertar un regalo no se resuelven con el mismo tipo de producto. Las páginas de 4 años de Bebes Felices organizan las opciones así, no por precio.",
+                                    "Si buscas una partida en familia, empieza por la comparativa de juegos de mesa. Si buscas movimiento, mira patinetes o bicicletas sin pedales. Si el objetivo es la rutina, revisa torres y vajilla. Para materiales más duraderos, ve a la selección sostenible."),
+                            section("actualizar", "Revisa la fecha y no inventes datos",
+                                    "Los catálogos cambian. Mira la fecha de actualización de la comparativa o del análisis de 4 años, la metodología y si el enlace de Amazon está validado.",
+                                    "Si no hay precio ni valoración en la página, es deliberado: no los mantenemos porque varían y no forman parte del criterio editorial.")
+                    ),
+                    List.of(
+                            faq(
+                                    "¿La edad de la caja es suficiente para decidir?",
+                                    "Es imprescindible para seguridad, pero no basta. Contrástala con lo que el niño ya hace: turnos cortos, construir con un objetivo o moverse con más estabilidad."
+                            ),
+                            faq(
+                                    "¿Qué debo evitar a los 4 años?",
+                                    "Reglamentos largos, piezas diminutas si hay hermanos pequeños, imanes que se puedan desprender y movimiento sin supervisión. También los productos sin rango de edad claro."
+                            ),
+                            faq(
+                                    "¿Cómo uso las páginas de Bebes Felices?",
+                                    "Entra por 4 años, elige la necesidad (aprender, moverse, autonomía o regalo) y sigue la comparativa, la categoría o el análisis. Cada página debe devolverte al hub con el contexto de esa edad."
+                            ),
+                            faq(
+                                    "¿Por qué no hay precios ni estrellas?",
+                                    "Porque cambian con frecuencia y no los verificamos como dato estable. Evaluamos encaje, seguridad, utilidad y durabilidad con información que podemos sostener."
+                            )
+                    ),
+                    List.of(
+                            hubLink(4),
+                            new LinkItem(
+                                    "Qué habilidades desarrolla un niño de 4 años",
+                                    "/guias/habilidades-4-anos/",
+                                    "Desarrollo esperable a esta edad y cómo encaja con el juego."
+                            ),
+                            new LinkItem(
+                                    "Mejores juegos de mesa para 4 años",
+                                    "/comparativas/mejores-juegos-de-mesa-4-anos/",
+                                    "Cooperativos y partidas cortas con productos reales."
+                            )
+                    )
+            );
+            case 5 -> new ArticlePageResponse.AgeVariant(
+                    5,
+                    List.of(
+                            "A los 5 años elige un reto que se pueda terminar y volver a complicar: construir, cooperar o resolver. La edad de la caja sigue siendo una pista de seguridad, no una garantía de encaje.",
+                            "Esta guía concreta qué revisar a esta edad y cómo usar las páginas de 5 años de Bebes Felices para decidir con criterio."
+                    ),
+                    List.of(
+                            section("edad-real", "Empieza por lo que ya hace, no solo por los años",
+                                    "Un niño de 5 años puede planificar unos pasos, seguir varias reglas sencillas o colaborar hacia un objetivo común. Mira si termina una construcción, aguanta una partida corta o explica qué quiere probar.",
+                                    "Si el producto exige lectura compleja, estrategia de adulto o un proyecto que no se puede cerrar, probablemente llegue mejor más adelante. Es mejor un reto asumible que se pueda repetir que uno «de cole» que frustre."),
+                            section("seguridad", "Seguridad antes que el diseño",
+                                    "Sigue comprobando la edad mínima del fabricante. A los 5 años la precisión mejora, pero imanes, piezas sueltas y movimiento siguen pidiendo revisión. El peso y el tamaño tienen que poder manejarse sin ayuda constante.",
+                                    "En movimiento, casco, calzado cerrado y un espacio sin tráfico no se negocian. Autonomía no significa dejar solo un set con imanes o un patinete junto a un desnivel."),
+                            section("atencion", "Sesiones cortas y reglas simples",
+                                    "A los 5 años hay más margen para partidas o construcciones más largas, siempre con una meta que se pueda alcanzar. Un reto enorme abierto acaba abandonado.",
+                                    "Elige según esa duración real: un cooperativo con varias reglas breves, un set STEM al que se puedan añadir piezas o un puzle que se complete en una sesión, no un modo experto que solo entiende el adulto."),
+                            section("necesidad", "Elige por la necesidad que quieres cubrir",
+                                    "Pensamiento lógico, cooperación, movimiento o un regalo con uso evolutivo no se resuelven con el mismo producto. Las páginas de 5 años de Bebes Felices organizan las opciones así, no por precio.",
+                                    "Si buscas construir y resolver, empieza por la comparativa STEM. Si buscas turnos y acuerdos, ve a juegos de mesa. Si el objetivo es un regalo que se pueda complicar, mira las ideas para 5 años."),
+                            section("actualizar", "Revisa la fecha y no inventes datos",
+                                    "Los catálogos cambian. Mira la fecha de actualización de la comparativa o del análisis de 5 años, la metodología y si el enlace de Amazon está validado.",
+                                    "Si no hay precio ni valoración en la página, es deliberado: no los mantenemos porque varían y no forman parte del criterio editorial.")
+                    ),
+                    List.of(
+                            faq(
+                                    "¿La edad de la caja es suficiente para decidir?",
+                                    "Es imprescindible para seguridad, pero no basta. Contrástala con lo que el niño ya hace: planificar un par de pasos, cooperar o terminar un reto visible."
+                            ),
+                            faq(
+                                    "¿Qué debo evitar a los 5 años?",
+                                    "Proyectos que no se pueden terminar, reglas que solo un adulto puede leer en cada turno, imanes sueltos y movimiento sin supervisión. También los productos sin rango de edad claro."
+                            ),
+                            faq(
+                                    "¿Cómo uso las páginas de Bebes Felices?",
+                                    "Entra por 5 años, elige la necesidad (aprender, moverse, autonomía o regalo) y sigue la comparativa, la categoría o el análisis. Cada página debe devolverte al hub con el contexto de esa edad."
+                            ),
+                            faq(
+                                    "¿Por qué no hay precios ni estrellas?",
+                                    "Porque cambian con frecuencia y no los verificamos como dato estable. Evaluamos encaje, seguridad, utilidad y durabilidad con información que podemos sostener."
+                            )
+                    ),
+                    List.of(
+                            hubLink(5),
+                            new LinkItem(
+                                    "Qué habilidades desarrolla un niño de 5 años",
+                                    "/guias/habilidades-5-anos/",
+                                    "Pensamiento lógico, cooperación y autonomía a esta edad."
+                            ),
+                            new LinkItem(
+                                    "Mejores juguetes STEM para 5 años",
+                                    "/comparativas/mejores-juguetes-stem-5-anos/",
+                                    "Construcción, mecanismos y patrones con productos reales."
+                            )
+                    )
+            );
+            default -> new ArticlePageResponse.AgeVariant(
+                    3,
+                    List.of(
+                            "Elegir un juguete útil a los 3 años empieza por observar al niño, no por el estante más llamativo. La edad del fabricante es una pista de seguridad, no una garantía de que el producto encaje con el desarrollo real.",
+                            "Esta guía concreta qué revisar a esta edad y cómo usar las páginas de 3 años de Bebes Felices para decidir con criterio."
+                    ),
+                    List.of(
+                            section("edad-real", "Empieza por lo que ya hace, no solo por los años",
+                                    "Un niño de 3 años puede estar empezando a clasificar formas mientras otro ya imita tareas de casa. Mira si encaja, apila, corre con estabilidad o aguanta un juego con turnos muy cortos.",
+                                    "Si el producto exige instrucciones largas, piezas diminutas o equilibrio consolidado, probablemente llegue pronto, pero no ahora. Es mejor un objeto que permita éxito rápido y repetición que uno «para crecer» que frustre."),
+                            section("seguridad", "Seguridad antes que el diseño",
+                                    "Comprueba la edad mínima del fabricante y evita piezas pequeñas a los 3 años. Prioriza materiales resistentes, bordes redondeados y un peso que el niño pueda manejar sin ayuda constante.",
+                                    "En movimiento, la supervisión no se sustituye con el producto: casco, calzado cerrado y un espacio sin tráfico siguen siendo la base, también en bicicletas sin pedales o patinetes."),
+                            section("atencion", "Sesiones cortas y reglas simples",
+                                    "A los 3 años el juego autónomo suele ser breve. Una sola actividad clara —encajar, apilar o completar un puzle de pocas piezas— encaja mejor que un set con diez modos.",
+                                    "Elige según esa duración real: piezas grandes, un objetivo visible y la posibilidad de terminar en una sesión corta. Las reglas competitivas y las partidas largas llegan más adelante."),
+                            section("necesidad", "Elige por la necesidad que quieres cubrir",
+                                    "Aprender, moverse, ganar autonomía o acertar un regalo no se resuelven con el mismo tipo de producto. Las páginas de 3 años de Bebes Felices organizan las opciones así, no por precio.",
+                                    "Si buscas movimiento, empieza por la comparativa de bicicletas sin pedales. Si buscas clasificación o motricidad fina, ve a Montessori o puzles. Si el objetivo es la rutina diaria, mira torres de aprendizaje o vajilla adaptada."),
+                            section("actualizar", "Revisa la fecha y no inventes datos",
+                                    "Los catálogos cambian. Mira la fecha de actualización, la metodología y si el enlace de Amazon está validado.",
+                                    "Si no hay precio ni valoración en la página, es deliberado: no los mantenemos porque varían y no forman parte del criterio editorial.")
+                    ),
+                    List.of(
+                            faq(
+                                    "¿La edad de la caja es suficiente para decidir?",
+                                    "Es imprescindible para seguridad, pero no basta. Contrástala con lo que el niño ya hace: encajar, equilibrarse, seguir un turno muy corto o participar en la cocina."
+                            ),
+                            faq(
+                                    "¿Qué debo evitar a los 3 años?",
+                                    "Piezas pequeñas, materiales frágiles, instrucciones complejas y juguetes de movimiento sin supervisión. También los productos sin rango de edad claro."
+                            ),
+                            faq(
+                                    "¿Cómo uso las páginas de Bebes Felices?",
+                                    "Entra por 3 años, elige la necesidad (aprender, moverse, autonomía o regalo) y sigue la comparativa, la categoría o el análisis. Cada página debe devolverte al hub con el contexto de esa edad."
+                            ),
+                            faq(
+                                    "¿Por qué no hay precios ni estrellas?",
+                                    "Porque cambian con frecuencia y no los verificamos como dato estable. Evaluamos encaje, seguridad, utilidad y durabilidad con información que podemos sostener."
+                            )
+                    ),
+                    List.of(
+                            hubLink(),
+                            new LinkItem(
+                                    "Qué habilidades desarrolla un niño de 3 años",
+                                    "/guias/habilidades-3-anos/",
+                                    "Desarrollo esperable a esta edad y cómo encaja con el juego."
+                            ),
+                            new LinkItem(
+                                    "Cómo analizamos en Bebes Felices",
+                                    "/como-analizamos/",
+                                    "Metodología, límites y transparencia de afiliación."
+                            )
+                    )
+            );
+        };
     }
 
     private ArticlePageResponse skillsThreeYears() {
@@ -354,6 +481,34 @@ public class ArticlePageService {
             List<ArticlePageResponse.Faq> faq,
             List<LinkItem> related
     ) {
+        return article(
+                slug,
+                path,
+                kicker,
+                h1,
+                metaDescription,
+                introduction,
+                breadcrumbs,
+                sections,
+                faq,
+                related,
+                List.of()
+        );
+    }
+
+    private ArticlePageResponse article(
+            String slug,
+            String path,
+            String kicker,
+            String h1,
+            String metaDescription,
+            List<String> introduction,
+            List<ArticlePageResponse.Breadcrumb> breadcrumbs,
+            List<ArticlePageResponse.Section> sections,
+            List<ArticlePageResponse.Faq> faq,
+            List<LinkItem> related,
+            List<ArticlePageResponse.AgeVariant> ageVariants
+    ) {
         return new ArticlePageResponse(
                 new Seo(EditorialDefaults.canonical(path), h1 + " | Bebes Felices", metaDescription),
                 PageStatus.PUBLISHED,
@@ -364,6 +519,7 @@ public class ArticlePageService {
                 sections,
                 faq,
                 related,
+                ageVariants,
                 EditorialDefaults.trustAuthority(),
                 EditorialDefaults.affiliation(),
                 EditorialDefaults.legalLinks(),
@@ -373,6 +529,14 @@ public class ArticlePageService {
                 ),
                 EditorialDefaults.PUBLISHED_AT,
                 EditorialDefaults.UPDATED_AT
+        );
+    }
+
+    private List<ArticlePageResponse.Breadcrumb> guidesBreadcrumbs(String current, String path) {
+        return List.of(
+                new ArticlePageResponse.Breadcrumb("Inicio", "/"),
+                new ArticlePageResponse.Breadcrumb("Guías", "/guias/"),
+                new ArticlePageResponse.Breadcrumb(current, path)
         );
     }
 

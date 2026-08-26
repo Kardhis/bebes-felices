@@ -6,11 +6,13 @@ import {
   ArticlePageNotFoundError,
   getArticlePage,
 } from "@/lib/article/getArticlePage";
+import { parseCategoryAge } from "@/lib/category/categoryAge";
 import { loadOrNotFound } from "@/lib/editorial/loadOrNotFound";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 type Props = {
   params: Promise<{ guideSlug: string }>;
+  searchParams: Promise<{ edad?: string }>;
 };
 
 export function generateStaticParams() {
@@ -34,8 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function GuidePage({ params }: Props) {
+export default async function GuidePage({ params, searchParams }: Props) {
   const { guideSlug } = await params;
+  const { edad } = await searchParams;
   if (!isGuideSlug(guideSlug)) {
     notFound();
   }
@@ -44,5 +47,7 @@ export default async function GuidePage({ params }: Props) {
     () => getArticlePage(guideSlug),
     (error) => error instanceof ArticlePageNotFoundError,
   );
-  return <ArticlePageView page={page} />;
+  return (
+    <ArticlePageView page={page} initialAge={parseCategoryAge(edad)} />
+  );
 }

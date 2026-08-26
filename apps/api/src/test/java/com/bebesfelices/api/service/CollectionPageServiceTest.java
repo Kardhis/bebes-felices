@@ -22,7 +22,7 @@ class CollectionPageServiceTest {
                 CollectionPageService.SCOOTERS_SLUG,
                 CollectionPageService.TOWERS_SLUG,
                 CollectionPageService.TABLEWARE_SLUG,
-                CollectionPageService.SUSTAINABLE_SLUG,
+                CollectionPageService.SUSTAINABLE_3_SLUG,
                 CollectionPageService.GIFTS_3_SLUG
         );
         List<String> threeYearEducationalSlugs = List.of(
@@ -61,7 +61,8 @@ class CollectionPageServiceTest {
     void publishesFourYearCollectionsWithReturnToTheFourYearHub() {
         for (String slug : List.of(
                 CollectionPageService.BALANCE_BIKES_SLUG,
-                CollectionPageService.GIFTS_4_SLUG
+                CollectionPageService.GIFTS_4_SLUG,
+                CollectionPageService.SUSTAINABLE_4_SLUG
         )) {
             var page = service.getBySlug(slug).orElseThrow();
             assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
@@ -90,16 +91,22 @@ class CollectionPageServiceTest {
     void publishesFiveYearGiftAndBoardGameCollections() {
         assertThat(service.publishedSlugs()).contains(
                 CollectionPageService.GIFTS_5_SLUG,
-                CollectionPageService.BOARD_GAMES_SLUG
+                CollectionPageService.BOARD_GAMES_SLUG,
+                CollectionPageService.SUSTAINABLE_5_SLUG
         );
 
         var gifts = service.getBySlug(CollectionPageService.GIFTS_5_SLUG).orElseThrow();
         var games = service.getBySlug(CollectionPageService.BOARD_GAMES_SLUG).orElseThrow();
+        var sustainable = service.getBySlug(CollectionPageService.SUSTAINABLE_5_SLUG).orElseThrow();
 
         assertThat(gifts.status()).isEqualTo(PageStatus.PUBLISHED);
         assertThat(games.status()).isEqualTo(PageStatus.PUBLISHED);
+        assertThat(sustainable.status()).isEqualTo(PageStatus.PUBLISHED);
         assertThat(gifts.products()).isNotEmpty();
+        assertThat(sustainable.products()).isNotEmpty();
         assertThat(gifts.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+        assertThat(sustainable.breadcrumbs().get(1).href()).isEqualTo(EditorialDefaults.hubHref(5));
+        assertThat(sustainable.canonicalPath()).isEqualTo("/sostenibles/regalos-duraderos-5-anos/");
         assertThat(games.breadcrumbs().get(1).href())
                 .isEqualTo("/juguetes-educativos/?edad=5");
         assertThat(games.relatedLinks())
