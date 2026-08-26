@@ -43,9 +43,12 @@ export default async function Home() {
     label: item.title,
     href: item.href,
   }));
+  const isSostenibles = (item: { href: string }) =>
+    item.href.replace(/\/+$/, "") === "/sostenibles";
   const discoverLinks = [
     { label: "Por edad", href: "/#por-edad" },
-    ...categoryNavigation,
+    ...categoryNavigation.filter(isSostenibles),
+    ...categoryNavigation.filter((item) => !isSostenibles(item)),
     { label: "Comparativas", href: "/#comparativas" },
     { label: "Guías", href: "/#guias" },
   ];

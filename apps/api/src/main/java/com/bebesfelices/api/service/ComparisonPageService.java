@@ -1477,20 +1477,20 @@ public class ComparisonPageService {
                     "kit-manualidades-natural",
                     "Kit de manualidades con materiales naturales",
                     "Un regalo para crear sin pantallas",
-                    "Piezas de madera, fieltro y cartón para crear con un adulto. A los 3 años las sesiones son cortas; el valor está en acompañar, no en dejar el kit solo.",
+                    "SES Creative Eco: plastilina de materias primas naturales y herramientas de madera, a partir de 3 años. Las sesiones son cortas; el valor está en acompañar, no en dejar el kit solo.",
                     List.of(
-                            "Materiales naturales declarados en el catálogo.",
+                            "Materias primas naturales y herramientas de madera según la ficha.",
                             "Uso sin pantalla.",
-                            "Rango 3-5 años."
+                            "Edad declarada a partir de 3 años."
                     ),
                     List.of(
                             "Requiere un adulto dispuesto a sentarse un rato.",
-                            "La ficha del catálogo no detalla el número exacto de piezas."
+                            "La plastilina se gasta; no es un objeto de madera permanente."
                     ),
-                    "3-5 años",
+                    "Desde 3 años",
                     note("Necesidad", "Crear y manipular materiales."),
                     note("Uso", "Mesa, con un adulto."),
-                    note("Regalo", "Encaja si la familia ya pinta o recorta un poco."),
+                    note("Regalo", "Encaja si la familia ya modela o pinta un poco."),
                     note("Límite", "No publicamos certificaciones que no figuren en ficha.")
             )
     );
@@ -1499,22 +1499,22 @@ public class ComparisonPageService {
             entry(
                     "kit-manualidades-natural",
                     "Kit de manualidades con materiales naturales",
-                    "Crear con madera, fieltro y cartón",
-                    "Materiales para crear sin pantallas, pensados para durar más de una tarde si se cuidan. Sostenible, aquí, es durabilidad y uso real, no un sello que no podamos verificar.",
+                    "Crear con plastilina ecológica y madera",
+                    "SES Creative Eco: tres potes de plastilina de materias primas naturales y herramientas de madera, a partir de 3 años. Sostenible, aquí, es material declarado y uso repetible, no un sello que no podamos verificar.",
                     List.of(
-                            "Madera, fieltro y cartón según el catálogo.",
+                            "Materias primas naturales y herramientas de madera según la ficha.",
                             "Uso sin electrónica.",
-                            "Rango 3-5 años."
+                            "Edad declarada a partir de 3 años."
                     ),
                     List.of(
-                            "No afirmamos una ecoetiqueta concreta en esta ficha.",
+                            "La plastilina se gasta; no es un objeto de madera permanente.",
                             "Hace falta un adulto para el primer uso."
                     ),
-                    "3-5 años",
-                    note("Encaje a los 3 años", "Sesiones cortas; piezas pensadas para esta edad."),
-                    note("Materiales", "Madera, fieltro y cartón; sin certificación detallada en catálogo."),
-                    note("Uso", "Crear en mesa, no juego de exterior."),
-                    note("Duración", "Se puede repetir si se guardan los materiales.")
+                    "Desde 3 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; sesiones cortas con un adulto."),
+                    note("Materiales", "Plastilina ecológica y herramientas de madera."),
+                    note("Uso", "Modelar en mesa, no juego de exterior."),
+                    note("Duración", "Se puede repetir mientras quede material.")
             ),
             entry(
                     "cuentas-melissa-doug",
@@ -1537,24 +1537,24 @@ public class ComparisonPageService {
                     note("Duración", "Se guarda y se saca; no es de un solo uso.")
             ),
             entry(
-                    "plantoys-ata-zapato",
-                    "PlanToys Ata el zapato",
-                    "Practicar nudos de madera de caucho",
-                    "Juguete de madera de caucho para 3 a 8 años, con pegamento sin formaldehído y tintes al agua. Ensayo de nudos, no sustituye el zapato real.",
+                    "small-foot-grua",
+                    "Small Foot grúa de construcción",
+                    "Madera FSC para el juego de obra",
+                    "Grúa de madera FSC 100 % a partir de 3 años, giratoria 360°, con manivela, escalera interior y accesorios de obra. A los 3 años el gesto es empujar, girar y cargar; no pide nudos ni calzado real.",
                     List.of(
-                            "Edad declarada de 3 a 8 años.",
-                            "Madera de caucho y tintes al agua.",
-                            "Pegamento sin formaldehído según la ficha."
+                            "Madera con certificado FSC 100 %.",
+                            "Edad declarada a partir de 3 años.",
+                            "Pluma móvil con manivela y giro 360°."
                     ),
                     List.of(
-                            "Un adulto debe mostrar el nudo las primeras veces.",
-                            "A los 3 años el nudo doble aún pide mucha ayuda."
+                            "Hay piezas sueltas y cuerda: supervisión en cada sesión.",
+                            "No es un juguete de exterior ni de agua."
                     ),
-                    "3-8 años",
-                    note("Encaje a los 3 años", "Rango desde 3 años; el gesto es de autonomía, no de juego largo."),
-                    note("Materiales", "Madera de caucho y tintes al agua."),
-                    note("Uso", "Ensayo de nudos, sesiones cortas."),
-                    note("Duración", "Sigue sirviendo cuando empiece a atarse el zapato de verdad.")
+                    "Desde 3 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; la manivela pide un adulto las primeras veces."),
+                    note("Materiales", "Madera FSC 100 %."),
+                    note("Uso", "Juego simbólico de obra, sesiones cortas."),
+                    note("Duración", "Se puede combinar con otros vehículos de madera.")
             ),
             entry(
                     "green-toys-construccion",
@@ -2709,7 +2709,7 @@ public class ComparisonPageService {
                         summary("Para terminar una escena", "puzle-madera-animales", "Puzle de madera de safari."),
                         summary("Para moverse", "bici-chicco-red-bullet", "Bicicleta sin pedales ligera y ajustable."),
                         summary("Para la cocina", "torre-kleiner-riese", "Torre plegable recomendada desde 3 años."),
-                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Madera, fieltro y cartón con un adulto.")
+                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera con un adulto.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos la necesidad que cubre cada regalo para un niño de 3 años. No es un ranking de «el mejor juguete», sino de roles distintos.",
@@ -2778,9 +2778,9 @@ public class ComparisonPageService {
                 ),
                 "Los cinco regalos",
                 List.of(
-                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Madera, fieltro y cartón."),
+                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
                         summary("Para ensartar y contar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones."),
-                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho y tintes al agua."),
+                        summary("Para madera FSC de obra", "small-foot-grua", "Grúa giratoria certificada FSC 100 %."),
                         summary("Para plástico reciclado lavable", "green-toys-construccion", "Tres vehículos sin BPA ni PVC."),
                         summary("Para cartón y haya", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas.")
                 ),
@@ -2796,10 +2796,10 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto", List.of(
-                                "Crear: el kit. Ensartar: las cuentas. Vestirse: el zapato PlanToys. Empujar: Green Toys. Encajar: HABA."
+                                "Crear: el kit. Ensartar: las cuentas. Obra: Small Foot. Empujar: Green Toys. Encajar: HABA."
                         )),
                         section("Madera y plástico reciclado no son intercambiables", List.of(
-                                "Green Toys declara plástico 100 % reciclado y se lava. PlanToys declara madera de caucho y tintes al agua.",
+                                "Green Toys declara plástico 100 % reciclado y se lava. Small Foot declara madera FSC 100 %.",
                                 "Si la ficha no muestra FSC, no lo afirmamos."
                         )),
                         section("Supervisión", List.of(
@@ -2815,7 +2815,7 @@ public class ComparisonPageService {
                         faqItem("¿Qué evitáis?",
                                 "Productos de un solo uso, piezas diminutas y juguetes que solo funcionan con pantalla. Tampoco afirmamos ecoetiquetas no contrastadas."),
                         faqItem("¿El kit de manualidades tiene certificación?",
-                                "En el catálogo constan madera, fieltro y cartón. No publicamos un sello concreto que no figure en ficha."),
+                                "En el catálogo constan plastilina ecológica de materias primas naturales y herramientas de madera. No publicamos un sello concreto que no figure en ficha."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),

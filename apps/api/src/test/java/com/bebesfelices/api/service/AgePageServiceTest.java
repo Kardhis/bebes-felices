@@ -67,11 +67,27 @@ class AgePageServiceTest {
     }
 
     @Test
+    void optionsByNeedFollowsTheFiveCategoryCircuitWithFourLinksEach() {
+        for (String slug : List.of("3-anos", "4-anos", "5-anos")) {
+            AgePageResponse page = service.getBySlug(slug).orElseThrow();
+            assertThat(page.optionsByNeed())
+                    .extracting(AgePageResponse.NeedGroup::title)
+                    .containsExactly("Sostenibles", "Educativos", "Movimiento", "Autonomía", "Regalos");
+            page.optionsByNeed().forEach(group -> {
+                assertThat(group.items()).hasSize(4);
+                assertThat(group.items())
+                        .extracting(item -> item.href())
+                        .doesNotHaveDuplicates();
+            });
+        }
+    }
+
+    @Test
     void closesTheBalanceBikeCircuitForThreeYearOlds() {
         AgePageResponse page = service.getBySlug("3-anos").orElseThrow();
 
         AgePageResponse.NeedGroup movement = page.optionsByNeed().stream()
-                .filter(group -> group.anchor().equals("#para-moverse"))
+                .filter(group -> group.anchor().equals("#movimiento"))
                 .findFirst()
                 .orElseThrow();
         assertThat(movement.items().get(0).href()).isEqualTo(BALANCE_BIKES_HREF);
@@ -120,7 +136,21 @@ class AgePageServiceTest {
                 "/comparativas/mejores-regalos-sostenibles-3-anos/",
                 "/guias/como-elegir-juguetes-por-edad/?edad=3",
                 "/guias/habilidades-3-anos/",
-                "/regalos/ideas-regalo-3-anos/"
+                "/regalos/ideas-regalo-3-anos/",
+                "/regalos/",
+                "/sostenibles/",
+                "/sostenibles/regalos-duraderos-3-anos/",
+                "/juguetes-educativos/juegos-montessori/",
+                "/juguetes-educativos/puzles/",
+                "/juguetes-educativos/juego-simbolico/",
+                "/juguetes-educativos/juguetes-sensoriales/",
+                "/juguetes-educativos/arte-manualidades/",
+                "/movimiento/",
+                "/movimiento/patinetes/",
+                "/movimiento/bicicletas-sin-pedales/",
+                "/autonomia/",
+                "/autonomia/torres-de-aprendizaje/",
+                "/autonomia/vajilla-infantil/"
         );
 
         assertThat(hrefs).isNotEmpty();
@@ -151,7 +181,16 @@ class AgePageServiceTest {
                 "/guias/como-elegir-juguetes-por-edad/?edad=4",
                 "/guias/habilidades-4-anos/",
                 "/juguetes-educativos/juegos-stem/",
+                "/juguetes-educativos/juegos-montessori/",
+                "/juguetes-educativos/puzles/",
+                "/juguetes-educativos/juguetes-construccion/",
+                "/juguetes-educativos/arte-manualidades/",
+                "/movimiento/",
                 "/movimiento/bicicletas-sin-pedales/",
+                "/movimiento/patinetes/",
+                "/autonomia/torres-de-aprendizaje/",
+                "/autonomia/vajilla-infantil/",
+                "/sostenibles/regalos-duraderos-4-anos/",
                 "/regalos/ideas-regalo-4-anos/",
                 "/analisis/juego-montessori-formas/",
                 "/analisis/puzle-madera-animales/",
@@ -183,11 +222,20 @@ class AgePageServiceTest {
                 "/guias/como-elegir-juguetes-por-edad/?edad=5",
                 "/guias/habilidades-5-anos/",
                 "/juguetes-educativos/juegos-de-mesa/",
+                "/juguetes-educativos/juegos-montessori/",
+                "/juguetes-educativos/arte-manualidades/",
+                "/juguetes-educativos/matematicas-logica/",
+                "/juguetes-educativos/juegos-cooperativos-socioemocionales/",
+                "/movimiento/",
                 "/movimiento/bicicletas-sin-pedales/",
                 "/movimiento/patinetes/",
+                "/comparativas/mejores-patinetes-4-anos/",
+                "/comparativas/mejores-torres-aprendizaje-4-anos/",
+                "/comparativas/mejores-vajillas-infantiles-4-anos/",
                 "/autonomia/torres-de-aprendizaje/",
                 "/autonomia/vajilla-infantil/",
                 "/sostenibles/",
+                "/sostenibles/regalos-duraderos-5-anos/",
                 "/regalos/ideas-regalo-5-anos/",
                 "/analisis/puzle-madera-animales/",
                 "/analisis/bici-sin-pedales-basica/",
@@ -251,7 +299,7 @@ class AgePageServiceTest {
                 .isEqualTo("/comparativas/mejores-juguetes-stem-5-anos/");
         assertThat(movementHref(page4)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
         assertThat(page4.optionsByNeed().stream()
-                        .filter(group -> group.anchor().equals("#para-aprender"))
+                        .filter(group -> group.anchor().equals("#educativos"))
                         .findFirst()
                         .orElseThrow()
                         .items()
@@ -259,7 +307,7 @@ class AgePageServiceTest {
                         .href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
         assertThat(page4.optionsByNeed().stream()
-                        .filter(group -> group.anchor().equals("#para-moverse"))
+                        .filter(group -> group.anchor().equals("#movimiento"))
                         .findFirst()
                         .orElseThrow()
                         .items()
@@ -283,17 +331,19 @@ class AgePageServiceTest {
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
         assertThat(page4.optionsByNeed().stream()
-                        .filter(group -> group.anchor().equals("#para-autonomia"))
+                        .filter(group -> group.anchor().equals("#autonomia"))
                         .findFirst()
                         .orElseThrow()
                         .items())
                 .extracting(item -> item.href())
                 .containsExactly(
                         "/comparativas/mejores-torres-aprendizaje-4-anos/",
-                        "/comparativas/mejores-vajillas-infantiles-4-anos/"
+                        "/comparativas/mejores-vajillas-infantiles-4-anos/",
+                        "/autonomia/torres-de-aprendizaje/",
+                        "/autonomia/vajilla-infantil/"
                 );
         assertThat(page4.optionsByNeed().stream()
-                        .filter(group -> group.anchor().equals("#para-regalar"))
+                        .filter(group -> group.anchor().equals("#regalos"))
                         .findFirst()
                         .orElseThrow()
                         .items()
@@ -325,7 +375,7 @@ class AgePageServiceTest {
 
     private static String movementHref(AgePageResponse page) {
         return page.optionsByNeed().stream()
-                .filter(group -> group.anchor().equals("#para-moverse"))
+                .filter(group -> group.anchor().equals("#movimiento"))
                 .findFirst()
                 .orElseThrow()
                 .items()
@@ -381,7 +431,7 @@ class AgePageServiceTest {
                 "patinete-micro-mini-deluxe", "B09PRNX4HX",
                 "torre-kleiner-riese", "B0B7RFPP5Z",
                 "vajilla-stor-mickey", "B0CZTZ917D",
-                "kit-manualidades-natural", "B0015XJUV6"
+                "kit-manualidades-natural", "B09MSCSYB3"
         ));
         AmazonEnrichedProductCatalog catalog = new AmazonEnrichedProductCatalog(
                 new ManualProductCatalog(),
@@ -401,7 +451,7 @@ class AgePageServiceTest {
                         "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B0B7RFPP5Z?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B0CZTZ917D?tag=bebesfelice0c-21",
-                        "https://www.amazon.es/dp/B0015XJUV6?tag=bebesfelice0c-21"
+                        "https://www.amazon.es/dp/B09MSCSYB3?tag=bebesfelice0c-21"
                 );
     }
 

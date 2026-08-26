@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { SiteHeader } from "./SiteHeader";
 
@@ -13,6 +13,29 @@ vi.mock("next/navigation", () => ({
 describe("SiteHeader", () => {
   beforeEach(() => {
     mockPathname.mockReturnValue("/");
+  });
+
+  it("does not render a Buscar button in the navigation", () => {
+    render(<SiteHeader />);
+
+    expect(screen.queryByRole("link", { name: "Buscar" })).not.toBeInTheDocument();
+  });
+
+  it("puts Sostenibles second in desktop and mobile navigation", () => {
+    render(<SiteHeader />);
+
+    const desktopLinks = within(
+      screen.getByRole("navigation", { name: "Navegación principal" }),
+    ).getAllByRole("link");
+    expect(desktopLinks[0]).toHaveAccessibleName("Por edad");
+    expect(desktopLinks[1]).toHaveAccessibleName("Sostenibles");
+
+    fireEvent.click(screen.getByRole("button", { name: "Menú" }));
+    const mobileLinks = within(
+      screen.getByRole("navigation", { name: "Menú móvil" }),
+    ).getAllByRole("link");
+    expect(mobileLinks[0]).toHaveAccessibleName("Por edad");
+    expect(mobileLinks[1]).toHaveAccessibleName("Sostenibles");
   });
 
   it("uses supplied category navigation", () => {

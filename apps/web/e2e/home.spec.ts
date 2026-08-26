@@ -15,7 +15,7 @@ test("renders the Home and navigates through its main sections", async ({ page }
   await expect(page.locator("#guias")).toBeVisible();
   await expect(page.locator("#comparativas")).toBeVisible();
 
-  await page.getByRole("link", { name: "Juguetes educativos" }).first().click();
+  await page.getByRole("link", { name: "Educativos" }).first().click();
   await expect(page).toHaveURL(/\/juguetes-educativos\/$/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
 });

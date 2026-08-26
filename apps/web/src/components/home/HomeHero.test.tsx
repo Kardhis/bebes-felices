@@ -29,5 +29,17 @@ describe("HomeHero", () => {
       "href",
       "/#por-edad",
     );
+    expect(screen.getByRole("link", { name: "Buscar por edad" })).toHaveClass(
+      "bg-[var(--color-accent-500)]",
+      "text-[var(--color-text)]",
+    );
+    expect(screen.getByRole("link", { name: "Explorar categorías" })).toHaveAttribute(
+      "href",
+      "/#categorias",
+    );
+    expect(screen.getByRole("link", { name: "Explorar categorías" })).toHaveClass(
+      "bg-[var(--color-primary-500)]",
+      "text-[var(--color-text)]",
+    );
   });
 });

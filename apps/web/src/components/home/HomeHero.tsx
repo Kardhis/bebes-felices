@@ -53,13 +53,13 @@ export function HomeHero({
         <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap gap-3">
           <Link
             href={primaryCtaHref}
-            className="rounded-xl bg-[var(--color-secondary-500)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--color-secondary-600)]"
+            className="rounded-xl bg-[var(--color-accent-500)] px-5 py-3 text-sm font-semibold text-[var(--color-text)] shadow-md transition hover:bg-[var(--color-accent-600)]"
           >
             {primaryCtaLabel}
           </Link>
           <Link
             href={secondaryCtaHref}
-            className="rounded-xl border border-white/50 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+            className="rounded-xl bg-[var(--color-primary-500)] px-5 py-3 text-sm font-semibold text-[var(--color-text)] shadow-md transition hover:bg-[var(--color-primary-600)]"
           >
             {secondaryCtaLabel}
           </Link>

@@ -60,7 +60,12 @@ public class HomeService {
     private List<LinkItem> mainCategories() {
         return List.of(
                 new LinkItem(
-                        "Juguetes educativos",
+                        "Sostenibles",
+                        "/" + CategoryPageService.SUSTAINABLE_SLUG + "/",
+                        "Opciones más duraderas y materiales pensados a largo plazo."
+                ),
+                new LinkItem(
+                        "Educativos",
                         "/" + CategoryPageService.EDUCATIONAL_TOYS_SLUG + "/",
                         "STEM, Montessori, construcción y aprendizaje mediante el juego."
                 ),
@@ -78,11 +83,6 @@ public class HomeService {
                         "Regalos",
                         "/" + CategoryPageService.GIFTS_SLUG + "/",
                         "Ideas por edad, ocasión y presupuesto sin perder utilidad."
-                ),
-                new LinkItem(
-                        "Sostenibles",
-                        "/" + CategoryPageService.SUSTAINABLE_SLUG + "/",
-                        "Opciones más duraderas y materiales pensados a largo plazo."
                 )
         );
     }

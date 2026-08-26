@@ -15,11 +15,11 @@ class HomeServiceTest {
         assertThat(home.mainCategories())
                 .extracting(item -> item.href())
                 .containsExactly(
+                        "/sostenibles/",
                         "/juguetes-educativos/",
                         "/movimiento/",
                         "/autonomia/",
-                        "/regalos/",
-                        "/sostenibles/"
+                        "/regalos/"
                 );
         assertThat(home.recentComparisons())
                 .extracting(item -> item.href())

@@ -229,64 +229,120 @@ public class AgePageService {
     }
 
     private List<AgePageResponse.NeedGroup> optionsByNeedFor(int age) {
-        String giftHref = "/regalos/ideas-regalo-" + age + "-anos/";
+        String giftCollectionHref = "/regalos/ideas-regalo-" + age + "-anos/";
+        String sustainableCollectionHref = "/sostenibles/regalos-duraderos-" + age + "-anos/";
+        String chooseByAgeHref = "/guias/" + ArticlePageService.CHOOSE_BY_AGE_SLUG + "/?edad=" + age;
         return switch (age) {
             case 3 -> List.of(
-                    new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
+                    new AgePageResponse.NeedGroup("Sostenibles", "#sostenibles", List.of(
+                            new LinkItem("Mejores regalos sostenibles para 3 años", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
+                            new LinkItem("Regalos duraderos para 3 años", sustainableCollectionHref, "Selección pensada para aguantar el juego intenso y seguir usándose."),
+                            new LinkItem("Arte y manualidades con materiales naturales", educationalHref(CollectionPageService.ARTS_CRAFTS_SLUG), "Kits para crear sin pantallas y con materiales que se pueden cuidar."),
+                            new LinkItem("Juegos Montessori de madera", educationalHref(CollectionPageService.MONTESSORI_SLUG), "Encaje y clasificación con piezas grandes y duraderas.")
+                    )),
+                    new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Juegos Montessori de formas y encajes", MONTESSORI_3_COMPARISON_HREF, "Comparativa de encaje y clasificación con piezas grandes."),
-                            new LinkItem("Puzles de piezas grandes", PUZZLES_3_COMPARISON_HREF, "Comparativa de puzles que se pueden terminar en una sesión.")
+                            new LinkItem("Puzles de piezas grandes", PUZZLES_3_COMPARISON_HREF, "Comparativa de puzles que se pueden terminar en una sesión."),
+                            new LinkItem("Juego simbólico", educationalHref(CollectionPageService.SYMBOLIC_PLAY_SLUG), "Cocinitas, disfraces e imitación de la vida diaria: de los más pedidos a esta edad."),
+                            new LinkItem("Juguetes sensoriales", educationalHref(CollectionPageService.SENSORY_TOYS_SLUG), "Texturas, encaje y exploración táctil con piezas grandes.")
                     )),
-                    new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
+                    new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
                             new LinkItem("Mejores bicicletas sin pedales para 3 años", BALANCE_BIKES_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
-                            new LinkItem("Patinetes de 3 ruedas", SCOOTERS_3_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango.")
+                            new LinkItem("Patinetes de 3 ruedas", SCOOTERS_3_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango."),
+                            new LinkItem("Bicicletas sin pedales", movementHref(CollectionPageService.BALANCE_BIKES_SLUG), "Guía de modelos para ganar equilibrio antes de la bici con pedales."),
+                            new LinkItem("Patinetes y triciclos", movementHref(CollectionPageService.SCOOTERS_SLUG), "Opciones estables para moverse de pie o sentado al aire libre.")
                     )),
-                    new AgePageResponse.NeedGroup("Para ganar autonomía", "#para-autonomia", List.of(
+                    new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Torres de aprendizaje", TOWERS_3_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
-                            new LinkItem("Vajilla infantil irrompible", TABLEWARE_3_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda.")
+                            new LinkItem("Vajilla infantil irrompible", TABLEWARE_3_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda."),
+                            new LinkItem("Torres para la cocina", autonomyHref(CollectionPageService.TOWERS_SLUG), "Selección de torres regulables para la rutina diaria."),
+                            new LinkItem("Vajilla para la mesa diaria", autonomyHref(CollectionPageService.TABLEWARE_SLUG), "Platos y vasos adaptados para ganar independencia en las comidas.")
                     )),
-                    new AgePageResponse.NeedGroup("Para regalar", "#para-regalar", List.of(
+                    new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
                             new LinkItem("Ideas de regalo para 3 años", GIFTS_3_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
-                            new LinkItem("Regalos sostenibles", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado.")
+                            new LinkItem("Selección de regalos para 3 años", giftCollectionHref, "Ideas por ocasión y presupuesto sin perder utilidad."),
+                            new LinkItem("Regalos sostenibles", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
+                            new LinkItem("Cómo elegir el regalo según la edad", chooseByAgeHref, "Criterios prácticos antes de comprar.")
                     ))
             );
             case 4 -> List.of(
-                    new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
-                            new LinkItem("Sets de construcción magnética", "/juguetes-educativos/juegos-stem/", "Lógica espacial y estructuras estables."),
-                            new LinkItem("Juegos de mesa cooperativos", BOARD_GAMES_COMPARISON_HREF, "Comparativa de opciones cooperativas y de turnos cortos.")
+                    new AgePageResponse.NeedGroup("Sostenibles", "#sostenibles", List.of(
+                            new LinkItem("Mejores regalos sostenibles para 4 años", SUSTAINABLE_COMPARISON_HREF, "Comparativa de madera certificada y plástico reciclado."),
+                            new LinkItem("Regalos duraderos para 4 años", sustainableCollectionHref, "Selección de juguetes pensados para durar más de una temporada."),
+                            new LinkItem("Juegos Montessori de madera", educationalHref(CollectionPageService.MONTESSORI_SLUG), "Encaje y clasificación con piezas grandes y duraderas."),
+                            new LinkItem("Puzles de madera", educationalHref(CollectionPageService.PUZZLES_SLUG), "Piezas resistentes que se pueden terminar y repetir.")
                     )),
-                    new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
-                            new LinkItem("Bicicletas sin pedales para ganar seguridad", "/movimiento/bicicletas-sin-pedales/", "Modelos para consolidar el equilibrio antes de la bici con pedales."),
-                            new LinkItem("Patinetes y triciclos", SCOOTERS_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo para más autonomía al aire libre.")
+                    new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
+                            new LinkItem("Sets de construcción magnética", educationalHref(CollectionPageService.STEM_SLUG), "Lógica espacial y estructuras estables."),
+                            new LinkItem("Juegos de mesa cooperativos", BOARD_GAMES_COMPARISON_HREF, "Comparativa de opciones cooperativas y de turnos cortos."),
+                            new LinkItem("Juguetes de construcción", educationalHref(CollectionPageService.CONSTRUCTION_TOYS_SLUG), "Bloques y ensamblaje, de los más comprados a los 4 años."),
+                            new LinkItem("Arte y manualidades", educationalHref(CollectionPageService.ARTS_CRAFTS_SLUG), "Pintar, recortar y crear con dificultad creciente.")
                     )),
-                    new AgePageResponse.NeedGroup("Para ganar autonomía", "#para-autonomia", List.of(
+                    new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
+                            new LinkItem("Bicicletas sin pedales para ganar seguridad", movementHref(CollectionPageService.BALANCE_BIKES_SLUG), "Modelos para consolidar el equilibrio antes de la bici con pedales."),
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo para más autonomía al aire libre."),
+                            new LinkItem("Patinetes", movementHref(CollectionPageService.SCOOTERS_SLUG), "Guía de modelos para moverse de pie con más independencia."),
+                            new LinkItem("Juego activo al aire libre", "/" + CategoryPageService.MOVEMENT_SLUG + "/", "Bicicletas, patinetes y movimiento con criterios de talla y supervisión.")
+                    )),
+                    new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Mobiliario infantil adaptado", TOWERS_COMPARISON_HREF, "Comparativa de torres de aprendizaje para participar en la cocina con seguridad."),
-                            new LinkItem("Utensilios para la rutina diaria", TABLEWARE_COMPARISON_HREF, "Comparativa de vajilla y vasos para comer y beber con menos ayuda.")
+                            new LinkItem("Utensilios para la rutina diaria", TABLEWARE_COMPARISON_HREF, "Comparativa de vajilla y vasos para comer y beber con menos ayuda."),
+                            new LinkItem("Torres de aprendizaje", autonomyHref(CollectionPageService.TOWERS_SLUG), "Selección de torres para la cocina y las tareas de casa."),
+                            new LinkItem("Vajilla infantil", autonomyHref(CollectionPageService.TABLEWARE_SLUG), "Platos y vasos para ganar independencia en la mesa.")
                     )),
-                    new AgePageResponse.NeedGroup("Para regalar", "#para-regalar", List.of(
-                            new LinkItem("Ideas de regalo para 4 años", giftHref, "Selección por ocasión y presupuesto."),
-                            new LinkItem("Regalos sostenibles", SUSTAINABLE_COMPARISON_HREF, "Comparativa de madera certificada y plástico reciclado.")
+                    new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
+                            new LinkItem("Ideas de regalo para 4 años", giftCollectionHref, "Selección por ocasión y presupuesto."),
+                            new LinkItem("Regalos sostenibles", SUSTAINABLE_COMPARISON_HREF, "Comparativa de madera certificada y plástico reciclado."),
+                            new LinkItem("Juegos de mesa para regalar", BOARD_GAMES_COMPARISON_HREF, "Comparativa de partidas cortas y cooperativas, un clásico de cumpleaños."),
+                            new LinkItem("Cómo elegir el regalo según la edad", chooseByAgeHref, "Criterios prácticos antes de comprar.")
                     ))
             );
             case 5 -> List.of(
-                    new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
+                    new AgePageResponse.NeedGroup("Sostenibles", "#sostenibles", List.of(
+                            new LinkItem("Regalos duraderos para 5 años", sustainableCollectionHref, "Selección de juguetes que siguen siendo útiles más allá del curso."),
+                            new LinkItem("Juegos Montessori de madera", educationalHref(CollectionPageService.MONTESSORI_SLUG), "Encaje y clasificación con piezas grandes y duraderas."),
+                            new LinkItem("Arte y manualidades", educationalHref(CollectionPageService.ARTS_CRAFTS_SLUG), "Crear con materiales duraderos y dificultad creciente."),
+                            new LinkItem("Ver sostenibles", "/" + CategoryPageService.SUSTAINABLE_SLUG + "/", "Opciones más duraderas y materiales contrastados en ficha.")
+                    )),
+                    new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Construcción avanzada", STEM_5_COMPARISON_HREF, "Comparativa de retos de lógica, mecanismos y estructuras."),
-                            new LinkItem("Juegos de mesa cooperativos", "/juguetes-educativos/juegos-de-mesa/", "Partidas más largas con estrategia compartida.")
+                            new LinkItem("Juegos de mesa cooperativos", educationalHref(CollectionPageService.BOARD_GAMES_SLUG), "Partidas más largas con estrategia compartida."),
+                            new LinkItem("Matemáticas y lógica", educationalHref(CollectionPageService.MATH_LOGIC_SLUG), "Contar, clasificar y resolver retos: de lo más buscado antes del cole."),
+                            new LinkItem("Juegos cooperativos y socioemocionales", educationalHref(CollectionPageService.COOPERATIVE_SEL_SLUG), "Ganar o perder en equipo, turnos y empatía.")
                     )),
-                    new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
-                            new LinkItem("Bicicletas sin pedales para consolidar equilibrio", "/movimiento/bicicletas-sin-pedales/", "El paso previo a la bicicleta con pedales."),
-                            new LinkItem("Patinetes de dos ruedas", "/movimiento/patinetes/", "Mayor exigencia de equilibrio y control.")
+                    new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
+                            new LinkItem("Bicicletas sin pedales para consolidar equilibrio", movementHref(CollectionPageService.BALANCE_BIKES_SLUG), "El paso previo a la bicicleta con pedales."),
+                            new LinkItem("Patinetes de dos ruedas", movementHref(CollectionPageService.SCOOTERS_SLUG), "Mayor exigencia de equilibrio y control."),
+                            new LinkItem("Patinetes y triciclos para 4 años", SCOOTERS_COMPARISON_HREF, "Si aún necesita más estabilidad, la comparativa de tres ruedas sigue siendo útil."),
+                            new LinkItem("Juego activo al aire libre", "/" + CategoryPageService.MOVEMENT_SLUG + "/", "Bicicletas, patinetes y movimiento con criterios de talla y supervisión.")
                     )),
-                    new AgePageResponse.NeedGroup("Para ganar autonomía", "#para-autonomia", List.of(
-                            new LinkItem("Organización y tareas domésticas", "/autonomia/torres-de-aprendizaje/", "Participación más completa en la rutina familiar."),
-                            new LinkItem("Utensilios y hábitos personales", "/autonomia/vajilla-infantil/", "Independencia en comidas y cuidado personal.")
+                    new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
+                            new LinkItem("Organización y tareas domésticas", autonomyHref(CollectionPageService.TOWERS_SLUG), "Participación más completa en la rutina familiar."),
+                            new LinkItem("Utensilios y hábitos personales", autonomyHref(CollectionPageService.TABLEWARE_SLUG), "Independencia en comidas y cuidado personal."),
+                            new LinkItem("Torres de aprendizaje", TOWERS_COMPARISON_HREF, "Comparativa de torres estables si todavía comparte cocina con un adulto."),
+                            new LinkItem("Vajilla infantil", TABLEWARE_COMPARISON_HREF, "Comparativa de platos y vasos para comer con menos ayuda.")
                     )),
-                    new AgePageResponse.NeedGroup("Para regalar", "#para-regalar", List.of(
-                            new LinkItem("Ideas de regalo para 5 años", giftHref, "Selección por ocasión y presupuesto."),
-                            new LinkItem("Regalos sostenibles", "/sostenibles/", "Opciones más duraderas y materiales responsables.")
+                    new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
+                            new LinkItem("Ideas de regalo para 5 años", giftCollectionHref, "Selección por ocasión y presupuesto."),
+                            new LinkItem("Juguetes STEM para regalar", STEM_5_COMPARISON_HREF, "Comparativa de construcción y lógica, de los regalos más pedidos a los 5."),
+                            new LinkItem("Regalos sostenibles", sustainableCollectionHref, "Opciones más duraderas y materiales responsables."),
+                            new LinkItem("Cómo elegir el regalo según la edad", chooseByAgeHref, "Criterios prácticos antes de comprar.")
                     ))
             );
             default -> throw new IllegalArgumentException("Edad no soportada: " + age);
         };
+    }
+
+    private static String educationalHref(String collectionSlug) {
+        return "/" + CategoryPageService.EDUCATIONAL_TOYS_SLUG + "/" + collectionSlug + "/";
+    }
+
+    private static String movementHref(String collectionSlug) {
+        return "/" + CategoryPageService.MOVEMENT_SLUG + "/" + collectionSlug + "/";
+    }
+
+    private static String autonomyHref(String collectionSlug) {
+        return "/" + CategoryPageService.AUTONOMY_SLUG + "/" + collectionSlug + "/";
     }
 
     private List<AgePageResponse.FeaturedProduct> featuredSelectionFor(int age) {
@@ -373,7 +429,7 @@ public class AgePageService {
             case "set-vajilla-infantil" -> "Piezas irrompibles y de tamaño adaptado para practicar comer de forma autónoma.";
             case "set-construccion-magnetico" -> "Piezas magnéticas que facilitan construir estructuras estables y practicar lógica espacial.";
             case "juego-mesa-cooperativo" -> "Partidas cortas en las que se gana o se pierde en equipo, ideales para introducir turnos y reglas.";
-            case "kit-manualidades-natural" -> "Materiales naturales para crear sin depender de pantallas, con actividades de dificultad progresiva.";
+            case "kit-manualidades-natural" -> "Plastilina ecológica y herramientas de madera para crear sin pantallas, con un adulto en sesiones cortas.";
             default -> throw new IllegalArgumentException("Producto sin motivo editorial definido: " + productId);
         };
     }

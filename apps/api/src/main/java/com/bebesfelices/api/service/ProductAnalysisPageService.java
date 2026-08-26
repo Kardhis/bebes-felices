@@ -184,26 +184,26 @@ public class ProductAnalysisPageService {
                 "kit-manualidades-natural",
                 "/sostenibles/regalos-duraderos-3-anos/",
                 "Regalos más duraderos",
-                "Crear en sesiones cortas con madera, fieltro o cartón, sin depender de una pantalla",
-                "El kit de manualidades con materiales naturales propone actividades de dificultad progresiva. Encaja cuando hay un adulto dispuesto a sentarse un rato; no es un juguete de dejar solo sobre la mesa.",
+                "Crear en sesiones cortas con plastilina ecológica y herramientas de madera, sin depender de una pantalla",
+                "El kit de manualidades con materiales naturales (SES Creative Eco) propone modelar con plastilina de materias primas naturales y utensilios de madera. Encaja cuando hay un adulto dispuesto a sentarse un rato; no es un juguete de dejar solo sobre la mesa.",
                 List.of(
-                        "Materiales naturales para crear sin pantallas.",
+                        "Materias primas naturales y herramientas de madera para crear sin pantallas.",
                         "Actividades que se pueden alargar o acortar.",
-                        "Enfoque más duradero que los sets de un solo uso."
+                        "Enfoque más duradero que los sets de un solo uso de papel."
                 ),
                 List.of(
                         "Requiere acompañamiento; no entretiene solo durante una tarde completa.",
-                        "Si faltan piezas de recambio, algunas actividades se agotan."
+                        "La plastilina se gasta; no es un objeto de madera permanente."
                 ),
                 List.of(
                         "Revisa que no haya piezas pequeñas si hay hermanos menores.",
-                        "Usa tijeras y pegamentos solo con un adulto.",
-                        "Ventila si hay pinturas; sigue las indicaciones del fabricante."
+                        "Modela en una superficie fácil de limpiar.",
+                        "Sigue las indicaciones del fabricante para guardar la plastilina."
                 ),
                 List.of(
-                        "Piezas y materiales compatibles con 3 años.",
+                        "Materiales compatibles con 3 años.",
                         "Actividades que se pueden terminar en una sesión corta.",
-                        "Caja o bolsa para no perder componentes."
+                        "Caja o bolsa para no perder las herramientas de madera."
                 )
         ));
         register(new EditorialAnalysis(

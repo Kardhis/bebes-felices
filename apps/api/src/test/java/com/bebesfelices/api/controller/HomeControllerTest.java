@@ -33,7 +33,7 @@ class HomeControllerTest {
                 .andExpect(jsonPath("$.ageNavigation.length()").value(3))
                 .andExpect(jsonPath("$.ageNavigation[0].href").value("/por-edad/3-anos/"))
                 .andExpect(jsonPath("$.mainCategories.length()").value(5))
-                .andExpect(jsonPath("$.mainCategories[4].href").value("/sostenibles/"))
+                .andExpect(jsonPath("$.mainCategories[0].href").value("/sostenibles/"))
                 .andExpect(jsonPath("$.recentComparisons.length()").value(3))
                 .andExpect(jsonPath("$.affiliation.noticeText", not(emptyOrNullString())))
                 .andExpect(jsonPath("$.trustAuthority.analysisCriteria.length()").value(4))

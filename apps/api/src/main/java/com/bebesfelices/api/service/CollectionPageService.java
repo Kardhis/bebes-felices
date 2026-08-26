@@ -88,7 +88,7 @@ public class CollectionPageService {
                         "montessori-janod-tropik",
                         "montessori-noah-ark",
                         "montessori-formas-geometricas",
-                        "plantoys-ata-zapato"
+                        "small-foot-grua"
                 ),
                 mergeHrefs(
                         comparisonHrefs(
@@ -101,7 +101,7 @@ public class CollectionPageService {
                         ),
                         comparisonHrefs(
                                 ComparisonPageService.SUSTAINABLE_3_SLUG,
-                                "plantoys-ata-zapato"
+                                "small-foot-grua"
                         )
                 ),
                 List.of(
@@ -343,7 +343,7 @@ public class CollectionPageService {
                 "Opciones pensadas para durar: materiales resistentes, menos piezas de usar y tirar, y un uso que no dependa de pantallas.",
                 List.of(
                         "Sostenible, en esta página, significa sobre todo durabilidad y materiales que aguanten el juego intenso de los 3 años. No es un sello publicitario ni una lista de certificaciones que no podamos verificar una a una.",
-                        "Priorizamos objetos de madera, fieltro o cartón grueso que se puedan reparar o reutilizar, frente a sets de un solo uso. El kit de manualidades con materiales naturales es el ejemplo del catálogo para esta edad."
+                        "Priorizamos objetos de madera o materiales naturales que se puedan repetir, frente a sets de un solo uso. El kit de plastilina ecológica con herramientas de madera es el ejemplo del catálogo para crear a esta edad."
                 ),
                 List.of(
                         "Material que sobreviva a caídas y al agua ocasional de las manos.",
@@ -354,7 +354,7 @@ public class CollectionPageService {
                 List.of(
                         "kit-manualidades-natural",
                         "cuentas-melissa-doug",
-                        "plantoys-ata-zapato",
+                        "small-foot-grua",
                         "green-toys-construccion",
                         "haba-puzles-cuatro-estaciones"
                 ),
@@ -362,7 +362,7 @@ public class CollectionPageService {
                         ComparisonPageService.SUSTAINABLE_3_SLUG,
                         "kit-manualidades-natural",
                         "cuentas-melissa-doug",
-                        "plantoys-ata-zapato",
+                        "small-foot-grua",
                         "green-toys-construccion",
                         "haba-puzles-cuatro-estaciones"
                 ),

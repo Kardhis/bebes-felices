@@ -326,15 +326,15 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "kit-manualidades-natural",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B09MSCSYB3",
+                "www.amazon.es",
                 "Kit de manualidades con materiales naturales",
-                "Piezas de madera, fieltro y cartón para crear sin depender de pantallas.",
+                "SES Creative Eco: plastilina de materias primas naturales y herramientas de madera, a partir de 3 años, para modelar con un adulto.",
                 3, 5,
                 List.of("Regalos", "Creatividad"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 7, 24)
+                LocalDate.of(2026, 8, 26)
         ));
         register(new Product(
                 "torre-yoleo-transformer",
@@ -508,8 +508,8 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "small-foot-grua",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B07MVR126C",
+                "www.amazon.es",
                 "Small Foot grúa de construcción",
                 "Juego de madera FSC 100 % a partir de 3 años, con grúa giratoria 360°, manivela y accesorios de obra.",
                 3, Integer.MAX_VALUE,

@@ -298,7 +298,14 @@ class ComparisonPageServiceTest {
                         "torre-kleiner-riese",
                         "kit-manualidades-natural"
                 );
-        assertThat(sustainable.entries().get(0).productId()).isEqualTo("kit-manualidades-natural");
+        assertThat(sustainable.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "kit-manualidades-natural",
+                        "cuentas-melissa-doug",
+                        "small-foot-grua",
+                        "green-toys-construccion",
+                        "haba-puzles-cuatro-estaciones"
+                );
         assertThat(List.of(montessori, puzzles, scooters, towers, tableware, gifts, sustainable))
                 .allSatisfy(page -> {
                     assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);

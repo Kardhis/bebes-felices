@@ -22,6 +22,7 @@ const accents = [
   "border-l-[var(--color-secondary-500)]",
   "border-l-[#059669]",
   "border-l-[var(--color-accent-500)]",
+  "border-l-[#0f766e]",
 ];
 
 export function OptionsByNeed({ groups }: OptionsByNeedProps) {
@@ -34,7 +35,7 @@ export function OptionsByNeed({ groups }: OptionsByNeedProps) {
         <AgeSectionHeading
           id="opciones-por-necesidad-heading"
           title="Mejores opciones por necesidad"
-          description="Explora por tipo de necesidad. Cada bloque enlaza a categorías y contenidos específicos para esta edad."
+          description="Explora por categoría. Cada bloque enlaza a comparativas y selecciones específicas para esta edad."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {groups.map((group, index) => (

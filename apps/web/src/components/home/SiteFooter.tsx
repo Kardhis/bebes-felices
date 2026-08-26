@@ -13,11 +13,11 @@ type SiteFooterProps = {
 
 const defaultDiscoverLinks = [
   { label: "Por edad", href: "/#por-edad" },
-  { label: "Juguetes educativos", href: "/juguetes-educativos/" },
+  { label: "Sostenibles", href: "/sostenibles/" },
+  { label: "Educativos", href: "/juguetes-educativos/" },
   { label: "Movimiento", href: "/movimiento/" },
   { label: "Autonomía", href: "/autonomia/" },
   { label: "Regalos", href: "/regalos/" },
-  { label: "Sostenibles", href: "/sostenibles/" },
   { label: "Comparativas", href: "/#comparativas" },
   { label: "Guías", href: "/#guias" },
 ];

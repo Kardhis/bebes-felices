@@ -10,11 +10,11 @@ export type NavigationItem = {
 };
 
 const defaultCategories: NavigationItem[] = [
-  { label: "Juguetes educativos", href: "/juguetes-educativos/" },
+  { label: "Sostenibles", href: "/sostenibles/" },
+  { label: "Educativos", href: "/juguetes-educativos/" },
   { label: "Movimiento", href: "/movimiento/" },
   { label: "Autonomía", href: "/autonomia/" },
   { label: "Regalos", href: "/regalos/" },
-  { label: "Sostenibles", href: "/sostenibles/" },
 ];
 
 const editorialItems: NavigationItem[] = [
@@ -44,10 +44,13 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const isInner = variant === "inner";
-  const navItems = useMemo(
-    () => [sectionItems[0], ...categoryItems, ...sectionItems.slice(1)],
-    [categoryItems],
-  );
+  const navItems = useMemo(() => {
+    const isSostenibles = (item: NavigationItem) =>
+      item.href.replace(/\/+$/, "") === "/sostenibles";
+    const sostenibles = categoryItems.filter(isSostenibles);
+    const otherCategories = categoryItems.filter((item) => !isSostenibles(item));
+    return [sectionItems[0], ...sostenibles, ...otherCategories, ...sectionItems.slice(1)];
+  }, [categoryItems]);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -134,16 +137,16 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
           : "absolute inset-x-0 top-0 z-30"
       }
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
         <Link
           href="/"
-          className="shrink-0 whitespace-nowrap font-[family-name:var(--font-nunito-sans)] text-lg font-extrabold tracking-tight text-white drop-shadow-sm"
+          className="shrink-0 whitespace-nowrap font-[family-name:var(--font-nunito-sans)] text-xl font-extrabold tracking-tight text-white drop-shadow-sm sm:text-2xl"
         >
           Bebes Felices
         </Link>
 
         <nav
-          className="hidden items-center gap-3 lg:flex"
+          className="hidden items-center gap-3 lg:flex xl:gap-4"
           aria-label="Navegación principal"
         >
           {navItems.map((item) => {
@@ -155,8 +158,8 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
                 aria-current={active ? (item.href.includes("#") ? "location" : "page") : undefined}
                 className={
                   active
-                    ? "border-b-2 border-white px-1 py-1 text-sm font-bold text-white"
-                    : "px-1 py-1 text-sm font-medium text-white/90 transition hover:text-white"
+                    ? "border-b-2 border-white px-1 py-1 text-base font-bold text-white"
+                    : "px-1 py-1 text-base font-semibold text-white/90 transition hover:text-white"
                 }
               >
                 {item.label}
@@ -172,26 +175,20 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
                 aria-current={active ? "page" : undefined}
                 className={
                   active
-                    ? "hidden border-b-2 border-white px-1 py-1 text-sm font-bold text-white 2xl:inline"
-                    : "hidden px-1 py-1 text-sm font-medium text-white/90 transition hover:text-white 2xl:inline"
+                    ? "hidden border-b-2 border-white px-1 py-1 text-base font-bold text-white 2xl:inline"
+                    : "hidden px-1 py-1 text-base font-semibold text-white/90 transition hover:text-white 2xl:inline"
                 }
               >
                 {item.label}
               </Link>
             );
           })}
-          <Link
-            href="/#por-edad"
-            className="rounded-lg bg-white px-3 py-1.5 text-sm font-semibold text-[var(--color-primary-700)] shadow-sm transition hover:bg-[var(--color-primary-50)]"
-          >
-            Buscar
-          </Link>
         </nav>
 
         <button
           ref={triggerRef}
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-sm font-semibold text-white backdrop-blur lg:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-base font-semibold text-white backdrop-blur lg:hidden"
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
@@ -225,8 +222,8 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
                     }
                     className={
                       active
-                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-sm font-bold text-[var(--color-primary-700)]"
-                        : "rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text)] hover:bg-[var(--color-primary-50)]"
+                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-base font-bold text-[var(--color-primary-700)]"
+                        : "rounded-lg px-3 py-2.5 text-base font-semibold text-[var(--color-text)] hover:bg-[var(--color-primary-50)]"
                     }
                     onClick={() => setOpen(false)}
                   >
@@ -243,8 +240,8 @@ export function SiteHeader({ variant = "hero", categoryItems = defaultCategories
                     aria-current={active ? "page" : undefined}
                     className={
                       active
-                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-sm font-bold text-[var(--color-primary-700)]"
-                        : "rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
+                        ? "rounded-lg bg-[var(--color-primary-50)] px-3 py-2.5 text-base font-bold text-[var(--color-primary-700)]"
+                        : "rounded-lg px-3 py-2.5 text-base font-semibold text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-alt)]"
                     }
                     onClick={() => setOpen(false)}
                   >

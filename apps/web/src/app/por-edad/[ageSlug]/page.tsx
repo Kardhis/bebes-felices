@@ -82,19 +82,32 @@ export default async function AgePage({ params }: Props) {
         />
         <DevelopmentSkills items={page.developmentSkills} />
         <BuyingConsiderations items={page.buyingConsiderations} />
-        <ContentLinkSection
-          id="guias-destacadas"
-          title="Guías destacadas para esta edad"
-          description="Contexto editorial para decidir con más información antes de comprar."
-          items={page.featuredGuides}
-          tone="alt"
-        />
-        <ContentLinkSection
-          id="articulos-informativos"
-          title="Contenidos informativos"
-          description="Artículos sobre desarrollo y expectativas a esta edad."
-          items={page.informativeArticles}
-        />
+        {(page.featuredGuides.length > 0 || page.informativeArticles.length > 0) && (
+          <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+            <div
+              className={
+                page.featuredGuides.length > 0 && page.informativeArticles.length > 0
+                  ? "mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-14 md:grid-cols-2 md:gap-12"
+                  : "mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-14"
+              }
+            >
+              <ContentLinkSection
+                id="guias-destacadas"
+                title="Guías destacadas para esta edad"
+                description="Contexto editorial para decidir con más información antes de comprar."
+                items={page.featuredGuides}
+                embedded
+              />
+              <ContentLinkSection
+                id="articulos-informativos"
+                title="Contenidos informativos"
+                description="Artículos sobre desarrollo y expectativas a esta edad."
+                items={page.informativeArticles}
+                embedded
+              />
+            </div>
+          </section>
+        )}
         <AffiliationNotice noticeText={page.affiliation.noticeText} variant="compact" />
         <OptionsByNeed groups={page.optionsByNeed} />
         <ContentLinkSection
