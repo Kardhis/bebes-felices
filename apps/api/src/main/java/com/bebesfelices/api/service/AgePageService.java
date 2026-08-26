@@ -49,14 +49,28 @@ public class AgePageService {
             + ComparisonPageService.SUSTAINABLE_SLUG + "/";
     private static final String STEM_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.STEM_5_SLUG + "/";
+    private static final String MONTESSORI_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.MONTESSORI_3_SLUG + "/";
+    private static final String PUZZLES_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.PUZZLES_3_SLUG + "/";
+    private static final String SCOOTERS_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SCOOTERS_3_SLUG + "/";
+    private static final String TOWERS_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TOWERS_3_SLUG + "/";
+    private static final String TABLEWARE_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TABLEWARE_3_SLUG + "/";
+    private static final String GIFTS_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.GIFTS_3_SLUG + "/";
+    private static final String SUSTAINABLE_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SUSTAINABLE_3_SLUG + "/";
 
     private static final List<String> AGE_3_PRODUCT_IDS = List.of(
             "juego-montessori-formas",
             "puzle-madera-animales",
             BALANCE_BIKE_SPOTLIGHT_ID,
-            "patinete-3-ruedas",
-            "torre-aprendizaje-madera",
-            "set-vajilla-infantil",
+            SCOOTER_SPOTLIGHT_ID,
+            "torre-kleiner-riese",
+            "vajilla-stor-mickey",
             "kit-manualidades-natural"
     );
     private static final List<String> AGE_4_PRODUCT_IDS = List.of(
@@ -219,20 +233,20 @@ public class AgePageService {
         return switch (age) {
             case 3 -> List.of(
                     new AgePageResponse.NeedGroup("Para aprender jugando", "#para-aprender", List.of(
-                            new LinkItem("Juegos Montessori de formas y encajes", "/juguetes-educativos/juegos-montessori/", "Clasificación de formas, colores y tamaños con piezas grandes."),
-                            new LinkItem("Puzles de piezas grandes", "/juguetes-educativos/puzles/", "Motricidad fina sin piezas pequeñas de riesgo.")
+                            new LinkItem("Juegos Montessori de formas y encajes", MONTESSORI_3_COMPARISON_HREF, "Comparativa de encaje y clasificación con piezas grandes."),
+                            new LinkItem("Puzles de piezas grandes", PUZZLES_3_COMPARISON_HREF, "Comparativa de puzles que se pueden terminar en una sesión.")
                     )),
                     new AgePageResponse.NeedGroup("Para moverse con seguridad", "#para-moverse", List.of(
                             new LinkItem("Mejores bicicletas sin pedales para 3 años", BALANCE_BIKES_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
-                            new LinkItem("Patinetes de 3 ruedas", "/movimiento/patinetes/", "Estabilidad extra para el juego al aire libre.")
+                            new LinkItem("Patinetes de 3 ruedas", SCOOTERS_3_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango.")
                     )),
                     new AgePageResponse.NeedGroup("Para ganar autonomía", "#para-autonomia", List.of(
-                            new LinkItem("Torres de aprendizaje", "/autonomia/torres-de-aprendizaje/", "Participar en la cocina con seguridad."),
-                            new LinkItem("Vajilla infantil irrompible", "/autonomia/vajilla-infantil/", "Practicar comer sin ayuda.")
+                            new LinkItem("Torres de aprendizaje", TOWERS_3_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
+                            new LinkItem("Vajilla infantil irrompible", TABLEWARE_3_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda.")
                     )),
                     new AgePageResponse.NeedGroup("Para regalar", "#para-regalar", List.of(
-                            new LinkItem("Ideas de regalo para 3 años", giftHref, "Selección por ocasión y presupuesto."),
-                            new LinkItem("Regalos sostenibles", "/sostenibles/", "Opciones más duraderas y materiales responsables.")
+                            new LinkItem("Ideas de regalo para 3 años", GIFTS_3_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
+                            new LinkItem("Regalos sostenibles", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado.")
                     ))
             );
             case 4 -> List.of(
@@ -313,8 +327,17 @@ public class AgePageService {
     }
 
     private String comparisonHrefFor(String productId, int age) {
-        if (age == 3 && BALANCE_BIKE_SPOTLIGHT_ID.equals(productId)) {
-            return BALANCE_BIKES_COMPARISON_HREF;
+        if (age == 3) {
+            return switch (productId) {
+                case "juego-montessori-formas" -> MONTESSORI_3_COMPARISON_HREF;
+                case "puzle-madera-animales" -> PUZZLES_3_COMPARISON_HREF;
+                case BALANCE_BIKE_SPOTLIGHT_ID -> BALANCE_BIKES_COMPARISON_HREF;
+                case SCOOTER_SPOTLIGHT_ID -> SCOOTERS_3_COMPARISON_HREF;
+                case "torre-kleiner-riese" -> TOWERS_3_COMPARISON_HREF;
+                case "vajilla-stor-mickey" -> TABLEWARE_3_COMPARISON_HREF;
+                case "kit-manualidades-natural" -> SUSTAINABLE_3_COMPARISON_HREF;
+                default -> null;
+            };
         }
         if (age == 5 && STEM_5_SPOTLIGHT_ID.equals(productId)) {
             return STEM_5_COMPARISON_HREF;
@@ -345,6 +368,8 @@ public class AgePageService {
             case SUSTAINABLE_SPOTLIGHT_ID -> "Cuentas de madera para ensartar y contar, incluidas en nuestra comparativa de regalos de materiales declarados.";
             case "patinete-3-ruedas" -> "Base de tres ruedas que aporta estabilidad extra mientras se afianza el equilibrio.";
             case "torre-aprendizaje-madera" -> "Plataforma con barandilla que permite participar en la cocina con una altura segura y regulable.";
+            case "torre-kleiner-riese" -> "Torre plegable recomendada a partir de 3 años, incluida en nuestra comparativa para participar en la cocina.";
+            case "vajilla-stor-mickey" -> "Set de plato, cuenco y vaso irrompible, incluido en nuestra comparativa para practicar la mesa diaria.";
             case "set-vajilla-infantil" -> "Piezas irrompibles y de tamaño adaptado para practicar comer de forma autónoma.";
             case "set-construccion-magnetico" -> "Piezas magnéticas que facilitan construir estructuras estables y practicar lógica espacial.";
             case "juego-mesa-cooperativo" -> "Partidas cortas en las que se gana o se pierde en equipo, ideales para introducir turnos y reglas.";
@@ -422,11 +447,48 @@ public class AgePageService {
 
     private List<LinkItem> featuredRankingsFor(int age) {
         return switch (age) {
-            case 3 -> List.of(new LinkItem(
-                    "Mejores bicicletas sin pedales para 3 años",
-                    BALANCE_BIKES_COMPARISON_HREF,
-                    "Comparativa por seguridad, talla y facilidad de uso."
-            ));
+            case 3 -> List.of(
+                    new LinkItem(
+                            "Mejores bicicletas sin pedales para 3 años",
+                            BALANCE_BIKES_COMPARISON_HREF,
+                            "Comparativa por seguridad, talla y facilidad de uso."
+                    ),
+                    new LinkItem(
+                            "Mejores juegos Montessori para 3 años",
+                            MONTESSORI_3_COMPARISON_HREF,
+                            "Encaje y clasificación con piezas grandes."
+                    ),
+                    new LinkItem(
+                            "Mejores puzles para 3 años",
+                            PUZZLES_3_COMPARISON_HREF,
+                            "Piezas grandes y sesiones que se pueden terminar."
+                    ),
+                    new LinkItem(
+                            "Mejores patinetes de 3 ruedas para 3 años",
+                            SCOOTERS_3_COMPARISON_HREF,
+                            "Tres ruedas de pie o triciclo con mango de adulto."
+                    ),
+                    new LinkItem(
+                            "Mejores torres de aprendizaje para 3 años",
+                            TOWERS_3_COMPARISON_HREF,
+                            "Estabilidad, altura y plegado para la cocina."
+                    ),
+                    new LinkItem(
+                            "Mejores vajillas infantiles para 3 años",
+                            TABLEWARE_3_COMPARISON_HREF,
+                            "Platos, vasos y sets irrompibles."
+                    ),
+                    new LinkItem(
+                            "Mejores ideas de regalo para 3 años",
+                            GIFTS_3_COMPARISON_HREF,
+                            "Una opción por necesidad: aprender, moverse, autonomía o crear."
+                    ),
+                    new LinkItem(
+                            "Mejores regalos sostenibles para 3 años",
+                            SUSTAINABLE_3_COMPARISON_HREF,
+                            "Madera, materiales naturales o plástico reciclado."
+                    )
+            );
             case 4 -> List.of(
                     new LinkItem(
                             "Mejores juegos de mesa para 4 años",

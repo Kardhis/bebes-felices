@@ -56,6 +56,7 @@ class ComparisonPageServiceTest {
         assertThat(page.breadcrumbs().get(1).label()).isEqualTo("3 años");
         assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/3-anos/");
         assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/3-anos/");
+        assertThat(page.quickNavigation()).isEmpty();
     }
 
     @Test
@@ -175,6 +176,7 @@ class ComparisonPageServiceTest {
         assertThat(page.breadcrumbs().get(1).label()).isEqualTo("4 años");
         assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
         assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(page.quickNavigation()).isEmpty();
     }
 
     @Test
@@ -206,6 +208,7 @@ class ComparisonPageServiceTest {
         assertThat(page.breadcrumbs().get(1).label()).isEqualTo("4 años");
         assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
         assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(page.quickNavigation()).isEmpty();
     }
 
     @Test
@@ -246,7 +249,74 @@ class ComparisonPageServiceTest {
             assertThat(page.entries()).hasSize(5);
             assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
             assertThat(page.entries()).allSatisfy(entry -> assertThat(entry.affiliateHref()).isNull());
+            assertThat(page.quickNavigation()).isEmpty();
         });
+    }
+
+    @Test
+    void buildsThePublishedThreeYearNeedComparisons() {
+        ComparisonPageService service = new ComparisonPageService(new ManualProductCatalog());
+
+        ComparisonPageResponse montessori = service.getBySlug(ComparisonPageService.MONTESSORI_3_SLUG).orElseThrow();
+        ComparisonPageResponse puzzles = service.getBySlug(ComparisonPageService.PUZZLES_3_SLUG).orElseThrow();
+        ComparisonPageResponse scooters = service.getBySlug(ComparisonPageService.SCOOTERS_3_SLUG).orElseThrow();
+        ComparisonPageResponse towers = service.getBySlug(ComparisonPageService.TOWERS_3_SLUG).orElseThrow();
+        ComparisonPageResponse tableware = service.getBySlug(ComparisonPageService.TABLEWARE_3_SLUG).orElseThrow();
+        ComparisonPageResponse gifts = service.getBySlug(ComparisonPageService.GIFTS_3_SLUG).orElseThrow();
+        ComparisonPageResponse sustainable = service.getBySlug(ComparisonPageService.SUSTAINABLE_3_SLUG).orElseThrow();
+
+        assertThat(montessori.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "juego-montessori-formas",
+                        "montessori-goula-baby-shapes",
+                        "montessori-formas-geometricas",
+                        "montessori-noah-ark",
+                        "montessori-janod-tropik"
+                );
+        assertThat(puzzles.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "puzle-madera-animales",
+                        "puzle-melissa-granja",
+                        "puzle-educa-selva",
+                        "haba-puzles-cuatro-estaciones",
+                        "puzle-educa-disney-madera"
+                );
+        assertThat(scooters.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "patinete-micro-mini-deluxe",
+                        "patinete-molto-maxi",
+                        "patinete-globber-junior-foldable",
+                        "triciclo-chicco-u-go"
+                );
+        assertThat(towers.entries().get(0).productId()).isEqualTo("torre-kleiner-riese");
+        assertThat(tableware.entries().get(0).productId()).isEqualTo("vajilla-stor-mickey");
+        assertThat(gifts.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "juego-montessori-formas",
+                        "puzle-madera-animales",
+                        "bici-chicco-red-bullet",
+                        "torre-kleiner-riese",
+                        "kit-manualidades-natural"
+                );
+        assertThat(sustainable.entries().get(0).productId()).isEqualTo("kit-manualidades-natural");
+        assertThat(List.of(montessori, puzzles, scooters, towers, tableware, gifts, sustainable))
+                .allSatisfy(page -> {
+                    assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+                    assertThat(page.targetAge()).isEqualTo(3);
+                    assertThat(page.updatedAt()).isEqualTo("2026-08-26");
+                    assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/3-anos/");
+                    assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/3-anos/");
+                    assertThat(page.quickNavigation()).isEmpty();
+                    assertThat(page.entries()).allSatisfy(entry -> {
+                        assertThat(entry.pros()).isNotEmpty();
+                        assertThat(entry.cons()).isNotEmpty();
+                        assertThat(entry.criteriaNotes()).isNotEmpty();
+                        assertThat(entry.affiliateHref()).isNull();
+                    });
+                });
+        assertThat(scooters.entries()).hasSize(4);
+        assertThat(montessori.header().h1()).isEqualTo("Mejores juegos Montessori de formas y encajes para 3 años");
+        assertThat(scooters.header().h1()).isEqualTo("Mejores patinetes de 3 ruedas para 3 años");
     }
 
     @Test
@@ -275,6 +345,7 @@ class ComparisonPageServiceTest {
             assertThat(entry.affiliateHref()).isNull();
         });
         assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/5-anos/");
+        assertThat(page.quickNavigation()).isEmpty();
         assertThat(page.relatedLinks()).extracting(link -> link.href())
                 .contains(
                         "/por-edad/5-anos/",

@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { AgeFaq } from "@/components/age/AgeFaq";
 import { Breadcrumbs } from "@/components/age/Breadcrumbs";
 import { ContentLinkSection } from "@/components/age/ContentLinkSection";
-import { QuickNavigation } from "@/components/age/QuickNavigation";
 import { QuickSummary } from "@/components/age/QuickSummary";
 import { ComparisonBuyingGuide } from "@/components/comparison/ComparisonBuyingGuide";
 import { ComparisonHero } from "@/components/comparison/ComparisonHero";
@@ -95,7 +94,6 @@ export default async function ComparisonPage({ params }: Props) {
           noticeText={page.affiliation.noticeText}
           variant="compact"
         />
-        <QuickNavigation items={page.quickNavigation} />
         <QuickSummary
           items={page.quickSummary.map((item) => ({
             need: item.label,

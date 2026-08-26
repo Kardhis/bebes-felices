@@ -126,30 +126,30 @@ class CollectionPageServiceTest {
     }
 
     @Test
-    void montessoriCollectionLinksToItsAnalysis() {
+    void montessoriCollectionLinksToTheThreeYearComparison() {
         var page = service.getBySlug(CollectionPageService.MONTESSORI_SLUG).orElseThrow();
 
         assertThat(page.canonicalPath()).isEqualTo("/juguetes-educativos/juegos-montessori/");
         assertThat(page.products()).hasSize(6);
         assertThat(page.products().get(0).href())
-                .isEqualTo("/analisis/juego-montessori-formas/");
-        assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver análisis completo");
+                .isEqualTo("/comparativas/mejores-juegos-montessori-3-anos/#producto-juego-montessori-formas");
+        assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver comparativa completa");
     }
 
     @Test
-    void giftCollectionIncludesTheBalanceBikeComparisonInsteadOfAMissingAnalysis() {
+    void giftCollectionIncludesTheThreeYearComparisons() {
         var page = service.getBySlug(CollectionPageService.GIFTS_3_SLUG).orElseThrow();
 
         assertThat(page.canonicalPath()).isEqualTo("/regalos/ideas-regalo-3-anos/");
         assertThat(page.products()).extracting(product -> product.href())
                 .contains(
-                        "/analisis/juego-montessori-formas/",
-                        "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet"
+                        "/comparativas/mejores-juegos-montessori-3-anos/#producto-juego-montessori-formas",
+                        "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet",
+                        "/comparativas/mejores-patinetes-3-anos/#producto-patinete-micro-mini-deluxe"
                 );
         assertThat(page.products())
-                .filteredOn(product -> product.title().contains("Chicco"))
                 .extracting(product -> product.ctaLabel())
-                .containsExactly("Ver comparativa completa");
+                .containsOnly("Ver comparativa completa");
     }
 
     @Test

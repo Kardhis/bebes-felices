@@ -65,7 +65,25 @@ class AgePageControllerTest {
                 .andExpect(jsonPath("$.featuredSelection[2].href")
                         .value("/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet"))
                 .andExpect(jsonPath("$.featuredSelection[2].ctaLabel")
-                        .value("Ver comparativa completa"));
+                        .value("Ver comparativa completa"))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[0].href")
+                        .value("/comparativas/mejores-juegos-montessori-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[1].href")
+                        .value("/comparativas/mejores-puzles-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[1].items[1].href")
+                        .value("/comparativas/mejores-patinetes-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[2].items[0].href")
+                        .value("/comparativas/mejores-torres-aprendizaje-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[2].items[1].href")
+                        .value("/comparativas/mejores-vajillas-infantiles-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[3].items[0].href")
+                        .value("/comparativas/mejores-ideas-regalo-3-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[3].items[1].href")
+                        .value("/comparativas/mejores-regalos-sostenibles-3-anos/"))
+                .andExpect(jsonPath("$.featuredSelection[3].title").value("Micro Mini Deluxe LED"))
+                .andExpect(jsonPath("$.featuredSelection[4].title").value("Kleiner Riese 4 en 1"))
+                .andExpect(jsonPath("$.featuredSelection[5].title")
+                        .value("Stor vajilla 3 piezas Mickey Mouse"));
     }
 
     @Test

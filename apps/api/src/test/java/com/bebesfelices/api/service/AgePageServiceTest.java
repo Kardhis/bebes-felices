@@ -89,12 +89,11 @@ class AgePageServiceTest {
                 });
         assertThat(page.featuredRankings())
                 .extracting(link -> link.href())
-                .containsExactly(BALANCE_BIKES_HREF);
+                .contains(BALANCE_BIKES_HREF);
         assertThat(page.featuredSelection())
-                .filteredOn(product -> !product.title().equals("Chicco Red Bullet"))
                 .allSatisfy(product -> {
-                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
-                    assertThat(product.href()).startsWith("/analisis/");
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                    assertThat(product.href()).startsWith("/comparativas/");
                 });
     }
 
@@ -112,21 +111,16 @@ class AgePageServiceTest {
 
         List<String> published = List.of(
                 "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
+                "/comparativas/mejores-juegos-montessori-3-anos/",
+                "/comparativas/mejores-puzles-3-anos/",
+                "/comparativas/mejores-patinetes-3-anos/",
+                "/comparativas/mejores-torres-aprendizaje-3-anos/",
+                "/comparativas/mejores-vajillas-infantiles-3-anos/",
+                "/comparativas/mejores-ideas-regalo-3-anos/",
+                "/comparativas/mejores-regalos-sostenibles-3-anos/",
                 "/guias/como-elegir-juguetes-por-edad/?edad=3",
                 "/guias/habilidades-3-anos/",
-                "/juguetes-educativos/juegos-montessori/",
-                "/juguetes-educativos/puzles/",
-                "/movimiento/patinetes/",
-                "/autonomia/torres-de-aprendizaje/",
-                "/autonomia/vajilla-infantil/",
-                "/sostenibles/",
-                "/regalos/ideas-regalo-3-anos/",
-                "/analisis/juego-montessori-formas/",
-                "/analisis/puzle-madera-animales/",
-                "/analisis/patinete-3-ruedas/",
-                "/analisis/torre-aprendizaje-madera/",
-                "/analisis/set-vajilla-infantil/",
-                "/analisis/kit-manualidades-natural/"
+                "/regalos/ideas-regalo-3-anos/"
         );
 
         assertThat(hrefs).isNotEmpty();
@@ -384,9 +378,9 @@ class AgePageServiceTest {
                 "juego-montessori-formas", "B00005RF5G",
                 "puzle-madera-animales", "B00HWHNNRG",
                 "bici-chicco-red-bullet", "B004MW55Z2",
-                "patinete-3-ruedas", "B09PRNX4HX",
-                "torre-aprendizaje-madera", "B0B7RFPP5Z",
-                "set-vajilla-infantil", "B0CZTZ917D",
+                "patinete-micro-mini-deluxe", "B09PRNX4HX",
+                "torre-kleiner-riese", "B0B7RFPP5Z",
+                "vajilla-stor-mickey", "B0CZTZ917D",
                 "kit-manualidades-natural", "B0015XJUV6"
         ));
         AmazonEnrichedProductCatalog catalog = new AmazonEnrichedProductCatalog(

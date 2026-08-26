@@ -86,6 +86,33 @@ class ComparisonPageControllerTest {
     }
 
     @Test
+    void returnsThePublishedThreeYearNeedComparisons() throws Exception {
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.MONTESSORI_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(3))
+                .andExpect(jsonPath("$.entries[0].productId").value("juego-montessori-formas"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.PUZZLES_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("puzle-madera-animales"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SCOOTERS_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries.length()").value(4))
+                .andExpect(jsonPath("$.entries[0].productId").value("patinete-micro-mini-deluxe"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("torre-kleiner-riese"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TABLEWARE_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("vajilla-stor-mickey"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.GIFTS_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("juego-montessori-formas"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SUSTAINABLE_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("kit-manualidades-natural"));
+    }
+
+    @Test
     void returnsThePublishedFourYearAutonomyComparisons() throws Exception {
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_SLUG))
                 .andExpect(status().isOk())

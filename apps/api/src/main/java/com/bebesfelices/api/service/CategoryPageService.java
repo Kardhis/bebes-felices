@@ -141,6 +141,11 @@ public class CategoryPageService {
                                 "Comparativa por seguridad, talla y facilidad de uso."
                         ),
                         new LinkItem(
+                                "Mejores patinetes de 3 ruedas para 3 años",
+                                "/comparativas/mejores-patinetes-3-anos/",
+                                "Tres ruedas de pie o triciclo con mango de adulto."
+                        ),
+                        new LinkItem(
                                 "Mejores patinetes para 4 años",
                                 "/comparativas/mejores-patinetes-4-anos/",
                                 "Estabilidad, plegado y uso real en exterior."
@@ -173,9 +178,19 @@ public class CategoryPageService {
                 ),
                 List.of(
                         new LinkItem(
+                                "Mejores torres de aprendizaje para 3 años",
+                                "/comparativas/mejores-torres-aprendizaje-3-anos/",
+                                "Estabilidad, altura y plegado para la cocina."
+                        ),
+                        new LinkItem(
                                 "Mejores torres de aprendizaje para 4 años",
                                 "/comparativas/mejores-torres-aprendizaje-4-anos/",
                                 "Estabilidad, altura y uso en cocina."
+                        ),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para 3 años",
+                                "/comparativas/mejores-vajillas-infantiles-3-anos/",
+                                "Sets irrompibles para la mesa diaria."
                         ),
                         new LinkItem(
                                 "Mejores vajillas infantiles para 4 años",
@@ -252,6 +267,11 @@ public class CategoryPageService {
                                 "Cómo elegir juguetes según la edad",
                                 "/guias/como-elegir-juguetes-por-edad/",
                                 "Criterios prácticos para 3, 4 y 5 años."
+                        ),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 3 años",
+                                "/comparativas/mejores-regalos-sostenibles-3-anos/",
+                                "Madera, materiales naturales o plástico reciclado."
                         ),
                         new LinkItem(
                                 "Mejores regalos sostenibles para 4 años",

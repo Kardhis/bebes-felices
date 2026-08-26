@@ -90,12 +90,19 @@ public class CollectionPageService {
                         "montessori-formas-geometricas",
                         "plantoys-ata-zapato"
                 ),
-                hideAnalysisHrefs(
-                        "montessori-goula-baby-shapes",
-                        "montessori-janod-tropik",
-                        "montessori-noah-ark",
-                        "montessori-formas-geometricas",
-                        "plantoys-ata-zapato"
+                mergeHrefs(
+                        comparisonHrefs(
+                                ComparisonPageService.MONTESSORI_3_SLUG,
+                                "juego-montessori-formas",
+                                "montessori-goula-baby-shapes",
+                                "montessori-janod-tropik",
+                                "montessori-noah-ark",
+                                "montessori-formas-geometricas"
+                        ),
+                        comparisonHrefs(
+                                ComparisonPageService.SUSTAINABLE_3_SLUG,
+                                "plantoys-ata-zapato"
+                        )
                 ),
                 List.of(
                         faq("¿Hace falta un material «Montessori» certificado?",
@@ -107,7 +114,11 @@ public class CollectionPageService {
                 ),
                 List.of(
                         educationalToysLink(3),
-                        analysisLink("juego-montessori-formas", "Juego Montessori de formas y encajes"),
+                        new LinkItem(
+                                "Mejores juegos Montessori para 3 años",
+                                "/comparativas/" + ComparisonPageService.MONTESSORI_3_SLUG + "/",
+                                "Comparativa de encaje y clasificación con piezas grandes."
+                        ),
                         chooseByAgeLink()
                 )
         ));
@@ -129,18 +140,25 @@ public class CollectionPageService {
                 ),
                 List.of(
                         "puzle-madera-animales",
+                        "puzle-melissa-granja",
+                        "puzle-educa-selva",
                         "haba-puzles-cuatro-estaciones",
                         "puzle-educa-disney-madera",
-                        "puzle-educa-selva",
-                        "puzle-melissa-granja",
                         "montessori-formas-geometricas"
                 ),
-                hideAnalysisHrefs(
-                        "haba-puzles-cuatro-estaciones",
-                        "puzle-educa-disney-madera",
-                        "puzle-educa-selva",
-                        "puzle-melissa-granja",
-                        "montessori-formas-geometricas"
+                mergeHrefs(
+                        comparisonHrefs(
+                                ComparisonPageService.PUZZLES_3_SLUG,
+                                "puzle-madera-animales",
+                                "haba-puzles-cuatro-estaciones",
+                                "puzle-educa-disney-madera",
+                                "puzle-educa-selva",
+                                "puzle-melissa-granja"
+                        ),
+                        comparisonHrefs(
+                                ComparisonPageService.MONTESSORI_3_SLUG,
+                                "montessori-formas-geometricas"
+                        )
                 ),
                 List.of(
                         faq("¿Cuántas piezas recomendáis a los 3 años?",
@@ -152,7 +170,11 @@ public class CollectionPageService {
                 ),
                 List.of(
                         educationalToysLink(3),
-                        analysisLink("puzle-madera-animales", "Puzle de madera de animales"),
+                        new LinkItem(
+                                "Mejores puzles para 3 años",
+                                "/comparativas/" + ComparisonPageService.PUZZLES_3_SLUG + "/",
+                                "Comparativa por número de piezas y si se puede terminar."
+                        ),
                         chooseByAgeLink()
                 )
         ));
@@ -172,8 +194,19 @@ public class CollectionPageService {
                         "Peso que un adulto pueda llevar y un niño pueda enderezar.",
                         "Casco, calzado cerrado y un espacio sin coches ni desniveles bruscos."
                 ),
-                List.of("patinete-3-ruedas"),
-                Map.of(),
+                List.of(
+                        "patinete-micro-mini-deluxe",
+                        "patinete-molto-maxi",
+                        "patinete-globber-junior-foldable",
+                        "triciclo-chicco-u-go"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.SCOOTERS_3_SLUG,
+                        "patinete-micro-mini-deluxe",
+                        "patinete-molto-maxi",
+                        "patinete-globber-junior-foldable",
+                        "triciclo-chicco-u-go"
+                ),
                 List.of(
                         faq("¿Patinete o bicicleta sin pedales primero?",
                                 "Depende del niño y del espacio. La bici sin pedales trabaja el equilibrio sentado; el patinete, de pie. A los 3 años ambos pueden convivir si hay supervisión."),
@@ -184,7 +217,11 @@ public class CollectionPageService {
                 ),
                 List.of(
                         hubLink(),
-                        analysisLink("patinete-3-ruedas", "Patinete de 3 ruedas"),
+                        new LinkItem(
+                                "Mejores patinetes de 3 ruedas para 3 años",
+                                "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/",
+                                "Ranking editorial de tres ruedas y un triciclo."
+                        ),
                         new LinkItem(
                                 "Mejores bicicletas sin pedales para 3 años",
                                 "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
@@ -208,8 +245,21 @@ public class CollectionPageService {
                         "Peldaños o plataforma regulable según crezca.",
                         "Uso solo con adulto presente; nunca cerca de fuegos, agua hirviendo o cuchillos."
                 ),
-                List.of("torre-aprendizaje-madera"),
-                Map.of(),
+                List.of(
+                        "torre-kleiner-riese",
+                        "torre-yoleo-transformer",
+                        "torre-bianconiglio-evo",
+                        "torre-bey-co",
+                        "torre-bianconiglio-transformer"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.TOWERS_3_SLUG,
+                        "torre-kleiner-riese",
+                        "torre-yoleo-transformer",
+                        "torre-bianconiglio-evo",
+                        "torre-bey-co",
+                        "torre-bianconiglio-transformer"
+                ),
                 List.of(
                         faq("¿Es segura una torre a los 3 años?",
                                 "Puede serlo si es estable, tiene barandilla y hay un adulto encima. No lo es si se usa como juguete de trepa o junto a peligros de cocina."),
@@ -220,10 +270,14 @@ public class CollectionPageService {
                 ),
                 List.of(
                         hubLink(),
-                        analysisLink("torre-aprendizaje-madera", "Torre de aprendizaje de madera"),
                         new LinkItem(
-                                "Vajilla infantil irrompible",
-                                "/autonomia/vajilla-infantil/",
+                                "Mejores torres de aprendizaje para 3 años",
+                                "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/",
+                                "Comparativa por estabilidad, altura y plegado."
+                        ),
+                        new LinkItem(
+                                "Vajilla infantil irrompible para 3 años",
+                                "/comparativas/" + ComparisonPageService.TABLEWARE_3_SLUG + "/",
                                 "Otra pieza de la autonomía en la rutina diaria."
                         )
                 )
@@ -244,8 +298,21 @@ public class CollectionPageService {
                         "Vaso o taza con base ancha para reducir vuelcos.",
                         "Fácil de limpiar; evita piezas con recovecos imposibles."
                 ),
-                List.of("set-vajilla-infantil"),
-                Map.of(),
+                List.of(
+                        "vajilla-stor-mickey",
+                        "vajilla-fun-house",
+                        "vajilla-twistshake-dividido",
+                        "vaso-munchkin-miracle-360",
+                        "cuenco-twistshake-tapa"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.TABLEWARE_3_SLUG,
+                        "vajilla-stor-mickey",
+                        "vajilla-fun-house",
+                        "vajilla-twistshake-dividido",
+                        "vaso-munchkin-miracle-360",
+                        "cuenco-twistshake-tapa"
+                ),
                 List.of(
                         faq("¿Plástico, bambú o acero?",
                                 "Cualquiera vale si es apto para alimento, estable y no se rompe en astillas. Revisa el marcado del fabricante y evita pinturas dudosas en la zona de contacto."),
@@ -256,10 +323,14 @@ public class CollectionPageService {
                 ),
                 List.of(
                         hubLink(),
-                        analysisLink("set-vajilla-infantil", "Set de vajilla infantil irrompible"),
                         new LinkItem(
-                                "Torres de aprendizaje",
-                                "/autonomia/torres-de-aprendizaje/",
+                                "Mejores vajillas infantiles para 3 años",
+                                "/comparativas/" + ComparisonPageService.TABLEWARE_3_SLUG + "/",
+                                "Comparativa de sets, platos y vasos irrompibles."
+                        ),
+                        new LinkItem(
+                                "Torres de aprendizaje para 3 años",
+                                "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/",
                                 "Para participar en la cocina con una altura segura."
                         )
                 )
@@ -280,8 +351,21 @@ public class CollectionPageService {
                         "Uso que no dependa de pilas ni de una app.",
                         "Encaje real con 3 años: piezas grandes y sesiones cortas."
                 ),
-                List.of("kit-manualidades-natural"),
-                Map.of(),
+                List.of(
+                        "kit-manualidades-natural",
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "green-toys-construccion",
+                        "haba-puzles-cuatro-estaciones"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.SUSTAINABLE_3_SLUG,
+                        "kit-manualidades-natural",
+                        "cuentas-melissa-doug",
+                        "plantoys-ata-zapato",
+                        "green-toys-construccion",
+                        "haba-puzles-cuatro-estaciones"
+                ),
                 List.of(
                         faq("¿Todo lo de madera es sostenible?",
                                 "No. La madera ayuda a la durabilidad, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."),
@@ -292,10 +376,14 @@ public class CollectionPageService {
                 ),
                 List.of(
                         hubLink(),
-                        analysisLink("kit-manualidades-natural", "Kit de manualidades con materiales naturales"),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 3 años",
+                                "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/",
+                                "Comparativa de madera, materiales naturales y plástico reciclado."
+                        ),
                         new LinkItem(
                                 "Ideas de regalo para 3 años",
-                                "/regalos/ideas-regalo-3-anos/",
+                                "/comparativas/" + ComparisonPageService.GIFTS_3_SLUG + "/",
                                 "Más opciones por ocasión, no solo por material."
                         )
                 )
@@ -308,7 +396,7 @@ public class CollectionPageService {
                 "Selección por ocasión y presupuesto, sin perder utilidad: aprender, moverse, autonomía o crear.",
                 List.of(
                         "Un buen regalo a los 3 años se usa en casa o al aire libre durante semanas, no solo el día del cumpleaños. Evitamos lo puramente decorativo y lo que exige reglas largas.",
-                        "Aquí reunimos las opciones del catálogo para esta edad. La bicicleta sin pedales se recomienda desde la comparativa; el resto tiene análisis propio."
+                        "Aquí reunimos las opciones del catálogo para esta edad. Cada producto enlaza a la comparativa donde está evaluado."
                 ),
                 List.of(
                         "Que resuelva una necesidad: aprender, moverse, autonomía o crear.",
@@ -320,14 +408,26 @@ public class CollectionPageService {
                         "juego-montessori-formas",
                         "puzle-madera-animales",
                         "bici-chicco-red-bullet",
-                        "patinete-3-ruedas",
-                        "torre-aprendizaje-madera",
-                        "set-vajilla-infantil",
+                        "patinete-micro-mini-deluxe",
+                        "torre-kleiner-riese",
+                        "vajilla-stor-mickey",
                         "kit-manualidades-natural"
                 ),
                 Map.of(
+                        "juego-montessori-formas",
+                        "/comparativas/" + ComparisonPageService.MONTESSORI_3_SLUG + "/#producto-juego-montessori-formas",
+                        "puzle-madera-animales",
+                        "/comparativas/" + ComparisonPageService.PUZZLES_3_SLUG + "/#producto-puzle-madera-animales",
                         "bici-chicco-red-bullet",
-                        "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet"
+                        "/comparativas/" + ComparisonPageService.BALANCE_BIKES_SLUG + "/#producto-bici-chicco-red-bullet",
+                        "patinete-micro-mini-deluxe",
+                        "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/#producto-patinete-micro-mini-deluxe",
+                        "torre-kleiner-riese",
+                        "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/#producto-torre-kleiner-riese",
+                        "vajilla-stor-mickey",
+                        "/comparativas/" + ComparisonPageService.TABLEWARE_3_SLUG + "/#producto-vajilla-stor-mickey",
+                        "kit-manualidades-natural",
+                        "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/#producto-kit-manualidades-natural"
                 ),
                 List.of(
                         faq("¿Qué regalo no falla a esta edad?",
@@ -341,7 +441,7 @@ public class CollectionPageService {
                         hubLink(),
                         new LinkItem(
                                 "Regalos más duraderos",
-                                "/sostenibles/",
+                                "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/",
                                 "Enfoque en materiales y uso a largo plazo."
                         ),
                         chooseByAgeLink()
@@ -962,6 +1062,20 @@ public class CollectionPageService {
         for (String productId : productIds) {
             hrefs.put(productId, "");
         }
+        return hrefs;
+    }
+
+    private static Map<String, String> comparisonHrefs(String comparisonSlug, String... productIds) {
+        Map<String, String> hrefs = new LinkedHashMap<>();
+        for (String productId : productIds) {
+            hrefs.put(productId, "/comparativas/" + comparisonSlug + "/#producto-" + productId);
+        }
+        return hrefs;
+    }
+
+    private static Map<String, String> mergeHrefs(Map<String, String> first, Map<String, String> second) {
+        Map<String, String> hrefs = new LinkedHashMap<>(first);
+        hrefs.putAll(second);
         return hrefs;
     }
 
