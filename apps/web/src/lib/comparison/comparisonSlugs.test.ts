@@ -15,6 +15,9 @@ describe("comparisonSlugs", () => {
   it("rejects unknown comparisons", () => {
     expect(isComparisonSlug("mejores-patinetes-3-anos")).toBe(true);
     expect(isComparisonSlug("mejores-juegos-montessori-3-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-regalos-duraderos-3-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-juegos-simbolicos-3-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-elegir-regalo-edad-3-anos")).toBe(true);
     expect(isComparisonSlug("mejores-puzles-2-anos")).toBe(false);
   });
 });

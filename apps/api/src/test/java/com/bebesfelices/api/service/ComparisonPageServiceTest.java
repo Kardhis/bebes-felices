@@ -264,6 +264,7 @@ class ComparisonPageServiceTest {
         ComparisonPageResponse tableware = service.getBySlug(ComparisonPageService.TABLEWARE_3_SLUG).orElseThrow();
         ComparisonPageResponse gifts = service.getBySlug(ComparisonPageService.GIFTS_3_SLUG).orElseThrow();
         ComparisonPageResponse sustainable = service.getBySlug(ComparisonPageService.SUSTAINABLE_3_SLUG).orElseThrow();
+        ComparisonPageResponse durable = service.getBySlug(ComparisonPageService.DURABLE_3_SLUG).orElseThrow();
 
         assertThat(montessori.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
@@ -306,7 +307,15 @@ class ComparisonPageServiceTest {
                         "green-toys-construccion",
                         "haba-puzles-cuatro-estaciones"
                 );
-        assertThat(List.of(montessori, puzzles, scooters, towers, tableware, gifts, sustainable))
+        assertThat(durable.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "small-foot-grua",
+                        "green-toys-construccion",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "cuentas-melissa-doug"
+                );
+        assertThat(List.of(montessori, puzzles, scooters, towers, tableware, gifts, sustainable, durable))
                 .allSatisfy(page -> {
                     assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
                     assertThat(page.targetAge()).isEqualTo(3);
@@ -324,6 +333,100 @@ class ComparisonPageServiceTest {
         assertThat(scooters.entries()).hasSize(4);
         assertThat(montessori.header().h1()).isEqualTo("Mejores juegos Montessori de formas y encajes para 3 años");
         assertThat(scooters.header().h1()).isEqualTo("Mejores patinetes de 3 ruedas para 3 años");
+        assertThat(durable.header().h1()).isEqualTo("Mejores regalos duraderos para 3 años");
+        assertThat(durable.relatedLinks()).extracting(link -> link.href())
+                .contains("/por-edad/3-anos/", "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/");
+    }
+
+    @Test
+    void buildsThePublishedThreeYearSecondaryNeedComparisons() {
+        ComparisonPageService service = new ComparisonPageService(new ManualProductCatalog());
+
+        ComparisonPageResponse arts = service.getBySlug(ComparisonPageService.ARTS_NATURAL_3_SLUG).orElseThrow();
+        ComparisonPageResponse wood = service.getBySlug(ComparisonPageService.MONTESSORI_WOOD_3_SLUG).orElseThrow();
+        ComparisonPageResponse symbolic = service.getBySlug(ComparisonPageService.SYMBOLIC_3_SLUG).orElseThrow();
+        ComparisonPageResponse sensory = service.getBySlug(ComparisonPageService.SENSORY_3_SLUG).orElseThrow();
+        ComparisonPageResponse balanceGuide = service.getBySlug(ComparisonPageService.BALANCE_GUIDE_3_SLUG).orElseThrow();
+        ComparisonPageResponse scootersTrikes = service.getBySlug(ComparisonPageService.SCOOTERS_TRIKES_3_SLUG).orElseThrow();
+        ComparisonPageResponse towersKitchen = service.getBySlug(ComparisonPageService.TOWERS_KITCHEN_3_SLUG).orElseThrow();
+        ComparisonPageResponse tablewareDaily = service.getBySlug(ComparisonPageService.TABLEWARE_DAILY_3_SLUG).orElseThrow();
+        ComparisonPageResponse giftSelection = service.getBySlug(ComparisonPageService.GIFT_SELECTION_3_SLUG).orElseThrow();
+        ComparisonPageResponse chooseGift = service.getBySlug(ComparisonPageService.CHOOSE_GIFT_3_SLUG).orElseThrow();
+
+        assertThat(arts.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "kit-manualidades-natural",
+                        "arte-crayola-tempera-6",
+                        "arte-crayola-effects",
+                        "arte-crayola-metallic",
+                        "arte-crayola-paw-patrol"
+                );
+        assertThat(wood.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "montessori-janod-tropik",
+                        "montessori-goula-baby-shapes",
+                        "small-foot-grua",
+                        "plantoys-ata-zapato",
+                        "cuentas-melissa-doug"
+                );
+        assertThat(symbolic.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "simbolico-theo-klein-miele",
+                        "simbolico-kidkraft-vintage",
+                        "simbolico-beeloom-babycue",
+                        "simbolico-deao-cocina",
+                        "simbolico-sundaymot-32"
+                );
+        assertThat(sensory.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "sensorial-emotion-bottles",
+                        "sensorial-playfoam",
+                        "sensorial-fidget-tubes",
+                        "sensorial-scoops",
+                        "sensorial-pinzas-jumbo"
+                );
+        assertThat(balanceGuide.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "bici-chicco-red-bullet",
+                        "bici-kinderkraft-tove",
+                        "bici-kinderkraft-fly-plus-2",
+                        "bici-kinderkraft-goswift",
+                        "bici-puky-lr-m"
+                );
+        assertThat(scootersTrikes.entries()).hasSize(4);
+        assertThat(towersKitchen.entries().get(0).productId()).isEqualTo("torre-kleiner-riese");
+        assertThat(tablewareDaily.entries().get(0).productId()).isEqualTo("vajilla-stor-mickey");
+        assertThat(giftSelection.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "puzle-madera-animales",
+                        "patinete-micro-mini-deluxe",
+                        "vajilla-stor-mickey",
+                        "haba-puzles-cuatro-estaciones",
+                        "cuentas-melissa-doug"
+                );
+        assertThat(chooseGift.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "juego-montessori-formas",
+                        "patinete-micro-mini-deluxe",
+                        "vajilla-stor-mickey",
+                        "kit-manualidades-natural",
+                        "small-foot-grua"
+                );
+        assertThat(List.of(
+                arts, wood, symbolic, sensory, balanceGuide, scootersTrikes,
+                towersKitchen, tablewareDaily, giftSelection, chooseGift
+        )).allSatisfy(page -> {
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.targetAge()).isEqualTo(3);
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/3-anos/");
+            assertThat(page.relatedLinks().get(0).href()).isEqualTo("/por-edad/3-anos/");
+            assertThat(page.quickSummary()).isNotEmpty();
+            assertThat(page.methodology().criteria()).isNotEmpty();
+            assertThat(page.buyingGuide().sections()).isNotEmpty();
+            assertThat(page.faq()).isNotEmpty();
+        });
+        assertThat(arts.header().h1()).isEqualTo("Arte y manualidades con materiales naturales para 3 años");
+        assertThat(chooseGift.header().h1()).isEqualTo("Cómo elegir el regalo según la edad a los 3 años");
     }
 
     @Test

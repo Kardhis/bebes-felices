@@ -343,7 +343,7 @@ public class CollectionPageService {
                 "Opciones pensadas para durar: materiales resistentes, menos piezas de usar y tirar, y un uso que no dependa de pantallas.",
                 List.of(
                         "Sostenible, en esta página, significa sobre todo durabilidad y materiales que aguanten el juego intenso de los 3 años. No es un sello publicitario ni una lista de certificaciones que no podamos verificar una a una.",
-                        "Priorizamos objetos de madera o materiales naturales que se puedan repetir, frente a sets de un solo uso. El kit de plastilina ecológica con herramientas de madera es el ejemplo del catálogo para crear a esta edad."
+                        "Las opciones pensadas para repetirse —grúa, vehículos lavables, zapato, puzles y cuentas— están en la comparativa de regalos duraderos. El kit de plastilina ecológica queda en la de regalos sostenibles: se usa para crear, pero el material se gasta."
                 ),
                 List.of(
                         "Material que sobreviva a caídas y al agua ocasional de las manos.",
@@ -352,30 +352,42 @@ public class CollectionPageService {
                         "Encaje real con 3 años: piezas grandes y sesiones cortas."
                 ),
                 List.of(
-                        "kit-manualidades-natural",
-                        "cuentas-melissa-doug",
                         "small-foot-grua",
                         "green-toys-construccion",
-                        "haba-puzles-cuatro-estaciones"
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "cuentas-melissa-doug",
+                        "kit-manualidades-natural"
                 ),
-                comparisonHrefs(
-                        ComparisonPageService.SUSTAINABLE_3_SLUG,
-                        "kit-manualidades-natural",
-                        "cuentas-melissa-doug",
-                        "small-foot-grua",
-                        "green-toys-construccion",
-                        "haba-puzles-cuatro-estaciones"
+                mergeHrefs(
+                        comparisonHrefs(
+                                ComparisonPageService.DURABLE_3_SLUG,
+                                "small-foot-grua",
+                                "green-toys-construccion",
+                                "plantoys-ata-zapato",
+                                "haba-puzles-cuatro-estaciones",
+                                "cuentas-melissa-doug"
+                        ),
+                        comparisonHrefs(
+                                ComparisonPageService.SUSTAINABLE_3_SLUG,
+                                "kit-manualidades-natural"
+                        )
                 ),
                 List.of(
-                        faq("¿Todo lo de madera es sostenible?",
-                                "No. La madera ayuda a la durabilidad, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."),
+                        faq("¿Todo lo de madera es duradero?",
+                                "No. La madera ayuda, pero no basta. Mira también si el juguete se usará de verdad y si se puede cuidar."),
                         faq("¿Qué evitáis?",
-                                "Productos de un solo uso, piezas diminutas y juguetes que solo funcionan con pantalla. Tampoco afirmamos ecoetiquetas que no hayamos contrastado."),
+                                "Productos de un solo uso, piezas diminutas y juguetes que solo funcionan con pantalla. El kit de plastilina está aquí como actividad para crear; la comparativa de duraderos no lo incluye porque el material se gasta."),
                         faq("¿Sirve como regalo?",
-                                "Sí, si la familia va a usar esas actividades. Un kit de crear sin pantallas encaja bien cuando hay un adulto dispuesto a acompañar un rato.")
+                                "Sí, si la familia va a repetir esas actividades. Un objeto de madera o plástico lavable encaja cuando hay un uso real, no solo el día del cumpleaños.")
                 ),
                 List.of(
                         hubLink(),
+                        new LinkItem(
+                                "Mejores regalos duraderos para 3 años",
+                                "/comparativas/" + ComparisonPageService.DURABLE_3_SLUG + "/",
+                                "Comparativa de juguetes pensados para aguantar el juego intenso."
+                        ),
                         new LinkItem(
                                 "Mejores regalos sostenibles para 3 años",
                                 "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/",

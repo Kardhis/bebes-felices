@@ -110,6 +110,46 @@ class ComparisonPageControllerTest {
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SUSTAINABLE_3_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.entries[0].productId").value("kit-manualidades-natural"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.DURABLE_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.header.h1").value("Mejores regalos duraderos para 3 años"))
+                .andExpect(jsonPath("$.entries[0].productId").value("small-foot-grua"))
+                .andExpect(jsonPath("$.entries.length()").value(5));
+    }
+
+    @Test
+    void returnsThePublishedThreeYearSecondaryNeedComparisons() throws Exception {
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.ARTS_NATURAL_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("kit-manualidades-natural"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.MONTESSORI_WOOD_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("montessori-janod-tropik"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SYMBOLIC_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("simbolico-theo-klein-miele"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SENSORY_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("sensorial-emotion-bottles"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.BALANCE_GUIDE_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("bici-chicco-red-bullet"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SCOOTERS_TRIKES_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries.length()").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_KITCHEN_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("torre-kleiner-riese"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TABLEWARE_DAILY_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("vajilla-stor-mickey"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.GIFT_SELECTION_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.entries[0].productId").value("puzle-madera-animales"));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.CHOOSE_GIFT_3_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.header.h1").value("Cómo elegir el regalo según la edad a los 3 años"))
+                .andExpect(jsonPath("$.entries[0].productId").value("juego-montessori-formas"));
     }
 
     @Test

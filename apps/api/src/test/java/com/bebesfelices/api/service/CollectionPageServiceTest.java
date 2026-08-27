@@ -137,6 +137,30 @@ class CollectionPageServiceTest {
     }
 
     @Test
+    void durableGiftsCollectionLinksToTheThreeYearComparison() {
+        var page = service.getBySlug(CollectionPageService.SUSTAINABLE_3_SLUG).orElseThrow();
+
+        assertThat(page.canonicalPath()).isEqualTo("/sostenibles/regalos-duraderos-3-anos/");
+        assertThat(page.products()).hasSize(6);
+        assertThat(page.products().get(0).href())
+                .isEqualTo("/comparativas/mejores-regalos-duraderos-3-anos/#producto-small-foot-grua");
+        assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver comparativa completa");
+        assertThat(page.products())
+                .filteredOn(product -> product.title().contains("manualidades"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-regalos-sostenibles-3-anos/#producto-kit-manualidades-natural"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page.relatedLinks()).extracting(link -> link.href())
+                .contains(
+                        "/comparativas/mejores-regalos-duraderos-3-anos/",
+                        "/comparativas/mejores-regalos-sostenibles-3-anos/"
+                );
+    }
+
+    @Test
     void giftCollectionIncludesTheThreeYearComparisons() {
         var page = service.getBySlug(CollectionPageService.GIFTS_3_SLUG).orElseThrow();
 

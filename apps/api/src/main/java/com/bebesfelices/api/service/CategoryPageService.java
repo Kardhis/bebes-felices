@@ -274,6 +274,11 @@ public class CategoryPageService {
                                 "Madera, materiales naturales o plástico reciclado."
                         ),
                         new LinkItem(
+                                "Mejores regalos duraderos para 3 años",
+                                "/comparativas/mejores-regalos-duraderos-3-anos/",
+                                "Objetos pensados para aguantar el juego intenso y seguir usándose."
+                        ),
+                        new LinkItem(
                                 "Mejores regalos sostenibles para 4 años",
                                 "/comparativas/mejores-regalos-sostenibles-4-anos/",
                                 "Comparativa de madera certificada y plástico reciclado."

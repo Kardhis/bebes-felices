@@ -63,6 +63,28 @@ public class AgePageService {
             + ComparisonPageService.GIFTS_3_SLUG + "/";
     private static final String SUSTAINABLE_3_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SUSTAINABLE_3_SLUG + "/";
+    private static final String DURABLE_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.DURABLE_3_SLUG + "/";
+    private static final String ARTS_NATURAL_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.ARTS_NATURAL_3_SLUG + "/";
+    private static final String MONTESSORI_WOOD_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.MONTESSORI_WOOD_3_SLUG + "/";
+    private static final String SYMBOLIC_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SYMBOLIC_3_SLUG + "/";
+    private static final String SENSORY_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SENSORY_3_SLUG + "/";
+    private static final String BALANCE_GUIDE_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.BALANCE_GUIDE_3_SLUG + "/";
+    private static final String SCOOTERS_TRIKES_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.SCOOTERS_TRIKES_3_SLUG + "/";
+    private static final String TOWERS_KITCHEN_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TOWERS_KITCHEN_3_SLUG + "/";
+    private static final String TABLEWARE_DAILY_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.TABLEWARE_DAILY_3_SLUG + "/";
+    private static final String GIFT_SELECTION_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.GIFT_SELECTION_3_SLUG + "/";
+    private static final String CHOOSE_GIFT_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.CHOOSE_GIFT_3_SLUG + "/";
 
     private static final List<String> AGE_3_PRODUCT_IDS = List.of(
             "juego-montessori-formas",
@@ -236,33 +258,33 @@ public class AgePageService {
             case 3 -> List.of(
                     new AgePageResponse.NeedGroup("Sostenibles", "#sostenibles", List.of(
                             new LinkItem("Mejores regalos sostenibles para 3 años", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
-                            new LinkItem("Regalos duraderos para 3 años", sustainableCollectionHref, "Selección pensada para aguantar el juego intenso y seguir usándose."),
-                            new LinkItem("Arte y manualidades con materiales naturales", educationalHref(CollectionPageService.ARTS_CRAFTS_SLUG), "Kits para crear sin pantallas y con materiales que se pueden cuidar."),
-                            new LinkItem("Juegos Montessori de madera", educationalHref(CollectionPageService.MONTESSORI_SLUG), "Encaje y clasificación con piezas grandes y duraderas.")
+                            new LinkItem("Regalos duraderos para 3 años", DURABLE_3_COMPARISON_HREF, "Comparativa de juguetes pensados para aguantar el juego intenso y seguir usándose."),
+                            new LinkItem("Arte y manualidades con materiales naturales", ARTS_NATURAL_3_COMPARISON_HREF, "Comparativa para crear sin pantallas: plastilina ecológica y pinturas lavables."),
+                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_3_COMPARISON_HREF, "Comparativa de encaje, obra, nudos y cuentas en madera.")
                     )),
                     new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Juegos Montessori de formas y encajes", MONTESSORI_3_COMPARISON_HREF, "Comparativa de encaje y clasificación con piezas grandes."),
                             new LinkItem("Puzles de piezas grandes", PUZZLES_3_COMPARISON_HREF, "Comparativa de puzles que se pueden terminar en una sesión."),
-                            new LinkItem("Juego simbólico", educationalHref(CollectionPageService.SYMBOLIC_PLAY_SLUG), "Cocinitas, disfraces e imitación de la vida diaria: de los más pedidos a esta edad."),
-                            new LinkItem("Juguetes sensoriales", educationalHref(CollectionPageService.SENSORY_TOYS_SLUG), "Texturas, encaje y exploración táctil con piezas grandes.")
+                            new LinkItem("Juego simbólico", SYMBOLIC_3_COMPARISON_HREF, "Comparativa de cocinas y un maletín de médico para imitar la vida diaria."),
+                            new LinkItem("Juguetes sensoriales", SENSORY_3_COMPARISON_HREF, "Comparativa de botellas, espuma, palas y pinzas con una acción clara.")
                     )),
                     new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
                             new LinkItem("Mejores bicicletas sin pedales para 3 años", BALANCE_BIKES_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
                             new LinkItem("Patinetes de 3 ruedas", SCOOTERS_3_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango."),
-                            new LinkItem("Bicicletas sin pedales", movementHref(CollectionPageService.BALANCE_BIKES_SLUG), "Guía de modelos para ganar equilibrio antes de la bici con pedales."),
-                            new LinkItem("Patinetes y triciclos", movementHref(CollectionPageService.SCOOTERS_SLUG), "Opciones estables para moverse de pie o sentado al aire libre.")
+                            new LinkItem("Bicicletas sin pedales", BALANCE_GUIDE_3_COMPARISON_HREF, "Comparativa para ganar equilibrio con los pies en el suelo."),
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_TRIKES_3_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre.")
                     )),
                     new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Torres de aprendizaje", TOWERS_3_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
                             new LinkItem("Vajilla infantil irrompible", TABLEWARE_3_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda."),
-                            new LinkItem("Torres para la cocina", autonomyHref(CollectionPageService.TOWERS_SLUG), "Selección de torres regulables para la rutina diaria."),
-                            new LinkItem("Vajilla para la mesa diaria", autonomyHref(CollectionPageService.TABLEWARE_SLUG), "Platos y vasos adaptados para ganar independencia en las comidas.")
+                            new LinkItem("Torres para la cocina", TOWERS_KITCHEN_3_COMPARISON_HREF, "Comparativa de torres para la rutina diaria en la encimera."),
+                            new LinkItem("Vajilla para la mesa diaria", TABLEWARE_DAILY_3_COMPARISON_HREF, "Comparativa de platos y vasos para las comidas de cada día.")
                     )),
                     new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
                             new LinkItem("Ideas de regalo para 3 años", GIFTS_3_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
-                            new LinkItem("Selección de regalos para 3 años", giftCollectionHref, "Ideas por ocasión y presupuesto sin perder utilidad."),
+                            new LinkItem("Selección de regalos para 3 años", GIFT_SELECTION_3_COMPARISON_HREF, "Comparativa por ocasión: visita, patio, mesa o formato compacto."),
                             new LinkItem("Regalos sostenibles", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
-                            new LinkItem("Cómo elegir el regalo según la edad", chooseByAgeHref, "Criterios prácticos antes de comprar.")
+                            new LinkItem("Cómo elegir el regalo según la edad", CHOOSE_GIFT_3_COMPARISON_HREF, "Cinco productos según lo que el niño ya hace a los 3 años.")
                     ))
             );
             case 4 -> List.of(
@@ -543,6 +565,11 @@ public class AgePageService {
                             "Mejores regalos sostenibles para 3 años",
                             SUSTAINABLE_3_COMPARISON_HREF,
                             "Madera, materiales naturales o plástico reciclado."
+                    ),
+                    new LinkItem(
+                            "Mejores regalos duraderos para 3 años",
+                            DURABLE_3_COMPARISON_HREF,
+                            "Objetos pensados para aguantar el juego intenso y seguir usándose."
                     )
             );
             case 4 -> List.of(
