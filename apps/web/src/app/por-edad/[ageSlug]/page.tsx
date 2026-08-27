@@ -6,7 +6,6 @@ import { Breadcrumbs } from "@/components/age/Breadcrumbs";
 import { BuyingConsiderations } from "@/components/age/BuyingConsiderations";
 import { ContentLinkSection } from "@/components/age/ContentLinkSection";
 import { DevelopmentSkills } from "@/components/age/DevelopmentSkills";
-import { FeaturedSelection } from "@/components/age/FeaturedSelection";
 import { OptionsByNeed } from "@/components/age/OptionsByNeed";
 import { OtherAges } from "@/components/age/OtherAges";
 import { AffiliationNotice } from "@/components/home/AffiliationNotice";
@@ -19,7 +18,6 @@ import {
   buildBreadcrumbListSchema,
   buildCollectionPageSchema,
   buildFaqPageSchema,
-  buildItemListSchema,
   JsonLd,
 } from "@/lib/seo/jsonLd";
 import { buildPageMetadata, SITE_URL } from "@/lib/seo/metadata";
@@ -65,10 +63,6 @@ export default async function AgePage({ params }: Props) {
     throw error;
   }
 
-  const itemListEntries = page.featuredSelection.map((item) => ({
-    title: item.title,
-    href: item.href,
-  }));
   return (
     <>
       <SiteHeader variant="inner" />
@@ -116,13 +110,6 @@ export default async function AgePage({ params }: Props) {
           description="Comparativas con selección razonada para esta edad."
           items={page.featuredRankings}
         />
-        <FeaturedSelection items={page.featuredSelection} />
-        <ContentLinkSection
-          id="ideas-de-regalo"
-          title="Ideas de regalo"
-          description="Inspiración por ocasión y presupuesto, sin perder utilidad."
-          items={page.giftIdeas}
-        />
         <AgeFaq items={page.faq} />
         <OtherAges items={page.otherAges} currentAgeLabel={page.ageLabel} />
         <TrustAuthority
@@ -144,9 +131,6 @@ export default async function AgePage({ params }: Props) {
           dateModified: page.updatedAt,
         })}
       />
-      {itemListEntries.length > 0 && (
-        <JsonLd data={buildItemListSchema(itemListEntries, SITE_URL)} />
-      )}
       {page.faq.length > 0 && <JsonLd data={buildFaqPageSchema(page.faq)} />}
     </>
   );

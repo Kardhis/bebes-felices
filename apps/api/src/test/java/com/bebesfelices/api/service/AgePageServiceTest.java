@@ -476,12 +476,16 @@ class AgePageServiceTest {
     }
 
     @Test
-    void otherAgesExcludesTheCurrentAgeAndListsTheOtherTwo() {
-        AgePageResponse page = service.getBySlug("4-anos").orElseThrow();
-
-        assertThat(page.otherAges()).hasSize(2);
-        assertThat(page.otherAges()).extracting("ageLabel")
-                .containsExactlyInAnyOrder("3 años", "5 años");
+    void otherAgesExcludesTheCurrentAgeAndListsTheOtherTwoInAscendingOrder() {
+        assertThat(service.getBySlug("3-anos").orElseThrow().otherAges())
+                .extracting("ageLabel")
+                .containsExactly("4 años", "5 años");
+        assertThat(service.getBySlug("4-anos").orElseThrow().otherAges())
+                .extracting("ageLabel")
+                .containsExactly("3 años", "5 años");
+        assertThat(service.getBySlug("5-anos").orElseThrow().otherAges())
+                .extracting("ageLabel")
+                .containsExactly("3 años", "4 años");
     }
 
     @Test

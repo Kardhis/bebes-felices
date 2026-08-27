@@ -11,7 +11,6 @@ import com.bebesfelices.api.dto.shared.Seo;
 import com.bebesfelices.api.dto.shared.TrustAuthority;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -685,9 +684,9 @@ public class AgePageService {
     }
 
     private List<AgeLink> otherAgesExcluding(int age) {
-        Map<Integer, String> remaining = new LinkedHashMap<>(AGE_LABELS);
-        remaining.remove(age);
-        return remaining.entrySet().stream()
+        return AGE_LABELS.entrySet().stream()
+                .filter(entry -> entry.getKey() != age)
+                .sorted(Map.Entry.comparingByKey())
                 .map(entry -> new AgeLink(entry.getValue(), "/por-edad/" + entry.getKey() + "-anos/"))
                 .toList();
     }
@@ -703,7 +702,7 @@ public class AgePageService {
                 ),
                 List.of(
                         "Aviso visible de Amazon Afiliados.",
-                        "Fecha de actualización en la página.",
+                        "Fecha de actualización en la página (ver en el pie de página).",
                         "Enlace a la metodología editorial."
                 )
         );

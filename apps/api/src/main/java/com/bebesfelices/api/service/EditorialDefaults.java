@@ -35,7 +35,7 @@ final class EditorialDefaults {
                 ),
                 List.of(
                         "Aviso visible de Amazon Afiliados.",
-                        "Fecha de actualización en la página.",
+                        "Fecha de actualización en la página (ver en el pie de página).",
                         "Enlace a la metodología editorial.",
                         "Sin importes, valoraciones ni puntuaciones inventadas."
                 )

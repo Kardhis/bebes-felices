@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { formatEditorialDate } from "@/lib/editorial/formatEditorialDate";
+
 type LegalLink = {
   label: string;
   href: string;
@@ -39,7 +41,8 @@ export function SiteFooter({
             a 5 años.
           </p>
           <p className="mt-4 text-xs text-[var(--color-footer-text-muted)]">
-            Actualizado: {updatedAt}
+            Actualizado:{" "}
+            <time dateTime={updatedAt}>{formatEditorialDate(updatedAt)}</time>
           </p>
         </div>
 

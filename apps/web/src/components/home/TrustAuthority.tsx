@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+import {
+  formatEditorialDate,
+  isUpdateDateTransparencyItem,
+} from "@/lib/editorial/formatEditorialDate";
+
 type TrustAuthorityProps = {
   howWeSelect: string;
   analysisCriteria: string[];
@@ -30,7 +35,8 @@ export function TrustAuthority({
           {howWeSelect}
         </p>
         <p className="mt-2 text-sm text-[var(--color-text-muted)]">
-          Última actualización de esta página: {updatedAt}
+          Última actualización de esta página:{" "}
+          <time dateTime={updatedAt}>{formatEditorialDate(updatedAt)}</time>
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2">
@@ -50,7 +56,21 @@ export function TrustAuthority({
             </h3>
             <ul className="mt-3 list-disc space-y-2 pl-5 text-[var(--color-text-secondary)]">
               {editorialTransparency.map((t) => (
-                <li key={t}>{t}</li>
+                <li key={t}>
+                  {isUpdateDateTransparencyItem(t) ? (
+                    <span className="group/date relative inline cursor-help font-semibold text-[var(--color-primary-700)] underline decoration-dotted underline-offset-2">
+                      {t}
+                      <span
+                        role="tooltip"
+                        className="pointer-events-none absolute bottom-full left-0 z-10 mb-1 whitespace-nowrap rounded-md bg-[var(--color-text)] px-2 py-1 text-xs font-normal text-white opacity-0 shadow-sm group-hover/date:opacity-100"
+                      >
+                        {formatEditorialDate(updatedAt)}
+                      </span>
+                    </span>
+                  ) : (
+                    t
+                  )}
+                </li>
               ))}
             </ul>
             <Link
