@@ -189,24 +189,23 @@ class AgePageServiceTest {
                 "/comparativas/mejores-torres-aprendizaje-4-anos/",
                 "/comparativas/mejores-vajillas-infantiles-4-anos/",
                 "/comparativas/mejores-regalos-sostenibles-4-anos/",
+                "/comparativas/mejores-regalos-duraderos-4-anos/",
+                "/comparativas/mejores-manualidades-materiales-naturales-4-anos/",
+                "/comparativas/mejores-juegos-montessori-madera-4-anos/",
+                "/comparativas/mejores-juegos-montessori-4-anos/",
+                "/comparativas/mejores-puzles-4-anos/",
+                "/comparativas/mejores-juegos-stem-4-anos/",
+                "/comparativas/mejores-bicicletas-sin-pedales-4-anos/",
+                "/comparativas/mejores-bicicletas-equilibrio-4-anos/",
+                "/comparativas/mejores-patinetes-triciclos-4-anos/",
+                "/comparativas/mejores-torres-cocina-4-anos/",
+                "/comparativas/mejores-vajillas-mesa-diaria-4-anos/",
+                "/comparativas/mejores-ideas-regalo-4-anos/",
+                "/comparativas/mejores-seleccion-regalos-4-anos/",
+                "/comparativas/mejores-elegir-regalo-edad-4-anos/",
                 "/guias/como-elegir-juguetes-por-edad/?edad=4",
                 "/guias/habilidades-4-anos/",
-                "/juguetes-educativos/juegos-stem/",
-                "/juguetes-educativos/juegos-montessori/",
-                "/juguetes-educativos/puzles/",
-                "/juguetes-educativos/juguetes-construccion/",
-                "/juguetes-educativos/arte-manualidades/",
-                "/movimiento/",
-                "/movimiento/bicicletas-sin-pedales/",
-                "/movimiento/patinetes/",
-                "/autonomia/torres-de-aprendizaje/",
-                "/autonomia/vajilla-infantil/",
-                "/sostenibles/regalos-duraderos-4-anos/",
-                "/regalos/ideas-regalo-4-anos/",
-                "/analisis/juego-montessori-formas/",
-                "/analisis/puzle-madera-animales/",
-                "/analisis/bici-sin-pedales-basica/",
-                "/analisis/set-construccion-magnetico/"
+                "/regalos/ideas-regalo-4-anos/"
         );
 
         assertThat(hrefs).isNotEmpty();
@@ -230,30 +229,27 @@ class AgePageServiceTest {
 
         List<String> published = List.of(
                 STEM_5_HREF,
+                "/comparativas/mejores-regalos-sostenibles-5-anos/",
+                "/comparativas/mejores-regalos-duraderos-5-anos/",
+                "/comparativas/mejores-manualidades-materiales-naturales-5-anos/",
+                "/comparativas/mejores-juegos-montessori-madera-5-anos/",
+                "/comparativas/mejores-juegos-montessori-5-anos/",
+                "/comparativas/mejores-puzles-5-anos/",
+                "/comparativas/mejores-juegos-de-mesa-5-anos/",
+                "/comparativas/mejores-bicicletas-sin-pedales-5-anos/",
+                "/comparativas/mejores-bicicletas-equilibrio-5-anos/",
+                "/comparativas/mejores-patinetes-5-anos/",
+                "/comparativas/mejores-patinetes-triciclos-5-anos/",
+                "/comparativas/mejores-torres-aprendizaje-5-anos/",
+                "/comparativas/mejores-vajillas-infantiles-5-anos/",
+                "/comparativas/mejores-torres-cocina-5-anos/",
+                "/comparativas/mejores-vajillas-mesa-diaria-5-anos/",
+                "/comparativas/mejores-ideas-regalo-5-anos/",
+                "/comparativas/mejores-seleccion-regalos-5-anos/",
+                "/comparativas/mejores-elegir-regalo-edad-5-anos/",
                 "/guias/como-elegir-juguetes-por-edad/?edad=5",
                 "/guias/habilidades-5-anos/",
-                "/juguetes-educativos/juegos-de-mesa/",
-                "/juguetes-educativos/juegos-montessori/",
-                "/juguetes-educativos/arte-manualidades/",
-                "/juguetes-educativos/matematicas-logica/",
-                "/juguetes-educativos/juegos-cooperativos-socioemocionales/",
-                "/movimiento/",
-                "/movimiento/bicicletas-sin-pedales/",
-                "/movimiento/patinetes/",
-                "/comparativas/mejores-patinetes-4-anos/",
-                "/comparativas/mejores-torres-aprendizaje-4-anos/",
-                "/comparativas/mejores-vajillas-infantiles-4-anos/",
-                "/autonomia/torres-de-aprendizaje/",
-                "/autonomia/vajilla-infantil/",
-                "/sostenibles/",
-                "/sostenibles/regalos-duraderos-5-anos/",
-                "/regalos/ideas-regalo-5-anos/",
-                "/analisis/puzle-madera-animales/",
-                "/analisis/bici-sin-pedales-basica/",
-                "/analisis/torre-aprendizaje-madera/",
-                "/analisis/set-vajilla-infantil/",
-                "/analisis/juego-mesa-cooperativo/",
-                "/analisis/kit-manualidades-natural/"
+                "/regalos/ideas-regalo-5-anos/"
         );
 
         assertThat(hrefs).isNotEmpty();
@@ -304,17 +300,17 @@ class AgePageServiceTest {
         assertThat(page5.quickSummary()).isEmpty();
         assertThat(page4.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
-        assertThat(page4.featuredRankings().get(1).href())
+        assertThat(page4.featuredRankings().get(3).href())
                 .isEqualTo("/comparativas/mejores-patinetes-4-anos/");
         assertThat(page5.featuredRankings().get(0).href())
                 .isEqualTo("/comparativas/mejores-juguetes-stem-5-anos/");
-        assertThat(movementHref(page4)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
+        assertThat(movementHref(page4)).isEqualTo("/comparativas/mejores-bicicletas-sin-pedales-4-anos/");
         assertThat(page4.optionsByNeed().stream()
                         .filter(group -> group.anchor().equals("#educativos"))
                         .findFirst()
                         .orElseThrow()
                         .items()
-                        .get(1)
+                        .get(3)
                         .href())
                 .isEqualTo("/comparativas/mejores-juegos-de-mesa-4-anos/");
         assertThat(page4.optionsByNeed().stream()
@@ -350,15 +346,15 @@ class AgePageServiceTest {
                 .containsExactly(
                         "/comparativas/mejores-torres-aprendizaje-4-anos/",
                         "/comparativas/mejores-vajillas-infantiles-4-anos/",
-                        "/autonomia/torres-de-aprendizaje/",
-                        "/autonomia/vajilla-infantil/"
+                        "/comparativas/mejores-torres-cocina-4-anos/",
+                        "/comparativas/mejores-vajillas-mesa-diaria-4-anos/"
                 );
         assertThat(page4.optionsByNeed().stream()
                         .filter(group -> group.anchor().equals("#regalos"))
                         .findFirst()
                         .orElseThrow()
                         .items()
-                        .get(1)
+                        .get(2)
                         .href())
                 .isEqualTo("/comparativas/mejores-regalos-sostenibles-4-anos/");
         assertThat(page4.featuredSelection())
@@ -369,18 +365,32 @@ class AgePageServiceTest {
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
-        assertThat(movementHref(page5)).isEqualTo("/movimiento/bicicletas-sin-pedales/");
+        assertThat(movementHref(page5)).isEqualTo("/comparativas/mejores-bicicletas-sin-pedales-5-anos/");
         assertThat(page4.featuredSelection())
                 .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
                 .allSatisfy(product -> {
-                    assertThat(product.href()).isEqualTo("/analisis/bici-sin-pedales-basica/");
-                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-bicicletas-sin-pedales-4-anos/#producto-bici-sin-pedales-basica"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
         assertThat(page5.featuredSelection())
                 .filteredOn(product -> product.title().equals("Bicicleta sin pedales básica"))
                 .allSatisfy(product -> {
-                    assertThat(product.href()).isEqualTo("/analisis/bici-sin-pedales-basica/");
-                    assertThat(product.ctaLabel()).isEqualTo("Ver análisis completo");
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-bicicletas-sin-pedales-5-anos/#producto-bici-sin-pedales-basica"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page4.featuredSelection())
+                .allSatisfy(product -> {
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                    assertThat(product.href()).startsWith("/comparativas/");
+                });
+        assertThat(page5.featuredSelection())
+                .allSatisfy(product -> {
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                    assertThat(product.href()).startsWith("/comparativas/");
                 });
     }
 

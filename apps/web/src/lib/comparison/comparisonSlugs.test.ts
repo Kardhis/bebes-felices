@@ -18,6 +18,10 @@ describe("comparisonSlugs", () => {
     expect(isComparisonSlug("mejores-regalos-duraderos-3-anos")).toBe(true);
     expect(isComparisonSlug("mejores-juegos-simbolicos-3-anos")).toBe(true);
     expect(isComparisonSlug("mejores-elegir-regalo-edad-3-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-juegos-stem-4-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-bicicletas-sin-pedales-4-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-juegos-de-mesa-5-anos")).toBe(true);
+    expect(isComparisonSlug("mejores-regalos-duraderos-5-anos")).toBe(true);
     expect(isComparisonSlug("mejores-puzles-2-anos")).toBe(false);
   });
 });

@@ -430,6 +430,52 @@ class ComparisonPageServiceTest {
     }
 
     @Test
+    void buildsThePublishedFourAndFiveYearNeedComparisons() {
+        ComparisonPageService service = new ComparisonPageService(new ManualProductCatalog());
+
+        ComparisonPageResponse durable4 = service.getBySlug(ComparisonPageService.DURABLE_4_SLUG).orElseThrow();
+        ComparisonPageResponse montessori4 = service.getBySlug(ComparisonPageService.MONTESSORI_4_SLUG).orElseThrow();
+        ComparisonPageResponse stem4 = service.getBySlug(ComparisonPageService.STEM_4_SLUG).orElseThrow();
+        ComparisonPageResponse balance4 = service.getBySlug(ComparisonPageService.BALANCE_BIKES_4_SLUG).orElseThrow();
+        ComparisonPageResponse gifts4 = service.getBySlug(ComparisonPageService.GIFTS_4_SLUG).orElseThrow();
+
+        ComparisonPageResponse durable5 = service.getBySlug(ComparisonPageService.DURABLE_5_SLUG).orElseThrow();
+        ComparisonPageResponse montessori5 = service.getBySlug(ComparisonPageService.MONTESSORI_5_SLUG).orElseThrow();
+        ComparisonPageResponse board5 = service.getBySlug(ComparisonPageService.BOARD_GAMES_5_SLUG).orElseThrow();
+        ComparisonPageResponse balance5 = service.getBySlug(ComparisonPageService.BALANCE_BIKES_5_SLUG).orElseThrow();
+        ComparisonPageResponse gifts5 = service.getBySlug(ComparisonPageService.GIFTS_5_SLUG).orElseThrow();
+
+        assertThat(durable4.targetAge()).isEqualTo(4);
+        assertThat(durable4.updatedAt()).isEqualTo("2026-08-14");
+        assertThat(durable4.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(montessori4.entries()).hasSize(5);
+        assertThat(stem4.entries()).hasSize(5);
+        assertThat(balance4.entries()).hasSize(5);
+        assertThat(gifts4.entries()).hasSize(5);
+
+        assertThat(durable5.targetAge()).isEqualTo(5);
+        assertThat(durable5.updatedAt()).isEqualTo("2026-08-17");
+        assertThat(durable5.breadcrumbs().get(1).href()).isEqualTo("/por-edad/5-anos/");
+        assertThat(montessori5.entries()).hasSize(5);
+        assertThat(board5.entries()).hasSize(5);
+        assertThat(balance5.entries()).hasSize(5);
+        assertThat(gifts5.entries()).hasSize(5);
+
+        assertThat(List.of(durable4, montessori4, stem4, balance4, gifts4, durable5, montessori5, board5, balance5, gifts5))
+                .allSatisfy(page -> {
+                    assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+                    assertThat(page.entries()).allSatisfy(entry -> {
+                        assertThat(entry.pros()).isNotEmpty();
+                        assertThat(entry.cons()).isNotEmpty();
+                        assertThat(entry.affiliateHref()).isNull();
+                    });
+                    assertThat(page.quickNavigation()).isEmpty();
+                });
+        assertThat(durable4.header().h1()).isEqualTo("Mejores regalos duraderos para 4 años");
+        assertThat(durable5.header().h1()).isEqualTo("Mejores regalos duraderos para 5 años");
+    }
+
+    @Test
     void buildsThePublishedStemComparisonForFiveYearOlds() {
         ComparisonPageResponse page = new ComparisonPageService(new ManualProductCatalog())
                 .getBySlug(ComparisonPageService.STEM_5_SLUG)

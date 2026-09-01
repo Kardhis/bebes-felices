@@ -45,6 +45,42 @@ public class ComparisonPageService {
     public static final String TABLEWARE_DAILY_3_SLUG = "mejores-vajillas-mesa-diaria-3-anos";
     public static final String GIFT_SELECTION_3_SLUG = "mejores-seleccion-regalos-3-anos";
     public static final String CHOOSE_GIFT_3_SLUG = "mejores-elegir-regalo-edad-3-anos";
+    public static final String DURABLE_4_SLUG = "mejores-regalos-duraderos-4-anos";
+    public static final String DURABLE_5_SLUG = "mejores-regalos-duraderos-5-anos";
+    public static final String ARTS_NATURAL_4_SLUG = "mejores-manualidades-materiales-naturales-4-anos";
+    public static final String ARTS_NATURAL_5_SLUG = "mejores-manualidades-materiales-naturales-5-anos";
+    public static final String MONTESSORI_WOOD_4_SLUG = "mejores-juegos-montessori-madera-4-anos";
+    public static final String MONTESSORI_WOOD_5_SLUG = "mejores-juegos-montessori-madera-5-anos";
+    public static final String MONTESSORI_4_SLUG = "mejores-juegos-montessori-4-anos";
+    public static final String MONTESSORI_5_SLUG = "mejores-juegos-montessori-5-anos";
+    public static final String PUZZLES_4_SLUG = "mejores-puzles-4-anos";
+    public static final String PUZZLES_5_SLUG = "mejores-puzles-5-anos";
+    public static final String SYMBOLIC_4_SLUG = "mejores-juegos-simbolicos-4-anos";
+    public static final String SYMBOLIC_5_SLUG = "mejores-juegos-simbolicos-5-anos";
+    public static final String SENSORY_4_SLUG = "mejores-juguetes-sensoriales-4-anos";
+    public static final String SENSORY_5_SLUG = "mejores-juguetes-sensoriales-5-anos";
+    public static final String BALANCE_GUIDE_4_SLUG = "mejores-bicicletas-equilibrio-4-anos";
+    public static final String BALANCE_GUIDE_5_SLUG = "mejores-bicicletas-equilibrio-5-anos";
+    public static final String SCOOTERS_TRIKES_4_SLUG = "mejores-patinetes-triciclos-4-anos";
+    public static final String SCOOTERS_TRIKES_5_SLUG = "mejores-patinetes-triciclos-5-anos";
+    public static final String TOWERS_KITCHEN_4_SLUG = "mejores-torres-cocina-4-anos";
+    public static final String TOWERS_KITCHEN_5_SLUG = "mejores-torres-cocina-5-anos";
+    public static final String TABLEWARE_DAILY_4_SLUG = "mejores-vajillas-mesa-diaria-4-anos";
+    public static final String TABLEWARE_DAILY_5_SLUG = "mejores-vajillas-mesa-diaria-5-anos";
+    public static final String GIFTS_4_SLUG = "mejores-ideas-regalo-4-anos";
+    public static final String GIFTS_5_SLUG = "mejores-ideas-regalo-5-anos";
+    public static final String GIFT_SELECTION_4_SLUG = "mejores-seleccion-regalos-4-anos";
+    public static final String GIFT_SELECTION_5_SLUG = "mejores-seleccion-regalos-5-anos";
+    public static final String CHOOSE_GIFT_4_SLUG = "mejores-elegir-regalo-edad-4-anos";
+    public static final String CHOOSE_GIFT_5_SLUG = "mejores-elegir-regalo-edad-5-anos";
+    public static final String BALANCE_BIKES_4_SLUG = "mejores-bicicletas-sin-pedales-4-anos";
+    public static final String BALANCE_BIKES_5_SLUG = "mejores-bicicletas-sin-pedales-5-anos";
+    public static final String STEM_4_SLUG = "mejores-juegos-stem-4-anos";
+    public static final String BOARD_GAMES_5_SLUG = "mejores-juegos-de-mesa-5-anos";
+    public static final String SCOOTERS_5_SLUG = "mejores-patinetes-5-anos";
+    public static final String TOWERS_5_SLUG = "mejores-torres-aprendizaje-5-anos";
+    public static final String TABLEWARE_5_SLUG = "mejores-vajillas-infantiles-5-anos";
+    public static final String SUSTAINABLE_5_SLUG = "mejores-regalos-sostenibles-5-anos";
     private static final int BALANCE_BIKES_AGE = 3;
     private static final int BOARD_GAMES_AGE = 4;
     private static final int SCOOTERS_AGE = 4;
@@ -53,6 +89,8 @@ public class ComparisonPageService {
     private static final int SUSTAINABLE_AGE = 4;
     private static final int STEM_5_AGE = 5;
     private static final int AGE_3 = 3;
+    private static final int AGE_4 = 4;
+    private static final int AGE_5 = 5;
     private static final String BIKES_PUBLISHED_AT = "2026-08-13";
     private static final String BIKES_UPDATED_AT = "2026-08-13";
     private static final String BOARD_GAMES_PUBLISHED_AT = "2026-08-14";
@@ -65,6 +103,8 @@ public class ComparisonPageService {
     private static final String STEM_5_UPDATED_AT = "2026-08-17";
     private static final String THREE_YEAR_PUBLISHED_AT = "2026-08-26";
     private static final String THREE_YEAR_UPDATED_AT = "2026-08-26";
+    private static final String FIVE_YEAR_PUBLISHED_AT = "2026-08-17";
+    private static final String FIVE_YEAR_UPDATED_AT = "2026-08-17";
     private static final String BALANCE_BIKES_CANONICAL = "https://bebesfelices.es/comparativas/"
             + BALANCE_BIKES_SLUG + "/";
     private static final String BOARD_GAMES_CANONICAL = "https://bebesfelices.es/comparativas/"
@@ -115,6 +155,42 @@ public class ComparisonPageService {
             + GIFT_SELECTION_3_SLUG + "/";
     private static final String CHOOSE_GIFT_3_CANONICAL = "https://bebesfelices.es/comparativas/"
             + CHOOSE_GIFT_3_SLUG + "/";
+    private static final String DURABLE_4_CANONICAL = "https://bebesfelices.es/comparativas/" + DURABLE_4_SLUG + "/";
+    private static final String DURABLE_5_CANONICAL = "https://bebesfelices.es/comparativas/" + DURABLE_5_SLUG + "/";
+    private static final String ARTS_NATURAL_4_CANONICAL = "https://bebesfelices.es/comparativas/" + ARTS_NATURAL_4_SLUG + "/";
+    private static final String ARTS_NATURAL_5_CANONICAL = "https://bebesfelices.es/comparativas/" + ARTS_NATURAL_5_SLUG + "/";
+    private static final String MONTESSORI_WOOD_4_CANONICAL = "https://bebesfelices.es/comparativas/" + MONTESSORI_WOOD_4_SLUG + "/";
+    private static final String MONTESSORI_WOOD_5_CANONICAL = "https://bebesfelices.es/comparativas/" + MONTESSORI_WOOD_5_SLUG + "/";
+    private static final String MONTESSORI_4_CANONICAL = "https://bebesfelices.es/comparativas/" + MONTESSORI_4_SLUG + "/";
+    private static final String MONTESSORI_5_CANONICAL = "https://bebesfelices.es/comparativas/" + MONTESSORI_5_SLUG + "/";
+    private static final String PUZZLES_4_CANONICAL = "https://bebesfelices.es/comparativas/" + PUZZLES_4_SLUG + "/";
+    private static final String PUZZLES_5_CANONICAL = "https://bebesfelices.es/comparativas/" + PUZZLES_5_SLUG + "/";
+    private static final String SYMBOLIC_4_CANONICAL = "https://bebesfelices.es/comparativas/" + SYMBOLIC_4_SLUG + "/";
+    private static final String SYMBOLIC_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SYMBOLIC_5_SLUG + "/";
+    private static final String SENSORY_4_CANONICAL = "https://bebesfelices.es/comparativas/" + SENSORY_4_SLUG + "/";
+    private static final String SENSORY_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SENSORY_5_SLUG + "/";
+    private static final String BALANCE_GUIDE_4_CANONICAL = "https://bebesfelices.es/comparativas/" + BALANCE_GUIDE_4_SLUG + "/";
+    private static final String BALANCE_GUIDE_5_CANONICAL = "https://bebesfelices.es/comparativas/" + BALANCE_GUIDE_5_SLUG + "/";
+    private static final String SCOOTERS_TRIKES_4_CANONICAL = "https://bebesfelices.es/comparativas/" + SCOOTERS_TRIKES_4_SLUG + "/";
+    private static final String SCOOTERS_TRIKES_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SCOOTERS_TRIKES_5_SLUG + "/";
+    private static final String TOWERS_KITCHEN_4_CANONICAL = "https://bebesfelices.es/comparativas/" + TOWERS_KITCHEN_4_SLUG + "/";
+    private static final String TOWERS_KITCHEN_5_CANONICAL = "https://bebesfelices.es/comparativas/" + TOWERS_KITCHEN_5_SLUG + "/";
+    private static final String TABLEWARE_DAILY_4_CANONICAL = "https://bebesfelices.es/comparativas/" + TABLEWARE_DAILY_4_SLUG + "/";
+    private static final String TABLEWARE_DAILY_5_CANONICAL = "https://bebesfelices.es/comparativas/" + TABLEWARE_DAILY_5_SLUG + "/";
+    private static final String GIFTS_4_CANONICAL = "https://bebesfelices.es/comparativas/" + GIFTS_4_SLUG + "/";
+    private static final String GIFTS_5_CANONICAL = "https://bebesfelices.es/comparativas/" + GIFTS_5_SLUG + "/";
+    private static final String GIFT_SELECTION_4_CANONICAL = "https://bebesfelices.es/comparativas/" + GIFT_SELECTION_4_SLUG + "/";
+    private static final String GIFT_SELECTION_5_CANONICAL = "https://bebesfelices.es/comparativas/" + GIFT_SELECTION_5_SLUG + "/";
+    private static final String CHOOSE_GIFT_4_CANONICAL = "https://bebesfelices.es/comparativas/" + CHOOSE_GIFT_4_SLUG + "/";
+    private static final String CHOOSE_GIFT_5_CANONICAL = "https://bebesfelices.es/comparativas/" + CHOOSE_GIFT_5_SLUG + "/";
+    private static final String BALANCE_BIKES_4_CANONICAL = "https://bebesfelices.es/comparativas/" + BALANCE_BIKES_4_SLUG + "/";
+    private static final String BALANCE_BIKES_5_CANONICAL = "https://bebesfelices.es/comparativas/" + BALANCE_BIKES_5_SLUG + "/";
+    private static final String STEM_4_CANONICAL = "https://bebesfelices.es/comparativas/" + STEM_4_SLUG + "/";
+    private static final String BOARD_GAMES_5_CANONICAL = "https://bebesfelices.es/comparativas/" + BOARD_GAMES_5_SLUG + "/";
+    private static final String SCOOTERS_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SCOOTERS_5_SLUG + "/";
+    private static final String TOWERS_5_CANONICAL = "https://bebesfelices.es/comparativas/" + TOWERS_5_SLUG + "/";
+    private static final String TABLEWARE_5_CANONICAL = "https://bebesfelices.es/comparativas/" + TABLEWARE_5_SLUG + "/";
+    private static final String SUSTAINABLE_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SUSTAINABLE_5_SLUG + "/";
 
     private static final List<EditorialEntry> BALANCE_BIKES = List.of(
             new EditorialEntry(
@@ -1027,6 +1103,212 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> MONTESSORI_4 = List.of(
+            entry(
+                    "juego-montessori-formas",
+                    "Melissa & Doug cubo de formas",
+                    "Clasificar formas y colores con piezas grandes",
+                    "Cubo de madera con 12 piezas grandes para encajar por la forma. A los 4 años sigue siendo útil si aún clasifica con ayuda; si ya lo domina, Goula o el arca dan más margen.",
+                    List.of(
+                            "Doce piezas grandes, pensadas para manos pequeñas.",
+                            "Clasificación de formas y colores en un solo objeto.",
+                            "Rango declarado de 2 a 4 años."
+                    ),
+                    List.of(
+                            "El máximo declarado es 4 años: si ya clasifica sin esfuerzo, prioriza Goula o el arca.",
+                            "No incluye un segundo nivel de dificultad en la misma caja."
+                    ),
+                    "2-4 años",
+                    note("Encaje a los 4 años", "Edad declarada hasta 4 años; piezas grandes y consigna clara."),
+                    note("Actividad", "Encajar y nombrar; una sola consigna."),
+                    note("Piezas", "12 piezas grandes de madera."),
+                    note("Seguridad", "Supervisión cercana; no es un juguete para dejar solo.")
+            ),
+            entry(
+                    "montessori-goula-baby-shapes",
+                    "Goula Baby Shapes",
+                    "Aumentar la dificultad sin cambiar de juguete",
+                    "Láminas y piezas de madera para encajar formas y colores con dificultad progresiva. A los 4 años permite empezar por láminas medias y añadir las más exigentes.",
+                    List.of(
+                            "Dificultad progresiva con varias láminas.",
+                            "Piezas de madera para encajar formas y colores.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "Hay que guardar las láminas que no se usan para no mezclar el reto.",
+                            "Un adulto debe proponer el siguiente nivel; no se explica solo."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 4 años", "Cabe en 4 años y admite crecer hasta 5."),
+                    note("Actividad", "Encaje con niveles, no un cubo único."),
+                    note("Piezas", "Láminas y piezas de madera."),
+                    note("Seguridad", "Revisa que no falten piezas pequeñas sueltas.")
+            ),
+            entry(
+                    "montessori-formas-geometricas",
+                    "Melissa & Doug puzzle de formas geométricas",
+                    "Reconocer ocho formas gruesas",
+                    "Ocho piezas gruesas de madera para reconocer formas y colores. Se termina en una sesión corta, ideal como calentamiento antes de puzles más largos.",
+                    List.of(
+                            "Ocho piezas gruesas de madera.",
+                            "Formas y colores reconocibles.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
+                            "No es un puzle de imagen; es un tablero de formas."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 4 años", "Pocas piezas gruesas, fáciles de completar."),
+                    note("Actividad", "Encajar formas, no montar una escena."),
+                    note("Piezas", "Ocho piezas de madera."),
+                    note("Seguridad", "Piezas gruesas; supervisión si hay hermanos más pequeños.")
+            ),
+            entry(
+                    "montessori-noah-ark",
+                    "Melissa & Doug Arca de Noé clasificadora",
+                    "Clasificar animales por la forma",
+                    "Arca de madera con 26 piezas de animales para clasificar por forma. A los 4 años conviene sacar un subconjunto al empezar y nombrar los animales.",
+                    List.of(
+                            "Veintiséis piezas de animales para clasificar.",
+                            "El arca guarda las piezas al terminar.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "26 piezas son más que un cubo de 12: conviene sacar solo unas pocas al empezar.",
+                            "Si hay menores de 3 años, revisa el tamaño de cada figura."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 4 años", "Útil para nombrar animales y clasificar por silueta."),
+                    note("Actividad", "Clasificar por silueta, no solo encajar un cubo."),
+                    note("Piezas", "26 figuras; saca un subconjunto al inicio."),
+                    note("Seguridad", "Comprueba que ninguna figura sea demasiado pequeña.")
+            ),
+            entry(
+                    "plantoys-ata-zapato",
+                    "PlanToys Ata el zapato",
+                    "Practicar nudos en madera de caucho",
+                    "Juguete de madera de caucho para 3 a 8 años, con tintes al agua. No es encaje de formas, pero encaja en materiales Montessori de autonomía y motricidad fina.",
+                    List.of(
+                            "Edad declarada de 3 a 8 años.",
+                            "Madera de caucho y tintes al agua según la ficha.",
+                            "Formato portable para practicar nudos."
+                    ),
+                    List.of(
+                            "No ata el zapato del niño: es un material de ensayo.",
+                            "Un adulto debe mostrar el nudo las primeras veces."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Rango 3-8 años; motricidad fina y autonomía."),
+                    note("Actividad", "Practicar nudos, no clasificar formas."),
+                    note("Madera", "Caucho y tintes al agua."),
+                    note("Seguridad", "Cordones bajo supervisión.")
+            )
+    );
+
+    private static final List<EditorialEntry> MONTESSORI_5 = List.of(
+            entry(
+                    "montessori-goula-baby-shapes",
+                    "Goula Baby Shapes",
+                    "Aumentar la dificultad sin cambiar de juguete",
+                    "Láminas y piezas de madera para encajar formas y colores con dificultad progresiva. A los 5 años conviene usar las láminas más exigentes y proponer retos de clasificación.",
+                    List.of(
+                            "Dificultad progresiva con varias láminas.",
+                            "Piezas de madera para encajar formas y colores.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "Hay que guardar las láminas que no se usan para no mezclar el reto.",
+                            "Un adulto debe proponer el siguiente nivel; no se explica solo."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 5 años", "Está en el tope del rango; usa las láminas más exigentes."),
+                    note("Actividad", "Encaje con niveles, no un cubo único."),
+                    note("Piezas", "Láminas y piezas de madera."),
+                    note("Seguridad", "Revisa que no falten piezas pequeñas sueltas.")
+            ),
+            entry(
+                    "montessori-formas-geometricas",
+                    "Melissa & Doug puzzle de formas geométricas",
+                    "Reconocer ocho formas gruesas",
+                    "Ocho piezas gruesas de madera para reconocer formas y colores. A los 5 años puede quedarse corto si ya monta puzles de 15 piezas; sirve como calentamiento.",
+                    List.of(
+                            "Ocho piezas gruesas de madera.",
+                            "Formas y colores reconocibles.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
+                            "No es un puzle de imagen; es un tablero de formas."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 5 años", "Pocas piezas; combínalo con Goula o el arca."),
+                    note("Actividad", "Encajar formas, no montar una escena."),
+                    note("Piezas", "Ocho piezas de madera."),
+                    note("Seguridad", "Piezas gruesas; supervisión si hay hermanos más pequeños.")
+            ),
+            entry(
+                    "montessori-noah-ark",
+                    "Melissa & Doug Arca de Noé clasificadora",
+                    "Clasificar animales por la forma",
+                    "Arca de madera con 26 piezas de animales para clasificar por forma. A los 5 años puede usar más figuras a la vez y nombrar grupos de animales.",
+                    List.of(
+                            "Veintiséis piezas de animales para clasificar.",
+                            "El arca guarda las piezas al terminar.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "26 piezas piden recogida al terminar.",
+                            "Si hay menores de 3 años, revisa el tamaño de cada figura."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 5 años", "Clasificar por silueta y vocabulario de animales."),
+                    note("Actividad", "Clasificar por silueta, no solo encajar un cubo."),
+                    note("Piezas", "26 figuras; saca un subconjunto si abruma."),
+                    note("Seguridad", "Comprueba que ninguna figura sea demasiado pequeña.")
+            ),
+            entry(
+                    "plantoys-ata-zapato",
+                    "PlanToys Ata el zapato",
+                    "Practicar nudos en madera de caucho",
+                    "Juguete de madera de caucho para 3 a 8 años. Practica nudos y autonomía de vestirse; encaja como material Montessori de motricidad fina.",
+                    List.of(
+                            "Edad declarada de 3 a 8 años.",
+                            "Madera de caucho y tintes al agua según la ficha.",
+                            "Formato portable para practicar nudos."
+                    ),
+                    List.of(
+                            "No ata el zapato del niño: es un material de ensayo.",
+                            "Un adulto debe mostrar el nudo las primeras veces."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 5 años", "Rango 3-8; autonomía y motricidad fina."),
+                    note("Actividad", "Practicar nudos, no clasificar formas."),
+                    note("Madera", "Caucho y tintes al agua."),
+                    note("Seguridad", "Cordones bajo supervisión.")
+            ),
+            entry(
+                    "cuentas-melissa-doug",
+                    "Melissa & Doug cuentas de madera",
+                    "Ensartar y contar con madera",
+                    "27 cuentas de madera, números del 1 al 10 y 2 cordones, a partir de 3 años. Motricidad fina y conteo; cordones y cuentas piden supervisión.",
+                    List.of(
+                            "Madera, 27 piezas y 2 cordones.",
+                            "Edad declarada a partir de 3 años.",
+                            "Juego sin pantallas."
+                    ),
+                    List.of(
+                            "Riesgo de asfixia si se usan mal: no se deja solo.",
+                            "No es un cubo de encaje."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 5 años", "Edad mínima 3 años; ensartar y contar."),
+                    note("Actividad", "Ensartar y clasificar, no encajar formas."),
+                    note("Madera", "Cuentas de madera."),
+                    note("Seguridad", "Cordones bajo supervisión.")
+            )
+    );
+
     private static final List<EditorialEntry> PUZZLES_3 = List.of(
             entry(
                     "puzle-madera-animales",
@@ -1519,6 +1801,109 @@ public class ComparisonPageService {
                     List.of(
                             "Requiere un adulto dispuesto a sentarse un rato.",
                             "La plastilina se gasta; no es un objeto de madera permanente."
+                    ),
+                    "Desde 3 años",
+                    note("Necesidad", "Crear y manipular materiales."),
+                    note("Uso", "Mesa, con un adulto."),
+                    note("Regalo", "Encaja si la familia ya modela o pinta un poco."),
+                    note("Límite", "No publicamos certificaciones que no figuren en ficha.")
+            )
+    );
+
+    private static final List<EditorialEntry> GIFTS_5 = List.of(
+            entry(
+                    "set-construccion-magnetico",
+                    "Set de construcción magnético",
+                    "Un regalo para construir y razonar",
+                    "Piezas magnéticas para construir estructuras tridimensionales. A los 5 años plantea retos de lógica espacial que pueden crecer añadiendo piezas.",
+                    List.of(
+                            "Construcción tridimensional con piezas magnéticas.",
+                            "La dificultad se adapta al número de piezas.",
+                            "Rango declarado de 4 a 5 años."
+                    ),
+                    List.of(
+                            "Los imanes deben permanecer encapsulados.",
+                            "Requiere revisar piezas sueltas si hay hermanos pequeños."
+                    ),
+                    "4-5 años",
+                    note("Necesidad", "Aprender: construcción y lógica espacial."),
+                    note("Uso", "Mesa o suelo, con supervisión al principio."),
+                    note("Regalo", "Encaja si le gusta construir estructuras."),
+                    note("Límite", "No sustituye movimiento ni autonomía.")
+            ),
+            entry(
+                    "puzle-madera-animales",
+                    "Melissa & Doug puzle de animales del safari",
+                    "Un regalo breve que se puede terminar",
+                    "Puzle de madera de piezas grandes. A los 5 años puede quedarse corto si ya monta 15 piezas; sirve como regalo seguro si no conoces otros juguetes.",
+                    List.of(
+                            "Se puede terminar en una sesión.",
+                            "Motivo de animales reconocible.",
+                            "Madera y piezas grandes."
+                    ),
+                    List.of(
+                            "Si ya monta puzles más complejos, elige construcción o juego de mesa.",
+                            "No es un juguete de movimiento."
+                    ),
+                    "2-5 años",
+                    note("Necesidad", "Motricidad fina y completar una tarea."),
+                    note("Uso", "Mesa o suelo."),
+                    note("Regalo", "Fácil de acertar si no conoces la casa."),
+                    note("Límite", "Una escena; no un pack para meses.")
+            ),
+            entry(
+                    "bici-sin-pedales-basica",
+                    "Bicicleta sin pedales básica",
+                    "Un regalo para moverse con seguridad",
+                    "Bicicleta sin pedales de cuadro ligero y sillín regulable. El detalle está en la comparativa de bicicletas; aquí cuenta como idea de regalo de movimiento.",
+                    List.of(
+                            "Cuadro ligero y sillín regulable.",
+                            "Practica equilibrio sentado.",
+                            "Rango declarado de 3 a 5 años."
+                    ),
+                    List.of(
+                            "Requiere casco, talla correcta y un espacio sin tráfico.",
+                            "Comprueba la entrepierna antes de regalar."
+                    ),
+                    "3-5 años",
+                    note("Necesidad", "Movimiento y equilibrio sentado."),
+                    note("Uso", "Exterior; no es un juguete de salón."),
+                    note("Regalo", "Comprueba la talla antes de comprarlo."),
+                    note("Límite", "No es un patinete ni un triciclo.")
+            ),
+            entry(
+                    "juego-mesa-cooperativo",
+                    "Juego de mesa cooperativo",
+                    "Un regalo para jugar en familia",
+                    "Partidas cortas en las que se gana o se pierde en equipo. A los 5 años introduce turnos y reglas sencillas con más paciencia que a los 4.",
+                    List.of(
+                            "Cooperativo: se gana o se pierde en equipo.",
+                            "Partidas declaradas de duración breve.",
+                            "Edad declarada a partir de 4 años."
+                    ),
+                    List.of(
+                            "Requiere explicar las reglas la primera vez.",
+                            "No sustituye juguetes de movimiento."
+                    ),
+                    "Desde 4 años",
+                    note("Necesidad", "Juego social y reglas sencillas."),
+                    note("Uso", "Mesa, con adulto la primera partida."),
+                    note("Regalo", "Clásico de cumpleaños si ya juega en familia."),
+                    note("Límite", "No es construcción ni movimiento.")
+            ),
+            entry(
+                    "kit-manualidades-natural",
+                    "Kit de manualidades con materiales naturales",
+                    "Un regalo para crear sin pantallas",
+                    "SES Creative Eco: plastilina de materias primas naturales y herramientas de madera. Las sesiones son más largas a los 5 años, pero sigue haciendo falta un adulto al principio.",
+                    List.of(
+                            "Materias primas naturales y herramientas de madera según la ficha.",
+                            "Uso sin pantalla.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "Requiere un adulto dispuesto a sentarse un rato.",
+                            "La plastilina se gasta; no es un objeto permanente."
                     ),
                     "Desde 3 años",
                     note("Necesidad", "Crear y manipular materiales."),
@@ -2385,6 +2770,42 @@ public class ComparisonPageService {
             case TABLEWARE_DAILY_3_SLUG -> Optional.of(buildTablewareDailyThreePage());
             case GIFT_SELECTION_3_SLUG -> Optional.of(buildGiftSelectionThreePage());
             case CHOOSE_GIFT_3_SLUG -> Optional.of(buildChooseGiftThreePage());
+            case DURABLE_4_SLUG -> Optional.of(buildDurable4Page());
+            case DURABLE_5_SLUG -> Optional.of(buildDurable5Page());
+            case ARTS_NATURAL_4_SLUG -> Optional.of(buildArtsNatural4Page());
+            case ARTS_NATURAL_5_SLUG -> Optional.of(buildArtsNatural5Page());
+            case MONTESSORI_WOOD_4_SLUG -> Optional.of(buildMontessoriWood4Page());
+            case MONTESSORI_WOOD_5_SLUG -> Optional.of(buildMontessoriWood5Page());
+            case MONTESSORI_4_SLUG -> Optional.of(buildMontessori4Page());
+            case MONTESSORI_5_SLUG -> Optional.of(buildMontessori5Page());
+            case PUZZLES_4_SLUG -> Optional.of(buildPuzzles4Page());
+            case PUZZLES_5_SLUG -> Optional.of(buildPuzzles5Page());
+            case SYMBOLIC_4_SLUG -> Optional.of(buildSymbolic4Page());
+            case SYMBOLIC_5_SLUG -> Optional.of(buildSymbolic5Page());
+            case SENSORY_4_SLUG -> Optional.of(buildSensory4Page());
+            case SENSORY_5_SLUG -> Optional.of(buildSensory5Page());
+            case BALANCE_GUIDE_4_SLUG -> Optional.of(buildBalanceGuide4Page());
+            case BALANCE_GUIDE_5_SLUG -> Optional.of(buildBalanceGuide5Page());
+            case SCOOTERS_TRIKES_4_SLUG -> Optional.of(buildScootersTrikes4Page());
+            case SCOOTERS_TRIKES_5_SLUG -> Optional.of(buildScootersTrikes5Page());
+            case TOWERS_KITCHEN_4_SLUG -> Optional.of(buildTowersKitchen4Page());
+            case TOWERS_KITCHEN_5_SLUG -> Optional.of(buildTowersKitchen5Page());
+            case TABLEWARE_DAILY_4_SLUG -> Optional.of(buildTablewareDaily4Page());
+            case TABLEWARE_DAILY_5_SLUG -> Optional.of(buildTablewareDaily5Page());
+            case GIFTS_4_SLUG -> Optional.of(buildGifts4Page());
+            case GIFTS_5_SLUG -> Optional.of(buildGifts5Page());
+            case GIFT_SELECTION_4_SLUG -> Optional.of(buildGiftSelection4Page());
+            case GIFT_SELECTION_5_SLUG -> Optional.of(buildGiftSelection5Page());
+            case CHOOSE_GIFT_4_SLUG -> Optional.of(buildChooseGift4Page());
+            case CHOOSE_GIFT_5_SLUG -> Optional.of(buildChooseGift5Page());
+            case BALANCE_BIKES_4_SLUG -> Optional.of(buildBalanceBikes4Page());
+            case BALANCE_BIKES_5_SLUG -> Optional.of(buildBalanceBikes5Page());
+            case STEM_4_SLUG -> Optional.of(buildStem4Page());
+            case BOARD_GAMES_5_SLUG -> Optional.of(buildBoardGames5Page());
+            case SCOOTERS_5_SLUG -> Optional.of(buildScooters5Page());
+            case TOWERS_5_SLUG -> Optional.of(buildTowers5Page());
+            case TABLEWARE_5_SLUG -> Optional.of(buildTableware5Page());
+            case SUSTAINABLE_5_SLUG -> Optional.of(buildSustainable5Page());
             default -> Optional.empty();
         };
     }
@@ -4388,6 +4809,2730 @@ public class ComparisonPageService {
         );
     }
 
+    private ComparisonPageResponse buildDurable4Page() {
+        return ageComparison(
+                DURABLE_4_SLUG,
+                DURABLE_4_CANONICAL,
+                AGE_4,
+                DURABLE_3,
+                "Mejores regalos duraderos para 4 años | Bebes Felices",
+                "Comparamos cinco regalos reales para 4 años pensados para aguantar el juego intenso y seguir usándose, con metodología y afiliación transparentes.",
+                "Regalos duraderos para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores regalos duraderos para 4 años",
+                        "Cinco productos reales pensados para repetirse, no para un solo uso",
+                        List.of(
+                                "Duradero, aquí, significa un objeto que se saca muchas veces: madera, plástico lavable o cartón grueso, sin pantallas ni kits que se consumen en una tarde. No es un sello de «irrompible» ni una garantía de años que no podamos verificar.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Cuentas, cordones y figuras pequeñas piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para el juego de obra que se repite", "small-foot-grua", "Grúa de madera con manivela y giro 360°."),
+                        summary("Para empujar y lavar", "green-toys-construccion", "Tres vehículos lavables, de 24 a 72 meses."),
+                        summary("Para un gesto que dura años", "plantoys-ata-zapato", "Madera de caucho para practicar nudos hasta los 8."),
+                        summary("Para encajar y volver a sacar", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
+                        summary("Para ensartar muchas veces", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el objeto se puede repetir a los 4 años. No asignamos una nota de durabilidad ni prometemos una vida útil en años.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
+                                criterion("Duración", "Si se guarda y se saca. Evitamos kits de un solo uso que no están en esta lista."),
+                                criterion("Uso real", "Qué se hace con el objeto: no basta con que sea de madera."),
+                                criterion("Resistencia", "Material que aguante caídas, agua ocasional o el suelo, según la ficha."),
+                                criterion("Seguridad", "Cordones, cuentas y figuras. Un objeto duradero no elimina el riesgo.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el gesto que se va a repetir", List.of(
+                                "Obra: Small Foot. Empujar y lavar: Green Toys. Atar: PlanToys. Encajar: HABA. Ensartar: las cuentas.",
+                                "Si ya tiene un cubo de formas o un puzle de una sola escena, prioriza un objeto que se use en la rutina o al aire libre."
+                        )),
+                        section("Duradero no es lo mismo que sostenible", List.of(
+                                "Aquí miramos si se va a usar más de una temporada. La comparativa de regalos sostenibles detalla materiales declarados (FSC, plástico reciclado, tintes).",
+                                "Un kit de plastilina puede ser de materias primas naturales y, aun así, gastarse. Por eso no está en esta lista."
+                        )),
+                        section("Supervisión", List.of(
+                                "Cordones, cuentas y figuras no se dejan con menores de 4 años.",
+                                "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un regalo duradero a los 4 años?",
+                                "Uno que se saca muchas veces: encajar, empujar, atar o ensartar. No publicamos una vida útil en años ni un sello de irrompible."),
+                        faqItem("¿Por qué no está el kit de manualidades?",
+                                "La plastilina se gasta. Encaja como actividad para crear sin pantallas, y está en la comparativa de regalos sostenibles, no en esta lista de objetos que se vuelven a usar."),
+                        faqItem("¿Madera siempre dura más que plástico?",
+                                "No en abstracto. Los vehículos Green Toys se lavan y cubren arena y agua; la grúa de madera cubre otro tipo de juego. Elige según el uso."),
+                        faqItem("¿El zapato PlanToys sustituye aprender a atarse?",
+                                "No. Es un material de ensayo. Un adulto muestra el nudo; el zapato de verdad sigue haciendo falta."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 4 años",
+                                "/comparativas/" + SUSTAINABLE_SLUG + "/",
+                                "Materiales declarados: madera, FSC o plástico reciclado."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildDurable5Page() {
+        return ageComparison(
+                DURABLE_5_SLUG,
+                DURABLE_5_CANONICAL,
+                AGE_5,
+                DURABLE_3,
+                "Mejores regalos duraderos para 5 años | Bebes Felices",
+                "Comparamos cinco regalos reales para 5 años pensados para aguantar el juego intenso y seguir usándose, con metodología y afiliación transparentes.",
+                "Regalos duraderos para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores regalos duraderos para 5 años",
+                        "Cinco productos reales pensados para repetirse, no para un solo uso",
+                        List.of(
+                                "Duradero, aquí, significa un objeto que se saca muchas veces: madera, plástico lavable o cartón grueso, sin pantallas ni kits que se consumen en una tarde. No es un sello de «irrompible» ni una garantía de años que no podamos verificar.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Cuentas, cordones y figuras pequeñas piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para el juego de obra que se repite", "small-foot-grua", "Grúa de madera con manivela y giro 360°."),
+                        summary("Para empujar y lavar", "green-toys-construccion", "Tres vehículos lavables, de 24 a 72 meses."),
+                        summary("Para un gesto que dura años", "plantoys-ata-zapato", "Madera de caucho para practicar nudos hasta los 8."),
+                        summary("Para encajar y volver a sacar", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
+                        summary("Para ensartar muchas veces", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el objeto se puede repetir a los 5 años. No asignamos una nota de durabilidad ni prometemos una vida útil en años.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
+                                criterion("Duración", "Si se guarda y se saca. Evitamos kits de un solo uso que no están en esta lista."),
+                                criterion("Uso real", "Qué se hace con el objeto: no basta con que sea de madera."),
+                                criterion("Resistencia", "Material que aguante caídas, agua ocasional o el suelo, según la ficha."),
+                                criterion("Seguridad", "Cordones, cuentas y figuras. Un objeto duradero no elimina el riesgo.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el gesto que se va a repetir", List.of(
+                                "Obra: Small Foot. Empujar y lavar: Green Toys. Atar: PlanToys. Encajar: HABA. Ensartar: las cuentas.",
+                                "Si ya tiene un cubo de formas o un puzle de una sola escena, prioriza un objeto que se use en la rutina o al aire libre."
+                        )),
+                        section("Duradero no es lo mismo que sostenible", List.of(
+                                "Aquí miramos si se va a usar más de una temporada. La comparativa de regalos sostenibles detalla materiales declarados (FSC, plástico reciclado, tintes).",
+                                "Un kit de plastilina puede ser de materias primas naturales y, aun así, gastarse. Por eso no está en esta lista."
+                        )),
+                        section("Supervisión", List.of(
+                                "Cordones, cuentas y figuras no se dejan con menores de 5 años.",
+                                "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un regalo duradero a los 5 años?",
+                                "Uno que se saca muchas veces: encajar, empujar, atar o ensartar. No publicamos una vida útil en años ni un sello de irrompible."),
+                        faqItem("¿Por qué no está el kit de manualidades?",
+                                "La plastilina se gasta. Encaja como actividad para crear sin pantallas, y está en la comparativa de regalos sostenibles, no en esta lista de objetos que se vuelven a usar."),
+                        faqItem("¿Madera siempre dura más que plástico?",
+                                "No en abstracto. Los vehículos Green Toys se lavan y cubren arena y agua; la grúa de madera cubre otro tipo de juego. Elige según el uso."),
+                        faqItem("¿El zapato PlanToys sustituye aprender a atarse?",
+                                "No. Es un material de ensayo. Un adulto muestra el nudo; el zapato de verdad sigue haciendo falta."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 5 años",
+                                "/comparativas/" + SUSTAINABLE_5_SLUG + "/",
+                                "Materiales declarados: madera, FSC o plástico reciclado."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildArtsNatural4Page() {
+        return ageComparison(
+                ARTS_NATURAL_4_SLUG,
+                ARTS_NATURAL_4_CANONICAL,
+                AGE_4,
+                ARTS_NATURAL_3,
+                "Arte y manualidades con materiales naturales para 4 años | Bebes Felices",
+                "Comparamos cinco opciones reales para crear a los 4 años: plastilina ecológica, témpera lavable y un maletín para colorear, con metodología y afiliación transparentes.",
+                "Arte y manualidades para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Arte y manualidades con materiales naturales para 4 años",
+                        "Cinco formas de crear en mesa, con un adulto y sin pantallas",
+                        List.of(
+                                "A los 4 años crear es modelar, pintar o colorear en sesiones cortas. Priorizamos el kit de materias primas naturales y pinturas lavables que se pueden recoger. No es un taller sin adulto ni un set de un solo uso de pegatinas.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Mantel, babero y supervisión. La plastilina y la témpera manchan; el maletín se guarda entero."
+                        )
+                ),
+                "Las cinco opciones",
+                List.of(
+                        summary("Para modelar sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
+                        summary("Para pintar con agua", "arte-crayola-tempera-6", "Seis botes de témpera lavable."),
+                        summary("Para un extra de brillo", "arte-crayola-effects", "Diez témperas con efectos, si ya pinta."),
+                        summary("Para acabado metal", "arte-crayola-metallic", "Seis colores metálicos lavables."),
+                        summary("Para colorear y guardar", "arte-crayola-paw-patrol", "Maletín con ceras y hojas.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el gesto de crear a los 4 años y si el material se puede cuidar. No asignamos una nota artística ni un sello eco que la ficha no muestre.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si cabe en una sesión corta con un adulto."),
+                                criterion("Materiales", "Naturales, lavables o fáciles de recoger cuando constan en ficha."),
+                                criterion("Uso", "Modelar, pintar o colorear: no mezclamos tres gestos en uno."),
+                                criterion("Cuidado", "Si se lava, se cierra o se guarda en maletín."),
+                                criterion("Límite", "Mancha, piezas sueltas y la plastilina que se gasta.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por el gesto", List.of(
+                                "Modelar: el kit. Pintar: témpera de 6. Colorear: el maletín. Efectos y metal, si ya aguanta pintar."
+                        )),
+                        section("Natural no es lo mismo que lavable", List.of(
+                                "El kit declara materias primas naturales y madera. Las témperas Crayola declaran lavabilidad, no un sello de material natural."
+                        )),
+                        section("Supervisión", List.of(
+                                "Nada de esto se deja solo. Cierra botes y guarda la plastilina al terminar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta un kit «eco»?",
+                                "No. El kit de plastilina es la opción del catálogo con materiales naturales declarados. Pintar lavable también crea, con otro material."),
+                        faqItem("¿Se puede usar sin adulto?",
+                                "No al principio. A los 4 años el adulto dosifica pintura, sujeta el papel y evita que se coma el material."),
+                        faqItem("¿Por qué no está el maletín de 100 piezas?",
+                                "Esa ficha parte de 4 años. Aquí solo entran productos con edad mínima 3."),
+                        faqItem("¿La plastilina dura como la madera?",
+                                "No. Se gasta. Si buscas un objeto permanente, ve a regalos duraderos o a Montessori de madera."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 4 años",
+                                "/comparativas/" + SUSTAINABLE_SLUG + "/",
+                                "El kit de crear, en el contexto de materiales declarados."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildArtsNatural5Page() {
+        return ageComparison(
+                ARTS_NATURAL_5_SLUG,
+                ARTS_NATURAL_5_CANONICAL,
+                AGE_5,
+                ARTS_NATURAL_3,
+                "Arte y manualidades con materiales naturales para 5 años | Bebes Felices",
+                "Comparamos cinco opciones reales para crear a los 5 años: plastilina ecológica, témpera lavable y un maletín para colorear, con metodología y afiliación transparentes.",
+                "Arte y manualidades para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Arte y manualidades con materiales naturales para 5 años",
+                        "Cinco formas de crear en mesa, con un adulto y sin pantallas",
+                        List.of(
+                                "A los 5 años crear es modelar, pintar o colorear en sesiones cortas. Priorizamos el kit de materias primas naturales y pinturas lavables que se pueden recoger. No es un taller sin adulto ni un set de un solo uso de pegatinas.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Mantel, babero y supervisión. La plastilina y la témpera manchan; el maletín se guarda entero."
+                        )
+                ),
+                "Las cinco opciones",
+                List.of(
+                        summary("Para modelar sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
+                        summary("Para pintar con agua", "arte-crayola-tempera-6", "Seis botes de témpera lavable."),
+                        summary("Para un extra de brillo", "arte-crayola-effects", "Diez témperas con efectos, si ya pinta."),
+                        summary("Para acabado metal", "arte-crayola-metallic", "Seis colores metálicos lavables."),
+                        summary("Para colorear y guardar", "arte-crayola-paw-patrol", "Maletín con ceras y hojas.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el gesto de crear a los 5 años y si el material se puede cuidar. No asignamos una nota artística ni un sello eco que la ficha no muestre.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si cabe en una sesión corta con un adulto."),
+                                criterion("Materiales", "Naturales, lavables o fáciles de recoger cuando constan en ficha."),
+                                criterion("Uso", "Modelar, pintar o colorear: no mezclamos tres gestos en uno."),
+                                criterion("Cuidado", "Si se lava, se cierra o se guarda en maletín."),
+                                criterion("Límite", "Mancha, piezas sueltas y la plastilina que se gasta.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por el gesto", List.of(
+                                "Modelar: el kit. Pintar: témpera de 6. Colorear: el maletín. Efectos y metal, si ya aguanta pintar."
+                        )),
+                        section("Natural no es lo mismo que lavable", List.of(
+                                "El kit declara materias primas naturales y madera. Las témperas Crayola declaran lavabilidad, no un sello de material natural."
+                        )),
+                        section("Supervisión", List.of(
+                                "Nada de esto se deja solo. Cierra botes y guarda la plastilina al terminar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta un kit «eco»?",
+                                "No. El kit de plastilina es la opción del catálogo con materiales naturales declarados. Pintar lavable también crea, con otro material."),
+                        faqItem("¿Se puede usar sin adulto?",
+                                "No al principio. A los 5 años el adulto dosifica pintura, sujeta el papel y evita que se coma el material."),
+                        faqItem("¿Por qué no está el maletín de 100 piezas?",
+                                "Esa ficha parte de 4 años. Aquí solo entran productos con edad mínima 3."),
+                        faqItem("¿La plastilina dura como la madera?",
+                                "No. Se gasta. Si buscas un objeto permanente, ve a regalos duraderos o a Montessori de madera."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores regalos sostenibles para 5 años",
+                                "/comparativas/" + SUSTAINABLE_5_SLUG + "/",
+                                "El kit de crear, en el contexto de materiales declarados."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildMontessoriWood4Page() {
+        return ageComparison(
+                MONTESSORI_WOOD_4_SLUG,
+                MONTESSORI_WOOD_4_CANONICAL,
+                AGE_4,
+                MONTESSORI_WOOD_3,
+                "Juegos Montessori de madera para 4 años | Bebes Felices",
+                "Comparamos cinco juguetes de madera para 4 años: encaje FSC, láminas, grúa, zapato y cuentas, con metodología y afiliación transparentes.",
+                "Montessori de madera para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Juegos Montessori de madera para 4 años",
+                        "Cinco objetos de madera para encajar, ensartar, atar u obra",
+                        List.of(
+                                "Montessori, aquí, es actividad clara con madera: encajar, ensartar, ensayar un nudo o jugar a la obra. No es un certificado oficial ni un cubo único repetido cinco veces.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Cuentas, cordones y cuerda de grúa piden supervisión. La madera no elimina piezas pequeñas."
+                        )
+                ),
+                "Los cinco juegos",
+                List.of(
+                        summary("Para encajar en FSC", "montessori-janod-tropik", "Soporte de madera FSC hasta 4 años."),
+                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
+                        summary("Para obra en madera", "small-foot-grua", "Grúa FSC 100 % con manivela."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
+                        summary("Para ensartar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos madera y gesto para un niño de 4 años. No es la comparativa de formas y encajes: aquí entra también la grúa y el zapato.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
+                                criterion("Madera", "FSC, caucho o cuentas cuando la ficha lo dice."),
+                                criterion("Actividad", "Encajar, ensartar, atar u obra: no repetimos el mismo cubo."),
+                                criterion("Duración", "Si el objeto se saca más de una tarde."),
+                                criterion("Seguridad", "Cordones, cuentas y cuerda.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el gesto, no la etiqueta Montessori", List.of(
+                                "Encajar: Janod o Goula. Obra: Small Foot. Vestirse: PlanToys. Ensartar: las cuentas."
+                        )),
+                        section("Si ya tienes el cubo de 12 piezas", List.of(
+                                "No lo dupliques. Esa ficha está en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
+                        )),
+                        section("Supervisión", List.of(
+                                "Cuentas y cordones no se dejan con menores de 4 años. La manivela de la grúa pide un adulto al principio."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta el sello Montessori?",
+                                "No. Cuenta la actividad y la madera, no el nombre comercial."),
+                        faqItem("¿Janod no se queda corto a los 4 años?",
+                                "El rango llega hasta 4 años. Si ya clasifica sin esfuerzo, Goula o la grúa alargan el uso."),
+                        faqItem("¿Dónde está el cubo Melissa & Doug?",
+                                "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
+                        faqItem("¿Todo lo de madera es igual?",
+                                "No. FSC 100 %, caucho o cuentas no son intercambiables. Elige según el uso."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores juegos Montessori de formas y encajes para 4 años",
+                                "/comparativas/" + MONTESSORI_4_SLUG + "/",
+                                "Si el gesto que buscas es encajar piezas grandes."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildMontessoriWood5Page() {
+        return ageComparison(
+                MONTESSORI_WOOD_5_SLUG,
+                MONTESSORI_WOOD_5_CANONICAL,
+                AGE_5,
+                MONTESSORI_WOOD_3,
+                "Juegos Montessori de madera para 5 años | Bebes Felices",
+                "Comparamos cinco juguetes de madera para 5 años: encaje FSC, láminas, grúa, zapato y cuentas, con metodología y afiliación transparentes.",
+                "Montessori de madera para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Juegos Montessori de madera para 5 años",
+                        "Cinco objetos de madera para encajar, ensartar, atar u obra",
+                        List.of(
+                                "Montessori, aquí, es actividad clara con madera: encajar, ensartar, ensayar un nudo o jugar a la obra. No es un certificado oficial ni un cubo único repetido cinco veces.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Cuentas, cordones y cuerda de grúa piden supervisión. La madera no elimina piezas pequeñas."
+                        )
+                ),
+                "Los cinco juegos",
+                List.of(
+                        summary("Para encajar en FSC", "montessori-janod-tropik", "Soporte de madera FSC hasta 5 años."),
+                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
+                        summary("Para obra en madera", "small-foot-grua", "Grúa FSC 100 % con manivela."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
+                        summary("Para ensartar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos madera y gesto para un niño de 5 años. No es la comparativa de formas y encajes: aquí entra también la grúa y el zapato.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
+                                criterion("Madera", "FSC, caucho o cuentas cuando la ficha lo dice."),
+                                criterion("Actividad", "Encajar, ensartar, atar u obra: no repetimos el mismo cubo."),
+                                criterion("Duración", "Si el objeto se saca más de una tarde."),
+                                criterion("Seguridad", "Cordones, cuentas y cuerda.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el gesto, no la etiqueta Montessori", List.of(
+                                "Encajar: Janod o Goula. Obra: Small Foot. Vestirse: PlanToys. Ensartar: las cuentas."
+                        )),
+                        section("Si ya tienes el cubo de 12 piezas", List.of(
+                                "No lo dupliques. Esa ficha está en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
+                        )),
+                        section("Supervisión", List.of(
+                                "Cuentas y cordones no se dejan con menores de 5 años. La manivela de la grúa pide un adulto al principio."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta el sello Montessori?",
+                                "No. Cuenta la actividad y la madera, no el nombre comercial."),
+                        faqItem("¿Janod no se queda corto a los 5 años?",
+                                "El rango llega hasta 5 años. Si ya clasifica sin esfuerzo, Goula o la grúa alargan el uso."),
+                        faqItem("¿Dónde está el cubo Melissa & Doug?",
+                                "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
+                        faqItem("¿Todo lo de madera es igual?",
+                                "No. FSC 100 %, caucho o cuentas no son intercambiables. Elige según el uso."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores juegos Montessori de formas y encajes para 5 años",
+                                "/comparativas/" + MONTESSORI_5_SLUG + "/",
+                                "Si el gesto que buscas es encajar piezas grandes."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildMontessori4Page() {
+        return ageComparison(
+                MONTESSORI_4_SLUG,
+                MONTESSORI_4_CANONICAL,
+                AGE_4,
+                MONTESSORI_4,
+                "Mejores juegos Montessori de formas y encajes para 4 años | Bebes Felices",
+                "Comparamos cinco juegos de encaje y clasificación reales para 4 años por piezas, actividad y margen de dificultad, con metodología y afiliación transparentes.",
+                "Juegos Montessori para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores juegos Montessori de formas y encajes para 4 años",
+                        "Cinco materiales reales para clasificar formas y colores",
+                        List.of(
+                                "A los 4 años el encaje útil es el que se entiende sin un manual: coger una pieza, nombrar la forma y meterla. El adjetivo «Montessori» no sustituye piezas grandes ni una consigna clara.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Un adulto cercano sigue haciendo falta. Si hay hermanos más pequeños, revisa el tamaño de cada figura antes de dejar el set en el suelo."
+                        )
+                ),
+                "Los cinco juegos",
+                List.of(
+                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas y una sola consigna."),
+                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas progresivas de 2 a 5 años."),
+                        summary("Para ocho formas gruesas", "montessori-formas-geometricas", "Se termina en una sesión corta."),
+                        summary("Para clasificar animales", "montessori-noah-ark", "26 piezas; saca un subconjunto al inicio."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho para autonomía.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la actividad de encaje y su utilidad para un niño de 4 años. No asignamos una nota «Montessori» ni completamos certificaciones que la ficha no muestre.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si se puede terminar una ronda sin frustración."),
+                                criterion("Actividad", "Clasificar y encajar, no un set con diez modos."),
+                                criterion("Piezas", "Número y tamaño. 12 piezas no son 26."),
+                                criterion("Margen de dificultad", "Si el material se queda corto en semanas o admite un siguiente nivel."),
+                                criterion("Seguridad", "Piezas grandes y supervisión. El nombre comercial no elimina el riesgo.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por lo que ya hace", List.of(
+                                "Si aún encaja con ayuda, el cubo de 12 piezas o Janod bastan. Si ya clasifica sin esfuerzo, Goula o el arca dan más margen.",
+                                "No elijas por el sello Montessori. Elige por si el niño puede completar una ronda hoy."
+                        )),
+                        section("Cuántas piezas sacar", List.of(
+                                "Con 26 figuras, saca cuatro o cinco al empezar. El arca guarda el resto.",
+                                "Mezclar todas las láminas de Goula a la vez convierte el reto en un desorden."
+                        )),
+                        section("Supervisión", List.of(
+                                "Es un material de mesa o de suelo con un adulto cerca, no un juguete para la habitación a solas.",
+                                "Revisa piezas pequeñas si hay menores de 4 años en casa."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta un material certificado Montessori?",
+                                "No. Lo útil es clasificar y encajar con piezas seguras. El nombre comercial no sustituye el criterio de edad."),
+                        faqItem("¿Cuántas piezas son demasiadas a los 4 años?",
+                                "Si no puede terminar una ronda, sobran. Empieza por un cubo reducido y añade dificultad después."),
+                        faqItem("¿Janod sirve si ya tiene 4 años cumplidos?",
+                                "Está en el tope de su rango. Si ya clasifica con soltura, Goula o el cubo de 12 dan más recorrido."),
+                        faqItem("¿Se puede usar sin un adulto?",
+                                "Con supervisión cercana, sí, cuando las piezas son grandes. No es un juguete para dejar solo."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Puzles de piezas grandes para 4 años",
+                                "/comparativas/" + MONTESSORI_4_SLUG + "/",
+                                "Otra vía de motricidad fina: completar una imagen."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildMontessori5Page() {
+        return ageComparison(
+                MONTESSORI_5_SLUG,
+                MONTESSORI_5_CANONICAL,
+                AGE_5,
+                MONTESSORI_5,
+                "Mejores juegos Montessori de formas y encajes para 5 años | Bebes Felices",
+                "Comparamos cinco juegos de encaje y clasificación reales para 5 años por piezas, actividad y margen de dificultad, con metodología y afiliación transparentes.",
+                "Juegos Montessori para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores juegos Montessori de formas y encajes para 5 años",
+                        "Cinco materiales reales para clasificar formas y colores",
+                        List.of(
+                                "A los 5 años el encaje útil es el que se entiende sin un manual: coger una pieza, nombrar la forma y meterla. El adjetivo «Montessori» no sustituye piezas grandes ni una consigna clara.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Un adulto cercano sigue haciendo falta. Si hay hermanos más pequeños, revisa el tamaño de cada figura antes de dejar el set en el suelo."
+                        )
+                ),
+                "Los cinco juegos",
+                List.of(
+                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas progresivas de 2 a 5 años."),
+                        summary("Para ocho formas gruesas", "montessori-formas-geometricas", "Se termina en una sesión corta."),
+                        summary("Para clasificar animales", "montessori-noah-ark", "26 piezas; saca un subconjunto al inicio."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho para autonomía."),
+                        summary("Para ensartar y contar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la actividad de encaje y su utilidad para un niño de 5 años. No asignamos una nota «Montessori» ni completamos certificaciones que la ficha no muestre.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si se puede terminar una ronda sin frustración."),
+                                criterion("Actividad", "Clasificar y encajar, no un set con diez modos."),
+                                criterion("Piezas", "Número y tamaño. 12 piezas no son 26."),
+                                criterion("Margen de dificultad", "Si el material se queda corto en semanas o admite un siguiente nivel."),
+                                criterion("Seguridad", "Piezas grandes y supervisión. El nombre comercial no elimina el riesgo.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por lo que ya hace", List.of(
+                                "Si aún encaja con ayuda, el cubo de 12 piezas o Janod bastan. Si ya clasifica sin esfuerzo, Goula o el arca dan más margen.",
+                                "No elijas por el sello Montessori. Elige por si el niño puede completar una ronda hoy."
+                        )),
+                        section("Cuántas piezas sacar", List.of(
+                                "Con 26 figuras, saca cuatro o cinco al empezar. El arca guarda el resto.",
+                                "Mezclar todas las láminas de Goula a la vez convierte el reto en un desorden."
+                        )),
+                        section("Supervisión", List.of(
+                                "Es un material de mesa o de suelo con un adulto cerca, no un juguete para la habitación a solas.",
+                                "Revisa piezas pequeñas si hay menores de 5 años en casa."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta un material certificado Montessori?",
+                                "No. Lo útil es clasificar y encajar con piezas seguras. El nombre comercial no sustituye el criterio de edad."),
+                        faqItem("¿Cuántas piezas son demasiadas a los 5 años?",
+                                "Si no puede terminar una ronda, sobran. Empieza por un cubo reducido y añade dificultad después."),
+                        faqItem("¿Janod sirve si ya tiene 5 años cumplidos?",
+                                "Está en el tope de su rango. Si ya clasifica con soltura, Goula o el cubo de 12 dan más recorrido."),
+                        faqItem("¿Se puede usar sin un adulto?",
+                                "Con supervisión cercana, sí, cuando las piezas son grandes. No es un juguete para dejar solo."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Puzles de piezas grandes para 5 años",
+                                "/comparativas/" + MONTESSORI_5_SLUG + "/",
+                                "Otra vía de motricidad fina: completar una imagen."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildPuzzles4Page() {
+        return ageComparison(
+                PUZZLES_4_SLUG,
+                PUZZLES_4_CANONICAL,
+                AGE_4,
+                PUZZLES_3,
+                "Mejores puzles de piezas grandes para 4 años | Bebes Felices",
+                "Comparamos cinco puzles reales para 4 años por número de piezas, soporte y si se pueden terminar en una sesión, con metodología y afiliación transparentes.",
+                "Puzles para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores puzles de piezas grandes para 4 años",
+                        "Cinco puzles reales para encajar sin piezas diminutas",
+                        List.of(
+                                "A los 4 años un puzle sirve para encajar, nombrar lo que se ve y terminar. No es un puzzle de 100 piezas ni un reto de paciencia adulta.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Empieza junto, nombra las piezas que faltan y guarda cada escena aparte. El éxito repetible importa más que el recuento impreso en la caja."
+                        )
+                ),
+                "Los cinco puzles",
+                List.of(
+                        summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
+                        summary("Para encajar con sonido", "puzle-melissa-granja", "Tablero de siluetas y animales domésticos."),
+                        summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
+                        summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
+                        summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el número de piezas, el soporte y si un niño de 4 años puede terminar. No asignamos notas ni inventamos recuentos que la ficha no declare.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si la sesión puede acabarse."),
+                                criterion("Dificultad", "De silueta con tablero a 16 piezas sueltas."),
+                                criterion("Soporte", "Tablero, marco o piezas sueltas; madera o cartón cuando figura."),
+                                criterion("Progresión", "Un pack de 4 puzles no es lo mismo que una sola escena."),
+                                criterion("Seguridad", "Piezas y figuras pequeñas fuera del alcance de menores de 4 años.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige según lo que ya monta", List.of(
+                                "Si aún encaja siluetas, granja o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
+                                "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
+                        )),
+                        section("Cartón o madera", List.of(
+                                "Ambos valen si son gruesos. La madera suele durar más en un uso intenso.",
+                                "Un tablero sujeta las piezas; un puzle suelto de 16 pide más mesa y más paciencia."
+                        )),
+                        section("Si se rinde a mitad", List.of(
+                                "Reduce las piezas a la vista, nombra lo que falta y termina juntos.",
+                                "Guarda cada puzle en su bolsa. Mezclar 15 + 16 piezas acaba con la sesión."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Cuántas piezas recomendáis a los 4 años?",
+                                "Las justas para terminar. Un puzle de silueta o de 5-8 piezas suele encajar mejor que uno de decenas de piezas pequeñas."),
+                        faqItem("¿Cartón o madera?",
+                                "Ambos si son gruesos. El cartón fino se dobla y frustra."),
+                        faqItem("¿Cuándo pasar a 15 o 16 piezas?",
+                                "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
+                        faqItem("¿El puzle de granja es lo mismo que el de safari?",
+                                "No. La granja es tablero con sonido; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Juegos Montessori de formas y encajes",
+                                "/comparativas/" + PUZZLES_4_SLUG + "/",
+                                "Clasificar formas, no montar una imagen."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildPuzzles5Page() {
+        return ageComparison(
+                PUZZLES_5_SLUG,
+                PUZZLES_5_CANONICAL,
+                AGE_5,
+                PUZZLES_3,
+                "Mejores puzles de piezas grandes para 5 años | Bebes Felices",
+                "Comparamos cinco puzles reales para 5 años por número de piezas, soporte y si se pueden terminar en una sesión, con metodología y afiliación transparentes.",
+                "Puzles para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores puzles de piezas grandes para 5 años",
+                        "Cinco puzles reales para encajar sin piezas diminutas",
+                        List.of(
+                                "A los 5 años un puzle sirve para encajar, nombrar lo que se ve y terminar. No es un puzzle de 100 piezas ni un reto de paciencia adulta.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Empieza junto, nombra las piezas que faltan y guarda cada escena aparte. El éxito repetible importa más que el recuento impreso en la caja."
+                        )
+                ),
+                "Los cinco puzles",
+                List.of(
+                        summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
+                        summary("Para encajar con sonido", "puzle-melissa-granja", "Tablero de siluetas y animales domésticos."),
+                        summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
+                        summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
+                        summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el número de piezas, el soporte y si un niño de 5 años puede terminar. No asignamos notas ni inventamos recuentos que la ficha no declare.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si la sesión puede acabarse."),
+                                criterion("Dificultad", "De silueta con tablero a 16 piezas sueltas."),
+                                criterion("Soporte", "Tablero, marco o piezas sueltas; madera o cartón cuando figura."),
+                                criterion("Progresión", "Un pack de 4 puzles no es lo mismo que una sola escena."),
+                                criterion("Seguridad", "Piezas y figuras pequeñas fuera del alcance de menores de 5 años.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige según lo que ya monta", List.of(
+                                "Si aún encaja siluetas, granja o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
+                                "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
+                        )),
+                        section("Cartón o madera", List.of(
+                                "Ambos valen si son gruesos. La madera suele durar más en un uso intenso.",
+                                "Un tablero sujeta las piezas; un puzle suelto de 16 pide más mesa y más paciencia."
+                        )),
+                        section("Si se rinde a mitad", List.of(
+                                "Reduce las piezas a la vista, nombra lo que falta y termina juntos.",
+                                "Guarda cada puzle en su bolsa. Mezclar 15 + 16 piezas acaba con la sesión."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Cuántas piezas recomendáis a los 5 años?",
+                                "Las justas para terminar. Un puzle de silueta o de 5-8 piezas suele encajar mejor que uno de decenas de piezas pequeñas."),
+                        faqItem("¿Cartón o madera?",
+                                "Ambos si son gruesos. El cartón fino se dobla y frustra."),
+                        faqItem("¿Cuándo pasar a 15 o 16 piezas?",
+                                "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
+                        faqItem("¿El puzle de granja es lo mismo que el de safari?",
+                                "No. La granja es tablero con sonido; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Juegos Montessori de formas y encajes",
+                                "/comparativas/" + PUZZLES_5_SLUG + "/",
+                                "Clasificar formas, no montar una imagen."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildSymbolic4Page() {
+        return ageComparison(
+                SYMBOLIC_4_SLUG,
+                SYMBOLIC_4_CANONICAL,
+                AGE_4,
+                SYMBOLIC_3,
+                "Juego simbólico para 4 años | Bebes Felices",
+                "Comparamos cinco juguetes de imitación para 4 años: cocinas de madera, una cocinita portátil y un maletín de médico, con metodología y afiliación transparentes.",
+                "Juego simbólico para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Juego simbólico para 4 años",
+                        "Cocina o consulta: cinco sets reales para imitar la vida diaria",
+                        List.of(
+                                "A los 4 años el juego simbólico es repetir lo que ve: cocinar, abrir la nevera o «auscultar». Elegimos cocinas de distinto tamaño y un maletín de médico. No es disfraz de escenario ni una app.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Mide el hueco. Una cocina de pared no cabe en un pasillo. Los accesorios sueltos se recogen al terminar."
+                        )
+                ),
+                "Los cinco sets",
+                List.of(
+                        summary("Para una cocina de madera completa", "simbolico-theo-klein-miele", "Placa, horno y fregadero."),
+                        summary("Para nevera y más zonas", "simbolico-kidkraft-vintage", "Nevera, horno, microondas y teléfono."),
+                        summary("Para poco espacio", "simbolico-beeloom-babycue", "Cocinita portátil de madera."),
+                        summary("Para muchos utensilios", "simbolico-deao-cocina", "Compacta con 48 accesorios."),
+                        summary("Para imitar la consulta", "simbolico-sundaymot-32", "Maletín médico de 32 piezas.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el escenario de imitación a los 4 años: tamaño, rol y si se puede guardar. No es un ranking de «la mejor cocina».",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y gestos cortos de abrir, verter o cuidar."),
+                                criterion("Escenario", "Cocina de pie, portátil o maletín de médico."),
+                                criterion("Espacio", "Pared, mesa o caja que se guarda."),
+                                criterion("Accesorios", "Si se pueden limitar en cada sesión."),
+                                criterion("Seguridad", "Estabilidad, piezas sueltas y que no imite fuego real.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Mide antes la cocina grande", List.of(
+                                "Theo Klein y KidKraft piden un rincón. Beeloom cabe en mesa. El maletín se guarda en un armario."
+                        )),
+                        section("Cocina o médico", List.of(
+                                "No hace falta ambos el mismo año. Elige el rol que el niño ya imita."
+                        )),
+                        section("Accesorios", List.of(
+                                "48 piezas no se vuelcan de golpe. Saca cuatro y guarda el resto."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta una cocina de madera grande?",
+                                "No. Si no hay pared, la cocinita portátil cubre el mismo gesto."),
+                        faqItem("¿El maletín médico es para 4 años?",
+                                "La ficha parte de 4 años. Los accesorios piden supervisión y no se llevan a la boca."),
+                        faqItem("¿Sustituye ayudar en la cocina de verdad?",
+                                "No. Para la encimera real mira las torres de aprendizaje, con adulto."),
+                        faqItem("¿Incluís disfraces?",
+                                "No en esta lista. Aquí el objeto es cocina o maletín, no un disfraz suelto."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Torres de aprendizaje para 4 años",
+                                "/comparativas/" + SYMBOLIC_4_SLUG + "/",
+                                "Si lo que busca es participar en la cocina de verdad."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildSymbolic5Page() {
+        return ageComparison(
+                SYMBOLIC_5_SLUG,
+                SYMBOLIC_5_CANONICAL,
+                AGE_5,
+                SYMBOLIC_3,
+                "Juego simbólico para 5 años | Bebes Felices",
+                "Comparamos cinco juguetes de imitación para 5 años: cocinas de madera, una cocinita portátil y un maletín de médico, con metodología y afiliación transparentes.",
+                "Juego simbólico para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Juego simbólico para 5 años",
+                        "Cocina o consulta: cinco sets reales para imitar la vida diaria",
+                        List.of(
+                                "A los 5 años el juego simbólico es repetir lo que ve: cocinar, abrir la nevera o «auscultar». Elegimos cocinas de distinto tamaño y un maletín de médico. No es disfraz de escenario ni una app.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Mide el hueco. Una cocina de pared no cabe en un pasillo. Los accesorios sueltos se recogen al terminar."
+                        )
+                ),
+                "Los cinco sets",
+                List.of(
+                        summary("Para una cocina de madera completa", "simbolico-theo-klein-miele", "Placa, horno y fregadero."),
+                        summary("Para nevera y más zonas", "simbolico-kidkraft-vintage", "Nevera, horno, microondas y teléfono."),
+                        summary("Para poco espacio", "simbolico-beeloom-babycue", "Cocinita portátil de madera."),
+                        summary("Para muchos utensilios", "simbolico-deao-cocina", "Compacta con 48 accesorios."),
+                        summary("Para imitar la consulta", "simbolico-sundaymot-32", "Maletín médico de 32 piezas.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el escenario de imitación a los 5 años: tamaño, rol y si se puede guardar. No es un ranking de «la mejor cocina».",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y gestos cortos de abrir, verter o cuidar."),
+                                criterion("Escenario", "Cocina de pie, portátil o maletín de médico."),
+                                criterion("Espacio", "Pared, mesa o caja que se guarda."),
+                                criterion("Accesorios", "Si se pueden limitar en cada sesión."),
+                                criterion("Seguridad", "Estabilidad, piezas sueltas y que no imite fuego real.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Mide antes la cocina grande", List.of(
+                                "Theo Klein y KidKraft piden un rincón. Beeloom cabe en mesa. El maletín se guarda en un armario."
+                        )),
+                        section("Cocina o médico", List.of(
+                                "No hace falta ambos el mismo año. Elige el rol que el niño ya imita."
+                        )),
+                        section("Accesorios", List.of(
+                                "48 piezas no se vuelcan de golpe. Saca cuatro y guarda el resto."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Hace falta una cocina de madera grande?",
+                                "No. Si no hay pared, la cocinita portátil cubre el mismo gesto."),
+                        faqItem("¿El maletín médico es para 5 años?",
+                                "La ficha parte de 5 años. Los accesorios piden supervisión y no se llevan a la boca."),
+                        faqItem("¿Sustituye ayudar en la cocina de verdad?",
+                                "No. Para la encimera real mira las torres de aprendizaje, con adulto."),
+                        faqItem("¿Incluís disfraces?",
+                                "No en esta lista. Aquí el objeto es cocina o maletín, no un disfraz suelto."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Torres de aprendizaje para 5 años",
+                                "/comparativas/" + SYMBOLIC_5_SLUG + "/",
+                                "Si lo que busca es participar en la cocina de verdad."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildSensory4Page() {
+        return ageComparison(
+                SENSORY_4_SLUG,
+                SENSORY_4_CANONICAL,
+                AGE_4,
+                SENSORY_3,
+                "Juguetes sensoriales para 4 años | Bebes Felices",
+                "Comparamos cinco juguetes sensoriales para 4 años: botellas, espuma, tubos, palas y pinzas, con metodología y afiliación transparentes.",
+                "Juguetes sensoriales para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Juguetes sensoriales para 4 años",
+                        "Cinco acciones concretas: mirar, apretar, verter o pinzar",
+                        List.of(
+                                "Sensorial, aquí, es una acción identificable sin luces agresivas ni pantallas: inclinar una botella sellada, modelar espuma, verter con palas o pinzar. No es un pack de «estimulación» genérico.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Bandeja, supervisión y retirar cualquier envase dañado. El contenido de tubos y botellas no se abre."
+                        )
+                ),
+                "Los cinco juguetes",
+                List.of(
+                        summary("Para mirar e inclinar", "sensorial-emotion-bottles", "Cuatro botellas selladas."),
+                        summary("Para apretar", "sensorial-playfoam", "Seis bloques de espuma que no se secan."),
+                        summary("Para seguir el movimiento", "sensorial-fidget-tubes", "Tres tubos sellados."),
+                        summary("Para verter", "sensorial-scoops", "Cuatro palas para transferir."),
+                        summary("Para el agarre", "sensorial-pinzas-jumbo", "Pinzas grandes para recoger.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la acción sensorial y si el material se puede usar a los 4 años sin abrirlo o sin piezas diminutas. No es una terapia ni un diagnóstico.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y un gesto que se entiende en un minuto."),
+                                criterion("Acción", "Mirar, apretar, verter o pinzar: una por producto."),
+                                criterion("Sellado", "Botellas y tubos enteros; palas y pinzas con material elegido por el adulto."),
+                                criterion("Recogida", "Bandeja, maletín o recuento."),
+                                criterion("Supervisión", "Nada a la boca; envases dañados fuera.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige la acción", List.of(
+                                "Mirar: botellas o tubos. Manos: Playfoam. Transferir: palas. Agarre: pinzas."
+                        )),
+                        section("No abras lo sellado", List.of(
+                                "Botellas y tubos se retiran si fallan. Las palas piden arroz o agua de mesa, con supervisión."
+                        )),
+                        section("No es un sustituto de evaluación", List.of(
+                                "Si hay una necesidad sensorial concreta, consulta a un profesional. Esta página compara juguetes del catálogo."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un juguete sensorial a los 4 años?",
+                                "Uno con una acción clara: ver, apretar, verter o pinzar. No una caja de luces o sonidos al azar."),
+                        faqItem("¿Las botellas de emociones enseñan a gestionarlas?",
+                                "No solas. Un adulto nombra lo que se ve. El objeto es inclinar y mirar."),
+                        faqItem("¿Playfoam se puede comer?",
+                                "No. Fuera del alcance de quien se lleve cosas a la boca."),
+                        faqItem("¿Por qué no está el tablero de 100 números?",
+                                "Es más contar y presionar burbujas. Aquí priorizamos mirar, modelar y transferir."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Arte y manualidades para 4 años",
+                                "/comparativas/" + SENSORY_4_SLUG + "/",
+                                "Si el gesto es pintar o modelar plastilina, no palas o tubos."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildSensory5Page() {
+        return ageComparison(
+                SENSORY_5_SLUG,
+                SENSORY_5_CANONICAL,
+                AGE_5,
+                SENSORY_3,
+                "Juguetes sensoriales para 5 años | Bebes Felices",
+                "Comparamos cinco juguetes sensoriales para 5 años: botellas, espuma, tubos, palas y pinzas, con metodología y afiliación transparentes.",
+                "Juguetes sensoriales para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Juguetes sensoriales para 5 años",
+                        "Cinco acciones concretas: mirar, apretar, verter o pinzar",
+                        List.of(
+                                "Sensorial, aquí, es una acción identificable sin luces agresivas ni pantallas: inclinar una botella sellada, modelar espuma, verter con palas o pinzar. No es un pack de «estimulación» genérico.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Bandeja, supervisión y retirar cualquier envase dañado. El contenido de tubos y botellas no se abre."
+                        )
+                ),
+                "Los cinco juguetes",
+                List.of(
+                        summary("Para mirar e inclinar", "sensorial-emotion-bottles", "Cuatro botellas selladas."),
+                        summary("Para apretar", "sensorial-playfoam", "Seis bloques de espuma que no se secan."),
+                        summary("Para seguir el movimiento", "sensorial-fidget-tubes", "Tres tubos sellados."),
+                        summary("Para verter", "sensorial-scoops", "Cuatro palas para transferir."),
+                        summary("Para el agarre", "sensorial-pinzas-jumbo", "Pinzas grandes para recoger.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la acción sensorial y si el material se puede usar a los 5 años sin abrirlo o sin piezas diminutas. No es una terapia ni un diagnóstico.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y un gesto que se entiende en un minuto."),
+                                criterion("Acción", "Mirar, apretar, verter o pinzar: una por producto."),
+                                criterion("Sellado", "Botellas y tubos enteros; palas y pinzas con material elegido por el adulto."),
+                                criterion("Recogida", "Bandeja, maletín o recuento."),
+                                criterion("Supervisión", "Nada a la boca; envases dañados fuera.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige la acción", List.of(
+                                "Mirar: botellas o tubos. Manos: Playfoam. Transferir: palas. Agarre: pinzas."
+                        )),
+                        section("No abras lo sellado", List.of(
+                                "Botellas y tubos se retiran si fallan. Las palas piden arroz o agua de mesa, con supervisión."
+                        )),
+                        section("No es un sustituto de evaluación", List.of(
+                                "Si hay una necesidad sensorial concreta, consulta a un profesional. Esta página compara juguetes del catálogo."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un juguete sensorial a los 5 años?",
+                                "Uno con una acción clara: ver, apretar, verter o pinzar. No una caja de luces o sonidos al azar."),
+                        faqItem("¿Las botellas de emociones enseñan a gestionarlas?",
+                                "No solas. Un adulto nombra lo que se ve. El objeto es inclinar y mirar."),
+                        faqItem("¿Playfoam se puede comer?",
+                                "No. Fuera del alcance de quien se lleve cosas a la boca."),
+                        faqItem("¿Por qué no está el tablero de 100 números?",
+                                "Es más contar y presionar burbujas. Aquí priorizamos mirar, modelar y transferir."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Arte y manualidades para 5 años",
+                                "/comparativas/" + SENSORY_5_SLUG + "/",
+                                "Si el gesto es pintar o modelar plastilina, no palas o tubos."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildBalanceGuide4Page() {
+        return ageComparison(
+                BALANCE_GUIDE_4_SLUG,
+                BALANCE_GUIDE_4_CANONICAL,
+                AGE_4,
+                BALANCE_BIKES,
+                "Bicicletas sin pedales para 4 años | Bebes Felices",
+                "Guía comparada de cinco bicicletas sin pedales para ganar equilibrio a los 4 años, por peso, sillín y ruedas, con metodología y afiliación transparentes.",
+                "Bicicletas sin pedales para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Bicicletas sin pedales para ganar equilibrio a los 4 años",
+                        "Cinco modelos reales para pies en el suelo antes de los pedales",
+                        List.of(
+                                "A los 4 años la bici sin pedales sirve para empujar, frenar con los pies y coger equilibrio. No sustituye el casco ni un espacio sin tráfico. El ranking de talla y ruedas está también en la comparativa de iniciación; aquí el criterio es si el niño puede recuperar el equilibrio.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Mide la entrepierna. El sillín tiene que permitir apoyar ambos pies. Sin eso, el modelo no encaja, aunque la caja diga 4 años."
+                        )
+                ),
+                "Las cinco bicicletas",
+                List.of(
+                        summary("Para empezar sencillo", "bici-chicco-red-bullet", "2,7 kg, ruedas antipinchazos y ajustes."),
+                        summary("Para el cuadro más ligero", "bici-kinderkraft-tove", "2 kg y sillín bajo."),
+                        summary("Para un sillín que crece", "bici-kinderkraft-fly-plus-2", "34 a 42 cm y ruedas de 30 cm."),
+                        summary("Para suelo irregular", "bici-kinderkraft-goswift", "Ruedas inflables de 30 cm."),
+                        summary("Para postura y reposapiés", "bici-puky-lr-m", "Sillín y manillar ajustables.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede manejar el peso y apoyar los pies para equilibrarse. No es una carrera ni un paso automático a pedales.",
+                        List.of(
+                                criterion("Equilibrio", "Pies al suelo y peso que pueda levantar al caerse."),
+                                criterion("Ajuste", "Recorrido de sillín y manillar."),
+                                criterion("Ruedas", "Antipinchazos, espuma o inflables según el terreno."),
+                                criterion("Encaje a los 4 años", "Edad o talla declarada y entrepierna real."),
+                                criterion("Seguridad", "Casco, calzado cerrado y zona sin coches.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Primero la entrepierna", List.of(
+                                "Si los pies no llegan, da igual el modelo. Mide y contrasta el rango de sillín."
+                        )),
+                        section("Ligera para recuperar el equilibrio", List.of(
+                                "TOVE declara 2 kg. Chicco, 2,7 kg. Un cuadro que el niño no puede levantar se queda tirado."
+                        )),
+                        section("Casco siempre", List.of(
+                                "La bici sin pedales no elimina caídas. El detalle de cada ficha está también en la comparativa de iniciación."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sigue teniendo sentido a los 4 años?",
+                                "Sí, si el equilibrio aún no está listo para pedales. El salto se ve en el control, no en el cumpleaños."),
+                        faqItem("¿En qué se diferencia de la otra comparativa de bicis?",
+                                "Aquí el criterio es recuperar el equilibrio y los pies al suelo. La otra detalla talla, ruedas y primer uso con las mismas cinco fichas."),
+                        faqItem("¿Hace falta casco?",
+                                "Sí. También supervisión y un espacio sin tráfico."),
+                        faqItem("¿Patinete o bici primero?",
+                                "La bici trabaja el equilibrio sentado; el patinete, de pie. Pueden convivir."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 4 años",
+                                "/comparativas/" + BALANCE_GUIDE_4_SLUG + "/",
+                                "Comparativa por talla, peso y ruedas para iniciarse."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildBalanceGuide5Page() {
+        return ageComparison(
+                BALANCE_GUIDE_5_SLUG,
+                BALANCE_GUIDE_5_CANONICAL,
+                AGE_5,
+                BALANCE_BIKES,
+                "Bicicletas sin pedales para 5 años | Bebes Felices",
+                "Guía comparada de cinco bicicletas sin pedales para ganar equilibrio a los 5 años, por peso, sillín y ruedas, con metodología y afiliación transparentes.",
+                "Bicicletas sin pedales para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Bicicletas sin pedales para ganar equilibrio a los 5 años",
+                        "Cinco modelos reales para pies en el suelo antes de los pedales",
+                        List.of(
+                                "A los 5 años la bici sin pedales sirve para empujar, frenar con los pies y coger equilibrio. No sustituye el casco ni un espacio sin tráfico. El ranking de talla y ruedas está también en la comparativa de iniciación; aquí el criterio es si el niño puede recuperar el equilibrio.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Mide la entrepierna. El sillín tiene que permitir apoyar ambos pies. Sin eso, el modelo no encaja, aunque la caja diga 5 años."
+                        )
+                ),
+                "Las cinco bicicletas",
+                List.of(
+                        summary("Para empezar sencillo", "bici-chicco-red-bullet", "2,7 kg, ruedas antipinchazos y ajustes."),
+                        summary("Para el cuadro más ligero", "bici-kinderkraft-tove", "2 kg y sillín bajo."),
+                        summary("Para un sillín que crece", "bici-kinderkraft-fly-plus-2", "34 a 42 cm y ruedas de 30 cm."),
+                        summary("Para suelo irregular", "bici-kinderkraft-goswift", "Ruedas inflables de 30 cm."),
+                        summary("Para postura y reposapiés", "bici-puky-lr-m", "Sillín y manillar ajustables.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede manejar el peso y apoyar los pies para equilibrarse. No es una carrera ni un paso automático a pedales.",
+                        List.of(
+                                criterion("Equilibrio", "Pies al suelo y peso que pueda levantar al caerse."),
+                                criterion("Ajuste", "Recorrido de sillín y manillar."),
+                                criterion("Ruedas", "Antipinchazos, espuma o inflables según el terreno."),
+                                criterion("Encaje a los 5 años", "Edad o talla declarada y entrepierna real."),
+                                criterion("Seguridad", "Casco, calzado cerrado y zona sin coches.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Primero la entrepierna", List.of(
+                                "Si los pies no llegan, da igual el modelo. Mide y contrasta el rango de sillín."
+                        )),
+                        section("Ligera para recuperar el equilibrio", List.of(
+                                "TOVE declara 2 kg. Chicco, 2,7 kg. Un cuadro que el niño no puede levantar se queda tirado."
+                        )),
+                        section("Casco siempre", List.of(
+                                "La bici sin pedales no elimina caídas. El detalle de cada ficha está también en la comparativa de iniciación."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sigue teniendo sentido a los 5 años?",
+                                "Sí, si el equilibrio aún no está listo para pedales. El salto se ve en el control, no en el cumpleaños."),
+                        faqItem("¿En qué se diferencia de la otra comparativa de bicis?",
+                                "Aquí el criterio es recuperar el equilibrio y los pies al suelo. La otra detalla talla, ruedas y primer uso con las mismas cinco fichas."),
+                        faqItem("¿Hace falta casco?",
+                                "Sí. También supervisión y un espacio sin tráfico."),
+                        faqItem("¿Patinete o bici primero?",
+                                "La bici trabaja el equilibrio sentado; el patinete, de pie. Pueden convivir."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 5 años",
+                                "/comparativas/" + BALANCE_GUIDE_5_SLUG + "/",
+                                "Comparativa por talla, peso y ruedas para iniciarse."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildScootersTrikes4Page() {
+        return ageComparison(
+                SCOOTERS_TRIKES_4_SLUG,
+                SCOOTERS_TRIKES_4_CANONICAL,
+                AGE_4,
+                SCOOTERS_3,
+                "Patinetes y triciclos para 4 años | Bebes Felices",
+                "Comparamos tres patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 4 años, con metodología y afiliación transparentes.",
+                "Patinetes y triciclos para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Patinetes y triciclos para 4 años",
+                        "De pie con tres ruedas o sentado con mango de adulto",
+                        List.of(
+                                "A los 4 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cuatro.",
+                                "La selección reúne cuatro productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "El triciclo no enseña el equilibrio del patinete. El patinete no lleva a un niño cansado en un paseo largo."
+                        )
+                ),
+                "Las cuatro opciones",
+                List.of(
+                        summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
+                        summary("Para una primera de 4 años", "patinete-molto-maxi", "Edad mínima 4 años y manillar 57-67 cm."),
+                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño va de pie o sentado, y si un adulto puede guiar. No mezclamos este gesto con la bici sin pedales.",
+                        List.of(
+                                criterion("Postura", "De pie en tres ruedas o sentado en triciclo."),
+                                criterion("Encaje a los 4 años", "Edad declarada y altura de manillar o mango."),
+                                criterion("Manejo", "Peso, plegado o mango de adulto."),
+                                criterion("Estabilidad", "Tres puntos de apoyo."),
+                                criterion("Seguridad", "Casco, freno o cinturón según el modelo, y zona sin coches.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("De pie o sentado", List.of(
+                                "Si ya se sostiene y quiere empujar, patinete. Si aún quieres guiar en el paseo, triciclo con mango."
+                        )),
+                        section("Peso y plegado", List.of(
+                                "Micro declara 1,95 kg. Globber declara plegado. MOLTO no declara peso en la ficha consultada."
+                        )),
+                        section("Carga del triciclo", List.of(
+                                "U-GO declara 20 kg. Comprueba el peso real del niño."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Patinete o triciclo?",
+                                "De pie frente a sentado. A los 4 años ambos pueden servir; no hace falta los dos."),
+                        faqItem("¿Y la bicicleta sin pedales?",
+                                "Otro gesto: equilibrio sentado sin pedales. Está en su comparativa."),
+                        faqItem("¿Hace falta casco?",
+                                "Sí, también en el triciclo si circula rápido o en pendiente suave."),
+                        faqItem("¿Cuándo pasar a dos ruedas?",
+                                "Cuando el equilibrio lateral es estable. Muchas familias lo retrasan más allá de los 4 años."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores patinetes de 3 ruedas para 4 años",
+                                "/comparativas/" + SCOOTERS_TRIKES_4_SLUG + "/",
+                                "Misma selección, con el foco en tres ruedas e iniciación."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildScootersTrikes5Page() {
+        return ageComparison(
+                SCOOTERS_TRIKES_5_SLUG,
+                SCOOTERS_TRIKES_5_CANONICAL,
+                AGE_5,
+                SCOOTERS_3,
+                "Patinetes y triciclos para 5 años | Bebes Felices",
+                "Comparamos tres patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 5 años, con metodología y afiliación transparentes.",
+                "Patinetes y triciclos para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Patinetes y triciclos para 5 años",
+                        "De pie con tres ruedas o sentado con mango de adulto",
+                        List.of(
+                                "A los 5 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cuatro.",
+                                "La selección reúne cuatro productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "El triciclo no enseña el equilibrio del patinete. El patinete no lleva a un niño cansado en un paseo largo."
+                        )
+                ),
+                "Las cuatro opciones",
+                List.of(
+                        summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
+                        summary("Para una primera de 5 años", "patinete-molto-maxi", "Edad mínima 5 años y manillar 57-67 cm."),
+                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño va de pie o sentado, y si un adulto puede guiar. No mezclamos este gesto con la bici sin pedales.",
+                        List.of(
+                                criterion("Postura", "De pie en tres ruedas o sentado en triciclo."),
+                                criterion("Encaje a los 5 años", "Edad declarada y altura de manillar o mango."),
+                                criterion("Manejo", "Peso, plegado o mango de adulto."),
+                                criterion("Estabilidad", "Tres puntos de apoyo."),
+                                criterion("Seguridad", "Casco, freno o cinturón según el modelo, y zona sin coches.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("De pie o sentado", List.of(
+                                "Si ya se sostiene y quiere empujar, patinete. Si aún quieres guiar en el paseo, triciclo con mango."
+                        )),
+                        section("Peso y plegado", List.of(
+                                "Micro declara 1,95 kg. Globber declara plegado. MOLTO no declara peso en la ficha consultada."
+                        )),
+                        section("Carga del triciclo", List.of(
+                                "U-GO declara 20 kg. Comprueba el peso real del niño."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Patinete o triciclo?",
+                                "De pie frente a sentado. A los 5 años ambos pueden servir; no hace falta los dos."),
+                        faqItem("¿Y la bicicleta sin pedales?",
+                                "Otro gesto: equilibrio sentado sin pedales. Está en su comparativa."),
+                        faqItem("¿Hace falta casco?",
+                                "Sí, también en el triciclo si circula rápido o en pendiente suave."),
+                        faqItem("¿Cuándo pasar a dos ruedas?",
+                                "Cuando el equilibrio lateral es estable. Muchas familias lo retrasan más allá de los 5 años."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores patinetes de 3 ruedas para 5 años",
+                                "/comparativas/" + SCOOTERS_TRIKES_5_SLUG + "/",
+                                "Misma selección, con el foco en tres ruedas e iniciación."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildTowersKitchen4Page() {
+        return ageComparison(
+                TOWERS_KITCHEN_4_SLUG,
+                TOWERS_KITCHEN_4_CANONICAL,
+                AGE_4,
+                TOWERS_3,
+                "Torres para la cocina a los 4 años | Bebes Felices",
+                "Comparamos cinco torres de aprendizaje para la rutina de cocina a los 4 años: estabilidad, altura y plegado, con metodología y afiliación transparentes.",
+                "Torres para la cocina a los 4 años",
+                new ComparisonPageResponse.Header(
+                        "Torres para la cocina a los 4 años",
+                        "Cinco torres reales para llegar a la encimera con un adulto",
+                        List.of(
+                                "A los 4 años la torre sirve para lavar, mezclar u observar en la cocina, no para trepar. La supervisión es constante. Lejos del fuego, del agua hirviendo y de los cuchillos.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Mide la encimera y el hueco. Una torre plegable no cabe en cualquier pasillo aunque se pliegue."
+                        )
+                ),
+                "Las cinco torres",
+                List.of(
+                        summary("Para plegar en cocina pequeña", "torre-kleiner-riese", "6,5 kg y recomendada desde 4 años."),
+                        summary("Para convertir en mesa", "torre-yoleo-transformer", "Nogal, plegado y escritorio."),
+                        summary("Para tres alturas ligeras", "torre-bianconiglio-evo", "7,5 kg y plataforma 30-50 cm."),
+                        summary("Para patas anticaída", "torre-bey-co", "Tres alturas y EN-71."),
+                        summary("Para más peso y escritorio", "torre-bianconiglio-transformer", "10 kg, convertible.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si la torre sirve en la cocina diaria a los 4 años: llegar a la encimera, no volcar y poder guardar. El detalle de estabilidad también está en la comparativa de torres de aprendizaje.",
+                        List.of(
+                                criterion("Encimera", "Altura de plataforma y si los brazos quedan sobre la mesa de trabajo."),
+                                criterion("Estabilidad", "Barandilla, patas, peso y montaje."),
+                                criterion("Guardar", "Plegado o conversión a mesa."),
+                                criterion("Encaje a los 4 años", "Ficha y que un adulto esté siempre."),
+                                criterion("Peligros de cocina", "Fuego, agua hirviendo, cuchillos: la torre no los elimina.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("La torre no es un taburete", List.of(
+                                "Barandilla y adulto. Un taburete de cocina no sustituye este uso."
+                        )),
+                        section("Plegar o dejar fija", List.of(
+                                "Kleiner Riese y YOLEO se pliegan. BEY & CO no declara plegado."
+                        )),
+                        section("Un solo niño", List.of(
+                                "No es un juguete de trepa ni para dos a la vez junto a la vitro."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Es segura en la cocina a los 4 años?",
+                                "Puede serlo con barandilla, suelo nivelado y un adulto. No lo es junto al fuego o como juego."),
+                        faqItem("¿Hace falta preguntar antes de regalarla?",
+                                "Sí. Ocupa sitio y pide un adulto dispuesto a usarla cada día."),
+                        faqItem("¿Madera o metal?",
+                                "Lo decisivo es la estabilidad, no el material."),
+                        faqItem("¿Dónde está el análisis más largo de estabilidad?",
+                                "En la comparativa de torres de aprendizaje para 4 años, con las mismas cinco fichas."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores torres de aprendizaje para 4 años",
+                                "/comparativas/" + TOWERS_KITCHEN_4_SLUG + "/",
+                                "Estabilidad, altura y plegado, con el foco en la ficha técnica."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildTowersKitchen5Page() {
+        return ageComparison(
+                TOWERS_KITCHEN_5_SLUG,
+                TOWERS_KITCHEN_5_CANONICAL,
+                AGE_5,
+                TOWERS_3,
+                "Torres para la cocina a los 5 años | Bebes Felices",
+                "Comparamos cinco torres de aprendizaje para la rutina de cocina a los 5 años: estabilidad, altura y plegado, con metodología y afiliación transparentes.",
+                "Torres para la cocina a los 5 años",
+                new ComparisonPageResponse.Header(
+                        "Torres para la cocina a los 5 años",
+                        "Cinco torres reales para llegar a la encimera con un adulto",
+                        List.of(
+                                "A los 5 años la torre sirve para lavar, mezclar u observar en la cocina, no para trepar. La supervisión es constante. Lejos del fuego, del agua hirviendo y de los cuchillos.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Mide la encimera y el hueco. Una torre plegable no cabe en cualquier pasillo aunque se pliegue."
+                        )
+                ),
+                "Las cinco torres",
+                List.of(
+                        summary("Para plegar en cocina pequeña", "torre-kleiner-riese", "6,5 kg y recomendada desde 5 años."),
+                        summary("Para convertir en mesa", "torre-yoleo-transformer", "Nogal, plegado y escritorio."),
+                        summary("Para tres alturas ligeras", "torre-bianconiglio-evo", "7,5 kg y plataforma 30-50 cm."),
+                        summary("Para patas anticaída", "torre-bey-co", "Tres alturas y EN-71."),
+                        summary("Para más peso y escritorio", "torre-bianconiglio-transformer", "10 kg, convertible.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si la torre sirve en la cocina diaria a los 5 años: llegar a la encimera, no volcar y poder guardar. El detalle de estabilidad también está en la comparativa de torres de aprendizaje.",
+                        List.of(
+                                criterion("Encimera", "Altura de plataforma y si los brazos quedan sobre la mesa de trabajo."),
+                                criterion("Estabilidad", "Barandilla, patas, peso y montaje."),
+                                criterion("Guardar", "Plegado o conversión a mesa."),
+                                criterion("Encaje a los 5 años", "Ficha y que un adulto esté siempre."),
+                                criterion("Peligros de cocina", "Fuego, agua hirviendo, cuchillos: la torre no los elimina.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("La torre no es un taburete", List.of(
+                                "Barandilla y adulto. Un taburete de cocina no sustituye este uso."
+                        )),
+                        section("Plegar o dejar fija", List.of(
+                                "Kleiner Riese y YOLEO se pliegan. BEY & CO no declara plegado."
+                        )),
+                        section("Un solo niño", List.of(
+                                "No es un juguete de trepa ni para dos a la vez junto a la vitro."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Es segura en la cocina a los 5 años?",
+                                "Puede serlo con barandilla, suelo nivelado y un adulto. No lo es junto al fuego o como juego."),
+                        faqItem("¿Hace falta preguntar antes de regalarla?",
+                                "Sí. Ocupa sitio y pide un adulto dispuesto a usarla cada día."),
+                        faqItem("¿Madera o metal?",
+                                "Lo decisivo es la estabilidad, no el material."),
+                        faqItem("¿Dónde está el análisis más largo de estabilidad?",
+                                "En la comparativa de torres de aprendizaje para 5 años, con las mismas cinco fichas."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores torres de aprendizaje para 5 años",
+                                "/comparativas/" + TOWERS_KITCHEN_5_SLUG + "/",
+                                "Estabilidad, altura y plegado, con el foco en la ficha técnica."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildTablewareDaily4Page() {
+        return ageComparison(
+                TABLEWARE_DAILY_4_SLUG,
+                TABLEWARE_DAILY_4_CANONICAL,
+                AGE_4,
+                TABLEWARE_3,
+                "Vajilla para la mesa diaria a los 4 años | Bebes Felices",
+                "Comparamos cinco opciones irrompibles para que un niño de 4 años coma y beba en la mesa de cada día, con metodología y afiliación transparentes.",
+                "Vajilla para la mesa diaria a los 4 años",
+                new ComparisonPageResponse.Header(
+                        "Vajilla para la mesa diaria a los 4 años",
+                        "Plato, vaso o set para repetir el gesto en cada comida",
+                        List.of(
+                                "A los 4 años la vajilla infantil sirve si se usa todos los días: llevar el plato, beber y sobrevivir a las caídas. No hace falta un set de personaje enorme. Hace falta tamaño de mano y material que no se haga añicos.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Revisa el marcado de alimento. El vaso abierto se supervisa al principio."
+                        )
+                ),
+                "Las cinco piezas",
+                List.of(
+                        summary("Para un set de tres", "vajilla-stor-mickey", "Plato, cuenco y vaso de 260 ml."),
+                        summary("Para otro set reutilizable", "vajilla-fun-house", "Plato 22 cm, cuenco y vaso 220 ml."),
+                        summary("Para plato con tapa", "vajilla-twistshake-dividido", "Compartimentos y base antideslizante."),
+                        summary("Para beber sin goteo", "vaso-munchkin-miracle-360", "Dos vasos 360° con asas."),
+                        summary("Para guardar o llevar", "cuenco-twistshake-tapa", "Cuenco con tapa desde 6 meses.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si la pieza entra en la comida diaria a los 4 años: se puede llevar, lavar y no se rompe. El detalle irrompible también está en la comparativa de vajillas infantiles.",
+                        List.of(
+                                criterion("Uso diario", "Si se saca en cada comida, no solo en fiestas."),
+                                criterion("Mano y peso", "Que el niño pueda llevarlo a la mesa."),
+                                criterion("Estabilidad", "Base ancha o antideslizante."),
+                                criterion("Cuidado", "Lavado y microondas solo cuando la ficha lo dice."),
+                                criterion("Seguridad", "Material de alimento y supervisión del vaso.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Un set o solo el vaso", List.of(
+                                "Si ya hay plato, un vaso 360° puede bastar. Si empiezas de cero, un set de tres cubre más."
+                        )),
+                        section("Personaje o liso", List.of(
+                                "El diseño se cansa. Prioriza base estable y BPA free cuando consta."
+                        )),
+                        section("No hace falta un cajón entero", List.of(
+                                "Plato o cuenco, vaso y cubiertos infantiles suelen llegar. Un set enorme acaba en el armario."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Cuántas piezas hacen falta para el día a día?",
+                                "Plato o cuenco, vaso y cubiertos. El resto es recambio."),
+                        faqItem("¿Vaso abierto o 360°?",
+                                "El 360° ayuda al principio. A los 4 años también se practica el vaso abierto, con supervisión."),
+                        faqItem("¿Plástico, bambú o acero?",
+                                "Cualquiera si es apto para alimento y no se hace añicos. Revisa el marcado."),
+                        faqItem("¿Dónde comparáis lo irrompible con más detalle?",
+                                "En la comparativa de vajillas infantiles para 4 años, con las mismas cinco fichas."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para 4 años",
+                                "/comparativas/" + TABLEWARE_DAILY_4_SLUG + "/",
+                                "Sets, platos y vasos irrompibles, con el foco en la ficha."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildTablewareDaily5Page() {
+        return ageComparison(
+                TABLEWARE_DAILY_5_SLUG,
+                TABLEWARE_DAILY_5_CANONICAL,
+                AGE_5,
+                TABLEWARE_3,
+                "Vajilla para la mesa diaria a los 5 años | Bebes Felices",
+                "Comparamos cinco opciones irrompibles para que un niño de 5 años coma y beba en la mesa de cada día, con metodología y afiliación transparentes.",
+                "Vajilla para la mesa diaria a los 5 años",
+                new ComparisonPageResponse.Header(
+                        "Vajilla para la mesa diaria a los 5 años",
+                        "Plato, vaso o set para repetir el gesto en cada comida",
+                        List.of(
+                                "A los 5 años la vajilla infantil sirve si se usa todos los días: llevar el plato, beber y sobrevivir a las caídas. No hace falta un set de personaje enorme. Hace falta tamaño de mano y material que no se haga añicos.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Revisa el marcado de alimento. El vaso abierto se supervisa al principio."
+                        )
+                ),
+                "Las cinco piezas",
+                List.of(
+                        summary("Para un set de tres", "vajilla-stor-mickey", "Plato, cuenco y vaso de 260 ml."),
+                        summary("Para otro set reutilizable", "vajilla-fun-house", "Plato 22 cm, cuenco y vaso 220 ml."),
+                        summary("Para plato con tapa", "vajilla-twistshake-dividido", "Compartimentos y base antideslizante."),
+                        summary("Para beber sin goteo", "vaso-munchkin-miracle-360", "Dos vasos 360° con asas."),
+                        summary("Para guardar o llevar", "cuenco-twistshake-tapa", "Cuenco con tapa desde 6 meses.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si la pieza entra en la comida diaria a los 5 años: se puede llevar, lavar y no se rompe. El detalle irrompible también está en la comparativa de vajillas infantiles.",
+                        List.of(
+                                criterion("Uso diario", "Si se saca en cada comida, no solo en fiestas."),
+                                criterion("Mano y peso", "Que el niño pueda llevarlo a la mesa."),
+                                criterion("Estabilidad", "Base ancha o antideslizante."),
+                                criterion("Cuidado", "Lavado y microondas solo cuando la ficha lo dice."),
+                                criterion("Seguridad", "Material de alimento y supervisión del vaso.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Un set o solo el vaso", List.of(
+                                "Si ya hay plato, un vaso 360° puede bastar. Si empiezas de cero, un set de tres cubre más."
+                        )),
+                        section("Personaje o liso", List.of(
+                                "El diseño se cansa. Prioriza base estable y BPA free cuando consta."
+                        )),
+                        section("No hace falta un cajón entero", List.of(
+                                "Plato o cuenco, vaso y cubiertos infantiles suelen llegar. Un set enorme acaba en el armario."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Cuántas piezas hacen falta para el día a día?",
+                                "Plato o cuenco, vaso y cubiertos. El resto es recambio."),
+                        faqItem("¿Vaso abierto o 360°?",
+                                "El 360° ayuda al principio. A los 5 años también se practica el vaso abierto, con supervisión."),
+                        faqItem("¿Plástico, bambú o acero?",
+                                "Cualquiera si es apto para alimento y no se hace añicos. Revisa el marcado."),
+                        faqItem("¿Dónde comparáis lo irrompible con más detalle?",
+                                "En la comparativa de vajillas infantiles para 5 años, con las mismas cinco fichas."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para 5 años",
+                                "/comparativas/" + TABLEWARE_DAILY_5_SLUG + "/",
+                                "Sets, platos y vasos irrompibles, con el foco en la ficha."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildGifts4Page() {
+        return ageComparison(
+                GIFTS_4_SLUG,
+                GIFTS_4_CANONICAL,
+                AGE_4,
+                GIFTS_3,
+                "Mejores ideas de regalo para niños de 4 años | Bebes Felices",
+                "Comparamos cinco regalos reales para 4 años por necesidad —aprender, moverse, autonomía o crear—, con metodología y afiliación transparentes.",
+                "Ideas de regalo para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores ideas de regalo para niños de 4 años",
+                        "Cinco regalos reales según lo que el niño ya hace",
+                        List.of(
+                                "Un buen regalo a los 4 años se usa durante semanas, no solo el día del cumpleaños. Elegimos un producto por necesidad: encajar, completar, moverse, participar en la cocina o crear.",
+                                "La selección reúne cinco productos del catálogo, disponibles en Amazon.es cuando la ficha lo permite. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Si ya tiene un cubo de formas, no dupliques: pasa a movimiento, autonomía o un kit de crear. La torre no se regala sin preguntar si hay espacio y un adulto dispuesto a usarla."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para aprender encajando", "juego-montessori-formas", "Cubo de 12 piezas grandes."),
+                        summary("Para terminar una escena", "puzle-madera-animales", "Puzle de madera de safari."),
+                        summary("Para moverse", "bici-chicco-red-bullet", "Bicicleta sin pedales ligera y ajustable."),
+                        summary("Para la cocina", "torre-kleiner-riese", "Torre plegable recomendada desde 4 años."),
+                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera con un adulto.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la necesidad que cubre cada regalo para un niño de 4 años. No es un ranking de «el mejor juguete», sino de roles distintos.",
+                        List.of(
+                                criterion("Necesidad", "Aprender, moverse, autonomía o crear. No repetimos el mismo gesto cinco veces."),
+                                criterion("Uso real", "Si se puede usar el mismo día, con sesiones cortas."),
+                                criterion("Regalo", "Si hay que preguntar (torre, talla de bici) o se puede acertar a ciegas (puzle)."),
+                                criterion("Duración", "Semanas de uso, no un objeto decorativo."),
+                                criterion("Límite", "Casco, supervisión o espacio: lo dejamos explícito.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige según lo que ya tiene", List.of(
+                                "Si duda, un puzle de piezas grandes o un cubo de formas suele ser más seguro que un juguete «para mayores».",
+                                "Si ya hay muchos juguetes de mesa, prioriza movimiento o autonomía."
+                        )),
+                        section("Pregunta antes de la torre o la bici", List.of(
+                                "La torre ocupa sitio y pide un adulto. La bici pide entrepierna, casco y un sitio para usarla.",
+                                "El detalle de modelos está en las comparativas de torres y de bicicletas."
+                        )),
+                        section("Sin importes", List.of(
+                                "No publicamos rangos de precio. Compara utilidad; el presupuesto lo decides tú al comprar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué regalo no falla a esta edad?",
+                                "Uno que pueda usar ya: encajar, moverse con estabilidad o participar en la mesa. Un puzle de piezas grandes suele ser más seguro que un juguete «para mayores»."),
+                        faqItem("¿Y si ya tiene muchos juguetes?",
+                                "Prioriza autonomía o movimiento, o un kit de crear con un adulto. Evita duplicar lo que ya cubre una necesidad."),
+                        faqItem("¿La bicicleta está analizada aquí o en otra página?",
+                                "Aquí cuenta como idea de regalo. La comparativa de bicicletas sin pedales detalla talla, peso y ruedas."),
+                        faqItem("¿Incluís rangos de precio?",
+                                "No. Comparamos utilidad y durabilidad."),
+                        faqItem("¿Por qué no aparecen valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Regalos sostenibles para 4 años",
+                                "/comparativas/" + GIFTS_4_SLUG + "/",
+                                "Materiales declarados y uso que no dependa de pantallas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildGifts5Page() {
+        return ageComparison(
+                GIFTS_5_SLUG,
+                GIFTS_5_CANONICAL,
+                AGE_5,
+                GIFTS_5,
+                "Mejores ideas de regalo para niños de 5 años | Bebes Felices",
+                "Comparamos cinco regalos reales para 5 años por necesidad —aprender, moverse, autonomía o crear—, con metodología y afiliación transparentes.",
+                "Ideas de regalo para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores ideas de regalo para niños de 5 años",
+                        "Cinco regalos reales según lo que el niño ya hace",
+                        List.of(
+                                "Un buen regalo a los 5 años se usa durante semanas, no solo el día del cumpleaños. Elegimos un producto por necesidad: encajar, completar, moverse, participar en la cocina o crear.",
+                                "La selección reúne cinco productos del catálogo, disponibles en Amazon.es cuando la ficha lo permite. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Si ya tiene un cubo de formas, no dupliques: pasa a movimiento, autonomía o un kit de crear. La torre no se regala sin preguntar si hay espacio y un adulto dispuesto a usarla."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para construir y razonar", "set-construccion-magnetico", "Piezas magnéticas para estructuras tridimensionales."),
+                        summary("Para terminar una escena", "puzle-madera-animales", "Puzle de madera de safari."),
+                        summary("Para moverse", "bici-sin-pedales-basica", "Bicicleta sin pedales ligera y ajustable."),
+                        summary("Para jugar en familia", "juego-mesa-cooperativo", "Cooperativo de reglas sencillas."),
+                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera con un adulto.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos la necesidad que cubre cada regalo para un niño de 5 años. No es un ranking de «el mejor juguete», sino de roles distintos.",
+                        List.of(
+                                criterion("Necesidad", "Aprender, moverse, autonomía o crear. No repetimos el mismo gesto cinco veces."),
+                                criterion("Uso real", "Si se puede usar el mismo día, con sesiones cortas."),
+                                criterion("Regalo", "Si hay que preguntar (torre, talla de bici) o se puede acertar a ciegas (puzle)."),
+                                criterion("Duración", "Semanas de uso, no un objeto decorativo."),
+                                criterion("Límite", "Casco, supervisión o espacio: lo dejamos explícito.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige según lo que ya tiene", List.of(
+                                "Si duda, un puzle de piezas grandes o un cubo de formas suele ser más seguro que un juguete «para mayores».",
+                                "Si ya hay muchos juguetes de mesa, prioriza movimiento o autonomía."
+                        )),
+                        section("Pregunta antes de la torre o la bici", List.of(
+                                "La torre ocupa sitio y pide un adulto. La bici pide entrepierna, casco y un sitio para usarla.",
+                                "El detalle de modelos está en las comparativas de torres y de bicicletas."
+                        )),
+                        section("Sin importes", List.of(
+                                "No publicamos rangos de precio. Compara utilidad; el presupuesto lo decides tú al comprar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué regalo no falla a esta edad?",
+                                "Uno que pueda usar ya: encajar, moverse con estabilidad o participar en la mesa. Un puzle de piezas grandes suele ser más seguro que un juguete «para mayores»."),
+                        faqItem("¿Y si ya tiene muchos juguetes?",
+                                "Prioriza autonomía o movimiento, o un kit de crear con un adulto. Evita duplicar lo que ya cubre una necesidad."),
+                        faqItem("¿La bicicleta está analizada aquí o en otra página?",
+                                "Aquí cuenta como idea de regalo. La comparativa de bicicletas sin pedales detalla talla, peso y ruedas."),
+                        faqItem("¿Incluís rangos de precio?",
+                                "No. Comparamos utilidad y durabilidad."),
+                        faqItem("¿Por qué no aparecen valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Regalos sostenibles para 5 años",
+                                "/comparativas/" + GIFTS_5_SLUG + "/",
+                                "Materiales declarados y uso que no dependa de pantallas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildGiftSelection4Page() {
+        return ageComparison(
+                GIFT_SELECTION_4_SLUG,
+                GIFT_SELECTION_4_CANONICAL,
+                AGE_4,
+                GIFT_SELECTION_3,
+                "Selección de regalos para 4 años | Bebes Felices",
+                "Cinco regalos reales para 4 años por ocasión: un puzle que se termina, aire libre, mesa diaria, cuatro escenas o ensartar, con metodología y afiliación transparentes.",
+                "Selección de regalos para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Selección de regalos para niños de 4 años",
+                        "Cinco aciertos por ocasión, sin repetir la comparativa de ideas por necesidad",
+                        List.of(
+                                "Si no vives en esa casa, un puzle que se termina o un set de mesa suele fallar menos que una torre o una bici. Aquí no repetimos cubo, bici, torre y kit: esa lista está en ideas de regalo por necesidad.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Pregunta antes patinete o vajilla si puede haber duplicado. El casco no se improvisa el día del cumpleaños."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para acertar sin conocer la casa", "puzle-madera-animales", "Puzle de madera que se termina."),
+                        summary("Para el patio", "patinete-micro-mini-deluxe", "Tres ruedas ligeras; pide casco."),
+                        summary("Para cada comida", "vajilla-stor-mickey", "Set de tres piezas irrompibles."),
+                        summary("Para varias sesiones", "haba-puzles-cuatro-estaciones", "Cuatro puzles y figuras."),
+                        summary("Para un formato compacto", "cuentas-melissa-doug", "Cuentas de madera; supervisión.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos regalos por ocasión y riesgo de duplicar. No es un ranking de «el mejor regalo» ni de presupuesto.",
+                        List.of(
+                                criterion("Ocasión", "Visita a ciegas, aire libre, rutina, más sesiones o formato pequeño."),
+                                criterion("Uso real", "Si se usa el mismo día o en la comida siguiente."),
+                                criterion("Preguntar", "Patinete y vajilla: si ya hay uno, cambia."),
+                                criterion("Supervisión", "Cuentas, figuras y casco."),
+                                criterion("Límite", "No sustituye preguntar por torre o talla de bici.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Si no conoces los juguetes de la casa", List.of(
+                                "Puzle de piezas grandes o HABA de cuatro escenas. Evita torre y bici sin preguntar."
+                        )),
+                        section("Si el niño está mucho en la mesa", List.of(
+                                "La vajilla se usa cada día. Pregunta si ya tienen set."
+                        )),
+                        section("Sin importes", List.of(
+                                "No publicamos rangos de precio. El presupuesto lo decides al comprar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué regalo falla menos si no conoces la casa?",
+                                "Un puzle de piezas grandes o un set de mesa. La torre y la bici piden pregunta."),
+                        faqItem("¿Por qué no están el cubo, la bici y la torre?",
+                                "Están en ideas de regalo por necesidad. Aquí cubrimos otra ocasión: visita, patio, mesa, más puzles o formato pequeño."),
+                        faqItem("¿Las cuentas son un buen regalo de visita?",
+                                "Sí si hay un adulto. No si se van a dejar en el suelo con un hermano pequeño."),
+                        faqItem("¿Incluís rangos de precio?",
+                                "No. Comparamos utilidad y ocasión."),
+                        faqItem("¿Por qué no aparecen valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Ideas de regalo para 4 años",
+                                "/comparativas/" + GIFT_SELECTION_4_SLUG + "/",
+                                "Una opción por necesidad: aprender, moverse, autonomía o crear."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildGiftSelection5Page() {
+        return ageComparison(
+                GIFT_SELECTION_5_SLUG,
+                GIFT_SELECTION_5_CANONICAL,
+                AGE_5,
+                GIFT_SELECTION_3,
+                "Selección de regalos para 5 años | Bebes Felices",
+                "Cinco regalos reales para 5 años por ocasión: un puzle que se termina, aire libre, mesa diaria, cuatro escenas o ensartar, con metodología y afiliación transparentes.",
+                "Selección de regalos para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Selección de regalos para niños de 5 años",
+                        "Cinco aciertos por ocasión, sin repetir la comparativa de ideas por necesidad",
+                        List.of(
+                                "Si no vives en esa casa, un puzle que se termina o un set de mesa suele fallar menos que una torre o una bici. Aquí no repetimos cubo, bici, torre y kit: esa lista está en ideas de regalo por necesidad.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Pregunta antes patinete o vajilla si puede haber duplicado. El casco no se improvisa el día del cumpleaños."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para acertar sin conocer la casa", "puzle-madera-animales", "Puzle de madera que se termina."),
+                        summary("Para el patio", "patinete-micro-mini-deluxe", "Tres ruedas ligeras; pide casco."),
+                        summary("Para cada comida", "vajilla-stor-mickey", "Set de tres piezas irrompibles."),
+                        summary("Para varias sesiones", "haba-puzles-cuatro-estaciones", "Cuatro puzles y figuras."),
+                        summary("Para un formato compacto", "cuentas-melissa-doug", "Cuentas de madera; supervisión.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos regalos por ocasión y riesgo de duplicar. No es un ranking de «el mejor regalo» ni de presupuesto.",
+                        List.of(
+                                criterion("Ocasión", "Visita a ciegas, aire libre, rutina, más sesiones o formato pequeño."),
+                                criterion("Uso real", "Si se usa el mismo día o en la comida siguiente."),
+                                criterion("Preguntar", "Patinete y vajilla: si ya hay uno, cambia."),
+                                criterion("Supervisión", "Cuentas, figuras y casco."),
+                                criterion("Límite", "No sustituye preguntar por torre o talla de bici.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Si no conoces los juguetes de la casa", List.of(
+                                "Puzle de piezas grandes o HABA de cuatro escenas. Evita torre y bici sin preguntar."
+                        )),
+                        section("Si el niño está mucho en la mesa", List.of(
+                                "La vajilla se usa cada día. Pregunta si ya tienen set."
+                        )),
+                        section("Sin importes", List.of(
+                                "No publicamos rangos de precio. El presupuesto lo decides al comprar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué regalo falla menos si no conoces la casa?",
+                                "Un puzle de piezas grandes o un set de mesa. La torre y la bici piden pregunta."),
+                        faqItem("¿Por qué no están el cubo, la bici y la torre?",
+                                "Están en ideas de regalo por necesidad. Aquí cubrimos otra ocasión: visita, patio, mesa, más puzles o formato pequeño."),
+                        faqItem("¿Las cuentas son un buen regalo de visita?",
+                                "Sí si hay un adulto. No si se van a dejar en el suelo con un hermano pequeño."),
+                        faqItem("¿Incluís rangos de precio?",
+                                "No. Comparamos utilidad y ocasión."),
+                        faqItem("¿Por qué no aparecen valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/comparativas/" + GIFT_SELECTION_5_SLUG + "/",
+                                "Una opción por necesidad: aprender, moverse, autonomía o crear."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildChooseGift4Page() {
+        return ageComparison(
+                CHOOSE_GIFT_4_SLUG,
+                CHOOSE_GIFT_4_CANONICAL,
+                AGE_4,
+                CHOOSE_GIFT_3,
+                "Cómo elegir el regalo según la edad a los 4 años | Bebes Felices",
+                "Cinco productos reales según lo que el niño de 4 años ya hace: encajar, moverse de pie, comer, crear o jugar a la obra, con metodología y afiliación transparentes.",
+                "Cómo elegir el regalo a los 4 años",
+                new ComparisonPageResponse.Header(
+                        "Cómo elegir el regalo según la edad a los 4 años",
+                        "Cinco productos según lo que ya hace, no según la caja",
+                        List.of(
+                                "A los 4 años elige por el gesto que ya sostiene: encajar, empujar de pie, llevar el plato, modelar con un adulto o cargar en un juego de obra. La edad de la caja es seguridad, no garantía de acierto.",
+                                "La selección reúne cinco productos del catálogo, uno por criterio. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Si ya cubre ese gesto, no lo dupliques: pasa a otra fila. La guía larga de criterios sigue en cómo elegir juguetes por edad."
+                        )
+                ),
+                "Los cinco criterios",
+                List.of(
+                        summary("Si ya encaja formas", "juego-montessori-formas", "Cubo de 12 piezas grandes."),
+                        summary("Si ya se sostiene de pie", "patinete-micro-mini-deluxe", "Tres ruedas; pide casco y sitio."),
+                        summary("Si ya quiere la mesa", "vajilla-stor-mickey", "Set irrompible de tres piezas."),
+                        summary("Si hay un adulto para crear", "kit-manualidades-natural", "Plastilina ecológica y madera."),
+                        summary("Si ya juega a la obra", "small-foot-grua", "Grúa de madera FSC que se repite.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el criterio de elección a los 4 años: qué hace ya el niño. Cada producto es un ejemplo, no «el único regalo correcto».",
+                        List.of(
+                                criterion("Qué ya hace", "Encajar, ir de pie, comer, crear u obra."),
+                                criterion("Por qué a los 4", "Sesiones cortas y piezas o talla compatibles."),
+                                criterion("Regalo", "Si se puede acertar sin conocer toda la casa."),
+                                criterion("No elijas esto si", "Ese gesto ya está cubierto o falta otra necesidad."),
+                                criterion("Límite", "Casco, supervisión o adulto para crear: lo dejamos explícito.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por lo que ya hace", List.of(
+                                "No por lo que «tendría que» hacer. Un juguete para mayores frustra más que uno que se termina."
+                        )),
+                        section("Un gesto por regalo", List.of(
+                                "No hace falta cubo, patinete y grúa el mismo día. Elige la fila que falte."
+                        )),
+                        section("La guía y esta comparativa", List.of(
+                                "La guía de cómo elegir juguetes por edad explica criterios. Aquí hay cinco productos reales para aplicarlos a los 4 años."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿La edad de la caja basta?",
+                                "Es imprescindible para seguridad, no basta. Contrástala con lo que el niño ya hace."),
+                        faqItem("¿Qué evito a los 4 años?",
+                                "Reglas largas, piezas diminutas y movimiento sin casco ni supervisión. También duplicar un cubo o un patinete que ya tiene."),
+                        faqItem("¿Y si no sé qué tiene en casa?",
+                                "Mira la selección de regalos por ocasión: puzle o vajilla suelen fallar menos que torre o bici."),
+                        faqItem("¿Dónde está la guía completa?",
+                                "En cómo elegir juguetes según la edad, con variantes para 3, 4 y 5 años."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/?edad=4",
+                                "Criterios prácticos para 3, 4 y 5 años."
+                        ),
+                        new LinkItem(
+                                "Ideas de regalo para 4 años",
+                                "/comparativas/" + CHOOSE_GIFT_4_SLUG + "/",
+                                "Otra lista por necesidad: aprender, moverse, autonomía o crear."
+                        )
+                )
+        );
+    }
+    private ComparisonPageResponse buildChooseGift5Page() {
+        return ageComparison(
+                CHOOSE_GIFT_5_SLUG,
+                CHOOSE_GIFT_5_CANONICAL,
+                AGE_5,
+                CHOOSE_GIFT_3,
+                "Cómo elegir el regalo según la edad a los 5 años | Bebes Felices",
+                "Cinco productos reales según lo que el niño de 5 años ya hace: encajar, moverse de pie, comer, crear o jugar a la obra, con metodología y afiliación transparentes.",
+                "Cómo elegir el regalo a los 5 años",
+                new ComparisonPageResponse.Header(
+                        "Cómo elegir el regalo según la edad a los 5 años",
+                        "Cinco productos según lo que ya hace, no según la caja",
+                        List.of(
+                                "A los 5 años elige por el gesto que ya sostiene: encajar, empujar de pie, llevar el plato, modelar con un adulto o cargar en un juego de obra. La edad de la caja es seguridad, no garantía de acierto.",
+                                "La selección reúne cinco productos del catálogo, uno por criterio. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Si ya cubre ese gesto, no lo dupliques: pasa a otra fila. La guía larga de criterios sigue en cómo elegir juguetes por edad."
+                        )
+                ),
+                "Los cinco criterios",
+                List.of(
+                        summary("Si ya encaja formas", "juego-montessori-formas", "Cubo de 12 piezas grandes."),
+                        summary("Si ya se sostiene de pie", "patinete-micro-mini-deluxe", "Tres ruedas; pide casco y sitio."),
+                        summary("Si ya quiere la mesa", "vajilla-stor-mickey", "Set irrompible de tres piezas."),
+                        summary("Si hay un adulto para crear", "kit-manualidades-natural", "Plastilina ecológica y madera."),
+                        summary("Si ya juega a la obra", "small-foot-grua", "Grúa de madera FSC que se repite.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el criterio de elección a los 5 años: qué hace ya el niño. Cada producto es un ejemplo, no «el único regalo correcto».",
+                        List.of(
+                                criterion("Qué ya hace", "Encajar, ir de pie, comer, crear u obra."),
+                                criterion("Por qué a los 5", "Sesiones cortas y piezas o talla compatibles."),
+                                criterion("Regalo", "Si se puede acertar sin conocer toda la casa."),
+                                criterion("No elijas esto si", "Ese gesto ya está cubierto o falta otra necesidad."),
+                                criterion("Límite", "Casco, supervisión o adulto para crear: lo dejamos explícito.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por lo que ya hace", List.of(
+                                "No por lo que «tendría que» hacer. Un juguete para mayores frustra más que uno que se termina."
+                        )),
+                        section("Un gesto por regalo", List.of(
+                                "No hace falta cubo, patinete y grúa el mismo día. Elige la fila que falte."
+                        )),
+                        section("La guía y esta comparativa", List.of(
+                                "La guía de cómo elegir juguetes por edad explica criterios. Aquí hay cinco productos reales para aplicarlos a los 5 años."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿La edad de la caja basta?",
+                                "Es imprescindible para seguridad, no basta. Contrástala con lo que el niño ya hace."),
+                        faqItem("¿Qué evito a los 5 años?",
+                                "Reglas largas, piezas diminutas y movimiento sin casco ni supervisión. También duplicar un cubo o un patinete que ya tiene."),
+                        faqItem("¿Y si no sé qué tiene en casa?",
+                                "Mira la selección de regalos por ocasión: puzle o vajilla suelen fallar menos que torre o bici."),
+                        faqItem("¿Dónde está la guía completa?",
+                                "En cómo elegir juguetes según la edad, con variantes para 3, 4 y 5 años."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/?edad=5",
+                                "Criterios prácticos para 3, 4 y 5 años."
+                        ),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/comparativas/" + CHOOSE_GIFT_5_SLUG + "/",
+                                "Otra lista por necesidad: aprender, moverse, autonomía o crear."
+                        )
+                )
+        );
+    }
+    private ComparisonPageResponse buildBalanceBikes4Page() {
+        Map<String, EditorialEntry> editorialById = new LinkedHashMap<>();
+        BALANCE_BIKES.forEach(entry -> editorialById.put(entry.productId(), entry));
+
+        AtomicInteger rank = new AtomicInteger(1);
+        List<ComparisonPageResponse.Entry> entries = productCatalog
+                .findByIds(BALANCE_BIKES.stream().map(EditorialEntry::productId).toList())
+                .stream()
+                .filter(product -> product.isAvailableForAge(AGE_4))
+                .map(product -> toResponseEntry(
+                        rank.getAndIncrement(),
+                        product,
+                        editorialById.get(product.id())
+                ))
+                .toList();
+
+        return new ComparisonPageResponse(
+                new Seo(
+                        BALANCE_BIKES_4_CANONICAL,
+                        "Mejores bicicletas sin pedales para 4 años | Bebes Felices",
+                        "Comparamos cinco bicicletas sin pedales aptas para 4 años por ajuste, peso, ruedas y facilidad de manejo, con metodología y afiliación transparentes."
+                ),
+                PageStatus.PUBLISHED,
+                BALANCE_BIKES_4_SLUG,
+                AGE_4,
+                breadcrumbs(),
+                new ComparisonPageResponse.Header(
+                        "Mejores bicicletas sin pedales para 4 años",
+                        "Cinco modelos reales comparados por talla, manejo y tipo de rueda",
+                        List.of(
+                                "A los 4 años importa más que el niño llegue bien al suelo y pueda controlar la bicicleta que cualquier reclamo comercial. Por eso revisamos ajustes, peso declarado, ruedas y elementos que facilitan el aprendizaje.",
+                                "La selección reúne cinco modelos disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "Una bicicleta sin pedales requiere casco, calzado cerrado, ajuste correcto y supervisión adulta. Comprueba siempre las instrucciones y límites indicados por el fabricante."
+                        )
+                ),
+                List.of(),
+                quickSummary(),
+                methodology(),
+                entries,
+                buyingGuide(),
+                faq(),
+                relatedLinks(),
+                trustAuthority(),
+                affiliation(),
+                legalLinks(),
+                new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
+                BIKES_PUBLISHED_AT,
+                BIKES_UPDATED_AT
+        );
+    }
+    private ComparisonPageResponse buildBalanceBikes5Page() {
+        Map<String, EditorialEntry> editorialById = new LinkedHashMap<>();
+        BALANCE_BIKES.forEach(entry -> editorialById.put(entry.productId(), entry));
+
+        AtomicInteger rank = new AtomicInteger(1);
+        List<ComparisonPageResponse.Entry> entries = productCatalog
+                .findByIds(BALANCE_BIKES.stream().map(EditorialEntry::productId).toList())
+                .stream()
+                .filter(product -> product.isAvailableForAge(AGE_5))
+                .map(product -> toResponseEntry(
+                        rank.getAndIncrement(),
+                        product,
+                        editorialById.get(product.id())
+                ))
+                .toList();
+
+        return new ComparisonPageResponse(
+                new Seo(
+                        BALANCE_BIKES_5_CANONICAL,
+                        "Mejores bicicletas sin pedales para 5 años | Bebes Felices",
+                        "Comparamos cinco bicicletas sin pedales aptas para 5 años por ajuste, peso, ruedas y facilidad de manejo, con metodología y afiliación transparentes."
+                ),
+                PageStatus.PUBLISHED,
+                BALANCE_BIKES_5_SLUG,
+                AGE_5,
+                breadcrumbs(),
+                new ComparisonPageResponse.Header(
+                        "Mejores bicicletas sin pedales para 5 años",
+                        "Cinco modelos reales comparados por talla, manejo y tipo de rueda",
+                        List.of(
+                                "A los 5 años importa más que el niño llegue bien al suelo y pueda controlar la bicicleta que cualquier reclamo comercial. Por eso revisamos ajustes, peso declarado, ruedas y elementos que facilitan el aprendizaje.",
+                                "La selección reúne cinco modelos disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Una bicicleta sin pedales requiere casco, calzado cerrado, ajuste correcto y supervisión adulta. Comprueba siempre las instrucciones y límites indicados por el fabricante."
+                        )
+                ),
+                List.of(),
+                quickSummary(),
+                methodology(),
+                entries,
+                buyingGuide(),
+                faq(),
+                relatedLinks(),
+                trustAuthority(),
+                affiliation(),
+                legalLinks(),
+                new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
+                BIKES_PUBLISHED_AT,
+                BIKES_UPDATED_AT
+        );
+    }
+    private ComparisonPageResponse buildStem4Page() {
+        return ageComparison(
+                STEM_4_SLUG,
+                STEM_4_CANONICAL,
+                AGE_4,
+                STEM_5,
+                "Mejores juguetes STEM para 4 años | Bebes Felices",
+                "Comparamos cinco juguetes existentes aptos para 4 años por lógica, construcción, patrones y uso evolutivo.",
+                "Juguetes STEM para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores juguetes STEM para 4 años",
+                        "Cinco opciones reales para construir, observar patrones y resolver problemas",
+                        List.of(
+                                "A los 4 años un juguete STEM útil plantea un problema visible: levantar una carga, mantener una torre, completar un patrón o construir una estructura.",
+                                "Reutilizamos productos ya presentes en el catálogo y aptos para esta edad. No añadimos precios, estrellas ni enlaces comerciales inventados.",
+                                "STEM no significa dejar al niño solo: los imanes, piezas y reglas requieren revisar la seguridad y acompañar el primer uso."
+                        )
+                ),
+                "Los cinco juguetes",
+                List.of(
+                        summary("Para construcción tridimensional", "set-construccion-magnetico", "Formas, simetría y estabilidad con piezas magnéticas."),
+                        summary("Para mecanismos sencillos", "small-foot-grua", "Giro, manivela y transporte de cargas."),
+                        summary("Para equilibrio", "juego-mesa-animal-sobre-animal", "Apilado, apoyo y distribución del peso."),
+                        summary("Para orientación espacial", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas."),
+                        summary("Para reconocer patrones", "juego-mesa-dobble-kids", "Comparación visual con una regla breve.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos el tipo de reto, la autonomía posible y la seguridad para un niño de 4 años. La selección no presupone que todo juguete educativo sea STEM.",
+                        List.of(
+                                criterion("Reto STEM", "Debe practicar construcción, mecanismos, equilibrio, orientación o patrones de forma observable."),
+                                criterion("Encaje a los 4 años", "Todos los productos incluyen esta edad en el rango del catálogo."),
+                                criterion("Uso evolutivo", "Valoramos si el reto admite repetición o dificultad creciente."),
+                                criterion("Dependencia del adulto", "Indicamos cuándo hace falta explicar reglas o proponer el primer reto."),
+                                criterion("Seguridad", "Revisamos imanes, piezas sueltas y la presencia de menores de 3 años.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el tipo de problema", List.of(
+                                "Para construir, prioriza el set magnético; para mecanismos, la grúa; para equilibrio, Animal sobre Animal.",
+                                "Los puzles y Dobble cubren orientación y patrones, pero no sustituyen una experiencia de construcción."
+                        )),
+                        section("Busca dificultad ajustable", List.of(
+                                "Empieza con pocas piezas o una regla y aumenta el reto cuando pueda terminar sin ayuda constante.",
+                                "Un producto evolutivo permite cambiar la consigna sin comprar otro juguete."
+                        )),
+                        section("Revisa piezas e imanes", List.of(
+                                "Los imanes deben estar encapsulados y las piezas sueltas fuera del alcance de menores de 3 años.",
+                                "La edad recomendada no sustituye revisar el estado del producto antes de cada uso."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué significa STEM a los 4 años?", "Resolver problemas de ciencia, tecnología, ingeniería o matemáticas mediante juego: construir, observar mecanismos, equilibrar o reconocer patrones."),
+                        faqItem("¿Hace falta un juguete electrónico?", "No. Una grúa con manivela, un apilado o una construcción magnética permiten observar principios físicos sin pantalla."),
+                        faqItem("¿Cuál admite más dificultad?", "La construcción magnética ofrece el margen más directo: se pueden añadir piezas, restricciones y estructuras más complejas."),
+                        faqItem("¿Todos sirven para jugar sin adulto?", "No. Conviene explicar el primer reto, acompañar las reglas y revisar imanes y piezas."),
+                        faqItem("¿Por qué no aparecen precios ni estrellas?", "Porque cambian y no forman parte del criterio editorial estable.")
+                ),
+                List.of(
+                        new LinkItem("Juguetes y regalos para niños de 4 años", EditorialDefaults.hubHref(5), "Volver al hub de esta edad."),
+                        new LinkItem("Ideas de regalo para 4 años", "/regalos/ideas-regalo-5-anos/", "Selección más amplia por necesidad."),
+                        new LinkItem("Qué habilidades desarrolla un niño de 4 años", "/guias/habilidades-5-anos/", "Pensamiento lógico, cooperación y autonomía."),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildBoardGames5Page() {
+        List<ComparisonPageResponse.Entry> entries = rankedEntries(BOARD_GAMES, AGE_5);
+        return new ComparisonPageResponse(
+                new Seo(
+                        BOARD_GAMES_5_CANONICAL,
+                        "Mejores juegos de mesa para 5 años | Bebes Felices",
+                        "Comparamos cinco juegos de mesa reales para 5 años por encaje, cooperación, lectura y componentes, con metodología y afiliación transparentes."
+                ),
+                PageStatus.PUBLISHED,
+                BOARD_GAMES_5_SLUG,
+                AGE_5,
+                List.of(
+                        new ComparisonPageResponse.Breadcrumb("Inicio", "/"),
+                        new ComparisonPageResponse.Breadcrumb(
+                                EditorialDefaults.HUB_4_LABEL,
+                                EditorialDefaults.HUB_4_HREF
+                        ),
+                        new ComparisonPageResponse.Breadcrumb(
+                                "Juegos de mesa para 5 años",
+                                BOARD_GAMES_5_CANONICAL
+                        )
+                ),
+                new ComparisonPageResponse.Header(
+                        "Mejores juegos de mesa para 5 años",
+                        "Cinco juegos reales comparados por reglas, cooperación y tiempo de partida",
+                        List.of(
+                                "A los 5 años caben las primeras reglas, los turnos cortos y, si el grupo lo admite, un objetivo compartido. Importa más que la partida se pueda explicar en pocos minutos que cualquier reclamo de «el más educativo».",
+                                "La selección reúne cinco juegos disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Un adulto debe explicar el objetivo, vigilar piezas pequeñas y adaptar el ritmo. Distinguimos cooperativos y competitivos para que elijas según cómo juega tu casa."
+                        )
+                ),
+                List.of(),
+                List.of(
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para empezar a cooperar",
+                                "juego-mesa-el-frutal-mini",
+                                "Reglas mínimas y un objetivo común frente al cuervo."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para colores y primeros conteos",
+                                "juego-mesa-unicornio-tesoro",
+                                "Dados, tablero a doble cara y cristales de nube."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para pulso y motricidad fina",
+                                "juego-mesa-animal-sobre-animal",
+                                "Apilar 29 figuras de madera según el dado."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para observación en familia",
+                                "juego-mesa-dobble-kids",
+                                "Partidas de 15 minutos y hasta 8 jugadores."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para un cooperativo más estructurado",
+                                "juego-mesa-unicornio-fiesta-rosalie",
+                                "Dados, ruleta y un objetivo compartido a partir de 5 años."
+                        )
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos especificaciones verificables y su utilidad para un niño de 5 años. No asignamos notas numéricas ni completamos datos que el fabricante o la ficha consultada no permitan confirmar.",
+                        List.of(
+                                new ComparisonPageResponse.Criterion(
+                                        "Encaje a los 5 años",
+                                        "Revisamos la edad declarada, si las reglas caben en una partida corta y si el turno se entiende sin un reglamento largo."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Cooperación o competición",
+                                        "Dejamos claro si se gana en equipo o hay un ganador individual. A esta edad ambos formatos pueden funcionar; no son intercambiables."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Lectura y dependencia del adulto",
+                                        "Priorizamos símbolos, colores y dados frente a texto. Un adulto sigue siendo necesario para explicar y acompañar."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Rejugabilidad",
+                                        "Valoramos si hay variantes, azar de dados o suficiente variedad para repetir sin agotarse en una tarde."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Componentes y seguridad",
+                                        "Comprobamos materiales declarados y avisos de piezas pequeñas. Ningún juego sustituye la supervisión."
+                                )
+                        )
+                ),
+                entries,
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        new ComparisonPageResponse.Section(
+                                "Empieza por cómo jugáis en casa",
+                                List.of(
+                                        "Si las derrotas individuales acaban en llanto, un cooperativo como El Frutal Mini suele encajar mejor que un juego de rapidez.",
+                                        "Si ya aguanta turnos y le gusta competir un rato, Dobble Kids o Animal sobre Animal cubren observación y pulso sin partidas largas."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Tiempo real de partida",
+                                List.of(
+                                        "A los 5 años conviene que se pueda terminar. Quince minutos declarados siguen pidiendo un adulto que evite discusiones y recoja piezas.",
+                                        "La primera partida cuenta como explicación: no midas el éxito por si «ya juega solo»."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Lectura, idioma y piezas",
+                                List.of(
+                                        "Dobble Kids está en español. Los HABA de esta lista se juegan con símbolos, dados o ruleta; confirma que el reglamento de tu caja está en un idioma que puedes explicar.",
+                                        "Revisa avisos de piezas pequeñas, sobre todo cristales y cartas, si hay hermanos menores de 3 años."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Qué no usamos para ordenar",
+                                List.of(
+                                        "No ordenamos por precio, número de reseñas ni estrellas. El orden editorial cubre roles distintos: cooperar, contar, apilar, observar y un cooperativo más largo.",
+                                        "Comprueba la ficha vigente en Amazon.es antes de comprar: ediciones y contenidos pueden cambiar."
+                                )
+                        )
+                )),
+                List.of(
+                        new ComparisonPageResponse.Faq(
+                                "¿Qué juegos de mesa son adecuados a los 5 años?",
+                                "Los de reglas breves, turnos visibles y poca lectura. Los cooperativos de 10-15 minutos y los de observación o apilamiento suelen encajar mejor que los competitivos con texto o partidas largas."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Cooperativo o competitivo?",
+                                "Depende del niño y de la casa. Cooperar evita un ganador individual; competir corto puede funcionar si se tolera perder. En esta lista hay ambos, etiquetados con claridad."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Hace falta que el niño sepa leer?",
+                                "No en estos cinco. Hace falta un adulto que explique el objetivo y vigile piezas. Dobble Kids se resuelve señalando un dibujo."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿El Frutal Mini es el mismo que el Frutal grande?",
+                                "Comparte la idea (recoger fruta antes de que llegue el cuervo) en formato de viaje: menos piezas y hasta 4 jugadores. No es la caja clásica de hasta 8."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian con frecuencia y no forman parte de esta evaluación editorial. La página compara especificaciones y criterios de uso verificables."
+                        )
+                ),
+                List.of(
+                        new LinkItem(
+                                "Juguetes y regalos para niños de 5 años",
+                                EditorialDefaults.HUB_4_HREF,
+                                "Página por edad con propuestas de aprendizaje, movimiento y autonomía."
+                        ),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/",
+                                "Criterios prácticos para adaptar una elección al desarrollo infantil."
+                        ),
+                        new LinkItem(
+                                "Qué habilidades desarrolla un niño de 5 años",
+                                "/guias/habilidades-4-anos/",
+                                "Atención, reglas, motricidad fina y juego compartido."
+                        )
+                ),
+                new TrustAuthority(
+                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y solo mostramos hechos revisados el 17 de agosto de 2026.",
+                        List.of(
+                                "Edad declarada y encaje con partidas cortas a los 5 años.",
+                                "Cooperación o competición, según lo indique el fabricante.",
+                                "Carga de lectura y necesidad de un adulto.",
+                                "Componentes declarados y avisos de seguridad."
+                        ),
+                        List.of(
+                                "Estado editorial publicado y fecha de revisión visibles.",
+                                "Sin importes, valoraciones ni puntuaciones.",
+                                "Enlaces de afiliación separados del contenido editorial.",
+                                "Fecha de revisión visible."
+                        )
+                ),
+                affiliation(),
+                legalLinks(),
+                new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
+                BOARD_GAMES_PUBLISHED_AT,
+                BOARD_GAMES_UPDATED_AT
+        );
+    }
+    private ComparisonPageResponse buildScooters5Page() {
+        List<ComparisonPageResponse.Entry> entries = rankedEntries(SCOOTERS, AGE_5);
+        return new ComparisonPageResponse(
+                new Seo(
+                        SCOOTERS_5_CANONICAL,
+                        "Mejores patinetes y triciclos para 5 años | Bebes Felices",
+                        "Comparamos cuatro patinetes de tres ruedas y un triciclo reales para 5 años por talla, estabilidad y tipo de uso, con metodología y afiliación transparentes."
+                ),
+                PageStatus.PUBLISHED,
+                SCOOTERS_5_SLUG,
+                AGE_5,
+                List.of(
+                        new ComparisonPageResponse.Breadcrumb("Inicio", "/"),
+                        new ComparisonPageResponse.Breadcrumb(
+                                EditorialDefaults.HUB_4_LABEL,
+                                EditorialDefaults.HUB_4_HREF
+                        ),
+                        new ComparisonPageResponse.Breadcrumb(
+                                "Patinetes y triciclos para 5 años",
+                                SCOOTERS_5_CANONICAL
+                        )
+                ),
+                new ComparisonPageResponse.Header(
+                        "Mejores patinetes y triciclos para 5 años",
+                        "Cinco modelos reales comparados por estabilidad, talla y tipo de uso",
+                        List.of(
+                                "A los 5 años el patinete de tres ruedas sigue ofreciendo una base más estable que uno de dos ruedas. Un triciclo cubre otra necesidad: pedalear sentado, a veces con mango de adulto. No son intercambiables.",
+                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Casco homologado, calzado cerrado, una zona sin tráfico y supervisión adulta no se sustituyen con tres ruedas, luces LED ni un mango parental. Comprueba siempre las instrucciones y límites del fabricante."
+                        )
+                ),
+                List.of(),
+                List.of(
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para empezar de pie con tres ruedas",
+                                "patinete-micro-mini-deluxe",
+                                "1,95 kg declarados, giro por inclinación y manillar 48-68 cm."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para una primera opción sencilla",
+                                "patinete-molto-maxi",
+                                "De 3 a 5 años, manillar 57-67 cm y montaje sin herramientas."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para llevar y guardar",
+                                "patinete-globber-junior-foldable",
+                                "Plegable, bloqueo de dirección y tres alturas de manillar."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para más altura a partir de 5 años",
+                                "patinete-globber-master-lights",
+                                "Manillar de 74 a 94 cm y plegado desde 5 años."
+                        ),
+                        new ComparisonPageResponse.QuickSummaryItem(
+                                "Para pedalear sentado",
+                                "triciclo-chicco-u-go",
+                                "Triciclo 2en1 con mango de adulto y hasta 20 kg."
+                        )
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos especificaciones verificables y su utilidad para un niño de 5 años. No asignamos notas numéricas ni completamos datos que el fabricante o la ficha consultada no permitan confirmar.",
+                        List.of(
+                                new ComparisonPageResponse.Criterion(
+                                        "Encaje a los 5 años",
+                                        "Revisamos la edad declarada y, cuando está publicada, la altura del manillar. Un modelo desde 5 años con manillar a 74 cm no encaja igual que uno de 48 a 68 cm."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Estabilidad y tipo de uso",
+                                        "Separamos patinete de pie (tres ruedas) y triciclo sentado. Tres ruedas aportan base; no equivalen a un patinete de dos ruedas ni a una bicicleta sin pedales."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Manejo y talla",
+                                        "Consideramos el peso del patinete cuando está declarado, el recorrido del manillar y la carga máxima. Sin cifra verificada, no la inventamos."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Transporte",
+                                        "Valoramos el plegado o el manillar desmontable solo cuando la ficha lo indica. No deducimos que un modelo no se pueda guardar."
+                                ),
+                                new ComparisonPageResponse.Criterion(
+                                        "Seguridad práctica",
+                                        "Comprobamos freno, bloqueo de dirección o mango parental cuando están documentados. Ninguno sustituye casco, supervisión y una zona segura."
+                                )
+                        )
+                ),
+                entries,
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        new ComparisonPageResponse.Section(
+                                "Decide primero si va de pie o sentado",
+                                List.of(
+                                        "El patinete practica equilibrio de pie, dirección y frenado. El triciclo practica pedaleo sentado, a veces con mango de adulto. A los 5 años pueden convivir; no cubren lo mismo.",
+                                        "Si el objetivo es moverse de pie al aire libre, empieza por un patinete de tres ruedas con manillar que llegue a sus manos. Si aún necesita que le empujen en paseos largos, el triciclo 2en1 cubre ese tramo."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Mide la altura del manillar",
+                                List.of(
+                                        "El niño debe alcanzar el manillar sin encogerse ni estirarse en exceso. Contrasta su altura con el rango publicado: 48-68 cm no es intercambiable con 74-94 cm.",
+                                        "No elijas solo por edad. El Master Lights está indicado desde 5 años, pero su manillar mínimo es 74 cm; un niño bajo puede encajar mejor en Mini Deluxe o Junior."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Plegado, peso y carga",
+                                List.of(
+                                        "Si lo vas a meter en el coche o en un ascensor, el plegado con modo carrito (Junior y Master) o el manillar desmontable (Mini Deluxe) cambian el día a día.",
+                                        "Revisa la carga máxima. Los patinetes de esta lista declaran 50 kg cuando figura; el U-GO declara 20 kg. Comprueba el peso real del niño antes de comprar el triciclo."
+                                )
+                        ),
+                        new ComparisonPageResponse.Section(
+                                "Seguridad antes de salir",
+                                List.of(
+                                        "Casco homologado, calzado cerrado, freno comprobado y una zona sin tráfico, bordillos altos ni agua. Las luces LED no sustituyen visibilidad ni un adulto atento.",
+                                        "El bloqueo de dirección y el mango parental ayudan al aprendizaje; no evitan caídas. Un solo niño por vehículo y según el manual del fabricante."
+                                )
+                        )
+                )),
+                List.of(
+                        new ComparisonPageResponse.Faq(
+                                "¿Patinete o triciclo a los 5 años?",
+                                "Depende de si quieres equilibrio de pie o pedaleo sentado. El patinete de tres ruedas es más estable que uno de dos; el triciclo no practica ese equilibrio. En esta lista hay ambos, etiquetados con claridad."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Sigue haciendo falta un patinete de tres ruedas a los 5 años?",
+                                "A menudo sí, mientras el equilibrio de pie no esté asentado. Tres ruedas no son un recambio de la bicicleta sin pedales: aquí se está de pie, se dirige y se frena."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿El Globber Master Lights vale para cualquier niño de 5 años?",
+                                "Está indicado desde 5 años, pero el manillar parte de 74 cm. Si el niño es bajo, Mini Deluxe LED (48-68 cm) o Junior Foldable (54-68 cm) encajan mejor. Mide antes de decidir."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Por qué el triciclo tiene un límite de 20 kg?",
+                                "Porque así lo declara Chicco en el U-GO 2en1. A los 5 años hay que comprobar el peso: 20 kg no es equivalente a los 50 kg de los patinetes de esta comparativa."
+                        ),
+                        new ComparisonPageResponse.Faq(
+                                "¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian con frecuencia y no forman parte de esta evaluación editorial. La página compara especificaciones y criterios de uso verificables."
+                        )
+                ),
+                List.of(
+                        new LinkItem(
+                                "Juguetes y regalos para niños de 5 años",
+                                EditorialDefaults.HUB_4_HREF,
+                                "Página por edad con propuestas de aprendizaje, movimiento y autonomía."
+                        ),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/",
+                                "Criterios prácticos para adaptar una elección al desarrollo infantil."
+                        ),
+                        new LinkItem(
+                                "Bicicletas sin pedales",
+                                "/movimiento/bicicletas-sin-pedales/",
+                                "El otro eje de movimiento a esta edad: equilibrio sentado."
+                        )
+                ),
+                new TrustAuthority(
+                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y solo mostramos hechos revisados el 17 de agosto de 2026.",
+                        List.of(
+                                "Edad declarada y altura de manillar cuando está publicada.",
+                                "Uso de pie (patinete) o sentado (triciclo).",
+                                "Peso, carga máxima y plegado verificados.",
+                                "Freno, bloqueo de dirección o mango parental, sin sustituir casco ni supervisión."
+                        ),
+                        List.of(
+                                "Estado editorial publicado y fecha de revisión visibles.",
+                                "Sin importes, valoraciones ni puntuaciones.",
+                                "Enlaces de afiliación separados del contenido editorial.",
+                                "Fecha de revisión visible."
+                        )
+                ),
+                affiliation(),
+                legalLinks(),
+                new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
+                SCOOTERS_PUBLISHED_AT,
+                SCOOTERS_UPDATED_AT
+        );
+    }
+    private ComparisonPageResponse buildTowers5Page() {
+        return ageComparison(
+                TOWERS_5_SLUG,
+                TOWERS_5_CANONICAL,
+                AGE_5,
+                TOWERS,
+                "Mejores torres de aprendizaje para 5 años | Bebes Felices",
+                "Comparamos cinco torres de aprendizaje reales para 5 años por estabilidad, altura y plegado, con metodología y afiliación transparentes.",
+                "Torres de aprendizaje para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores torres de aprendizaje para 5 años",
+                        "Cinco modelos reales comparados por estabilidad, altura y uso en cocina",
+                        List.of(
+                                "A los 5 años la torre sigue siendo un puesto de colaboración, no un taburete improvisado. Importa que la plataforma llegue a la encimera, que la base no vuelque y que un adulto esté al lado.",
+                                "La selección reúne cinco torres disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Nunca junto a fogones, agua hirviendo o cuchillos. Revisa tornillos, huecos para la cabeza y el manual. La certificación no sustituye la supervisión."
+                        )
+                ),
+                "Las cinco torres",
+                List.of(
+                        summary("Para plegar y convertir en mesa", "torre-yoleo-transformer", "Nogal, pizarra magnética y modo escritorio."),
+                        summary("Para tres alturas y poco peso", "torre-bianconiglio-evo", "7,5 kg y plataforma a 30, 40 y 50 cm."),
+                        summary("Para guardar detrás de la puerta", "torre-kleiner-riese", "6,5 kg, plegado y barra NFS."),
+                        summary("Para tres alturas con EN-71", "torre-bey-co", "Patas anticaída y superficie antideslizante."),
+                        summary("Para torre y escritorio con ajuste", "torre-bianconiglio-transformer", "Convertible en mesa; 10 kg declarados.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos especificaciones verificables y su utilidad para un niño de 5 años. No asignamos notas ni completamos datos que la ficha no permita confirmar.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Revisamos si la altura de plataforma llega a una encimera típica y si el niño puede subir y bajar sin trepar por fuera."),
+                                criterion("Estabilidad", "Base, patas anticaída y barandilla cuando están publicadas. Un adulto sigue siendo obligatorio."),
+                                criterion("Regulación y plegado", "Tres alturas, conversión a mesa o plegado solo si la ficha lo declara."),
+                                criterion("Materiales", "Madera o contrachapado y certificaciones EN-71 cuando figuran."),
+                                criterion("Seguridad práctica", "Huecos, bloqueos y avisos del fabricante. Ninguna torre es un juguete de trepa.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Mide la encimera antes", List.of(
+                                "La plataforma debe dejar los brazos cómodos sobre la superficie de trabajo, sin que el niño se incline fuera de la barandilla.",
+                                "Tres alturas no sirven si la más alta sigue baja para tu cocina. Comprueba centímetros reales."
+                        )),
+                        section("Plegado o uso fijo", List.of(
+                                "Si la cocina es pequeña, una torre plegable (YOLEO o Kleiner Riese) cambia el día a día.",
+                                "Si va a durar años, valora conversión a escritorio cuando deje de usarse en la encimera."
+                        )),
+                        section("Seguridad de uso", List.of(
+                                "Suelo nivelado, lejos del fuego y del agua hirviendo. Un solo niño. Adulto presente.",
+                                "Revisa tornillos tras el montaje y periódicamente. No la uses como escalera de adulto y de niño a la vez."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sigue teniendo sentido una torre a los 5 años?",
+                                "Sí, si participa en cocina o lavabo y aún no llega. Si ya alcanza con un taburete estable y hay supervisión, puede no hacer falta."),
+                        faqItem("¿Madera o contrachapado?",
+                                "Lo decisivo es la estabilidad y los cierres. El abedul de 18 mm y el nogal de esta lista son materiales distintos; no los ordenamos por precio."),
+                        faqItem("¿El sistema anticaídas viene de serie?",
+                                "En la EVO, KidSafe es un accesorio en varias fichas. No lo des por incluido."),
+                        faqItem("¿Puede usarla solo?",
+                                "No. Aunque suba y baje, el riesgo está en la encimera: fuego, cuchillos, agua."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Vajilla infantil para 5 años",
+                                "/comparativas/" + TOWERS_5_SLUG + "/",
+                                "La otra pieza de autonomía en la rutina diaria."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildTableware5Page() {
+        return ageComparison(
+                TABLEWARE_5_SLUG,
+                TABLEWARE_5_CANONICAL,
+                AGE_5,
+                TABLEWARE,
+                "Mejores vajillas infantiles para 5 años | Bebes Felices",
+                "Comparamos cinco opciones reales de vajilla y vasos para 5 años por piezas, estabilidad y cuidado, con metodología y afiliación transparentes.",
+                "Vajilla infantil para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores vajillas infantiles para 5 años",
+                        "Cinco productos reales para comer y beber con más autonomía",
+                        List.of(
+                                "A los 5 años el gesto de llevar el plato a la mesa ya cabe. Importa que no se haga añicos, que la base no resbale y que el vaso se pueda coger. Cubiertos y vaso no siempre vienen en el mismo set.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Revisa el marcado de apto para alimento. Un vaso 360° o una tapa no sustituyen la supervisión con hermanos pequeños."
+                        )
+                ),
+                "Los cinco productos",
+                List.of(
+                        summary("Para no mezclar la comida", "vajilla-twistshake-dividido", "Tres compartimentos, tapa y base antideslizante."),
+                        summary("Para un set de mesa completo", "vajilla-stor-mickey", "Plato, cuenco y vaso de 260 ml."),
+                        summary("Para beber sin tetina", "vaso-munchkin-miracle-360", "Dos vasos 360° de 207 ml con asas."),
+                        summary("Para plato grande de mesa", "vajilla-fun-house", "Plato de 22 cm, cuenco de 16 cm y vaso de 220 ml."),
+                        summary("Para guardar lo que sobra", "cuenco-twistshake-tapa", "Cuenco con tapa, sin ser un set completo.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos especificaciones verificables y su utilidad para un niño de 5 años. No asignamos notas ni completamos volúmenes o materiales que la ficha no declare.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Priorizamos piezas que el niño pueda llevar a la mesa familiar, no solo tronas de bebé."),
+                                criterion("Estabilidad", "Base antideslizante, asas o vaso bajo cuando están publicados."),
+                                criterion("Piezas incluidas", "Dejamos claro si es un set, un plato, un vaso o un cuenco."),
+                                criterion("Cuidado", "Microondas y lavavajillas solo si la ficha lo indica."),
+                                criterion("Material y alimento", "Libre de BPA u otros avisos cuando figuran. No inventamos composiciones.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Empieza por lo que falta en casa", List.of(
+                                "Si ya hay plato y falta vaso, un Miracle 360 cubre el paso a beber sin tetina.",
+                                "Si tira el plato, un modelo con base antideslizante o Click-Mat aporta más que un motivo de personaje."
+                        )),
+                        section("Set o pieza suelta", List.of(
+                                "Un set de 3 piezas simplifica el regalo. Un plato con tapa sirve para llevar o guardar.",
+                                "Los cubiertos no están en esta lista: añádelos aparte si aún come con cubiertos de adulto demasiado largos."
+                        )),
+                        section("Limpieza y seguridad", List.of(
+                                "Confirma microondas y cubeta del lavavajillas. Las válvulas 360° hay que desmontarlas.",
+                                "Retira piezas con recubrimiento deteriorado. El marcado de alimento manda."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sigue haciendo falta vajilla infantil a los 5 años?",
+                                "Sí, si el cristal de adulto se rompe o el vaso es inestable. Si ya come con la vajilla familiar sin incidentes, no es obligatorio."),
+                        faqItem("¿Vaso 360° o vaso abierto?",
+                                "El 360° reduce derrames y acerca el gesto de un vaso abierto. El vaso de 260 ml del set Stor es abierto de verdad."),
+                        faqItem("¿Por qué hay dos Twistshake?",
+                                "Cubren roles distintos: plato con compartimentos y cuenco con tapa. No son un set combinado en un solo ASIN."),
+                        faqItem("¿Los personajes importan?",
+                                "Para esta evaluación, no. El motivo no ordena el ranking; sí advertimos que es un reclamo que puede caducar."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Torres de aprendizaje para 5 años",
+                                "/comparativas/" + TABLEWARE_5_SLUG + "/",
+                                "Participar en la cocina con una plataforma estable."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+    private ComparisonPageResponse buildSustainable5Page() {
+        return ageComparison(
+                SUSTAINABLE_5_SLUG,
+                SUSTAINABLE_5_CANONICAL,
+                AGE_5,
+                SUSTAINABLE,
+                "Mejores regalos sostenibles para 5 años | Bebes Felices",
+                "Comparamos cinco regalos reales de madera o plástico reciclado para 5 años, con metodología y afiliación transparentes.",
+                "Regalos sostenibles para 5 años",
+                new ComparisonPageResponse.Header(
+                        "Mejores regalos sostenibles para 5 años",
+                        "Cinco productos reales de madera certificada o plástico reciclado",
+                        List.of(
+                                "Sostenible, aquí, quiere decir materiales declarados (madera, FSC, plástico reciclado) y un uso que no se agota en una tarde. No es un sello único ni una promesa de «cero impacto».",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "Las cuentas y las figuras pequeñas piden supervisión. Un material responsable no elimina piezas pequeñas."
+                        )
+                ),
+                "Los cinco regalos",
+                List.of(
+                        summary("Para ensartar y contar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho y tintes al agua."),
+                        summary("Para haya y cartón", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
+                        summary("Para madera FSC de obra", "small-foot-grua", "Grúa giratoria certificada FSC 100 %."),
+                        summary("Para plástico reciclado lavable", "green-toys-construccion", "Tres vehículos sin BPA ni PVC.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos materiales y usos verificables para un niño de 5 años. No asignamos una nota de sostenibilidad ni completamos certificaciones que la ficha no muestre.",
+                        List.of(
+                                criterion("Encaje a los 5 años", "Edad declarada y si el gesto (ensartar, encajar, atar, empujar) cabe en esta etapa."),
+                                criterion("Materiales", "Madera, FSC, plástico reciclado, tintes o ausencia de BPA/PVC cuando están publicados."),
+                                criterion("Uso real", "Qué se hace con el objeto: no basta con que sea de madera."),
+                                criterion("Duración", "Si se puede repetir o guardar. Evitamos kits de un solo uso que no están en esta lista."),
+                                criterion("Seguridad", "Piezas pequeñas, cordones y supervisión. El material no elimina el riesgo.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Elige el gesto, no el adjetivo", List.of(
+                                "Si quieres motricidad fina, las cuentas. Si quieres autonomía de vestirse, el zapato PlanToys. Si quieres juego simbólico, la grúa o los vehículos."
+                        )),
+                        section("Madera y plástico reciclado no son intercambiables", List.of(
+                                "Green Toys declara plástico 100 % reciclado y se lava en el lavavajillas. Small Foot y PlanToys declaran madera y procesos distintos.",
+                                "FSC 100 % no es lo mismo que «madera» a secas. Lo citamos solo cuando figura."
+                        )),
+                        section("Supervisión", List.of(
+                                "Cordones, cuentas y figuras de puzle no se dejan con menores de 3 años.",
+                                "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un regalo sostenible a los 5 años?",
+                                "Uno de materiales declarados y uso repetible. No publicamos una huella de carbono ni un ranking ecológico numérico."),
+                        faqItem("¿Madera siempre es mejor que plástico?",
+                                "No en abstracto. El plástico reciclado lavable cubre arena y agua; la madera FSC cubre otro tipo de juego. Elige según el uso."),
+                        faqItem("¿Las cuentas de Melissa & Doug son un kit de manualidades?",
+                                "No. Se ensartan y se cuentan. El análisis genérico de «kit de manualidades» del circuito de 3 años es otra página."),
+                        faqItem("¿Hace falta FSC?",
+                                "Es un dato útil cuando está. Su ausencia en otra ficha no significa que la madera sea ilegal; simplemente no lo afirmamos."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub5Link(),
+                        new LinkItem(
+                                "Ideas de regalo para 5 años",
+                                "/regalos/ideas-regalo-4-anos/",
+                                "Selección más amplia por ocasión, no solo materiales."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
     private ComparisonPageResponse ageComparison(
             String slug,
             String canonical,
@@ -4406,12 +7551,12 @@ public class ComparisonPageService {
     ) {
         String publishedAt = switch (age) {
             case AGE_3 -> THREE_YEAR_PUBLISHED_AT;
-            case STEM_5_AGE -> STEM_5_PUBLISHED_AT;
+            case AGE_5 -> FIVE_YEAR_PUBLISHED_AT;
             default -> FOUR_YEAR_PUBLISHED_AT;
         };
         String updatedAt = switch (age) {
             case AGE_3 -> THREE_YEAR_UPDATED_AT;
-            case STEM_5_AGE -> STEM_5_UPDATED_AT;
+            case AGE_5 -> FIVE_YEAR_UPDATED_AT;
             default -> FOUR_YEAR_UPDATED_AT;
         };
         return new ComparisonPageResponse(
@@ -4478,6 +7623,14 @@ public class ComparisonPageService {
         return new LinkItem(
                 "Juguetes y regalos para niños de 4 años",
                 EditorialDefaults.HUB_4_HREF,
+                "Página por edad con propuestas de aprendizaje, movimiento y autonomía."
+        );
+    }
+
+    private static LinkItem hub5Link() {
+        return new LinkItem(
+                "Juguetes y regalos para niños de 5 años",
+                EditorialDefaults.hubHref(5),
                 "Página por edad con propuestas de aprendizaje, movimiento y autonomía."
         );
     }

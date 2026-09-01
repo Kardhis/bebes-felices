@@ -181,6 +181,29 @@ class ComparisonPageControllerTest {
     }
 
     @Test
+    void returnsThePublishedFourAndFiveYearNeedComparisons() throws Exception {
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.DURABLE_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4))
+                .andExpect(jsonPath("$.entries.length()").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.STEM_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.BALANCE_BIKES_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.DURABLE_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.BOARD_GAMES_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.BALANCE_BIKES_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+    }
+
+    @Test
     void returnsNotFoundForAnUnknownComparison() throws Exception {
         mockMvc.perform(get("/api/comparison-pages/no-existe"))
                 .andExpect(status().isNotFound());

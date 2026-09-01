@@ -114,7 +114,7 @@ class AgePageControllerTest {
     void exposesTheBoardGameCircuitForFourYearOlds() throws Exception {
         mockMvc.perform(get("/api/age-pages/4-anos"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.optionsByNeed[1].items[1].href")
+                .andExpect(jsonPath("$.optionsByNeed[1].items[3].href")
                         .value("/comparativas/mejores-juegos-de-mesa-4-anos/"))
                 .andExpect(jsonPath("$.featuredRankings[0].href")
                         .value("/comparativas/mejores-juegos-de-mesa-4-anos/"))
@@ -131,7 +131,7 @@ class AgePageControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.optionsByNeed[2].items[1].href")
                         .value("/comparativas/mejores-patinetes-4-anos/"))
-                .andExpect(jsonPath("$.featuredRankings[1].href")
+                .andExpect(jsonPath("$.featuredRankings[3].href")
                         .value("/comparativas/mejores-patinetes-4-anos/"))
                 .andExpect(jsonPath("$.featuredSelection[3].title").value("Micro Mini Deluxe LED"))
                 .andExpect(jsonPath("$.featuredSelection[3].href")
@@ -163,8 +163,8 @@ class AgePageControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.optionsByNeed[1].items[0].href")
                         .value("/comparativas/mejores-juguetes-stem-5-anos/"))
-                .andExpect(jsonPath("$.optionsByNeed[1].items[1].href")
-                        .value("/juguetes-educativos/juegos-de-mesa/"))
+                .andExpect(jsonPath("$.optionsByNeed[1].items[3].href")
+                        .value("/comparativas/mejores-juegos-de-mesa-5-anos/"))
                 .andExpect(jsonPath("$.featuredRankings[0].href")
                         .value("/comparativas/mejores-juguetes-stem-5-anos/"))
                 .andExpect(jsonPath("$.giftIdeas[0].href")
@@ -177,6 +177,50 @@ class AgePageControllerTest {
                         .value("/comparativas/mejores-juguetes-stem-5-anos/#producto-set-construccion-magnetico"))
                 .andExpect(jsonPath("$.featuredSelection[4].ctaLabel")
                         .value("Ver comparativa completa"));
+    }
+
+    @Test
+    void exposesTheBalanceBikeCircuitForFourYearOlds() throws Exception {
+        mockMvc.perform(get("/api/age-pages/4-anos"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.optionsByNeed[2].items[0].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-4-anos/"))
+                .andExpect(jsonPath("$.featuredSelection[2].title").value("Bicicleta sin pedales básica"))
+                .andExpect(jsonPath("$.featuredSelection[2].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-4-anos/#producto-bici-sin-pedales-basica"))
+                .andExpect(jsonPath("$.optionsByNeed.length()").value(5))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[0].href")
+                        .value("/comparativas/mejores-regalos-sostenibles-4-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[1].href")
+                        .value("/comparativas/mejores-regalos-duraderos-4-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[1].items[0].href")
+                        .value("/comparativas/mejores-juegos-montessori-4-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[3].items[0].href")
+                        .value("/comparativas/mejores-torres-aprendizaje-4-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[4].items[0].href")
+                        .value("/comparativas/mejores-ideas-regalo-4-anos/"));
+    }
+
+    @Test
+    void exposesTheBalanceBikeCircuitForFiveYearOlds() throws Exception {
+        mockMvc.perform(get("/api/age-pages/5-anos"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.optionsByNeed[2].items[0].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-5-anos/"))
+                .andExpect(jsonPath("$.featuredSelection[1].title").value("Bicicleta sin pedales básica"))
+                .andExpect(jsonPath("$.featuredSelection[1].href")
+                        .value("/comparativas/mejores-bicicletas-sin-pedales-5-anos/#producto-bici-sin-pedales-basica"))
+                .andExpect(jsonPath("$.optionsByNeed.length()").value(5))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[0].href")
+                        .value("/comparativas/mejores-regalos-sostenibles-5-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[0].items[1].href")
+                        .value("/comparativas/mejores-regalos-duraderos-5-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[1].items[0].href")
+                        .value("/comparativas/mejores-juguetes-stem-5-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[3].items[0].href")
+                        .value("/comparativas/mejores-torres-aprendizaje-5-anos/"))
+                .andExpect(jsonPath("$.optionsByNeed[4].items[0].href")
+                        .value("/comparativas/mejores-ideas-regalo-5-anos/"));
     }
 
     @Test
