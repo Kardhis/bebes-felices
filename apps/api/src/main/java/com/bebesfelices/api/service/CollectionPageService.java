@@ -305,18 +305,18 @@ public class CollectionPageService {
                         "Sin motor; supervisión y zona sin coches."
                 ),
                 List.of(
-                        "corre-injusa-winner-honda",
+                        "corre-injusa-winner-repsol",
                         "corre-injusa-tundra-tornado",
-                        "corre-feber-bluey",
-                        "corre-smoby-rookie",
+                        "corre-feber-dream",
+                        "corre-molto-cross-premium",
                         "corre-little-tikes-cozy-coupe"
                 ),
                 comparisonHrefs(
                         ComparisonPageService.RIDE_ON_3_SLUG,
-                        "corre-injusa-winner-honda",
+                        "corre-injusa-winner-repsol",
                         "corre-injusa-tundra-tornado",
-                        "corre-feber-bluey",
-                        "corre-smoby-rookie",
+                        "corre-feber-dream",
+                        "corre-molto-cross-premium",
                         "corre-little-tikes-cozy-coupe"
                 ),
                 List.of(
@@ -332,7 +332,7 @@ public class CollectionPageService {
                         new LinkItem(
                                 "Correpasillos para 3 años",
                                 "/comparativas/" + ComparisonPageService.RIDE_ON_3_SLUG + "/",
-                                "Comparativa de motos de empuje, un Rookie de cuatro ruedas y un Cozy Coupe."
+                                "Comparativa de motos de empuje y un Cozy Coupe."
                         ),
                         new LinkItem(
                                 "Patinetes y triciclos para 3 años",

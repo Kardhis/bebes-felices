@@ -419,10 +419,10 @@ class ComparisonPageServiceTest {
                 );
         assertThat(rideOn.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "corre-injusa-winner-honda",
+                        "corre-injusa-winner-repsol",
                         "corre-injusa-tundra-tornado",
-                        "corre-feber-bluey",
-                        "corre-smoby-rookie",
+                        "corre-feber-dream",
+                        "corre-molto-cross-premium",
                         "corre-little-tikes-cozy-coupe"
                 );
         assertThat(cutlery.entries()).extracting(ComparisonPageResponse.Entry::productId)

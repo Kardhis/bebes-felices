@@ -2669,21 +2669,21 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> RIDE_ON_3 = List.of(
             entry(
-                    "corre-injusa-winner-honda",
-                    "INJUSA moto Winner Honda",
+                    "corre-injusa-winner-repsol",
+                    "INJUSA moto Winner Repsol XL",
                     "Empujar sentado a los 3 años y seguir después",
-                    "Moto XL de 99 × 39 × 61 cm, a partir de 3 años, con ruedas anchas y asa de transporte. El gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie. El formato es mayor que un Tundra o un Motofeber.",
+                    "Moto XL de 99 × 39 × 61 cm, asiento a 41 cm y 50 kg. La ficha marca 36 meses a 7 años; el texto comercial habla de 4+. El gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie.",
                     List.of(
-                            "Edad declarada a partir de 3 años.",
-                            "99 × 39 × 61 cm; asiento a 47 cm según la ficha.",
+                            "Ficha de 36 meses a 7 años; carga 50 kg.",
+                            "99 × 39 × 61 cm; asiento a 41 cm.",
                             "Fabricada en España; asa de transporte."
                     ),
                     List.of(
                             "No enseña el equilibrio de dos ruedas.",
-                            "Mide entrepierna: el asiento es más alto que en las motos de 18 meses."
+                            "El asiento es más alto que en las motos de 18 meses; mide entrepierna."
                     ),
                     "3-7 años",
-                    note("Encaje a los 3 años", "Parte de los 3 años; el tamaño XL sirve si las piernas llegan al suelo."),
+                    note("Encaje a los 3 años", "Ficha desde 36 meses; sirve si las piernas llegan al suelo."),
                     note("Gesto", "Sentado, pies al suelo, sin pedales."),
                     note("Espacio", "Patio o interior amplio; 99 cm de largo."),
                     note("Seguridad", "Supervisión; no es un vehículo eléctrico.")
@@ -2692,7 +2692,7 @@ public class ComparisonPageService {
                     "corre-injusa-tundra-tornado",
                     "INJUSA moto Tundra Tornado",
                     "Moto baja de 18 meses a 3 años",
-                    "Correpasillos de 18 meses a 3 años, 30 kg, asiento a 33 cm y manillar a 49 cm. Sirve si el niño aún cabe cómodo a los 3; si las rodillas van encogidas, mira la Winner Honda.",
+                    "Correpasillos de 18 meses a 3 años, 30 kg, asiento a 33 cm y manillar a 49 cm. Sirve si el niño aún cabe cómodo a los 3; si las rodillas van encogidas, mira la Winner Repsol o la Cross Premium.",
                     List.of(
                             "Asiento a 33 cm y ruedas anchas de plástico.",
                             "Carga 30 kg y asa de transporte.",
@@ -2709,43 +2709,43 @@ public class ComparisonPageService {
                     note("Seguridad", "No para menores de 18 meses; adulto cerca.")
             ),
             entry(
-                    "corre-feber-bluey",
-                    "FEBER Motofeber Bluey",
+                    "corre-feber-dream",
+                    "FEBER Motofeber Dream",
                     "Moto de empuje hasta los 3 años",
-                    "Moto correpasillos de 18 meses a 3 años, 62 × 32,5 × 49 cm, asiento a 29 cm. Formato ligero para interior o patio: pies al suelo, sin motor ni pedales. Si buscas asiento más alto, no es esta ficha.",
+                    "Moto correpasillos de 18 meses a 3 años, 62 × 33 × 45 cm y 2,6 kg. Formato ligero para interior o patio: pies al suelo, sin motor ni pedales. Si buscas asiento más alto o seguir después de los 3, no es esta ficha.",
                     List.of(
                             "Edad declarada de 18 meses a 3 años.",
                             "Ruedas anchas; uso interior o exterior según la ficha.",
-                            "Peso del producto 2,86 kg."
+                            "62 cm de largo y 2,6 kg."
                     ),
                     List.of(
-                            "Asiento a 29 cm y carga de 20 kg: a los 3 años puede quedar justo.",
-                            "La licencia Bluey no cambia el gesto de empujar."
+                            "Tope 3 años: a mitad de curso puede quedar justo.",
+                            "Las pegatinas no cambian el gesto de empujar."
                     ),
                     "1-3 años",
-                    note("Encaje a los 3 años", "Tope 3 años; comprueba peso y que las piernas empujen sin encogerse."),
+                    note("Encaje a los 3 años", "Tope 3 años; comprueba que las piernas empujen sin encogerse."),
                     note("Gesto", "Moto sentada, no patinete."),
                     note("Espacio", "62 cm de largo; pasillo o terraza lisa."),
                     note("Seguridad", "Sin tráfico; no bajar bordillos.")
             ),
             entry(
-                    "corre-smoby-rookie",
-                    "Smoby Rookie de cuatro ruedas",
-                    "Cuatro ruedas de metal, no moto",
-                    "Correpasillos de estructura metálica, cuatro ruedas silenciosas y maletero, a partir de 12 meses. A los 3 años cubre el empuje sentado si el asiento aún llega; no sustituye una bici sin pedales.",
+                    "corre-molto-cross-premium",
+                    "MOLTO Cross Premium",
+                    "Moto de varios terrenos hasta los 5 años",
+                    "Moto correpasillos de 18 meses a 5 años, 73 × 38 × 32 cm, asiento a 33 cm y 30 kg. A los 3 años cubre el empuje sentado y declara margen hasta 5; no sustituye una bici sin pedales.",
                     List.of(
-                            "A partir de 12 meses según la ficha.",
-                            "Cuatro ruedas y chasis de metal.",
-                            "Maletero y ruedas silenciosas para interior."
+                            "Edad declarada de 18 meses a 5 años.",
+                            "Asiento a 33 cm; 73 cm de largo.",
+                            "Carga 30 kg; uso en varios terrenos según la ficha."
                     ),
                     List.of(
-                            "El asiento no se regula: confirma altura en tu lote.",
-                            "No es un Cozy Coupe con techo ni una moto."
+                            "El asiento no se regula: confirma altura con la entrepierna.",
+                            "No es un Cozy Coupe con techo."
                     ),
-                    "1-3 años",
-                    note("Encaje a los 3 años", "Desde 12 meses; a los 3 sigue si las piernas empujan sueltas."),
-                    note("Gesto", "Empuje sentado sobre cuatro ruedas."),
-                    note("Espacio", "52 × 30 × 38 cm según ficha."),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "De 18 meses a 5 años; a los 3 el asiento de 33 cm suele llegar."),
+                    note("Gesto", "Empuje sentado, moto, no bici."),
+                    note("Espacio", "73 cm de largo; patio o interior."),
                     note("Seguridad", "Calzado cerrado; adulto a la vista.")
             ),
             entry(
@@ -5050,7 +5050,7 @@ public class ComparisonPageService {
                 AGE_3,
                 RIDE_ON_3,
                 "Correpasillos para 3 años | Bebes Felices",
-                "Comparamos cinco correpasillos para 3 años: motos de empuje, un Rookie de cuatro ruedas y un Cozy Coupe, con metodología y afiliación transparentes.",
+                "Comparamos cinco correpasillos para 3 años: motos de empuje y un Cozy Coupe, con metodología y afiliación transparentes.",
                 "Correpasillos para 3 años",
                 new ComparisonPageResponse.Header(
                         "Correpasillos para 3 años",
@@ -5063,10 +5063,10 @@ public class ComparisonPageService {
                 ),
                 "Los cinco correpasillos",
                 List.of(
-                        summary("Para seguir a los 3 años y más", "corre-injusa-winner-honda", "Moto XL a partir de 3 años, 99 cm."),
+                        summary("Para seguir a los 3 años y más", "corre-injusa-winner-repsol", "Moto XL, ficha desde 36 meses, 99 cm."),
                         summary("Para una moto baja hasta 3 años", "corre-injusa-tundra-tornado", "Asiento 33 cm y carga 30 kg."),
-                        summary("Para una moto hasta los 3 años", "corre-feber-bluey", "18 meses a 3 años, interior o patio."),
-                        summary("Para cuatro ruedas de metal", "corre-smoby-rookie", "Chasis metálico y maletero, desde 12 meses."),
+                        summary("Para una moto hasta los 3 años", "corre-feber-dream", "18 meses a 3 años, interior o patio."),
+                        summary("Para varios terrenos hasta 5 años", "corre-molto-cross-premium", "Asiento 33 cm y carga 30 kg."),
                         summary("Para un coche con techo", "corre-little-tikes-cozy-coupe", "18 meses a 5 años, pies al suelo.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -5081,13 +5081,13 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Moto o coche", List.of(
-                                "La moto deja las piernas a los lados. El Rookie va sobre cuatro ruedas bajas. El Cozy Coupe es un coche con techo. No hace falta los tres el mismo año."
+                                "La moto deja las piernas a los lados. El Cozy Coupe es un coche con techo. No hace falta ambos el mismo año."
                         )),
                         section("Si ya tiene bici sin pedales", List.of(
                                 "No dupliques el mismo gesto de empujar. El correpasillos no enseña equilibrio de dos ruedas."
                         )),
                         section("Tope de edad", List.of(
-                                "Tundra, Motofeber Bluey y Rookie declaran hasta 3 años. Winner Honda parte de 3 y el Cozy Coupe llega a 5. Comprueba asiento y peso."
+                                "Tundra y Motofeber Dream declaran hasta 3 años. Winner Repsol parte de 36 meses, Cross Premium y Cozy Coupe llegan a 5. Comprueba asiento y peso."
                         ))
                 )),
                 List.of(
