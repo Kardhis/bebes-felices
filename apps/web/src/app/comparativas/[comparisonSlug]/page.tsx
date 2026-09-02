@@ -87,7 +87,6 @@ export default async function ComparisonPage({ params }: Props) {
           h1={page.header.h1}
           targetAge={page.targetAge}
           introductionParagraphs={page.header.introductionParagraphs}
-          shortAffiliationNotice={page.affiliation.shortNoticeText}
           isDraft={page.status === "DRAFT"}
         />
         <AffiliationNotice

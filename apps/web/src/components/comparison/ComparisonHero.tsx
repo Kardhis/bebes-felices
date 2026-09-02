@@ -2,7 +2,6 @@ type ComparisonHeroProps = {
   h1: string;
   targetAge: number;
   introductionParagraphs: string[];
-  shortAffiliationNotice: string;
   isDraft: boolean;
 };
 
@@ -10,7 +9,6 @@ export function ComparisonHero({
   h1,
   targetAge,
   introductionParagraphs,
-  shortAffiliationNotice,
   isDraft,
 }: ComparisonHeroProps) {
   return (
@@ -35,9 +33,6 @@ export function ComparisonHero({
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <p className="mt-6 text-sm text-[var(--color-text-muted)]">
-            {shortAffiliationNotice}
-          </p>
         </div>
       </div>
     </section>

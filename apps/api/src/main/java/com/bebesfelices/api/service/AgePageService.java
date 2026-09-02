@@ -846,7 +846,7 @@ public class AgePageService {
     private Affiliation affiliation() {
         return new Affiliation(
                 "Bebes Felices participa en el Programa de Afiliados de Amazon. Algunos enlaces de esta página son enlaces de afiliado. Esto significa que podemos recibir una comisión si realizas una compra, sin que el precio cambie para ti.",
-                "Algunos enlaces pueden ser de afiliado de Amazon."
+                ""
         );
     }
 
