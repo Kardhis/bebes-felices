@@ -33,15 +33,15 @@ de afiliado configurada, incluyen `?tag=`.
 
 - Theo Klein Cocina Miele 7199 — ASIN B07PQ8SCT3 — https://www.amazon.es/dp/B07PQ8SCT3
 - KidKraft cocina vintage blanca — ASIN B004A2QTRC — https://www.amazon.es/dp/B004A2QTRC
-- deAO cocina con 48 accesorios — ASIN B0BQR6BFNW — https://www.amazon.es/dp/B0BQR6BFNW
-- Beeloom Babycue — ASIN B07YLHRQVY — https://www.amazon.es/dp/B07YLHRQVY
-- Sundaymot maletín médico de 32 piezas — ASIN B098QCJRFF — https://www.amazon.es/dp/B098QCJRFF
+- Small Foot cocina compacta — ASIN B07GWXFWBC — https://www.amazon.es/dp/B07GWXFWBC
+- Janod cocina Macaron — ASIN B06XHT5H1Q — https://www.amazon.es/dp/B06XHT5H1Q
+- Janod maletín de veterinario — ASIN B0CTKKWYJH — https://www.amazon.es/dp/B0CTKKWYJH
 - Sundaymot maletín médico de madera — ASIN B09YRBCPVL — https://www.amazon.es/dp/B09YRBCPVL
 
 ### Juguetes sensoriales
 
 - Learning Resources botellas sensoriales de emociones — ASIN B09NQQQL5Z — https://www.amazon.es/dp/B09NQQQL5Z
-- Learning Resources Playfoam, 6 bloques — ASIN B008CPB5UY — https://www.amazon.es/dp/B008CPB5UY
+- Learning Resources Playfoam, 6 bloques — ASIN B00J5LPDOS — https://www.amazon.es/dp/B00J5LPDOS
 - Learning Resources Sensory Trio Fidget Tubes — ASIN B0BQ8K62B5 — https://www.amazon.es/dp/B0BQ8K62B5
 - Learning Resources palas sensoriales Helping Hands — ASIN B0BQ8VB58C — https://www.amazon.es/dp/B0BQ8VB58C
 - Learning Resources pinzas jumbo — ASIN B0041RXI16 — https://www.amazon.es/dp/B0041RXI16

@@ -57,9 +57,11 @@ class CategoryPageServiceTest {
         assertThat(page.get().canonicalPath()).isEqualTo("/movimiento/");
         assertThat(page.get().childCollections())
                 .extracting(link -> link.href())
-                .containsExactly(
+                        .containsExactly(
                         "/movimiento/patinetes/",
-                        "/movimiento/bicicletas-sin-pedales/"
+                        "/movimiento/bicicletas-sin-pedales/",
+                        "/movimiento/triangulos-pikler/",
+                        "/movimiento/correpasillos/"
                 );
     }
 
@@ -75,7 +77,9 @@ class CategoryPageServiceTest {
                 .extracting(link -> link.href())
                 .containsExactly(
                         "/autonomia/torres-de-aprendizaje/",
-                        "/autonomia/vajilla-infantil/"
+                        "/autonomia/vajilla-infantil/",
+                        "/autonomia/cubiertos-infantiles/",
+                        "/autonomia/aprender-vestirse/"
                 );
     }
 
@@ -141,12 +145,16 @@ class CategoryPageServiceTest {
         assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.MOVEMENT_SLUG))
                 .containsExactly(
                         CollectionPageService.SCOOTERS_SLUG,
-                        CollectionPageService.BALANCE_BIKES_SLUG
+                        CollectionPageService.BALANCE_BIKES_SLUG,
+                        CollectionPageService.PIKLER_SLUG,
+                        CollectionPageService.RIDE_ON_SLUG
                 );
         assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.AUTONOMY_SLUG))
                 .containsExactly(
                         CollectionPageService.TOWERS_SLUG,
-                        CollectionPageService.TABLEWARE_SLUG
+                        CollectionPageService.TABLEWARE_SLUG,
+                        CollectionPageService.CUTLERY_SLUG,
+                        CollectionPageService.DRESSING_SLUG
                 );
         assertThat(categoryPageService.collectionSlugsForCategory(CategoryPageService.GIFTS_SLUG))
                 .containsExactly(

@@ -181,6 +181,19 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 8, 14)
         ));
         register(new Product(
+                "patinete-micro-mini-3en1",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Micro Mini 3en1 Deluxe Plus",
+                "Patinete evolutivo de tres ruedas para 1 a 5 años, con asiento, reposapiés y bastón de empuje extraíbles, manillar de 48-68 cm y carga máxima de 50 kg.",
+                1, 5,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 2)
+        ));
+        register(new Product(
                 "patinete-globber-master-lights",
                 ProductSource.MANUAL,
                 null,
@@ -339,41 +352,41 @@ public class ManualProductCatalog implements ProductCatalog {
         register(new Product(
                 "torre-yoleo-transformer",
                 ProductSource.MANUAL,
-                null,
-                null,
+                "B09999YJXZ",
+                "www.amazon.es",
                 "YOLEO Transformer",
                 "Torre de aprendizaje plegable de madera de nogal, de 42 x 45 x 86 cm, convertible en silla y escritorio, con pizarra magnética de doble cara.",
                 2, 6,
                 List.of("Autonomía", "Mobiliario infantil"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
-                "torre-bianconiglio-evo",
+                "torre-hauck-learn-n-explore",
                 ProductSource.MANUAL,
                 null,
                 null,
-                "Bianconiglio Kids EVO",
-                "Torre de aprendizaje de madera de abedul fabricada en Italia, regulable en 3 alturas, de 40 x 42 x 88 cm y 7,5 kg, compatible con el sistema anticaídas KidSafe.",
+                "hauck Learn N Explore",
+                "Torre de aprendizaje de madera de haya FSC, de 1 a 6 años, con plataforma regulable en 3 alturas (33 a 45 cm), 90,5 cm de alto y carga máxima de 40 kg.",
                 1, 6,
                 List.of("Autonomía", "Mobiliario infantil"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
-                "torre-kleiner-riese",
+                "torre-costway-plegable",
                 ProductSource.MANUAL,
                 null,
                 null,
-                "Kleiner Riese 4 en 1",
-                "Torre de aprendizaje plegable de contrachapado de abedul de 18 mm y 6,5 kg, con barra de seguridad NFS, uso como taburete y carga de adulto hasta 80 kg.",
-                1, Integer.MAX_VALUE,
+                "COSTWAY Plegable 3 en 1",
+                "Torre de aprendizaje plegable de madera, indicada a partir de 3 años, con estructura en A, barra de seguridad, pizarra y conversión a mesa y silla. Altura 91 cm y carga máxima de 60 kg.",
+                3, Integer.MAX_VALUE,
                 List.of("Autonomía", "Mobiliario infantil"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
                 "torre-bey-co",
@@ -389,17 +402,17 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 8, 14)
         ));
         register(new Product(
-                "torre-bianconiglio-transformer",
+                "torre-maxi-cosi-toucan",
                 ProductSource.MANUAL,
                 null,
                 null,
-                "Bianconiglio Kids Transformer Ajustable",
-                "Torre de aprendizaje convertible en mesa, reposapiés y escritorio, con ajuste de altura, 45 x 41 x 90 cm y 10 kg, fabricada en Italia.",
-                1, 6,
+                "Maxi-Cosi Toucan 3 en 1",
+                "Torre de aprendizaje de madera FSC que se transforma en mesa y silla o en taburete, con 3 alturas (29,5 a 41,4 cm), 46 x 91 x 43,3 cm y 8,7 kg. Modo torre de 1,5 a 6 años.",
+                2, 6,
                 List.of("Autonomía", "Mobiliario infantil"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
                 "vajilla-stor-mickey",
@@ -446,12 +459,12 @@ public class ManualProductCatalog implements ProductCatalog {
                 null,
                 null,
                 "Fun House vajilla 3 piezas",
-                "Set reutilizable con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, apto para microondas.",
+                "Set reutilizable de polipropileno con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, apto para microondas.",
                 3, 8,
                 List.of("Autonomía", "Rutina diaria"),
                 ProductStatus.ACTIVE,
                 null,
-                LocalDate.of(2026, 8, 14)
+                LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
                 "cuenco-twistshake-tapa",
@@ -922,6 +935,8 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 8, 18)
         ));
         EducationalAmazonProducts.all().forEach(this::register);
+        MovementAmazonProducts.all().forEach(this::register);
+        AutonomyAmazonProducts.all().forEach(this::register);
     }
 
     private void register(Product product) {

@@ -26,8 +26,16 @@ describe("collectionRoutes", () => {
     expect(collectionsForPrefix("movimiento")).toEqual([
       "patinetes",
       "bicicletas-sin-pedales",
+      "triangulos-pikler",
+      "correpasillos",
     ]);
     expect(isCollectionSlugForPrefix("autonomia", "vajilla-infantil")).toBe(
+      true,
+    );
+    expect(isCollectionSlugForPrefix("autonomia", "cubiertos-infantiles")).toBe(
+      true,
+    );
+    expect(isCollectionSlugForPrefix("autonomia", "aprender-vestirse")).toBe(
       true,
     );
     expect(isCollectionSlug("sostenibles")).toBe(false);

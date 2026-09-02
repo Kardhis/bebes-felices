@@ -27,6 +27,10 @@ public class CollectionPageService {
     public static final String GIFTS_3_SLUG = "ideas-regalo-3-anos";
     public static final String STEM_SLUG = "juegos-stem";
     public static final String BALANCE_BIKES_SLUG = "bicicletas-sin-pedales";
+    public static final String PIKLER_SLUG = "triangulos-pikler";
+    public static final String RIDE_ON_SLUG = "correpasillos";
+    public static final String CUTLERY_SLUG = "cubiertos-infantiles";
+    public static final String DRESSING_SLUG = "aprender-vestirse";
     public static final String GIFTS_4_SLUG = "ideas-regalo-4-anos";
     public static final String GIFTS_5_SLUG = "ideas-regalo-5-anos";
     public static final String BOARD_GAMES_SLUG = "juegos-de-mesa";
@@ -83,21 +87,21 @@ public class CollectionPageService {
                         "Edad mínima del fabricante compatible con 3 años."
                 ),
                 List.of(
-                        "juego-montessori-formas",
-                        "montessori-goula-baby-shapes",
+                        "montessori-janod-animales",
+                        "montessori-melissa-tres-puzzles",
+                        "montessori-janod-ballenas",
                         "montessori-janod-tropik",
-                        "montessori-noah-ark",
-                        "montessori-formas-geometricas",
+                        "puzle-melissa-granja-peg",
                         "small-foot-grua"
                 ),
                 mergeHrefs(
                         comparisonHrefs(
                                 ComparisonPageService.MONTESSORI_3_SLUG,
-                                "juego-montessori-formas",
-                                "montessori-goula-baby-shapes",
+                                "montessori-janod-animales",
+                                "montessori-melissa-tres-puzzles",
+                                "montessori-janod-ballenas",
                                 "montessori-janod-tropik",
-                                "montessori-noah-ark",
-                                "montessori-formas-geometricas"
+                                "puzle-melissa-granja-peg"
                         ),
                         comparisonHrefs(
                                 ComparisonPageService.SUSTAINABLE_3_SLUG,
@@ -140,11 +144,11 @@ public class CollectionPageService {
                 ),
                 List.of(
                         "puzle-madera-animales",
-                        "puzle-melissa-granja",
+                        "puzle-melissa-mascotas",
                         "puzle-educa-selva",
                         "haba-puzles-cuatro-estaciones",
                         "puzle-educa-disney-madera",
-                        "montessori-formas-geometricas"
+                        "puzle-melissa-granja-peg"
                 ),
                 mergeHrefs(
                         comparisonHrefs(
@@ -153,11 +157,11 @@ public class CollectionPageService {
                                 "haba-puzles-cuatro-estaciones",
                                 "puzle-educa-disney-madera",
                                 "puzle-educa-selva",
-                                "puzle-melissa-granja"
+                                "puzle-melissa-mascotas"
                         ),
                         comparisonHrefs(
                                 ComparisonPageService.MONTESSORI_3_SLUG,
-                                "montessori-formas-geometricas"
+                                "puzle-melissa-granja-peg"
                         )
                 ),
                 List.of(
@@ -198,6 +202,7 @@ public class CollectionPageService {
                         "patinete-micro-mini-deluxe",
                         "patinete-molto-maxi",
                         "patinete-globber-junior-foldable",
+                        "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 ),
                 comparisonHrefs(
@@ -205,6 +210,7 @@ public class CollectionPageService {
                         "patinete-micro-mini-deluxe",
                         "patinete-molto-maxi",
                         "patinete-globber-junior-foldable",
+                        "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 ),
                 List.of(
@@ -220,12 +226,118 @@ public class CollectionPageService {
                         new LinkItem(
                                 "Mejores patinetes de 3 ruedas para 3 años",
                                 "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/",
-                                "Ranking editorial de tres ruedas y un triciclo."
+                                "Ranking editorial de cuatro patinetes y un triciclo."
                         ),
                         new LinkItem(
                                 "Mejores bicicletas sin pedales para 3 años",
                                 "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
                                 "La otra vía de movimiento con ranking editorial."
+                        )
+                )
+        ));
+        register(new EditorialCollection(
+                PIKLER_SLUG,
+                "/movimiento/triangulos-pikler/",
+                "Movimiento",
+                "Triángulos Pikler y estructuras de trepar para 3 años",
+                "Trepar, gatear o deslizarse en interior, con supervisión y un suelo nivelado.",
+                List.of(
+                        "A los 3 años el movimiento no se agota en ruedas. Un triángulo Pikler o un gimnasio bajo permite subir, bajar y deslizarse a su ritmo, sin patinete ni bici.",
+                        "Mide el hueco. La madera pide un rincón seco; el plástico de jardín también cabe en un salón. Un adulto permanece al lado: no es un parque."
+                ),
+                List.of(
+                        "Edad declarada compatible con 3 años y un gesto de trepar o deslizarse.",
+                        "Hueco en el suelo y posibilidad de guardar.",
+                        "Carga y estabilidad declaradas.",
+                        "Uso con adulto; suelo libre de esquinas y desniveles."
+                ),
+                List.of(
+                        "trepar-mamoi-triangulo-blanco",
+                        "trepar-mamoi-triangulo-natural",
+                        "trepar-little-tikes-gimnasio",
+                        "trepar-little-tikes-tobogan",
+                        "trepar-costway-7en1"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.PIKLER_3_SLUG,
+                        "trepar-mamoi-triangulo-blanco",
+                        "trepar-mamoi-triangulo-natural",
+                        "trepar-little-tikes-gimnasio",
+                        "trepar-little-tikes-tobogan",
+                        "trepar-costway-7en1"
+                ),
+                List.of(
+                        faq("¿Pikler o patinete?",
+                                "No es el mismo gesto. El triángulo trabaja subir y bajar; el patinete, ir de pie con ruedas. Pueden convivir si hay espacio y supervisión."),
+                        faq("¿Hace falta casco?",
+                                "En una estructura baja de interior el criterio habitual es suelo libre y un adulto. El casco del patinete no se sustituye aquí por el marco de madera."),
+                        faq("¿Se puede dejar solo?",
+                                "No. Tampoco junto a una ventana, una escalera o un borde.")
+                ),
+                List.of(
+                        hubLink(),
+                        new LinkItem(
+                                "Triángulos Pikler y estructuras de trepar para 3 años",
+                                "/comparativas/" + ComparisonPageService.PIKLER_3_SLUG + "/",
+                                "Comparativa de madera y plástico para trepar o deslizarse."
+                        ),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 3 años",
+                                "/comparativas/mejores-bicicletas-sin-pedales-3-anos/",
+                                "La vía de movimiento con dos ruedas y pies en el suelo."
+                        )
+                )
+        ));
+        register(new EditorialCollection(
+                RIDE_ON_SLUG,
+                "/movimiento/correpasillos/",
+                "Movimiento",
+                "Correpasillos para 3 años",
+                "Empujar sentado, con los pies en el suelo, sin pedales ni patinete.",
+                List.of(
+                        "Un correpasillos se empuja sentado. No es una bicicleta sin pedales ni un patinete de pie. A los 3 años tiene sentido si el asiento deja las piernas sueltas.",
+                        "Mide entrepierna y asiento. Si las rodillas van encogidas, el modelo se ha quedado pequeño aunque la caja diga 3 años. Interior liso o patio sin tráfico."
+                ),
+                List.of(
+                        "Asiento a una altura que permita empujar con ambos pies.",
+                        "Ruedas anchas o antivuelco.",
+                        "Edad o peso declarado compatible con 3 años.",
+                        "Sin motor; supervisión y zona sin coches."
+                ),
+                List.of(
+                        "corre-injusa-africa-twin",
+                        "corre-injusa-neox-kawasaki",
+                        "corre-feber-motofeber-casual",
+                        "corre-molto-cross-race",
+                        "corre-smoby-coche"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.RIDE_ON_3_SLUG,
+                        "corre-injusa-africa-twin",
+                        "corre-injusa-neox-kawasaki",
+                        "corre-feber-motofeber-casual",
+                        "corre-molto-cross-race",
+                        "corre-smoby-coche"
+                ),
+                List.of(
+                        faq("¿Correpasillos o bici sin pedales?",
+                                "La bici tiene dos ruedas y manillar de bicicleta. El correpasillos es un asiento ancho sobre tres o cuatro ruedas. No enseñan lo mismo."),
+                        faq("¿Y un patinete?",
+                                "El patinete se usa de pie. Aquí se va sentado."),
+                        faq("¿Valen los coches eléctricos?",
+                                "No en esta selección. Un vehículo de batería pide otra supervisión y no cubre el empuje con los pies.")
+                ),
+                List.of(
+                        hubLink(),
+                        new LinkItem(
+                                "Correpasillos para 3 años",
+                                "/comparativas/" + ComparisonPageService.RIDE_ON_3_SLUG + "/",
+                                "Comparativa de motos de empuje y un coche con antivuelco."
+                        ),
+                        new LinkItem(
+                                "Patinetes y triciclos para 3 años",
+                                "/comparativas/" + ComparisonPageService.SCOOTERS_TRIKES_3_SLUG + "/",
+                                "La vía de movimiento de pie o con mango de adulto."
                         )
                 )
         ));
@@ -246,19 +358,19 @@ public class CollectionPageService {
                         "Uso solo con adulto presente; nunca cerca de fuegos, agua hirviendo o cuchillos."
                 ),
                 List.of(
-                        "torre-kleiner-riese",
+                        "torre-costway-plegable",
                         "torre-yoleo-transformer",
-                        "torre-bianconiglio-evo",
+                        "torre-hauck-learn-n-explore",
                         "torre-bey-co",
-                        "torre-bianconiglio-transformer"
+                        "torre-maxi-cosi-toucan"
                 ),
                 comparisonHrefs(
                         ComparisonPageService.TOWERS_3_SLUG,
-                        "torre-kleiner-riese",
+                        "torre-costway-plegable",
                         "torre-yoleo-transformer",
-                        "torre-bianconiglio-evo",
+                        "torre-hauck-learn-n-explore",
                         "torre-bey-co",
-                        "torre-bianconiglio-transformer"
+                        "torre-maxi-cosi-toucan"
                 ),
                 List.of(
                         faq("¿Es segura una torre a los 3 años?",
@@ -336,6 +448,112 @@ public class CollectionPageService {
                 )
         ));
         register(new EditorialCollection(
+                CUTLERY_SLUG,
+                "/autonomia/cubiertos-infantiles/",
+                "Autonomía",
+                "Cubiertos infantiles para 3 años",
+                "Tenedor, cuchillo y cuchara de tamaño de mano, distintos de la vajilla de plato y vaso.",
+                List.of(
+                        "A los 3 años la vajilla cubre plato y vaso. Los cubiertos son otra pieza: mango corto y filo de aprendizaje para pinchar y recoger sin el tenedor de adulto.",
+                        "Un set de tres suele bastar. Revisa si se lava en el lavavajillas y si el cuchillo es de aprendizaje, no de cocina."
+                ),
+                List.of(
+                        "Mango que quepa en una mano de 3 años.",
+                        "Tenedor, cuchillo y cuchara; el recambio es opcional.",
+                        "Filo de aprendizaje; no un cuchillo de mesa de adulto.",
+                        "Cuidado según ficha: lavavajillas solo si consta."
+                ),
+                List.of(
+                        "cubiertos-twistshake-acero",
+                        "cubiertos-mam-aprendizaje",
+                        "cubiertos-wmf-animales",
+                        "cubiertos-exzact-safari",
+                        "cubiertos-lehoo-vehiculos"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.CUTLERY_3_SLUG,
+                        "cubiertos-twistshake-acero",
+                        "cubiertos-mam-aprendizaje",
+                        "cubiertos-wmf-animales",
+                        "cubiertos-exzact-safari",
+                        "cubiertos-lehoo-vehiculos"
+                ),
+                List.of(
+                        faq("¿Siguen haciendo falta a los 3 años?",
+                                "Sí, si el cubierto de adulto se le va. Si ya come con los de la casa sin incidentes, no es obligatorio."),
+                        faq("¿Dónde está el plato?",
+                                "En la colección de vajilla infantil. Aquí solo entra tenedor, cuchillo y cuchara."),
+                        faq("¿El cuchillo corta?",
+                                "Corta blando. Un adulto sigue cortando carne fibrosa.")
+                ),
+                List.of(
+                        hubLink(),
+                        new LinkItem(
+                                "Cubiertos infantiles para 3 años",
+                                "/comparativas/" + ComparisonPageService.CUTLERY_3_SLUG + "/",
+                                "Comparativa de cinco sets de tenedor, cuchillo y cuchara."
+                        ),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para 3 años",
+                                "/comparativas/" + ComparisonPageService.TABLEWARE_3_SLUG + "/",
+                                "Plato, cuenco y vaso irrompibles."
+                        )
+                )
+        ));
+        register(new EditorialCollection(
+                DRESSING_SLUG,
+                "/autonomia/aprender-vestirse/",
+                "Autonomía",
+                "Aprender a vestirse para 3 años",
+                "Botones, cremalleras, cordones y pestillos para practicar el gesto sin la prisa del abrigo.",
+                List.of(
+                        "A los 3 años vestirse pide pinza y tiempo. Un tablero o un cubo aísla el botón, la cremallera o el cordón. No sustituye el abrigo real; lo prepara.",
+                        "Un cierre cada vez. Cordones e imanes se cuentan al guardar. Un adulto permanece cerca."
+                ),
+                List.of(
+                        "Un gesto claro: abrochar, enhebrar o abrir un pestillo.",
+                        "Piezas que no se traguen y recuento al guardar.",
+                        "Edad declarada compatible con 3 años.",
+                        "Paso posterior a la prenda o el zapato reales."
+                ),
+                List.of(
+                        "vestir-melissa-habilidades",
+                        "vestir-melissa-cordones",
+                        "vestir-small-foot-cubo",
+                        "vestir-melissa-disfraces",
+                        "vestir-melissa-pestillos"
+                ),
+                comparisonHrefs(
+                        ComparisonPageService.DRESSING_3_SLUG,
+                        "vestir-melissa-habilidades",
+                        "vestir-melissa-cordones",
+                        "vestir-small-foot-cubo",
+                        "vestir-melissa-disfraces",
+                        "vestir-melissa-pestillos"
+                ),
+                List.of(
+                        faq("¿Sustituye el abrigo de cada mañana?",
+                                "No. El tablero aísla el gesto. Después hay que repetirlo en la prenda, con más tiempo del que parece."),
+                        faq("¿Hace falta un marco Montessori de tela?",
+                                "No. Lo útil es un cierre claro. El nombre comercial no sustituye la práctica en la ropa de cada día."),
+                        faq("¿Se puede dejar solo?",
+                                "No. Cordones, imanes y pestillos piden un adulto cerca.")
+                ),
+                List.of(
+                        hubLink(),
+                        new LinkItem(
+                                "Aprender a vestirse a los 3 años",
+                                "/comparativas/" + ComparisonPageService.DRESSING_3_SLUG + "/",
+                                "Comparativa de tableros, cubo y pestillos."
+                        ),
+                        new LinkItem(
+                                "Mejores torres de aprendizaje para 3 años",
+                                "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/",
+                                "Si el gesto es llegar a la encimera, no abrochar."
+                        )
+                )
+        ));
+        register(new EditorialCollection(
                 SUSTAINABLE_3_SLUG,
                 "/sostenibles/regalos-duraderos-3-anos/",
                 "Sostenibles",
@@ -343,7 +561,7 @@ public class CollectionPageService {
                 "Opciones pensadas para durar: materiales resistentes, menos piezas de usar y tirar, y un uso que no dependa de pantallas.",
                 List.of(
                         "Sostenible, en esta página, significa sobre todo durabilidad y materiales que aguanten el juego intenso de los 3 años. No es un sello publicitario ni una lista de certificaciones que no podamos verificar una a una.",
-                        "Las opciones pensadas para repetirse —grúa, vehículos lavables, zapato, puzles y cuentas— están en la comparativa de regalos duraderos. El kit de plastilina ecológica queda en la de regalos sostenibles: se usa para crear, pero el material se gasta."
+                        "Las opciones pensadas para repetirse —puzles de madera, tableros con piezas sujetas y cocina simbólica— están en la comparativa de regalos duraderos. El kit de plastilina ecológica queda en arte y manualidades: se usa para crear, pero el material se gasta. La grúa, los vehículos lavables y las cuentas están en regalos sostenibles."
                 ),
                 List.of(
                         "Material que sobreviva a caídas y al agua ocasional de las manos.",
@@ -357,20 +575,30 @@ public class CollectionPageService {
                         "plantoys-ata-zapato",
                         "haba-puzles-cuatro-estaciones",
                         "cuentas-melissa-doug",
-                        "kit-manualidades-natural"
+                        "arte-ses-eco-mega-7"
                 ),
                 mergeHrefs(
                         comparisonHrefs(
                                 ComparisonPageService.DURABLE_3_SLUG,
-                                "small-foot-grua",
-                                "green-toys-construccion",
-                                "plantoys-ata-zapato",
-                                "haba-puzles-cuatro-estaciones",
-                                "cuentas-melissa-doug"
+                                "puzle-madera-animales",
+                                "puzle-melissa-mascotas",
+                                "puzle-educa-selva",
+                                "puzle-educa-disney-madera",
+                                "simbolico-theo-klein-miele"
                         ),
-                        comparisonHrefs(
-                                ComparisonPageService.SUSTAINABLE_3_SLUG,
-                                "kit-manualidades-natural"
+                        mergeHrefs(
+                                comparisonHrefs(
+                                        ComparisonPageService.SUSTAINABLE_3_SLUG,
+                                        "small-foot-grua",
+                                        "green-toys-construccion",
+                                        "plantoys-ata-zapato",
+                                        "haba-puzles-cuatro-estaciones",
+                                        "cuentas-melissa-doug"
+                                ),
+                                comparisonHrefs(
+                                        ComparisonPageService.ARTS_NATURAL_3_SLUG,
+                                        "arte-ses-eco-mega-7"
+                                )
                         )
                 ),
                 List.of(
@@ -421,25 +649,25 @@ public class CollectionPageService {
                         "puzle-madera-animales",
                         "bici-chicco-red-bullet",
                         "patinete-micro-mini-deluxe",
-                        "torre-kleiner-riese",
+                        "torre-costway-plegable",
                         "vajilla-stor-mickey",
                         "kit-manualidades-natural"
                 ),
                 Map.of(
                         "juego-montessori-formas",
-                        "/comparativas/" + ComparisonPageService.MONTESSORI_3_SLUG + "/#producto-juego-montessori-formas",
+                        "/comparativas/" + ComparisonPageService.MONTESSORI_WOOD_3_SLUG + "/#producto-juego-montessori-formas",
                         "puzle-madera-animales",
                         "/comparativas/" + ComparisonPageService.PUZZLES_3_SLUG + "/#producto-puzle-madera-animales",
                         "bici-chicco-red-bullet",
                         "/comparativas/" + ComparisonPageService.BALANCE_BIKES_SLUG + "/#producto-bici-chicco-red-bullet",
                         "patinete-micro-mini-deluxe",
                         "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/#producto-patinete-micro-mini-deluxe",
-                        "torre-kleiner-riese",
-                        "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/#producto-torre-kleiner-riese",
+                        "torre-costway-plegable",
+                        "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/#producto-torre-costway-plegable",
                         "vajilla-stor-mickey",
                         "/comparativas/" + ComparisonPageService.TABLEWARE_3_SLUG + "/#producto-vajilla-stor-mickey",
                         "kit-manualidades-natural",
-                        "/comparativas/" + ComparisonPageService.SUSTAINABLE_3_SLUG + "/#producto-kit-manualidades-natural"
+                        "/comparativas/" + ComparisonPageService.GIFTS_3_SLUG + "/#producto-kit-manualidades-natural"
                 ),
                 List.of(
                         faq("¿Qué regalo no falla a esta edad?",
@@ -839,8 +1067,8 @@ public class CollectionPageService {
                 ),
                 List.of(
                         "simbolico-theo-klein-miele", "simbolico-kidkraft-vintage",
-                        "simbolico-deao-cocina", "simbolico-beeloom-babycue",
-                        "simbolico-sundaymot-32", "simbolico-sundaymot-33"
+                        "simbolico-small-foot-compacta", "simbolico-janod-macaron",
+                        "simbolico-janod-veterinario", "simbolico-sundaymot-33"
                 )
         );
         registerEducationalCollection(

@@ -80,12 +80,32 @@ export const COLLECTION_PAGES = [
     hubAge: 4,
   },
   {
+    slug: "triangulos-pikler",
+    prefix: "movimiento",
+    hubAge: 3,
+  },
+  {
+    slug: "correpasillos",
+    prefix: "movimiento",
+    hubAge: 3,
+  },
+  {
     slug: "torres-de-aprendizaje",
     prefix: "autonomia",
     hubAge: 3,
   },
   {
     slug: "vajilla-infantil",
+    prefix: "autonomia",
+    hubAge: 3,
+  },
+  {
+    slug: "cubiertos-infantiles",
+    prefix: "autonomia",
+    hubAge: 3,
+  },
+  {
+    slug: "aprender-vestirse",
     prefix: "autonomia",
     hubAge: 3,
   },

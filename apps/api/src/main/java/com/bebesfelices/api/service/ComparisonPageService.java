@@ -41,6 +41,10 @@ public class ComparisonPageService {
     public static final String SENSORY_3_SLUG = "mejores-juguetes-sensoriales-3-anos";
     public static final String BALANCE_GUIDE_3_SLUG = "mejores-bicicletas-equilibrio-3-anos";
     public static final String SCOOTERS_TRIKES_3_SLUG = "mejores-patinetes-triciclos-3-anos";
+    public static final String PIKLER_3_SLUG = "mejores-triangulos-pikler-3-anos";
+    public static final String RIDE_ON_3_SLUG = "mejores-correpasillos-3-anos";
+    public static final String CUTLERY_3_SLUG = "mejores-cubiertos-infantiles-3-anos";
+    public static final String DRESSING_3_SLUG = "mejores-aprender-vestirse-3-anos";
     public static final String TOWERS_KITCHEN_3_SLUG = "mejores-torres-cocina-3-anos";
     public static final String TABLEWARE_DAILY_3_SLUG = "mejores-vajillas-mesa-diaria-3-anos";
     public static final String GIFT_SELECTION_3_SLUG = "mejores-seleccion-regalos-3-anos";
@@ -147,6 +151,14 @@ public class ComparisonPageService {
             + BALANCE_GUIDE_3_SLUG + "/";
     private static final String SCOOTERS_TRIKES_3_CANONICAL = "https://bebesfelices.es/comparativas/"
             + SCOOTERS_TRIKES_3_SLUG + "/";
+    private static final String PIKLER_3_CANONICAL = "https://bebesfelices.es/comparativas/"
+            + PIKLER_3_SLUG + "/";
+    private static final String RIDE_ON_3_CANONICAL = "https://bebesfelices.es/comparativas/"
+            + RIDE_ON_3_SLUG + "/";
+    private static final String CUTLERY_3_CANONICAL = "https://bebesfelices.es/comparativas/"
+            + CUTLERY_3_SLUG + "/";
+    private static final String DRESSING_3_CANONICAL = "https://bebesfelices.es/comparativas/"
+            + DRESSING_3_SLUG + "/";
     private static final String TOWERS_KITCHEN_3_CANONICAL = "https://bebesfelices.es/comparativas/"
             + TOWERS_KITCHEN_3_SLUG + "/";
     private static final String TABLEWARE_DAILY_3_CANONICAL = "https://bebesfelices.es/comparativas/"
@@ -566,48 +578,48 @@ public class ComparisonPageService {
                     )
             ),
             new EditorialEntry(
-                    "torre-bianconiglio-evo",
-                    "Bianconiglio Kids EVO",
-                    "Tres alturas en una torre ligera",
-                    "Torre clásica de abedul fabricada en Italia, de 40 x 42 x 88 cm y 7,5 kg, con plataforma en 3 alturas. El sistema anticaídas KidSafe es un accesorio, no siempre incluido.",
+                    "torre-hauck-learn-n-explore",
+                    "hauck Learn N Explore",
+                    "Tres alturas en madera de haya FSC",
+                    "Torre de madera de haya con certificación FSC, de 1 a 6 años, con plataforma regulable en 3 alturas (33 a 45 cm) y 90,5 cm de alto. Carga máxima declarada de 40 kg.",
                     List.of(
-                            "Tres alturas de plataforma (30, 40 y 50 cm en las fichas EVO).",
-                            "Peso declarado de 7,5 kg, más fácil de desplazar que modelos de 10 kg.",
-                            "Certificación EN-71 y bordes redondeados según el fabricante.",
-                            "Compatible con el accesorio KidSafe."
+                            "Tres alturas de plataforma, de 33 a 45 cm.",
+                            "Madera de haya con certificación FSC según la ficha.",
+                            "Edad declarada de 1 a 6 años y carga de 40 kg.",
+                            "Uso en cocina, mesa o baño con un adulto."
                     ),
                     List.of(
-                            "KidSafe y las extensiones laterales se venden aparte en varias fichas.",
-                            "Otras variantes EVO declaran 40 kg de carga; comprueba la ficha vigente de tu color."
+                            "La ficha no declara plegado ni conversión a escritorio.",
+                            "A los 4 años usa una altura que llegue a la encimera sin trepar por fuera."
                     ),
-                    "Hasta unos 6-7 años",
+                    "1-6 años",
                     List.of(
                             note("Encaje a los 4 años", "Las tres alturas cubren el crecimiento; mide tu encimera."),
-                            note("Estabilidad", "Diseño antitrepa y barandilla; KidSafe es opcional."),
-                            note("Regulación", "Tres posiciones de plataforma."),
-                            note("Seguridad", "Uso solo con adulto; el fabricante pide supervisión constante.")
+                            note("Estabilidad", "Estructura de madera de haya; el fabricante la describe como estable y robusta."),
+                            note("Regulación", "Tres posiciones de plataforma, de 33 a 45 cm."),
+                            note("Seguridad", "Uso solo con adulto; no es un juguete de trepa.")
                     )
             ),
             new EditorialEntry(
-                    "torre-kleiner-riese",
-                    "Kleiner Riese 4 en 1",
-                    "Plegar y guardar detrás de una puerta",
-                    "Torre plegable de 6,5 kg en contrachapado de abedul de 18 mm, con barra NFS, asas para llevarla y uso como taburete de adulto hasta 80 kg. La ficha la recomienda a partir de 3 años.",
+                    "torre-costway-plegable",
+                    "COSTWAY Plegable 3 en 1",
+                    "Plegar y convertir en mesa",
+                    "Torre plegable de madera indicada a partir de 3 años, con estructura en A, patas antivuelco, barra de seguridad y pizarra. Se convierte en mesa y silla sin herramientas. Altura 91 cm y carga máxima de 60 kg.",
                     List.of(
-                            "Peso declarado de 6,5 kg y plegado a 91 x 45,5 x 29 cm.",
-                            "Barra de seguridad NFS y barniz EN 71-3.",
-                            "Contrachapado de abedul de 18 mm.",
-                            "También como taburete o escalón de adulto hasta 80 kg."
+                            "Indicada a partir de 3 años en la ficha.",
+                            "Se pliega y se convierte en mesa bloqueando la hebilla.",
+                            "Estructura en A, patas antivuelco y barra de seguridad.",
+                            "Pizarra integrada; carga máxima declarada de 60 kg."
                     ),
                     List.of(
-                            "Plegada sigue midiendo 91 cm de alto: cabe detrás de una puerta, no en un cajón.",
-                            "El uso como escalón de adulto no es el uso infantil; no mezcles ambos a la vez."
+                            "Plegada sigue midiendo 91 cm de alto.",
+                            "La hebilla debe quedar bloqueada; la pizarra no sustituye la barandilla."
                     ),
                     "Recomendada desde 3 años",
                     List.of(
                             note("Encaje a los 4 años", "La ficha la recomienda a partir de 3 años."),
-                            note("Estabilidad", "Barra NFS y tablero de 18 mm."),
-                            note("Regulación", "Plegado para guardar; confirma la altura de plataforma en tu unidad."),
+                            note("Estabilidad", "Estructura en A y patas antivuelco."),
+                            note("Regulación", "Plegado y modo mesa; confirma la altura de plataforma en tu unidad."),
                             note("Seguridad", "Supervisión directa; no es un juguete de trepa.")
                     )
             ),
@@ -635,25 +647,25 @@ public class ComparisonPageService {
                     )
             ),
             new EditorialEntry(
-                    "torre-bianconiglio-transformer",
-                    "Bianconiglio Kids Transformer Ajustable",
-                    "Convertir la torre en escritorio con ajuste de altura",
-                    "Torre convertible en mesa, reposapiés y escritorio, con ajuste de altura, 45 x 41 x 90 cm y 10 kg, fabricada en Italia. Distinta de la EVO: aquí el reclamo es el cambio de uso.",
+                    "torre-maxi-cosi-toucan",
+                    "Maxi-Cosi Toucan 3 en 1",
+                    "Convertir la torre en mesa, silla o taburete",
+                    "Torre de madera FSC que pasa a mesa y silla o a taburete, con 3 alturas (29,5 a 41,4 cm), 46 x 91 x 43,3 cm y 8,7 kg. El modo torre cubre de 1,5 a 6 años (10-30 kg); el taburete declara hasta 150 kg.",
                     List.of(
-                            "Se transforma en mesa, reposapiés y escritorio.",
-                            "Ajuste de altura según la ficha.",
-                            "Fabricación artesanal en Italia.",
-                            "Dimensiones 45 x 41 x 90 cm y 10 kg declarados."
+                            "Se transforma en mesa y silla, o en taburete al retirar la tapa.",
+                            "Tres posiciones de altura, de 29,5 a 41,4 cm.",
+                            "Madera FSC 100 % y pizarra integrada.",
+                            "8,7 kg declarados; normas de seguridad europeas según la ficha."
                     ),
                     List.of(
-                            "Con 10 kg es más pesada que la EVO de 7,5 kg.",
-                            "Comprueba qué incluye tu color: algunas versiones añaden pizarra."
+                            "El modo taburete (hasta 150 kg) no es el uso infantil en torre.",
+                            "El modo escritorio no sustituye la supervisión junto al fuego."
                     ),
                     "Uso infantil con adulto",
                     List.of(
                             note("Encaje a los 4 años", "El escritorio alarga el uso cuando la torre de cocina se queda corta."),
-                            note("Estabilidad", "Base de 45 x 41 cm; monta según el manual."),
-                            note("Regulación", "Ajuste de altura y modos torre o mesa."),
+                            note("Estabilidad", "Base de 46 x 43,3 cm; monta según el manual."),
+                            note("Regulación", "Tres alturas y modos torre, mesa o taburete."),
                             note("Seguridad", "Supervisión constante; no dejarla junto al fuego.")
                     )
             )
@@ -732,7 +744,7 @@ public class ComparisonPageService {
                     "vajilla-fun-house",
                     "Fun House vajilla 3 piezas",
                     "Un set reutilizable de plato, cuenco y vaso",
-                    "Juego con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, reutilizable y apto para microondas.",
+                    "Juego de polipropileno con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, reutilizable y apto para microondas.",
                     List.of(
                             "Tres piezas con medidas declaradas: 22 cm, 16 cm y 220 ml.",
                             "Apto para microondas.",
@@ -1002,104 +1014,104 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> MONTESSORI_3 = List.of(
             entry(
-                    "juego-montessori-formas",
-                    "Melissa & Doug cubo de formas",
-                    "Clasificar formas y colores con piezas grandes",
-                    "Cubo de madera con 12 piezas grandes para encajar por la forma. A los 3 años la actividad es evidente: coger, nombrar y meter. No hace falta un reglamento.",
+                    "montessori-janod-animales",
+                    "Janod Magneti'Book Animales",
+                    "Formar animales con modelos magnéticos",
+                    "Libro magnético con treinta imanes y diez fichas para recrear animales, de 3 a 8 años. A los 3 años la consigna es mirar la ficha, coger la pieza y colocarla; un adulto elige primero los modelos más sencillos.",
                     List.of(
-                            "Doce piezas grandes, pensadas para manos pequeñas.",
-                            "Clasificación de formas y colores en un solo objeto.",
-                            "Rango declarado de 2 a 4 años."
+                            "Diez modelos para formar animales con dificultad creciente.",
+                            "Treinta piezas magnéticas en formato libro.",
+                            "Rango declarado de 3 a 8 años."
                     ),
                     List.of(
-                            "A los 4 años el cubo puede quedarse corto si ya clasifica sin esfuerzo.",
-                            "No incluye un segundo nivel de dificultad en la misma caja."
+                            "Las fichas piden un adulto que elija el modelo inicial.",
+                            "Las piezas magnéticas se pierden si se abre el libro en el suelo."
                     ),
-                    "2-4 años",
-                    note("Encaje a los 3 años", "Edad declarada hasta 4 años; las piezas grandes evitan frustración inicial."),
-                    note("Actividad", "Encajar y nombrar; una sola consigna clara."),
-                    note("Piezas", "12 piezas grandes de madera."),
-                    note("Seguridad", "Supervisión cercana; no es un juguete para dejar solo.")
+                    "3-8 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; empieza por los modelos más sencillos."),
+                    note("Actividad", "Formar animales siguiendo un modelo, no solo meter en un hueco."),
+                    note("Piezas", "Treinta imanes y diez fichas modelo."),
+                    note("Seguridad", "Supervisión cercana; recuenta las piezas al guardar.")
             ),
             entry(
-                    "montessori-goula-baby-shapes",
-                    "Goula Baby Shapes",
-                    "Aumentar la dificultad sin cambiar de juguete",
-                    "Láminas y piezas de madera para encajar formas y colores con dificultad progresiva. A los 3 años permite empezar fácil y añadir láminas cuando el cubo ya no reta.",
+                    "montessori-melissa-tres-puzzles",
+                    "Melissa & Doug pack de 3 puzzles de encaje",
+                    "Tres escenas de madera en una sesión",
+                    "Pack con tres tableros de encaje de granja, safari y vehículos, a partir de 3 años. Cada uno se termina en una sesión corta; se puede rotar el tema sin mezclar piezas.",
                     List.of(
-                            "Dificultad progresiva con varias láminas.",
-                            "Piezas de madera para encajar formas y colores.",
+                            "Tres tableros con ilustraciones a todo color.",
+                            "Piezas gruesas de madera fáciles de agarrar.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "Tres cajas distintas: conviene guardar cada puzle por separado.",
+                            "No sustituye un material con dificultad progresiva en la misma caja."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; pocas piezas por tablero."),
+                    note("Actividad", "Encajar una escena reconocible, no clasificar un cubo."),
+                    note("Piezas", "Tres tableros de madera con piezas gruesas."),
+                    note("Seguridad", "Piezas grandes; supervisión si hay hermanos más pequeños.")
+            ),
+            entry(
+                    "montessori-janod-ballenas",
+                    "Janod clasificar ballenas por colores",
+                    "Clasificar animales marinos por color",
+                    "Cuatro ballenas de madera, doce animales marinos y pinzas para introducir cada pieza en la ballena del color correspondiente, de 2 a 5 años. A los 3 años el gesto es coger con la pinza, nombrar el color y completar cada ballena.",
+                    List.of(
+                            "Cuatro colores: cada ballena recibe tres animales.",
+                            "Doce piezas de madera y pinzas para motricidad fina.",
                             "Rango declarado de 2 a 5 años."
                     ),
                     List.of(
-                            "Hay que guardar las láminas que no se usan para no mezclar el reto.",
-                            "Un adulto debe proponer el siguiente nivel; no se explica solo."
+                            "Las pinzas piden práctica; se puede empezar con la mano.",
+                            "Doce piezas sueltas: recuenta al terminar."
                     ),
                     "2-5 años",
                     note("Encaje a los 3 años", "Cabe en 3 años y admite crecer hasta 5."),
-                    note("Actividad", "Encaje con niveles, no un cubo único."),
-                    note("Piezas", "Láminas y piezas de madera."),
-                    note("Seguridad", "Revisa que no falten piezas pequeñas sueltas.")
-            ),
-            entry(
-                    "montessori-formas-geometricas",
-                    "Melissa & Doug puzzle de formas geométricas",
-                    "Reconocer ocho formas gruesas",
-                    "Ocho piezas gruesas de madera para reconocer formas y colores. Menos piezas que el cubo de 12: se termina en una sesión corta.",
-                    List.of(
-                            "Ocho piezas gruesas de madera.",
-                            "Formas y colores reconocibles.",
-                            "Rango declarado de 2 a 5 años."
-                    ),
-                    List.of(
-                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
-                            "No es un puzle de imagen; es un tablero de formas."
-                    ),
-                    "2-5 años",
-                    note("Encaje a los 3 años", "Pocas piezas gruesas, fáciles de completar."),
-                    note("Actividad", "Encajar formas, no montar una escena."),
-                    note("Piezas", "Ocho piezas de madera."),
-                    note("Seguridad", "Piezas gruesas; supervisión si hay hermanos más pequeños.")
-            ),
-            entry(
-                    "montessori-noah-ark",
-                    "Melissa & Doug Arca de Noé clasificadora",
-                    "Clasificar animales por la forma",
-                    "Arca de madera con 26 piezas de animales para clasificar por forma. A los 3 años pide más vocabulario (nombres de animales) y más recogida al terminar.",
-                    List.of(
-                            "Veintiséis piezas de animales para clasificar.",
-                            "El arca guarda las piezas al terminar.",
-                            "Rango declarado de 2 a 5 años."
-                    ),
-                    List.of(
-                            "26 piezas son más que un cubo de 12: conviene sacar solo unas pocas al empezar.",
-                            "Si hay menores de 3 años, revisa el tamaño de cada figura."
-                    ),
-                    "2-5 años",
-                    note("Encaje a los 3 años", "Útil si ya encaja formas simples y quiere nombrar animales."),
-                    note("Actividad", "Clasificar por silueta, no solo encajar un cubo."),
-                    note("Piezas", "26 figuras; saca un subconjunto al inicio."),
-                    note("Seguridad", "Comprueba que ninguna figura sea demasiado pequeña.")
+                    note("Actividad", "Clasificar por color, no encajar un cubo."),
+                    note("Piezas", "Cuatro ballenas, doce animales y pinzas de madera."),
+                    note("Seguridad", "Piezas de tamaño medio y pinzas; supervisión cercana.")
             ),
             entry(
                     "montessori-janod-tropik",
                     "Janod Mis primeras formas Tropik",
-                    "Un primer encaje de madera FSC",
-                    "Soporte de madera FSC con piezas para encajar formas y colores. El rango llega hasta los 3 años: encaja como primer material, no como reto que dure todo el curso.",
+                    "Encajar nueve formas en orden",
+                    "Soporte de madera FSC con seis formas y tres pájaros para encajar en el orden correcto, de 1 a 3 años. A los 3 años la consigna sigue siendo una: coger la pieza, nombrar forma y color, y meterla en su hueco.",
                     List.of(
-                            "Madera FSC declarada en la ficha.",
-                            "Encaje de formas y colores en un soporte único.",
-                            "Indicada de 1 a 3 años."
+                            "Nueve piezas de madera FSC con pintura al agua.",
+                            "Cada pieza encaja en un hueco concreto.",
+                            "Rango declarado de 1 a 3 años."
                     ),
                     List.of(
-                            "El máximo declarado es 3 años: si ya clasifica con soltura, Goula o el cubo dan más margen.",
-                            "Menos piezas que el arca o el cubo de 12."
+                            "El máximo declarado es 3 años: si ya encaja con soltura, Magneti'Book Animales da más margen.",
+                            "Nueve piezas se acaban rápido si ya clasifica sin ayuda."
                     ),
                     "1-3 años",
-                    note("Encaje a los 3 años", "Está en el tope del rango; sirve si aún empieza a encajar."),
-                    note("Actividad", "Primeras formas en un soporte fijo."),
-                    note("Materiales", "Madera FSC según la ficha."),
-                    note("Seguridad", "Supervisión; no lo dejes con un bebé que se lleve piezas a la boca sin control.")
+                    note("Encaje a los 3 años", "Tope de edad 3 años; buen puente si aún necesita pocos elementos."),
+                    note("Actividad", "Encajar formas y colores en un soporte, no un tablero de escena."),
+                    note("Piezas", "Seis formas y tres pájaros de madera."),
+                    note("Seguridad", "Supervisión; piezas sueltas al terminar.")
+            ),
+            entry(
+                    "puzle-melissa-granja-peg",
+                    "Melissa & Doug puzle de granja con agarres",
+                    "Encajar ocho animales con pomos",
+                    "Tablero de madera con ocho piezas con pomos para encajar animales de granja, de 2 a 4 años. A los 3 años añade vocabulario de animales al encaje y el tablero sujeta las piezas mientras se completa.",
+                    List.of(
+                            "Ocho piezas con pomos de madera.",
+                            "Escena de granja reconocible.",
+                            "Rango declarado de 2 a 4 años."
+                    ),
+                    List.of(
+                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
+                            "No es el puzle con sonidos; es encaje con agarres."
+                    ),
+                    "2-4 años",
+                    note("Encaje a los 3 años", "Pocas piezas gruesas, fáciles de completar."),
+                    note("Actividad", "Encajar animales y nombrarlos."),
+                    note("Piezas", "Ocho piezas de madera con pomos en un tablero."),
+                    note("Seguridad", "Piezas grandes; supervisión si hay hermanos más pequeños.")
             )
     );
 
@@ -1331,24 +1343,24 @@ public class ComparisonPageService {
                     note("Seguridad", "Sin recuento alto de piezas sueltas diminutas.")
             ),
             entry(
-                    "puzle-melissa-granja",
-                    "Melissa & Doug puzle de animales domésticos",
-                    "Encajar y oír el animal",
-                    "Tablero de madera con piezas grandes y sonidos para reconocer animales. A los 3 años el sonido refuerza el nombre; no sustituye terminar el encaje.",
+                    "puzle-melissa-mascotas",
+                    "Melissa & Doug puzle de mascotas",
+                    "Ocho piezas gruesas que también se sostienen de pie",
+                    "Puzle de madera de mascotas con ocho piezas gruesas y un tablero con pistas visuales debajo. A los 3 años el objetivo es terminar el tablero; las piezas se sostienen de pie para jugar después.",
                     List.of(
-                            "Piezas grandes sobre tablero.",
-                            "Sonidos para reconocer animales domésticos.",
-                            "Rango declarado de 2 a 4 años."
+                            "Ocho piezas gruesas de madera fáciles de agarrar.",
+                            "Mascotas reconocibles; las piezas se sostienen de pie.",
+                            "Imágenes a color bajo cada pieza."
                     ),
                     List.of(
-                            "El máximo declarado es 4 años.",
-                            "Los sonidos piden pilas o un mecanismo; revisa el estado antes de regalarlo."
+                            "Ocho piezas pueden quedarse cortas si ya monta 15 o 16.",
+                            "Es un tablero de siluetas, no un puzle de escena de muchas piezas."
                     ),
-                    "2-4 años",
-                    note("Encaje a los 3 años", "Tablero y piezas grandes, con un extra de vocabulario."),
+                    "Desde 2 años",
+                    note("Encaje a los 3 años", "Piezas grandes y un motivo de mascotas conocido."),
                     note("Dificultad", "Encaje guiado por silueta, no un puzle de 16 piezas sueltas."),
                     note("Soporte", "Tablero de madera que sujeta las piezas."),
-                    note("Seguridad", "El mecanismo de sonido no se desmonta; supervisión si se golpea.")
+                    note("Seguridad", "Piezas grandes; supervisión si se usan como figuras de pie.")
             ),
             entry(
                     "puzle-educa-selva",
@@ -1447,12 +1459,12 @@ public class ComparisonPageService {
                     ),
                     List.of(
                             "El manillar parte de 57 cm, por encima de los 48 cm del Mini Deluxe LED.",
-                            "La ficha consultada no declara plegado ni el peso del patinete."
+                            "La ficha consultada no declara plegado ni el peso del patinete; la carga máxima es 50 kg."
                     ),
                     "3-5 años",
                     note("Encaje a los 3 años", "La edad mínima declarada es 3 años."),
                     note("Estabilidad", "Tres ruedas y plataforma antideslizante."),
-                    note("Manejo", "Freno trasero; no hay peso declarado en la ficha."),
+                    note("Manejo", "Freno trasero y carga máxima de 50 kg; no hay peso del patinete en la ficha."),
                     note("Seguridad", "Casco y zona sin tráfico. La ficha recomienda no usarlo en circulación.")
             ),
             entry(
@@ -1475,6 +1487,27 @@ public class ComparisonPageService {
                     note("Estabilidad", "Tres ruedas y bloqueo de dirección opcional."),
                     note("Manejo", "Plegado y modo carrito; carga máxima de 50 kg."),
                     note("Seguridad", "Freno trasero ancho; casco y zona sin tráfico.")
+            ),
+            entry(
+                    "patinete-micro-mini-3en1",
+                    "Micro Mini 3en1 Deluxe Plus",
+                    "Empezar sentado y pasar a pie",
+                    "Patinete evolutivo de tres ruedas para 1 a 5 años: asiento, reposapiés y bastón de empuje extraíbles. A los 3 años cubre el paso de ir sentado a ir de pie con el mismo chasis de 1,95 kg y manillar 48-68 cm.",
+                    List.of(
+                            "Tres etapas: empuje con adulto, correpasillos sentado y patinete de pie.",
+                            "Edad declarada de 1 a 5 años; manillar 48-68 cm.",
+                            "Peso declarado de 1,95 kg y carga máxima de 50 kg (asiento 20 kg).",
+                            "Asiento, reposapiés y bastón de empuje se retiran cuando ya se sostiene de pie."
+                    ),
+                    List.of(
+                            "El asiento declara 20 kg: comprueba el peso real si aún lo usa sentado.",
+                            "Hay más piezas que en un Mini Deluxe de pie; un adulto monta y retira los accesorios."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "Rango 1-5 años y manillar 48-68 cm; a esta edad suele usarse ya de pie o como correpasillos."),
+                    note("Estabilidad", "Tres ruedas; el asiento añade un uso sentado distinto del triciclo con pedales."),
+                    note("Manejo", "1,95 kg; asiento 20 kg y patinete 50 kg."),
+                    note("Seguridad", "Freno trasero; casco y supervisión en las tres etapas.")
             ),
             entry(
                     "triciclo-chicco-u-go",
@@ -1501,24 +1534,24 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> TOWERS_3 = List.of(
             entry(
-                    "torre-kleiner-riese",
-                    "Kleiner Riese 4 en 1",
+                    "torre-costway-plegable",
+                    "COSTWAY Plegable 3 en 1",
                     "Plegar y guardar en una cocina pequeña",
-                    "Torre plegable de 6,5 kg en contrachapado de abedul de 18 mm, con barra NFS. La ficha la recomienda a partir de 3 años: encaje directo con esta página.",
+                    "Torre plegable de madera indicada a partir de 3 años, con estructura en A, barra de seguridad y pizarra. Encaje directo con esta página: la ficha parte de los 3 años.",
                     List.of(
                             "Recomendada a partir de 3 años en la ficha.",
-                            "Peso declarado de 6,5 kg y plegado a 91 x 45,5 x 29 cm.",
-                            "Barra de seguridad NFS y barniz EN 71-3.",
-                            "Contrachapado de abedul de 18 mm."
+                            "Se pliega y se convierte en mesa sin herramientas.",
+                            "Estructura en A, patas antivuelco y barra de seguridad.",
+                            "Carga máxima declarada de 60 kg y 91 cm de alto."
                     ),
                     List.of(
                             "Plegada sigue midiendo 91 cm de alto.",
-                            "El uso como escalón de adulto (hasta 80 kg) no se mezcla con el uso infantil."
+                            "La hebilla debe quedar bloqueada; no es un juguete de trepa."
                     ),
                     "Recomendada desde 3 años",
                     note("Encaje a los 3 años", "La ficha la recomienda a partir de 3 años."),
-                    note("Estabilidad", "Barra NFS y tablero de 18 mm."),
-                    note("Regulación", "Plegado para guardar; confirma la altura de plataforma."),
+                    note("Estabilidad", "Estructura en A y patas antivuelco."),
+                    note("Regulación", "Plegado y modo mesa; confirma la altura de plataforma."),
                     note("Seguridad", "Adulto presente; nunca junto a fuego o agua hirviendo.")
             ),
             entry(
@@ -1542,24 +1575,24 @@ public class ComparisonPageService {
                     note("Seguridad", "Supervisión constante a esta edad.")
             ),
             entry(
-                    "torre-bianconiglio-evo",
-                    "Bianconiglio Kids EVO",
-                    "Tres alturas en una torre ligera",
-                    "Torre de abedul de 40 x 42 x 88 cm y 7,5 kg, con plataforma en 3 alturas (30, 40 y 50 cm). A los 3 años suele usarse la posición intermedia; KidSafe es un accesorio.",
+                    "torre-hauck-learn-n-explore",
+                    "hauck Learn N Explore",
+                    "Tres alturas en madera de haya FSC",
+                    "Torre de madera de haya FSC, de 1 a 6 años, con plataforma en 3 alturas (33 a 45 cm) y 90,5 cm de alto. A los 3 años suele usarse una altura intermedia, no la más alta desde el primer día.",
                     List.of(
-                            "Tres alturas de plataforma.",
-                            "Peso declarado de 7,5 kg.",
-                            "Certificación EN-71 y bordes redondeados según el fabricante."
+                            "Tres alturas de plataforma, de 33 a 45 cm.",
+                            "Madera de haya con certificación FSC.",
+                            "Carga máxima declarada de 40 kg."
                     ),
                     List.of(
-                            "KidSafe se vende aparte en varias fichas.",
-                            "Comprueba la carga máxima de tu color vigente."
+                            "La ficha no declara plegado.",
+                            "Comprueba que la altura llegue a tu encimera sin asomarse."
                     ),
-                    "Hasta unos 6-7 años",
-                    note("Encaje a los 3 años", "Empieza por 30 o 40 cm; no dejes la más alta si aún trepa por fuera."),
-                    note("Estabilidad", "Barandilla; KidSafe es opcional."),
+                    "1-6 años",
+                    note("Encaje a los 3 años", "Empieza por 33 o una altura intermedia; no dejes la más alta si aún trepa por fuera."),
+                    note("Estabilidad", "Estructura de haya; el fabricante la describe como estable."),
                     note("Regulación", "Tres posiciones de plataforma."),
-                    note("Seguridad", "El fabricante pide supervisión constante.")
+                    note("Seguridad", "Uso solo con adulto.")
             ),
             entry(
                     "torre-bey-co",
@@ -1582,23 +1615,23 @@ public class ComparisonPageService {
                     note("Seguridad", "Un solo niño; lejos del fuego.")
             ),
             entry(
-                    "torre-bianconiglio-transformer",
-                    "Bianconiglio Kids Transformer Ajustable",
-                    "Torre convertible en escritorio",
-                    "Torre convertible en mesa, reposapiés y escritorio, de 45 x 41 x 90 cm y 10 kg, fabricada en Italia. A los 3 años pesa más de desplazar que la EVO de 7,5 kg.",
+                    "torre-maxi-cosi-toucan",
+                    "Maxi-Cosi Toucan 3 en 1",
+                    "Torre convertible en mesa y silla",
+                    "Torre de madera FSC que se transforma en mesa y silla o en taburete, de 46 x 91 x 43,3 cm y 8,7 kg, con 3 alturas (29,5 a 41,4 cm). A los 3 años el modo torre cubre 10-30 kg.",
                     List.of(
-                            "Conversión a mesa y escritorio.",
-                            "Ajuste de altura.",
-                            "Fabricada en Italia; 10 kg declarados."
+                            "Conversión a mesa y silla, o a taburete.",
+                            "Tres alturas, de 29,5 a 41,4 cm.",
+                            "Madera FSC; 8,7 kg declarados."
                     ),
                     List.of(
-                            "Con 10 kg es más pesada que Kleiner Riese (6,5 kg) o EVO (7,5 kg).",
+                            "Con 8,7 kg pesa más que desplazar que una torre plegable de cocina.",
                             "El modo escritorio no se usa a los 3 años: es margen futuro."
                     ),
                     "Uso infantil con adulto",
                     note("Encaje a los 3 años", "Sirve si la altura de torre llega a tu encimera."),
-                    note("Estabilidad", "Estructura más pesada; confirma bloqueos al convertir."),
-                    note("Regulación", "Torre, mesa y escritorio."),
+                    note("Estabilidad", "Confirma bloqueos al convertir a mesa."),
+                    note("Regulación", "Torre, mesa y taburete."),
                     note("Seguridad", "No la uses como juguete de trepa.")
             )
     );
@@ -1629,7 +1662,7 @@ public class ComparisonPageService {
                     "vajilla-fun-house",
                     "Fun House vajilla 3 piezas",
                     "Un set reutilizable de tamaño mesa",
-                    "Juego con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, reutilizable y apto para microondas. El plato es de mesa, no de aprendizaje de bebé.",
+                    "Juego de polipropileno con plato de 22 cm, cuenco de 16 cm y vaso de 220 ml, reutilizable y apto para microondas. El plato es de mesa, no de aprendizaje de bebé.",
                     List.of(
                             "Plato de 22 cm, cuenco de 16 cm y vaso de 220 ml.",
                             "Apto para microondas.",
@@ -1769,20 +1802,20 @@ public class ComparisonPageService {
                     note("Límite", "No es un patinete ni un triciclo.")
             ),
             entry(
-                    "torre-kleiner-riese",
-                    "Kleiner Riese 4 en 1",
+                    "torre-yoleo-transformer",
+                    "YOLEO Transformer",
                     "Un regalo de autonomía para la cocina",
-                    "Torre recomendada a partir de 3 años, plegable, de 6,5 kg. Tiene sentido si la familia cocina con el niño y hay un adulto dispuesto a estar al lado.",
+                    "Torre plegable de madera de nogal, convertible en silla y escritorio, con pizarra magnética de doble cara. Tiene sentido si la familia cocina con el niño y hay un adulto dispuesto a estar al lado.",
                     List.of(
-                            "Ficha recomendada desde 3 años.",
-                            "Plegado para cocinas pequeñas.",
-                            "Barra NFS y tablero de 18 mm."
+                            "Se pliega y se convierte en silla y escritorio.",
+                            "Pizarra magnética de doble cara.",
+                            "Uso en cocina o lavabo con un adulto."
                     ),
                     List.of(
                             "No es un juguete: sin supervisión no se regala.",
                             "Ocupa sitio aunque se pliegue."
                     ),
-                    "Recomendada desde 3 años",
+                    "Uso infantil con adulto",
                     note("Necesidad", "Participar en tareas reales de casa."),
                     note("Uso", "Cocina o lavabo, con adulto."),
                     note("Regalo", "Pregunta antes si ya hay torre o espacio."),
@@ -1915,26 +1948,6 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> SUSTAINABLE_3 = List.of(
             entry(
-                    "kit-manualidades-natural",
-                    "Kit de manualidades con materiales naturales",
-                    "Crear con plastilina ecológica y madera",
-                    "SES Creative Eco: tres potes de plastilina de materias primas naturales y herramientas de madera, a partir de 3 años. Sostenible, aquí, es material declarado y uso repetible, no un sello que no podamos verificar.",
-                    List.of(
-                            "Materias primas naturales y herramientas de madera según la ficha.",
-                            "Uso sin electrónica.",
-                            "Edad declarada a partir de 3 años."
-                    ),
-                    List.of(
-                            "La plastilina se gasta; no es un objeto de madera permanente.",
-                            "Hace falta un adulto para el primer uso."
-                    ),
-                    "Desde 3 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; sesiones cortas con un adulto."),
-                    note("Materiales", "Plastilina ecológica y herramientas de madera."),
-                    note("Uso", "Modelar en mesa, no juego de exterior."),
-                    note("Duración", "Se puede repetir mientras quede material.")
-            ),
-            entry(
                     "cuentas-melissa-doug",
                     "Melissa & Doug cuentas de madera",
                     "Ensartar y contar sin pantallas",
@@ -2013,59 +2026,16 @@ public class ComparisonPageService {
                     note("Materiales", "Cartón y haya sostenible."),
                     note("Uso", "Encajar y juego simbólico con las figuras."),
                     note("Duración", "Cuatro motivos para repetir.")
-            )
-    );
-
-    private static final List<EditorialEntry> DURABLE_3 = List.of(
-            entry(
-                    "small-foot-grua",
-                    "Small Foot grúa de construcción",
-                    "Un objeto de madera que se saca muchas veces",
-                    "Grúa de madera FSC 100 % a partir de 3 años, giratoria 360°, con manivela y accesorios de obra. A los 3 años el gesto es empujar, girar y cargar; no se agota en una tarde y se puede combinar con otros vehículos.",
-                    List.of(
-                            "Objeto completo de madera, no un set de un solo uso.",
-                            "Edad declarada a partir de 3 años.",
-                            "Pluma móvil con manivela y giro 360°: el mismo juguete crece con el juego."
-                    ),
-                    List.of(
-                            "Hay piezas sueltas y cuerda: supervisión en cada sesión.",
-                            "No es un juguete de exterior ni de agua."
-                    ),
-                    "Desde 3 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; la manivela pide un adulto las primeras veces."),
-                    note("Duración", "Se guarda y se saca; se puede combinar con otros vehículos de madera."),
-                    note("Uso", "Juego simbólico de obra, sesiones cortas que se repiten."),
-                    note("Resistencia", "Madera certificada FSC 100 %; no depende de pilas ni de una app.")
-            ),
-            entry(
-                    "green-toys-construccion",
-                    "Green Toys vehículos de construcción",
-                    "Tres vehículos que se pueden lavar",
-                    "Tres vehículos de plástico 100 % reciclado, sin BPA, ftalatos ni PVC, lavables en lavavajillas. Rango 24 a 72 meses: los 3 años caen dentro y el set aguanta arena, agua y el suelo.",
-                    List.of(
-                            "Tres vehículos para rotar, sin electrónica.",
-                            "Se lava entero en el lavavajillas.",
-                            "Rango declarado de 24 a 72 meses: no se queda pequeño en un trimestre."
-                    ),
-                    List.of(
-                            "Piezas de obra y figuras: supervisión si hay menores de 3 años.",
-                            "No sustituye un objeto de madera si buscas otro tipo de juego."
-                    ),
-                    "24-72 meses",
-                    note("Encaje a los 3 años", "36 meses está dentro de 24-72."),
-                    note("Duración", "Tres vehículos para rotar durante meses; se lava y se vuelve a sacar."),
-                    note("Uso", "Suelo, arena o bañera; se usa sucio y se limpia."),
-                    note("Resistencia", "Plástico reciclado declarado, sin BPA ni PVC; aguanta agua y caídas.")
             ),
             entry(
                     "plantoys-ata-zapato",
                     "PlanToys Ata el zapato",
-                    "Un gesto que se practica hasta los 8 años",
-                    "Juguete de madera de caucho para 3 a 8 años, con pegamento sin formaldehído y tintes al agua. Sirve para ensayar nudos; no sustituye el calzado real, pero el mismo objeto acompaña varios cursos.",
+                    "Madera de caucho con tintes al agua",
+                    "Juguete de madera de caucho para 3 a 8 años, con pegamento sin formaldehído y tintes al agua según la ficha. Sostenible, aquí, es material declarado y un objeto que se guarda, no un kit que se gasta en una tarde.",
                     List.of(
-                            "Edad declarada de 3 a 8 años.",
                             "Madera de caucho y tintes al agua según la ficha.",
-                            "Formato portable: se saca cuando hay un zapato de verdad que atar después."
+                            "Edad declarada de 3 a 8 años.",
+                            "Formato portable para practicar nudos."
                     ),
                     List.of(
                             "No ata el zapato del niño: es un material de ensayo.",
@@ -2073,91 +2043,154 @@ public class ComparisonPageService {
                     ),
                     "3-8 años",
                     note("Encaje a los 3 años", "Rango 3-8 años; a los 3 el nudo pide ayuda."),
-                    note("Duración", "El mismo objeto sirve mientras aprende a vestirse, no solo esta temporada."),
-                    note("Uso", "Autonomía de vestirse en ratos cortos, no juego libre de larga duración."),
-                    note("Resistencia", "Madera de caucho y tintes al agua; se guarda y se vuelve a sacar.")
-            ),
+                    note("Materiales", "Caucho y tintes al agua; pegamento sin formaldehído en ficha."),
+                    note("Uso", "Autonomía de vestirse en ratos cortos."),
+                    note("Duración", "El mismo objeto acompaña varios cursos.")
+            )
+    );
+
+    private static final List<EditorialEntry> DURABLE_3 = List.of(
             entry(
-                    "haba-puzles-cuatro-estaciones",
-                    "HABA Puzzles Las Cuatro Estaciones",
-                    "Cuatro escenas para encajar y repetir",
-                    "Cuatro rompecabezas de 15 piezas a partir de 3 años, con figuras de madera de haya. Encajar y luego jugar sobre la escena montada: no es un puzle que se hace una vez y se guarda para siempre.",
+                    "puzle-madera-animales",
+                    "Melissa & Doug puzle de animales del safari",
+                    "Madera que se monta y se vuelve a guardar",
+                    "Puzle de madera de animales del safari con piezas grandes. A los 3 años encaja como objeto que se saca, se termina y se guarda en caja: no es un kit de un solo uso ni un juguete con pilas.",
                     List.of(
-                            "Cuatro puzles de 15 piezas para rotar.",
-                            "Figuras de madera para alargar el juego cuando ya está montado.",
-                            "Cartón resistente."
+                            "Piezas grandes de madera.",
+                            "Motivo de animales reconocible.",
+                            "Rango declarado de 2 a 5 años."
                     ),
                     List.of(
-                            "15 piezas pueden ser muchas si aún encaja siluetas de 5 piezas.",
-                            "Las figuras son pequeñas."
+                            "Si ya monta puzles de 16 piezas, este puede quedarse corto.",
+                            "No incluye pomos si el modelo de tu ficha es de pieza plana; confirma el agarre."
                     ),
-                    "Desde 3 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; empieza con un adulto."),
-                    note("Duración", "Cuatro motivos y figuras para repetir, no un solo uso."),
-                    note("Uso", "Encajar y juego simbólico sobre la escena."),
-                    note("Resistencia", "Cartón grueso y haya; se guarda en caja y se saca de nuevo.")
+                    "2-5 años",
+                    note("Encaje a los 3 años", "Piezas grandes y un motivo conocido."),
+                    note("Duración", "Se guarda en caja y se saca de nuevo; no se consume."),
+                    note("Uso", "Mesa o suelo, con un adulto al principio."),
+                    note("Resistencia", "Madera; aguanta el juego intenso si se recogen las piezas.")
             ),
             entry(
-                    "cuentas-melissa-doug",
-                    "Melissa & Doug cuentas de madera",
-                    "Ensartar y contar sin gastar el material",
-                    "27 cuentas de madera, números del 1 al 10 y 2 cordones, a partir de 3 años. Motricidad fina que se puede repetir; las cuentas y los cordones piden supervisión, no un recambio constante.",
+                    "puzle-melissa-mascotas",
+                    "Melissa & Doug puzle de mascotas",
+                    "Tablero de madera que sujeta las piezas",
+                    "Puzle de madera de mascotas con ocho piezas gruesas. El tablero evita perder piezas sueltas: a los 3 años eso alarga el uso real del objeto; las piezas se sostienen de pie para jugar después.",
                     List.of(
-                            "Madera, 27 piezas y 2 cordones que se vuelven a usar.",
+                            "Ocho piezas gruesas de madera fáciles de agarrar.",
+                            "Mascotas reconocibles; las piezas se sostienen de pie.",
+                            "Imágenes a color bajo cada pieza."
+                    ),
+                    List.of(
+                            "Ocho piezas pueden quedarse cortas si ya monta 15 o 16.",
+                            "Es un tablero de siluetas, no un puzle de escena de muchas piezas."
+                    ),
+                    "Desde 2 años",
+                    note("Encaje a los 3 años", "Piezas grandes y un motivo de mascotas conocido."),
+                    note("Duración", "El tablero sujeta las piezas; se guarda entero."),
+                    note("Uso", "Encaje guiado por silueta, no un puzle suelto de muchas piezas."),
+                    note("Resistencia", "Madera; las piezas gruesas aguantan el juego intenso si se recogen.")
+            ),
+            entry(
+                    "puzle-educa-selva",
+                    "Educa My First animales de la selva",
+                    "Cuatro escenas para rotar sin mezclar 50 piezas",
+                    "Cuatro puzles progresivos de 5 a 8 piezas para empezar a encajar. A los 3 años permite acertar pronto y cambiar de escena: el mismo estuche dura meses si guardas cada puzle aparte.",
+                    List.of(
+                            "Cuatro puzles de 5 a 8 piezas.",
+                            "Progresión de dificultad dentro de la misma caja.",
+                            "Rango declarado de 2 a 5 años."
+                    ),
+                    List.of(
+                            "8 piezas máximas: si ya monta 15 o 16, pasa a Educa Disney o a otro formato.",
+                            "Cartón: confirma que es grueso en la ficha vigente."
+                    ),
+                    "2-5 años",
+                    note("Encaje a los 3 años", "Empieza por 5 piezas y sube cuando termine sin ayuda."),
+                    note("Duración", "Cuatro escenas para rotar; no se agota en una tarde."),
+                    note("Uso", "Progresivo y acotado, no un único puzle largo."),
+                    note("Resistencia", "Cartón grueso; guarda cada puzle aparte para no perder piezas.")
+            ),
+            entry(
+                    "puzle-educa-disney-madera",
+                    "Educa Disney Animals, 2 puzles de madera",
+                    "Dos escenas de madera a partir de 3 años",
+                    "Dos puzles de 16 piezas de madera, recomendados a partir de 3 años. Sirven cuando 8 piezas ya se resuelven en un minuto: el mismo par de cajas se repite durante varias semanas.",
+                    List.of(
+                            "Dos puzles de 16 piezas de madera.",
                             "Edad declarada a partir de 3 años.",
-                            "Juego sin pantallas ni piezas de un solo uso."
+                            "Motivos de animales Disney."
                     ),
                     List.of(
-                            "Riesgo de asfixia si se usan mal: no se deja solo.",
-                            "Los cordones se desgastan: hay que revisarlos, no sustituir el set entero."
+                            "16 piezas piden más paciencia que un puzle de silueta con tablero.",
+                            "El motivo de personaje puede caducar; la madera no."
                     ),
                     "3-6 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; un adulto enseña el gesto."),
-                    note("Duración", "Se guarda y se saca; no es un kit que se consume."),
-                    note("Uso", "Ensartar y clasificar en sesiones cortas."),
-                    note("Resistencia", "Cuentas de madera; el límite son los cordones y la supervisión.")
+                    note("Encaje a los 3 años", "Indicada desde 3 años; empieza junto y retira ayuda al final."),
+                    note("Duración", "Dos escenas para alternar; no es un solo montaje."),
+                    note("Uso", "16 piezas por escena, el recuento más alto de esta lista."),
+                    note("Resistencia", "Madera; confirma si hay marco en tu edición.")
+            ),
+            entry(
+                    "simbolico-theo-klein-miele",
+                    "Theo Klein Cocina Miele 7199",
+                    "Cocina de madera para años de juego simbólico",
+                    "Cocina de madera con placa, horno, fregadero y accesorios, de 3 a 8 años. A los 3 años el gesto es abrir y «cocinar»; el mismo mueble aguanta varios cursos si hay sitio en casa.",
+                    List.of(
+                            "Placa, horno, fregadero y accesorios.",
+                            "Madera según la ficha.",
+                            "Edad declarada de 3 a 8 años."
+                    ),
+                    List.of(
+                            "Ocupa sitio en casa; mide antes de comprar.",
+                            "Los accesorios sueltos se pierden si no hay un cajón."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; el niño imita gestos cortos."),
+                    note("Duración", "El mismo escenario se repite durante años, no una tarde."),
+                    note("Uso", "Juego simbólico con un adulto cerca al principio."),
+                    note("Resistencia", "Madera; revisa estabilidad contra la pared si la ficha lo indica.")
             )
     );
 
     private static final List<EditorialEntry> ARTS_NATURAL_3 = List.of(
             entry(
-                    "kit-manualidades-natural",
-                    "Kit de manualidades con materiales naturales",
-                    "Modelar con plastilina ecológica y madera",
-                    "SES Creative Eco: tres potes de plastilina de materias primas naturales y herramientas de madera, a partir de 3 años. Es el kit del catálogo pensado para crear sin pantallas, con un adulto al lado.",
+                    "arte-ses-eco-mega-7",
+                    "SES Creative Eco mega set de modelado",
+                    "Modelar con plastilina ecológica y rodillo de madera",
+                    "Set de siete colores de plastilina ecológica con rodillo de madera y cortadores de plástico reciclado, a partir de 2 años. A los 3 años el gesto es aplastar, enrollar y cortar formas con un adulto al lado.",
                     List.of(
-                            "Materias primas naturales y herramientas de madera según la ficha.",
-                            "Uso sin electrónica.",
-                            "Edad declarada a partir de 3 años."
+                            "Siete colores en envases reutilizables según la ficha.",
+                            "Rodillo de madera y cortadores de plástico reciclado.",
+                            "Línea Eco con materiales declarados por el fabricante."
                     ),
                     List.of(
                             "La plastilina se gasta; no es un objeto permanente.",
-                            "Hace falta un adulto para el primer uso."
+                            "Los cortadores son piezas pequeñas: supervisión en cada sesión."
                     ),
-                    "Desde 3 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; sesiones cortas con un adulto."),
-                    note("Materiales", "Plastilina ecológica y herramientas de madera."),
+                    "2-12 años",
+                    note("Encaje a los 3 años", "Edad mínima 2 años; sesiones cortas con un adulto."),
+                    note("Materiales", "Plastilina ecológica, madera y plástico reciclado en cortadores."),
                     note("Uso", "Modelar en mesa, no juego de exterior."),
-                    note("Cuidado", "Superficie fácil de limpiar; guardar la plastilina según la ficha.")
+                    note("Cuidado", "Superficie fácil de limpiar; cerrar los botes al terminar.")
             ),
             entry(
-                    "arte-crayola-tempera-6",
-                    "Crayola témpera lavable, 6 colores",
-                    "Pintar con agua y poder lavar",
-                    "Seis botes de pintura al agua para papel y materiales porosos, de 3 a 10 años. A los 3 años cuenta la lavabilidad y un pincel grueso, no un set de efectos especiales.",
+                    "arte-jovi-pintura-dedos-6",
+                    "Jovi pintura de dedos lavable, 6 colores",
+                    "Pintar con los dedos e ingredientes naturales",
+                    "Seis botes de pintura de dedos lavable a base de ingredientes naturales, sin gluten, a partir de 2 años. A los 3 años el gesto es untar con el dedo, no dosificar témpera con pincel fino.",
                     List.of(
-                            "Pintura al agua lavable.",
-                            "Seis colores para nombrar y mezclar.",
-                            "Edad declarada a partir de 3 años."
+                            "Pintura de dedos 100 % lavable según la ficha.",
+                            "Seis colores mezclables.",
+                            "Sin gluten y libre de los principales alérgenos declarados."
                     ),
                     List.of(
                             "Mancha mesa y ropa si no hay babero o mantel.",
-                            "No es un material «natural» certificado; es témpera lavable."
+                            "No es plastilina: se usa en papel o cartón, no para modelar."
                     ),
-                    "3-10 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; un adulto dosifica la pintura."),
-                    note("Materiales", "Témpera lavable al agua, según la ficha."),
-                    note("Uso", "Papel o cartón; no paredes."),
+                    "2-10 años",
+                    note("Encaje a los 3 años", "Edad mínima 2 años; un adulto dosifica la cantidad."),
+                    note("Materiales", "Base de ingredientes naturales, según la ficha."),
+                    note("Uso", "Papel o cartón con los dedos; no paredes."),
                     note("Cuidado", "Se lava de piel y, según la ficha, de la mayoría de tejidos.")
             ),
             entry(
@@ -2181,24 +2214,24 @@ public class ComparisonPageService {
                     note("Cuidado", "Lavable; cierra los botes al terminar.")
             ),
             entry(
-                    "arte-crayola-metallic",
-                    "Crayola pintura metálica lavable",
-                    "Seis colores con acabado metal",
-                    "Seis colores metálicos lavables para proyectos creativos, a partir de 3 años. Un set más corto que el de efectos especiales: menos recoger, mismo gesto de pintar.",
+                    "arte-jovi-plastilina-vegetal-12",
+                    "Jovi plastilina vegetal, 12 pastillas",
+                    "Modelar con base vegetal y muchos colores",
+                    "Doce pastillas de plastilina de base vegetal, no tóxica y sin gluten, a partir de 3 años. Ocho colores básicos y cuatro fluorescentes para mezclar sin abrir botes de pintura.",
                     List.of(
-                            "Seis colores metálicos.",
-                            "Lavable según la ficha.",
-                            "Edad declarada a partir de 3 años."
+                            "Doce pastillas de 50 g en colores básicos y fluorescentes.",
+                            "Base vegetal, sin gluten según la ficha.",
+                            "No se seca: se puede guardar y volver a usar."
                     ),
                     List.of(
-                            "El acabado metal no se ve igual en todo papel.",
-                            "Sigue manchando si no hay mantel."
+                            "No incluye rodillo ni cortadores; el gesto es manual.",
+                            "Las pastillas pequeñas piden recoger al terminar."
                     ),
                     "3-10 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; sesiones cortas."),
-                    note("Materiales", "Pintura metálica lavable."),
-                    note("Uso", "Papel o cartón, con un adulto."),
-                    note("Cuidado", "Cerrar botes; no mezclar con comida.")
+                    note("Encaje a los 3 años", "Edad mínima 3 años; sesiones cortas con un adulto."),
+                    note("Materiales", "Plastilina vegetal, no tóxica."),
+                    note("Uso", "Modelar en mesa; no comer ni mezclar con comida."),
+                    note("Cuidado", "Guardar las pastillas en su estuche; limpiar la mesa al terminar.")
             ),
             entry(
                     "arte-crayola-paw-patrol",
@@ -2224,22 +2257,22 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> MONTESSORI_WOOD_3 = List.of(
             entry(
-                    "montessori-janod-tropik",
-                    "Janod Mis primeras formas Tropik",
-                    "Encajar en madera FSC",
-                    "Soporte de madera FSC con piezas para encajar formas y colores, de 1 a 3 años. A los 3 años cubre el final del rango: piezas grandes y un objeto de madera que se puede cuidar.",
+                    "juego-montessori-formas",
+                    "Melissa & Doug cubo de formas",
+                    "Encajar formas y colores en madera",
+                    "Cubo de madera con 12 piezas grandes para encajar por la forma, de 2 a 4 años. A los 3 años la actividad es evidente: coger, nombrar y meter. Es un objeto de madera que se guarda y se vuelve a sacar.",
                     List.of(
-                            "Madera FSC según la ficha.",
-                            "Piezas para encajar formas y colores.",
-                            "Rango declarado hasta 3 años."
+                            "Doce piezas grandes de madera.",
+                            "Clasificación de formas y colores en un solo objeto.",
+                            "Rango declarado de 2 a 4 años."
                     ),
                     List.of(
-                            "El rango termina a los 3 años: si ya clasifica sin esfuerzo, pasa a Goula o a la grúa.",
-                            "No es un juego de mesa ni un set de construcción."
+                            "A los 4 años el cubo puede quedarse corto si ya clasifica sin esfuerzo.",
+                            "No incluye un segundo nivel de dificultad en la misma caja."
                     ),
-                    "1-3 años",
-                    note("Encaje a los 3 años", "Edad máxima declarada 3 años; piezas grandes."),
-                    note("Madera", "Soporte FSC; no afirmamos otros sellos."),
+                    "2-4 años",
+                    note("Encaje a los 3 años", "Edad declarada hasta 4 años; las piezas grandes evitan frustración inicial."),
+                    note("Madera", "Cubo y piezas de madera."),
                     note("Uso", "Encajar y nombrar en sesiones cortas."),
                     note("Duración", "Se guarda entero; no es de un solo uso.")
             ),
@@ -2264,64 +2297,64 @@ public class ComparisonPageService {
                     note("Duración", "Las láminas alargan el uso más de una temporada.")
             ),
             entry(
-                    "small-foot-grua",
-                    "Small Foot grúa de construcción",
-                    "Madera FSC para el juego de obra",
-                    "Grúa de madera FSC 100 % a partir de 3 años, giratoria 360°, con manivela. No es un cubo de formas: es juego simbólico de madera que se saca muchas veces.",
+                    "simbolico-sundaymot-33",
+                    "Sundaymot maletín médico de madera",
+                    "Imitar la consulta con piezas de madera",
+                    "Maletín de médico y dentista con bata, estetoscopio y accesorios de madera, de 3 a 8 años. A los 3 años el gesto es abrir, «auscultar» y recoger; saca pocos accesorios en cada sesión.",
                     List.of(
-                            "Madera con certificado FSC 100 %.",
-                            "Edad declarada a partir de 3 años.",
-                            "Pluma móvil con manivela y giro 360°."
+                            "Maletín con bata y accesorios de consulta.",
+                            "33 piezas de madera según la ficha.",
+                            "Edad declarada de 3 a 8 años."
                     ),
                     List.of(
-                            "Hay piezas sueltas y cuerda: supervisión.",
-                            "No sustituye el encaje de formas si eso es lo que buscas."
-                    ),
-                    "Desde 3 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; la manivela pide un adulto al principio."),
-                    note("Madera", "FSC 100 % según la ficha."),
-                    note("Uso", "Juego de obra, no clasificación de formas."),
-                    note("Duración", "Objeto completo que se combina con otros vehículos.")
-            ),
-            entry(
-                    "plantoys-ata-zapato",
-                    "PlanToys Ata el zapato",
-                    "Madera de caucho para un gesto real",
-                    "Juguete de madera de caucho para 3 a 8 años, con tintes al agua. Practica nudos; no es un clasificador, es autonomía en madera.",
-                    List.of(
-                            "Madera de caucho y tintes al agua según la ficha.",
-                            "Edad declarada de 3 a 8 años.",
-                            "Formato portable."
-                    ),
-                    List.of(
-                            "No ata el zapato de verdad.",
-                            "Un adulto muestra el nudo."
+                            "Tantos accesorios abruman si se vuelcan de golpe.",
+                            "No sustituye un cubo de encaje ni las láminas de Goula."
                     ),
                     "3-8 años",
-                    note("Encaje a los 3 años", "Rango 3-8; a los 3 el nudo pide ayuda."),
-                    note("Madera", "Caucho y tintes al agua; pegamento sin formaldehído en ficha."),
-                    note("Uso", "Ensayo de vestirse, ratos cortos."),
-                    note("Duración", "El mismo objeto acompaña varios cursos.")
+                    note("Encaje a los 3 años", "Edad mínima 3 años; limita los accesorios en cada sesión."),
+                    note("Madera", "Maletín y accesorios de madera según la ficha del lote vigente."),
+                    note("Uso", "Juego simbólico; recuento al guardar."),
+                    note("Duración", "Se guarda en el maletín; no es de un solo uso.")
             ),
             entry(
-                    "cuentas-melissa-doug",
-                    "Melissa & Doug cuentas de madera",
-                    "Ensartar con cuentas de madera",
-                    "27 cuentas de madera, números del 1 al 10 y 2 cordones, a partir de 3 años. Motricidad fina en madera; cordones y cuentas piden supervisión.",
+                    "puzle-melissa-granja-peg",
+                    "Melissa & Doug puzle de granja con agarres",
+                    "Ocho piezas de madera con pomos",
+                    "Tablero de madera con ocho piezas con pomos para encajar animales de granja, de 2 a 4 años. Menos piezas que el cubo de 12: se termina en una sesión corta y el tablero sujeta las piezas.",
                     List.of(
-                            "Madera, 27 piezas y 2 cordones.",
-                            "Edad declarada a partir de 3 años.",
-                            "Juego sin pantallas."
+                            "Ocho piezas con pomos de madera.",
+                            "Escena de granja reconocible.",
+                            "Rango declarado de 2 a 4 años."
                     ),
                     List.of(
-                            "Riesgo de asfixia si se usan mal.",
-                            "No es un cubo de encaje."
+                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
+                            "No es un puzle de escena suelta: es encaje de siluetas con pomos."
                     ),
-                    "3-6 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; un adulto enseña el gesto."),
-                    note("Madera", "Cuentas de madera."),
-                    note("Uso", "Ensartar y clasificar."),
-                    note("Duración", "Se guarda y se saca; revisa los cordones.")
+                    "2-4 años",
+                    note("Encaje a los 3 años", "Pocas piezas gruesas, fáciles de completar."),
+                    note("Madera", "Tablero y piezas de madera."),
+                    note("Uso", "Encajar animales en una sesión corta."),
+                    note("Duración", "Se guarda entero; el tablero evita perder piezas.")
+            ),
+            entry(
+                    "lectura-three-pigs",
+                    "Goula Los 3 Cerditos",
+                    "Llegar juntos a casa con piezas de madera",
+                    "Juego de mesa de Goula basado en el cuento: turnos, vocabulario y una modalidad cooperativa para llegar juntos a casa, de 3 a 7 años. A los 3 años pide nombrar personajes y mover piezas; las partidas son cortas.",
+                    List.of(
+                            "Relato conocido con turnos y vocabulario.",
+                            "Edad declarada de 3 a 7 años.",
+                            "Modalidad cooperativa para llegar juntos a casa."
+                    ),
+                    List.of(
+                            "El dado introduce azar; un adulto explica el objetivo la primera vez.",
+                            "Piezas pequeñas: supervisión y recogida al terminar."
+                    ),
+                    "3-7 años",
+                    note("Encaje a los 3 años", "Reglas cortas y edad declarada desde 3 años."),
+                    note("Madera", "Piezas de madera según la ficha."),
+                    note("Uso", "Turnos y cooperación, no ensartar cordones."),
+                    note("Duración", "Partidas cortas; se guarda en la caja.")
             )
     );
 
@@ -2357,7 +2390,7 @@ public class ComparisonPageService {
                             "Edad declarada de 3 a 8 años."
                     ),
                     List.of(
-                            "Más volumen que una cocinita portátil.",
+                            "Más volumen que la cocina compacta de Small Foot.",
                             "El teléfono es imitación, no un juguete de reglas."
                     ),
                     "3-8 años",
@@ -2367,53 +2400,53 @@ public class ComparisonPageService {
                     note("Seguridad", "Estabilidad contra la pared si la ficha lo indica.")
             ),
             entry(
-                    "simbolico-beeloom-babycue",
-                    "Beeloom Babycue",
-                    "Cocinita de madera que se puede guardar",
-                    "Cocinita portátil de madera con utensilios, de 3 a 9 años. Si no hay pared libre para una cocina grande, este formato cabe en una mesa o se recoge.",
+                    "simbolico-small-foot-compacta",
+                    "Small Foot cocina compacta",
+                    "Cocinita de madera que se monta y se guarda",
+                    "Cocina compacta de madera FSC con horno, olla, sartén y utensilios, a partir de 3 años. Se monta y desmonta sin herramientas: si no hay pared libre, cabe en una estantería o se recoge.",
                     List.of(
-                            "Formato portátil de madera.",
-                            "Utensilios para imitar.",
-                            "Edad declarada de 3 a 9 años."
+                            "Madera FSC 100 % según la ficha.",
+                            "Montaje y desmontaje sin herramientas.",
+                            "Formato compacto para poco espacio."
                     ),
                     List.of(
                             "No sustituye una cocina de pie con fregadero grande.",
                             "Los utensilios son pequeños: no los dejes con menores de 3 años."
                     ),
-                    "3-9 años",
+                    "3-8 años",
                     note("Encaje a los 3 años", "Edad mínima 3 años; se usa en mesa o suelo."),
                     note("Escenario", "Imitación de cocina sin ocupar una pared."),
                     note("Espacio", "Se guarda; no pide un rincón fijo."),
                     note("Seguridad", "Utensilios sueltos; supervisión.")
             ),
             entry(
-                    "simbolico-deao-cocina",
-                    "deAO cocina con 48 accesorios",
-                    "Muchos utensilios en una cocina compacta",
-                    "Cocina compacta con fregadero, utensilios y almacenamiento, de 3 a 8 años. 48 accesorios piden un adulto que recoga; a los 3 años saca pocos de cada vez.",
+                    "simbolico-janod-macaron",
+                    "Janod cocina Macaron",
+                    "Cocina de madera compacta con cinco accesorios",
+                    "Cocina de madera con horno, fregadero de acero, placas con sonido y cinco accesorios, de 3 a 8 años. Mide 53 × 30 × 78 cm: más compacta que las cocinas de pared de esta lista; a los 3 años saca pocos utensilios de cada vez.",
                     List.of(
-                            "Cocina compacta con fregadero.",
-                            "48 accesorios según la ficha.",
+                            "Horno, fregadero de acero y placas con sonido.",
+                            "Cinco accesorios según la ficha.",
                             "Edad declarada de 3 a 8 años."
                     ),
                     List.of(
-                            "Tantos accesorios abruman si se vuelcan de golpe.",
-                            "Comprueba materiales y estabilidad de tu lote vigente."
+                            "Sigue pidiendo un hueco en el suelo; no es un set de viaje.",
+                            "Cinco accesorios no llenan una cocina grande."
                     ),
                     "3-8 años",
-                    note("Encaje a los 3 años", "Edad mínima 3 años; limita los accesorios en cada sesión."),
-                    note("Escenario", "Cocina compacta, no un maletín de médico."),
-                    note("Espacio", "Más pequeña que las cocinas de pared."),
+                    note("Encaje a los 3 años", "Edad mínima 3 años; el niño imita gestos cortos."),
+                    note("Escenario", "Cocina compacta de pie, no un maletín de médico."),
+                    note("Espacio", "Más pequeña que Theo Klein y KidKraft."),
                     note("Seguridad", "Piezas sueltas; recuento al guardar.")
             ),
             entry(
-                    "simbolico-sundaymot-32",
-                    "Sundaymot maletín médico de 32 piezas",
+                    "simbolico-janod-veterinario",
+                    "Janod maletín de veterinario",
                     "Imitar la consulta, no la cocina",
-                    "Maletín de médico y dentista con bata, estetoscopio y accesorios, de 3 a 8 años. El juego simbólico aquí es cuidar, no cocinar: otro rol, el mismo gesto de imitar la vida diaria.",
+                    "Maletín de tela con dieciséis accesorios de madera FSC para auscultar, vendar y cuidar peluches, de 3 a 8 años. El juego simbólico aquí es cuidar, no cocinar: otro rol, el mismo gesto de imitar la vida diaria.",
                     List.of(
-                            "Maletín con bata y accesorios de consulta.",
-                            "32 piezas según la ficha.",
+                            "Dieciséis accesorios según la ficha, con estetoscopio y termómetro.",
+                            "Madera FSC, tela y cartón.",
                             "Edad declarada de 3 a 8 años."
                     ),
                     List.of(
@@ -2422,7 +2455,7 @@ public class ComparisonPageService {
                     ),
                     "3-8 años",
                     note("Encaje a los 3 años", "Edad mínima 3 años; un adulto nombra los objetos."),
-                    note("Escenario", "Consulta médica, no cocina."),
+                    note("Escenario", "Consulta veterinaria, no cocina."),
                     note("Espacio", "Se guarda en el maletín."),
                     note("Seguridad", "No sustituye material real ni se lleva a la boca.")
             )
@@ -2528,6 +2561,418 @@ public class ComparisonPageService {
                     note("Acción", "Pinzar y soltar."),
                     note("Material", "Pinzas jumbo; elige objetos que no se traguen."),
                     note("Supervisión", "Fuera de la boca; recuento al guardar.")
+            )
+    );
+
+    private static final List<EditorialEntry> PIKLER_3 = List.of(
+            entry(
+                    "trepar-mamoi-triangulo-blanco",
+                    "MAMOI triángulo de escalada con tobogán",
+                    "Trepar en madera con rampa reversible",
+                    "Triángulo de madera con rampa suave por un lado y barras por el otro. Altura regulable de 20 a 57 cm y carga de 50 kg. A los 3 años el gesto es subir, bajar o deslizarse en interior, con un adulto al lado.",
+                    List.of(
+                            "Rampa reversible: tobogán o escalada.",
+                            "Altura regulable de 20 a 57 cm.",
+                            "Marcado EN y CE según la ficha; carga 50 kg."
+                    ),
+                    List.of(
+                            "Pide un hueco en el suelo; no es un juguete de viaje.",
+                            "Uso en interior seco; no sustituye casco ni patio."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 3 años", "Altura regulable; el niño sube y baja con supervisión."),
+                    note("Gesto", "Trepar o deslizarse, no empujar ruedas."),
+                    note("Espacio", "Interior; mide el hueco antes."),
+                    note("Seguridad", "Suelo nivelado, adulto presente, sin saltar desde lo alto.")
+            ),
+            entry(
+                    "trepar-mamoi-triangulo-natural",
+                    "MAMOI triángulo de escalada natural",
+                    "Madera cruda a partir de 36 meses",
+                    "Triángulo de pino con tobogán de dos caras y carga de 60 kg. El fabricante lo indica a partir de 36 meses: encaja cuando el niño ya trepa con control, no como primer escalón de bebé.",
+                    List.of(
+                            "Edad declarada a partir de 36 meses.",
+                            "Carga de 60 kg según la ficha.",
+                            "Acabado de madera natural sin pinturas extra."
+                    ),
+                    List.of(
+                            "Más volumen que el modelo compacto de 50 kg.",
+                            "Montaje por el adulto; no se usa a medias."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 3 años", "Edad mínima 36 meses; no adelantar si aún gatea inestable."),
+                    note("Gesto", "Trepar en un marco mayor."),
+                    note("Espacio", "185 cm de largo según ficha; mide el rincón."),
+                    note("Seguridad", "Tornillos bien apretados; supervisión constante.")
+            ),
+            entry(
+                    "trepar-little-tikes-gimnasio",
+                    "Little Tikes gimnasio de actividades Junior",
+                    "Trepar, gatear y deslizarse en plástico",
+                    "Estructura de plástico para interior o jardín, de 18 meses a 5 años. Combina rampa, tobogán y huecos para esconderse. No es un triángulo Pikler de madera: el gesto es el mismo tipo de movimiento grueso.",
+                    List.of(
+                            "Trepar, gatear y deslizarse en un solo volumen.",
+                            "Uso interior o exterior según la ficha.",
+                            "Edad declarada de 18 meses a 5 años."
+                    ),
+                    List.of(
+                            "Ocupa 130 × 76 cm; no cabe en un pasillo.",
+                            "Carga 23 kg: comprueba el peso real."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "Rango 18 meses-5 años; ya puede trepar y deslizarse."),
+                    note("Gesto", "Circuito corto: subir, esconderse, bajar."),
+                    note("Espacio", "Ancho 130 cm; interior en invierno, jardín si hay césped."),
+                    note("Seguridad", "Base estable; un niño a la vez en el tobogán.")
+            ),
+            entry(
+                    "trepar-little-tikes-tobogan",
+                    "Little Tikes tobogán azul y verde",
+                    "Solo deslizarse, sin marco de escalada",
+                    "Tobogán de 110 cm de recorrido, 5 kg, de 18 meses a 5 años. Escalones y pasamanos. Si no hay sitio para un triángulo, cubre el gesto de subir y bajar sin ruedas.",
+                    List.of(
+                            "Recorrido de 110 cm y poco peso declarado.",
+                            "Escalones y pasamanos.",
+                            "Interior o exterior, 18 meses a 5 años."
+                    ),
+                    List.of(
+                            "No enseña a trepar un marco de barras.",
+                            "Carga 27,2 kg; pendiente suave, no un tobogán de parque."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "Altura baja; el niño sube los escalones con apoyo si hace falta."),
+                    note("Gesto", "Deslizarse, no empujar un correpasillos."),
+                    note("Espacio", "Fondo 122 cm; se desmonta para guardar."),
+                    note("Seguridad", "Base ancha; no lo coloques junto a un desnivel.")
+            ),
+            entry(
+                    "trepar-costway-7en1",
+                    "COSTWAY set de escalada 7 en 1",
+                    "Triángulo, arco y rampa en un set",
+                    "Set de haya con triángulo, arco (también balancín al girarlo) y rampa de dos caras, a partir de 1 año. A los 3 años permite cambiar el circuito sin comprar tres juguetes distintos.",
+                    List.of(
+                            "Tres piezas combinables: triángulo, arco y rampa.",
+                            "Arco reversible como balancín.",
+                            "Madera de haya y bordes pulidos según la ficha."
+                    ),
+                    List.of(
+                            "Tres piezas piden más suelo que un solo triángulo.",
+                            "El balancín no se usa cerca de bordes ni de otros niños."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 3 años", "A partir de 1 año; a los 3 se combinan las tres piezas."),
+                    note("Gesto", "Trepar, deslizarse o balancearse, no ruedas."),
+                    note("Espacio", "75 × 55 × 64 cm el triángulo; el set entero pide más."),
+                    note("Seguridad", "Una pieza a la vez si el espacio es justo; adulto presente.")
+            )
+    );
+
+    private static final List<EditorialEntry> RIDE_ON_3 = List.of(
+            entry(
+                    "corre-injusa-africa-twin",
+                    "INJUSA moto Honda África Twin",
+                    "Empujar sentado a los 3 y 4 años",
+                    "Moto correpasillos de ruedas anchas con asa de transporte, indicada para 2 a 4 años. El gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie.",
+                    List.of(
+                            "Rango declarado que incluye 3 y 4 años.",
+                            "Ruedas anchas y asa de transporte.",
+                            "Fabricada en España según la ficha."
+                    ),
+                    List.of(
+                            "No enseña el equilibrio de dos ruedas.",
+                            "Pregunta si ya tiene moto o coche de empuje."
+                    ),
+                    "2-4 años",
+                    note("Encaje a los 3 años", "Pensada para 2 a 4 años, no solo para bebés."),
+                    note("Gesto", "Sentado, pies al suelo, sin pedales."),
+                    note("Espacio", "Interior liso o patio sin tráfico."),
+                    note("Seguridad", "Supervisión; no es un vehículo eléctrico.")
+            ),
+            entry(
+                    "corre-injusa-neox-kawasaki",
+                    "INJUSA moto Neox Kawasaki",
+                    "Moto baja de 18 meses a 3 años",
+                    "Correpasillos de 18 meses a 3 años, 30 kg, asiento a 37 cm y manillar a 49 cm. Sirve si el niño aún cabe cómodo a los 3; si ya va justo de rodillas, mira la África Twin.",
+                    List.of(
+                            "Asiento a 37 cm y ruedas anchas.",
+                            "Carga 30 kg y asa de transporte.",
+                            "Edad declarada 18 meses-3 años."
+                    ),
+                    List.of(
+                            "El tope son 3 años: puede quedarse pequeño a mitad de curso.",
+                            "Decoración de marca; el gesto es el mismo que otras Neox."
+                    ),
+                    "1-3 años",
+                    note("Encaje a los 3 años", "Tope 3 años y 30 kg; mide rodillas y asiento."),
+                    note("Gesto", "Empuje sentado, ruedas anchas."),
+                    note("Espacio", "69 × 27,5 × 49 cm según ficha."),
+                    note("Seguridad", "No para menores de 18 meses; adulto cerca.")
+            ),
+            entry(
+                    "corre-feber-motofeber-casual",
+                    "FEBER Motofeber Casual",
+                    "Moto de empuje hasta los 3 años",
+                    "Moto correpasillos de 18 meses a 3 años. Formato relajado para interior o patio: pies al suelo, sin motor ni pedales. Si buscas llegar a los 4 años, no es esta ficha.",
+                    List.of(
+                            "Edad declarada de 18 meses a 3 años.",
+                            "Diseño estable para empujar con los pies.",
+                            "Uso interior o exterior según la ficha."
+                    ),
+                    List.of(
+                            "No cubre los 4 años.",
+                            "No es un correpasillos con forma de coche."
+                    ),
+                    "1-3 años",
+                    note("Encaje a los 3 años", "Tope 3 años; comprueba que las piernas empujen sin encogerse."),
+                    note("Gesto", "Moto sentada, no patinete."),
+                    note("Espacio", "Pasillo o terraza lisa."),
+                    note("Seguridad", "Sin tráfico; no bajar bordillos.")
+            ),
+            entry(
+                    "corre-molto-cross-race",
+                    "MOLTO Cross Race Silver",
+                    "Moto para superficies variadas",
+                    "Moto correpasillos a partir de 18 meses, pensada para distintos suelos. A los 3 años cubre el empuje sentado si el asiento aún llega; no sustituye una bici sin pedales.",
+                    List.of(
+                            "A partir de 18 meses según la ficha.",
+                            "Uso en varios terrenos.",
+                            "Empuje con los pies, sin pedales."
+                    ),
+                    List.of(
+                            "Confirma altura de asiento en tu lote: MOLTO no detalla cm en todas las fichas.",
+                            "No es un todoterreno eléctrico."
+                    ),
+                    "1-4 años",
+                    note("Encaje a los 3 años", "Desde 18 meses; a los 3 sigue si las piernas empujan sueltas."),
+                    note("Gesto", "Moto de empuje en suelo irregular suave."),
+                    note("Espacio", "Patio o interior; evita grava profunda."),
+                    note("Seguridad", "Calzado cerrado; adulto a la vista.")
+            ),
+            entry(
+                    "corre-smoby-coche",
+                    "Smoby Little Smoby correpasillos",
+                    "Coche con antivuelco, no moto",
+                    "Coche correpasillos con dispositivos antivuelco y hueco bajo el asiento, a partir de 10 meses, fabricado en Francia. A los 3 años sirve si aún cabe: el gesto es empujar un coche, distinto de la moto y de la bici sin pedales.",
+                    List.of(
+                            "Antivuelco delantero y trasero.",
+                            "Hueco bajo el asiento.",
+                            "54 × 27 × 40 cm según la ficha."
+                    ),
+                    List.of(
+                            "Formato compacto: a los 3 años puede quedar pequeño de asiento.",
+                            "No es un Cozy Coupe con puerta."
+                    ),
+                    "1-3 años",
+                    note("Encaje a los 3 años", "Desde 10 meses; a los 3 solo si las rodillas no van encogidas."),
+                    note("Gesto", "Coche sentado con volante, no moto."),
+                    note("Espacio", "Interior; ruedas para suelo liso."),
+                    note("Seguridad", "Antivuelco no sustituye supervisión.")
+            )
+    );
+
+    private static final List<EditorialEntry> CUTLERY_3 = List.of(
+            entry(
+                    "cubiertos-twistshake-acero",
+                    "Twistshake cubiertos de aprendizaje de acero",
+                    "Tres piezas cortas para la mesa diaria",
+                    "Tenedor, cuchillo y cuchara de acero inoxidable, sin BPA, a partir de 12 meses. A los 3 años cubre el gesto de pinchar y recoger sin pedir cubiertos de adulto. El mango corto cabe en una mano pequeña.",
+                    List.of(
+                            "Set de tres: tenedor, cuchillo y cuchara.",
+                            "Acero y mango de PP y TPE, sin BPA.",
+                            "Edad declarada a partir de 12 meses."
+                    ),
+                    List.of(
+                            "No incluye plato ni vaso: es cubierto, no vajilla.",
+                            "El cuchillo corta blando; no sustituye un cuchillo de mesa de adulto."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 3 años", "Desde 12 meses; a los 3 el mango corto sigue siendo el punto."),
+                    note("Piezas", "Tres cubiertos; sin plato."),
+                    note("Cuidado", "Lavavajillas según ficha; confirma cubeta."),
+                    note("Seguridad", "Cuchillo de aprendizaje; supervisión en la mesa.")
+            ),
+            entry(
+                    "cubiertos-mam-aprendizaje",
+                    "MAM cubiertos de aprendizaje",
+                    "Asas antideslizantes para zurdos y diestros",
+                    "Tenedor, cuchillo y cuchara con asas curvadas y antideslizantes, a partir de 6 meses. A los 3 años sirve si aún se le escapa el cubierto de acero liso: el agarre es el criterio, no el motivo.",
+                    List.of(
+                            "Asas antideslizantes para ambas manos.",
+                            "Tres piezas; tenedor y cuchillo de filo seguro según la ficha.",
+                            "Libre de BPA."
+                    ),
+                    List.of(
+                            "Pensado también para bebés: a los 3 puede verse pequeño si ya maneja acero de mesa.",
+                            "No es un set de cuatro con cucharilla de postre."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "Desde 6 meses; a los 3 si el mango de adulto aún se le va."),
+                    note("Piezas", "Tenedor, cuchillo y cuchara."),
+                    note("Cuidado", "Revisa lavavajillas en la ficha vigente."),
+                    note("Seguridad", "Filo de aprendizaje; no dejar solo con comida dura.")
+            ),
+            entry(
+                    "cubiertos-wmf-animales",
+                    "WMF Animales cubertería 4 piezas",
+                    "Acero de mesa con cucharilla extra",
+                    "Tenedor, cuchillo, cuchara y cuchara pequeña de Cromargan, aptos para lavavajillas. A los 3 años es el paso hacia cubiertos que se parecen a los de la mesa familiar, con tamaño de niño.",
+                    List.of(
+                            "Cuatro piezas, incluida cucharilla.",
+                            "Acero Cromargan y lavavajillas según ficha.",
+                            "Marca de cubertería de mesa, no de juguete."
+                    ),
+                    List.of(
+                            "El mango de acero puede resbalar más que uno de goma.",
+                            "Motivo de animales: pregunta si ya hay otro set WMF."
+                    ),
+                    "3-10 años",
+                    note("Encaje a los 3 años", "Tamaño infantil; el acero pide más control que el mango de goma."),
+                    note("Piezas", "Cuatro, con cucharilla."),
+                    note("Cuidado", "Lavavajillas declarado."),
+                    note("Seguridad", "Cuchillo de mesa infantil; adulto en la comida.")
+            ),
+            entry(
+                    "cubiertos-exzact-safari",
+                    "EXZACT cubertería infantil Safari",
+                    "Dos de cada pieza a partir de 24 meses",
+                    "Seis piezas de acero: dos tenedores, dos cuchillos de seguridad y dos cucharas, a partir de 24 meses. Útil si hay recambio en el cajón o si come fuera y en casa con el mismo formato.",
+                    List.of(
+                            "Seis piezas: recambio sin comprar otro set.",
+                            "Cuchillos dentados de seguridad según la ficha.",
+                            "Edad declarada a partir de 24 meses."
+                    ),
+                    List.of(
+                            "Motivo safari: el diseño se cansa antes que el acero.",
+                            "No dejes el acero en remojo: la ficha lo desaconseja."
+                    ),
+                    "2-8 años",
+                    note("Encaje a los 3 años", "Desde 24 meses; a los 3 el recambio cubre visitas o guardería."),
+                    note("Piezas", "Dos tenedores, dos cuchillos, dos cucharas."),
+                    note("Cuidado", "Lavavajillas; secar, no remojar."),
+                    note("Seguridad", "Cuchillo de seguridad; no es un cuchillo de cocina.")
+            ),
+            entry(
+                    "cubiertos-lehoo-vehiculos",
+                    "Lehoo Castle cubiertos vehículos",
+                    "Seis piezas con mango corto a partir de 3 años",
+                    "Dos tenedores, dos cuchillos y dos cucharas de acero 304 con mango de vehículos de construcción. La ficha lo indica a partir de 3 años: encaja cuando ya pincha y recoge, no como primer cubierto de bebé.",
+                    List.of(
+                            "Edad declarada a partir de 3 años.",
+                            "Seis piezas y mango corto.",
+                            "Acero inoxidable 304 según la ficha."
+                    ),
+                    List.of(
+                            "El dibujo del mango puede desgastarse en lavavajillas; la ficha recomienda mano.",
+                            "No es un set de aprendizaje de 12 meses."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 3 años", "Mínimo 3 años; no adelantar si aún usa solo cuchara de plástico."),
+                    note("Piezas", "Seis, dos de cada."),
+                    note("Cuidado", "Lavado a mano si quieres conservar el dibujo."),
+                    note("Seguridad", "Mango corto; supervisión con el cuchillo.")
+            )
+    );
+
+    private static final List<EditorialEntry> DRESSING_3 = List.of(
+            entry(
+                    "vestir-melissa-habilidades",
+                    "Melissa & Doug tablero de habilidades básicas",
+                    "Botones, cremallera, hebilla y cordones en un oso",
+                    "Oso de madera con seis prendas que se quitan y se abrochan: botones, cremallera, hebilla y cordones. A los 3 años el gesto está aislado en la mesa, no en el abrigo puesto. Edad declarada a partir de 3 años.",
+                    List.of(
+                            "Seis cierres de vestir en un solo tablero.",
+                            "Piezas que se separan para practicar una a una.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "No es la chaqueta real: después hay que pasar el gesto a la prenda.",
+                            "39 × 29 cm: pide un sitio en la mesa, no en el bolso."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 3 años", "Edad mínima 3 años; un cierre cada vez."),
+                    note("Gesto", "Abrochar prendas del oso, no trepar ni comer."),
+                    note("Material", "Madera y tela; recuento de piezas al guardar."),
+                    note("Supervisión", "Cordones y hebillas fuera de la boca.")
+            ),
+            entry(
+                    "vestir-melissa-cordones",
+                    "Melissa & Doug paneles de cordones",
+                    "Enhebrar y atar sin el zapato del pie",
+                    "Cinco paneles de madera con forma de mascotas y cordones de colores, a partir de 3 años. Cubre el enhebrado y el nudo en la mesa, distinto del zapato PlanToys y de atarse el calzado puesto.",
+                    List.of(
+                            "Cinco paneles y cinco cordones a juego.",
+                            "Edad declarada a partir de 3 años.",
+                            "Se puede practicar sentado, sin calzado."
+                    ),
+                    List.of(
+                            "No enseña a meter el pie en el zapato.",
+                            "Los cordones se enredan; recuento al guardar."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 3 años", "Desde 3 años; empieza por pasar el cordón, no por el lazo doble."),
+                    note("Gesto", "Enhebrar y tirar, no abotonar."),
+                    note("Material", "Madera y cordón; lejos de cuellos."),
+                    note("Supervisión", "Cordones no son para el cuello ni para morder.")
+            ),
+            entry(
+                    "vestir-small-foot-cubo",
+                    "Small Foot cubo de cierres",
+                    "Cremallera, botones y velcro en un cubo de tela",
+                    "Cubo textil con un cierre distinto en cada cara: cordones, botones, cremallera, broches, velcro y correas. A partir de 12 meses; a los 3 años sigue siendo útil si el abrigo real aún se atasca. Se puede llevar.",
+                    List.of(
+                            "Seis tipos de cierre en un objeto compacto.",
+                            "Tela suave; 16 cm de lado según la ficha.",
+                            "Se transporta sin un tablero de 39 cm."
+                    ),
+                    List.of(
+                            "Formato bebé: a los 3 años puede quedarse corto si ya abrocha el tablero del oso.",
+                            "No aísla un solo gesto: hay que elegir una cara."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "Desde 12 meses; a los 3 si el abrigo aún pide práctica."),
+                    note("Gesto", "Cierres de ropa en tela, no pestillos de puerta."),
+                    note("Material", "Felpa y herrajes textiles."),
+                    note("Supervisión", "Cremallera y cordones; no dejar solo a morder.")
+            ),
+            entry(
+                    "vestir-melissa-disfraces",
+                    "Melissa & Doug disfraces magnéticos Mejores Amigos",
+                    "Probar prendas en una figura, no en el cuerpo",
+                    "Tablero para vestir figuras con prendas magnéticas, a partir de 3 años. El gesto es elegir y colocar ropa, no abrochar el botón del abrigo propio. Sirve para nombrar prendas antes de vestirse.",
+                    List.of(
+                            "Prendas que se colocan y se cambian sin perder botones.",
+                            "Edad declarada a partir de 3 años.",
+                            "Se guarda plano."
+                    ),
+                    List.of(
+                            "No practica cremallera ni nudo real.",
+                            "Las piezas magnéticas se pierden; recuento al guardar."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 3 años", "Desde 3 años; nombra camiseta, abrigo, zapatos."),
+                    note("Gesto", "Colocar prendas en la figura, no abrocharse."),
+                    note("Material", "Tablero y magnetos; lejos de menores que se los lleven a la boca."),
+                    note("Supervisión", "Imanes: recuento y fuera del alcance de hermanos pequeños.")
+            ),
+            entry(
+                    "vestir-melissa-pestillos",
+                    "Melissa & Doug tablero de pestillos",
+                    "Abrir y cerrar pestillos de la casa",
+                    "Tablero de madera con pestillos, cierres y ventanas, a partir de 3 años. No es una prenda: practica el mismo tipo de pinza que un broche o un pestillo de armario. Complementa el oso de vestir, no lo sustituye.",
+                    List.of(
+                            "Varios pestillos en un marco de madera.",
+                            "Edad declarada a partir de 3 años.",
+                            "Gesto de abrir y cerrar con dos manos."
+                    ),
+                    List.of(
+                            "No enseña a ponerse el abrigo.",
+                            "Pide mesa o suelo; no es un juguete de viaje pequeño."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 3 años", "Desde 3 años; un pestillo cada vez."),
+                    note("Gesto", "Pestillos y ventanas, no botones de camisa."),
+                    note("Material", "Madera y herrajes; montaje apretado."),
+                    note("Supervisión", "Dedos lejos de cierres que pillen; adulto cerca.")
             )
     );
 
@@ -2766,6 +3211,10 @@ public class ComparisonPageService {
             case SENSORY_3_SLUG -> Optional.of(buildSensoryThreePage());
             case BALANCE_GUIDE_3_SLUG -> Optional.of(buildBalanceGuideThreePage());
             case SCOOTERS_TRIKES_3_SLUG -> Optional.of(buildScootersTrikesThreePage());
+            case PIKLER_3_SLUG -> Optional.of(buildPiklerThreePage());
+            case RIDE_ON_3_SLUG -> Optional.of(buildRideOnThreePage());
+            case CUTLERY_3_SLUG -> Optional.of(buildCutleryThreePage());
+            case DRESSING_3_SLUG -> Optional.of(buildDressingThreePage());
             case TOWERS_KITCHEN_3_SLUG -> Optional.of(buildTowersKitchenThreePage());
             case TABLEWARE_DAILY_3_SLUG -> Optional.of(buildTablewareDailyThreePage());
             case GIFT_SELECTION_3_SLUG -> Optional.of(buildGiftSelectionThreePage());
@@ -3236,10 +3685,10 @@ public class ComparisonPageService {
                 "Las cinco torres",
                 List.of(
                         summary("Para plegar y convertir en mesa", "torre-yoleo-transformer", "Nogal, pizarra magnética y modo escritorio."),
-                        summary("Para tres alturas y poco peso", "torre-bianconiglio-evo", "7,5 kg y plataforma a 30, 40 y 50 cm."),
-                        summary("Para guardar detrás de la puerta", "torre-kleiner-riese", "6,5 kg, plegado y barra NFS."),
+                        summary("Para tres alturas y poco peso", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
+                        summary("Para guardar detrás de la puerta", "torre-costway-plegable", "Plegable desde 3 años, con barra de seguridad."),
                         summary("Para tres alturas con EN-71", "torre-bey-co", "Patas anticaída y superficie antideslizante."),
-                        summary("Para torre y escritorio con ajuste", "torre-bianconiglio-transformer", "Convertible en mesa; 10 kg declarados.")
+                        summary("Para torre y escritorio con ajuste", "torre-maxi-cosi-toucan", "Convertible en mesa; 8,7 kg declarados.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos especificaciones verificables y su utilidad para un niño de 4 años. No asignamos notas ni completamos datos que la ficha no permita confirmar.",
@@ -3257,7 +3706,7 @@ public class ComparisonPageService {
                                 "Tres alturas no sirven si la más alta sigue baja para tu cocina. Comprueba centímetros reales."
                         )),
                         section("Plegado o uso fijo", List.of(
-                                "Si la cocina es pequeña, una torre plegable (YOLEO o Kleiner Riese) cambia el día a día.",
+                                "Si la cocina es pequeña, una torre plegable (YOLEO o COSTWAY) cambia el día a día.",
                                 "Si va a durar años, valora conversión a escritorio cuando deje de usarse en la encimera."
                         )),
                         section("Seguridad de uso", List.of(
@@ -3269,9 +3718,9 @@ public class ComparisonPageService {
                         faqItem("¿Sigue teniendo sentido una torre a los 4 años?",
                                 "Sí, si participa en cocina o lavabo y aún no llega. Si ya alcanza con un taburete estable y hay supervisión, puede no hacer falta."),
                         faqItem("¿Madera o contrachapado?",
-                                "Lo decisivo es la estabilidad y los cierres. El abedul de 18 mm y el nogal de esta lista son materiales distintos; no los ordenamos por precio."),
-                        faqItem("¿El sistema anticaídas viene de serie?",
-                                "En la EVO, KidSafe es un accesorio en varias fichas. No lo des por incluido."),
+                                "Lo decisivo es la estabilidad y los cierres. La haya FSC de hauck y el nogal de YOLEO son materiales distintos; no los ordenamos por precio."),
+                        faqItem("¿Cuál se pliega?",
+                                "COSTWAY y YOLEO se pliegan. hauck y BEY & CO no declaran plegado."),
                         faqItem("¿Puede usarla solo?",
                                 "No. Aunque suba y baje, el riesgo está en la encimera: fuego, cuchillos, agua."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -3522,11 +3971,11 @@ public class ComparisonPageService {
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas y una sola consigna."),
-                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas progresivas de 2 a 5 años."),
-                        summary("Para ocho formas gruesas", "montessori-formas-geometricas", "Se termina en una sesión corta."),
-                        summary("Para clasificar animales", "montessori-noah-ark", "26 piezas; saca un subconjunto al inicio."),
-                        summary("Para un primer encaje FSC", "montessori-janod-tropik", "Rango hasta 3 años; primer material.")
+                        summary("Para formar animales con modelos", "montessori-janod-animales", "Treinta imanes y diez modelos de 3 a 8 años."),
+                        summary("Para tres escenas de encaje", "montessori-melissa-tres-puzzles", "Granja, safari y vehículos a partir de 3 años."),
+                        summary("Para clasificar por color", "montessori-janod-ballenas", "Doce animales marinos y cuatro ballenas."),
+                        summary("Para nueve formas en un soporte", "montessori-janod-tropik", "Madera FSC de 1 a 3 años."),
+                        summary("Para ocho animales con pomos", "puzle-melissa-granja-peg", "Tablero de granja de 2 a 4 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos la actividad de encaje y su utilidad para un niño de 3 años. No asignamos una nota «Montessori» ni completamos certificaciones que la ficha no muestre.",
@@ -3540,12 +3989,12 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Empieza por lo que ya hace", List.of(
-                                "Si aún encaja con ayuda, el cubo de 12 piezas o Janod bastan. Si ya clasifica sin esfuerzo, Goula o el arca dan más margen.",
+                                "Si aún necesita pocos elementos, Tropik o el puzle de granja bastan. Si ya encaja con soltura, Magneti'Book Animales o el pack de tres puzles dan más margen.",
                                 "No elijas por el sello Montessori. Elige por si el niño puede completar una ronda hoy."
                         )),
                         section("Cuántas piezas sacar", List.of(
-                                "Con 26 figuras, saca cuatro o cinco al empezar. El arca guarda el resto.",
-                                "Mezclar todas las láminas de Goula a la vez convierte el reto en un desorden."
+                                "Con doce animales marinos de las ballenas, termina una sesión corta y recoge antes de abrir otro set.",
+                                "No mezcles las piezas magnéticas de Magneti'Book Animales con los tableros de madera en la misma mesa."
                         )),
                         section("Supervisión", List.of(
                                 "Es un material de mesa o de suelo con un adulto cerca, no un juguete para la habitación a solas.",
@@ -3556,9 +4005,9 @@ public class ComparisonPageService {
                         faqItem("¿Hace falta un material certificado Montessori?",
                                 "No. Lo útil es clasificar y encajar con piezas seguras. El nombre comercial no sustituye el criterio de edad."),
                         faqItem("¿Cuántas piezas son demasiadas a los 3 años?",
-                                "Si no puede terminar una ronda, sobran. Empieza por un cubo reducido y añade dificultad después."),
+                                "Si no puede terminar una ronda, sobran. Empieza por Tropik o el puzle de granja y sube a Magneti'Book Animales después."),
                         faqItem("¿Janod sirve si ya tiene 3 años cumplidos?",
-                                "Está en el tope de su rango. Si ya clasifica con soltura, Goula o el cubo de 12 dan más recorrido."),
+                                "Tropik llega al tope de su rango a los 3 años. Si ya encaja sin esfuerzo, Magneti'Book Animales o el pack de tres puzles dan más recorrido."),
                         faqItem("¿Se puede usar sin un adulto?",
                                 "Con supervisión cercana, sí, cuando las piezas son grandes. No es un juguete para dejar solo."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -3597,7 +4046,7 @@ public class ComparisonPageService {
                 "Los cinco puzles",
                 List.of(
                         summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
-                        summary("Para encajar con sonido", "puzle-melissa-granja", "Tablero de siluetas y animales domésticos."),
+                        summary("Para encajar en tablero", "puzle-melissa-mascotas", "Ocho mascotas de madera sobre tablero."),
                         summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
                         summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
                         summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
@@ -3614,7 +4063,7 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige según lo que ya monta", List.of(
-                                "Si aún encaja siluetas, granja o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
+                                "Si aún encaja siluetas, mascotas o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
                                 "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
                         )),
                         section("Cartón o madera", List.of(
@@ -3633,8 +4082,8 @@ public class ComparisonPageService {
                                 "Ambos si son gruesos. El cartón fino se dobla y frustra."),
                         faqItem("¿Cuándo pasar a 15 o 16 piezas?",
                                 "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
-                        faqItem("¿El puzle de granja es lo mismo que el de safari?",
-                                "No. La granja es tablero con sonido; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿El puzle de mascotas es lo mismo que el de safari?",
+                                "No. Las mascotas son tablero con siluetas y piezas que se sostienen de pie; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -3657,22 +4106,23 @@ public class ComparisonPageService {
                 AGE_3,
                 SCOOTERS_3,
                 "Mejores patinetes de 3 ruedas para 3 años | Bebes Felices",
-                "Comparamos tres patinetes de tres ruedas y un triciclo reales para 3 años por talla, estabilidad y tipo de uso, con metodología y afiliación transparentes.",
+                "Comparamos cuatro patinetes de tres ruedas y un triciclo reales para 3 años por talla, estabilidad y tipo de uso, con metodología y afiliación transparentes.",
                 "Patinetes para 3 años",
                 new ComparisonPageResponse.Header(
                         "Mejores patinetes de 3 ruedas para 3 años",
-                        "Cuatro modelos reales comparados por estabilidad, talla y tipo de uso",
+                        "Cinco modelos reales comparados por estabilidad, talla y tipo de uso",
                         List.of(
                                 "A los 3 años el equilibrio de pie todavía se está asentando. Un patinete de tres ruedas ofrece una base más estable que uno de dos. Un triciclo cubre otra necesidad: pedalear sentado, a veces con mango de adulto.",
-                                "La selección reúne tres patinetes y un triciclo disponibles en Amazon.es. No incluimos el Globber Master Lights, indicado desde 4 años con manillar desde 74 cm. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
+                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No incluimos el Globber Master Lights, indicado desde 4 años con manillar desde 74 cm. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
                                 "Casco homologado, calzado cerrado, una zona sin tráfico y supervisión adulta no se sustituyen con tres ruedas ni con luces LED."
                         )
                 ),
-                "Los cuatro modelos",
+                "Los cinco modelos",
                 List.of(
                         summary("Para empezar de pie con poco peso", "patinete-micro-mini-deluxe", "1,95 kg y manillar 48-68 cm."),
                         summary("Para una primera opción de 3 a 5 años", "patinete-molto-maxi", "Manillar 57-67 cm y montaje sin herramientas."),
                         summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Tres alturas y modo carrito."),
+                        summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para pedalear sentado", "triciclo-chicco-u-go", "Mango de adulto y hasta 20 kg.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -3692,11 +4142,11 @@ public class ComparisonPageService {
                         )),
                         section("Mide el manillar", List.of(
                                 "El niño debe alcanzar el manillar sin encogerse ni estirarse. 48-68 cm no es intercambiable con 57-67 cm.",
-                                "Si el niño es bajo, Mini Deluxe o Junior (54 cm mínimo) encajan mejor que Molto (57 cm)."
+                                "Si el niño es bajo, Mini Deluxe, Mini 3en1 o Junior (54 cm mínimo) encajan mejor que Molto (57 cm)."
                         )),
                         section("Seguridad antes de salir", List.of(
                                 "Casco, calzado cerrado, freno comprobado y una zona sin tráfico.",
-                                "El U-GO declara 20 kg: comprueba el peso real antes de elegir el triciclo."
+                                "El asiento del Mini 3en1 y el U-GO declaran 20 kg: comprueba el peso real si aún va sentado."
                         ))
                 )),
                 List.of(
@@ -3743,11 +4193,11 @@ public class ComparisonPageService {
                 ),
                 "Las cinco torres",
                 List.of(
-                        summary("Para plegar desde 3 años", "torre-kleiner-riese", "6,5 kg y ficha recomendada a partir de 3 años."),
+                        summary("Para plegar desde 3 años", "torre-costway-plegable", "Plegable y ficha recomendada a partir de 3 años."),
                         summary("Para plegar y convertir en mesa", "torre-yoleo-transformer", "Nogal y modo escritorio más adelante."),
-                        summary("Para tres alturas y poco peso", "torre-bianconiglio-evo", "7,5 kg y plataforma a 30, 40 y 50 cm."),
+                        summary("Para tres alturas y poco peso", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
                         summary("Para patas anticaída y EN-71", "torre-bey-co", "Tres alturas y superficie antideslizante."),
-                        summary("Para torre y escritorio", "torre-bianconiglio-transformer", "Convertible; 10 kg declarados.")
+                        summary("Para torre y escritorio", "torre-maxi-cosi-toucan", "Convertible; 8,7 kg declarados.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos especificaciones verificables y su utilidad para un niño de 3 años. No asignamos notas ni completamos alturas que la ficha no declare.",
@@ -3765,7 +4215,7 @@ public class ComparisonPageService {
                                 "A los 3 años suele usarse una altura intermedia, no la más alta «para crecer» desde el primer día."
                         )),
                         section("Plegado o uso fijo", List.of(
-                                "Si la cocina es pequeña, Kleiner Riese o YOLEO cambian el día a día.",
+                                "Si la cocina es pequeña, COSTWAY o YOLEO cambian el día a día.",
                                 "Pregunta si ya hay torre antes de regalar otra."
                         )),
                         section("Uso a los 3 años", List.of(
@@ -3776,12 +4226,12 @@ public class ComparisonPageService {
                 List.of(
                         faqItem("¿Es segura una torre a los 3 años?",
                                 "Puede serlo si es estable, tiene barandilla y hay un adulto. No lo es como juguete de trepa ni junto a peligros de cocina."),
-                        faqItem("¿Por qué Kleiner Riese va primero?",
+                        faqItem("¿Por qué COSTWAY va primero?",
                                 "Porque la ficha la recomienda a partir de 3 años y se pliega. El orden cubre roles, no una nota numérica."),
                         faqItem("¿El niño puede usarla solo?",
                                 "No. Aunque suba y baje, el riesgo está en la encimera."),
-                        faqItem("¿KidSafe viene de serie en la EVO?",
-                                "En varias fichas es un accesorio. No lo des por incluido."),
+                        faqItem("¿hauck Learn N Explore se pliega?",
+                                "No. La ficha declara tres alturas de plataforma, no plegado."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -3894,7 +4344,7 @@ public class ComparisonPageService {
                         summary("Para aprender encajando", "juego-montessori-formas", "Cubo de 12 piezas grandes."),
                         summary("Para terminar una escena", "puzle-madera-animales", "Puzle de madera de safari."),
                         summary("Para moverse", "bici-chicco-red-bullet", "Bicicleta sin pedales ligera y ajustable."),
-                        summary("Para la cocina", "torre-kleiner-riese", "Torre plegable recomendada desde 3 años."),
+                        summary("Para la cocina", "torre-yoleo-transformer", "Torre plegable convertible en mesa."),
                         summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera con un adulto.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -3964,11 +4414,11 @@ public class ComparisonPageService {
                 ),
                 "Los cinco regalos",
                 List.of(
-                        summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
                         summary("Para ensartar y contar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones."),
                         summary("Para madera FSC de obra", "small-foot-grua", "Grúa giratoria certificada FSC 100 %."),
                         summary("Para plástico reciclado lavable", "green-toys-construccion", "Tres vehículos sin BPA ni PVC."),
-                        summary("Para cartón y haya", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas.")
+                        summary("Para cartón y haya", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas."),
+                        summary("Para madera de caucho", "plantoys-ata-zapato", "Tintes al agua para practicar nudos.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos materiales y usos verificables para un niño de 3 años. No asignamos una nota de sostenibilidad ni completamos certificaciones que la ficha no muestre.",
@@ -3982,7 +4432,7 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto", List.of(
-                                "Crear: el kit. Ensartar: las cuentas. Obra: Small Foot. Empujar: Green Toys. Encajar: HABA."
+                                "Ensartar: las cuentas. Obra: Small Foot. Empujar: Green Toys. Encajar: HABA. Atar: PlanToys."
                         )),
                         section("Madera y plástico reciclado no son intercambiables", List.of(
                                 "Green Toys declara plástico 100 % reciclado y se lava. Small Foot declara madera FSC 100 %.",
@@ -4001,7 +4451,7 @@ public class ComparisonPageService {
                         faqItem("¿Qué evitáis?",
                                 "Productos de un solo uso, piezas diminutas y juguetes que solo funcionan con pantalla. Tampoco afirmamos ecoetiquetas no contrastadas."),
                         faqItem("¿El kit de manualidades tiene certificación?",
-                                "En el catálogo constan plastilina ecológica de materias primas naturales y herramientas de madera. No publicamos un sello concreto que no figure en ficha."),
+                                "Está en la comparativa de arte y manualidades con materiales naturales. Aquí entran objetos de madera, FSC o plástico reciclado que se guardan y se vuelven a sacar."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -4035,18 +4485,18 @@ public class ComparisonPageService {
                         "Mejores regalos duraderos para 3 años",
                         "Cinco productos reales pensados para repetirse, no para un solo uso",
                         List.of(
-                                "Duradero, aquí, significa un objeto que se saca muchas veces: madera, plástico lavable o cartón grueso, sin pantallas ni kits que se consumen en una tarde. No es un sello de «irrompible» ni una garantía de años que no podamos verificar.",
+                                "Duradero, aquí, significa un objeto que se saca muchas veces: puzles de madera, tableros con piezas sujetas o una cocina de madera para juego simbólico. No es un sello de «irrompible» ni una garantía de años que no podamos verificar.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
-                                "Cuentas, cordones y figuras pequeñas piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
+                                "Los puzles de muchas piezas y los accesorios sueltos piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
                         )
                 ),
                 "Los cinco regalos",
                 List.of(
-                        summary("Para el juego de obra que se repite", "small-foot-grua", "Grúa de madera con manivela y giro 360°."),
-                        summary("Para empujar y lavar", "green-toys-construccion", "Tres vehículos lavables, de 24 a 72 meses."),
-                        summary("Para un gesto que dura años", "plantoys-ata-zapato", "Madera de caucho para practicar nudos hasta los 8."),
-                        summary("Para encajar y volver a sacar", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
-                        summary("Para ensartar muchas veces", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                        summary("Para terminar y volver a guardar", "puzle-madera-animales", "Puzle de madera de piezas grandes."),
+                        summary("Para encajar con tablero", "puzle-melissa-mascotas", "Ocho mascotas de madera sobre tablero."),
+                        summary("Para rotar cuatro escenas", "puzle-educa-selva", "Puzles progresivos de 5 a 8 piezas."),
+                        summary("Para subir a 16 piezas", "puzle-educa-disney-madera", "Dos puzles de madera desde 3 años."),
+                        summary("Para juego simbólico largo", "simbolico-theo-klein-miele", "Cocina de madera de 3 a 8 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si el objeto se puede repetir a los 3 años. No asignamos una nota de durabilidad ni prometemos una vida útil en años.",
@@ -4060,27 +4510,27 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto que se va a repetir", List.of(
-                                "Obra: Small Foot. Empujar y lavar: Green Toys. Atar: PlanToys. Encajar: HABA. Ensartar: las cuentas.",
-                                "Si ya tiene un cubo de formas o un puzle de una sola escena, prioriza un objeto que se use en la rutina o al aire libre."
+                                "Terminar una escena: puzle de safari o Disney. Encajar con tablero: mascotas Melissa & Doug. Rotar dificultad: Educa selva. Juego simbólico largo: cocina Theo Klein.",
+                                "Si ya tiene un cubo de formas o una grúa de madera, prioriza un puzle o un escenario distinto."
                         )),
                         section("Duradero no es lo mismo que sostenible", List.of(
                                 "Aquí miramos si se va a usar más de una temporada. La comparativa de regalos sostenibles detalla materiales declarados (FSC, plástico reciclado, tintes).",
-                                "Un kit de plastilina puede ser de materias primas naturales y, aun así, gastarse. Por eso no está en esta lista."
+                                "Un kit de plastilina puede ser de materias primas naturales y, aun así, gastarse. Por eso está en arte y manualidades, no aquí."
                         )),
                         section("Supervisión", List.of(
-                                "Cordones, cuentas y figuras no se dejan con menores de 3 años.",
+                                "Piezas sueltas y accesorios de cocina no se dejan con menores de 3 años.",
                                 "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
                         ))
                 )),
                 List.of(
                         faqItem("¿Qué es un regalo duradero a los 3 años?",
-                                "Uno que se saca muchas veces: encajar, empujar, atar o ensartar. No publicamos una vida útil en años ni un sello de irrompible."),
-                        faqItem("¿Por qué no está el kit de manualidades?",
-                                "La plastilina se gasta. Encaja como actividad para crear sin pantallas, y está en la comparativa de regalos sostenibles, no en esta lista de objetos que se vuelven a usar."),
-                        faqItem("¿Madera siempre dura más que plástico?",
-                                "No en abstracto. Los vehículos Green Toys se lavan y cubren arena y agua; la grúa de madera cubre otro tipo de juego. Elige según el uso."),
-                        faqItem("¿El zapato PlanToys sustituye aprender a atarse?",
-                                "No. Es un material de ensayo. Un adulto muestra el nudo; el zapato de verdad sigue haciendo falta."),
+                                "Uno que se saca muchas veces: encajar, montar una escena o jugar a la cocina. No publicamos una vida útil en años ni un sello de irrompible."),
+                        faqItem("¿Por qué no está la grúa de madera?",
+                                "Está en la comparativa de regalos sostenibles. Aquí priorizamos puzles y un escenario de madera que no se repiten en esa lista."),
+                        faqItem("¿Madera siempre dura más que cartón?",
+                                "No en abstracto. Un puzle de cartón grueso puede repetirse si se guardan las piezas; la cocina de madera cubre otro tipo de juego."),
+                        faqItem("¿La cocina Theo Klein sustituye una torre de aprendizaje?",
+                                "No. Es juego simbólico, no participación real en la cocina. Para autonomía en la encimera, mira la comparativa de torres."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -4103,23 +4553,23 @@ public class ComparisonPageService {
                 AGE_3,
                 ARTS_NATURAL_3,
                 "Arte y manualidades con materiales naturales para 3 años | Bebes Felices",
-                "Comparamos cinco opciones reales para crear a los 3 años: plastilina ecológica, témpera lavable y un maletín para colorear, con metodología y afiliación transparentes.",
+                "Comparamos cinco opciones reales para crear a los 3 años: plastilina ecológica, pintura de dedos natural, plastilina vegetal y un maletín para colorear, con metodología y afiliación transparentes.",
                 "Arte y manualidades para 3 años",
                 new ComparisonPageResponse.Header(
                         "Arte y manualidades con materiales naturales para 3 años",
                         "Cinco formas de crear en mesa, con un adulto y sin pantallas",
                         List.of(
-                                "A los 3 años crear es modelar, pintar o colorear en sesiones cortas. Priorizamos el kit de materias primas naturales y pinturas lavables que se pueden recoger. No es un taller sin adulto ni un set de un solo uso de pegatinas.",
+                                "A los 3 años crear es modelar, pintar con los dedos o colorear en sesiones cortas. Priorizamos plastilina ecológica, pintura de dedos con ingredientes naturales declarados y un maletín que se recoge entero. No es un taller sin adulto ni un set de un solo uso de pegatinas.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
-                                "Mantel, babero y supervisión. La plastilina y la témpera manchan; el maletín se guarda entero."
+                                "Mantel, babero y supervisión. La plastilina y la pintura manchan; el maletín se guarda entero."
                         )
                 ),
                 "Las cinco opciones",
                 List.of(
-                        summary("Para modelar sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
-                        summary("Para pintar con agua", "arte-crayola-tempera-6", "Seis botes de témpera lavable."),
+                        summary("Para modelar con rodillo", "arte-ses-eco-mega-7", "Siete colores ecológicos y rodillo de madera."),
+                        summary("Para pintar con los dedos", "arte-jovi-pintura-dedos-6", "Seis botes con ingredientes naturales."),
                         summary("Para un extra de brillo", "arte-crayola-effects", "Diez témperas con efectos, si ya pinta."),
-                        summary("Para acabado metal", "arte-crayola-metallic", "Seis colores metálicos lavables."),
+                        summary("Para muchos colores vegetales", "arte-jovi-plastilina-vegetal-12", "Doce pastillas de base vegetal."),
                         summary("Para colorear y guardar", "arte-crayola-paw-patrol", "Maletín con ceras y hojas.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -4134,10 +4584,10 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Empieza por el gesto", List.of(
-                                "Modelar: el kit. Pintar: témpera de 6. Colorear: el maletín. Efectos y metal, si ya aguanta pintar."
+                                "Modelar con herramientas: SES Eco. Pintar con el dedo: Jovi. Modelar muchos colores: plastilina vegetal. Colorear: el maletín. Efectos, si ya aguanta pintar."
                         )),
                         section("Natural no es lo mismo que lavable", List.of(
-                                "El kit declara materias primas naturales y madera. Las témperas Crayola declaran lavabilidad, no un sello de material natural."
+                                "SES Eco y Jovi declaran materiales ecológicos o de base vegetal. Las témperas Crayola de efectos declaran lavabilidad, no un sello de material natural."
                         )),
                         section("Supervisión", List.of(
                                 "Nada de esto se deja solo. Cierra botes y guarda la plastilina al terminar."
@@ -4145,13 +4595,13 @@ public class ComparisonPageService {
                 )),
                 List.of(
                         faqItem("¿Hace falta un kit «eco»?",
-                                "No. El kit de plastilina es la opción del catálogo con materiales naturales declarados. Pintar lavable también crea, con otro material."),
+                                "No. El mega set SES Eco es una opción del catálogo con plastilina ecológica y rodillo de madera. Pintar con los dedos o modelar con pastillas vegetales también crea, con otro gesto."),
                         faqItem("¿Se puede usar sin adulto?",
                                 "No al principio. A los 3 años el adulto dosifica pintura, sujeta el papel y evita que se coma el material."),
                         faqItem("¿Por qué no está el maletín de 100 piezas?",
                                 "Esa ficha parte de 4 años. Aquí solo entran productos con edad mínima 3."),
                         faqItem("¿La plastilina dura como la madera?",
-                                "No. Se gasta. Si buscas un objeto permanente, ve a regalos duraderos o a Montessori de madera."),
+                                "No. Se gasta o se guarda en botes. Si buscas un objeto permanente, ve a regalos duraderos o a Montessori de madera."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -4160,7 +4610,7 @@ public class ComparisonPageService {
                         new LinkItem(
                                 "Mejores regalos sostenibles para 3 años",
                                 "/comparativas/" + SUSTAINABLE_3_SLUG + "/",
-                                "El kit de crear, en el contexto de materiales declarados."
+                                "Objetos de madera y materiales declarados que se guardan y se vuelven a sacar."
                         ),
                         chooseByAgeLink()
                 )
@@ -4174,55 +4624,55 @@ public class ComparisonPageService {
                 AGE_3,
                 MONTESSORI_WOOD_3,
                 "Juegos Montessori de madera para 3 años | Bebes Felices",
-                "Comparamos cinco juguetes de madera para 3 años: encaje FSC, láminas, grúa, zapato y cuentas, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de madera para 3 años: cubo de formas, láminas, maletín médico, puzle de granja y cuento cooperativo, con metodología y afiliación transparentes.",
                 "Montessori de madera para 3 años",
                 new ComparisonPageResponse.Header(
                         "Juegos Montessori de madera para 3 años",
-                        "Cinco objetos de madera para encajar, ensartar, atar u obra",
+                        "Cinco objetos de madera para encajar, imitar o recoger",
                         List.of(
-                                "Montessori, aquí, es actividad clara con madera: encajar, ensartar, ensayar un nudo o jugar a la obra. No es un certificado oficial ni un cubo único repetido cinco veces.",
+                                "Montessori, aquí, es actividad clara con madera: encajar, imitar la consulta o jugar el cuento en equipo. No es un certificado oficial ni repetir la grúa, las cuentas o el zapato de otra comparativa.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
-                                "Cuentas, cordones y cuerda de grúa piden supervisión. La madera no elimina piezas pequeñas."
+                                "Los accesorios del maletín y las piezas del juego de mesa piden supervisión. La madera no elimina piezas pequeñas."
                         )
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para encajar en FSC", "montessori-janod-tropik", "Soporte de madera FSC hasta 3 años."),
+                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas de madera."),
                         summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
-                        summary("Para obra en madera", "small-foot-grua", "Grúa FSC 100 % con manivela."),
-                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
-                        summary("Para ensartar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                        summary("Para imitar la consulta", "simbolico-sundaymot-33", "Maletín médico de madera con 33 piezas."),
+                        summary("Para ocho piezas con pomos", "puzle-melissa-granja-peg", "Tablero de granja de 2 a 4 años."),
+                        summary("Para jugar el cuento en equipo", "lectura-three-pigs", "Los 3 Cerditos de Goula, de 3 a 7 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
-                        "Comparamos madera y gesto para un niño de 3 años. No es la comparativa de formas y encajes: aquí entra también la grúa y el zapato.",
+                        "Comparamos madera y gesto para un niño de 3 años. No es la comparativa de regalos sostenibles: aquí no entra la grúa ni las cuentas.",
                         List.of(
                                 criterion("Encaje a los 3 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
-                                criterion("Madera", "FSC, caucho o cuentas cuando la ficha lo dice."),
-                                criterion("Actividad", "Encajar, ensartar, atar u obra: no repetimos el mismo cubo."),
+                                criterion("Madera", "Madera, caucho o figuras declaradas en la ficha."),
+                                criterion("Actividad", "Encajar, imitar o recoger: no repetimos el mismo gesto cinco veces."),
                                 criterion("Duración", "Si el objeto se saca más de una tarde."),
-                                criterion("Seguridad", "Cordones, cuentas y cuerda.")
+                                criterion("Seguridad", "Figuras pequeñas y utensilios sueltos.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto, no la etiqueta Montessori", List.of(
-                                "Encajar: Janod o Goula. Obra: Small Foot. Vestirse: PlanToys. Ensartar: las cuentas."
+                                "Encajar: cubo de 12, Goula o puzle de granja. Imitar: Sundaymot. Cooperar: Los 3 Cerditos."
                         )),
-                        section("Si ya tienes el cubo de 12 piezas", List.of(
-                                "No lo dupliques. Esa ficha está en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
+                        section("Si ya tienes la grúa, las cuentas o el zapato", List.of(
+                                "Están en regalos sostenibles. Aquí priorizamos otros usos de la madera."
                         )),
                         section("Supervisión", List.of(
-                                "Cuentas y cordones no se dejan con menores de 3 años. La manivela de la grúa pide un adulto al principio."
+                                "Limita los accesorios del maletín al empezar. Las piezas del juego de mesa piden recoger al terminar."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta el sello Montessori?",
                                 "No. Cuenta la actividad y la madera, no el nombre comercial."),
-                        faqItem("¿Janod no se queda corto a los 3 años?",
-                                "El rango llega hasta 3 años. Si ya clasifica sin esfuerzo, Goula o la grúa alargan el uso."),
-                        faqItem("¿Dónde está el cubo Melissa & Doug?",
-                                "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
+                        faqItem("¿Dónde está el Janod Tropik?",
+                                "En la comparativa de formas y encajes, pensada para el tope de 3 años. Aquí priorizamos el cubo de 12 piezas."),
+                        faqItem("¿Dónde están la grúa, las cuentas y el zapato PlanToys?",
+                                "En la comparativa de regalos sostenibles. Aquí no los repetimos."),
                         faqItem("¿Todo lo de madera es igual?",
-                                "No. FSC 100 %, caucho o cuentas no son intercambiables. Elige según el uso."),
+                                "No. Cubo, láminas, maletín médico, puzle de granja y cuento cooperativo no son intercambiables. Elige según el gesto."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -4245,7 +4695,7 @@ public class ComparisonPageService {
                 AGE_3,
                 SYMBOLIC_3,
                 "Juego simbólico para 3 años | Bebes Felices",
-                "Comparamos cinco juguetes de imitación para 3 años: cocinas de madera, una cocinita portátil y un maletín de médico, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de imitación para 3 años: cocinas de madera, una cocinita compacta y un maletín de médico, con metodología y afiliación transparentes.",
                 "Juego simbólico para 3 años",
                 new ComparisonPageResponse.Header(
                         "Juego simbólico para 3 años",
@@ -4260,15 +4710,15 @@ public class ComparisonPageService {
                 List.of(
                         summary("Para una cocina de madera completa", "simbolico-theo-klein-miele", "Placa, horno y fregadero."),
                         summary("Para nevera y más zonas", "simbolico-kidkraft-vintage", "Nevera, horno, microondas y teléfono."),
-                        summary("Para poco espacio", "simbolico-beeloom-babycue", "Cocinita portátil de madera."),
-                        summary("Para muchos utensilios", "simbolico-deao-cocina", "Compacta con 48 accesorios."),
-                        summary("Para imitar la consulta", "simbolico-sundaymot-32", "Maletín médico de 32 piezas.")
+                        summary("Para poco espacio", "simbolico-small-foot-compacta", "Cocinita de madera que se guarda."),
+                        summary("Para una cocina compacta de pie", "simbolico-janod-macaron", "Horno, fregadero y cinco accesorios."),
+                        summary("Para imitar la consulta", "simbolico-janod-veterinario", "Maletín de veterinario con 16 accesorios.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos el escenario de imitación a los 3 años: tamaño, rol y si se puede guardar. No es un ranking de «la mejor cocina».",
                         List.of(
                                 criterion("Encaje a los 3 años", "Edad declarada y gestos cortos de abrir, verter o cuidar."),
-                                criterion("Escenario", "Cocina de pie, portátil o maletín de médico."),
+                                criterion("Escenario", "Cocina de pie, compacta o maletín de médico."),
                                 criterion("Espacio", "Pared, mesa o caja que se guarda."),
                                 criterion("Accesorios", "Si se pueden limitar en cada sesión."),
                                 criterion("Seguridad", "Estabilidad, piezas sueltas y que no imite fuego real.")
@@ -4276,18 +4726,18 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Mide antes la cocina grande", List.of(
-                                "Theo Klein y KidKraft piden un rincón. Beeloom cabe en mesa. El maletín se guarda en un armario."
+                                "Theo Klein y KidKraft piden un rincón. Small Foot se monta y se guarda. El maletín cabe en un armario."
                         )),
                         section("Cocina o médico", List.of(
                                 "No hace falta ambos el mismo año. Elige el rol que el niño ya imita."
                         )),
                         section("Accesorios", List.of(
-                                "48 piezas no se vuelcan de golpe. Saca cuatro y guarda el resto."
+                                "Los accesorios sueltos no se vuelcan de golpe. Saca cuatro y guarda el resto."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta una cocina de madera grande?",
-                                "No. Si no hay pared, la cocinita portátil cubre el mismo gesto."),
+                                "No. Si no hay pared, la cocinita compacta cubre el mismo gesto."),
                         faqItem("¿El maletín médico es para 3 años?",
                                 "La ficha parte de 3 años. Los accesorios piden supervisión y no se llevan a la boca."),
                         faqItem("¿Sustituye ayudar en la cocina de verdad?",
@@ -4458,22 +4908,23 @@ public class ComparisonPageService {
                 AGE_3,
                 SCOOTERS_3,
                 "Patinetes y triciclos para 3 años | Bebes Felices",
-                "Comparamos tres patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 3 años, con metodología y afiliación transparentes.",
+                "Comparamos cuatro patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 3 años, con metodología y afiliación transparentes.",
                 "Patinetes y triciclos para 3 años",
                 new ComparisonPageResponse.Header(
                         "Patinetes y triciclos para 3 años",
                         "De pie con tres ruedas o sentado con mango de adulto",
                         List.of(
-                                "A los 3 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cuatro.",
-                                "La selección reúne cuatro productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
+                                "A los 3 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cinco.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
                                 "El triciclo no enseña el equilibrio del patinete. El patinete no lleva a un niño cansado en un paseo largo."
                         )
                 ),
-                "Las cuatro opciones",
+                "Las cinco opciones",
                 List.of(
                         summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
                         summary("Para una primera de 3 años", "patinete-molto-maxi", "Edad mínima 3 años y manillar 57-67 cm."),
                         summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -4488,10 +4939,10 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("De pie o sentado", List.of(
-                                "Si ya se sostiene y quiere empujar, patinete. Si aún quieres guiar en el paseo, triciclo con mango."
+                                "Si ya se sostiene y quiere empujar, patinete. Si aún quieres guiar en el paseo, triciclo con mango. El Mini 3en1 cubre el paso de sentado a pie sin pedales."
                         )),
                         section("Peso y plegado", List.of(
-                                "Micro declara 1,95 kg. Globber declara plegado. MOLTO no declara peso en la ficha consultada."
+                                "Micro declara 1,95 kg. Globber declara plegado. MOLTO no declara peso en la ficha consultada. El Mini 3en1 añade asiento de 20 kg."
                         )),
                         section("Carga del triciclo", List.of(
                                 "U-GO declara 20 kg. Comprueba el peso real del niño."
@@ -4521,6 +4972,290 @@ public class ComparisonPageService {
         );
     }
 
+    private ComparisonPageResponse buildPiklerThreePage() {
+        return ageComparison(
+                PIKLER_3_SLUG,
+                PIKLER_3_CANONICAL,
+                AGE_3,
+                PIKLER_3,
+                "Triángulos Pikler y estructuras de trepar para 3 años | Bebes Felices",
+                "Comparamos cinco opciones para trepar o deslizarse a los 3 años: triángulos de madera, un set combinable y estructuras de plástico, con metodología y afiliación transparentes.",
+                "Triángulos Pikler y estructuras de trepar para 3 años",
+                new ComparisonPageResponse.Header(
+                        "Triángulos Pikler y estructuras de trepar para 3 años",
+                        "Cinco estructuras reales para subir, bajar o deslizarse sin ruedas",
+                        List.of(
+                                "A los 3 años el movimiento no es solo patinete o bici sin pedales. Trepar un marco, gatear un túnel o bajar un tobogán bajo es otro gesto: pies y manos, suelo estable, un adulto al lado. No es un parque infantil ni un columpio.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Mide el hueco. Un triángulo plegado no cabe en cualquier pasillo. Nada de saltar desde lo alto ni dejar al niño solo."
+                        )
+                ),
+                "Las cinco estructuras",
+                List.of(
+                        summary("Para un triángulo compacto con rampa", "trepar-mamoi-triangulo-blanco", "20 a 57 cm y rampa reversible."),
+                        summary("Para madera natural desde 3 años", "trepar-mamoi-triangulo-natural", "60 kg y edad mínima 36 meses."),
+                        summary("Para trepar, gatear y deslizarse", "trepar-little-tikes-gimnasio", "Plástico de interior o jardín."),
+                        summary("Para un tobogán bajo", "trepar-little-tikes-tobogan", "110 cm de recorrido y 5 kg."),
+                        summary("Para triángulo, arco y rampa", "trepar-costway-7en1", "Tres piezas combinables de haya.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede trepar o deslizarse a los 3 años en interior, con supervisión. No es un ranking de «el mejor Pikler».",
+                        List.of(
+                                criterion("Encaje a los 3 años", "Edad declarada y si el niño ya sube y baja con control."),
+                                criterion("Gesto", "Trepar barras, deslizarse o un circuito corto."),
+                                criterion("Espacio", "Hueco en el suelo y si se guarda."),
+                                criterion("Material", "Madera o plástico, y carga declarada."),
+                                criterion("Seguridad", "Suelo nivelado, un niño a la vez en el tobogán, adulto presente.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Madera o plástico", List.of(
+                                "El triángulo Pikler pide un rincón y montaje. Little Tikes cubre trepar y deslizarse en un volumen de jardín o salón, sin barras de madera."
+                        )),
+                        section("No es bici ni patinete", List.of(
+                                "Aquí no hay ruedas. Si buscas empujar sentado, mira correpasillos. Si buscas equilibrio de dos ruedas, la comparativa de bicicletas sin pedales."
+                        )),
+                        section("Supervisión", List.of(
+                                "El fabricante no sustituye a un adulto. Nada de colocarlo junto a una ventana, una escalera o un borde."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un triángulo Pikler a los 3 años?",
+                                "Un marco de barras para subir y bajar a su ritmo. A esta edad ya no es el primer gateo: pide control y un adulto cerca."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior, en una estructura baja, el casco no es el criterio habitual del patinete. Suelo libre de muebles con esquinas y supervisión sí lo son."),
+                        faqItem("¿Se puede usar fuera?",
+                                "Little Tikes lo declara interior o jardín. Los triángulos de madera de esta lista se guardan secos."),
+                        faqItem("¿Sustituye al patinete?",
+                                "No. Trepar no enseña a frenar de pie ni el equilibrio de la bici sin pedales."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub3Link(),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 3 años",
+                                "/comparativas/" + BALANCE_BIKES_SLUG + "/",
+                                "Si el gesto que buscas es equilibrio sentado con ruedas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildRideOnThreePage() {
+        return ageComparison(
+                RIDE_ON_3_SLUG,
+                RIDE_ON_3_CANONICAL,
+                AGE_3,
+                RIDE_ON_3,
+                "Correpasillos para 3 años | Bebes Felices",
+                "Comparamos cinco correpasillos para 3 años: motos de empuje y un coche con antivuelco, con metodología y afiliación transparentes.",
+                "Correpasillos para 3 años",
+                new ComparisonPageResponse.Header(
+                        "Correpasillos para 3 años",
+                        "Cinco vehículos para empujar sentado, sin pedales ni patinete",
+                        List.of(
+                                "Un correpasillos se empuja sentado, con los pies en el suelo. No es una bicicleta sin pedales (dos ruedas, manillar de bici) ni un patinete (de pie). A los 3 años sirve si el asiento aún deja las piernas sueltas.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Mide la entrepierna hasta el asiento. Si las rodillas van encogidas, el modelo se ha quedado pequeño aunque la caja diga 3 años."
+                        )
+                ),
+                "Los cinco correpasillos",
+                List.of(
+                        summary("Para seguir a los 3 y 4 años", "corre-injusa-africa-twin", "Moto de 2 a 4 años con ruedas anchas."),
+                        summary("Para una moto baja hasta 3 años", "corre-injusa-neox-kawasaki", "Asiento 37 cm y carga 30 kg."),
+                        summary("Para una moto hasta los 3 años", "corre-feber-motofeber-casual", "18 meses a 3 años, interior o patio."),
+                        summary("Para suelos variados", "corre-molto-cross-race", "Moto de empuje a partir de 18 meses."),
+                        summary("Para un coche con antivuelco", "corre-smoby-coche", "Formato compacto y hueco bajo el asiento.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede empujar sentado a los 3 años. No mezclamos este gesto con bici sin pedales ni patinete.",
+                        List.of(
+                                criterion("Encaje a los 3 años", "Edad o talla declarada y si las piernas empujan sueltas."),
+                                criterion("Gesto", "Moto o coche de empuje; pies al suelo."),
+                                criterion("Estabilidad", "Ruedas anchas o antivuelco."),
+                                criterion("Uso", "Interior liso o patio sin tráfico."),
+                                criterion("Límite", "No es eléctrico, no es bici, no es patinete.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Moto o coche", List.of(
+                                "La moto deja las piernas a los lados. El Smoby es un coche bajo con antivuelco. No hace falta ambos el mismo año."
+                        )),
+                        section("Si ya tiene bici sin pedales", List.of(
+                                "No dupliques el mismo gesto de empujar. El correpasillos no enseña equilibrio de dos ruedas."
+                        )),
+                        section("Tope de edad", List.of(
+                                "Neox y Motofeber Casual declaran hasta 3 años. África Twin llega a 4. Comprueba asiento y peso."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿En qué se diferencia de la bici sin pedales?",
+                                "La bici tiene dos ruedas y manillar de bicicleta. El correpasillos es un asiento ancho sobre tres o cuatro ruedas, sin pedales."),
+                        faqItem("¿Y del patinete?",
+                                "El patinete se usa de pie. Aquí se va sentado."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior liso, el criterio habitual es supervisión y no bajar bordillos. En pendiente o junto a otros vehículos, casco."),
+                        faqItem("¿Valen los eléctricos?",
+                                "No en esta lista. Un coche de batería es otro producto y otra supervisión."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub3Link(),
+                        new LinkItem(
+                                "Patinetes y triciclos para 3 años",
+                                "/comparativas/" + SCOOTERS_TRIKES_3_SLUG + "/",
+                                "Si el gesto es ir de pie o sentado con mango de adulto."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildCutleryThreePage() {
+        return ageComparison(
+                CUTLERY_3_SLUG,
+                CUTLERY_3_CANONICAL,
+                AGE_3,
+                CUTLERY_3,
+                "Cubiertos infantiles para 3 años | Bebes Felices",
+                "Comparamos cinco sets reales de tenedor, cuchillo y cuchara para 3 años, distintos de la vajilla, con metodología y afiliación transparentes.",
+                "Cubiertos infantiles para 3 años",
+                new ComparisonPageResponse.Header(
+                        "Cubiertos infantiles para 3 años",
+                        "Cinco sets para pinchar y recoger sin cubiertos de adulto",
+                        List.of(
+                                "A los 3 años la vajilla irrompible cubre plato y vaso. Los cubiertos son otra pieza: mango corto, filo de aprendizaje y un gesto que se repite en cada comida. No son cubiertos de adulto recortados.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Un set de tres suele bastar. El recambio de seis piezas sirve si come en dos casas o en la guardería."
+                        )
+                ),
+                "Los cinco sets",
+                List.of(
+                        summary("Para tres piezas de acero corto", "cubiertos-twistshake-acero", "Tenedor, cuchillo y cuchara desde 12 meses."),
+                        summary("Para asas que no resbalan", "cubiertos-mam-aprendizaje", "Zurdo o diestro, filo de aprendizaje."),
+                        summary("Para acero de mesa con cucharilla", "cubiertos-wmf-animales", "Cuatro piezas Cromargan y lavavajillas."),
+                        summary("Para recambio en el cajón", "cubiertos-exzact-safari", "Seis piezas desde 24 meses."),
+                        summary("Para mango corto a los 3 años", "cubiertos-lehoo-vehiculos", "Seis piezas de acero 304.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede pinchar y recoger a los 3 años con un mango de su tamaño. No es un ranking de «los mejores cubiertos» ni sustituye la comparativa de vajilla.",
+                        List.of(
+                                criterion("Encaje a los 3 años", "Edad declarada y si el mango de adulto aún se le va."),
+                                criterion("Piezas", "Tres o seis; con o sin cucharilla."),
+                                criterion("Agarre", "Goma, asa curva o acero liso."),
+                                criterion("Cuidado", "Lavavajillas solo si la ficha lo indica."),
+                                criterion("Seguridad", "Filo de aprendizaje y supervisión en la mesa.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Cubiertos no son vajilla", List.of(
+                                "Plato, cuenco y vaso están en la comparativa de vajilla infantil irrompible. Aquí solo entra lo que se lleva a la boca para pinchar o recoger."
+                        )),
+                        section("Tres piezas o recambio", List.of(
+                                "Twistshake y MAM cubren una comida. EXZACT y Lehoo duplican tenedor, cuchillo y cuchara si hay dos sitios."
+                        )),
+                        section("Acero o mango de goma", List.of(
+                                "El mango de goma perdona el resbalón. El acero de mesa (WMF) se parece más a lo que usa el resto de la familia."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿A los 3 años siguen haciendo falta cubiertos infantiles?",
+                                "Sí, si el tenedor de adulto se le va o el cuchillo de mesa es largo. Si ya come con los de la casa sin incidentes, no es obligatorio."),
+                        faqItem("¿Cuchillo infantil corta de verdad?",
+                                "Corta blando. No sustituye que un adulto corte carne fibrosa. El filo de aprendizaje no es un cuchillo de cocina."),
+                        faqItem("¿Se lavan en el lavavajillas?",
+                                "Solo si la ficha lo declara. WMF sí. Lehoo recomienda mano si quieres conservar el dibujo del mango."),
+                        faqItem("¿Dónde está el plato y el vaso?",
+                                "En la comparativa de vajillas infantiles irrompibles para 3 años."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub3Link(),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para 3 años",
+                                "/comparativas/" + TABLEWARE_3_SLUG + "/",
+                                "Plato, cuenco y vaso irrompibles, sin cubiertos."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildDressingThreePage() {
+        return ageComparison(
+                DRESSING_3_SLUG,
+                DRESSING_3_CANONICAL,
+                AGE_3,
+                DRESSING_3,
+                "Aprender a vestirse a los 3 años | Bebes Felices",
+                "Comparamos cinco materiales reales para botones, cremalleras, cordones y pestillos a los 3 años, con metodología y afiliación transparentes.",
+                "Aprender a vestirse a los 3 años",
+                new ComparisonPageResponse.Header(
+                        "Aprender a vestirse a los 3 años",
+                        "Cinco materiales para abrochar, enhebrar o abrir pestillos sin la prisa del abrigo",
+                        List.of(
+                                "A los 3 años vestirse pide pinza, dos manos y tiempo. Un tablero o un cubo aísla el gesto: botón, cremallera, cordón o pestillo. No sustituye el abrigo real; lo prepara. La torre y la vajilla cubren cocina y mesa; esto cubre la ropa y los cierres de casa.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Un cierre cada vez. Los cordones e imanes se cuentan al guardar. Nada de dejar solo con un cordón al cuello."
+                        )
+                ),
+                "Los cinco materiales",
+                List.of(
+                        summary("Para botones y cremallera en un oso", "vestir-melissa-habilidades", "Seis prendas que se abrochan a partir de 3 años."),
+                        summary("Para enhebrar en la mesa", "vestir-melissa-cordones", "Cinco paneles y cordones, sin el zapato puesto."),
+                        summary("Para un cubo que se lleva", "vestir-small-foot-cubo", "Cremallera, botones y velcro en 16 cm."),
+                        summary("Para nombrar prendas", "vestir-melissa-disfraces", "Imanes; no abrocha el abrigo real."),
+                        summary("Para pestillos de armario", "vestir-melissa-pestillos", "Abrir y cerrar, no ponerse la chaqueta.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede practicar un cierre de vestir o de casa a los 3 años, sentado, con un adulto cerca. No es un ranking de «el mejor marco Montessori».",
+                        List.of(
+                                criterion("Encaje a los 3 años", "Edad declarada y un solo gesto por sesión."),
+                                criterion("Gesto", "Abrochar, enhebrar, colocar prendas o abrir pestillos."),
+                                criterion("Material", "Madera, tela o imanes, y si se guarda entero."),
+                                criterion("Paso a la prenda real", "Si después hay que repetir el gesto en el abrigo o el zapato."),
+                                criterion("Seguridad", "Cordones, imanes y pestillos que pillan; recuento al guardar.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Tablero o cubo", List.of(
+                                "El oso aísla botones y cremallera. El cubo de tela se lleva y mezcla seis cierres. Elige según si hay mesa fija o necesitas algo compacto."
+                        )),
+                        section("No es la torre ni la vajilla", List.of(
+                                "La torre llega a la encimera. La vajilla cubre plato y vaso. Vestirse es otro circuito: ropa y cierres, con tiempo y sin prisa de salir a la calle."
+                        )),
+                        section("Imanes y cordones", List.of(
+                                "Los disfraces magnéticos no practican el botón real. Los cordones no se dejan al cuello. Recuento al guardar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sustituye aprender en el abrigo real?",
+                                "No. El tablero aísla el gesto. Después hay que repetirlo en la prenda, con más tiempo del que parece."),
+                        faqItem("¿Hace falta un marco Montessori de tela?",
+                                "No. Lo útil es un cierre claro y piezas que no se traguen. El nombre comercial no sustituye la práctica en la ropa de cada día."),
+                        faqItem("¿Y el zapato PlanToys?",
+                                "Practica nudos en un zapato de madera. Está en regalos sostenibles. Aquí el gesto se reparte entre paneles, cubo y tablero."),
+                        faqItem("¿Se puede dejar solo?",
+                                "No. Cordones, imanes y pestillos piden un adulto cerca, sobre todo si hay hermanos pequeños."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hub3Link(),
+                        new LinkItem(
+                                "Mejores torres de aprendizaje para 3 años",
+                                "/comparativas/" + TOWERS_3_SLUG + "/",
+                                "Si el gesto que buscas es llegar a la encimera, no abrochar."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
     private ComparisonPageResponse buildTowersKitchenThreePage() {
         return ageComparison(
                 TOWERS_KITCHEN_3_SLUG,
@@ -4541,11 +5276,11 @@ public class ComparisonPageService {
                 ),
                 "Las cinco torres",
                 List.of(
-                        summary("Para plegar en cocina pequeña", "torre-kleiner-riese", "6,5 kg y recomendada desde 3 años."),
+                        summary("Para plegar en cocina pequeña", "torre-costway-plegable", "Plegable y recomendada desde 3 años."),
                         summary("Para convertir en mesa", "torre-yoleo-transformer", "Nogal, plegado y escritorio."),
-                        summary("Para tres alturas ligeras", "torre-bianconiglio-evo", "7,5 kg y plataforma 30-50 cm."),
+                        summary("Para tres alturas ligeras", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
                         summary("Para patas anticaída", "torre-bey-co", "Tres alturas y EN-71."),
-                        summary("Para más peso y escritorio", "torre-bianconiglio-transformer", "10 kg, convertible.")
+                        summary("Para más peso y escritorio", "torre-maxi-cosi-toucan", "8,7 kg, convertible.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si la torre sirve en la cocina diaria a los 3 años: llegar a la encimera, no volcar y poder guardar. El detalle de estabilidad también está en la comparativa de torres de aprendizaje.",
@@ -4562,7 +5297,7 @@ public class ComparisonPageService {
                                 "Barandilla y adulto. Un taburete de cocina no sustituye este uso."
                         )),
                         section("Plegar o dejar fija", List.of(
-                                "Kleiner Riese y YOLEO se pliegan. BEY & CO no declara plegado."
+                                "COSTWAY y YOLEO se pliegan. BEY & CO no declara plegado."
                         )),
                         section("Un solo niño", List.of(
                                 "No es un juguete de trepa ni para dos a la vez junto a la vitro."
@@ -5102,55 +5837,55 @@ public class ComparisonPageService {
                 AGE_4,
                 MONTESSORI_WOOD_3,
                 "Juegos Montessori de madera para 4 años | Bebes Felices",
-                "Comparamos cinco juguetes de madera para 4 años: encaje FSC, láminas, grúa, zapato y cuentas, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de madera para 4 años: cubo de formas, láminas, maletín médico, puzle de granja y cuento cooperativo, con metodología y afiliación transparentes.",
                 "Montessori de madera para 4 años",
                 new ComparisonPageResponse.Header(
                         "Juegos Montessori de madera para 4 años",
-                        "Cinco objetos de madera para encajar, ensartar, atar u obra",
+                        "Cinco objetos de madera para encajar, imitar o recoger",
                         List.of(
-                                "Montessori, aquí, es actividad clara con madera: encajar, ensartar, ensayar un nudo o jugar a la obra. No es un certificado oficial ni un cubo único repetido cinco veces.",
+                                "Montessori, aquí, es actividad clara con madera: encajar, imitar la consulta o jugar el cuento en equipo. No es un certificado oficial ni repetir la grúa o las cuentas de otra comparativa.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Cuentas, cordones y cuerda de grúa piden supervisión. La madera no elimina piezas pequeñas."
+                                "Los accesorios del maletín y las piezas del juego de mesa piden supervisión. La madera no elimina piezas pequeñas."
                         )
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para encajar en FSC", "montessori-janod-tropik", "Soporte de madera FSC hasta 4 años."),
+                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas de madera."),
                         summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
-                        summary("Para obra en madera", "small-foot-grua", "Grúa FSC 100 % con manivela."),
-                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
-                        summary("Para ensartar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                        summary("Para imitar la consulta", "simbolico-sundaymot-33", "Maletín médico de madera con 33 piezas."),
+                        summary("Para ocho piezas con pomos", "puzle-melissa-granja-peg", "Tablero de granja de 2 a 4 años."),
+                        summary("Para jugar el cuento en equipo", "lectura-three-pigs", "Los 3 Cerditos de Goula, de 3 a 7 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
-                        "Comparamos madera y gesto para un niño de 4 años. No es la comparativa de formas y encajes: aquí entra también la grúa y el zapato.",
+                        "Comparamos madera y gesto para un niño de 4 años. No es la comparativa de formas y encajes: aquí entra también el maletín médico y el juego cooperativo.",
                         List.of(
                                 criterion("Encaje a los 4 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
-                                criterion("Madera", "FSC, caucho o cuentas cuando la ficha lo dice."),
-                                criterion("Actividad", "Encajar, ensartar, atar u obra: no repetimos el mismo cubo."),
+                                criterion("Madera", "Madera, caucho o figuras declaradas en la ficha."),
+                                criterion("Actividad", "Encajar, imitar o recoger: no repetimos el mismo cubo."),
                                 criterion("Duración", "Si el objeto se saca más de una tarde."),
-                                criterion("Seguridad", "Cordones, cuentas y cuerda.")
+                                criterion("Seguridad", "Figuras pequeñas y utensilios sueltos.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto, no la etiqueta Montessori", List.of(
-                                "Encajar: Janod o Goula. Obra: Small Foot. Vestirse: PlanToys. Ensartar: las cuentas."
+                                "Encajar: cubo de 12, Goula o puzle de granja. Imitar: Sundaymot. Cooperar: Los 3 Cerditos."
                         )),
                         section("Si ya tienes el cubo de 12 piezas", List.of(
-                                "No lo dupliques. Esa ficha está en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
+                                "No lo dupliques en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
                         )),
                         section("Supervisión", List.of(
-                                "Cuentas y cordones no se dejan con menores de 4 años. La manivela de la grúa pide un adulto al principio."
+                                "Limita los accesorios del maletín al empezar. Las piezas del juego de mesa piden recoger al terminar."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta el sello Montessori?",
                                 "No. Cuenta la actividad y la madera, no el nombre comercial."),
-                        faqItem("¿Janod no se queda corto a los 4 años?",
-                                "El rango llega hasta 4 años. Si ya clasifica sin esfuerzo, Goula o la grúa alargan el uso."),
+                        faqItem("¿Dónde está el Janod Tropik?",
+                                "En la comparativa de formas y encajes. Aquí priorizamos el cubo de 12 piezas."),
                         faqItem("¿Dónde está el cubo Melissa & Doug?",
                                 "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
                         faqItem("¿Todo lo de madera es igual?",
-                                "No. FSC 100 %, caucho o cuentas no son intercambiables. Elige según el uso."),
+                                "No. Cubo, láminas, maletín médico, puzle de granja y cuento cooperativo no son intercambiables. Elige según el gesto."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -5172,55 +5907,55 @@ public class ComparisonPageService {
                 AGE_5,
                 MONTESSORI_WOOD_3,
                 "Juegos Montessori de madera para 5 años | Bebes Felices",
-                "Comparamos cinco juguetes de madera para 5 años: encaje FSC, láminas, grúa, zapato y cuentas, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de madera para 5 años: cubo de formas, láminas, maletín médico, puzle de granja y cuento cooperativo, con metodología y afiliación transparentes.",
                 "Montessori de madera para 5 años",
                 new ComparisonPageResponse.Header(
                         "Juegos Montessori de madera para 5 años",
-                        "Cinco objetos de madera para encajar, ensartar, atar u obra",
+                        "Cinco objetos de madera para encajar, imitar o recoger",
                         List.of(
-                                "Montessori, aquí, es actividad clara con madera: encajar, ensartar, ensayar un nudo o jugar a la obra. No es un certificado oficial ni un cubo único repetido cinco veces.",
+                                "Montessori, aquí, es actividad clara con madera: encajar, imitar la consulta o jugar el cuento en equipo. No es un certificado oficial ni repetir la grúa o las cuentas de otra comparativa.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
-                                "Cuentas, cordones y cuerda de grúa piden supervisión. La madera no elimina piezas pequeñas."
+                                "Los accesorios del maletín y las piezas del juego de mesa piden supervisión. La madera no elimina piezas pequeñas."
                         )
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para encajar en FSC", "montessori-janod-tropik", "Soporte de madera FSC hasta 5 años."),
+                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas de madera."),
                         summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
-                        summary("Para obra en madera", "small-foot-grua", "Grúa FSC 100 % con manivela."),
-                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
-                        summary("Para ensartar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                        summary("Para imitar la consulta", "simbolico-sundaymot-33", "Maletín médico de madera con 33 piezas."),
+                        summary("Para ocho piezas con pomos", "puzle-melissa-granja-peg", "Tablero de granja de 2 a 4 años."),
+                        summary("Para jugar el cuento en equipo", "lectura-three-pigs", "Los 3 Cerditos de Goula, de 3 a 7 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
-                        "Comparamos madera y gesto para un niño de 5 años. No es la comparativa de formas y encajes: aquí entra también la grúa y el zapato.",
+                        "Comparamos madera y gesto para un niño de 5 años. No es la comparativa de formas y encajes: aquí entra también el maletín médico y el juego cooperativo.",
                         List.of(
                                 criterion("Encaje a los 5 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
-                                criterion("Madera", "FSC, caucho o cuentas cuando la ficha lo dice."),
-                                criterion("Actividad", "Encajar, ensartar, atar u obra: no repetimos el mismo cubo."),
+                                criterion("Madera", "Madera, caucho o figuras declaradas en la ficha."),
+                                criterion("Actividad", "Encajar, imitar o recoger: no repetimos el mismo cubo."),
                                 criterion("Duración", "Si el objeto se saca más de una tarde."),
-                                criterion("Seguridad", "Cordones, cuentas y cuerda.")
+                                criterion("Seguridad", "Figuras pequeñas y utensilios sueltos.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto, no la etiqueta Montessori", List.of(
-                                "Encajar: Janod o Goula. Obra: Small Foot. Vestirse: PlanToys. Ensartar: las cuentas."
+                                "Encajar: cubo de 12, Goula o puzle de granja. Imitar: Sundaymot. Cooperar: Los 3 Cerditos."
                         )),
                         section("Si ya tienes el cubo de 12 piezas", List.of(
                                 "No lo dupliques. Esa ficha está en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
                         )),
                         section("Supervisión", List.of(
-                                "Cuentas y cordones no se dejan con menores de 5 años. La manivela de la grúa pide un adulto al principio."
+                                "Limita los accesorios del maletín al empezar. Las piezas del juego de mesa piden recoger al terminar."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta el sello Montessori?",
                                 "No. Cuenta la actividad y la madera, no el nombre comercial."),
-                        faqItem("¿Janod no se queda corto a los 5 años?",
-                                "El rango llega hasta 5 años. Si ya clasifica sin esfuerzo, Goula o la grúa alargan el uso."),
+                        faqItem("¿Dónde está el Janod Tropik?",
+                                "En la comparativa de formas y encajes. Aquí priorizamos el cubo de 12 piezas."),
                         faqItem("¿Dónde está el cubo Melissa & Doug?",
                                 "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
                         faqItem("¿Todo lo de madera es igual?",
-                                "No. FSC 100 %, caucho o cuentas no son intercambiables. Elige según el uso."),
+                                "No. Cubo, láminas, maletín médico, puzle de granja y cuento cooperativo no son intercambiables. Elige según el gesto."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -5402,7 +6137,7 @@ public class ComparisonPageService {
                 "Los cinco puzles",
                 List.of(
                         summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
-                        summary("Para encajar con sonido", "puzle-melissa-granja", "Tablero de siluetas y animales domésticos."),
+                        summary("Para encajar en tablero", "puzle-melissa-mascotas", "Ocho mascotas de madera sobre tablero."),
                         summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
                         summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
                         summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
@@ -5419,7 +6154,7 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige según lo que ya monta", List.of(
-                                "Si aún encaja siluetas, granja o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
+                                "Si aún encaja siluetas, mascotas o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
                                 "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
                         )),
                         section("Cartón o madera", List.of(
@@ -5438,8 +6173,8 @@ public class ComparisonPageService {
                                 "Ambos si son gruesos. El cartón fino se dobla y frustra."),
                         faqItem("¿Cuándo pasar a 15 o 16 piezas?",
                                 "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
-                        faqItem("¿El puzle de granja es lo mismo que el de safari?",
-                                "No. La granja es tablero con sonido; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿El puzle de mascotas es lo mismo que el de safari?",
+                                "No. Las mascotas son tablero con siluetas y piezas que se sostienen de pie; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -5475,7 +6210,7 @@ public class ComparisonPageService {
                 "Los cinco puzles",
                 List.of(
                         summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
-                        summary("Para encajar con sonido", "puzle-melissa-granja", "Tablero de siluetas y animales domésticos."),
+                        summary("Para encajar en tablero", "puzle-melissa-mascotas", "Ocho mascotas de madera sobre tablero."),
                         summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
                         summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
                         summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
@@ -5492,7 +6227,7 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige según lo que ya monta", List.of(
-                                "Si aún encaja siluetas, granja o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
+                                "Si aún encaja siluetas, mascotas o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
                                 "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
                         )),
                         section("Cartón o madera", List.of(
@@ -5511,8 +6246,8 @@ public class ComparisonPageService {
                                 "Ambos si son gruesos. El cartón fino se dobla y frustra."),
                         faqItem("¿Cuándo pasar a 15 o 16 piezas?",
                                 "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
-                        faqItem("¿El puzle de granja es lo mismo que el de safari?",
-                                "No. La granja es tablero con sonido; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿El puzle de mascotas es lo mismo que el de safari?",
+                                "No. Las mascotas son tablero con siluetas y piezas que se sostienen de pie; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -5534,7 +6269,7 @@ public class ComparisonPageService {
                 AGE_4,
                 SYMBOLIC_3,
                 "Juego simbólico para 4 años | Bebes Felices",
-                "Comparamos cinco juguetes de imitación para 4 años: cocinas de madera, una cocinita portátil y un maletín de médico, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de imitación para 4 años: cocinas de madera, una cocinita compacta y un maletín de médico, con metodología y afiliación transparentes.",
                 "Juego simbólico para 4 años",
                 new ComparisonPageResponse.Header(
                         "Juego simbólico para 4 años",
@@ -5549,15 +6284,15 @@ public class ComparisonPageService {
                 List.of(
                         summary("Para una cocina de madera completa", "simbolico-theo-klein-miele", "Placa, horno y fregadero."),
                         summary("Para nevera y más zonas", "simbolico-kidkraft-vintage", "Nevera, horno, microondas y teléfono."),
-                        summary("Para poco espacio", "simbolico-beeloom-babycue", "Cocinita portátil de madera."),
-                        summary("Para muchos utensilios", "simbolico-deao-cocina", "Compacta con 48 accesorios."),
-                        summary("Para imitar la consulta", "simbolico-sundaymot-32", "Maletín médico de 32 piezas.")
+                        summary("Para poco espacio", "simbolico-small-foot-compacta", "Cocinita de madera que se guarda."),
+                        summary("Para una cocina compacta de pie", "simbolico-janod-macaron", "Horno, fregadero y cinco accesorios."),
+                        summary("Para imitar la consulta", "simbolico-janod-veterinario", "Maletín de veterinario con 16 accesorios.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos el escenario de imitación a los 4 años: tamaño, rol y si se puede guardar. No es un ranking de «la mejor cocina».",
                         List.of(
                                 criterion("Encaje a los 4 años", "Edad declarada y gestos cortos de abrir, verter o cuidar."),
-                                criterion("Escenario", "Cocina de pie, portátil o maletín de médico."),
+                                criterion("Escenario", "Cocina de pie, compacta o maletín de médico."),
                                 criterion("Espacio", "Pared, mesa o caja que se guarda."),
                                 criterion("Accesorios", "Si se pueden limitar en cada sesión."),
                                 criterion("Seguridad", "Estabilidad, piezas sueltas y que no imite fuego real.")
@@ -5565,18 +6300,18 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Mide antes la cocina grande", List.of(
-                                "Theo Klein y KidKraft piden un rincón. Beeloom cabe en mesa. El maletín se guarda en un armario."
+                                "Theo Klein y KidKraft piden un rincón. Small Foot se monta y se guarda. El maletín cabe en un armario."
                         )),
                         section("Cocina o médico", List.of(
                                 "No hace falta ambos el mismo año. Elige el rol que el niño ya imita."
                         )),
                         section("Accesorios", List.of(
-                                "48 piezas no se vuelcan de golpe. Saca cuatro y guarda el resto."
+                                "Los accesorios sueltos no se vuelcan de golpe. Saca cuatro y guarda el resto."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta una cocina de madera grande?",
-                                "No. Si no hay pared, la cocinita portátil cubre el mismo gesto."),
+                                "No. Si no hay pared, la cocinita compacta cubre el mismo gesto."),
                         faqItem("¿El maletín médico es para 4 años?",
                                 "La ficha parte de 4 años. Los accesorios piden supervisión y no se llevan a la boca."),
                         faqItem("¿Sustituye ayudar en la cocina de verdad?",
@@ -5604,7 +6339,7 @@ public class ComparisonPageService {
                 AGE_5,
                 SYMBOLIC_3,
                 "Juego simbólico para 5 años | Bebes Felices",
-                "Comparamos cinco juguetes de imitación para 5 años: cocinas de madera, una cocinita portátil y un maletín de médico, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de imitación para 5 años: cocinas de madera, una cocinita compacta y un maletín de médico, con metodología y afiliación transparentes.",
                 "Juego simbólico para 5 años",
                 new ComparisonPageResponse.Header(
                         "Juego simbólico para 5 años",
@@ -5619,15 +6354,15 @@ public class ComparisonPageService {
                 List.of(
                         summary("Para una cocina de madera completa", "simbolico-theo-klein-miele", "Placa, horno y fregadero."),
                         summary("Para nevera y más zonas", "simbolico-kidkraft-vintage", "Nevera, horno, microondas y teléfono."),
-                        summary("Para poco espacio", "simbolico-beeloom-babycue", "Cocinita portátil de madera."),
-                        summary("Para muchos utensilios", "simbolico-deao-cocina", "Compacta con 48 accesorios."),
-                        summary("Para imitar la consulta", "simbolico-sundaymot-32", "Maletín médico de 32 piezas.")
+                        summary("Para poco espacio", "simbolico-small-foot-compacta", "Cocinita de madera que se guarda."),
+                        summary("Para una cocina compacta de pie", "simbolico-janod-macaron", "Horno, fregadero y cinco accesorios."),
+                        summary("Para imitar la consulta", "simbolico-janod-veterinario", "Maletín de veterinario con 16 accesorios.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos el escenario de imitación a los 5 años: tamaño, rol y si se puede guardar. No es un ranking de «la mejor cocina».",
                         List.of(
                                 criterion("Encaje a los 5 años", "Edad declarada y gestos cortos de abrir, verter o cuidar."),
-                                criterion("Escenario", "Cocina de pie, portátil o maletín de médico."),
+                                criterion("Escenario", "Cocina de pie, compacta o maletín de médico."),
                                 criterion("Espacio", "Pared, mesa o caja que se guarda."),
                                 criterion("Accesorios", "Si se pueden limitar en cada sesión."),
                                 criterion("Seguridad", "Estabilidad, piezas sueltas y que no imite fuego real.")
@@ -5635,18 +6370,18 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Mide antes la cocina grande", List.of(
-                                "Theo Klein y KidKraft piden un rincón. Beeloom cabe en mesa. El maletín se guarda en un armario."
+                                "Theo Klein y KidKraft piden un rincón. Small Foot se monta y se guarda. El maletín cabe en un armario."
                         )),
                         section("Cocina o médico", List.of(
                                 "No hace falta ambos el mismo año. Elige el rol que el niño ya imita."
                         )),
                         section("Accesorios", List.of(
-                                "48 piezas no se vuelcan de golpe. Saca cuatro y guarda el resto."
+                                "Los accesorios sueltos no se vuelcan de golpe. Saca cuatro y guarda el resto."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta una cocina de madera grande?",
-                                "No. Si no hay pared, la cocinita portátil cubre el mismo gesto."),
+                                "No. Si no hay pared, la cocinita compacta cubre el mismo gesto."),
                         faqItem("¿El maletín médico es para 5 años?",
                                 "La ficha parte de 5 años. Los accesorios piden supervisión y no se llevan a la boca."),
                         faqItem("¿Sustituye ayudar en la cocina de verdad?",
@@ -5954,22 +6689,23 @@ public class ComparisonPageService {
                 AGE_4,
                 SCOOTERS_3,
                 "Patinetes y triciclos para 4 años | Bebes Felices",
-                "Comparamos tres patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 4 años, con metodología y afiliación transparentes.",
+                "Comparamos cuatro patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 4 años, con metodología y afiliación transparentes.",
                 "Patinetes y triciclos para 4 años",
                 new ComparisonPageResponse.Header(
                         "Patinetes y triciclos para 4 años",
                         "De pie con tres ruedas o sentado con mango de adulto",
                         List.of(
-                                "A los 4 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cuatro.",
-                                "La selección reúne cuatro productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "A los 4 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cinco.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
                                 "El triciclo no enseña el equilibrio del patinete. El patinete no lleva a un niño cansado en un paseo largo."
                         )
                 ),
-                "Las cuatro opciones",
+                "Las cinco opciones",
                 List.of(
                         summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
                         summary("Para una primera de 4 años", "patinete-molto-maxi", "Edad mínima 4 años y manillar 57-67 cm."),
                         summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -6023,22 +6759,23 @@ public class ComparisonPageService {
                 AGE_5,
                 SCOOTERS_3,
                 "Patinetes y triciclos para 5 años | Bebes Felices",
-                "Comparamos tres patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 5 años, con metodología y afiliación transparentes.",
+                "Comparamos cuatro patinetes de tres ruedas y un triciclo con mango para moverse de pie o sentado a los 5 años, con metodología y afiliación transparentes.",
                 "Patinetes y triciclos para 5 años",
                 new ComparisonPageResponse.Header(
                         "Patinetes y triciclos para 5 años",
                         "De pie con tres ruedas o sentado con mango de adulto",
                         List.of(
-                                "A los 5 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cuatro.",
-                                "La selección reúne cuatro productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
+                                "A los 5 años el movimiento al aire libre puede ser de pie (patinete) o sentado (triciclo). No son el mismo gesto. Casco, calzado cerrado y un espacio sin tráfico valen para los cinco.",
+                                "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 17 de agosto de 2026.",
                                 "El triciclo no enseña el equilibrio del patinete. El patinete no lleva a un niño cansado en un paseo largo."
                         )
                 ),
-                "Las cuatro opciones",
+                "Las cinco opciones",
                 List.of(
                         summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
                         summary("Para una primera de 5 años", "patinete-molto-maxi", "Edad mínima 5 años y manillar 57-67 cm."),
                         summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -6105,11 +6842,11 @@ public class ComparisonPageService {
                 ),
                 "Las cinco torres",
                 List.of(
-                        summary("Para plegar en cocina pequeña", "torre-kleiner-riese", "6,5 kg y recomendada desde 4 años."),
+                        summary("Para plegar en cocina pequeña", "torre-costway-plegable", "Plegable y recomendada desde 4 años."),
                         summary("Para convertir en mesa", "torre-yoleo-transformer", "Nogal, plegado y escritorio."),
-                        summary("Para tres alturas ligeras", "torre-bianconiglio-evo", "7,5 kg y plataforma 30-50 cm."),
+                        summary("Para tres alturas ligeras", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
                         summary("Para patas anticaída", "torre-bey-co", "Tres alturas y EN-71."),
-                        summary("Para más peso y escritorio", "torre-bianconiglio-transformer", "10 kg, convertible.")
+                        summary("Para más peso y escritorio", "torre-maxi-cosi-toucan", "8,7 kg, convertible.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si la torre sirve en la cocina diaria a los 4 años: llegar a la encimera, no volcar y poder guardar. El detalle de estabilidad también está en la comparativa de torres de aprendizaje.",
@@ -6126,7 +6863,7 @@ public class ComparisonPageService {
                                 "Barandilla y adulto. Un taburete de cocina no sustituye este uso."
                         )),
                         section("Plegar o dejar fija", List.of(
-                                "Kleiner Riese y YOLEO se pliegan. BEY & CO no declara plegado."
+                                "COSTWAY y YOLEO se pliegan. BEY & CO no declara plegado."
                         )),
                         section("Un solo niño", List.of(
                                 "No es un juguete de trepa ni para dos a la vez junto a la vitro."
@@ -6175,11 +6912,11 @@ public class ComparisonPageService {
                 ),
                 "Las cinco torres",
                 List.of(
-                        summary("Para plegar en cocina pequeña", "torre-kleiner-riese", "6,5 kg y recomendada desde 5 años."),
+                        summary("Para plegar en cocina pequeña", "torre-costway-plegable", "Plegable y recomendada desde 5 años."),
                         summary("Para convertir en mesa", "torre-yoleo-transformer", "Nogal, plegado y escritorio."),
-                        summary("Para tres alturas ligeras", "torre-bianconiglio-evo", "7,5 kg y plataforma 30-50 cm."),
+                        summary("Para tres alturas ligeras", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
                         summary("Para patas anticaída", "torre-bey-co", "Tres alturas y EN-71."),
-                        summary("Para más peso y escritorio", "torre-bianconiglio-transformer", "10 kg, convertible.")
+                        summary("Para más peso y escritorio", "torre-maxi-cosi-toucan", "8,7 kg, convertible.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si la torre sirve en la cocina diaria a los 5 años: llegar a la encimera, no volcar y poder guardar. El detalle de estabilidad también está en la comparativa de torres de aprendizaje.",
@@ -6196,7 +6933,7 @@ public class ComparisonPageService {
                                 "Barandilla y adulto. Un taburete de cocina no sustituye este uso."
                         )),
                         section("Plegar o dejar fija", List.of(
-                                "Kleiner Riese y YOLEO se pliegan. BEY & CO no declara plegado."
+                                "COSTWAY y YOLEO se pliegan. BEY & CO no declara plegado."
                         )),
                         section("Un solo niño", List.of(
                                 "No es un juguete de trepa ni para dos a la vez junto a la vitro."
@@ -6388,7 +7125,7 @@ public class ComparisonPageService {
                         summary("Para aprender encajando", "juego-montessori-formas", "Cubo de 12 piezas grandes."),
                         summary("Para terminar una escena", "puzle-madera-animales", "Puzle de madera de safari."),
                         summary("Para moverse", "bici-chicco-red-bullet", "Bicicleta sin pedales ligera y ajustable."),
-                        summary("Para la cocina", "torre-kleiner-riese", "Torre plegable recomendada desde 4 años."),
+                        summary("Para la cocina", "torre-costway-plegable", "Torre plegable recomendada desde 4 años."),
                         summary("Para crear sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera con un adulto.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -7335,10 +8072,10 @@ public class ComparisonPageService {
                 "Las cinco torres",
                 List.of(
                         summary("Para plegar y convertir en mesa", "torre-yoleo-transformer", "Nogal, pizarra magnética y modo escritorio."),
-                        summary("Para tres alturas y poco peso", "torre-bianconiglio-evo", "7,5 kg y plataforma a 30, 40 y 50 cm."),
-                        summary("Para guardar detrás de la puerta", "torre-kleiner-riese", "6,5 kg, plegado y barra NFS."),
+                        summary("Para tres alturas y poco peso", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
+                        summary("Para guardar detrás de la puerta", "torre-costway-plegable", "Plegable desde 3 años, con barra de seguridad."),
                         summary("Para tres alturas con EN-71", "torre-bey-co", "Patas anticaída y superficie antideslizante."),
-                        summary("Para torre y escritorio con ajuste", "torre-bianconiglio-transformer", "Convertible en mesa; 10 kg declarados.")
+                        summary("Para torre y escritorio con ajuste", "torre-maxi-cosi-toucan", "Convertible en mesa; 8,7 kg declarados.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos especificaciones verificables y su utilidad para un niño de 5 años. No asignamos notas ni completamos datos que la ficha no permita confirmar.",
@@ -7356,7 +8093,7 @@ public class ComparisonPageService {
                                 "Tres alturas no sirven si la más alta sigue baja para tu cocina. Comprueba centímetros reales."
                         )),
                         section("Plegado o uso fijo", List.of(
-                                "Si la cocina es pequeña, una torre plegable (YOLEO o Kleiner Riese) cambia el día a día.",
+                                "Si la cocina es pequeña, una torre plegable (YOLEO o COSTWAY) cambia el día a día.",
                                 "Si va a durar años, valora conversión a escritorio cuando deje de usarse en la encimera."
                         )),
                         section("Seguridad de uso", List.of(
@@ -7368,9 +8105,9 @@ public class ComparisonPageService {
                         faqItem("¿Sigue teniendo sentido una torre a los 5 años?",
                                 "Sí, si participa en cocina o lavabo y aún no llega. Si ya alcanza con un taburete estable y hay supervisión, puede no hacer falta."),
                         faqItem("¿Madera o contrachapado?",
-                                "Lo decisivo es la estabilidad y los cierres. El abedul de 18 mm y el nogal de esta lista son materiales distintos; no los ordenamos por precio."),
-                        faqItem("¿El sistema anticaídas viene de serie?",
-                                "En la EVO, KidSafe es un accesorio en varias fichas. No lo des por incluido."),
+                                "Lo decisivo es la estabilidad y los cierres. La haya FSC de hauck y el nogal de YOLEO son materiales distintos; no los ordenamos por precio."),
+                        faqItem("¿Cuál se pliega?",
+                                "COSTWAY y YOLEO se pliegan. hauck y BEY & CO no declaran plegado."),
                         faqItem("¿Puede usarla solo?",
                                 "No. Aunque suba y baje, el riesgo está en la encimera: fuego, cuchillos, agua."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",

@@ -1,6 +1,9 @@
 export const COMPARISON_SLUGS = [
+  "mejores-aprender-vestirse-3-anos",
   "mejores-bicicletas-equilibrio-3-anos",
   "mejores-bicicletas-sin-pedales-3-anos",
+  "mejores-correpasillos-3-anos",
+  "mejores-cubiertos-infantiles-3-anos",
   "mejores-elegir-regalo-edad-3-anos",
   "mejores-ideas-regalo-3-anos",
   "mejores-juegos-montessori-3-anos",
@@ -16,6 +19,7 @@ export const COMPARISON_SLUGS = [
   "mejores-seleccion-regalos-3-anos",
   "mejores-torres-aprendizaje-3-anos",
   "mejores-torres-cocina-3-anos",
+  "mejores-triangulos-pikler-3-anos",
   "mejores-vajillas-infantiles-3-anos",
   "mejores-vajillas-mesa-diaria-3-anos",
   "mejores-bicicletas-equilibrio-4-anos",

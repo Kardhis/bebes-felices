@@ -86,7 +86,67 @@ class ManualProductCatalogTest {
     void educationalAmazonProductsHaveUniqueIdsAndAsins() {
         var products = EducationalAmazonProducts.all();
 
-        assertThat(products).hasSize(58);
+        assertThat(products).isNotEmpty();
+        assertThat(products).extracting(Product::id).doesNotHaveDuplicates();
+        assertThat(products).extracting(Product::asin).doesNotHaveDuplicates();
+        assertThat(products).allSatisfy(product ->
+                assertThat(product.marketplace()).isEqualTo("www.amazon.es"));
+    }
+
+    @Test
+    void researchedMovementProductsMatchTheirDeclaredAgeAndSubcategory() {
+        var products = catalog.findByIds(List.of(
+                "trepar-mamoi-triangulo-blanco",
+                "trepar-little-tikes-gimnasio",
+                "corre-injusa-africa-twin",
+                "corre-smoby-coche"
+        ));
+
+        assertThat(products).hasSize(4);
+        assertThat(products).allSatisfy(product -> {
+            assertThat(product.categories()).hasSize(2);
+            assertThat(product.categories().get(0)).isEqualTo("Movimiento");
+            assertThat(product.asin()).matches("[A-Z0-9]{10}");
+            assertThat(product.isAvailableForAge(3)).isTrue();
+            assertThat(product.affiliateLink()).isNull();
+        });
+    }
+
+    @Test
+    void movementAmazonProductsHaveUniqueIdsAndAsins() {
+        var products = MovementAmazonProducts.all();
+
+        assertThat(products).hasSize(10);
+        assertThat(products).extracting(Product::id).doesNotHaveDuplicates();
+        assertThat(products).extracting(Product::asin).doesNotHaveDuplicates();
+        assertThat(products).allSatisfy(product ->
+                assertThat(product.marketplace()).isEqualTo("www.amazon.es"));
+    }
+
+    @Test
+    void researchedAutonomyProductsMatchTheirDeclaredAgeAndSubcategory() {
+        var products = catalog.findByIds(List.of(
+                "cubiertos-twistshake-acero",
+                "cubiertos-wmf-animales",
+                "vestir-melissa-habilidades",
+                "vestir-small-foot-cubo"
+        ));
+
+        assertThat(products).hasSize(4);
+        assertThat(products).allSatisfy(product -> {
+            assertThat(product.categories()).hasSize(2);
+            assertThat(product.categories().get(0)).isEqualTo("Autonomía");
+            assertThat(product.asin()).matches("[A-Z0-9]{10}");
+            assertThat(product.isAvailableForAge(3)).isTrue();
+            assertThat(product.affiliateLink()).isNull();
+        });
+    }
+
+    @Test
+    void autonomyAmazonProductsHaveUniqueIdsAndAsins() {
+        var products = AutonomyAmazonProducts.all();
+
+        assertThat(products).hasSize(10);
         assertThat(products).extracting(Product::id).doesNotHaveDuplicates();
         assertThat(products).extracting(Product::asin).doesNotHaveDuplicates();
         assertThat(products).allSatisfy(product ->

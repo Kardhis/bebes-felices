@@ -72,14 +72,16 @@ public class AgePageService {
             + ComparisonPageService.SYMBOLIC_3_SLUG + "/";
     private static final String SENSORY_3_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SENSORY_3_SLUG + "/";
-    private static final String BALANCE_GUIDE_3_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.BALANCE_GUIDE_3_SLUG + "/";
     private static final String SCOOTERS_TRIKES_3_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SCOOTERS_TRIKES_3_SLUG + "/";
-    private static final String TOWERS_KITCHEN_3_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TOWERS_KITCHEN_3_SLUG + "/";
-    private static final String TABLEWARE_DAILY_3_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TABLEWARE_DAILY_3_SLUG + "/";
+    private static final String PIKLER_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.PIKLER_3_SLUG + "/";
+    private static final String RIDE_ON_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.RIDE_ON_3_SLUG + "/";
+    private static final String CUTLERY_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.CUTLERY_3_SLUG + "/";
+    private static final String DRESSING_3_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.DRESSING_3_SLUG + "/";
     private static final String GIFT_SELECTION_3_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.GIFT_SELECTION_3_SLUG + "/";
     private static final String CHOOSE_GIFT_3_COMPARISON_HREF = "/comparativas/"
@@ -158,7 +160,7 @@ public class AgePageService {
             "puzle-madera-animales",
             BALANCE_BIKE_SPOTLIGHT_ID,
             SCOOTER_SPOTLIGHT_ID,
-            "torre-kleiner-riese",
+            "torre-costway-plegable",
             "vajilla-stor-mickey",
             "kit-manualidades-natural"
     );
@@ -329,7 +331,7 @@ public class AgePageService {
                             new LinkItem("Mejores regalos sostenibles para 3 años", SUSTAINABLE_3_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
                             new LinkItem("Regalos duraderos para 3 años", DURABLE_3_COMPARISON_HREF, "Comparativa de juguetes pensados para aguantar el juego intenso y seguir usándose."),
                             new LinkItem("Arte y manualidades con materiales naturales", ARTS_NATURAL_3_COMPARISON_HREF, "Comparativa para crear sin pantallas: plastilina ecológica y pinturas lavables."),
-                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_3_COMPARISON_HREF, "Comparativa de encaje, obra, nudos y cuentas en madera.")
+                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_3_COMPARISON_HREF, "Comparativa de encaje, imitación y recogida en madera.")
                     )),
                     new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Juegos Montessori de formas y encajes", MONTESSORI_3_COMPARISON_HREF, "Comparativa de encaje y clasificación con piezas grandes."),
@@ -339,15 +341,15 @@ public class AgePageService {
                     )),
                     new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
                             new LinkItem("Mejores bicicletas sin pedales para 3 años", BALANCE_BIKES_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
-                            new LinkItem("Patinetes de 3 ruedas", SCOOTERS_3_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango."),
-                            new LinkItem("Bicicletas sin pedales", BALANCE_GUIDE_3_COMPARISON_HREF, "Comparativa para ganar equilibrio con los pies en el suelo."),
-                            new LinkItem("Patinetes y triciclos", SCOOTERS_TRIKES_3_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre.")
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_TRIKES_3_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre."),
+                            new LinkItem("Triángulos Pikler y estructuras de trepar", PIKLER_3_COMPARISON_HREF, "Comparativa para trepar, gatear o deslizarse en interior."),
+                            new LinkItem("Correpasillos", RIDE_ON_3_COMPARISON_HREF, "Comparativa de motos y un coche para empujar sentado, sin pedales ni manillar de patinete.")
                     )),
                     new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Torres de aprendizaje", TOWERS_3_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
                             new LinkItem("Vajilla infantil irrompible", TABLEWARE_3_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda."),
-                            new LinkItem("Torres para la cocina", TOWERS_KITCHEN_3_COMPARISON_HREF, "Comparativa de torres para la rutina diaria en la encimera."),
-                            new LinkItem("Vajilla para la mesa diaria", TABLEWARE_DAILY_3_COMPARISON_HREF, "Comparativa de platos y vasos para las comidas de cada día.")
+                            new LinkItem("Cubiertos infantiles", CUTLERY_3_COMPARISON_HREF, "Comparativa de tenedor, cuchillo y cuchara para comer sin cubiertos de adulto."),
+                            new LinkItem("Aprender a vestirse", DRESSING_3_COMPARISON_HREF, "Comparativa de botones, cremalleras, cordones y pestillos de la rutina.")
                     )),
                     new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
                             new LinkItem("Ideas de regalo para 3 años", GIFTS_3_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
@@ -361,7 +363,7 @@ public class AgePageService {
                             new LinkItem("Mejores regalos sostenibles para 4 años", SUSTAINABLE_COMPARISON_HREF, "Comparativa de madera certificada y plástico reciclado."),
                             new LinkItem("Mejores regalos duraderos para 4 años", DURABLE_4_COMPARISON_HREF, "Comparativa de juguetes pensados para aguantar el juego intenso y seguir usándose."),
                             new LinkItem("Arte y manualidades con materiales naturales", ARTS_NATURAL_4_COMPARISON_HREF, "Comparativa para crear sin pantallas: plastilina ecológica y pinturas lavables."),
-                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_4_COMPARISON_HREF, "Comparativa de encaje, obra, nudos y cuentas en madera.")
+                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_4_COMPARISON_HREF, "Comparativa de encaje, imitación y recogida en madera.")
                     )),
                     new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Juegos Montessori de formas y encajes", MONTESSORI_4_COMPARISON_HREF, "Comparativa de encaje y clasificación con piezas grandes."),
@@ -393,7 +395,7 @@ public class AgePageService {
                             new LinkItem("Mejores regalos sostenibles para 5 años", SUSTAINABLE_5_COMPARISON_HREF, "Comparativa de madera, materiales naturales y plástico reciclado."),
                             new LinkItem("Regalos duraderos para 5 años", DURABLE_5_COMPARISON_HREF, "Comparativa de juguetes pensados para aguantar el juego intenso y seguir usándose."),
                             new LinkItem("Arte y manualidades con materiales naturales", ARTS_NATURAL_5_COMPARISON_HREF, "Comparativa para crear sin pantallas: plastilina ecológica y pinturas lavables."),
-                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_5_COMPARISON_HREF, "Comparativa de encaje, obra, nudos y cuentas en madera.")
+                            new LinkItem("Juegos Montessori de madera", MONTESSORI_WOOD_5_COMPARISON_HREF, "Comparativa de encaje, imitación y recogida en madera.")
                     )),
                     new AgePageResponse.NeedGroup("Educativos", "#educativos", List.of(
                             new LinkItem("Juguetes STEM de construcción", STEM_5_COMPARISON_HREF, "Comparativa de retos de lógica, mecanismos y estructuras."),
@@ -468,9 +470,9 @@ public class AgePageService {
                 case "puzle-madera-animales" -> PUZZLES_3_COMPARISON_HREF;
                 case BALANCE_BIKE_SPOTLIGHT_ID -> BALANCE_BIKES_COMPARISON_HREF;
                 case SCOOTER_SPOTLIGHT_ID -> SCOOTERS_3_COMPARISON_HREF;
-                case "torre-kleiner-riese" -> TOWERS_3_COMPARISON_HREF;
+                case "torre-costway-plegable" -> TOWERS_3_COMPARISON_HREF;
                 case "vajilla-stor-mickey" -> TABLEWARE_3_COMPARISON_HREF;
-                case "kit-manualidades-natural" -> SUSTAINABLE_3_COMPARISON_HREF;
+                case "kit-manualidades-natural" -> GIFTS_3_COMPARISON_HREF;
                 default -> null;
             };
         }
@@ -516,7 +518,7 @@ public class AgePageService {
             case SUSTAINABLE_SPOTLIGHT_ID -> "Cuentas de madera para ensartar y contar, incluidas en nuestra comparativa de regalos de materiales declarados.";
             case "patinete-3-ruedas" -> "Base de tres ruedas que aporta estabilidad extra mientras se afianza el equilibrio.";
             case "torre-aprendizaje-madera" -> "Plataforma con barandilla que permite participar en la cocina con una altura segura y regulable.";
-            case "torre-kleiner-riese" -> "Torre plegable recomendada a partir de 3 años, incluida en nuestra comparativa para participar en la cocina.";
+            case "torre-costway-plegable" -> "Torre plegable recomendada a partir de 3 años, incluida en nuestra comparativa para participar en la cocina.";
             case "vajilla-stor-mickey" -> "Set de plato, cuenco y vaso irrompible, incluido en nuestra comparativa para practicar la mesa diaria.";
             case "set-vajilla-infantil" -> "Piezas irrompibles y de tamaño adaptado para practicar comer de forma autónoma.";
             case "set-construccion-magnetico" -> "Piezas magnéticas que facilitan construir estructuras estables y practicar lógica espacial.";

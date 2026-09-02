@@ -20,8 +20,12 @@ class CollectionPageServiceTest {
     void publishesEveryCollectionInTheThreeYearCircuit() {
         List<String> threeYearHubSlugs = List.of(
                 CollectionPageService.SCOOTERS_SLUG,
+                CollectionPageService.PIKLER_SLUG,
+                CollectionPageService.RIDE_ON_SLUG,
                 CollectionPageService.TOWERS_SLUG,
                 CollectionPageService.TABLEWARE_SLUG,
+                CollectionPageService.CUTLERY_SLUG,
+                CollectionPageService.DRESSING_SLUG,
                 CollectionPageService.SUSTAINABLE_3_SLUG,
                 CollectionPageService.GIFTS_3_SLUG
         );
@@ -132,7 +136,7 @@ class CollectionPageServiceTest {
         assertThat(page.canonicalPath()).isEqualTo("/juguetes-educativos/juegos-montessori/");
         assertThat(page.products()).hasSize(6);
         assertThat(page.products().get(0).href())
-                .isEqualTo("/comparativas/mejores-juegos-montessori-3-anos/#producto-juego-montessori-formas");
+                .isEqualTo("/comparativas/mejores-juegos-montessori-3-anos/#producto-montessori-janod-animales");
         assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver comparativa completa");
     }
 
@@ -142,14 +146,19 @@ class CollectionPageServiceTest {
 
         assertThat(page.canonicalPath()).isEqualTo("/sostenibles/regalos-duraderos-3-anos/");
         assertThat(page.products()).hasSize(6);
-        assertThat(page.products().get(0).href())
-                .isEqualTo("/comparativas/mejores-regalos-duraderos-3-anos/#producto-small-foot-grua");
-        assertThat(page.products().get(0).ctaLabel()).isEqualTo("Ver comparativa completa");
         assertThat(page.products())
-                .filteredOn(product -> product.title().contains("manualidades"))
+                .filteredOn(product -> product.title().contains("grúa"))
                 .allSatisfy(product -> {
                     assertThat(product.href()).isEqualTo(
-                            "/comparativas/mejores-regalos-sostenibles-3-anos/#producto-kit-manualidades-natural"
+                            "/comparativas/mejores-regalos-sostenibles-3-anos/#producto-small-foot-grua"
+                    );
+                    assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
+                });
+        assertThat(page.products())
+                .filteredOn(product -> product.title().contains("SES Creative Eco"))
+                .allSatisfy(product -> {
+                    assertThat(product.href()).isEqualTo(
+                            "/comparativas/mejores-manualidades-materiales-naturales-3-anos/#producto-arte-ses-eco-mega-7"
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
@@ -167,7 +176,7 @@ class CollectionPageServiceTest {
         assertThat(page.canonicalPath()).isEqualTo("/regalos/ideas-regalo-3-anos/");
         assertThat(page.products()).extracting(product -> product.href())
                 .contains(
-                        "/comparativas/mejores-juegos-montessori-3-anos/#producto-juego-montessori-formas",
+                        "/comparativas/mejores-juegos-montessori-madera-3-anos/#producto-juego-montessori-formas",
                         "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet",
                         "/comparativas/mejores-patinetes-3-anos/#producto-patinete-micro-mini-deluxe"
                 );

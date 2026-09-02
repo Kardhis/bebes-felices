@@ -39,10 +39,14 @@ describe("categoryRoutes", () => {
     expect(collectionsForPrefix("movimiento")).toEqual([
       "patinetes",
       "bicicletas-sin-pedales",
+      "triangulos-pikler",
+      "correpasillos",
     ]);
     expect(collectionsForPrefix("autonomia")).toEqual([
       "torres-de-aprendizaje",
       "vajilla-infantil",
+      "cubiertos-infantiles",
+      "aprender-vestirse",
     ]);
     expect(collectionsForPrefix("regalos")).toEqual([
       "ideas-regalo-3-anos",

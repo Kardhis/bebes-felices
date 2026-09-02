@@ -117,12 +117,14 @@ public class CategoryPageService {
                 "Movimiento",
                 "Juguetes de movimiento para niños de 3 a 5 años",
                 List.of(
-                        "Bicicletas sin pedales, patinetes y juego activo al aire libre, con criterios de talla, peso y supervisión.",
+                        "Bicicletas sin pedales, patinetes, estructuras de trepar y correpasillos, con criterios de talla, peso y supervisión.",
                         "Las comparativas cubren modelos concretos; estas páginas explican qué buscar antes de elegir."
                 ),
                 List.of(
                         CollectionPageService.SCOOTERS_SLUG,
-                        CollectionPageService.BALANCE_BIKES_SLUG
+                        CollectionPageService.BALANCE_BIKES_SLUG,
+                        CollectionPageService.PIKLER_SLUG,
+                        CollectionPageService.RIDE_ON_SLUG
                 ),
                 List.of(
                         faq(
@@ -132,6 +134,10 @@ public class CategoryPageService {
                         faq(
                                 "¿Patinete de dos o tres ruedas?",
                                 "A los 3 años la estabilidad extra de tres ruedas ayuda. Más adelante puede interesar un patinete de dos ruedas si el equilibrio ya está asentado."
+                        ),
+                        faq(
+                                "¿Qué hay además de patinete y bici?",
+                                "Un triángulo Pikler o un gimnasio bajo cubre trepar y deslizarse. Un correpasillos se empuja sentado, con los pies en el suelo, y no es una bici sin pedales."
                         )
                 ),
                 List.of(
@@ -144,6 +150,16 @@ public class CategoryPageService {
                                 "Mejores patinetes de 3 ruedas para 3 años",
                                 "/comparativas/mejores-patinetes-3-anos/",
                                 "Tres ruedas de pie o triciclo con mango de adulto."
+                        ),
+                        new LinkItem(
+                                "Triángulos Pikler y estructuras de trepar para 3 años",
+                                "/comparativas/" + ComparisonPageService.PIKLER_3_SLUG + "/",
+                                "Trepar, gatear o deslizarse, sin ruedas."
+                        ),
+                        new LinkItem(
+                                "Correpasillos para 3 años",
+                                "/comparativas/" + ComparisonPageService.RIDE_ON_3_SLUG + "/",
+                                "Empujar sentado, con los pies en el suelo."
                         ),
                         new LinkItem(
                                 "Mejores patinetes para 4 años",
@@ -159,12 +175,14 @@ public class CategoryPageService {
                 "Autonomía",
                 "Productos de autonomía para niños de 3 a 5 años",
                 List.of(
-                        "Torres de aprendizaje, vajilla adaptada y objetos que ayudan a participar en la rutina diaria con seguridad.",
+                        "Torres de aprendizaje, vajilla adaptada, cubiertos infantiles y materiales para vestirse, con utilidad real en la rutina diaria.",
                         "Priorizamos utilidad real en casa, materiales resistentes y encaje con la edad, no gadgets decorativos."
                 ),
                 List.of(
                         CollectionPageService.TOWERS_SLUG,
-                        CollectionPageService.TABLEWARE_SLUG
+                        CollectionPageService.TABLEWARE_SLUG,
+                        CollectionPageService.CUTLERY_SLUG,
+                        CollectionPageService.DRESSING_SLUG
                 ),
                 List.of(
                         faq(
@@ -196,6 +214,16 @@ public class CategoryPageService {
                                 "Mejores vajillas infantiles para 4 años",
                                 "/comparativas/mejores-vajillas-infantiles-4-anos/",
                                 "Antideslizante, materiales y facilidad de limpieza."
+                        ),
+                        new LinkItem(
+                                "Cubiertos infantiles para 3 años",
+                                "/comparativas/mejores-cubiertos-infantiles-3-anos/",
+                                "Tenedor, cuchillo y cuchara de mango corto."
+                        ),
+                        new LinkItem(
+                                "Aprender a vestirse a los 3 años",
+                                "/comparativas/mejores-aprender-vestirse-3-anos/",
+                                "Botones, cremalleras, cordones y pestillos."
                         )
                 )
         ));

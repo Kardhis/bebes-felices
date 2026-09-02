@@ -28,8 +28,12 @@ class CollectionPageControllerTest {
     @ParameterizedTest
     @ValueSource(strings = {
             CollectionPageService.SCOOTERS_SLUG,
+            CollectionPageService.PIKLER_SLUG,
+            CollectionPageService.RIDE_ON_SLUG,
             CollectionPageService.TOWERS_SLUG,
             CollectionPageService.TABLEWARE_SLUG,
+            CollectionPageService.CUTLERY_SLUG,
+            CollectionPageService.DRESSING_SLUG,
             CollectionPageService.SUSTAINABLE_3_SLUG,
             CollectionPageService.GIFTS_3_SLUG
     })

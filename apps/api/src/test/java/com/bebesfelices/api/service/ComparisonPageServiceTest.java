@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -222,10 +223,10 @@ class ComparisonPageServiceTest {
         assertThat(towers.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
                         "torre-yoleo-transformer",
-                        "torre-bianconiglio-evo",
-                        "torre-kleiner-riese",
+                        "torre-hauck-learn-n-explore",
+                        "torre-costway-plegable",
                         "torre-bey-co",
-                        "torre-bianconiglio-transformer"
+                        "torre-maxi-cosi-toucan"
                 );
         assertThat(tableware.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
@@ -268,16 +269,16 @@ class ComparisonPageServiceTest {
 
         assertThat(montessori.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "juego-montessori-formas",
-                        "montessori-goula-baby-shapes",
-                        "montessori-formas-geometricas",
-                        "montessori-noah-ark",
-                        "montessori-janod-tropik"
+                        "montessori-janod-animales",
+                        "montessori-melissa-tres-puzzles",
+                        "montessori-janod-ballenas",
+                        "montessori-janod-tropik",
+                        "puzle-melissa-granja-peg"
                 );
         assertThat(puzzles.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
                         "puzle-madera-animales",
-                        "puzle-melissa-granja",
+                        "puzle-melissa-mascotas",
                         "puzle-educa-selva",
                         "haba-puzles-cuatro-estaciones",
                         "puzle-educa-disney-madera"
@@ -287,34 +288,44 @@ class ComparisonPageServiceTest {
                         "patinete-micro-mini-deluxe",
                         "patinete-molto-maxi",
                         "patinete-globber-junior-foldable",
+                        "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 );
-        assertThat(towers.entries().get(0).productId()).isEqualTo("torre-kleiner-riese");
+        assertThat(towers.entries().get(0).productId()).isEqualTo("torre-costway-plegable");
         assertThat(tableware.entries().get(0).productId()).isEqualTo("vajilla-stor-mickey");
         assertThat(gifts.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
                         "juego-montessori-formas",
                         "puzle-madera-animales",
                         "bici-chicco-red-bullet",
-                        "torre-kleiner-riese",
+                        "torre-yoleo-transformer",
                         "kit-manualidades-natural"
                 );
         assertThat(sustainable.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "kit-manualidades-natural",
                         "cuentas-melissa-doug",
                         "small-foot-grua",
                         "green-toys-construccion",
-                        "haba-puzles-cuatro-estaciones"
+                        "haba-puzles-cuatro-estaciones",
+                        "plantoys-ata-zapato"
                 );
         assertThat(durable.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "small-foot-grua",
-                        "green-toys-construccion",
-                        "plantoys-ata-zapato",
-                        "haba-puzles-cuatro-estaciones",
-                        "cuentas-melissa-doug"
+                        "puzle-madera-animales",
+                        "puzle-melissa-mascotas",
+                        "puzle-educa-selva",
+                        "puzle-educa-disney-madera",
+                        "simbolico-theo-klein-miele"
                 );
+        List<String> sosteniblesNeedProductIds = Stream.of(
+                        service.getBySlug(ComparisonPageService.SUSTAINABLE_3_SLUG).orElseThrow(),
+                        service.getBySlug(ComparisonPageService.DURABLE_3_SLUG).orElseThrow(),
+                        service.getBySlug(ComparisonPageService.ARTS_NATURAL_3_SLUG).orElseThrow(),
+                        service.getBySlug(ComparisonPageService.MONTESSORI_WOOD_3_SLUG).orElseThrow()
+                )
+                .flatMap(page -> page.entries().stream().map(ComparisonPageResponse.Entry::productId))
+                .toList();
+        assertThat(sosteniblesNeedProductIds).doesNotHaveDuplicates().hasSize(20);
         assertThat(List.of(montessori, puzzles, scooters, towers, tableware, gifts, sustainable, durable))
                 .allSatisfy(page -> {
                     assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
@@ -330,7 +341,7 @@ class ComparisonPageServiceTest {
                         assertThat(entry.affiliateHref()).isNull();
                     });
                 });
-        assertThat(scooters.entries()).hasSize(4);
+        assertThat(scooters.entries()).hasSize(5);
         assertThat(montessori.header().h1()).isEqualTo("Mejores juegos Montessori de formas y encajes para 3 años");
         assertThat(scooters.header().h1()).isEqualTo("Mejores patinetes de 3 ruedas para 3 años");
         assertThat(durable.header().h1()).isEqualTo("Mejores regalos duraderos para 3 años");
@@ -348,6 +359,10 @@ class ComparisonPageServiceTest {
         ComparisonPageResponse sensory = service.getBySlug(ComparisonPageService.SENSORY_3_SLUG).orElseThrow();
         ComparisonPageResponse balanceGuide = service.getBySlug(ComparisonPageService.BALANCE_GUIDE_3_SLUG).orElseThrow();
         ComparisonPageResponse scootersTrikes = service.getBySlug(ComparisonPageService.SCOOTERS_TRIKES_3_SLUG).orElseThrow();
+        ComparisonPageResponse pikler = service.getBySlug(ComparisonPageService.PIKLER_3_SLUG).orElseThrow();
+        ComparisonPageResponse rideOn = service.getBySlug(ComparisonPageService.RIDE_ON_3_SLUG).orElseThrow();
+        ComparisonPageResponse cutlery = service.getBySlug(ComparisonPageService.CUTLERY_3_SLUG).orElseThrow();
+        ComparisonPageResponse dressing = service.getBySlug(ComparisonPageService.DRESSING_3_SLUG).orElseThrow();
         ComparisonPageResponse towersKitchen = service.getBySlug(ComparisonPageService.TOWERS_KITCHEN_3_SLUG).orElseThrow();
         ComparisonPageResponse tablewareDaily = service.getBySlug(ComparisonPageService.TABLEWARE_DAILY_3_SLUG).orElseThrow();
         ComparisonPageResponse giftSelection = service.getBySlug(ComparisonPageService.GIFT_SELECTION_3_SLUG).orElseThrow();
@@ -355,27 +370,27 @@ class ComparisonPageServiceTest {
 
         assertThat(arts.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "kit-manualidades-natural",
-                        "arte-crayola-tempera-6",
+                        "arte-ses-eco-mega-7",
+                        "arte-jovi-pintura-dedos-6",
                         "arte-crayola-effects",
-                        "arte-crayola-metallic",
+                        "arte-jovi-plastilina-vegetal-12",
                         "arte-crayola-paw-patrol"
                 );
         assertThat(wood.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "montessori-janod-tropik",
+                        "juego-montessori-formas",
                         "montessori-goula-baby-shapes",
-                        "small-foot-grua",
-                        "plantoys-ata-zapato",
-                        "cuentas-melissa-doug"
+                        "simbolico-sundaymot-33",
+                        "puzle-melissa-granja-peg",
+                        "lectura-three-pigs"
                 );
         assertThat(symbolic.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
                         "simbolico-theo-klein-miele",
                         "simbolico-kidkraft-vintage",
-                        "simbolico-beeloom-babycue",
-                        "simbolico-deao-cocina",
-                        "simbolico-sundaymot-32"
+                        "simbolico-small-foot-compacta",
+                        "simbolico-janod-macaron",
+                        "simbolico-janod-veterinario"
                 );
         assertThat(sensory.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
@@ -393,8 +408,40 @@ class ComparisonPageServiceTest {
                         "bici-kinderkraft-goswift",
                         "bici-puky-lr-m"
                 );
-        assertThat(scootersTrikes.entries()).hasSize(4);
-        assertThat(towersKitchen.entries().get(0).productId()).isEqualTo("torre-kleiner-riese");
+        assertThat(scootersTrikes.entries()).hasSize(5);
+        assertThat(pikler.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "trepar-mamoi-triangulo-blanco",
+                        "trepar-mamoi-triangulo-natural",
+                        "trepar-little-tikes-gimnasio",
+                        "trepar-little-tikes-tobogan",
+                        "trepar-costway-7en1"
+                );
+        assertThat(rideOn.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "corre-injusa-africa-twin",
+                        "corre-injusa-neox-kawasaki",
+                        "corre-feber-motofeber-casual",
+                        "corre-molto-cross-race",
+                        "corre-smoby-coche"
+                );
+        assertThat(cutlery.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "cubiertos-twistshake-acero",
+                        "cubiertos-mam-aprendizaje",
+                        "cubiertos-wmf-animales",
+                        "cubiertos-exzact-safari",
+                        "cubiertos-lehoo-vehiculos"
+                );
+        assertThat(dressing.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "vestir-melissa-habilidades",
+                        "vestir-melissa-cordones",
+                        "vestir-small-foot-cubo",
+                        "vestir-melissa-disfraces",
+                        "vestir-melissa-pestillos"
+                );
+        assertThat(towersKitchen.entries().get(0).productId()).isEqualTo("torre-costway-plegable");
         assertThat(tablewareDaily.entries().get(0).productId()).isEqualTo("vajilla-stor-mickey");
         assertThat(giftSelection.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
@@ -414,7 +461,7 @@ class ComparisonPageServiceTest {
                 );
         assertThat(List.of(
                 arts, wood, symbolic, sensory, balanceGuide, scootersTrikes,
-                towersKitchen, tablewareDaily, giftSelection, chooseGift
+                pikler, rideOn, cutlery, dressing, towersKitchen, tablewareDaily, giftSelection, chooseGift
         )).allSatisfy(page -> {
             assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
             assertThat(page.targetAge()).isEqualTo(3);
@@ -581,10 +628,11 @@ class ComparisonPageServiceTest {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelices-21");
         properties.setProductAsins(Map.of(
-                "patinete-micro-mini-deluxe", "B09PRNX4HX",
-                "patinete-molto-maxi", "B09WMPSMM4",
-                "patinete-globber-junior-foldable", "B09CQDGBJ3",
+                "patinete-micro-mini-deluxe", "B0B82TSPP8",
+                "patinete-molto-maxi", "B0D45VJLR8",
+                "patinete-globber-junior-foldable", "B0BYSX61WD",
                 "patinete-globber-master-lights", "B08G19X6GK",
+                "patinete-micro-mini-3en1", "B07RM5Z2LY",
                 "triciclo-chicco-u-go", "B00URLWKYG"
         ));
         AtomicInteger creatorsApiCalls = new AtomicInteger();
@@ -604,9 +652,9 @@ class ComparisonPageServiceTest {
         assertThat(creatorsApiCalls).hasValue(0);
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
                 .containsExactly(
-                        "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B09WMPSMM4?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B09CQDGBJ3?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0B82TSPP8?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0D45VJLR8?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0BYSX61WD?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B08G19X6GK?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B00URLWKYG?tag=bebesfelices-21"
                 );

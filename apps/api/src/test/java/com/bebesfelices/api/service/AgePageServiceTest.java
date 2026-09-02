@@ -141,6 +141,10 @@ class AgePageServiceTest {
                 "/comparativas/mejores-juguetes-sensoriales-3-anos/",
                 "/comparativas/mejores-bicicletas-equilibrio-3-anos/",
                 "/comparativas/mejores-patinetes-triciclos-3-anos/",
+                "/comparativas/mejores-triangulos-pikler-3-anos/",
+                "/comparativas/mejores-correpasillos-3-anos/",
+                "/comparativas/mejores-cubiertos-infantiles-3-anos/",
+                "/comparativas/mejores-aprender-vestirse-3-anos/",
                 "/comparativas/mejores-torres-cocina-3-anos/",
                 "/comparativas/mejores-vajillas-mesa-diaria-3-anos/",
                 "/comparativas/mejores-seleccion-regalos-3-anos/",
@@ -159,9 +163,13 @@ class AgePageServiceTest {
                 "/movimiento/",
                 "/movimiento/patinetes/",
                 "/movimiento/bicicletas-sin-pedales/",
+                "/movimiento/triangulos-pikler/",
+                "/movimiento/correpasillos/",
                 "/autonomia/",
                 "/autonomia/torres-de-aprendizaje/",
-                "/autonomia/vajilla-infantil/"
+                "/autonomia/vajilla-infantil/",
+                "/autonomia/cubiertos-infantiles/",
+                "/autonomia/aprender-vestirse/"
         );
 
         assertThat(hrefs).isNotEmpty();
@@ -449,8 +457,8 @@ class AgePageServiceTest {
                 "juego-montessori-formas", "B00005RF5G",
                 "puzle-madera-animales", "B00HWHNNRG",
                 "bici-chicco-red-bullet", "B004MW55Z2",
-                "patinete-micro-mini-deluxe", "B09PRNX4HX",
-                "torre-kleiner-riese", "B0B7RFPP5Z",
+                "patinete-micro-mini-deluxe", "B0B82TSPP8",
+                "torre-costway-plegable", "B0D1GJGDJW",
                 "vajilla-stor-mickey", "B0CZTZ917D",
                 "kit-manualidades-natural", "B09MSCSYB3"
         ));
@@ -469,8 +477,8 @@ class AgePageServiceTest {
                         "https://www.amazon.es/dp/B00005RF5G?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B00HWHNNRG?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B004MW55Z2?tag=bebesfelice0c-21",
-                        "https://www.amazon.es/dp/B09PRNX4HX?tag=bebesfelice0c-21",
-                        "https://www.amazon.es/dp/B0B7RFPP5Z?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B0B82TSPP8?tag=bebesfelice0c-21",
+                        "https://www.amazon.es/dp/B0D1GJGDJW?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B0CZTZ917D?tag=bebesfelice0c-21",
                         "https://www.amazon.es/dp/B09MSCSYB3?tag=bebesfelice0c-21"
                 );
