@@ -300,24 +300,24 @@ public class CollectionPageService {
                 ),
                 List.of(
                         "Asiento a una altura que permita empujar con ambos pies.",
-                        "Ruedas anchas o antivuelco.",
+                        "Ruedas anchas o base de cuatro ruedas.",
                         "Edad o peso declarado compatible con 3 años.",
                         "Sin motor; supervisión y zona sin coches."
                 ),
                 List.of(
-                        "corre-injusa-africa-twin",
-                        "corre-injusa-neox-kawasaki",
-                        "corre-feber-motofeber-casual",
-                        "corre-molto-cross-race",
-                        "corre-smoby-coche"
+                        "corre-injusa-winner-honda",
+                        "corre-injusa-tundra-tornado",
+                        "corre-feber-bluey",
+                        "corre-smoby-rookie",
+                        "corre-little-tikes-cozy-coupe"
                 ),
                 comparisonHrefs(
                         ComparisonPageService.RIDE_ON_3_SLUG,
-                        "corre-injusa-africa-twin",
-                        "corre-injusa-neox-kawasaki",
-                        "corre-feber-motofeber-casual",
-                        "corre-molto-cross-race",
-                        "corre-smoby-coche"
+                        "corre-injusa-winner-honda",
+                        "corre-injusa-tundra-tornado",
+                        "corre-feber-bluey",
+                        "corre-smoby-rookie",
+                        "corre-little-tikes-cozy-coupe"
                 ),
                 List.of(
                         faq("¿Correpasillos o bici sin pedales?",
@@ -332,7 +332,7 @@ public class CollectionPageService {
                         new LinkItem(
                                 "Correpasillos para 3 años",
                                 "/comparativas/" + ComparisonPageService.RIDE_ON_3_SLUG + "/",
-                                "Comparativa de motos de empuje y un coche con antivuelco."
+                                "Comparativa de motos de empuje, un Rookie de cuatro ruedas y un Cozy Coupe."
                         ),
                         new LinkItem(
                                 "Patinetes y triciclos para 3 años",

@@ -419,11 +419,11 @@ class ComparisonPageServiceTest {
                 );
         assertThat(rideOn.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "corre-injusa-africa-twin",
-                        "corre-injusa-neox-kawasaki",
-                        "corre-feber-motofeber-casual",
-                        "corre-molto-cross-race",
-                        "corre-smoby-coche"
+                        "corre-injusa-winner-honda",
+                        "corre-injusa-tundra-tornado",
+                        "corre-feber-bluey",
+                        "corre-smoby-rookie",
+                        "corre-little-tikes-cozy-coupe"
                 );
         assertThat(cutlery.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(

@@ -2669,38 +2669,38 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> RIDE_ON_3 = List.of(
             entry(
-                    "corre-injusa-africa-twin",
-                    "INJUSA moto Honda África Twin",
-                    "Empujar sentado a los 3 y 4 años",
-                    "Moto correpasillos de ruedas anchas con asa de transporte, indicada para 2 a 4 años. El gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie.",
+                    "corre-injusa-winner-honda",
+                    "INJUSA moto Winner Honda",
+                    "Empujar sentado a los 3 años y seguir después",
+                    "Moto XL de 99 × 39 × 61 cm, a partir de 3 años, con ruedas anchas y asa de transporte. El gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie. El formato es mayor que un Tundra o un Motofeber.",
                     List.of(
-                            "Rango declarado que incluye 3 y 4 años.",
-                            "Ruedas anchas y asa de transporte.",
-                            "Fabricada en España según la ficha."
+                            "Edad declarada a partir de 3 años.",
+                            "99 × 39 × 61 cm; asiento a 47 cm según la ficha.",
+                            "Fabricada en España; asa de transporte."
                     ),
                     List.of(
                             "No enseña el equilibrio de dos ruedas.",
-                            "Pregunta si ya tiene moto o coche de empuje."
+                            "Mide entrepierna: el asiento es más alto que en las motos de 18 meses."
                     ),
-                    "2-4 años",
-                    note("Encaje a los 3 años", "Pensada para 2 a 4 años, no solo para bebés."),
+                    "3-7 años",
+                    note("Encaje a los 3 años", "Parte de los 3 años; el tamaño XL sirve si las piernas llegan al suelo."),
                     note("Gesto", "Sentado, pies al suelo, sin pedales."),
-                    note("Espacio", "Interior liso o patio sin tráfico."),
+                    note("Espacio", "Patio o interior amplio; 99 cm de largo."),
                     note("Seguridad", "Supervisión; no es un vehículo eléctrico.")
             ),
             entry(
-                    "corre-injusa-neox-kawasaki",
-                    "INJUSA moto Neox Kawasaki",
+                    "corre-injusa-tundra-tornado",
+                    "INJUSA moto Tundra Tornado",
                     "Moto baja de 18 meses a 3 años",
-                    "Correpasillos de 18 meses a 3 años, 30 kg, asiento a 37 cm y manillar a 49 cm. Sirve si el niño aún cabe cómodo a los 3; si ya va justo de rodillas, mira la África Twin.",
+                    "Correpasillos de 18 meses a 3 años, 30 kg, asiento a 33 cm y manillar a 49 cm. Sirve si el niño aún cabe cómodo a los 3; si las rodillas van encogidas, mira la Winner Honda.",
                     List.of(
-                            "Asiento a 37 cm y ruedas anchas.",
+                            "Asiento a 33 cm y ruedas anchas de plástico.",
                             "Carga 30 kg y asa de transporte.",
-                            "Edad declarada 18 meses-3 años."
+                            "Edad declarada 18 meses-3 años; fabricación en España."
                     ),
                     List.of(
                             "El tope son 3 años: puede quedarse pequeño a mitad de curso.",
-                            "Decoración de marca; el gesto es el mismo que otras Neox."
+                            "Decoración IML; el gesto es el mismo que otras Tundra."
                     ),
                     "1-3 años",
                     note("Encaje a los 3 años", "Tope 3 años y 30 kg; mide rodillas y asiento."),
@@ -2709,64 +2709,64 @@ public class ComparisonPageService {
                     note("Seguridad", "No para menores de 18 meses; adulto cerca.")
             ),
             entry(
-                    "corre-feber-motofeber-casual",
-                    "FEBER Motofeber Casual",
+                    "corre-feber-bluey",
+                    "FEBER Motofeber Bluey",
                     "Moto de empuje hasta los 3 años",
-                    "Moto correpasillos de 18 meses a 3 años. Formato relajado para interior o patio: pies al suelo, sin motor ni pedales. Si buscas llegar a los 4 años, no es esta ficha.",
+                    "Moto correpasillos de 18 meses a 3 años, 62 × 32,5 × 49 cm, asiento a 29 cm. Formato ligero para interior o patio: pies al suelo, sin motor ni pedales. Si buscas asiento más alto, no es esta ficha.",
                     List.of(
                             "Edad declarada de 18 meses a 3 años.",
-                            "Diseño estable para empujar con los pies.",
-                            "Uso interior o exterior según la ficha."
+                            "Ruedas anchas; uso interior o exterior según la ficha.",
+                            "Peso del producto 2,86 kg."
                     ),
                     List.of(
-                            "No cubre los 4 años.",
-                            "No es un correpasillos con forma de coche."
+                            "Asiento a 29 cm y carga de 20 kg: a los 3 años puede quedar justo.",
+                            "La licencia Bluey no cambia el gesto de empujar."
                     ),
                     "1-3 años",
-                    note("Encaje a los 3 años", "Tope 3 años; comprueba que las piernas empujen sin encogerse."),
+                    note("Encaje a los 3 años", "Tope 3 años; comprueba peso y que las piernas empujen sin encogerse."),
                     note("Gesto", "Moto sentada, no patinete."),
-                    note("Espacio", "Pasillo o terraza lisa."),
+                    note("Espacio", "62 cm de largo; pasillo o terraza lisa."),
                     note("Seguridad", "Sin tráfico; no bajar bordillos.")
             ),
             entry(
-                    "corre-molto-cross-race",
-                    "MOLTO Cross Race Silver",
-                    "Moto para superficies variadas",
-                    "Moto correpasillos a partir de 18 meses, pensada para distintos suelos. A los 3 años cubre el empuje sentado si el asiento aún llega; no sustituye una bici sin pedales.",
+                    "corre-smoby-rookie",
+                    "Smoby Rookie de cuatro ruedas",
+                    "Cuatro ruedas de metal, no moto",
+                    "Correpasillos de estructura metálica, cuatro ruedas silenciosas y maletero, a partir de 12 meses. A los 3 años cubre el empuje sentado si el asiento aún llega; no sustituye una bici sin pedales.",
                     List.of(
-                            "A partir de 18 meses según la ficha.",
-                            "Uso en varios terrenos.",
-                            "Empuje con los pies, sin pedales."
+                            "A partir de 12 meses según la ficha.",
+                            "Cuatro ruedas y chasis de metal.",
+                            "Maletero y ruedas silenciosas para interior."
                     ),
                     List.of(
-                            "Confirma altura de asiento en tu lote: MOLTO no detalla cm en todas las fichas.",
-                            "No es un todoterreno eléctrico."
+                            "El asiento no se regula: confirma altura en tu lote.",
+                            "No es un Cozy Coupe con techo ni una moto."
                     ),
-                    "1-4 años",
-                    note("Encaje a los 3 años", "Desde 18 meses; a los 3 sigue si las piernas empujan sueltas."),
-                    note("Gesto", "Moto de empuje en suelo irregular suave."),
-                    note("Espacio", "Patio o interior; evita grava profunda."),
+                    "1-3 años",
+                    note("Encaje a los 3 años", "Desde 12 meses; a los 3 sigue si las piernas empujan sueltas."),
+                    note("Gesto", "Empuje sentado sobre cuatro ruedas."),
+                    note("Espacio", "52 × 30 × 38 cm según ficha."),
                     note("Seguridad", "Calzado cerrado; adulto a la vista.")
             ),
             entry(
-                    "corre-smoby-coche",
-                    "Smoby Little Smoby correpasillos",
-                    "Coche con antivuelco, no moto",
-                    "Coche correpasillos con dispositivos antivuelco y hueco bajo el asiento, a partir de 10 meses, fabricado en Francia. A los 3 años sirve si aún cabe: el gesto es empujar un coche, distinto de la moto y de la bici sin pedales.",
+                    "corre-little-tikes-cozy-coupe",
+                    "Little Tikes Cozy Coupe",
+                    "Coche con techo, no moto",
+                    "Coche correpasillos con techo, claxon y suelo extraíble para empujar con los pies, de 18 meses a 5 años. A los 3 años el gesto es empujar un coche, distinto de la moto y de la bici sin pedales.",
                     List.of(
-                            "Antivuelco delantero y trasero.",
-                            "Hueco bajo el asiento.",
-                            "54 × 27 × 40 cm según la ficha."
+                            "Rango 18 meses-5 años y carga de 23 kg.",
+                            "Techo y claxon; montaje de adulto.",
+                            "Suelo extraíble para el empuje con los pies."
                     ),
                     List.of(
-                            "Formato compacto: a los 3 años puede quedar pequeño de asiento.",
-                            "No es un Cozy Coupe con puerta."
+                            "Ocupa más que una moto: unos 71 × 44 × 84 cm.",
+                            "23 kg de carga: comprueba el peso real."
                     ),
-                    "1-3 años",
-                    note("Encaje a los 3 años", "Desde 10 meses; a los 3 solo si las rodillas no van encogidas."),
+                    "1-5 años",
+                    note("Encaje a los 3 años", "De 18 meses a 5 años; a los 3 el suelo va quitado para empujar."),
                     note("Gesto", "Coche sentado con volante, no moto."),
-                    note("Espacio", "Interior; ruedas para suelo liso."),
-                    note("Seguridad", "Antivuelco no sustituye supervisión.")
+                    note("Espacio", "Interior amplio o patio; no es un juguete de pasillo."),
+                    note("Seguridad", "Un niño; supervisión; no cerca de desniveles.")
             )
     );
 
@@ -5050,7 +5050,7 @@ public class ComparisonPageService {
                 AGE_3,
                 RIDE_ON_3,
                 "Correpasillos para 3 años | Bebes Felices",
-                "Comparamos cinco correpasillos para 3 años: motos de empuje y un coche con antivuelco, con metodología y afiliación transparentes.",
+                "Comparamos cinco correpasillos para 3 años: motos de empuje, un Rookie de cuatro ruedas y un Cozy Coupe, con metodología y afiliación transparentes.",
                 "Correpasillos para 3 años",
                 new ComparisonPageResponse.Header(
                         "Correpasillos para 3 años",
@@ -5063,31 +5063,31 @@ public class ComparisonPageService {
                 ),
                 "Los cinco correpasillos",
                 List.of(
-                        summary("Para seguir a los 3 y 4 años", "corre-injusa-africa-twin", "Moto de 2 a 4 años con ruedas anchas."),
-                        summary("Para una moto baja hasta 3 años", "corre-injusa-neox-kawasaki", "Asiento 37 cm y carga 30 kg."),
-                        summary("Para una moto hasta los 3 años", "corre-feber-motofeber-casual", "18 meses a 3 años, interior o patio."),
-                        summary("Para suelos variados", "corre-molto-cross-race", "Moto de empuje a partir de 18 meses."),
-                        summary("Para un coche con antivuelco", "corre-smoby-coche", "Formato compacto y hueco bajo el asiento.")
+                        summary("Para seguir a los 3 años y más", "corre-injusa-winner-honda", "Moto XL a partir de 3 años, 99 cm."),
+                        summary("Para una moto baja hasta 3 años", "corre-injusa-tundra-tornado", "Asiento 33 cm y carga 30 kg."),
+                        summary("Para una moto hasta los 3 años", "corre-feber-bluey", "18 meses a 3 años, interior o patio."),
+                        summary("Para cuatro ruedas de metal", "corre-smoby-rookie", "Chasis metálico y maletero, desde 12 meses."),
+                        summary("Para un coche con techo", "corre-little-tikes-cozy-coupe", "18 meses a 5 años, pies al suelo.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si el niño puede empujar sentado a los 3 años. No mezclamos este gesto con bici sin pedales ni patinete.",
                         List.of(
                                 criterion("Encaje a los 3 años", "Edad o talla declarada y si las piernas empujan sueltas."),
                                 criterion("Gesto", "Moto o coche de empuje; pies al suelo."),
-                                criterion("Estabilidad", "Ruedas anchas o antivuelco."),
+                                criterion("Estabilidad", "Ruedas anchas o base de cuatro ruedas."),
                                 criterion("Uso", "Interior liso o patio sin tráfico."),
                                 criterion("Límite", "No es eléctrico, no es bici, no es patinete.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Moto o coche", List.of(
-                                "La moto deja las piernas a los lados. El Smoby es un coche bajo con antivuelco. No hace falta ambos el mismo año."
+                                "La moto deja las piernas a los lados. El Rookie va sobre cuatro ruedas bajas. El Cozy Coupe es un coche con techo. No hace falta los tres el mismo año."
                         )),
                         section("Si ya tiene bici sin pedales", List.of(
                                 "No dupliques el mismo gesto de empujar. El correpasillos no enseña equilibrio de dos ruedas."
                         )),
                         section("Tope de edad", List.of(
-                                "Neox y Motofeber Casual declaran hasta 3 años. África Twin llega a 4. Comprueba asiento y peso."
+                                "Tundra, Motofeber Bluey y Rookie declaran hasta 3 años. Winner Honda parte de 3 y el Cozy Coupe llega a 5. Comprueba asiento y peso."
                         ))
                 )),
                 List.of(
@@ -8594,7 +8594,7 @@ public class ComparisonPageService {
     private Affiliation affiliation() {
         return new Affiliation(
                 "Bebes Felices participa en el Programa de Afiliados de Amazon. Si compras mediante un enlace de esta página, podemos recibir una comisión sin coste adicional para ti. La afiliación no modifica el orden ni el contenido editorial.",
-                "Algunos enlaces pueden ser de afiliado de Amazon."
+                ""
         );
     }
 

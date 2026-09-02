@@ -98,8 +98,8 @@ class ManualProductCatalogTest {
         var products = catalog.findByIds(List.of(
                 "trepar-mamoi-triangulo-blanco",
                 "trepar-little-tikes-gimnasio",
-                "corre-injusa-africa-twin",
-                "corre-smoby-coche"
+                "corre-injusa-winner-honda",
+                "corre-little-tikes-cozy-coupe"
         ));
 
         assertThat(products).hasSize(4);
