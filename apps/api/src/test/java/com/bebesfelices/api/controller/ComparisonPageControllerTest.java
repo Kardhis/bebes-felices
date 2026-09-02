@@ -97,7 +97,7 @@ class ComparisonPageControllerTest {
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SCOOTERS_3_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.entries.length()").value(5))
-                .andExpect(jsonPath("$.entries[0].productId").value("patinete-micro-mini-deluxe"));
+                .andExpect(jsonPath("$.entries[0].productId").value("patinete-yvolution-y-glider"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_3_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.entries[0].productId").value("torre-costway-plegable"));

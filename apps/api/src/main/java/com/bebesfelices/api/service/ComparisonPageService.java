@@ -1426,64 +1426,64 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> SCOOTERS_3 = List.of(
             entry(
-                    "patinete-micro-mini-deluxe",
-                    "Micro Mini Deluxe LED",
-                    "Empezar de pie con tres ruedas ligeras",
-                    "Patinete de tres ruedas para 2 a 5 años: 1,95 kg declarados, giro por inclinación, manillar ajustable y luces LED sin pilas. A los 3 años cubre el primer uso de pie con poco peso que levantar.",
+                    "patinete-yvolution-y-glider",
+                    "Yvolution Y Glider",
+                    "Empezar de pie con tres ruedas LED",
+                    "Patinete de tres ruedas para 3 a 8 años, con giro por inclinación, ruedas LED sin pilas, manillar de 4 alturas y plegado. A los 3 años cubre el primer uso de pie con una base ancha.",
                     List.of(
-                            "Tres ruedas, giro por inclinación y edad declarada de 2 a 5 años.",
-                            "Peso declarado de 1,95 kg y carga máxima de 50 kg.",
-                            "Manillar ajustable; las fichas del Mini Deluxe LED indican 48-68 cm.",
-                            "Luces LED en las ruedas delanteras sin pilas y freno trasero."
+                            "Tres ruedas y giro por inclinación; edad declarada de 3 a 8 años.",
+                            "Carga máxima de 50 kg y ruedas LED delanteras sin pilas.",
+                            "Manillar de 4 alturas; las fichas del Y Glider Air indican 63-80 cm.",
+                            "Plegado del manillar para guardar o llevar y freno trasero."
                     ),
                     List.of(
-                            "No declara sistema de plegado en esta ficha; el manillar sí se desmonta.",
+                            "El manillar parte de 63 cm, por encima de los 48 cm del Mini 3en1.",
                             "No sustituye una bicicleta sin pedales ni un modelo de dos ruedas."
                     ),
-                    "2-5 años",
-                    note("Encaje a los 3 años", "Edad 2-5 años y manillar 48-68 cm, usable con un niño bajo."),
+                    "3-8 años",
+                    note("Encaje a los 3 años", "La edad mínima declarada es 3 años."),
                     note("Estabilidad", "Tres ruedas y giro por inclinación; se usa de pie."),
-                    note("Manejo", "Peso declarado de 1,95 kg y carga máxima de 50 kg."),
+                    note("Manejo", "Cuatro alturas de manillar y plegado; carga máxima de 50 kg."),
                     note("Seguridad", "Freno trasero; casco, calzado cerrado y supervisión.")
             ),
             entry(
-                    "patinete-molto-maxi",
-                    "MOLTO Maxi Scooter",
-                    "Una primera opción sencilla de 3 a 5 años",
-                    "Patinete de tres ruedas indicado para 3 a 5 años, con luces LED, manillar de 57 a 67 cm, freno trasero y montaje sin herramientas.",
+                    "patinete-colorbaby-eezi-mini",
+                    "ColorBaby Eezi Mini",
+                    "Una primera opción sencilla desde 2 años",
+                    "Patinete de tres ruedas indicado desde 24 meses y hasta 20 kg, con manillar desmontable de 3 alturas, ruedas delanteras oscilantes y freno trasero.",
                     List.of(
-                            "Edad declarada de 3 a 5 años.",
-                            "Manillar regulable entre 57 y 67 cm.",
-                            "Luces LED, plataforma antideslizante y freno trasero.",
-                            "Montaje sin herramientas según la ficha."
+                            "Edad declarada a partir de 24 meses.",
+                            "Manillar regulable en 3 alturas y desmontable para guardar.",
+                            "Ruedas delanteras oscilantes, plataforma antideslizante y freno trasero.",
+                            "Peso declarado de 2,77 kg y carga máxima de 20 kg."
                     ),
                     List.of(
-                            "El manillar parte de 57 cm, por encima de los 48 cm del Mini Deluxe LED.",
-                            "La ficha consultada no declara plegado ni el peso del patinete; la carga máxima es 50 kg."
+                            "La carga máxima es 20 kg: comprueba el peso real del niño.",
+                            "El manillar cubre un rango corto; no acompaña hasta los 5 años si el niño es alto."
                     ),
-                    "3-5 años",
-                    note("Encaje a los 3 años", "La edad mínima declarada es 3 años."),
-                    note("Estabilidad", "Tres ruedas y plataforma antideslizante."),
-                    note("Manejo", "Freno trasero y carga máxima de 50 kg; no hay peso del patinete en la ficha."),
-                    note("Seguridad", "Casco y zona sin tráfico. La ficha recomienda no usarlo en circulación.")
+                    "Desde 24 meses",
+                    note("Encaje a los 3 años", "Indicada desde 24 meses; a esta edad encaja si el niño sigue bajo los 20 kg."),
+                    note("Estabilidad", "Tres ruedas y ruedas delanteras oscilantes."),
+                    note("Manejo", "2,77 kg y manillar desmontable; carga máxima 20 kg."),
+                    note("Seguridad", "Freno trasero; casco y zona sin tráfico.")
             ),
             entry(
-                    "patinete-globber-junior-foldable",
-                    "Globber Junior Foldable Lights",
+                    "patinete-globber-primo-foldable",
+                    "Globber Primo Foldable Lights",
                     "Plegar y llevar el patinete",
-                    "Patinete de tres ruedas plegable desde 2 años, con luces LED por dinamo, bloqueo de dirección, manillar de 54, 61 y 68 cm y carga máxima de 50 kg.",
+                    "Patinete de tres ruedas plegable para 3 a 7 años, con luces LED por dinamo, bloqueo de dirección, manillar de 67,5, 72,5 y 77,5 cm y carga máxima de 50 kg.",
                     List.of(
                             "Plegado con botón y modo carrito.",
-                            "Edad declarada a partir de 2 años y carga máxima de 50 kg.",
-                            "Manillar de 3 alturas: 54, 61 y 68 cm.",
+                            "Edad declarada de 3 a 7 años y carga máxima de 50 kg.",
+                            "Manillar de 3 alturas: 67,5, 72,5 y 77,5 cm.",
                             "Luces LED sin batería y bloqueo de dirección."
                     ),
                     List.of(
-                            "El manillar llega hasta 68 cm; no cubre a un niño ya alto que necesite 74 cm.",
+                            "El manillar parte de 67,5 cm: encaja mejor si el niño ya es alto.",
                             "El plegado y el bloqueo piden que un adulto los configure."
                     ),
-                    "Desde 2 años",
-                    note("Encaje a los 3 años", "Indicada desde 2 años; 54 cm de manillar mínimo ayuda a los más bajos."),
+                    "3-7 años",
+                    note("Encaje a los 3 años", "Indicada desde 3 años; el manillar mínimo es 67,5 cm."),
                     note("Estabilidad", "Tres ruedas y bloqueo de dirección opcional."),
                     note("Manejo", "Plegado y modo carrito; carga máxima de 50 kg."),
                     note("Seguridad", "Freno trasero ancho; casco y zona sin tráfico.")
@@ -1501,7 +1501,7 @@ public class ComparisonPageService {
                     ),
                     List.of(
                             "El asiento declara 20 kg: comprueba el peso real si aún lo usa sentado.",
-                            "Hay más piezas que en un Mini Deluxe de pie; un adulto monta y retira los accesorios."
+                            "Hay más piezas que en un patinete de pie sin asiento; un adulto monta y retira los accesorios."
                     ),
                     "1-5 años",
                     note("Encaje a los 3 años", "Rango 1-5 años y manillar 48-68 cm; a esta edad suele usarse ya de pie o como correpasillos."),
@@ -2586,24 +2586,24 @@ public class ComparisonPageService {
                     note("Seguridad", "Suelo nivelado, adulto presente, sin saltar desde lo alto.")
             ),
             entry(
-                    "trepar-mamoi-triangulo-natural",
-                    "MAMOI triángulo de escalada natural",
-                    "Madera cruda a partir de 36 meses",
-                    "Triángulo de pino con tobogán de dos caras y carga de 60 kg. El fabricante lo indica a partir de 36 meses: encaja cuando el niño ya trepa con control, no como primer escalón de bebé.",
+                    "trepar-aiyaplay-3en1",
+                    "AIYAPLAY triángulo de escalada 3 en 1",
+                    "Plegable, con tope a los 4 años",
+                    "Triángulo de pino multilaminado con rampa de dos caras: tobogán o escalada. Edad declarada de 18 a 48 meses y carga de 50 kg. A los 3 años cubre subir, bajar o deslizarse; el tope son 4 años, no un marco para crecer hasta los 6.",
                     List.of(
-                            "Edad declarada a partir de 36 meses.",
-                            "Carga de 60 kg según la ficha.",
-                            "Acabado de madera natural sin pinturas extra."
+                            "Edad declarada de 18 a 48 meses.",
+                            "Rampa reversible y triángulo plegable (64,5 × 21 cm plegado).",
+                            "Carga de 50 kg y norma EN71 según la ficha."
                     ),
                     List.of(
-                            "Más volumen que el modelo compacto de 50 kg.",
-                            "Montaje por el adulto; no se usa a medias."
+                            "147 cm de largo desplegado; pide un rincón seco.",
+                            "El tope son 48 meses: no es el set para seguir a los 5 años."
                     ),
-                    "3-6 años",
-                    note("Encaje a los 3 años", "Edad mínima 36 meses; no adelantar si aún gatea inestable."),
-                    note("Gesto", "Trepar en un marco mayor."),
-                    note("Espacio", "185 cm de largo según ficha; mide el rincón."),
-                    note("Seguridad", "Tornillos bien apretados; supervisión constante.")
+                    "1-4 años",
+                    note("Encaje a los 3 años", "El rango 18-48 meses incluye esta edad; el niño ya trepa con control."),
+                    note("Gesto", "Trepar o deslizarse en un marco plegable."),
+                    note("Espacio", "147 × 64,5 cm; se pliega a 64,5 × 21 cm."),
+                    note("Seguridad", "Interior; montaje del adulto; supervisión constante.")
             ),
             entry(
                     "trepar-little-tikes-gimnasio",
@@ -2626,24 +2626,24 @@ public class ComparisonPageService {
                     note("Seguridad", "Base estable; un niño a la vez en el tobogán.")
             ),
             entry(
-                    "trepar-little-tikes-tobogan",
-                    "Little Tikes tobogán azul y verde",
+                    "trepar-smoby-xs",
+                    "Smoby tobogán XS verde y rojo",
                     "Solo deslizarse, sin marco de escalada",
-                    "Tobogán de 110 cm de recorrido, 5 kg, de 18 meses a 5 años. Escalones y pasamanos. Si no hay sitio para un triángulo, cubre el gesto de subir y bajar sin ruedas.",
+                    "Tobogán de 90 cm de recorrido, 125 × 50 × 75 cm, de 2 a 5 años. Peldaños antideslizantes y se guarda en dos piezas. Si no hay sitio para un triángulo, cubre el gesto de subir y bajar sin ruedas.",
                     List.of(
-                            "Recorrido de 110 cm y poco peso declarado.",
-                            "Escalones y pasamanos.",
-                            "Interior o exterior, 18 meses a 5 años."
+                            "Edad declarada de 24 meses a 5 años.",
+                            "Recorrido de 90 cm y peldaños antideslizantes.",
+                            "Se separa en dos partes para guardar."
                     ),
                     List.of(
                             "No enseña a trepar un marco de barras.",
-                            "Carga 27,2 kg; pendiente suave, no un tobogán de parque."
+                            "La conexión de manguera es opcional; no es un tobogán de parque."
                     ),
-                    "1-5 años",
-                    note("Encaje a los 3 años", "Altura baja; el niño sube los escalones con apoyo si hace falta."),
+                    "2-5 años",
+                    note("Encaje a los 3 años", "La caja indica +3 años; altura baja con peldaños."),
                     note("Gesto", "Deslizarse, no empujar un correpasillos."),
-                    note("Espacio", "Fondo 122 cm; se desmonta para guardar."),
-                    note("Seguridad", "Base ancha; no lo coloques junto a un desnivel.")
+                    note("Espacio", "125 × 50 × 75 cm; las escaleras se acoplan detrás."),
+                    note("Seguridad", "Base estable; no lo coloques junto a un desnivel.")
             ),
             entry(
                     "trepar-costway-7en1",
@@ -4113,15 +4113,15 @@ public class ComparisonPageService {
                         "Cinco modelos reales comparados por estabilidad, talla y tipo de uso",
                         List.of(
                                 "A los 3 años el equilibrio de pie todavía se está asentando. Un patinete de tres ruedas ofrece una base más estable que uno de dos. Un triciclo cubre otra necesidad: pedalear sentado, a veces con mango de adulto.",
-                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No incluimos el Globber Master Lights, indicado desde 4 años con manillar desde 74 cm. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 26 de agosto de 2026.",
+                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No incluimos el Globber Master Lights, indicado desde 4 años con manillar desde 74 cm. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
                                 "Casco homologado, calzado cerrado, una zona sin tráfico y supervisión adulta no se sustituyen con tres ruedas ni con luces LED."
                         )
                 ),
                 "Los cinco modelos",
                 List.of(
-                        summary("Para empezar de pie con poco peso", "patinete-micro-mini-deluxe", "1,95 kg y manillar 48-68 cm."),
-                        summary("Para una primera opción de 3 a 5 años", "patinete-molto-maxi", "Manillar 57-67 cm y montaje sin herramientas."),
-                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Tres alturas y modo carrito."),
+                        summary("Para empezar de pie con luces LED", "patinete-yvolution-y-glider", "Tres ruedas, giro por inclinación y plegado."),
+                        summary("Para una primera opción ligera", "patinete-colorbaby-eezi-mini", "Desde 24 meses, 2,77 kg y hasta 20 kg."),
+                        summary("Para plegar y llevar", "patinete-globber-primo-foldable", "Tres alturas y modo carrito desde 3 años."),
                         summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para pedalear sentado", "triciclo-chicco-u-go", "Mango de adulto y hasta 20 kg.")
                 ),
@@ -4141,12 +4141,12 @@ public class ComparisonPageService {
                                 "No son intercambiables con la bicicleta sin pedales."
                         )),
                         section("Mide el manillar", List.of(
-                                "El niño debe alcanzar el manillar sin encogerse ni estirarse. 48-68 cm no es intercambiable con 57-67 cm.",
-                                "Si el niño es bajo, Mini Deluxe, Mini 3en1 o Junior (54 cm mínimo) encajan mejor que Molto (57 cm)."
+                                "El niño debe alcanzar el manillar sin encogerse ni estirarse. 48-68 cm del Mini 3en1 no es intercambiable con 63-80 cm del Y Glider ni con 67,5 cm del Primo.",
+                                "Si el niño es bajo, Mini 3en1 o Eezi Mini encajan mejor que Primo (67,5 cm mínimo)."
                         )),
                         section("Seguridad antes de salir", List.of(
                                 "Casco, calzado cerrado, freno comprobado y una zona sin tráfico.",
-                                "El asiento del Mini 3en1 y el U-GO declaran 20 kg: comprueba el peso real si aún va sentado."
+                                "Eezi Mini, el asiento del Mini 3en1 y el U-GO declaran 20 kg: comprueba el peso real si aún va sentado o elige el Eezi."
                         ))
                 )),
                 List.of(
@@ -4921,9 +4921,9 @@ public class ComparisonPageService {
                 ),
                 "Las cinco opciones",
                 List.of(
-                        summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
-                        summary("Para una primera de 3 años", "patinete-molto-maxi", "Edad mínima 3 años y manillar 57-67 cm."),
-                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para ir de pie ligero", "patinete-yvolution-y-glider", "Tres ruedas LED y giro por inclinación."),
+                        summary("Para una primera de 3 años", "patinete-colorbaby-eezi-mini", "Desde 24 meses y hasta 20 kg."),
+                        summary("Para plegar y llevar", "patinete-globber-primo-foldable", "Plegado y tres alturas de manillar."),
                         summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),
@@ -4942,7 +4942,7 @@ public class ComparisonPageService {
                                 "Si ya se sostiene y quiere empujar, patinete. Si aún quieres guiar en el paseo, triciclo con mango. El Mini 3en1 cubre el paso de sentado a pie sin pedales."
                         )),
                         section("Peso y plegado", List.of(
-                                "Micro declara 1,95 kg. Globber declara plegado. MOLTO no declara peso en la ficha consultada. El Mini 3en1 añade asiento de 20 kg."
+                                "Y Glider declara plegado. ColorBaby declara 2,77 kg y 20 kg de carga. Globber Primo declara plegado. El Mini 3en1 añade asiento de 20 kg."
                         )),
                         section("Carga del triciclo", List.of(
                                 "U-GO declara 20 kg. Comprueba el peso real del niño."
@@ -4993,9 +4993,9 @@ public class ComparisonPageService {
                 "Las cinco estructuras",
                 List.of(
                         summary("Para un triángulo compacto con rampa", "trepar-mamoi-triangulo-blanco", "20 a 57 cm y rampa reversible."),
-                        summary("Para madera natural desde 3 años", "trepar-mamoi-triangulo-natural", "60 kg y edad mínima 36 meses."),
+                        summary("Para un triángulo plegable hasta 4 años", "trepar-aiyaplay-3en1", "18 a 48 meses y rampa reversible."),
                         summary("Para trepar, gatear y deslizarse", "trepar-little-tikes-gimnasio", "Plástico de interior o jardín."),
-                        summary("Para un tobogán bajo", "trepar-little-tikes-tobogan", "110 cm de recorrido y 5 kg."),
+                        summary("Para un tobogán bajo", "trepar-smoby-xs", "90 cm de recorrido y guarda en dos piezas."),
                         summary("Para triángulo, arco y rampa", "trepar-costway-7en1", "Tres piezas combinables de haya.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -5025,7 +5025,7 @@ public class ComparisonPageService {
                         faqItem("¿Hace falta casco?",
                                 "En interior, en una estructura baja, el casco no es el criterio habitual del patinete. Suelo libre de muebles con esquinas y supervisión sí lo son."),
                         faqItem("¿Se puede usar fuera?",
-                                "Little Tikes lo declara interior o jardín. Los triángulos de madera de esta lista se guardan secos."),
+                                "El gimnasio Little Tikes y el Smoby XS declaran interior o jardín. Los triángulos de madera de esta lista se guardan secos."),
                         faqItem("¿Sustituye al patinete?",
                                 "No. Trepar no enseña a frenar de pie ni el equilibrio de la bici sin pedales."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -6702,9 +6702,9 @@ public class ComparisonPageService {
                 ),
                 "Las cinco opciones",
                 List.of(
-                        summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
-                        summary("Para una primera de 4 años", "patinete-molto-maxi", "Edad mínima 4 años y manillar 57-67 cm."),
-                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para ir de pie ligero", "patinete-yvolution-y-glider", "Tres ruedas LED y giro por inclinación."),
+                        summary("Para una primera de 4 años", "patinete-colorbaby-eezi-mini", "Hasta 20 kg; comprueba el peso real."),
+                        summary("Para plegar y llevar", "patinete-globber-primo-foldable", "Plegado y tres alturas de manillar."),
                         summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),
@@ -6772,9 +6772,9 @@ public class ComparisonPageService {
                 ),
                 "Las cinco opciones",
                 List.of(
-                        summary("Para ir de pie ligero", "patinete-micro-mini-deluxe", "1,95 kg y tres ruedas LED."),
-                        summary("Para una primera de 5 años", "patinete-molto-maxi", "Edad mínima 5 años y manillar 57-67 cm."),
-                        summary("Para plegar y llevar", "patinete-globber-junior-foldable", "Plegado y tres alturas de manillar."),
+                        summary("Para ir de pie ligero", "patinete-yvolution-y-glider", "Tres ruedas LED y giro por inclinación."),
+                        summary("Para una primera de 5 años", "patinete-colorbaby-eezi-mini", "Hasta 20 kg; comprueba el peso real."),
+                        summary("Para plegar y llevar", "patinete-globber-primo-foldable", "Plegado y tres alturas de manillar."),
                         summary("Para empezar sentado y pasar a pie", "patinete-micro-mini-3en1", "Asiento extraíble y manillar 48-68 cm."),
                         summary("Para ir sentado con mango", "triciclo-chicco-u-go", "Triciclo 2en1 hasta 20 kg.")
                 ),

@@ -199,17 +199,17 @@ public class CollectionPageService {
                         "Casco, calzado cerrado y un espacio sin coches ni desniveles bruscos."
                 ),
                 List.of(
-                        "patinete-micro-mini-deluxe",
-                        "patinete-molto-maxi",
-                        "patinete-globber-junior-foldable",
+                        "patinete-yvolution-y-glider",
+                        "patinete-colorbaby-eezi-mini",
+                        "patinete-globber-primo-foldable",
                         "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 ),
                 comparisonHrefs(
                         ComparisonPageService.SCOOTERS_3_SLUG,
-                        "patinete-micro-mini-deluxe",
-                        "patinete-molto-maxi",
-                        "patinete-globber-junior-foldable",
+                        "patinete-yvolution-y-glider",
+                        "patinete-colorbaby-eezi-mini",
+                        "patinete-globber-primo-foldable",
                         "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 ),
@@ -253,17 +253,17 @@ public class CollectionPageService {
                 ),
                 List.of(
                         "trepar-mamoi-triangulo-blanco",
-                        "trepar-mamoi-triangulo-natural",
+                        "trepar-aiyaplay-3en1",
                         "trepar-little-tikes-gimnasio",
-                        "trepar-little-tikes-tobogan",
+                        "trepar-smoby-xs",
                         "trepar-costway-7en1"
                 ),
                 comparisonHrefs(
                         ComparisonPageService.PIKLER_3_SLUG,
                         "trepar-mamoi-triangulo-blanco",
-                        "trepar-mamoi-triangulo-natural",
+                        "trepar-aiyaplay-3en1",
                         "trepar-little-tikes-gimnasio",
-                        "trepar-little-tikes-tobogan",
+                        "trepar-smoby-xs",
                         "trepar-costway-7en1"
                 ),
                 List.of(
@@ -648,7 +648,7 @@ public class CollectionPageService {
                         "juego-montessori-formas",
                         "puzle-madera-animales",
                         "bici-chicco-red-bullet",
-                        "patinete-micro-mini-deluxe",
+                        "patinete-yvolution-y-glider",
                         "torre-costway-plegable",
                         "vajilla-stor-mickey",
                         "kit-manualidades-natural"
@@ -660,8 +660,8 @@ public class CollectionPageService {
                         "/comparativas/" + ComparisonPageService.PUZZLES_3_SLUG + "/#producto-puzle-madera-animales",
                         "bici-chicco-red-bullet",
                         "/comparativas/" + ComparisonPageService.BALANCE_BIKES_SLUG + "/#producto-bici-chicco-red-bullet",
-                        "patinete-micro-mini-deluxe",
-                        "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/#producto-patinete-micro-mini-deluxe",
+                        "patinete-yvolution-y-glider",
+                        "/comparativas/" + ComparisonPageService.SCOOTERS_3_SLUG + "/#producto-patinete-yvolution-y-glider",
                         "torre-costway-plegable",
                         "/comparativas/" + ComparisonPageService.TOWERS_3_SLUG + "/#producto-torre-costway-plegable",
                         "vajilla-stor-mickey",

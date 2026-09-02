@@ -285,9 +285,9 @@ class ComparisonPageServiceTest {
                 );
         assertThat(scooters.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "patinete-micro-mini-deluxe",
-                        "patinete-molto-maxi",
-                        "patinete-globber-junior-foldable",
+                        "patinete-yvolution-y-glider",
+                        "patinete-colorbaby-eezi-mini",
+                        "patinete-globber-primo-foldable",
                         "patinete-micro-mini-3en1",
                         "triciclo-chicco-u-go"
                 );
@@ -412,9 +412,9 @@ class ComparisonPageServiceTest {
         assertThat(pikler.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
                         "trepar-mamoi-triangulo-blanco",
-                        "trepar-mamoi-triangulo-natural",
+                        "trepar-aiyaplay-3en1",
                         "trepar-little-tikes-gimnasio",
-                        "trepar-little-tikes-tobogan",
+                        "trepar-smoby-xs",
                         "trepar-costway-7en1"
                 );
         assertThat(rideOn.entries()).extracting(ComparisonPageResponse.Entry::productId)

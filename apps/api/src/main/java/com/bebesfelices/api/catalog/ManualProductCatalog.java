@@ -181,6 +181,45 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 8, 14)
         ));
         register(new Product(
+                "patinete-yvolution-y-glider",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Yvolution Y Glider",
+                "Patinete de tres ruedas para 3 a 8 años, con giro por inclinación, ruedas LED sin pilas, manillar de 4 alturas y plegado para llevar.",
+                3, 8,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 2)
+        ));
+        register(new Product(
+                "patinete-colorbaby-eezi-mini",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "ColorBaby Eezi Mini",
+                "Patinete de tres ruedas desde 24 meses y hasta 20 kg, con manillar desmontable de 3 alturas, ruedas delanteras oscilantes y freno trasero.",
+                2, 5,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 2)
+        ));
+        register(new Product(
+                "patinete-globber-primo-foldable",
+                ProductSource.MANUAL,
+                null,
+                null,
+                "Globber Primo Foldable Lights",
+                "Patinete plegable de tres ruedas para 3 a 7 años, con luces LED por dinamo, bloqueo de dirección, manillar de 3 alturas y carga máxima de 50 kg.",
+                3, 7,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 2)
+        ));
+        register(new Product(
                 "patinete-micro-mini-3en1",
                 ProductSource.MANUAL,
                 null,

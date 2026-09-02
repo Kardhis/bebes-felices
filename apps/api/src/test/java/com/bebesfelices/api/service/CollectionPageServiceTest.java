@@ -178,7 +178,7 @@ class CollectionPageServiceTest {
                 .contains(
                         "/comparativas/mejores-juegos-montessori-madera-3-anos/#producto-juego-montessori-formas",
                         "/comparativas/mejores-bicicletas-sin-pedales-3-anos/#producto-bici-chicco-red-bullet",
-                        "/comparativas/mejores-patinetes-3-anos/#producto-patinete-micro-mini-deluxe"
+                        "/comparativas/mejores-patinetes-3-anos/#producto-patinete-yvolution-y-glider"
                 );
         assertThat(page.products())
                 .extracting(product -> product.ctaLabel())
