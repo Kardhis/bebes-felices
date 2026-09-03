@@ -294,7 +294,7 @@ class AgePageServiceTest {
                         "Bicicleta sin pedales básica",
                         "Lionelo Timmy",
                         "YOLEO Transformer",
-                        "Twistshake plato con compartimentos",
+                        "Mepal Mio vajilla 6 piezas",
                         "Set de construcción magnético",
                         "HABA El Frutalito",
                         "Janod maletín de veterinario"

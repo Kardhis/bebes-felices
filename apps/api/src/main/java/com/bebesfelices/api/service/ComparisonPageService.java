@@ -910,6 +910,111 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> TOWERS_4 = List.of(
+            entry(
+                    "torre-ette-tete-stepnsit",
+                    "Ette Tete Step'n'Sit",
+                    "Convertir la torre en mesa y silla",
+                    "Torre de abedul de 40 × 40 × 90 cm, a partir de 18 meses y 50 kg. A los 4 años se usa como torre en la encimera; se convierte en mesa y silla cuando deja de hacer falta el puesto alto.",
+                    List.of(
+                            "Se convierte en mesa y silla.",
+                            "Carga declarada de 50 kg y 90 cm de alto.",
+                            "Contrachapado de abedul; edad desde 18 meses."
+                    ),
+                    List.of(
+                            "La ficha no declara tres alturas de plataforma.",
+                            "Ocupa 40 × 40 cm; revisa huecos tras el montaje."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 4 años", "Desde 18 meses; a los 4 el modo torre cubre la encimera si llega sin trepar."),
+                    note("Estabilidad", "Base de 40 × 40 cm; monta según el manual."),
+                    note("Regulación", "Modo torre o mesa; confirma la altura respecto a tu encimera."),
+                    note("Seguridad", "Nunca sola junto a fogones, cuchillos o agua hirviendo.")
+            ),
+            entry(
+                    "torre-mami-kids",
+                    "Mami Kids Learning Tower",
+                    "Tres alturas en abedul italiano",
+                    "Torre de abedul de 40 × 30 × 90 cm, de 1 a 6 años, con tres alturas de plataforma. A los 4 años elige la posición que llegue a la encimera sin asomarse. Fabricada en Italia.",
+                    List.of(
+                            "Tres alturas y edad declarada hasta 6 años.",
+                            "40 × 30 × 90 cm; 6 kg.",
+                            "Madera de abedul, fabricada en Italia."
+                    ),
+                    List.of(
+                            "La ficha no declara plegado.",
+                            "La base de 30 cm de fondo es más estrecha que otras torres de esta lista."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 4 años", "Hasta 6 años; a los 4 usa una altura que llegue a la encimera."),
+                    note("Estabilidad", "Estructura de abedul; confirma el montaje y el suelo nivelado."),
+                    note("Regulación", "Tres posiciones de plataforma."),
+                    note("Seguridad", "Uso solo con adulto; no es un juguete de trepa.")
+            ),
+            entry(
+                    "torre-aiyaplay-4en1",
+                    "AIYAPLAY torre 4 en 1",
+                    "Torre convertible de 92 cm",
+                    "Torre Montessori de 58 × 46 × 92 cm, de 1 a 5 años. A los 4 años cubre el puesto de encimera si las piernas no van encogidas; el formato 4 en 1 alarga el uso cuando ya no hace falta la torre.",
+                    List.of(
+                            "58 × 46 × 92 cm; formato 4 en 1.",
+                            "Edad declarada hasta 5 años.",
+                            "Uso en cocina o lavabo con un adulto."
+                    ),
+                    List.of(
+                            "El tope son 5 años: comprueba talla y peso.",
+                            "Confirma en tu unidad si se pliega o solo se convierte."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 4 años", "Hasta 5 años; a los 4 mide si llega a la encimera sin trepar."),
+                    note("Estabilidad", "Base de 58 × 46 cm; monta según el manual."),
+                    note("Regulación", "Modos 4 en 1; confirma alturas en la ficha de tu unidad."),
+                    note("Seguridad", "Supervisión constante; no es un juguete de trepa.")
+            ),
+            entry(
+                    "torre-bey-co",
+                    "BEY & CO Torre de aprendizaje",
+                    "Tres alturas con certificación EN-71",
+                    "Torre de madera con plataforma en 3 alturas, superficie antideslizante, patas anticaída y certificación EN-71. Indicada desde que el niño se mantiene de pie.",
+                    List.of(
+                            "Tres alturas de peldaño para acompañar el crecimiento.",
+                            "Certificación EN-71, patas anticaída y gomas antideslizantes.",
+                            "Madera barnizada, fácil de limpiar según la ficha.",
+                            "Uso en cocina o lavabo con un adulto."
+                    ),
+                    List.of(
+                            "La ficha no declara plegado ni conversión a escritorio.",
+                            "Indicada desde los 12 meses: a los 4 años hay que ajustar la altura más alta."
+                    ),
+                    "Desde que se mantiene de pie",
+                    note("Encaje a los 4 años", "Usa la posición más alta y comprueba que llega a la encimera sin trepar."),
+                    note("Estabilidad", "Patas anticaída y superficie antideslizante."),
+                    note("Regulación", "Tres alturas de escalón."),
+                    note("Seguridad", "EN-71 no sustituye a un adulto al lado.")
+            ),
+            entry(
+                    "torre-maxi-cosi-toucan",
+                    "Maxi-Cosi Toucan 3 en 1",
+                    "Convertir la torre en mesa, silla o taburete",
+                    "Torre de madera FSC que pasa a mesa y silla o a taburete, con 3 alturas (29,5 a 41,4 cm), 46 x 91 x 43,3 cm y 8,7 kg. El modo torre cubre de 1,5 a 6 años (10-30 kg); el taburete declara hasta 150 kg.",
+                    List.of(
+                            "Se transforma en mesa y silla, o en taburete al retirar la tapa.",
+                            "Tres posiciones de altura, de 29,5 a 41,4 cm.",
+                            "Madera FSC 100 % y pizarra integrada.",
+                            "8,7 kg declarados; normas de seguridad europeas según la ficha."
+                    ),
+                    List.of(
+                            "El modo taburete (hasta 150 kg) no es el uso infantil en torre.",
+                            "El modo escritorio no sustituye la supervisión junto al fuego."
+                    ),
+                    "Uso infantil con adulto",
+                    note("Encaje a los 4 años", "El escritorio alarga el uso cuando la torre de cocina se queda corta."),
+                    note("Estabilidad", "Base de 46 x 43,3 cm; monta según el manual."),
+                    note("Regulación", "Tres alturas y modos torre, mesa o taburete."),
+                    note("Seguridad", "Supervisión constante; no dejarla junto al fuego.")
+            )
+    );
+
     private static final List<EditorialEntry> TABLEWARE = List.of(
             new EditorialEntry(
                     "vajilla-twistshake-dividido",
@@ -1022,6 +1127,109 @@ public class ComparisonPageService {
                             note("Piezas", "Cuenco y tapa."),
                             note("Cuidado", "Revisa microondas y lavavajillas en la ficha.")
                     )
+            )
+    );
+
+    private static final List<EditorialEntry> TABLEWARE_4 = List.of(
+            entry(
+                    "vajilla-mepal-mio",
+                    "Mepal Mio vajilla 6 piezas",
+                    "Un set completo de mesa con vaso abierto y cubiertos",
+                    "Plato, cuenco, vaso abierto y cubiertos de acero. Libre de BPA y apto para lavavajillas. Plato y cuenco aptos para microondas. No es un plato con compartimentos ni un vaso 360°.",
+                    List.of(
+                            "Seis piezas: plato, cuenco, vaso y tres cubiertos de acero.",
+                            "Vaso abierto, no tetina ni válvula.",
+                            "Lavavajillas; plato y cuenco van al microondas."
+                    ),
+                    List.of(
+                            "La edad declarada parte de 12 meses; a los 4 ya es vajilla de mesa, no de trona.",
+                            "El vaso no declara volumen en todas las variantes."
+                    ),
+                    "1-8 años",
+                    note("Encaje a los 4 años", "Set de mesa con vaso abierto y cubiertos de acero."),
+                    note("Estabilidad", "Sin base antideslizante declarada."),
+                    note("Piezas", "Plato, cuenco, vaso y cubiertos."),
+                    note("Cuidado", "Lavavajillas; microondas solo plato y cuenco.")
+            ),
+            entry(
+                    "vajilla-stor-mickey",
+                    "Stor vajilla 3 piezas Mickey Mouse",
+                    "Llevar plato, cuenco y vaso abierto a la mesa",
+                    "Set de plato, cuenco y vaso de 260 ml, plástico libre de BPA, base antideslizante y apto para microondas. Licencia Mickey Mouse. El rango 3-6 años cubre esta página.",
+                    List.of(
+                            "Tres piezas de mesa: plato, cuenco y vaso abierto de 260 ml.",
+                            "Base antideslizante en superficie lisa.",
+                            "Libre de BPA y apto para microondas."
+                    ),
+                    List.of(
+                            "El diseño es de personaje: si el interés pasa, el set sigue siendo plástico de mesa.",
+                            "No incluye cubiertos."
+                    ),
+                    "3-6 años",
+                    note("Encaje a los 4 años", "Vaso abierto de 260 ml, no tetina ni borde 360°."),
+                    note("Estabilidad", "Base antideslizante en superficie lisa."),
+                    note("Piezas", "Plato, cuenco y vaso; sin cubiertos."),
+                    note("Cuidado", "Apto para microondas; revisa el marcado de alimento.")
+            ),
+            entry(
+                    "botella-stor-aluminio",
+                    "Stor botella aluminio 600 ml",
+                    "Beber en el cole sin tetina ni vaso de mesa",
+                    "Botella infantil de aluminio de 600 ml con tapón de seguridad, ligera y libre de BPA. Uso a partir de 3 años. Se recomienda lavar a mano; no es apta para lavavajillas. No es un vaso de mesa.",
+                    List.of(
+                            "Aluminio de 600 ml con tapón de seguridad.",
+                            "Ligera; uso declarado desde 3 años.",
+                            "Libre de BPA."
+                    ),
+                    List.of(
+                            "Lavar a mano; no va al lavavajillas.",
+                            "No incluye plato ni fiambrera. No es un vaso abierto de mesa."
+                    ),
+                    "3 años en adelante",
+                    note("Encaje a los 4 años", "Botella de cole que el niño puede llevar y abrir, no un pack de vasos de adulto."),
+                    note("Estabilidad", "Tapón de seguridad; el aluminio no se hace añicos."),
+                    note("Piezas", "Solo la botella."),
+                    note("Cuidado", "Lavar a mano; no lavavajillas.")
+            ),
+            entry(
+                    "mepal-campus-almuerzo",
+                    "Mepal Campus set de almuerzo",
+                    "Llevar comida y bebida al cole",
+                    "Botella pop-up de 400 ml y fiambrera de 750 ml con caja bento y tenedor. ABS sin BPA, lavavajillas. No es un set de plato de mesa.",
+                    List.of(
+                            "Botella 400 ml y fiambrera 750 ml en el mismo set.",
+                            "Caja bento y tenedor incluidos.",
+                            "Lavavajillas; libre de BPA."
+                    ),
+                    List.of(
+                            "No sustituye plato, cuenco ni vaso de mesa.",
+                            "La botella es pop-up, no un vaso abierto."
+                    ),
+                    "3-10 años",
+                    note("Encaje a los 4 años", "Formato de cole: fiambrera y botella que el niño puede abrir."),
+                    note("Estabilidad", "Cierre de fiambrera y botella a prueba de fugas según la ficha."),
+                    note("Piezas", "Botella, fiambrera, bento y tenedor."),
+                    note("Cuidado", "Lavavajillas; no apto para microondas.")
+            ),
+            entry(
+                    "fiambrera-undercover-stitch",
+                    "Undercover fiambrera Stitch 550 ml",
+                    "Llevar el almuerzo en acero, sin plato de mesa",
+                    "Fiambrera escolar de acero inoxidable de 550 ml, con junta de goma y cuatro cierres. Unos 17,5 × 13 × 6 cm. Se aclara a mano; no es apta para lavavajillas ni microondas. No es un set de plato de mesa.",
+                    List.of(
+                            "Acero inoxidable de 550 ml.",
+                            "Junta de goma y cuatro cierres.",
+                            "Formato de mochila escolar."
+                    ),
+                    List.of(
+                            "No incluye botella, plato ni cubiertos.",
+                            "No va al lavavajillas ni al microondas."
+                    ),
+                    "Uso escolar",
+                    note("Encaje a los 4 años", "Fiambrera de cole que el niño puede abrir, no un pack de platos de adulto."),
+                    note("Estabilidad", "Cuatro cierres y junta de goma."),
+                    note("Piezas", "Solo la fiambrera."),
+                    note("Cuidado", "Aclarar a mano; no lavavajillas ni microondas.")
             )
     );
 
@@ -3456,6 +3664,109 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> PIKLER_4 = List.of(
+            entry(
+                    "trepar-costway-plegable-3-14",
+                    "COSTWAY triángulo plegable 7 en 1",
+                    "Trepar a los 4 años y seguir creciendo",
+                    "Escalera plegable de pino con rampa reversible y arco-balancín (también mesa). Edad declarada de 3 a 14 años, estatura 80 a 150 cm y 60 kg por pieza. A los 4 años el gesto es subir, gatear el túnel o deslizarse; la altura se regula en tres niveles y se pliega a 80 × 60 × 12 cm.",
+                    List.of(
+                            "Edad declarada de 3 a 14 años y 60 kg por pieza.",
+                            "Escalera plegable (80 × 60 × 12 cm) y altura en tres niveles.",
+                            "Rampa reversible: tobogán o rocas de escalada."
+                    ),
+                    List.of(
+                            "Tres piezas piden más suelo que un solo triángulo.",
+                            "El balancín no se usa cerca de bordes ni de otros niños."
+                    ),
+                    "3-14 años",
+                    note("Encaje a los 4 años", "Parte de 36 meses; a los 4 ya usa los tres niveles con supervisión."),
+                    note("Gesto", "Trepar, gatear el túnel o deslizarse, no empujar ruedas."),
+                    note("Espacio", "Hasta 135 × 60 × 77 cm desplegado; se pliega a 80 × 60 × 12 cm."),
+                    note("Seguridad", "Cinchas antivuelco; suelo nivelado; adulto presente.")
+            ),
+            entry(
+                    "trepar-relax4life-5en1",
+                    "RELAX4LIFE triángulo de escalada 5 en 1",
+                    "Triángulo, arco y rampa de haya",
+                    "Set de haya con triángulo (75 × 55 × 64 cm), arco reversible como balancín y rampa de dos caras, de 1 a 5 años y 50 kg por pieza. A los 4 años cubre subir, bajar o deslizarse en interior; el tope declarado son 5 años, no un marco para seguir hasta los 8.",
+                    List.of(
+                            "Tres piezas combinables: triángulo, arco y rampa reversible.",
+                            "Madera de haya y bordes pulidos según la ficha.",
+                            "Carga de 50 kg por pieza."
+                    ),
+                    List.of(
+                            "El tope son 5 años: no es el set para seguir en primaria.",
+                            "El plegado pide quitar tornillos; no es un guardado de un clic."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 4 años", "El rango 1-5 años incluye esta edad; el niño ya trepa con control."),
+                    note("Gesto", "Trepar barras, deslizarse o balancearse, no ruedas."),
+                    note("Espacio", "75 × 55 × 64 cm el triángulo; el set entero pide más."),
+                    note("Seguridad", "Interior; una pieza a la vez si el hueco es justo; adulto presente.")
+            ),
+            entry(
+                    "trepar-costway-gimnasio-6en1",
+                    "COSTWAY gimnasio interior 6 en 1",
+                    "Red, anillas y tobogán en un volumen mayor",
+                    "Parque de haya de 115 × 108 × 127 cm, con red, anillas, tobogán reversible y tienda. Carga total 120 kg y 30 kg por elemento, a partir de 1 año. A los 4 años el gesto es un circuito corto de trepar y deslizarse, no un triángulo Pikler de barras.",
+                    List.of(
+                            "Seis zonas: escalera, red, anillas, tobogán, barra y tienda.",
+                            "Madera de haya; 115 × 108 × 127 cm.",
+                            "Carga total 120 kg; 30 kg por elemento."
+                    ),
+                    List.of(
+                            "Ocupa más de un metro cuadrado; no cabe en un pasillo.",
+                            "30 kg por elemento: un niño a la vez en cada zona."
+                    ),
+                    "1-6 años",
+                    note("Encaje a los 4 años", "A partir de 1 año; a los 4 el volumen y la red ya tienen sentido."),
+                    note("Gesto", "Circuito: trepar, colgarse o deslizarse, no un marco de barras."),
+                    note("Espacio", "115 × 108 × 127 cm; interior seco."),
+                    note("Seguridad", "Un niño por elemento; montaje del adulto; supervisión constante.")
+            ),
+            entry(
+                    "trepar-feber-slide-plus",
+                    "FEBER tobogán Slide Plus",
+                    "Deslizarse en jardín, de 2 a 7 años",
+                    "Tobogán de plástico de 161 × 71 × 103 cm, rampa de 152 cm, de 2 a 7 años y 30 kg. Peldaños antideslizantes y conexión de manguera opcional. Si no hay sitio para un triángulo, cubre subir y bajar sin ruedas, en patio o jardín.",
+                    List.of(
+                            "Edad declarada de 2 a 7 años y 30 kg.",
+                            "Rampa de 152 cm y peldaños antideslizantes.",
+                            "Uso exterior; conexión de manguera opcional."
+                    ),
+                    List.of(
+                            "No enseña a trepar un marco de barras.",
+                            "Pide jardín o patio; no es un tobogán de salón."
+                    ),
+                    "2-7 años",
+                    note("Encaje a los 4 años", "El rango 2-7 años incluye esta edad; la rampa ya pide control."),
+                    note("Gesto", "Deslizarse, no empujar un correpasillos."),
+                    note("Espacio", "161 × 71 × 103 cm; césped o suelo nivelado."),
+                    note("Seguridad", "Base estable; un niño a la vez; adulto presente.")
+            ),
+            entry(
+                    "trepar-mamoi-muro",
+                    "MAMOI muro de escalada interior",
+                    "Trepar en pared, de 3 a 7 años",
+                    "Cuatro paneles de contrachapado de 18 mm con 16 presas, de 3 a 7 años y 120 kg. A los 4 años el gesto es trepar una pared baja, no un triángulo Pikler: pide un muro de carga, tacos y un adulto que fije el kit.",
+                    List.of(
+                            "Edad declarada de 36 meses a 7 años.",
+                            "Cuatro paneles combinables y 16 presas.",
+                            "Carga de 120 kg; fabricado en la UE según la ficha."
+                    ),
+                    List.of(
+                            "Hay que taladrar un muro de carga; no es un juguete de suelo.",
+                            "No sustituye un triángulo ni un tobogán: solo trepar en vertical."
+                    ),
+                    "3-7 años",
+                    note("Encaje a los 4 años", "Parte de 36 meses; a los 4 las presas ya caben en la mano."),
+                    note("Gesto", "Trepar en vertical, no deslizarse ni un marco de barras."),
+                    note("Espacio", "Paneles de unos 52,5 × 88,5 cm; pide pared libre."),
+                    note("Seguridad", "Fijación a muro de carga; colchoneta debajo; adulto presente.")
+            )
+    );
+
     private static final List<EditorialEntry> RIDE_ON_3 = List.of(
             entry(
                     "corre-injusa-winner-repsol",
@@ -3556,6 +3867,109 @@ public class ComparisonPageService {
                     note("Gesto", "Coche sentado con volante, no moto."),
                     note("Espacio", "Interior amplio o patio; no es un juguete de pasillo."),
                     note("Seguridad", "Un niño; supervisión; no cerca de desniveles.")
+            )
+    );
+
+    private static final List<EditorialEntry> RIDE_ON_4 = List.of(
+            entry(
+                    "corre-injusa-winner-repsol",
+                    "INJUSA moto Winner Repsol XL",
+                    "Empujar sentado a los 4 años y seguir después",
+                    "Moto XL de 99 × 39 × 61 cm, asiento a 41 cm y 50 kg. La ficha marca 36 meses a 7 años. A los 4 años el gesto es sentarse y empujar con los pies: no es bici sin pedales ni patinete de pie.",
+                    List.of(
+                            "Ficha de 36 meses a 7 años; carga 50 kg.",
+                            "99 × 39 × 61 cm; asiento a 41 cm.",
+                            "Fabricada en España; asa de transporte."
+                    ),
+                    List.of(
+                            "No enseña el equilibrio de dos ruedas.",
+                            "El asiento es más alto que en las motos de 18 meses; mide entrepierna."
+                    ),
+                    "3-7 años",
+                    note("Encaje a los 4 años", "Ficha desde 36 meses; a los 4 las piernas suelen llegar al suelo."),
+                    note("Gesto", "Sentado, pies al suelo, sin pedales."),
+                    note("Espacio", "Patio o interior amplio; 99 cm de largo."),
+                    note("Seguridad", "Supervisión; no es un vehículo eléctrico.")
+            ),
+            entry(
+                    "corre-molto-cross-premium",
+                    "MOLTO Cross Premium",
+                    "Moto de varios terrenos hasta los 5 años",
+                    "Moto correpasillos de 18 meses a 5 años, 73 × 38 × 32 cm, asiento a 33 cm y 30 kg. A los 4 años cubre el empuje sentado si las rodillas no van encogidas; el tope declarado son 5 años.",
+                    List.of(
+                            "Edad declarada de 18 meses a 5 años.",
+                            "Asiento a 33 cm; 73 cm de largo.",
+                            "Carga 30 kg; uso en varios terrenos según la ficha."
+                    ),
+                    List.of(
+                            "El asiento no se regula: confirma altura con la entrepierna.",
+                            "30 kg de carga: comprueba el peso real."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 4 años", "Llega a 5 años; a los 4 el asiento de 33 cm puede quedar justo."),
+                    note("Gesto", "Empuje sentado, moto, no bici."),
+                    note("Espacio", "73 cm de largo; patio o interior."),
+                    note("Seguridad", "Calzado cerrado; adulto a la vista.")
+            ),
+            entry(
+                    "corre-little-tikes-cozy-coupe",
+                    "Little Tikes Cozy Coupe",
+                    "Coche con techo, no moto",
+                    "Coche correpasillos con techo, claxon y suelo extraíble para empujar con los pies, de 18 meses a 5 años. A los 4 años el gesto es empujar un coche, distinto de la moto y de la bici sin pedales.",
+                    List.of(
+                            "Rango 18 meses-5 años y carga de 23 kg.",
+                            "Techo y claxon; montaje de adulto.",
+                            "Suelo extraíble para el empuje con los pies."
+                    ),
+                    List.of(
+                            "Ocupa más que una moto: unos 71 × 44 × 84 cm.",
+                            "23 kg de carga: comprueba el peso real."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 4 años", "De 18 meses a 5 años; a los 4 el suelo va quitado para empujar."),
+                    note("Gesto", "Coche sentado con volante, no moto."),
+                    note("Espacio", "Interior amplio o patio; no es un juguete de pasillo."),
+                    note("Seguridad", "Un niño; supervisión; no cerca de desniveles.")
+            ),
+            entry(
+                    "corre-feber-motofeber-2",
+                    "FEBER Motofeber 2 Racing",
+                    "Moto de 3 a 5 años, con casco",
+                    "Moto correpasillos de 70 × 36 × 54 cm, asiento a 33,5 cm, de 3 a 5 años. A los 4 años el gesto es sentarse y empujar con los pies; incluye casco de juguete y ruedas anchas. No es la Motofeber Dream de 18 meses ni un vehículo de batería.",
+                    List.of(
+                            "Edad declarada de 3 a 5 años.",
+                            "Asiento a 33,5 cm; 70 cm de largo.",
+                            "Casco incluido; ruedas anchas para interior o patio."
+                    ),
+                    List.of(
+                            "El asiento no se regula: mide la entrepierna.",
+                            "El casco de la caja no sustituye un casco de bici en calle."
+                    ),
+                    "3-5 años",
+                    note("Encaje a los 4 años", "Ficha de 3 a 5 años; a los 4 el asiento de 33,5 cm suele dejar las piernas sueltas."),
+                    note("Gesto", "Moto sentada, pies al suelo, sin pedales."),
+                    note("Espacio", "70 cm de largo; patio o interior."),
+                    note("Seguridad", "Un niño; supervisión; no es eléctrico.")
+            ),
+            entry(
+                    "corre-jamara-fiat-500",
+                    "Jamara Fiat 500",
+                    "Coche bajo con licencia y asa de adulto",
+                    "Coche correpasillos de 60 × 27,5 × 38 cm, licencia Fiat 500, 23 kg, claxon y maletero bajo el asiento. A los 4 años el niño empuja sentado; el adulto puede usar el asa. No tiene techo ni es un Cozy Coupe ni un coche de batería.",
+                    List.of(
+                            "Réplica Fiat 500; 60 cm de largo.",
+                            "Asa de adulto y protección antivuelco.",
+                            "Claxon y maletero bajo el asiento."
+                    ),
+                    List.of(
+                            "23 kg de carga: comprueba el peso real.",
+                            "El asiento es más bajo que el de un Cozy Coupe; mide la entrepierna."
+                    ),
+                    "1-5 años",
+                    note("Encaje a los 4 años", "A los 4 cabe si el peso no pasa de 23 kg y las rodillas no van encogidas."),
+                    note("Gesto", "Coche sentado; el adulto puede empujar con el asa."),
+                    note("Espacio", "60 cm de largo; pasillo o terraza lisa."),
+                    note("Seguridad", "Un niño; no en pendiente ni cerca de bordillos.")
             )
     );
 
@@ -4026,9 +4440,9 @@ public class ComparisonPageService {
             case BALANCE_GUIDE_5_SLUG -> Optional.of(buildBalanceGuide5Page());
             case SCOOTERS_TRIKES_4_SLUG -> Optional.of(buildScootersTrikes4Page());
             case SCOOTERS_TRIKES_5_SLUG -> Optional.of(buildScootersTrikes5Page());
-            case PIKLER_4_SLUG -> Optional.of(buildPiklerPage(AGE_4, PIKLER_4_SLUG, PIKLER_4_CANONICAL));
+            case PIKLER_4_SLUG -> Optional.of(buildPiklerFourPage());
             case PIKLER_5_SLUG -> Optional.of(buildPiklerPage(AGE_5, PIKLER_5_SLUG, PIKLER_5_CANONICAL));
-            case RIDE_ON_4_SLUG -> Optional.of(buildRideOnPage(AGE_4, RIDE_ON_4_SLUG, RIDE_ON_4_CANONICAL));
+            case RIDE_ON_4_SLUG -> Optional.of(buildRideOnFourPage());
             case RIDE_ON_5_SLUG -> Optional.of(buildRideOnPage(AGE_5, RIDE_ON_5_SLUG, RIDE_ON_5_CANONICAL));
             case CUTLERY_4_SLUG -> Optional.of(buildCutleryPage(AGE_4, CUTLERY_4_SLUG, CUTLERY_4_CANONICAL));
             case CUTLERY_5_SLUG -> Optional.of(buildCutleryPage(AGE_5, CUTLERY_5_SLUG, CUTLERY_5_CANONICAL));
@@ -4446,7 +4860,7 @@ public class ComparisonPageService {
                 TOWERS_SLUG,
                 TOWERS_CANONICAL,
                 TOWERS_AGE,
-                TOWERS,
+                TOWERS_4,
                 "Mejores torres de aprendizaje para 4 años | Bebes Felices",
                 "Comparamos cinco torres de aprendizaje reales para 4 años por estabilidad, altura y plegado, con metodología y afiliación transparentes.",
                 "Torres de aprendizaje para 4 años",
@@ -4455,15 +4869,15 @@ public class ComparisonPageService {
                         "Cinco modelos reales comparados por estabilidad, altura y uso en cocina",
                         List.of(
                                 "A los 4 años la torre sigue siendo un puesto de colaboración, no un taburete improvisado. Importa que la plataforma llegue a la encimera, que la base no vuelque y que un adulto esté al lado.",
-                                "La selección reúne cinco torres disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "La selección reúne cinco torres del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
                                 "Nunca junto a fogones, agua hirviendo o cuchillos. Revisa tornillos, huecos para la cabeza y el manual. La certificación no sustituye la supervisión."
                         )
                 ),
                 "Las cinco torres",
                 List.of(
-                        summary("Para plegar y convertir en mesa", "torre-yoleo-transformer", "Nogal, pizarra magnética y modo escritorio."),
-                        summary("Para tres alturas y poco peso", "torre-hauck-learn-n-explore", "Haya FSC y plataforma de 33 a 45 cm."),
-                        summary("Para guardar detrás de la puerta", "torre-costway-plegable", "Plegable desde 3 años, con barra de seguridad."),
+                        summary("Para convertir en mesa y silla", "torre-ette-tete-stepnsit", "Abedul, 50 kg y 40 × 40 × 90 cm."),
+                        summary("Para tres alturas en abedul", "torre-mami-kids", "1 a 6 años y 40 × 30 × 90 cm."),
+                        summary("Para un formato 4 en 1", "torre-aiyaplay-4en1", "58 × 46 × 92 cm, hasta 5 años."),
                         summary("Para tres alturas con EN-71", "torre-bey-co", "Patas anticaída y superficie antideslizante."),
                         summary("Para torre y escritorio con ajuste", "torre-maxi-cosi-toucan", "Convertible en mesa; 8,7 kg declarados.")
                 ),
@@ -4483,8 +4897,8 @@ public class ComparisonPageService {
                                 "Tres alturas no sirven si la más alta sigue baja para tu cocina. Comprueba centímetros reales."
                         )),
                         section("Plegado o uso fijo", List.of(
-                                "Si la cocina es pequeña, una torre plegable (YOLEO o COSTWAY) cambia el día a día.",
-                                "Si va a durar años, valora conversión a escritorio cuando deje de usarse en la encimera."
+                                "Si la cocina es pequeña, valora una torre que se convierta en mesa (Ette Tete o Maxi-Cosi).",
+                                "Si va a durar años, comprueba tope de edad: AIYAPLAY declara hasta 5; Mami Kids y Toucan llegan a 6."
                         )),
                         section("Seguridad de uso", List.of(
                                 "Suelo nivelado, lejos del fuego y del agua hirviendo. Un solo niño. Adulto presente.",
@@ -4495,9 +4909,9 @@ public class ComparisonPageService {
                         faqItem("¿Sigue teniendo sentido una torre a los 4 años?",
                                 "Sí, si participa en cocina o lavabo y aún no llega. Si ya alcanza con un taburete estable y hay supervisión, puede no hacer falta."),
                         faqItem("¿Madera o contrachapado?",
-                                "Lo decisivo es la estabilidad y los cierres. La haya FSC de hauck y el nogal de YOLEO son materiales distintos; no los ordenamos por precio."),
-                        faqItem("¿Cuál se pliega?",
-                                "COSTWAY y YOLEO se pliegan. hauck y BEY & CO no declaran plegado."),
+                                "Lo decisivo es la estabilidad y los cierres. El abedul de Ette Tete o Mami Kids y la madera FSC de Toucan son materiales distintos; no los ordenamos por precio."),
+                        faqItem("¿Cuál se convierte en mesa?",
+                                "Ette Tete Step'n'Sit y Maxi-Cosi Toucan declaran modo mesa. BEY & CO no declara conversión."),
                         faqItem("¿Puede usarla solo?",
                                 "No. Aunque suba y baje, el riesgo está en la encimera: fuego, cuchillos, agua."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -4520,26 +4934,26 @@ public class ComparisonPageService {
                 TABLEWARE_SLUG,
                 TABLEWARE_CANONICAL,
                 TABLEWARE_AGE,
-                TABLEWARE,
+                TABLEWARE_4,
                 "Mejores vajillas infantiles para 4 años | Bebes Felices",
                 "Comparamos cinco opciones reales de vajilla y vasos para 4 años por piezas, estabilidad y cuidado, con metodología y afiliación transparentes.",
                 "Vajilla infantil para 4 años",
                 new ComparisonPageResponse.Header(
                         "Mejores vajillas infantiles para 4 años",
-                        "Cinco productos reales para comer y beber con más autonomía",
+                        "Cinco productos reales para sentarse a la mesa o llevar el almuerzo",
                         List.of(
-                                "A los 4 años el gesto de llevar el plato a la mesa ya cabe. Importa que no se haga añicos, que la base no resbale y que el vaso se pueda coger. Cubiertos y vaso no siempre vienen en el mismo set.",
-                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Revisa el marcado de apto para alimento. Un vaso 360° o una tapa no sustituyen la supervisión con hermanos pequeños."
+                                "A los 4 años ya cabe llevar el plato a la mesa y el almuerzo al cole. Priorizamos set de mesa con vaso abierto, botella de 600 ml y fiambrera que el niño pueda abrir. Un plato con compartimentos o un vaso 360° con asas son de aprendizaje de bebé.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
+                                "Revisa el marcado de apto para alimento. El aluminio y el acero no van al lavavajillas si la ficha lo desaconseja."
                         )
                 ),
                 "Los cinco productos",
                 List.of(
-                        summary("Para no mezclar la comida", "vajilla-twistshake-dividido", "Tres compartimentos, tapa y base antideslizante."),
-                        summary("Para un set de mesa completo", "vajilla-stor-mickey", "Plato, cuenco y vaso de 260 ml."),
-                        summary("Para beber sin tetina", "vaso-munchkin-miracle-360", "Dos vasos 360° de 207 ml con asas."),
-                        summary("Para plato grande de mesa", "vajilla-fun-house", "Plato de 22 cm, cuenco de 16 cm y vaso de 220 ml."),
-                        summary("Para guardar lo que sobra", "cuenco-twistshake-tapa", "Cuenco con tapa, sin ser un set completo.")
+                        summary("Para un set de 6 piezas", "vajilla-mepal-mio", "Plato, cuenco, vaso abierto y cubiertos."),
+                        summary("Para un set de plástico de mesa", "vajilla-stor-mickey", "Plato, cuenco y vaso abierto de 260 ml."),
+                        summary("Para beber en el cole", "botella-stor-aluminio", "Aluminio de 600 ml y tapón de seguridad."),
+                        summary("Para el almuerzo del cole", "mepal-campus-almuerzo", "Botella 400 ml y fiambrera 750 ml."),
+                        summary("Para fiambrera de acero", "fiambrera-undercover-stitch", "Acero de 550 ml con junta de goma.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos especificaciones verificables y su utilidad para un niño de 4 años. No asignamos notas ni completamos volúmenes o materiales que la ficha no declare.",
@@ -4553,25 +4967,25 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Empieza por lo que falta en casa", List.of(
-                                "Si ya hay plato y falta vaso, un Miracle 360 cubre el paso a beber sin tetina.",
-                                "Si tira el plato, un modelo con base antideslizante o Click-Mat aporta más que un motivo de personaje."
+                                "Si falta vaso de mesa, el vaso de 260 ml del set Stor o el vaso abierto del Mio cubren beber sin tetina.",
+                                "Si el hueco es el cole, la botella de 600 ml, el set Campus o la fiambrera de acero cubren llevar comida y bebida."
                         )),
                         section("Set o pieza suelta", List.of(
-                                "Un set de 3 piezas simplifica el regalo. Un plato con tapa sirve para llevar o guardar.",
-                                "Los cubiertos no están en esta lista: añádelos aparte si aún come con cubiertos de adulto demasiado largos."
+                                "Un set de 6 o 3 piezas simplifica el regalo de mesa. La botella o la fiambrera sueltas sirven si el resto ya está en casa.",
+                                "El set Campus cubre botella y fiambrera juntas; no sustituye el plato de casa."
                         )),
                         section("Limpieza y seguridad", List.of(
-                                "Confirma microondas y cubeta del lavavajillas. Las válvulas 360° hay que desmontarlas.",
+                                "Confirma microondas y cubeta del lavavajillas. La botella de aluminio y la fiambrera de acero se lavan a mano.",
                                 "Retira piezas con recubrimiento deteriorado. El marcado de alimento manda."
                         ))
                 )),
                 List.of(
                         faqItem("¿Sigue haciendo falta vajilla infantil a los 4 años?",
                                 "Sí, si el cristal de adulto se rompe o el vaso es inestable. Si ya come con la vajilla familiar sin incidentes, no es obligatorio."),
-                        faqItem("¿Vaso 360° o vaso abierto?",
-                                "El 360° reduce derrames y acerca el gesto de un vaso abierto. El vaso de 260 ml del set Stor es abierto de verdad."),
-                        faqItem("¿Por qué hay dos Twistshake?",
-                                "Cubren roles distintos: plato con compartimentos y cuenco con tapa. No son un set combinado en un solo ASIN."),
+                        faqItem("¿Vaso de mesa o botella de cole?",
+                                "El vaso de 260 ml del set Stor o el del Mio cubren la mesa. La botella de 600 ml cubre el patio y la mochila."),
+                        faqItem("¿Set de mesa o set de cole?",
+                                "Mio y Stor cubren plato y vaso en casa. Campus junta botella y fiambrera; la fiambrera de acero es solo para llevar."),
                         faqItem("¿Los personajes importan?",
                                 "Para esta evaluación, no. El motivo no ordena el ranking; sí advertimos que es un reclamo que puede caducar."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -7654,7 +8068,7 @@ public class ComparisonPageService {
                         faqItem("¿Madera o metal?",
                                 "Lo decisivo es la estabilidad, no el material."),
                         faqItem("¿Dónde está el análisis más largo de estabilidad?",
-                                "En la comparativa de torres de aprendizaje para 4 años, con las mismas cinco fichas."),
+                                "En la comparativa de torres de aprendizaje para 4 años."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -9069,6 +9483,77 @@ public class ComparisonPageService {
         );
     }
 
+    private ComparisonPageResponse buildPiklerFourPage() {
+        return ageComparison(
+                PIKLER_4_SLUG,
+                PIKLER_4_CANONICAL,
+                AGE_4,
+                PIKLER_4,
+                "Triángulos Pikler y estructuras de trepar para 4 años | Bebes Felices",
+                "Comparamos cinco opciones para trepar o deslizarse a los 4 años: un triángulo plegable que crece, un set de haya, un gimnasio interior, un tobogán de jardín y un muro de escalada, con metodología y afiliación transparentes.",
+                "Triángulos Pikler y estructuras de trepar para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Triángulos Pikler y estructuras de trepar para 4 años",
+                        "Cinco estructuras reales para subir, bajar o deslizarse sin ruedas",
+                        List.of(
+                                "A los 4 años el movimiento no es solo patinete o bici sin pedales. Trepar un marco, una red o un muro bajo, o bajar un tobogán de jardín, es otro gesto: pies y manos, suelo estable, un adulto al lado. No es un parque infantil ni un columpio.",
+                                "La selección reúne cinco productos del catálogo distintos de la comparativa de 3 años. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
+                                "Mide el hueco. Un gimnasio de 127 cm o un muro taladrado no caben en cualquier salón. Nada de saltar desde lo alto ni dejar al niño solo."
+                        )
+                ),
+                "Las cinco estructuras",
+                List.of(
+                        summary("Para un triángulo que crece", "trepar-costway-plegable-3-14", "3 a 14 años, 60 kg y se pliega."),
+                        summary("Para triángulo, arco y rampa", "trepar-relax4life-5en1", "Haya, 50 kg y tope a los 5 años."),
+                        summary("Para un gimnasio de interior", "trepar-costway-gimnasio-6en1", "Red, anillas y tobogán en 127 cm."),
+                        summary("Para un tobogán de jardín", "trepar-feber-slide-plus", "2 a 7 años y rampa de 152 cm."),
+                        summary("Para trepar en pared", "trepar-mamoi-muro", "Cuatro paneles, 16 presas y 120 kg.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede trepar o deslizarse a los 4 años en interior o jardín, con supervisión. No es un ranking de «el mejor Pikler».",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad declarada y si el niño ya sube y baja con control."),
+                                criterion("Gesto", "Trepar barras, una red, un muro o deslizarse."),
+                                criterion("Espacio", "Hueco en el suelo, si se pliega o si pide pared."),
+                                criterion("Material", "Madera o plástico, y carga declarada."),
+                                criterion("Seguridad", "Suelo nivelado, un niño a la vez, adulto presente.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Madera o plástico", List.of(
+                                "El triángulo plegable y el set de haya piden un rincón seco. El gimnasio COSTWAY cubre trepar y deslizarse en un volumen mayor. El FEBER es de jardín, no de salón."
+                        )),
+                        section("No es bici ni patinete", List.of(
+                                "Aquí no hay ruedas. Si buscas empujar sentado, mira correpasillos. Si buscas equilibrio de dos ruedas, la comparativa de bicicletas sin pedales."
+                        )),
+                        section("Supervisión", List.of(
+                                "El fabricante no sustituye a un adulto. Nada de colocarlo junto a una ventana, una escalera o un borde. El muro MAMOI se fija a un muro de carga, no a un tabique."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un triángulo Pikler a los 4 años?",
+                                "Un marco de barras para subir y bajar a su ritmo. A esta edad pide control y un adulto cerca. El set plegable de 3 a 14 años cubre ese gesto y deja margen de crecimiento."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior, en una estructura baja, el casco no es el criterio habitual del patinete. Suelo libre de muebles con esquinas y supervisión sí lo son."),
+                        faqItem("¿Se puede usar fuera?",
+                                "El FEBER Slide Plus es de jardín. Los triángulos de madera y el gimnasio de esta lista se guardan secos. El muro MAMOI se fija en interior."),
+                        faqItem("¿Sustituye al patinete?",
+                                "No. Trepar no enseña a frenar de pie ni el equilibrio de la bici sin pedales."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(AGE_4),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para 4 años",
+                                "/comparativas/" + BALANCE_BIKES_4_SLUG + "/",
+                                "Si el gesto que buscas es equilibrio sentado con ruedas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
     private ComparisonPageResponse buildPiklerPage(int age, String slug, String canonical) {
         String ageLabel = age + " años";
         return ageComparison(
@@ -9136,6 +9621,77 @@ public class ComparisonPageService {
                                 "Mejores bicicletas sin pedales para " + ageLabel,
                                 "/comparativas/" + balanceBikesSlug(age) + "/",
                                 "Si el gesto que buscas es equilibrio sentado con ruedas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildRideOnFourPage() {
+        return ageComparison(
+                RIDE_ON_4_SLUG,
+                RIDE_ON_4_CANONICAL,
+                AGE_4,
+                RIDE_ON_4,
+                "Correpasillos para 4 años | Bebes Felices",
+                "Comparamos cinco correpasillos para 4 años: tres motos de empuje, un Cozy Coupe y un Fiat 500, con metodología y afiliación transparentes.",
+                "Correpasillos para 4 años",
+                new ComparisonPageResponse.Header(
+                        "Correpasillos para 4 años",
+                        "Cinco vehículos para empujar sentado, sin pedales ni patinete",
+                        List.of(
+                                "Un correpasillos se empuja sentado, con los pies en el suelo. No es una bicicleta sin pedales (dos ruedas, manillar de bici) ni un patinete (de pie). A los 4 años sirve si el asiento aún deja las piernas sueltas.",
+                                "La selección reúne cinco productos del catálogo que siguen encajando a esta edad. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
+                                "Mide la entrepierna hasta el asiento. Si las rodillas van encogidas, el modelo se ha quedado pequeño aunque la caja diga 4 años."
+                        )
+                ),
+                "Los cinco correpasillos",
+                List.of(
+                        summary("Para seguir a los 4 años y más", "corre-injusa-winner-repsol", "Moto XL, ficha desde 36 meses, 99 cm."),
+                        summary("Para varios terrenos hasta 5 años", "corre-molto-cross-premium", "Asiento 33 cm y carga 30 kg."),
+                        summary("Para un coche con techo", "corre-little-tikes-cozy-coupe", "18 meses a 5 años, pies al suelo."),
+                        summary("Para una moto de 3 a 5 años", "corre-feber-motofeber-2", "Asiento 33,5 cm y casco incluido."),
+                        summary("Para un coche bajo con asa", "corre-jamara-fiat-500", "Licencia Fiat, 60 cm y 23 kg.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede empujar sentado a los 4 años. No mezclamos este gesto con bici sin pedales ni patinete.",
+                        List.of(
+                                criterion("Encaje a los 4 años", "Edad o talla declarada y si las piernas empujan sueltas."),
+                                criterion("Gesto", "Moto o coche de empuje; pies al suelo."),
+                                criterion("Estabilidad", "Ruedas anchas o base de cuatro ruedas."),
+                                criterion("Uso", "Interior liso o patio sin tráfico."),
+                                criterion("Límite", "No es eléctrico, no es bici, no es patinete.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Moto o coche", List.of(
+                                "La moto deja las piernas a los lados. El Cozy Coupe es un coche con techo. El Fiat 500 es un coche bajo con asa de adulto. No hace falta más de uno el mismo año."
+                        )),
+                        section("Si ya tiene bici sin pedales", List.of(
+                                "No dupliques el mismo gesto de empujar. El correpasillos no enseña equilibrio de dos ruedas."
+                        )),
+                        section("Tope de edad", List.of(
+                                "Winner Repsol parte de 36 meses y llega a 7 años. Motofeber 2 Racing, Cross Premium y Cozy Coupe llegan a 5. El Fiat 500 declara 23 kg: comprueba asiento y peso."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿En qué se diferencia de la bici sin pedales?",
+                                "La bici tiene dos ruedas y manillar de bicicleta. El correpasillos es un asiento ancho sobre tres o cuatro ruedas, sin pedales."),
+                        faqItem("¿Y del patinete?",
+                                "El patinete se usa de pie. Aquí se va sentado."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior liso, el criterio habitual es supervisión y no bajar bordillos. En pendiente o junto a otros vehículos, casco."),
+                        faqItem("¿Valen los eléctricos?",
+                                "No en esta lista. Un coche de batería es otro producto y otra supervisión."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(AGE_4),
+                        new LinkItem(
+                                "Patinetes y triciclos para 4 años",
+                                "/comparativas/" + SCOOTERS_TRIKES_4_SLUG + "/",
+                                "Si el gesto es ir de pie o sentado con mango de adulto."
                         ),
                         chooseByAgeLink()
                 )

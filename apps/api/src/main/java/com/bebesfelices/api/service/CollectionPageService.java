@@ -793,7 +793,7 @@ public class CollectionPageService {
                         "bici-sin-pedales-basica",
                         "patinete-lionelo-timmy",
                         "torre-yoleo-transformer",
-                        "vajilla-twistshake-dividido",
+                        "vajilla-mepal-mio",
                         "set-construccion-magnetico",
                         "lectura-frutalito",
                         "simbolico-janod-veterinario"
@@ -805,8 +805,8 @@ public class CollectionPageService {
                         "/comparativas/mejores-patinetes-4-anos/#producto-patinete-lionelo-timmy",
                         "torre-yoleo-transformer",
                         "/comparativas/mejores-torres-aprendizaje-4-anos/#producto-torre-yoleo-transformer",
-                        "vajilla-twistshake-dividido",
-                        "/comparativas/mejores-vajillas-infantiles-4-anos/#producto-vajilla-twistshake-dividido",
+                        "vajilla-mepal-mio",
+                        "/comparativas/mejores-vajillas-infantiles-4-anos/#producto-vajilla-mepal-mio",
                         "simbolico-janod-veterinario",
                         "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-simbolico-janod-veterinario"
                 ),

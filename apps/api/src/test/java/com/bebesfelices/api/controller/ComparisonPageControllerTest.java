@@ -174,10 +174,10 @@ class ComparisonPageControllerTest {
     void returnsThePublishedFourYearAutonomyComparisons() throws Exception {
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TOWERS_SLUG))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.entries[0].productId").value("torre-yoleo-transformer"));
+                .andExpect(jsonPath("$.entries[0].productId").value("torre-ette-tete-stepnsit"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.TABLEWARE_SLUG))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.entries[0].productId").value("vajilla-twistshake-dividido"));
+                .andExpect(jsonPath("$.entries[0].productId").value("vajilla-mepal-mio"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SUSTAINABLE_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.entries[0].productId").value("simbolico-janod-veterinario"));
@@ -221,10 +221,14 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.targetAge").value(5));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.PIKLER_4_SLUG))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.targetAge").value(4));
+                .andExpect(jsonPath("$.targetAge").value(4))
+                .andExpect(jsonPath("$.entries.length()").value(5))
+                .andExpect(jsonPath("$.entries[0].productId").value("trepar-costway-plegable-3-14"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.RIDE_ON_4_SLUG))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.targetAge").value(4));
+                .andExpect(jsonPath("$.targetAge").value(4))
+                .andExpect(jsonPath("$.entries.length()").value(5))
+                .andExpect(jsonPath("$.entries[0].productId").value("corre-injusa-winner-repsol"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.CUTLERY_4_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.targetAge").value(4));

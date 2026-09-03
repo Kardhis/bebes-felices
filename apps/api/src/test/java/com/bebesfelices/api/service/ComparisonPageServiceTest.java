@@ -222,19 +222,25 @@ class ComparisonPageServiceTest {
 
         assertThat(towers.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "torre-yoleo-transformer",
-                        "torre-hauck-learn-n-explore",
-                        "torre-costway-plegable",
+                        "torre-ette-tete-stepnsit",
+                        "torre-mami-kids",
+                        "torre-aiyaplay-4en1",
                         "torre-bey-co",
                         "torre-maxi-cosi-toucan"
                 );
+        assertThat(towers.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .doesNotContain(
+                        "torre-yoleo-transformer",
+                        "torre-hauck-learn-n-explore",
+                        "torre-costway-plegable"
+                );
         assertThat(tableware.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "vajilla-twistshake-dividido",
+                        "vajilla-mepal-mio",
                         "vajilla-stor-mickey",
-                        "vaso-munchkin-miracle-360",
-                        "vajilla-fun-house",
-                        "cuenco-twistshake-tapa"
+                        "botella-stor-aluminio",
+                        "mepal-campus-almuerzo",
+                        "fiambrera-undercover-stitch"
                 );
         assertThat(sustainable.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
@@ -645,7 +651,39 @@ class ComparisonPageServiceTest {
         ComparisonPageResponse dressing5 = service.getBySlug(ComparisonPageService.DRESSING_5_SLUG).orElseThrow();
 
         assertThat(pikler4.header().h1()).isEqualTo("Triángulos Pikler y estructuras de trepar para 4 años");
+        assertThat(pikler4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "trepar-costway-plegable-3-14",
+                        "trepar-relax4life-5en1",
+                        "trepar-costway-gimnasio-6en1",
+                        "trepar-feber-slide-plus",
+                        "trepar-mamoi-muro"
+                );
+        assertThat(pikler4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .doesNotContain(
+                        "trepar-mamoi-triangulo-blanco",
+                        "trepar-aiyaplay-3en1",
+                        "trepar-little-tikes-gimnasio",
+                        "trepar-smoby-xs",
+                        "trepar-costway-7en1"
+                );
         assertThat(rideOn4.header().h1()).isEqualTo("Correpasillos para 4 años");
+        assertThat(rideOn4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "corre-injusa-winner-repsol",
+                        "corre-molto-cross-premium",
+                        "corre-little-tikes-cozy-coupe",
+                        "corre-feber-motofeber-2",
+                        "corre-jamara-fiat-500"
+                );
+        assertThat(rideOn4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .doesNotContain(
+                        "corre-injusa-tundra-tornado",
+                        "corre-feber-dream",
+                        "corre-big-bobby-car-neo",
+                        "corre-little-tikes-cozy-police",
+                        "corre-feber-range-rover-maleta"
+                );
         assertThat(cutlery4.header().h1()).isEqualTo("Cubiertos infantiles para 4 años");
         assertThat(dressing4.header().h1()).isEqualTo("Aprender a vestirse a los 4 años");
         assertThat(pikler5.header().h1()).isEqualTo("Triángulos Pikler y estructuras de trepar para 5 años");

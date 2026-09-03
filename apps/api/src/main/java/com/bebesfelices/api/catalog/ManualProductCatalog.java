@@ -519,6 +519,45 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 9, 2)
         ));
         register(new Product(
+                "torre-ette-tete-stepnsit",
+                ProductSource.MANUAL,
+                "B07C6L6RDD",
+                "www.amazon.es",
+                "Ette Tete Step'n'Sit",
+                "Torre de aprendizaje de abedul de 40 × 40 × 90 cm, convertible en mesa y silla, 50 kg, a partir de 18 meses.",
+                2, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "torre-mami-kids",
+                ProductSource.MANUAL,
+                "B0CBM4CP7X",
+                "www.amazon.es",
+                "Mami Kids Learning Tower",
+                "Torre de abedul de 40 × 30 × 90 cm, tres alturas, de 1 a 6 años, fabricada en Italia.",
+                1, 6,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "torre-aiyaplay-4en1",
+                ProductSource.MANUAL,
+                "B0DMNGN144",
+                "www.amazon.es",
+                "AIYAPLAY torre 4 en 1",
+                "Torre de aprendizaje Montessori de 58 × 46 × 92 cm, convertible, de 1 a 5 años.",
+                1, 5,
+                List.of("Autonomía", "Mobiliario infantil"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
                 "vajilla-stor-mickey",
                 ProductSource.MANUAL,
                 null,
@@ -582,6 +621,58 @@ public class ManualProductCatalog implements ProductCatalog {
                 ProductStatus.ACTIVE,
                 null,
                 LocalDate.of(2026, 8, 14)
+        ));
+        register(new Product(
+                "vajilla-mepal-mio",
+                ProductSource.MANUAL,
+                "B0CVL7DKCL",
+                "www.amazon.es",
+                "Mepal Mio vajilla 6 piezas",
+                "Set de plato, cuenco, vaso abierto y cubiertos de acero, libre de BPA, apto para lavavajillas; plato y cuenco aptos para microondas.",
+                1, 8,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "botella-stor-aluminio",
+                ProductSource.MANUAL,
+                "B0CLGZQ6YQ",
+                "www.amazon.es",
+                "Stor botella aluminio 600 ml",
+                "Botella infantil de aluminio de 600 ml con tapón de seguridad, ligera y libre de BPA. Uso a partir de 3 años. Se recomienda lavar a mano; no es apta para lavavajillas.",
+                3, Integer.MAX_VALUE,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "mepal-campus-almuerzo",
+                ProductSource.MANUAL,
+                "B07C3V548X",
+                "www.amazon.es",
+                "Mepal Campus set de almuerzo",
+                "Botella pop-up de 400 ml y fiambrera de 750 ml con caja bento y tenedor, de ABS sin BPA, aptos para lavavajillas.",
+                3, 10,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "fiambrera-undercover-stitch",
+                ProductSource.MANUAL,
+                "B0CZ4C148N",
+                "www.amazon.es",
+                "Undercover fiambrera Stitch 550 ml",
+                "Fiambrera escolar de acero inoxidable de 550 ml con junta de goma y cuatro cierres. Se aclara a mano; no es apta para lavavajillas ni microondas.",
+                3, Integer.MAX_VALUE,
+                List.of("Autonomía", "Rutina diaria"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
         ));
         register(new Product(
                 "cuentas-melissa-doug",

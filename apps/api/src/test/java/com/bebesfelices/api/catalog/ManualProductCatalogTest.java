@@ -116,7 +116,7 @@ class ManualProductCatalogTest {
     void movementAmazonProductsHaveUniqueIdsAndAsins() {
         var products = MovementAmazonProducts.all();
 
-        assertThat(products).hasSize(10);
+        assertThat(products).hasSize(17);
         assertThat(products).extracting(Product::id).doesNotHaveDuplicates();
         assertThat(products).extracting(Product::asin).doesNotHaveDuplicates();
         assertThat(products).allSatisfy(product ->

@@ -152,7 +152,7 @@ class AgePageControllerTest {
                         .value("/comparativas/mejores-regalos-sostenibles-4-anos/"))
                 .andExpect(jsonPath("$.featuredSelection[4].title").value("YOLEO Transformer"))
                 .andExpect(jsonPath("$.featuredSelection[5].title")
-                        .value("Twistshake plato con compartimentos"))
+                        .value("Mepal Mio vajilla 6 piezas"))
                 .andExpect(jsonPath("$.featuredSelection[8].title")
                         .value("Janod maletín de veterinario"));
     }
