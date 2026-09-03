@@ -206,6 +206,10 @@ class AgePageServiceTest {
                 "/comparativas/mejores-bicicletas-sin-pedales-4-anos/",
                 "/comparativas/mejores-bicicletas-equilibrio-4-anos/",
                 "/comparativas/mejores-patinetes-triciclos-4-anos/",
+                "/comparativas/mejores-triangulos-pikler-4-anos/",
+                "/comparativas/mejores-correpasillos-4-anos/",
+                "/comparativas/mejores-cubiertos-infantiles-4-anos/",
+                "/comparativas/mejores-aprender-vestirse-4-anos/",
                 "/comparativas/mejores-torres-cocina-4-anos/",
                 "/comparativas/mejores-vajillas-mesa-diaria-4-anos/",
                 "/comparativas/mejores-ideas-regalo-4-anos/",
@@ -248,8 +252,12 @@ class AgePageServiceTest {
                 "/comparativas/mejores-bicicletas-equilibrio-5-anos/",
                 "/comparativas/mejores-patinetes-5-anos/",
                 "/comparativas/mejores-patinetes-triciclos-5-anos/",
+                "/comparativas/mejores-triangulos-pikler-5-anos/",
+                "/comparativas/mejores-correpasillos-5-anos/",
                 "/comparativas/mejores-torres-aprendizaje-5-anos/",
                 "/comparativas/mejores-vajillas-infantiles-5-anos/",
+                "/comparativas/mejores-cubiertos-infantiles-5-anos/",
+                "/comparativas/mejores-aprender-vestirse-5-anos/",
                 "/comparativas/mejores-torres-cocina-5-anos/",
                 "/comparativas/mejores-vajillas-mesa-diaria-5-anos/",
                 "/comparativas/mejores-ideas-regalo-5-anos/",
@@ -284,7 +292,7 @@ class AgePageServiceTest {
                         "Juego Montessori de formas y encajes",
                         "Puzle de madera de animales",
                         "Bicicleta sin pedales básica",
-                        "Micro Mini Deluxe LED",
+                        "Lionelo Timmy",
                         "YOLEO Transformer",
                         "Twistshake plato con compartimentos",
                         "Set de construcción magnético",
@@ -328,7 +336,7 @@ class AgePageServiceTest {
                         .items()
                         .get(1)
                         .href())
-                .isEqualTo("/comparativas/mejores-patinetes-4-anos/");
+                .isEqualTo("/comparativas/mejores-patinetes-triciclos-4-anos/");
         assertThat(page4.featuredSelection())
                 .filteredOn(product -> product.title().equals("HABA El Frutalito"))
                 .allSatisfy(product -> {
@@ -338,10 +346,10 @@ class AgePageServiceTest {
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
         assertThat(page4.featuredSelection())
-                .filteredOn(product -> product.title().equals("Micro Mini Deluxe LED"))
+                .filteredOn(product -> product.title().equals("Lionelo Timmy"))
                 .allSatisfy(product -> {
                     assertThat(product.href()).isEqualTo(
-                            "/comparativas/mejores-patinetes-4-anos/#producto-patinete-micro-mini-deluxe"
+                            "/comparativas/mejores-patinetes-4-anos/#producto-patinete-lionelo-timmy"
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });
@@ -354,8 +362,8 @@ class AgePageServiceTest {
                 .containsExactly(
                         "/comparativas/mejores-torres-aprendizaje-4-anos/",
                         "/comparativas/mejores-vajillas-infantiles-4-anos/",
-                        "/comparativas/mejores-torres-cocina-4-anos/",
-                        "/comparativas/mejores-vajillas-mesa-diaria-4-anos/"
+                        "/comparativas/mejores-cubiertos-infantiles-4-anos/",
+                        "/comparativas/mejores-aprender-vestirse-4-anos/"
                 );
         assertThat(page4.optionsByNeed().stream()
                         .filter(group -> group.anchor().equals("#regalos"))
@@ -400,6 +408,69 @@ class AgePageServiceTest {
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                     assertThat(product.href()).startsWith("/comparativas/");
                 });
+    }
+
+    @Test
+    void fourAndFiveYearMovementAndAutonomyOptionsMatchThreeYears() {
+        AgePageResponse page3 = service.getBySlug("3-anos").orElseThrow();
+        AgePageResponse page4 = service.getBySlug("4-anos").orElseThrow();
+        AgePageResponse page5 = service.getBySlug("5-anos").orElseThrow();
+
+        assertThat(needTitles(page3, "#movimiento")).containsExactly(
+                "Mejores bicicletas sin pedales para 3 años",
+                "Patinetes y triciclos",
+                "Triángulos Pikler y estructuras de trepar",
+                "Correpasillos"
+        );
+        assertThat(needTitles(page4, "#movimiento")).containsExactly(
+                "Mejores bicicletas sin pedales para 4 años",
+                "Patinetes y triciclos",
+                "Triángulos Pikler y estructuras de trepar",
+                "Correpasillos"
+        );
+        assertThat(needTitles(page5, "#movimiento")).containsExactly(
+                "Mejores bicicletas sin pedales para 5 años",
+                "Patinetes y triciclos",
+                "Triángulos Pikler y estructuras de trepar",
+                "Correpasillos"
+        );
+        assertThat(needTitles(page3, "#autonomia"))
+                .isEqualTo(needTitles(page4, "#autonomia"))
+                .isEqualTo(needTitles(page5, "#autonomia"))
+                .containsExactly(
+                        "Torres de aprendizaje",
+                        "Vajilla infantil irrompible",
+                        "Cubiertos infantiles",
+                        "Aprender a vestirse"
+                );
+        assertThat(needDescriptions(page3, "#movimiento").subList(1, 4))
+                .isEqualTo(needDescriptions(page4, "#movimiento").subList(1, 4))
+                .isEqualTo(needDescriptions(page5, "#movimiento").subList(1, 4));
+        assertThat(needDescriptions(page3, "#autonomia"))
+                .isEqualTo(needDescriptions(page4, "#autonomia"))
+                .isEqualTo(needDescriptions(page5, "#autonomia"));
+    }
+
+    private static List<String> needTitles(AgePageResponse page, String anchor) {
+        return page.optionsByNeed().stream()
+                .filter(group -> group.anchor().equals(anchor))
+                .findFirst()
+                .orElseThrow()
+                .items()
+                .stream()
+                .map(item -> item.title())
+                .toList();
+    }
+
+    private static List<String> needDescriptions(AgePageResponse page, String anchor) {
+        return page.optionsByNeed().stream()
+                .filter(group -> group.anchor().equals(anchor))
+                .findFirst()
+                .orElseThrow()
+                .items()
+                .stream()
+                .map(item -> item.description())
+                .toList();
     }
 
     private static String movementHref(AgePageResponse page) {

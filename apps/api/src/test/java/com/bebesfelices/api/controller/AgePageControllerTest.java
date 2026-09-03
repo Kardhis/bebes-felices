@@ -130,12 +130,12 @@ class AgePageControllerTest {
         mockMvc.perform(get("/api/age-pages/4-anos"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.optionsByNeed[2].items[1].href")
-                        .value("/comparativas/mejores-patinetes-4-anos/"))
+                        .value("/comparativas/mejores-patinetes-triciclos-4-anos/"))
                 .andExpect(jsonPath("$.featuredRankings[3].href")
                         .value("/comparativas/mejores-patinetes-4-anos/"))
-                .andExpect(jsonPath("$.featuredSelection[3].title").value("Micro Mini Deluxe LED"))
+                .andExpect(jsonPath("$.featuredSelection[3].title").value("Lionelo Timmy"))
                 .andExpect(jsonPath("$.featuredSelection[3].href")
-                        .value("/comparativas/mejores-patinetes-4-anos/#producto-patinete-micro-mini-deluxe"))
+                        .value("/comparativas/mejores-patinetes-4-anos/#producto-patinete-lionelo-timmy"))
                 .andExpect(jsonPath("$.featuredSelection[3].ctaLabel")
                         .value("Ver comparativa completa"));
     }

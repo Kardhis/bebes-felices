@@ -188,14 +188,14 @@ class ComparisonPageServiceTest {
 
         assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
         assertThat(page.targetAge()).isEqualTo(4);
-        assertThat(page.updatedAt()).isEqualTo("2026-08-14");
+        assertThat(page.updatedAt()).isEqualTo("2026-09-03");
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "patinete-micro-mini-deluxe",
+                        "patinete-lionelo-timmy",
                         "patinete-molto-maxi",
                         "patinete-globber-junior-foldable",
-                        "patinete-globber-master-lights",
-                        "triciclo-chicco-u-go"
+                        "patinete-globber-go-up-plus",
+                        "triciclo-lionelo-tris-plus"
                 );
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
                 .containsExactly(1, 2, 3, 4, 5);
@@ -591,7 +591,27 @@ class ComparisonPageServiceTest {
                         "Small Foot grúa de construcción",
                         "HABA Puzzles Las Cuatro Estaciones"
                 );
-        assertThat(balance4.entries()).hasSize(5);
+        assertThat(balance4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "bici-chillafish-bmxie",
+                        "bici-sawyer-ultraligera",
+                        "bici-eight4two",
+                        "bici-momi-breki",
+                        "bici-gaslike-16-con-freno"
+                );
+        assertThat(balance4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .doesNotContain(
+                        "bici-chicco-red-bullet",
+                        "bici-kinderkraft-tove",
+                        "bici-kinderkraft-fly-plus-2",
+                        "bici-kinderkraft-goswift",
+                        "bici-puky-lr-m",
+                        "bici-kinderkraft-xploit",
+                        "bici-bikestar-12",
+                        "bici-lionelo-arie"
+                );
+        assertThat(balance4.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(balance4.updatedAt()).isEqualTo("2026-09-03");
         assertThat(gifts4.entries()).hasSize(5);
 
         assertThat(durable5.targetAge()).isEqualTo(5);
@@ -614,6 +634,33 @@ class ComparisonPageServiceTest {
                 });
         assertThat(durable4.header().h1()).isEqualTo("Mejores regalos duraderos para 4 años");
         assertThat(durable5.header().h1()).isEqualTo("Mejores regalos duraderos para 5 años");
+
+        ComparisonPageResponse pikler4 = service.getBySlug(ComparisonPageService.PIKLER_4_SLUG).orElseThrow();
+        ComparisonPageResponse rideOn4 = service.getBySlug(ComparisonPageService.RIDE_ON_4_SLUG).orElseThrow();
+        ComparisonPageResponse cutlery4 = service.getBySlug(ComparisonPageService.CUTLERY_4_SLUG).orElseThrow();
+        ComparisonPageResponse dressing4 = service.getBySlug(ComparisonPageService.DRESSING_4_SLUG).orElseThrow();
+        ComparisonPageResponse pikler5 = service.getBySlug(ComparisonPageService.PIKLER_5_SLUG).orElseThrow();
+        ComparisonPageResponse rideOn5 = service.getBySlug(ComparisonPageService.RIDE_ON_5_SLUG).orElseThrow();
+        ComparisonPageResponse cutlery5 = service.getBySlug(ComparisonPageService.CUTLERY_5_SLUG).orElseThrow();
+        ComparisonPageResponse dressing5 = service.getBySlug(ComparisonPageService.DRESSING_5_SLUG).orElseThrow();
+
+        assertThat(pikler4.header().h1()).isEqualTo("Triángulos Pikler y estructuras de trepar para 4 años");
+        assertThat(rideOn4.header().h1()).isEqualTo("Correpasillos para 4 años");
+        assertThat(cutlery4.header().h1()).isEqualTo("Cubiertos infantiles para 4 años");
+        assertThat(dressing4.header().h1()).isEqualTo("Aprender a vestirse a los 4 años");
+        assertThat(pikler5.header().h1()).isEqualTo("Triángulos Pikler y estructuras de trepar para 5 años");
+        assertThat(List.of(pikler4, rideOn4, cutlery4, dressing4)).allSatisfy(page -> {
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.targetAge()).isEqualTo(4);
+            assertThat(page.entries()).isNotEmpty();
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        });
+        assertThat(List.of(pikler5, rideOn5, cutlery5, dressing5)).allSatisfy(page -> {
+            assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
+            assertThat(page.targetAge()).isEqualTo(5);
+            assertThat(page.entries()).isNotEmpty();
+            assertThat(page.breadcrumbs().get(1).href()).isEqualTo("/por-edad/5-anos/");
+        });
     }
 
     @Test
@@ -722,12 +769,12 @@ class ComparisonPageServiceTest {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelices-21");
         properties.setProductAsins(Map.of(
-                "patinete-micro-mini-deluxe", "B0B82TSPP8",
+                "patinete-lionelo-timmy", "B0CD7YW5H8",
                 "patinete-molto-maxi", "B0D45VJLR8",
                 "patinete-globber-junior-foldable", "B0BYSX61WD",
-                "patinete-globber-master-lights", "B08G19X6GK",
+                "patinete-globber-go-up-plus", "B0BYSV5944",
                 "patinete-micro-mini-3en1", "B07RM5Z2LY",
-                "triciclo-chicco-u-go", "B00URLWKYG"
+                "triciclo-lionelo-tris-plus", "B0D2RJVY4P"
         ));
         AtomicInteger creatorsApiCalls = new AtomicInteger();
         ProductCatalog catalog = new AmazonEnrichedProductCatalog(
@@ -746,11 +793,11 @@ class ComparisonPageServiceTest {
         assertThat(creatorsApiCalls).hasValue(0);
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
                 .containsExactly(
-                        "https://www.amazon.es/dp/B0B82TSPP8?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0CD7YW5H8?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B0D45VJLR8?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B0BYSX61WD?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B08G19X6GK?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B00URLWKYG?tag=bebesfelices-21"
+                        "https://www.amazon.es/dp/B0BYSV5944?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0D2RJVY4P?tag=bebesfelices-21"
                 );
     }
 }

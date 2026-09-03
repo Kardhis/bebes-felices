@@ -68,6 +68,14 @@ public class ComparisonPageService {
     public static final String BALANCE_GUIDE_5_SLUG = "mejores-bicicletas-equilibrio-5-anos";
     public static final String SCOOTERS_TRIKES_4_SLUG = "mejores-patinetes-triciclos-4-anos";
     public static final String SCOOTERS_TRIKES_5_SLUG = "mejores-patinetes-triciclos-5-anos";
+    public static final String PIKLER_4_SLUG = "mejores-triangulos-pikler-4-anos";
+    public static final String PIKLER_5_SLUG = "mejores-triangulos-pikler-5-anos";
+    public static final String RIDE_ON_4_SLUG = "mejores-correpasillos-4-anos";
+    public static final String RIDE_ON_5_SLUG = "mejores-correpasillos-5-anos";
+    public static final String CUTLERY_4_SLUG = "mejores-cubiertos-infantiles-4-anos";
+    public static final String CUTLERY_5_SLUG = "mejores-cubiertos-infantiles-5-anos";
+    public static final String DRESSING_4_SLUG = "mejores-aprender-vestirse-4-anos";
+    public static final String DRESSING_5_SLUG = "mejores-aprender-vestirse-5-anos";
     public static final String TOWERS_KITCHEN_4_SLUG = "mejores-torres-cocina-4-anos";
     public static final String TOWERS_KITCHEN_5_SLUG = "mejores-torres-cocina-5-anos";
     public static final String TABLEWARE_DAILY_4_SLUG = "mejores-vajillas-mesa-diaria-4-anos";
@@ -98,10 +106,13 @@ public class ComparisonPageService {
     private static final int AGE_5 = 5;
     private static final String BIKES_PUBLISHED_AT = "2026-08-13";
     private static final String BIKES_UPDATED_AT = "2026-08-13";
+    private static final String BIKES_4_PUBLISHED_AT = "2026-08-14";
+    private static final String BIKES_4_UPDATED_AT = "2026-09-03";
     private static final String BOARD_GAMES_PUBLISHED_AT = "2026-08-14";
     private static final String BOARD_GAMES_UPDATED_AT = "2026-08-14";
     private static final String SCOOTERS_PUBLISHED_AT = "2026-08-14";
-    private static final String SCOOTERS_UPDATED_AT = "2026-08-14";
+    private static final String SCOOTERS_UPDATED_AT = "2026-09-03";
+    private static final String SCOOTERS_5_UPDATED_AT = "2026-08-14";
     private static final String FOUR_YEAR_PUBLISHED_AT = "2026-08-14";
     private static final String FOUR_YEAR_UPDATED_AT = "2026-08-14";
     private static final String STEM_5_PUBLISHED_AT = "2026-08-17";
@@ -186,6 +197,14 @@ public class ComparisonPageService {
     private static final String BALANCE_GUIDE_5_CANONICAL = "https://bebesfelices.es/comparativas/" + BALANCE_GUIDE_5_SLUG + "/";
     private static final String SCOOTERS_TRIKES_4_CANONICAL = "https://bebesfelices.es/comparativas/" + SCOOTERS_TRIKES_4_SLUG + "/";
     private static final String SCOOTERS_TRIKES_5_CANONICAL = "https://bebesfelices.es/comparativas/" + SCOOTERS_TRIKES_5_SLUG + "/";
+    private static final String PIKLER_4_CANONICAL = "https://bebesfelices.es/comparativas/" + PIKLER_4_SLUG + "/";
+    private static final String PIKLER_5_CANONICAL = "https://bebesfelices.es/comparativas/" + PIKLER_5_SLUG + "/";
+    private static final String RIDE_ON_4_CANONICAL = "https://bebesfelices.es/comparativas/" + RIDE_ON_4_SLUG + "/";
+    private static final String RIDE_ON_5_CANONICAL = "https://bebesfelices.es/comparativas/" + RIDE_ON_5_SLUG + "/";
+    private static final String CUTLERY_4_CANONICAL = "https://bebesfelices.es/comparativas/" + CUTLERY_4_SLUG + "/";
+    private static final String CUTLERY_5_CANONICAL = "https://bebesfelices.es/comparativas/" + CUTLERY_5_SLUG + "/";
+    private static final String DRESSING_4_CANONICAL = "https://bebesfelices.es/comparativas/" + DRESSING_4_SLUG + "/";
+    private static final String DRESSING_5_CANONICAL = "https://bebesfelices.es/comparativas/" + DRESSING_5_SLUG + "/";
     private static final String TOWERS_KITCHEN_4_CANONICAL = "https://bebesfelices.es/comparativas/" + TOWERS_KITCHEN_4_SLUG + "/";
     private static final String TOWERS_KITCHEN_5_CANONICAL = "https://bebesfelices.es/comparativas/" + TOWERS_KITCHEN_5_SLUG + "/";
     private static final String TABLEWARE_DAILY_4_CANONICAL = "https://bebesfelices.es/comparativas/" + TABLEWARE_DAILY_4_SLUG + "/";
@@ -318,6 +337,117 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> BALANCE_BIKES_4 = List.of(
+            new EditorialEntry(
+                    "bici-chillafish-bmxie",
+                    "Chillafish BMXie 2",
+                    "Talla de 4 años con ruedas de 12 pulgadas",
+                    "Declarada para 2 a 5 años y estaturas de 87 a 110 cm. Las ruedas sin aire de 12 pulgadas y el sillín de 32 a 41 cm encajan cuando a los 4 años ya pide una bici más alta que un modelo de inicio.",
+                    List.of(
+                            "Rango declarado de 2 a 5 años y hasta 110 cm.",
+                            "Ruedas sin aire de 12 pulgadas.",
+                            "Sillín regulable de 32 a 41 cm, sin herramientas.",
+                            "Freno de pie y reposapiés integrados."
+                    ),
+                    List.of(
+                            "El freno de pie pide práctica; no es un freno de manillar.",
+                            "El cuadro de plástico reforzado se siente distinto a uno de metal."
+                    ),
+                    "2-5 años",
+                    List.of(
+                            note("Ajuste", "Sillín de 32 a 41 cm; ficha para 87 a 110 cm."),
+                            note("Manejo", "Freno de pie, reposapiés y cuadro ligero de plástico reforzado."),
+                            note("Ruedas", "12 pulgadas sin aire, sin inflado.")
+                    )
+            ),
+            new EditorialEntry(
+                    "bici-sawyer-ultraligera",
+                    "Sawyer Bikes ultraligera",
+                    "Ligera para dominar el equilibrio",
+                    "Una bicicleta sin pedales pensada para facilitar que el niño la impulse, gire y corrija postura. El ajuste de sillín y manillar acompaña la progresión entre 2 y 5 años.",
+                    List.of(
+                            "Diseño ultraligero para facilitar el manejo.",
+                            "Sillín y manillar ajustables para el crecimiento.",
+                            "Ruedas preparadas para uso habitual sin mantenimiento especial."
+                    ),
+                    List.of(
+                            "Sin suspensión: requiere atención en baches y piedras.",
+                            "Conviene enseñar a frenar antes de aumentar velocidad."
+                    ),
+                    "2-5 años",
+                    List.of(
+                            note("Ajuste", "Acompaña la transición gracias al sillín y manillar ajustables."),
+                            note("Manejo", "El peso favorece levantar y dirigir la bicicleta."),
+                            note("Ruedas", "Ruedas preparadas para aprendizaje en suelo habitual.")
+                    )
+            ),
+            new EditorialEntry(
+                    "bici-eight4two",
+                    "EIGHT4TWO",
+                    "Ligera para manejar a los 4 años",
+                    "Pesa 2,9 kg y está declarada para 2 a 5 años. El sillín y el manillar se regulan sin herramientas y las ruedas antipinchazos reducen el mantenimiento en el uso diario.",
+                    List.of(
+                            "Peso declarado de 2,9 kg.",
+                            "Rango declarado de 2 a 5 años.",
+                            "Sillín y manillar regulables sin herramientas.",
+                            "Ruedas antipinchazos."
+                    ),
+                    List.of(
+                            "La ficha no detalla el recorrido exacto del sillín: conviene comprobarlo antes de comprar.",
+                            "Sin suspensión: hay que vigilar baches y piedras."
+                    ),
+                    "2-5 años",
+                    List.of(
+                            note("Ajuste", "Sillín y manillar regulables sin herramientas, para 2 a 5 años."),
+                            note("Manejo", "Peso declarado de 2,9 kg y manillar acolchado."),
+                            note("Ruedas", "Antipinchazos, sin inflado.")
+                    )
+            ),
+            new EditorialEntry(
+                    "bici-momi-breki",
+                    "MoMi BREKI",
+                    "Desde 3 años, ligera y sin pinchazos",
+                    "Declarada a partir de 3 años y hasta 25 kg. Pesa 3 kg, lleva ruedas de espuma EVA de 12 pulgadas y el sillín se regula con cierre rápido, sin herramientas.",
+                    List.of(
+                            "Indicada desde 3 años.",
+                            "Peso declarado de 3 kg.",
+                            "Ruedas EVA de 12 pulgadas, antipinchazos.",
+                            "Sillín regulable con cierre rápido, sin herramientas."
+                    ),
+                    List.of(
+                            "La carga máxima de 25 kg queda por debajo de otros modelos de 30-35 kg.",
+                            "La ficha no detalla el recorrido exacto del sillín: conviene comprobarlo antes de comprar."
+                    ),
+                    "Desde 3 años",
+                    List.of(
+                            note("Ajuste", "Sillín regulable con cierre rápido; indicada desde 3 años."),
+                            note("Manejo", "Peso declarado de 3 kg y manillar ancho con agarre antideslizante."),
+                            note("Ruedas", "EVA de 12 pulgadas, antipinchazos, sin inflado.")
+                    )
+            ),
+            new EditorialEntry(
+                    "bici-gaslike-16-con-freno",
+                    "GASLIKE 16\" con freno",
+                    "Ruedas grandes con freno para más control",
+                    "La bicicleta sin pedales de 16 pulgadas se apoya en un freno y un caballete para aprender a gestionar velocidad y aparcar con facilidad. La talla encaja con niños de 3 a 7 años.",
+                    List.of(
+                            "Ruedas de 16 pulgadas para más estabilidad.",
+                            "Freno y caballete para controlar y aparcar.",
+                            "Sillín y manillar ajustables."
+                    ),
+                    List.of(
+                            "Puede requerir revisar presión si las ruedas son inflables.",
+                            "A los 4 años hay que entrenar el freno con un adulto."
+                    ),
+                    "3-7 años",
+                    List.of(
+                            note("Ajuste", "Sillín y manillar ajustables para encaje a la estatura."),
+                            note("Manejo", "Freno para practicar velocidad y paradas controladas."),
+                            note("Ruedas", "Ruedas de 16 pulgadas con comportamiento estable.")
+                    )
+            )
+    );
+
     private static final List<EditorialEntry> BOARD_GAMES = List.of(
             new EditorialEntry(
                     "lectura-frutalito",
@@ -436,7 +566,7 @@ public class ComparisonPageService {
             )
     );
 
-    private static final List<EditorialEntry> SCOOTERS = List.of(
+    private static final List<EditorialEntry> SCOOTERS_5 = List.of(
             new EditorialEntry(
                     "patinete-micro-mini-deluxe",
                     "Micro Mini Deluxe LED",
@@ -551,6 +681,114 @@ public class ComparisonPageService {
                             note("Manejo", "Mango telescópico extraíble; ruedas de goma antipinchazos según la ficha."),
                             note("Seguridad", "Cinturón y bloqueo de pedales o dirección en el modo guiado; supervisión igualmente necesaria.")
                     )
+            )
+    );
+
+    private static final List<EditorialEntry> SCOOTERS = List.of(
+            entry(
+                    "patinete-lionelo-timmy",
+                    "Lionelo Timmy",
+                    "Empezar de pie con luces LED",
+                    "Patinete de tres ruedas desde 3 años y hasta 50 kg: 3 kg declarados, manillar de 4 alturas (64, 68, 72 y 76 cm), luces LED en ruedas y plataforma, freno trasero y plegado. A los 4 años cubre un uso de pie con una base estable y un manillar que ya llega más alto que los 48-68 cm de los modelos más bajos.",
+                    List.of(
+                            "Tres ruedas, edad declarada desde 3 años y carga máxima de 50 kg.",
+                            "Peso declarado de 3 kg y manillar de 64, 68, 72 y 76 cm.",
+                            "Luces LED en las ruedas (por movimiento) y en la plataforma; freno trasero.",
+                            "Plegado del manillar; la ficha indica que no requiere montaje."
+                    ),
+                    List.of(
+                            "Las luces de la plataforma usan pila AA; las de las ruedas se activan al rodar.",
+                            "Sigue siendo un patinete de tres ruedas: no sustituye una bicicleta sin pedales ni un modelo de dos ruedas."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad declarada desde 3 años y manillar de 64 a 76 cm."),
+                    note("Estabilidad", "Tres ruedas y limitador de giro del manillar a 65 grados según la ficha."),
+                    note("Manejo", "Peso declarado de 3 kg, cuatro alturas y plegado; carga máxima de 50 kg."),
+                    note("Seguridad", "Freno trasero; casco, calzado cerrado y supervisión siguen siendo necesarios.")
+            ),
+            entry(
+                    "patinete-molto-maxi",
+                    "MOLTO Maxi Scooter",
+                    "Una primera opción sencilla de tres ruedas",
+                    "Patinete de tres ruedas indicado para 3 a 5 años, con luces LED en las ruedas, manillar de 57 a 67 cm, freno trasero y montaje sin herramientas.",
+                    List.of(
+                            "Edad declarada de 3 a 5 años.",
+                            "Manillar regulable entre 57 y 67 cm.",
+                            "Luces LED en las ruedas, plataforma antideslizante y freno trasero.",
+                            "Montaje sin herramientas según la ficha."
+                    ),
+                    List.of(
+                            "El recorrido del manillar es de 10 cm y llega hasta 67 cm, por debajo de los 76 cm del Timmy y de los 78 cm del GO UP.",
+                            "La ficha consultada no declara plegado ni un peso del patinete."
+                    ),
+                    "3-5 años",
+                    note("Encaje a los 4 años", "Edad declarada de 3 a 5 años y manillar de 57 a 67 cm."),
+                    note("Estabilidad", "Tres ruedas y plataforma antideslizante."),
+                    note("Manejo", "Freno trasero y montaje sin herramientas; no hay peso declarado en la ficha."),
+                    note("Seguridad", "Freno trasero; usar casco y supervisión. La ficha recomienda no usarlo en tráfico.")
+            ),
+            entry(
+                    "patinete-globber-junior-foldable",
+                    "Globber Junior Foldable Lights",
+                    "Plegar y llevar el patinete",
+                    "Patinete de tres ruedas plegable desde 2 años, con luces LED por dinamo, bloqueo de dirección, manillar de tres alturas (54, 61 y 68 cm) y carga máxima de 50 kg.",
+                    List.of(
+                            "Plegado con botón y modo carrito para guardar o transportar.",
+                            "Edad declarada a partir de 2 años y carga máxima de 50 kg.",
+                            "Manillar de 3 alturas: 54, 61 y 68 cm.",
+                            "Luces LED sin batería y bloqueo de dirección para circular en línea recta."
+                    ),
+                    List.of(
+                            "El manillar llega hasta 68 cm, por debajo de los 68-78 cm del GO UP Foldable Plus.",
+                            "El plegado y el bloqueo de dirección piden que un adulto los configure; no sustituyen la supervisión."
+                    ),
+                    "Desde 2 años",
+                    note("Encaje a los 4 años", "Indicada desde 2 años; el manillar cubre 54, 61 y 68 cm."),
+                    note("Estabilidad", "Tres ruedas y bloqueo de dirección opcional."),
+                    note("Manejo", "Carga máxima de 50 kg; plegado y modo carrito."),
+                    note("Seguridad", "Freno trasero ancho; casco y zona sin tráfico.")
+            ),
+            entry(
+                    "patinete-globber-go-up-plus",
+                    "Globber GO UP Foldable Plus Eco",
+                    "Más altura y paso de sentado a pie",
+                    "Patinete evolutivo 3en1 plegable: triciclo con barra de empuje, correpasillos y patinete de pie. En modo patinete el manillar cubre 68-78 cm y la carga es 50 kg; el asiento declara 20 kg. A los 4 años el uso habitual es de pie, con un manillar más alto que el Junior.",
+                    List.of(
+                            "Tres etapas: empuje con adulto, sentado y patinete de pie, con plegado y modo carrito.",
+                            "Manillar de 68 a 78 cm en modo patinete y carga máxima de 50 kg.",
+                            "Asiento, reposapiés y barra de empuje extraíbles; el asiento declara 20 kg.",
+                            "Plásticos reciclados (GRS) y luces no dependen de una pila en esta ficha."
+                    ),
+                    List.of(
+                            "El asiento declara 20 kg: a los 4 años comprueba el peso real si aún lo usa sentado.",
+                            "Hay más piezas que en un patinete de pie sin asiento; un adulto monta y retira los accesorios."
+                    ),
+                    "15 meses-6 años",
+                    note("Encaje a los 4 años", "El manillar de patinete cubre 68-78 cm; a esta edad suele usarse ya de pie."),
+                    note("Estabilidad", "Tres ruedas; el asiento añade un uso sentado distinto del triciclo con pedales."),
+                    note("Manejo", "Plegado y modo carrito; asiento 20 kg y patinete 50 kg."),
+                    note("Seguridad", "Freno trasero; casco y supervisión en las tres etapas.")
+            ),
+            entry(
+                    "triciclo-lionelo-tris-plus",
+                    "LIONELO Tris Plus",
+                    "Pedalear sentado con mango de adulto",
+                    "Triciclo 2 en 1 de 9 meses a 5 años y hasta 25 kg, con mango parental (80-100 cm), asiento giratorio 360°, rueda libre, capota y freno trasero. A los 4 años el modo habitual es el pedaleo; el mango sigue sirviendo en paseos largos. No es un patinete.",
+                    List.of(
+                            "Edad declarada de 9 meses a 5 años y carga máxima de 25 kg.",
+                            "Mango parental regulable de 80 a 100 cm y rueda libre para que el adulto controle la marcha.",
+                            "Asiento giratorio 360°, capota, reposapiés, arnés de 3 puntos y freno en las ruedas traseras.",
+                            "Peso declarado de 9,7 kg; ruedas PU de 26 y 23 cm y montaje sin herramientas."
+                    ),
+                    List.of(
+                            "La carga máxima declarada es 25 kg, por debajo de los 50 kg de los patinetes de esta lista; comprueba el peso real del niño.",
+                            "Se usa sentado, con pedales: no practica el equilibrio de pie del patinete."
+                    ),
+                    "9 meses-5 años",
+                    note("Encaje a los 4 años", "Hasta 5 años y 25 kg; a esta edad el modo habitual es el pedaleo, con o sin mango."),
+                    note("Estabilidad", "Tres ruedas y uso sentado, distinto del patinete de pie."),
+                    note("Manejo", "Mango parental 80-100 cm y rueda libre; 9,7 kg declarados."),
+                    note("Seguridad", "Arnés de 3 puntos, freno trasero y capota; supervisión igualmente necesaria.")
             )
     );
 
@@ -3788,6 +4026,14 @@ public class ComparisonPageService {
             case BALANCE_GUIDE_5_SLUG -> Optional.of(buildBalanceGuide5Page());
             case SCOOTERS_TRIKES_4_SLUG -> Optional.of(buildScootersTrikes4Page());
             case SCOOTERS_TRIKES_5_SLUG -> Optional.of(buildScootersTrikes5Page());
+            case PIKLER_4_SLUG -> Optional.of(buildPiklerPage(AGE_4, PIKLER_4_SLUG, PIKLER_4_CANONICAL));
+            case PIKLER_5_SLUG -> Optional.of(buildPiklerPage(AGE_5, PIKLER_5_SLUG, PIKLER_5_CANONICAL));
+            case RIDE_ON_4_SLUG -> Optional.of(buildRideOnPage(AGE_4, RIDE_ON_4_SLUG, RIDE_ON_4_CANONICAL));
+            case RIDE_ON_5_SLUG -> Optional.of(buildRideOnPage(AGE_5, RIDE_ON_5_SLUG, RIDE_ON_5_CANONICAL));
+            case CUTLERY_4_SLUG -> Optional.of(buildCutleryPage(AGE_4, CUTLERY_4_SLUG, CUTLERY_4_CANONICAL));
+            case CUTLERY_5_SLUG -> Optional.of(buildCutleryPage(AGE_5, CUTLERY_5_SLUG, CUTLERY_5_CANONICAL));
+            case DRESSING_4_SLUG -> Optional.of(buildDressingPage(AGE_4, DRESSING_4_SLUG, DRESSING_4_CANONICAL));
+            case DRESSING_5_SLUG -> Optional.of(buildDressingPage(AGE_5, DRESSING_5_SLUG, DRESSING_5_CANONICAL));
             case TOWERS_KITCHEN_4_SLUG -> Optional.of(buildTowersKitchen4Page());
             case TOWERS_KITCHEN_5_SLUG -> Optional.of(buildTowersKitchen5Page());
             case TABLEWARE_DAILY_4_SLUG -> Optional.of(buildTablewareDaily4Page());
@@ -4065,44 +4311,24 @@ public class ComparisonPageService {
                         "Cinco modelos reales comparados por estabilidad, talla y tipo de uso",
                         List.of(
                                 "A los 4 años el patinete de tres ruedas sigue ofreciendo una base más estable que uno de dos ruedas. Un triciclo cubre otra necesidad: pedalear sentado, a veces con mango de adulto. No son intercambiables.",
-                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "La selección reúne cuatro patinetes y un triciclo disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
                                 "Casco homologado, calzado cerrado, una zona sin tráfico y supervisión adulta no se sustituyen con tres ruedas, luces LED ni un mango parental. Comprueba siempre las instrucciones y límites del fabricante."
                         )
                 ),
                 List.of(),
                 List.of(
-                        new ComparisonPageResponse.QuickSummaryItem(
-                                "Para empezar de pie con tres ruedas",
-                                "patinete-micro-mini-deluxe",
-                                "1,95 kg declarados, giro por inclinación y manillar 48-68 cm."
-                        ),
-                        new ComparisonPageResponse.QuickSummaryItem(
-                                "Para una primera opción sencilla",
-                                "patinete-molto-maxi",
-                                "De 3 a 5 años, manillar 57-67 cm y montaje sin herramientas."
-                        ),
-                        new ComparisonPageResponse.QuickSummaryItem(
-                                "Para llevar y guardar",
-                                "patinete-globber-junior-foldable",
-                                "Plegable, bloqueo de dirección y tres alturas de manillar."
-                        ),
-                        new ComparisonPageResponse.QuickSummaryItem(
-                                "Para más altura a partir de 4 años",
-                                "patinete-globber-master-lights",
-                                "Manillar de 74 a 94 cm y plegado desde 4 años."
-                        ),
-                        new ComparisonPageResponse.QuickSummaryItem(
-                                "Para pedalear sentado",
-                                "triciclo-chicco-u-go",
-                                "Triciclo 2en1 con mango de adulto y hasta 20 kg."
-                        )
+                        summary("Para empezar de pie con luces LED", "patinete-lionelo-timmy", "3 kg, manillar 64-76 cm y luces LED."),
+                        summary("Para una primera opción sencilla", "patinete-molto-maxi", "De 3 a 5 años, manillar 57-67 cm y montaje sin herramientas."),
+                        summary("Para llevar y guardar", "patinete-globber-junior-foldable", "Plegable, bloqueo de dirección y tres alturas de manillar."),
+                        summary("Para más altura y paso a pie", "patinete-globber-go-up-plus", "Manillar 68-78 cm, plegado y asiento extraíble."),
+                        summary("Para pedalear sentado", "triciclo-lionelo-tris-plus", "Triciclo con mango parental y hasta 25 kg.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos especificaciones verificables y su utilidad para un niño de 4 años. No asignamos notas numéricas ni completamos datos que el fabricante o la ficha consultada no permitan confirmar.",
                         List.of(
                                 new ComparisonPageResponse.Criterion(
                                         "Encaje a los 4 años",
-                                        "Revisamos la edad declarada y, cuando está publicada, la altura del manillar. Un modelo desde 4 años con manillar a 74 cm no encaja igual que uno de 48 a 68 cm."
+                                        "Revisamos la edad declarada y, cuando está publicada, la altura del manillar. Un modelo de 64 a 76 cm no encaja igual que uno de 68 a 78 cm."
                                 ),
                                 new ComparisonPageResponse.Criterion(
                                         "Estabilidad y tipo de uso",
@@ -4128,21 +4354,21 @@ public class ComparisonPageService {
                                 "Decide primero si va de pie o sentado",
                                 List.of(
                                         "El patinete practica equilibrio de pie, dirección y frenado. El triciclo practica pedaleo sentado, a veces con mango de adulto. A los 4 años pueden convivir; no cubren lo mismo.",
-                                        "Si el objetivo es moverse de pie al aire libre, empieza por un patinete de tres ruedas con manillar que llegue a sus manos. Si aún necesita que le empujen en paseos largos, el triciclo 2en1 cubre ese tramo."
+                                        "Si el objetivo es moverse de pie al aire libre, empieza por un patinete de tres ruedas con manillar que llegue a sus manos. Si aún necesita que le empujen en paseos largos, el triciclo con mango parental cubre ese tramo."
                                 )
                         ),
                         new ComparisonPageResponse.Section(
                                 "Mide la altura del manillar",
                                 List.of(
-                                        "El niño debe alcanzar el manillar sin encogerse ni estirarse en exceso. Contrasta su altura con el rango publicado: 48-68 cm no es intercambiable con 74-94 cm.",
-                                        "No elijas solo por edad. El Master Lights está indicado desde 4 años, pero su manillar mínimo es 74 cm; un niño bajo puede encajar mejor en Mini Deluxe o Junior."
+                                        "El niño debe alcanzar el manillar sin encogerse ni estirarse en exceso. Contrasta su altura con el rango publicado: 57-67 cm no es intercambiable con 68-78 cm.",
+                                        "No elijas solo por edad. El GO UP llega a 78 cm en modo patinete; un niño bajo puede encajar mejor en MOLTO o Junior."
                                 )
                         ),
                         new ComparisonPageResponse.Section(
                                 "Plegado, peso y carga",
                                 List.of(
-                                        "Si lo vas a meter en el coche o en un ascensor, el plegado con modo carrito (Junior y Master) o el manillar desmontable (Mini Deluxe) cambian el día a día.",
-                                        "Revisa la carga máxima. Los patinetes de esta lista declaran 50 kg cuando figura; el U-GO declara 20 kg. Comprueba el peso real del niño antes de comprar el triciclo."
+                                        "Si lo vas a meter en el coche o en un ascensor, el plegado con modo carrito (Junior y GO UP) o el manillar plegable (Timmy) cambian el día a día.",
+                                        "Revisa la carga máxima. Los patinetes de esta lista declaran 50 kg cuando figura; el Tris Plus declara 25 kg. Comprueba el peso real del niño antes de comprar el triciclo."
                                 )
                         ),
                         new ComparisonPageResponse.Section(
@@ -4163,12 +4389,12 @@ public class ComparisonPageService {
                                 "A menudo sí, mientras el equilibrio de pie no esté asentado. Tres ruedas no son un recambio de la bicicleta sin pedales: aquí se está de pie, se dirige y se frena."
                         ),
                         new ComparisonPageResponse.Faq(
-                                "¿El Globber Master Lights vale para cualquier niño de 4 años?",
-                                "Está indicado desde 4 años, pero el manillar parte de 74 cm. Si el niño es bajo, Mini Deluxe LED (48-68 cm) o Junior Foldable (54-68 cm) encajan mejor. Mide antes de decidir."
+                                "¿El Globber GO UP Foldable Plus encaja a cualquier niño de 4 años?",
+                                "El manillar de patinete cubre 68-78 cm. Si el niño es bajo, MOLTO (57-67 cm) o Junior Foldable (54-68 cm) encajan mejor. Mide antes de decidir."
                         ),
                         new ComparisonPageResponse.Faq(
-                                "¿Por qué el triciclo tiene un límite de 20 kg?",
-                                "Porque así lo declara Chicco en el U-GO 2en1. A los 4 años hay que comprobar el peso: 20 kg no es equivalente a los 50 kg de los patinetes de esta comparativa."
+                                "¿Por qué el triciclo tiene un límite de 25 kg?",
+                                "Porque así lo declara Lionelo en el Tris Plus. A los 4 años hay que comprobar el peso: 25 kg no es equivalente a los 50 kg de los patinetes de esta comparativa."
                         ),
                         new ComparisonPageResponse.Faq(
                                 "¿Por qué no aparecen importes ni valoraciones?",
@@ -4193,7 +4419,7 @@ public class ComparisonPageService {
                         )
                 ),
                 new TrustAuthority(
-                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y solo mostramos hechos revisados el 14 de agosto de 2026.",
+                        "La selección parte de cinco productos reales y separa los datos de catálogo del análisis editorial. Conservamos los títulos editoriales y solo mostramos hechos revisados el 3 de septiembre de 2026.",
                         List.of(
                                 "Edad declarada y altura de manillar cuando está publicada.",
                                 "Uso de pie (patinete) o sentado (triciclo).",
@@ -7144,7 +7370,7 @@ public class ComparisonPageService {
                         faqItem("¿Sigue teniendo sentido a los 4 años?",
                                 "Sí, si el equilibrio aún no está listo para pedales. El salto se ve en el control, no en el cumpleaños."),
                         faqItem("¿En qué se diferencia de la otra comparativa de bicis?",
-                                "Aquí el criterio es recuperar el equilibrio y los pies al suelo. La otra detalla talla, ruedas y primer uso con las mismas cinco fichas."),
+                                "Aquí el criterio es recuperar el equilibrio y los pies al suelo. La otra compara talla, ruedas y primer uso con otra selección de cinco modelos."),
                         faqItem("¿Hace falta casco?",
                                 "Sí. También supervisión y un espacio sin tráfico."),
                         faqItem("¿Patinete o bici primero?",
@@ -8087,11 +8313,11 @@ public class ComparisonPageService {
     }
     private ComparisonPageResponse buildBalanceBikes4Page() {
         Map<String, EditorialEntry> editorialById = new LinkedHashMap<>();
-        BALANCE_BIKES.forEach(entry -> editorialById.put(entry.productId(), entry));
+        BALANCE_BIKES_4.forEach(entry -> editorialById.put(entry.productId(), entry));
 
         AtomicInteger rank = new AtomicInteger(1);
         List<ComparisonPageResponse.Entry> entries = productCatalog
-                .findByIds(BALANCE_BIKES.stream().map(EditorialEntry::productId).toList())
+                .findByIds(BALANCE_BIKES_4.stream().map(EditorialEntry::productId).toList())
                 .stream()
                 .filter(product -> product.isAvailableForAge(AGE_4))
                 .map(product -> toResponseEntry(
@@ -8110,29 +8336,51 @@ public class ComparisonPageService {
                 PageStatus.PUBLISHED,
                 BALANCE_BIKES_4_SLUG,
                 AGE_4,
-                breadcrumbs(),
+                List.of(
+                        new ComparisonPageResponse.Breadcrumb("Inicio", "/"),
+                        new ComparisonPageResponse.Breadcrumb(
+                                EditorialDefaults.HUB_4_LABEL,
+                                EditorialDefaults.HUB_4_HREF
+                        ),
+                        new ComparisonPageResponse.Breadcrumb(
+                                "Bicicletas sin pedales para 4 años",
+                                BALANCE_BIKES_4_CANONICAL
+                        )
+                ),
                 new ComparisonPageResponse.Header(
                         "Mejores bicicletas sin pedales para 4 años",
                         "Cinco modelos reales comparados por talla, manejo y tipo de rueda",
                         List.of(
                                 "A los 4 años importa más que el niño llegue bien al suelo y pueda controlar la bicicleta que cualquier reclamo comercial. Por eso revisamos ajustes, peso declarado, ruedas y elementos que facilitan el aprendizaje.",
-                                "La selección reúne cinco modelos disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "La selección reúne cinco modelos disponibles en Amazon.es. No usamos precios, valoraciones de usuarios ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
                                 "Una bicicleta sin pedales requiere casco, calzado cerrado, ajuste correcto y supervisión adulta. Comprueba siempre las instrucciones y límites indicados por el fabricante."
                         )
                 ),
                 List.of(),
-                quickSummary(),
-                methodology(),
+                quickSummaryBalanceBikes4(),
+                methodologyBalanceBikes4(),
                 entries,
-                buyingGuide(),
-                faq(),
-                relatedLinks(),
+                buyingGuideBalanceBikes4(),
+                faqBalanceBikes4(),
+                List.of(
+                        hub4Link(),
+                        new LinkItem(
+                                "Cómo elegir juguetes según la edad",
+                                "/guias/como-elegir-juguetes-por-edad/",
+                                "Criterios prácticos para adaptar una elección al desarrollo infantil."
+                        ),
+                        new LinkItem(
+                                "Bicicletas sin pedales",
+                                "/movimiento/bicicletas-sin-pedales/",
+                                "Información general sobre ajuste, aprendizaje y seguridad."
+                        )
+                ),
                 trustAuthority(),
                 affiliation(),
                 legalLinks(),
                 new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
-                BIKES_PUBLISHED_AT,
-                BIKES_UPDATED_AT
+                BIKES_4_PUBLISHED_AT,
+                BIKES_4_UPDATED_AT
         );
     }
     private ComparisonPageResponse buildBalanceBikes5Page() {
@@ -8427,7 +8675,7 @@ public class ComparisonPageService {
         );
     }
     private ComparisonPageResponse buildScooters5Page() {
-        List<ComparisonPageResponse.Entry> entries = rankedEntries(SCOOTERS, AGE_5);
+        List<ComparisonPageResponse.Entry> entries = rankedEntries(SCOOTERS_5, AGE_5);
         return new ComparisonPageResponse(
                 new Seo(
                         SCOOTERS_5_CANONICAL,
@@ -8599,7 +8847,7 @@ public class ComparisonPageService {
                 legalLinks(),
                 new ComparisonPageResponse.Author("Equipo editorial BebesFelices", "Redacción"),
                 SCOOTERS_PUBLISHED_AT,
-                SCOOTERS_UPDATED_AT
+                SCOOTERS_5_UPDATED_AT
         );
     }
     private ComparisonPageResponse buildTowers5Page() {
@@ -8821,6 +9069,318 @@ public class ComparisonPageService {
         );
     }
 
+    private ComparisonPageResponse buildPiklerPage(int age, String slug, String canonical) {
+        String ageLabel = age + " años";
+        return ageComparison(
+                slug,
+                canonical,
+                age,
+                PIKLER_3,
+                "Triángulos Pikler y estructuras de trepar para " + ageLabel + " | Bebes Felices",
+                "Comparamos cinco opciones para trepar o deslizarse a los " + age
+                        + " años: triángulos de madera, un set combinable y estructuras de plástico, con metodología y afiliación transparentes.",
+                "Triángulos Pikler y estructuras de trepar para " + ageLabel,
+                new ComparisonPageResponse.Header(
+                        "Triángulos Pikler y estructuras de trepar para " + ageLabel,
+                        "Cinco estructuras reales para subir, bajar o deslizarse sin ruedas",
+                        List.of(
+                                "A los " + age + " años el movimiento no es solo patinete o bici sin pedales. Trepar un marco, gatear un túnel o bajar un tobogán bajo es otro gesto: pies y manos, suelo estable, un adulto al lado. No es un parque infantil ni un columpio.",
+                                "La selección reúne productos del catálogo que siguen encajando a esta edad. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Mide el hueco. Un triángulo plegado no cabe en cualquier pasillo. Nada de saltar desde lo alto ni dejar al niño solo."
+                        )
+                ),
+                "Las estructuras",
+                List.of(
+                        summary("Para un triángulo compacto con rampa", "trepar-mamoi-triangulo-blanco", "20 a 57 cm y rampa reversible."),
+                        summary("Para un triángulo plegable hasta 4 años", "trepar-aiyaplay-3en1", "18 a 48 meses y rampa reversible."),
+                        summary("Para trepar, gatear y deslizarse", "trepar-little-tikes-gimnasio", "Plástico de interior o jardín."),
+                        summary("Para un tobogán bajo", "trepar-smoby-xs", "90 cm de recorrido y guarda en dos piezas."),
+                        summary("Para triángulo, arco y rampa", "trepar-costway-7en1", "Tres piezas combinables de haya.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede trepar o deslizarse a los " + age + " años en interior, con supervisión. No es un ranking de «el mejor Pikler».",
+                        List.of(
+                                criterion("Encaje a los " + age + " años", "Edad declarada y si el niño ya sube y baja con control."),
+                                criterion("Gesto", "Trepar barras, deslizarse o un circuito corto."),
+                                criterion("Espacio", "Hueco en el suelo y si se guarda."),
+                                criterion("Material", "Madera o plástico, y carga declarada."),
+                                criterion("Seguridad", "Suelo nivelado, un niño a la vez en el tobogán, adulto presente.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Madera o plástico", List.of(
+                                "El triángulo Pikler pide un rincón y montaje. Little Tikes cubre trepar y deslizarse en un volumen de jardín o salón, sin barras de madera."
+                        )),
+                        section("No es bici ni patinete", List.of(
+                                "Aquí no hay ruedas. Si buscas empujar sentado, mira correpasillos. Si buscas equilibrio de dos ruedas, la comparativa de bicicletas sin pedales."
+                        )),
+                        section("Supervisión", List.of(
+                                "El fabricante no sustituye a un adulto. Nada de colocarlo junto a una ventana, una escalera o un borde."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Qué es un triángulo Pikler a los " + age + " años?",
+                                "Un marco de barras para subir y bajar a su ritmo. A esta edad pide control y un adulto cerca."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior, en una estructura baja, el casco no es el criterio habitual del patinete. Suelo libre de muebles con esquinas y supervisión sí lo son."),
+                        faqItem("¿Se puede usar fuera?",
+                                "El gimnasio Little Tikes y el Smoby XS declaran interior o jardín. Los triángulos de madera de esta lista se guardan secos."),
+                        faqItem("¿Sustituye al patinete?",
+                                "No. Trepar no enseña a frenar de pie ni el equilibrio de la bici sin pedales."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(age),
+                        new LinkItem(
+                                "Mejores bicicletas sin pedales para " + ageLabel,
+                                "/comparativas/" + balanceBikesSlug(age) + "/",
+                                "Si el gesto que buscas es equilibrio sentado con ruedas."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildRideOnPage(int age, String slug, String canonical) {
+        String ageLabel = age + " años";
+        return ageComparison(
+                slug,
+                canonical,
+                age,
+                RIDE_ON_3,
+                "Correpasillos para " + ageLabel + " | Bebes Felices",
+                "Comparamos correpasillos para " + ageLabel + ": motos de empuje y un Cozy Coupe, con metodología y afiliación transparentes.",
+                "Correpasillos para " + ageLabel,
+                new ComparisonPageResponse.Header(
+                        "Correpasillos para " + ageLabel,
+                        "Vehículos para empujar sentado, sin pedales ni patinete",
+                        List.of(
+                                "Un correpasillos se empuja sentado, con los pies en el suelo. No es una bicicleta sin pedales (dos ruedas, manillar de bici) ni un patinete (de pie). A los " + age + " años sirve si el asiento aún deja las piernas sueltas.",
+                                "La selección reúne productos del catálogo que siguen encajando a esta edad. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Mide la entrepierna hasta el asiento. Si las rodillas van encogidas, el modelo se ha quedado pequeño aunque la caja diga " + age + " años."
+                        )
+                ),
+                "Los correpasillos",
+                List.of(
+                        summary("Para seguir a los " + age + " años y más", "corre-injusa-winner-repsol", "Moto XL, ficha desde 36 meses, 99 cm."),
+                        summary("Para una moto baja hasta 3 años", "corre-injusa-tundra-tornado", "Asiento 33 cm y carga 30 kg."),
+                        summary("Para una moto hasta los 3 años", "corre-feber-dream", "18 meses a 3 años, interior o patio."),
+                        summary("Para varios terrenos hasta 5 años", "corre-molto-cross-premium", "Asiento 33 cm y carga 30 kg."),
+                        summary("Para un coche con techo", "corre-little-tikes-cozy-coupe", "18 meses a 5 años, pies al suelo.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede empujar sentado a los " + age + " años. No mezclamos este gesto con bici sin pedales ni patinete.",
+                        List.of(
+                                criterion("Encaje a los " + age + " años", "Edad o talla declarada y si las piernas empujan sueltas."),
+                                criterion("Gesto", "Moto o coche de empuje; pies al suelo."),
+                                criterion("Estabilidad", "Ruedas anchas o base de cuatro ruedas."),
+                                criterion("Uso", "Interior liso o patio sin tráfico."),
+                                criterion("Límite", "No es eléctrico, no es bici, no es patinete.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Moto o coche", List.of(
+                                "La moto deja las piernas a los lados. El Cozy Coupe es un coche con techo. No hace falta ambos el mismo año."
+                        )),
+                        section("Si ya tiene bici sin pedales", List.of(
+                                "No dupliques el mismo gesto de empujar. El correpasillos no enseña equilibrio de dos ruedas."
+                        )),
+                        section("Tope de edad", List.of(
+                                "Tundra y Motofeber Dream declaran hasta 3 años. Winner Repsol parte de 36 meses, Cross Premium y Cozy Coupe llegan a 5. Comprueba asiento y peso."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿En qué se diferencia de la bici sin pedales?",
+                                "La bici tiene dos ruedas y manillar de bicicleta. El correpasillos es un asiento ancho sobre tres o cuatro ruedas, sin pedales."),
+                        faqItem("¿Y del patinete?",
+                                "El patinete se usa de pie. Aquí se va sentado."),
+                        faqItem("¿Hace falta casco?",
+                                "En interior liso, el criterio habitual es supervisión y no bajar bordillos. En pendiente o junto a otros vehículos, casco."),
+                        faqItem("¿Valen los eléctricos?",
+                                "No en esta lista. Un coche de batería es otro producto y otra supervisión."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(age),
+                        new LinkItem(
+                                "Patinetes y triciclos para " + ageLabel,
+                                "/comparativas/" + scootersTrikesSlug(age) + "/",
+                                "Si el gesto es ir de pie o sentado con mango de adulto."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildCutleryPage(int age, String slug, String canonical) {
+        String ageLabel = age + " años";
+        return ageComparison(
+                slug,
+                canonical,
+                age,
+                CUTLERY_3,
+                "Cubiertos infantiles para " + ageLabel + " | Bebes Felices",
+                "Comparamos sets reales de tenedor, cuchillo y cuchara para " + ageLabel + ", distintos de la vajilla, con metodología y afiliación transparentes.",
+                "Cubiertos infantiles para " + ageLabel,
+                new ComparisonPageResponse.Header(
+                        "Cubiertos infantiles para " + ageLabel,
+                        "Sets para pinchar y recoger sin cubiertos de adulto",
+                        List.of(
+                                "A los " + age + " años la vajilla irrompible cubre plato y vaso. Los cubiertos son otra pieza: mango corto, filo de aprendizaje y un gesto que se repite en cada comida. No son cubiertos de adulto recortados.",
+                                "La selección reúne productos del catálogo que siguen encajando a esta edad. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Un set de tres suele bastar. El recambio de seis piezas sirve si come en dos casas o en el cole."
+                        )
+                ),
+                "Los sets",
+                List.of(
+                        summary("Para tres piezas de acero corto", "cubiertos-twistshake-acero", "Tenedor, cuchillo y cuchara desde 12 meses."),
+                        summary("Para asas que no resbalan", "cubiertos-mam-aprendizaje", "Zurdo o diestro, filo de aprendizaje."),
+                        summary("Para acero de mesa con cucharilla", "cubiertos-wmf-animales", "Cuatro piezas Cromargan y lavavajillas."),
+                        summary("Para recambio en el cajón", "cubiertos-exzact-safari", "Seis piezas desde 24 meses."),
+                        summary("Para mango corto a los " + age + " años", "cubiertos-lehoo-vehiculos", "Seis piezas de acero 304.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede pinchar y recoger a los " + age + " años con un mango de su tamaño. No es un ranking de «los mejores cubiertos» ni sustituye la comparativa de vajilla.",
+                        List.of(
+                                criterion("Encaje a los " + age + " años", "Edad declarada y si el mango de adulto aún se le va."),
+                                criterion("Piezas", "Tres o seis; con o sin cucharilla."),
+                                criterion("Agarre", "Goma, asa curva o acero liso."),
+                                criterion("Cuidado", "Lavavajillas solo si la ficha lo indica."),
+                                criterion("Seguridad", "Filo de aprendizaje y supervisión en la mesa.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Cubiertos no son vajilla", List.of(
+                                "Plato, cuenco y vaso están en la comparativa de vajilla infantil irrompible. Aquí solo entra lo que se lleva a la boca para pinchar o recoger."
+                        )),
+                        section("Tres piezas o recambio", List.of(
+                                "Twistshake y MAM cubren una comida. EXZACT y Lehoo duplican tenedor, cuchillo y cuchara si hay dos sitios."
+                        )),
+                        section("Acero o mango de goma", List.of(
+                                "El mango de goma perdona el resbalón. El acero de mesa (WMF) se parece más a lo que usa el resto de la familia."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿A los " + age + " años siguen haciendo falta cubiertos infantiles?",
+                                "Sí, si el tenedor de adulto se le va o el cuchillo de mesa es largo. Si ya come con los de la casa sin incidentes, no es obligatorio."),
+                        faqItem("¿Cuchillo infantil corta de verdad?",
+                                "Corta blando. No sustituye que un adulto corte carne fibrosa. El filo de aprendizaje no es un cuchillo de cocina."),
+                        faqItem("¿Se lavan en el lavavajillas?",
+                                "Solo si la ficha lo declara. WMF sí. Lehoo recomienda mano si quieres conservar el dibujo del mango."),
+                        faqItem("¿Dónde está el plato y el vaso?",
+                                "En la comparativa de vajillas infantiles irrompibles para " + ageLabel + "."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(age),
+                        new LinkItem(
+                                "Mejores vajillas infantiles para " + ageLabel,
+                                "/comparativas/" + tablewareSlug(age) + "/",
+                                "Plato, cuenco y vaso irrompibles, sin cubiertos."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private ComparisonPageResponse buildDressingPage(int age, String slug, String canonical) {
+        String ageLabel = age + " años";
+        return ageComparison(
+                slug,
+                canonical,
+                age,
+                DRESSING_3,
+                "Aprender a vestirse a los " + age + " años | Bebes Felices",
+                "Comparamos materiales reales para botones, cremalleras, cordones y pestillos a los " + age + " años, con metodología y afiliación transparentes.",
+                "Aprender a vestirse a los " + age + " años",
+                new ComparisonPageResponse.Header(
+                        "Aprender a vestirse a los " + age + " años",
+                        "Materiales para abrochar, enhebrar o abrir pestillos sin la prisa del abrigo",
+                        List.of(
+                                "A los " + age + " años vestirse pide pinza, dos manos y tiempo. Un tablero o un cubo aísla el gesto: botón, cremallera, cordón o pestillo. No sustituye el abrigo real; lo prepara. La torre y la vajilla cubren cocina y mesa; esto cubre la ropa y los cierres de casa.",
+                                "La selección reúne productos del catálogo que siguen encajando a esta edad. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 2 de septiembre de 2026.",
+                                "Un cierre cada vez. Los cordones e imanes se cuentan al guardar. Nada de dejar solo con un cordón al cuello."
+                        )
+                ),
+                "Los materiales",
+                List.of(
+                        summary("Para botones y cremallera en un oso", "vestir-melissa-habilidades", "Seis prendas que se abrochan a partir de 3 años."),
+                        summary("Para enhebrar en la mesa", "vestir-melissa-cordones", "Cinco paneles y cordones, sin el zapato puesto."),
+                        summary("Para un cubo que se lleva", "vestir-small-foot-cubo", "Cremallera, botones y velcro en 16 cm."),
+                        summary("Para nombrar prendas", "vestir-melissa-disfraces", "Imanes; no abrocha el abrigo real."),
+                        summary("Para pestillos de armario", "vestir-melissa-pestillos", "Abrir y cerrar, no ponerse la chaqueta.")
+                ),
+                new ComparisonPageResponse.Methodology(
+                        "Comparamos si el niño puede practicar un cierre de vestir o de casa a los " + age + " años, sentado, con un adulto cerca. No es un ranking de «el mejor marco Montessori».",
+                        List.of(
+                                criterion("Encaje a los " + age + " años", "Edad declarada y un solo gesto por sesión."),
+                                criterion("Gesto", "Abrochar, enhebrar, colocar prendas o abrir pestillos."),
+                                criterion("Material", "Madera, tela o imanes, y si se guarda entero."),
+                                criterion("Paso a la prenda real", "Si después hay que repetir el gesto en el abrigo o el zapato."),
+                                criterion("Seguridad", "Cordones, imanes y pestillos que pillan; recuento al guardar.")
+                        )
+                ),
+                new ComparisonPageResponse.BuyingGuide(List.of(
+                        section("Tablero o cubo", List.of(
+                                "El oso aísla botones y cremallera. El cubo de tela se lleva y mezcla seis cierres. Elige según si hay mesa fija o necesitas algo compacto."
+                        )),
+                        section("No es la torre ni la vajilla", List.of(
+                                "La torre llega a la encimera. La vajilla cubre plato y vaso. Vestirse es otro circuito: ropa y cierres, con tiempo y sin prisa de salir a la calle."
+                        )),
+                        section("Imanes y cordones", List.of(
+                                "Los disfraces magnéticos no practican el botón real. Los cordones no se dejan al cuello. Recuento al guardar."
+                        ))
+                )),
+                List.of(
+                        faqItem("¿Sustituye aprender en el abrigo real?",
+                                "No. El tablero aísla el gesto. Después hay que repetirlo en la prenda, con más tiempo del que parece."),
+                        faqItem("¿Hace falta un marco Montessori de tela?",
+                                "No. Lo útil es un cierre claro y piezas que no se traguen. El nombre comercial no sustituye la práctica en la ropa de cada día."),
+                        faqItem("¿Y el zapato PlanToys?",
+                                "Practica nudos en un zapato de madera. Está en regalos sostenibles. Aquí el gesto se reparte entre paneles, cubo y tablero."),
+                        faqItem("¿Se puede dejar solo?",
+                                "No. Cordones, imanes y pestillos piden un adulto cerca, sobre todo si hay hermanos pequeños."),
+                        faqItem("¿Por qué no aparecen importes ni valoraciones?",
+                                "Porque cambian y no forman parte de esta evaluación editorial.")
+                ),
+                List.of(
+                        hubLink(age),
+                        new LinkItem(
+                                "Mejores torres de aprendizaje para " + ageLabel,
+                                "/comparativas/" + towersSlug(age) + "/",
+                                "Si el gesto que buscas es llegar a la encimera, no abrochar."
+                        ),
+                        chooseByAgeLink()
+                )
+        );
+    }
+
+    private static LinkItem hubLink(int age) {
+        return switch (age) {
+            case AGE_5 -> hub5Link();
+            default -> hub4Link();
+        };
+    }
+
+    private static String balanceBikesSlug(int age) {
+        return age == AGE_5 ? BALANCE_BIKES_5_SLUG : BALANCE_BIKES_4_SLUG;
+    }
+
+    private static String scootersTrikesSlug(int age) {
+        return age == AGE_5 ? SCOOTERS_TRIKES_5_SLUG : SCOOTERS_TRIKES_4_SLUG;
+    }
+
+    private static String tablewareSlug(int age) {
+        return age == AGE_5 ? TABLEWARE_5_SLUG : TABLEWARE_SLUG;
+    }
+
+    private static String towersSlug(int age) {
+        return age == AGE_5 ? TOWERS_5_SLUG : TOWERS_SLUG;
+    }
+
     private ComparisonPageResponse ageComparison(
             String slug,
             String canonical,
@@ -9014,6 +9574,122 @@ public class ComparisonPageService {
                         "Para postura ajustable y reposapiés",
                         "bici-puky-lr-m",
                         "Sillín y manillar ajustables con ruedas sin aire."
+                )
+        );
+    }
+
+    private List<ComparisonPageResponse.QuickSummaryItem> quickSummaryBalanceBikes4() {
+        return List.of(
+                new ComparisonPageResponse.QuickSummaryItem(
+                        "Para talla de 4 años y ruedas de 12 pulgadas",
+                        "bici-chillafish-bmxie",
+                        "Rango 2-5 años, 87-110 cm y ruedas sin aire."
+                ),
+                new ComparisonPageResponse.QuickSummaryItem(
+                        "Para ligereza y control fácil",
+                        "bici-sawyer-ultraligera",
+                        "Diseño ultraligero para levantar y dirigir con menos esfuerzo."
+                ),
+                new ComparisonPageResponse.QuickSummaryItem(
+                        "Para un manejo ligero a los 4 años",
+                        "bici-eight4two",
+                        "2,9 kg, 2-5 años y ruedas antipinchazos."
+                ),
+                new ComparisonPageResponse.QuickSummaryItem(
+                        "Para un modelo ligero desde 3 años",
+                        "bici-momi-breki",
+                        "3 kg, ruedas EVA de 12 pulgadas y sillín con cierre rápido."
+                ),
+                new ComparisonPageResponse.QuickSummaryItem(
+                        "Para ruedas grandes con más soporte",
+                        "bici-gaslike-16-con-freno",
+                        "Ruedas de 16 pulgadas con freno y caballete."
+                )
+        );
+    }
+
+    private ComparisonPageResponse.Methodology methodologyBalanceBikes4() {
+        return new ComparisonPageResponse.Methodology(
+                "Comparamos especificaciones verificables y su utilidad para un niño de 4 años. No asignamos notas numéricas ni completamos datos que el fabricante o la ficha consultada no permitan confirmar.",
+                List.of(
+                        new ComparisonPageResponse.Criterion(
+                                "Ajuste y talla",
+                                "Revisamos la edad declarada y, cuando está disponible, el recorrido del sillín y el ajuste del manillar. A los 4 años la entrepierna sigue siendo más útil que la edad por sí sola."
+                        ),
+                        new ComparisonPageResponse.Criterion(
+                                "Facilidad de manejo",
+                                "Consideramos el peso declarado, el control de giro o el freno y la capacidad del niño para levantar y dirigir la bicicleta."
+                        ),
+                        new ComparisonPageResponse.Criterion(
+                                "Ruedas y terreno",
+                                "Distinguimos entre ruedas EVA, espuma, sin aire e inflables porque cambian el mantenimiento y el comportamiento sobre firme irregular."
+                        ),
+                        new ComparisonPageResponse.Criterion(
+                                "Uso evolutivo",
+                                "Valoramos los ajustes conocidos y los límites declarados sin deducir rangos que no estén verificados."
+                        ),
+                        new ComparisonPageResponse.Criterion(
+                                "Seguridad práctica",
+                                "Comprobamos límites de carga y elementos de control publicados, recordando que ninguno sustituye casco, supervisión y una zona segura."
+                        )
+                )
+        );
+    }
+
+    private ComparisonPageResponse.BuyingGuide buyingGuideBalanceBikes4() {
+        return new ComparisonPageResponse.BuyingGuide(List.of(
+                new ComparisonPageResponse.Section(
+                        "Empieza por la altura del sillín",
+                        List.of(
+                                "El niño debe poder sentarse y apoyar ambos pies en el suelo con control. Mide la entrepierna con el calzado que utilizará y contrástala con la altura mínima del sillín.",
+                                "No elijas solo por edad: dos niños de 4 años pueden necesitar ajustes distintos. Si no hay medidas verificadas, confírmalas en la ficha vigente antes de comprar."
+                        )
+                ),
+                new ComparisonPageResponse.Section(
+                        "Peso y control",
+                        List.of(
+                                "Un modelo ligero suele ser más fácil de levantar, girar y transportar. El peso no decide por sí solo: también cuentan la postura, la geometría y la confianza del niño.",
+                                "Los límites de giro y el freno pueden suavizar el aprendizaje, pero no evitan caídas ni reemplazan la supervisión."
+                        )
+                ),
+                new ComparisonPageResponse.Section(
+                        "Elige las ruedas según el terreno",
+                        List.of(
+                                "EVA, espuma y ruedas sin aire reducen el mantenimiento y eliminan los pinchazos. Son prácticas para paseos habituales sobre suelo regular.",
+                                "Las ruedas inflables requieren controlar la presión y pueden pincharse, pero resultan una opción a considerar cuando se circula por superficies variadas."
+                        )
+                ),
+                new ComparisonPageResponse.Section(
+                        "Seguridad antes de salir",
+                        List.of(
+                                "Ajusta sillín y manillar siguiendo el manual, revisa cierres y estado de las ruedas, y utiliza casco homologado y calzado cerrado.",
+                                "Practica lejos de tráfico, escaleras, pendientes pronunciadas y agua. La persona adulta debe mantener supervisión activa."
+                        )
+                )
+        ));
+    }
+
+    private List<ComparisonPageResponse.Faq> faqBalanceBikes4() {
+        return List.of(
+                new ComparisonPageResponse.Faq(
+                        "¿Qué altura debe tener el sillín para un niño de 4 años?",
+                        "Debe permitir apoyar ambos pies en el suelo con seguridad. Mide la entrepierna y comprueba la altura mínima real del modelo; la edad no basta para decidir."
+                ),
+                new ComparisonPageResponse.Faq(
+                        "¿Son mejores las ruedas inflables o las que no necesitan aire?",
+                        "Depende del uso. Las que no necesitan aire evitan pinchazos y mantenimiento; las inflables exigen revisar la presión y pueden resultar adecuadas para firmes más variados."
+                ),
+                new ComparisonPageResponse.Faq(
+                        "¿Una bicicleta ligera siempre es la mejor opción?",
+                        "La ligereza facilita el manejo, pero también deben encajar la altura del sillín, la postura, las ruedas y el terreno habitual."
+                ),
+                new ComparisonPageResponse.Faq(
+                        "¿Necesita casco aunque la bicicleta no tenga pedales?",
+                        "Sí. También necesita calzado cerrado, una zona sin tráfico y supervisión adulta constante."
+                ),
+                new ComparisonPageResponse.Faq(
+                        "¿Por qué no aparecen importes ni valoraciones?",
+                        "Porque cambian con frecuencia y no forman parte de esta evaluación editorial. La página compara especificaciones y criterios de uso verificables."
                 )
         );
     }

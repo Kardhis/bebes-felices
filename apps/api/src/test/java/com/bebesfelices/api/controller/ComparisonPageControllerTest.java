@@ -78,9 +78,9 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.targetAge").value(4))
                 .andExpect(jsonPath("$.entries.length()").value(5))
                 .andExpect(jsonPath("$.entries[0].productId")
-                        .value("patinete-micro-mini-deluxe"))
+                        .value("patinete-lionelo-timmy"))
                 .andExpect(jsonPath("$.entries[4].productId")
-                        .value("triciclo-chicco-u-go"))
+                        .value("triciclo-lionelo-tris-plus"))
                 .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"))
                 .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/4-anos/"));
     }
@@ -217,6 +217,30 @@ class ComparisonPageControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.targetAge").value(5));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.BALANCE_BIKES_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.PIKLER_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.RIDE_ON_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.CUTLERY_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.DRESSING_4_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(4));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.PIKLER_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.RIDE_ON_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.CUTLERY_5_SLUG))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.targetAge").value(5));
+        mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.DRESSING_5_SLUG))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.targetAge").value(5));
     }

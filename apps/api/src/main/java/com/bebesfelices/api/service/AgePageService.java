@@ -30,6 +30,7 @@ public class AgePageService {
     private static final String BALANCE_BIKE_SPOTLIGHT_ID = "bici-chicco-red-bullet";
     private static final String BOARD_GAME_SPOTLIGHT_ID = "lectura-frutalito";
     private static final String SCOOTER_SPOTLIGHT_ID = "patinete-micro-mini-deluxe";
+    private static final String SCOOTER_4_SPOTLIGHT_ID = "patinete-lionelo-timmy";
     private static final String TOWER_SPOTLIGHT_ID = "torre-yoleo-transformer";
     private static final String TABLEWARE_SPOTLIGHT_ID = "vajilla-twistshake-dividido";
     private static final String SUSTAINABLE_SPOTLIGHT_ID = "simbolico-janod-veterinario";
@@ -100,14 +101,16 @@ public class AgePageService {
             + ComparisonPageService.STEM_4_SLUG + "/";
     private static final String BALANCE_BIKES_4_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.BALANCE_BIKES_4_SLUG + "/";
-    private static final String BALANCE_GUIDE_4_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.BALANCE_GUIDE_4_SLUG + "/";
     private static final String SCOOTERS_TRIKES_4_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SCOOTERS_TRIKES_4_SLUG + "/";
-    private static final String TOWERS_KITCHEN_4_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TOWERS_KITCHEN_4_SLUG + "/";
-    private static final String TABLEWARE_DAILY_4_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TABLEWARE_DAILY_4_SLUG + "/";
+    private static final String PIKLER_4_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.PIKLER_4_SLUG + "/";
+    private static final String RIDE_ON_4_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.RIDE_ON_4_SLUG + "/";
+    private static final String CUTLERY_4_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.CUTLERY_4_SLUG + "/";
+    private static final String DRESSING_4_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.DRESSING_4_SLUG + "/";
     private static final String GIFTS_4_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.GIFTS_4_SLUG + "/";
     private static final String GIFT_SELECTION_4_COMPARISON_HREF = "/comparativas/"
@@ -130,20 +133,22 @@ public class AgePageService {
             + ComparisonPageService.SENSORY_5_SLUG + "/";
     private static final String BALANCE_BIKES_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.BALANCE_BIKES_5_SLUG + "/";
-    private static final String BALANCE_GUIDE_5_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.BALANCE_GUIDE_5_SLUG + "/";
     private static final String SCOOTERS_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SCOOTERS_5_SLUG + "/";
     private static final String SCOOTERS_TRIKES_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.SCOOTERS_TRIKES_5_SLUG + "/";
+    private static final String PIKLER_5_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.PIKLER_5_SLUG + "/";
+    private static final String RIDE_ON_5_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.RIDE_ON_5_SLUG + "/";
     private static final String TOWERS_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.TOWERS_5_SLUG + "/";
     private static final String TABLEWARE_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.TABLEWARE_5_SLUG + "/";
-    private static final String TOWERS_KITCHEN_5_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TOWERS_KITCHEN_5_SLUG + "/";
-    private static final String TABLEWARE_DAILY_5_COMPARISON_HREF = "/comparativas/"
-            + ComparisonPageService.TABLEWARE_DAILY_5_SLUG + "/";
+    private static final String CUTLERY_5_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.CUTLERY_5_SLUG + "/";
+    private static final String DRESSING_5_COMPARISON_HREF = "/comparativas/"
+            + ComparisonPageService.DRESSING_5_SLUG + "/";
     private static final String GIFTS_5_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.GIFTS_5_SLUG + "/";
     private static final String GIFT_SELECTION_5_COMPARISON_HREF = "/comparativas/"
@@ -168,7 +173,7 @@ public class AgePageService {
             "juego-montessori-formas",
             "puzle-madera-animales",
             "bici-sin-pedales-basica",
-            SCOOTER_SPOTLIGHT_ID,
+            SCOOTER_4_SPOTLIGHT_ID,
             TOWER_SPOTLIGHT_ID,
             TABLEWARE_SPOTLIGHT_ID,
             "set-construccion-magnetico",
@@ -372,16 +377,16 @@ public class AgePageService {
                             new LinkItem("Juegos de mesa cooperativos", BOARD_GAMES_COMPARISON_HREF, "Comparativa de opciones cooperativas y de turnos cortos.")
                     )),
                     new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
-                            new LinkItem("Mejores bicicletas sin pedales para 4 años", BALANCE_BIKES_4_COMPARISON_HREF, "Comparativa de modelos ligeros para consolidar el equilibrio."),
-                            new LinkItem("Patinetes y triciclos", SCOOTERS_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango."),
-                            new LinkItem("Bicicletas sin pedales", BALANCE_GUIDE_4_COMPARISON_HREF, "Comparativa para ganar equilibrio con los pies en el suelo."),
-                            new LinkItem("Patinetes y triciclos alternativos", SCOOTERS_TRIKES_4_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre.")
+                            new LinkItem("Mejores bicicletas sin pedales para 4 años", BALANCE_BIKES_4_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_TRIKES_4_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre."),
+                            new LinkItem("Triángulos Pikler y estructuras de trepar", PIKLER_4_COMPARISON_HREF, "Comparativa para trepar, gatear o deslizarse en interior."),
+                            new LinkItem("Correpasillos", RIDE_ON_4_COMPARISON_HREF, "Comparativa de motos y un coche para empujar sentado, sin pedales ni manillar de patinete.")
                     )),
                     new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Torres de aprendizaje", TOWERS_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
                             new LinkItem("Vajilla infantil irrompible", TABLEWARE_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda."),
-                            new LinkItem("Torres para la cocina", TOWERS_KITCHEN_4_COMPARISON_HREF, "Comparativa de torres para la rutina diaria en la encimera."),
-                            new LinkItem("Vajilla para la mesa diaria", TABLEWARE_DAILY_4_COMPARISON_HREF, "Comparativa de platos y vasos para las comidas de cada día.")
+                            new LinkItem("Cubiertos infantiles", CUTLERY_4_COMPARISON_HREF, "Comparativa de tenedor, cuchillo y cuchara para comer sin cubiertos de adulto."),
+                            new LinkItem("Aprender a vestirse", DRESSING_4_COMPARISON_HREF, "Comparativa de botones, cremalleras, cordones y pestillos de la rutina.")
                     )),
                     new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
                             new LinkItem("Ideas de regalo para 4 años", GIFTS_4_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
@@ -404,16 +409,16 @@ public class AgePageService {
                             new LinkItem("Juegos de mesa cooperativos", BOARD_GAMES_5_COMPARISON_HREF, "Comparativa de partidas más largas con estrategia compartida.")
                     )),
                     new AgePageResponse.NeedGroup("Movimiento", "#movimiento", List.of(
-                            new LinkItem("Mejores bicicletas sin pedales para 5 años", BALANCE_BIKES_5_COMPARISON_HREF, "Comparativa de modelos para consolidar el equilibrio."),
-                            new LinkItem("Patinetes y triciclos", SCOOTERS_5_COMPARISON_HREF, "Comparativa de patinetes de tres ruedas y un triciclo con mango."),
-                            new LinkItem("Bicicletas sin pedales", BALANCE_GUIDE_5_COMPARISON_HREF, "Comparativa para ganar equilibrio con los pies en el suelo."),
-                            new LinkItem("Patinetes y triciclos alternativos", SCOOTERS_TRIKES_5_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre.")
+                            new LinkItem("Mejores bicicletas sin pedales para 5 años", BALANCE_BIKES_5_COMPARISON_HREF, "Comparativa de modelos ligeros para iniciarse con seguridad."),
+                            new LinkItem("Patinetes y triciclos", SCOOTERS_TRIKES_5_COMPARISON_HREF, "Comparativa de ir de pie o sentado al aire libre."),
+                            new LinkItem("Triángulos Pikler y estructuras de trepar", PIKLER_5_COMPARISON_HREF, "Comparativa para trepar, gatear o deslizarse en interior."),
+                            new LinkItem("Correpasillos", RIDE_ON_5_COMPARISON_HREF, "Comparativa de motos y un coche para empujar sentado, sin pedales ni manillar de patinete.")
                     )),
                     new AgePageResponse.NeedGroup("Autonomía", "#autonomia", List.of(
                             new LinkItem("Torres de aprendizaje", TOWERS_5_COMPARISON_HREF, "Comparativa de torres estables para participar en la cocina."),
                             new LinkItem("Vajilla infantil irrompible", TABLEWARE_5_COMPARISON_HREF, "Comparativa de platos, vasos y sets para comer sin ayuda."),
-                            new LinkItem("Torres para la cocina", TOWERS_KITCHEN_5_COMPARISON_HREF, "Comparativa de torres para la rutina diaria en la encimera."),
-                            new LinkItem("Vajilla para la mesa diaria", TABLEWARE_DAILY_5_COMPARISON_HREF, "Comparativa de platos y vasos para las comidas de cada día.")
+                            new LinkItem("Cubiertos infantiles", CUTLERY_5_COMPARISON_HREF, "Comparativa de tenedor, cuchillo y cuchara para comer sin cubiertos de adulto."),
+                            new LinkItem("Aprender a vestirse", DRESSING_5_COMPARISON_HREF, "Comparativa de botones, cremalleras, cordones y pestillos de la rutina.")
                     )),
                     new AgePageResponse.NeedGroup("Regalos", "#regalos", List.of(
                             new LinkItem("Ideas de regalo para 5 años", GIFTS_5_COMPARISON_HREF, "Comparativa por necesidad: aprender, moverse, autonomía o crear."),
@@ -482,7 +487,7 @@ public class AgePageService {
                 case "puzle-madera-animales" -> PUZZLES_4_COMPARISON_HREF;
                 case "bici-sin-pedales-basica" -> BALANCE_BIKES_4_COMPARISON_HREF;
                 case BOARD_GAME_SPOTLIGHT_ID -> BOARD_GAMES_COMPARISON_HREF;
-                case SCOOTER_SPOTLIGHT_ID -> SCOOTERS_COMPARISON_HREF;
+                case SCOOTER_4_SPOTLIGHT_ID -> SCOOTERS_COMPARISON_HREF;
                 case TOWER_SPOTLIGHT_ID -> TOWERS_COMPARISON_HREF;
                 case TABLEWARE_SPOTLIGHT_ID -> TABLEWARE_COMPARISON_HREF;
                 case "set-construccion-magnetico" -> STEM_4_COMPARISON_HREF;
@@ -513,6 +518,7 @@ public class AgePageService {
             case BALANCE_BIKE_SPOTLIGHT_ID -> "Una bicicleta ligera con sillín y manillar ajustables, incluida en nuestra comparativa para iniciarse con seguridad.";
             case BOARD_GAME_SPOTLIGHT_ID -> "Un cooperativo de reglas mínimas, con fruta de madera y un cuervo al que hay que adelantarse, incluido en nuestra comparativa para 4 años.";
             case SCOOTER_SPOTLIGHT_ID -> "Un patinete ligero de tres ruedas con giro por inclinación, incluido en nuestra comparativa para moverse de pie con más autonomía.";
+            case SCOOTER_4_SPOTLIGHT_ID -> "Un patinete de tres ruedas con luces LED y manillar de 64 a 76 cm, incluido en nuestra comparativa para moverse de pie a los 4 años.";
             case TOWER_SPOTLIGHT_ID -> "Torre plegable convertible en escritorio, incluida en nuestra comparativa para participar en la cocina con un adulto.";
             case TABLEWARE_SPOTLIGHT_ID -> "Plato con compartimentos y tapa, incluido en nuestra comparativa para comer con más autonomía.";
             case SUSTAINABLE_SPOTLIGHT_ID -> "Maletín de veterinario con accesorios de madera FSC, incluido en nuestra comparativa de regalos de materiales declarados.";

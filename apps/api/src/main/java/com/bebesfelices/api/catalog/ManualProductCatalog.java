@@ -64,6 +64,71 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 7, 22)
         ));
         register(new Product(
+                "bici-chillafish-bmxie",
+                ProductSource.MANUAL,
+                "B07LD5YTGR",
+                "www.amazon.es",
+                "Chillafish BMXie 2",
+                "Bicicleta sin pedales para 2 a 5 años y hasta 35 kg, con ruedas sin aire de 12 pulgadas, sillín regulable de 32 a 41 cm, freno de pie y reposapiés.",
+                2, 5,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "bici-eight4two",
+                ProductSource.MANUAL,
+                "B0FJFW99GQ",
+                "www.amazon.es",
+                "EIGHT4TWO",
+                "Bicicleta sin pedales de 2,9 kg para 2 a 5 años, con ruedas antipinchazos y sillín y manillar regulables sin herramientas.",
+                2, 5,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "bici-momi-breki",
+                ProductSource.MANUAL,
+                "B0CGF5DBMT",
+                "www.amazon.es",
+                "MoMi BREKI",
+                "Bicicleta sin pedales desde 3 años y hasta 25 kg, de 3 kg, con ruedas EVA de 12 pulgadas antipinchazos y sillín regulable con cierre rápido.",
+                3, 6,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "bici-sawyer-ultraligera",
+                ProductSource.MANUAL,
+                "B08MWDSZ9W",
+                "www.amazon.es",
+                "Sawyer Bikes ultraligera",
+                "Bicicleta sin pedales ultraligera con sillín y manillar ajustables para dominar el equilibrio en 2 a 5 años.",
+                2, 5,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
+                "bici-gaslike-16-con-freno",
+                ProductSource.MANUAL,
+                "B09YNRMQQ1",
+                "www.amazon.es",
+                "GASLIKE 16\" con freno",
+                "Bicicleta sin pedales con ruedas de 16 pulgadas, freno y caballete para aprender equilibrio con un tamaño pensado para niños de 3 a 7 años.",
+                3, 7,
+                List.of("Movimiento", "Bicicletas sin pedales"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 8, 13)
+        ));
+        register(new Product(
                 "bici-chicco-red-bullet",
                 ProductSource.MANUAL,
                 null,
@@ -218,6 +283,45 @@ public class ManualProductCatalog implements ProductCatalog {
                 ProductStatus.ACTIVE,
                 null,
                 LocalDate.of(2026, 9, 2)
+        ));
+        register(new Product(
+                "patinete-lionelo-timmy",
+                ProductSource.MANUAL,
+                "B0CD7YW5H8",
+                "www.amazon.es",
+                "Lionelo Timmy",
+                "Patinete de tres ruedas desde 3 años y hasta 50 kg, de 3 kg, con manillar de 4 alturas (64-76 cm), luces LED en ruedas y plataforma, freno trasero y plegado.",
+                3, 8,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "patinete-globber-go-up-plus",
+                ProductSource.MANUAL,
+                "B0BYSV5944",
+                "www.amazon.es",
+                "Globber GO UP Foldable Plus Eco",
+                "Patinete evolutivo 3en1 plegable, con barra de empuje, asiento extraíble, manillar de 68-78 cm en modo patinete y carga máxima de 50 kg (asiento 20 kg).",
+                1, 6,
+                List.of("Movimiento", "Patinetes"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
+        ));
+        register(new Product(
+                "triciclo-lionelo-tris-plus",
+                ProductSource.MANUAL,
+                "B0D2RJVY4P",
+                "www.amazon.es",
+                "LIONELO Tris Plus",
+                "Triciclo 2 en 1 de 9 meses a 5 años y hasta 25 kg, de 9,7 kg, con mango parental de 80-100 cm, asiento giratorio 360°, rueda libre, ruedas PU y freno trasero.",
+                1, 5,
+                List.of("Movimiento", "Triciclos"),
+                ProductStatus.ACTIVE,
+                null,
+                LocalDate.of(2026, 9, 3)
         ));
         register(new Product(
                 "patinete-micro-mini-3en1",
