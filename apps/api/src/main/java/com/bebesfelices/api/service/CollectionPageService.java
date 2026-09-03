@@ -779,7 +779,7 @@ public class CollectionPageService {
                 "Selección por ocasión y presupuesto, sin perder utilidad: construir, jugar una partida corta, moverse o ganar autonomía.",
                 List.of(
                         "Un buen regalo a los 4 años se usa durante semanas: un set que se puede complicar, un juego de mesa de reglas cortas o un objeto de la rutina. Evitamos lo puramente decorativo.",
-                        "El juego de mesa, el patinete, la torre, la vajilla y las cuentas destacados se recomiendan desde sus comparativas; el resto tiene análisis propio."
+                        "El juego de mesa, el patinete, la torre, la vajilla y el maletín de veterinario destacados se recomiendan desde sus comparativas; el resto tiene análisis propio."
                 ),
                 List.of(
                         "Que resuelva una necesidad: aprender, moverse, autonomía o crear.",
@@ -796,7 +796,7 @@ public class CollectionPageService {
                         "vajilla-twistshake-dividido",
                         "set-construccion-magnetico",
                         "juego-mesa-el-frutal-mini",
-                        "cuentas-melissa-doug"
+                        "simbolico-janod-veterinario"
                 ),
                 Map.of(
                         "juego-mesa-el-frutal-mini",
@@ -807,8 +807,8 @@ public class CollectionPageService {
                         "/comparativas/mejores-torres-aprendizaje-4-anos/#producto-torre-yoleo-transformer",
                         "vajilla-twistshake-dividido",
                         "/comparativas/mejores-vajillas-infantiles-4-anos/#producto-vajilla-twistshake-dividido",
-                        "cuentas-melissa-doug",
-                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-cuentas-melissa-doug"
+                        "simbolico-janod-veterinario",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-simbolico-janod-veterinario"
                 ),
                 List.of(
                         faq("¿Qué regalo no falla a esta edad?",
@@ -846,25 +846,25 @@ public class CollectionPageService {
                 "Regalos y juguetes más duraderos para 4 años",
                 "Madera certificada, plástico reciclado y objetos que se pueden repetir, sin depender de pantallas.",
                 List.of(
-                        "A los 4 años la durabilidad se nota en el uso diario: ensartar, encajar, imitar oficios o practicar un nudo. Sostenible, aquí, es material declarado y un objeto que se saca muchas veces.",
+                        "A los 4 años la durabilidad se nota en el uso diario: cuidar, encajar, imitar oficios o practicar un nudo. Sostenible, aquí, es material declarado y un objeto que se saca muchas veces.",
                         "Las cinco opciones de esta página están desarrolladas en la comparativa de regalos sostenibles para 4 años. No afirmamos ecoetiquetas que no hayamos contrastado en ficha."
                 ),
                 List.of(
                         "Material declarado: madera, FSC o plástico reciclado, según la ficha.",
                         "Uso que no dependa de pilas ni de una app.",
                         "Un margen de dificultad para que no se quede pequeño en un mes.",
-                        "Supervisión si hay cordones, cuentas o piezas sueltas."
+                        "Supervisión si hay accesorios sueltos, cordones o piezas pequeñas."
                 ),
                 List.of(
-                        "cuentas-melissa-doug",
+                        "simbolico-janod-veterinario",
                         "plantoys-ata-zapato",
                         "haba-puzles-cuatro-estaciones",
                         "small-foot-grua",
                         "green-toys-construccion"
                 ),
                 Map.of(
-                        "cuentas-melissa-doug",
-                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-cuentas-melissa-doug",
+                        "simbolico-janod-veterinario",
+                        "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-simbolico-janod-veterinario",
                         "plantoys-ata-zapato",
                         "/comparativas/mejores-regalos-sostenibles-4-anos/#producto-plantoys-ata-zapato",
                         "haba-puzles-cuatro-estaciones",

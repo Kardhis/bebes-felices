@@ -154,7 +154,7 @@ class AgePageControllerTest {
                 .andExpect(jsonPath("$.featuredSelection[5].title")
                         .value("Twistshake plato con compartimentos"))
                 .andExpect(jsonPath("$.featuredSelection[8].title")
-                        .value("Melissa & Doug cuentas de madera"));
+                        .value("Janod maletín de veterinario"));
     }
 
     @Test

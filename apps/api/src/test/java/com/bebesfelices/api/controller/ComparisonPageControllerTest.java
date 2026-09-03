@@ -180,7 +180,7 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.entries[0].productId").value("vajilla-twistshake-dividido"));
         mockMvc.perform(get("/api/comparison-pages/{slug}", ComparisonPageService.SUSTAINABLE_SLUG))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.entries[0].productId").value("cuentas-melissa-doug"));
+                .andExpect(jsonPath("$.entries[0].productId").value("simbolico-janod-veterinario"));
     }
 
     @Test

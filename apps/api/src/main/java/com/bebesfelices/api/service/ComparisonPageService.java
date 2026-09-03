@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 @Service
 public class ComparisonPageService {
@@ -786,28 +787,52 @@ public class ComparisonPageService {
             )
     );
 
+    private static final EditorialEntry SUSTAINABLE_BEADS = new EditorialEntry(
+            "cuentas-melissa-doug",
+            "Melissa & Doug cuentas de madera",
+            "Ensartar sin pantallas",
+            "27 cuentas de madera con formas, números del 1 al 10 y 2 cordones, a partir de 3 años. Motricidad fina y secuencias, sin electrónica.",
+            List.of(
+                    "Madera, 27 piezas y 2 cordones.",
+                    "Números del 1 al 10 y formas para clasificar.",
+                    "Edad declarada a partir de 3 años.",
+                    "Juego sin pantallas."
+            ),
+            List.of(
+                    "Las cuentas y los cordones piden supervisión: riesgo de asfixia si se usan mal.",
+                    "No es un kit de pintar o recortar; es ensartar y contar."
+            ),
+            "3-6 años",
+            List.of(
+                    note("Encaje a los 4 años", "Edad declarada desde 3 años; a los 4 ya puede seguir secuencias cortas."),
+                    note("Materiales", "Cuentas de madera y cordones."),
+                    note("Uso", "Ensartar, clasificar y contar; no es un juguete de dejar solo con hermanos pequeños."),
+                    note("Duración", "Se guarda y se saca en sesiones cortas.")
+            )
+    );
+
     private static final List<EditorialEntry> SUSTAINABLE = List.of(
             new EditorialEntry(
-                    "cuentas-melissa-doug",
-                    "Melissa & Doug cuentas de madera",
-                    "Ensartar sin pantallas",
-                    "27 cuentas de madera con formas, números del 1 al 10 y 2 cordones, a partir de 3 años. Motricidad fina y secuencias, sin electrónica.",
+                    "simbolico-janod-veterinario",
+                    "Janod maletín de veterinario",
+                    "Cuidar animales con madera FSC",
+                    "Maletín de tela con dieciséis accesorios de madera FSC para auscultar, vendar y cuidar peluches, de 3 a 8 años. A los 4 el juego simbólico ya aguanta una consulta completa, no un ensartar de cuentas.",
                     List.of(
-                            "Madera, 27 piezas y 2 cordones.",
-                            "Números del 1 al 10 y formas para clasificar.",
-                            "Edad declarada a partir de 3 años.",
-                            "Juego sin pantallas."
+                            "Madera FSC, tela y cartón según la ficha.",
+                            "Dieciséis accesorios; se guarda en el maletín.",
+                            "Edad declarada de 3 a 8 años.",
+                            "Juego sin pantallas ni electrónica."
                     ),
                     List.of(
-                            "Las cuentas y los cordones piden supervisión: riesgo de asfixia si se usan mal.",
-                            "No es un kit de pintar o recortar; es ensartar y contar."
+                            "Accesorios sueltos: supervisión y recuento al guardar.",
+                            "No sustituye material veterinario real ni se lleva a la boca."
                     ),
-                    "3-6 años",
+                    "3-8 años",
                     List.of(
-                            note("Encaje a los 4 años", "Edad declarada desde 3 años; a los 4 ya puede seguir secuencias cortas."),
-                            note("Materiales", "Cuentas de madera y cordones."),
-                            note("Uso", "Ensartar, clasificar y contar; no es un juguete de dejar solo con hermanos pequeños."),
-                            note("Duración", "Se guarda y se saca en sesiones cortas.")
+                            note("Encaje a los 4 años", "Rango 3-8; a los 4 ya imita cuidar y nombrar los objetos."),
+                            note("Materiales", "Madera FSC, tela y cartón."),
+                            note("Uso", "Juego simbólico de consulta, no ensartar ni bricolaje."),
+                            note("Duración", "Se saca el maletín, se juega y se vuelve a guardar.")
                     )
             ),
             new EditorialEntry(
@@ -903,6 +928,11 @@ public class ComparisonPageService {
                     )
             )
     );
+
+    private static final List<EditorialEntry> SUSTAINABLE_5 = Stream.concat(
+            Stream.of(SUSTAINABLE_BEADS),
+            SUSTAINABLE.stream().skip(1)
+    ).toList();
 
     private static final List<EditorialEntry> STEM_5 = List.of(
             new EditorialEntry(
@@ -3823,16 +3853,16 @@ public class ComparisonPageService {
                 "Regalos sostenibles para 4 años",
                 new ComparisonPageResponse.Header(
                         "Mejores regalos sostenibles para 4 años",
-                        "Cinco productos reales de madera certificada o plástico reciclado",
+                        "Cinco productos reales de madera o plástico reciclado",
                         List.of(
                                 "Sostenible, aquí, quiere decir materiales declarados (madera, FSC, plástico reciclado) y un uso que no se agota en una tarde. No es un sello único ni una promesa de «cero impacto».",
-                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Las cuentas y las figuras pequeñas piden supervisión. Un material responsable no elimina piezas pequeñas."
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
+                                "Los accesorios sueltos y las figuras de puzle piden supervisión. Un material responsable no elimina piezas pequeñas."
                         )
                 ),
                 "Los cinco regalos",
                 List.of(
-                        summary("Para ensartar y contar", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones."),
+                        summary("Para imitar la consulta", "simbolico-janod-veterinario", "Maletín con 16 accesorios de madera FSC."),
                         summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho y tintes al agua."),
                         summary("Para haya y cartón", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
                         summary("Para madera FSC de obra", "small-foot-grua", "Grúa giratoria certificada FSC 100 %."),
@@ -3841,23 +3871,23 @@ public class ComparisonPageService {
                 new ComparisonPageResponse.Methodology(
                         "Comparamos materiales y usos verificables para un niño de 4 años. No asignamos una nota de sostenibilidad ni completamos certificaciones que la ficha no muestre.",
                         List.of(
-                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto (ensartar, encajar, atar, empujar) cabe en esta etapa."),
+                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto (cuidar, encajar, atar, empujar) cabe en esta etapa."),
                                 criterion("Materiales", "Madera, FSC, plástico reciclado, tintes o ausencia de BPA/PVC cuando están publicados."),
                                 criterion("Uso real", "Qué se hace con el objeto: no basta con que sea de madera."),
                                 criterion("Duración", "Si se puede repetir o guardar. Evitamos kits de un solo uso que no están en esta lista."),
-                                criterion("Seguridad", "Piezas pequeñas, cordones y supervisión. El material no elimina el riesgo.")
+                                criterion("Seguridad", "Piezas pequeñas y supervisión. El material no elimina el riesgo.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto, no el adjetivo", List.of(
-                                "Si quieres motricidad fina, las cuentas. Si quieres autonomía de vestirse, el zapato PlanToys. Si quieres juego simbólico, la grúa o los vehículos."
+                                "Si quieres juego simbólico de cuidar, el maletín Janod. Si quieres autonomía de vestirse, el zapato PlanToys. Si quieres obra o vehículos, la grúa o Green Toys."
                         )),
                         section("Madera y plástico reciclado no son intercambiables", List.of(
-                                "Green Toys declara plástico 100 % reciclado y se lava en el lavavajillas. Small Foot y PlanToys declaran madera y procesos distintos.",
+                                "Green Toys declara plástico 100 % reciclado y se lava en el lavavajillas. Janod declara madera FSC en el maletín; Small Foot y PlanToys declaran madera y procesos distintos.",
                                 "FSC 100 % no es lo mismo que «madera» a secas. Lo citamos solo cuando figura."
                         )),
                         section("Supervisión", List.of(
-                                "Cordones, cuentas y figuras de puzle no se dejan con menores de 3 años.",
+                                "Accesorios del maletín y figuras de puzle no se dejan con menores de 3 años.",
                                 "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
                         ))
                 )),
@@ -3866,8 +3896,8 @@ public class ComparisonPageService {
                                 "Uno de materiales declarados y uso repetible. No publicamos una huella de carbono ni un ranking ecológico numérico."),
                         faqItem("¿Madera siempre es mejor que plástico?",
                                 "No en abstracto. El plástico reciclado lavable cubre arena y agua; la madera FSC cubre otro tipo de juego. Elige según el uso."),
-                        faqItem("¿Las cuentas de Melissa & Doug son un kit de manualidades?",
-                                "No. Se ensartan y se cuentan. El análisis genérico de «kit de manualidades» del circuito de 3 años es otra página."),
+                        faqItem("¿El maletín de veterinario es para 4 años?",
+                                "Sí: la ficha cubre de 3 a 8 años. A los 4 el rol de cuidar ya se sostiene; las cuentas de ensartar encajan mejor a los 3."),
                         faqItem("¿Hace falta FSC?",
                                 "Es un dato útil cuando está. Su ausencia en otra ficha no significa que la madera sea ilegal; simplemente no lo afirmamos."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
@@ -8202,7 +8232,7 @@ public class ComparisonPageService {
                 SUSTAINABLE_5_SLUG,
                 SUSTAINABLE_5_CANONICAL,
                 AGE_5,
-                SUSTAINABLE,
+                SUSTAINABLE_5,
                 "Mejores regalos sostenibles para 5 años | Bebes Felices",
                 "Comparamos cinco regalos reales de madera o plástico reciclado para 5 años, con metodología y afiliación transparentes.",
                 "Regalos sostenibles para 5 años",

@@ -32,7 +32,7 @@ public class AgePageService {
     private static final String SCOOTER_SPOTLIGHT_ID = "patinete-micro-mini-deluxe";
     private static final String TOWER_SPOTLIGHT_ID = "torre-yoleo-transformer";
     private static final String TABLEWARE_SPOTLIGHT_ID = "vajilla-twistshake-dividido";
-    private static final String SUSTAINABLE_SPOTLIGHT_ID = "cuentas-melissa-doug";
+    private static final String SUSTAINABLE_SPOTLIGHT_ID = "simbolico-janod-veterinario";
     private static final String STEM_5_SPOTLIGHT_ID = "set-construccion-magnetico";
     private static final String BALANCE_BIKES_COMPARISON_HREF = "/comparativas/"
             + ComparisonPageService.BALANCE_BIKES_SLUG + "/";
@@ -515,7 +515,7 @@ public class AgePageService {
             case SCOOTER_SPOTLIGHT_ID -> "Un patinete ligero de tres ruedas con giro por inclinación, incluido en nuestra comparativa para moverse de pie con más autonomía.";
             case TOWER_SPOTLIGHT_ID -> "Torre plegable convertible en escritorio, incluida en nuestra comparativa para participar en la cocina con un adulto.";
             case TABLEWARE_SPOTLIGHT_ID -> "Plato con compartimentos y tapa, incluido en nuestra comparativa para comer con más autonomía.";
-            case SUSTAINABLE_SPOTLIGHT_ID -> "Cuentas de madera para ensartar y contar, incluidas en nuestra comparativa de regalos de materiales declarados.";
+            case SUSTAINABLE_SPOTLIGHT_ID -> "Maletín de veterinario con accesorios de madera FSC, incluido en nuestra comparativa de regalos de materiales declarados.";
             case "patinete-3-ruedas" -> "Base de tres ruedas que aporta estabilidad extra mientras se afianza el equilibrio.";
             case "torre-aprendizaje-madera" -> "Plataforma con barandilla que permite participar en la cocina con una altura segura y regulable.";
             case "torre-costway-plegable" -> "Torre plegable recomendada a partir de 3 años, incluida en nuestra comparativa para participar en la cocina.";

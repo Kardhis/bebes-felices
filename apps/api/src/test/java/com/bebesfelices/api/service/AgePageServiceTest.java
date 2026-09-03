@@ -289,7 +289,7 @@ class AgePageServiceTest {
                         "Twistshake plato con compartimentos",
                         "Set de construcción magnético",
                         "HABA El Frutal Mini",
-                        "Melissa & Doug cuentas de madera"
+                        "Janod maletín de veterinario"
                 );
         assertThat(page5.featuredSelection())
                 .extracting(AgePageResponse.FeaturedProduct::title)

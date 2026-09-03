@@ -23,7 +23,8 @@ class ProductAnalysisPageServiceTest {
                         "patinete-micro-mini-deluxe",
                         "torre-yoleo-transformer",
                         "vajilla-twistshake-dividido",
-                        "cuentas-melissa-doug"
+                        "cuentas-melissa-doug",
+                        "simbolico-janod-veterinario"
                 );
 
         for (String productId : List.of(

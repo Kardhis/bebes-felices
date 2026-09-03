@@ -238,7 +238,7 @@ class ComparisonPageServiceTest {
                 );
         assertThat(sustainable.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "cuentas-melissa-doug",
+                        "simbolico-janod-veterinario",
                         "plantoys-ata-zapato",
                         "haba-puzles-cuatro-estaciones",
                         "small-foot-grua",
