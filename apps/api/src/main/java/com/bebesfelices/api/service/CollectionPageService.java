@@ -795,12 +795,12 @@ public class CollectionPageService {
                         "torre-yoleo-transformer",
                         "vajilla-twistshake-dividido",
                         "set-construccion-magnetico",
-                        "juego-mesa-el-frutal-mini",
+                        "lectura-frutalito",
                         "simbolico-janod-veterinario"
                 ),
                 Map.of(
-                        "juego-mesa-el-frutal-mini",
-                        "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini",
+                        "lectura-frutalito",
+                        "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-lectura-frutalito",
                         "patinete-micro-mini-deluxe",
                         "/comparativas/mejores-patinetes-4-anos/#producto-patinete-micro-mini-deluxe",
                         "torre-yoleo-transformer",
@@ -1017,19 +1017,19 @@ public class CollectionPageService {
                         "Posibilidad de ajustar la dificultad o simplificar reglas."
                 ),
                 List.of(
-                        "juego-mesa-el-frutal-mini",
-                        "juego-mesa-unicornio-tesoro",
+                        "lectura-frutalito",
+                        "lectura-unicornio-memo",
                         "juego-mesa-animal-sobre-animal",
                         "juego-mesa-dobble-kids",
-                        "juego-mesa-unicornio-fiesta-rosalie",
+                        "lectura-three-pigs",
                         "mesa-animal-mini"
                 ),
                 hideAnalysisHrefs(
-                        "juego-mesa-el-frutal-mini",
-                        "juego-mesa-unicornio-tesoro",
+                        "lectura-frutalito",
+                        "lectura-unicornio-memo",
                         "juego-mesa-animal-sobre-animal",
                         "juego-mesa-dobble-kids",
-                        "juego-mesa-unicornio-fiesta-rosalie",
+                        "lectura-three-pigs",
                         "mesa-animal-mini"
                 ),
                 List.of(
@@ -1246,9 +1246,12 @@ public class CollectionPageService {
                         "Resultado compartido sin eliminar la necesidad de decidir."
                 ),
                 List.of(
-                        "juego-mesa-el-frutal-mini", "juego-mesa-unicornio-fiesta-rosalie",
-                        "juego-mesa-unicornio-tesoro", "lectura-three-pigs",
-                        "lectura-unicornio-memo", "lectura-frutalito"
+                        "lectura-frutalito",
+                        "lectura-three-pigs",
+                        "lectura-unicornio-memo",
+                        "mesa-goula-go-gorilla",
+                        "mesa-haba-primer-frutal",
+                        "mesa-haba-frutal-aniversario"
                 )
         );
     }

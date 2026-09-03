@@ -60,7 +60,7 @@ class ComparisonPageControllerTest {
                 .andExpect(jsonPath("$.targetAge").value(4))
                 .andExpect(jsonPath("$.entries.length()").value(5))
                 .andExpect(jsonPath("$.entries[0].productId")
-                        .value("juego-mesa-el-frutal-mini"))
+                        .value("lectura-frutalito"))
                 .andExpect(jsonPath("$.breadcrumbs[1].href").value("/por-edad/4-anos/"))
                 .andExpect(jsonPath("$.relatedLinks[0].href").value("/por-edad/4-anos/"));
     }

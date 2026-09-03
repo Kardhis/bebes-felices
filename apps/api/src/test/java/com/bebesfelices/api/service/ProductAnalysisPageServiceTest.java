@@ -19,7 +19,7 @@ class ProductAnalysisPageServiceTest {
                 .containsExactlyElementsOf(ProductAnalysisPageService.PUBLISHED_PRODUCT_IDS)
                 .doesNotContain(
                         "bici-chicco-red-bullet",
-                        "juego-mesa-el-frutal-mini",
+                        "lectura-frutalito",
                         "patinete-micro-mini-deluxe",
                         "torre-yoleo-transformer",
                         "vajilla-twistshake-dividido",
@@ -71,7 +71,7 @@ class ProductAnalysisPageServiceTest {
     @Test
     void returnsEmptyForProductsOutsideThisPhase() {
         assertThat(service.getByProductId("bici-chicco-red-bullet")).isEmpty();
-        assertThat(service.getByProductId("juego-mesa-el-frutal-mini")).isEmpty();
+        assertThat(service.getByProductId("lectura-frutalito")).isEmpty();
         assertThat(service.getByProductId("patinete-micro-mini-deluxe")).isEmpty();
         assertThat(service.getByProductId("torre-yoleo-transformer")).isEmpty();
         assertThat(service.getByProductId("no-existe")).isEmpty();

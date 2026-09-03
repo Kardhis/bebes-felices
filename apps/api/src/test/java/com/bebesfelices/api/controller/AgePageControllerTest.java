@@ -118,9 +118,9 @@ class AgePageControllerTest {
                         .value("/comparativas/mejores-juegos-de-mesa-4-anos/"))
                 .andExpect(jsonPath("$.featuredRankings[0].href")
                         .value("/comparativas/mejores-juegos-de-mesa-4-anos/"))
-                .andExpect(jsonPath("$.featuredSelection[7].title").value("HABA El Frutal Mini"))
+                .andExpect(jsonPath("$.featuredSelection[7].title").value("HABA El Frutalito"))
                 .andExpect(jsonPath("$.featuredSelection[7].href")
-                        .value("/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini"))
+                        .value("/comparativas/mejores-juegos-de-mesa-4-anos/#producto-lectura-frutalito"))
                 .andExpect(jsonPath("$.featuredSelection[7].ctaLabel")
                         .value("Ver comparativa completa"));
     }

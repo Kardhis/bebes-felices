@@ -28,7 +28,7 @@ public class AgePageService {
     private static final String PUBLISHED_AT = "2026-08-11";
     private static final String UPDATED_AT = "2026-08-11";
     private static final String BALANCE_BIKE_SPOTLIGHT_ID = "bici-chicco-red-bullet";
-    private static final String BOARD_GAME_SPOTLIGHT_ID = "juego-mesa-el-frutal-mini";
+    private static final String BOARD_GAME_SPOTLIGHT_ID = "lectura-frutalito";
     private static final String SCOOTER_SPOTLIGHT_ID = "patinete-micro-mini-deluxe";
     private static final String TOWER_SPOTLIGHT_ID = "torre-yoleo-transformer";
     private static final String TABLEWARE_SPOTLIGHT_ID = "vajilla-twistshake-dividido";

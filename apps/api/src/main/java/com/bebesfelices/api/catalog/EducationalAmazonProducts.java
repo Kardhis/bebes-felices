@@ -27,6 +27,12 @@ final class EducationalAmazonProducts {
 
                 product("puzle-educa-disney-madera", "B0CSP7HMG4", "Educa Disney Animals, 2 puzles de madera", "Dos puzles de 16 piezas de madera, recomendados a partir de 3 años.", 3, 6, "Puzles"),
                 product("puzle-educa-selva", "B08SBSMC16", "Educa My First animales de la selva", "Cuatro puzles progresivos de 5 a 8 piezas para empezar a encajar.", 2, 5, "Puzles"),
+                product("puzle-janod-evolutivos-granja", "B0CTKKNDD6", "Janod 4 puzles evolutivos animales de la granja", "Cuatro puzles progresivos de 6 a 16 piezas en maletín de cartón, a partir de 24 meses.", 2, 5, "Puzles"),
+                product("puzle-ravensburger-toy-story-4en1", "B0002HWGTE", "Ravensburger Toy Story, 4 puzzles en 1", "Cuatro puzles de 12, 16, 20 y 24 piezas con personajes de Toy Story, a partir de 3 años.", 3, 6, "Puzles"),
+                product("puzle-ravensburger-gruffalo-suelo-24", "B09P1VQ1FK", "Ravensburger Gruffalo, rompecabezas de suelo de 24 piezas", "Rompecabezas de suelo de 24 piezas con El Grúfalo, a partir de 3 años.", 3, 6, "Puzles"),
+                product("puzle-clementoni-progresivo-4en1", "B0BSXLDN1S", "Clementoni 4 puzzles progresivos en 1", "Pack con cuatro puzles de 12, 16, 20 y 24 piezas, a partir de 3 años.", 3, 6, "Puzles"),
+                product("puzle-educa-bluey-madera-16", "B0B69DBN47", "Educa Bluey, 2 puzles de madera de 16 piezas", "Dos puzles de 16 piezas de madera con motivo Bluey, a partir de 3 años.", 3, 6, "Puzles"),
+                product("puzle-clementoni-dinosaurios-20", "B07MXXR5L1", "Clementoni 2 puzzles de dinosaurios de 20 piezas", "Dos puzles de 20 piezas con dinosaurios, a partir de 3 años.", 3, 6, "Puzles"),
                 product("puzle-melissa-mascotas", "B0015XYV2E", "Melissa & Doug puzle de mascotas", "Tablero de madera con ocho piezas gruesas de mascotas que encajan por silueta y se sostienen de pie.", 2, 4, "Puzles"),
                 product("puzle-melissa-granja-peg", "B00HWHO7M6", "Melissa & Doug puzle de granja con agarres", "Tablero de madera con ocho piezas con pomos para encajar animales de granja.", 2, 4, "Puzles"),
 
@@ -36,6 +42,9 @@ final class EducationalAmazonProducts {
                 product("stem-gravitrax-junior", "B0BSXC3F6Z", "GraviTrax Junior Starter Set L", "Circuito configurable para observar gravedad, recorrido y velocidad.", 3, 7, "STEM"),
 
                 product("mesa-animal-mini", "B08R3XTWYG", "HABA Animal sobre Animal Mini", "Versión compacta de apilamiento a partir de 5 años, en caja de lata.", 5, 10, "Juegos de mesa"),
+                product("mesa-goula-go-gorilla", "B07PJT7ZLJ", "Goula Go Gorilla", "Juego de habilidad y memoria con modalidad cooperativa, a partir de 3 años.", 3, 6, "Juegos de mesa"),
+                product("mesa-haba-primer-frutal", "B093WXN5GB", "HABA El Primer Frutal", "Versión cooperativa del clásico Frutal adaptada a partir de 2 años, con piezas de madera de haya.", 2, 99, "Juegos de mesa"),
+                product("mesa-haba-frutal-aniversario", "B098QK9FCH", "HABA El Frutal edición aniversario", "Clásico cooperativo de recolección de fruta en caja metálica coleccionista, de 1 a 4 jugadores.", 3, 99, "Juegos de mesa"),
 
                 product("simbolico-theo-klein-miele", "B07PQ8SCT3", "Theo Klein Cocina Miele 7199", "Cocina de madera con placa, horno, fregadero y accesorios.", 3, 8, "Juego simbólico"),
                 product("simbolico-kidkraft-vintage", "B004A2QTRC", "KidKraft cocina vintage blanca", "Cocina de madera con nevera, horno, microondas y teléfono de juguete.", 3, 8, "Juego simbólico"),

@@ -194,7 +194,7 @@ class CollectionPageServiceTest {
                 .filteredOn(product -> product.title().contains("Frutal"))
                 .allSatisfy(product -> {
                     assertThat(product.href()).isEqualTo(
-                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini"
+                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-lectura-frutalito"
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });

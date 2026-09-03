@@ -320,18 +320,18 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> BOARD_GAMES = List.of(
             new EditorialEntry(
-                    "juego-mesa-el-frutal-mini",
-                    "HABA El Frutal Mini",
+                    "lectura-frutalito",
+                    "HABA El Frutalito",
                     "Empezar a cooperar con reglas mínimas",
-                    "Versión mini del clásico cooperativo de HABA: se recoge la fruta de madera antes de que el cuervo Teo llegue a los árboles. A los 4 años las reglas caben en un turno corto y no hace falta leer.",
+                    "Partida corta del clásico cooperativo de HABA: se recoge la fruta de madera antes de que el cuervo llegue a los árboles. A los 4 años las reglas caben en un turno breve y no hace falta leer.",
                     List.of(
                             "Cooperativo: se gana o se pierde en equipo.",
                             "Edad declarada a partir de 3 años.",
-                            "De 1 a 4 jugadores, con dado de colores y símbolos.",
-                            "Piezas de madera de haya y caja de lata para guardar o llevar."
+                            "Partida corta que nombra colores y frutas mientras se recolecta en grupo.",
+                            "Piezas de madera de haya con dado de colores y símbolos."
                     ),
                     List.of(
-                            "Es el formato mini: menos fruta y hasta 4 jugadores, no la caja grande de hasta 8.",
+                            "Es una versión compacta del Frutal clásico, no la caja grande de hasta 8 jugadores.",
                             "El dado introduce azar; un adulto debe explicar el objetivo la primera vez."
                     ),
                     "Desde 3 años",
@@ -343,26 +343,26 @@ public class ComparisonPageService {
                     )
             ),
             new EditorialEntry(
-                    "juego-mesa-unicornio-tesoro",
-                    "HABA Unicornio Destello El Tesoro de las Nubes",
-                    "Practicar colores y primeros conteos",
-                    "Los unicornios recorren el camino hacia la nube del sol recogiendo cristales. El tablero a doble cara está pensado para acercarse a los primeros conteos con dados, a partir de 3 años.",
+                    "lectura-unicornio-memo",
+                    "HABA Unicornio Destello Memo mágico",
+                    "Entrenar memoria y turnos con cartas",
+                    "Juego de memoria con cartas ilustradas de unicornios: se buscan parejas por turnos, se nombran imágenes y se practica la atención sostenida. A partir de 3 años, sin lectura durante el turno.",
                     List.of(
-                            "Edad declarada a partir de 3 años.",
-                            "Tablero a doble cara para favorecer los primeros conteos.",
-                            "Cuatro unicornios de madera y 60 cristales de nube.",
-                            "Dados y figuras de haya con pintura al agua, fabricados en Alemania."
+                            "Edad declarada de 3 a 7 años.",
+                            "Cartas con ilustraciones para emparejar y nombrar.",
+                            "Turnos breves que entrenan memoria visual y vocabulario.",
+                            "Fabricado por HABA con pintura al agua."
                     ),
                     List.of(
-                            "Es un juego de acumulación y carrera, no cooperativo: hay un resultado individual.",
-                            "Con 60 cristales conviene vigilar que no se pierdan ni se lleven a la boca."
+                            "Es un juego de memoria, no cooperativo: cada jugador busca sus parejas.",
+                            "Las cartas son pequeñas; conviene recogerlas al terminar si hay hermanos menores."
                     ),
                     "Desde 3 años",
                     List.of(
-                            note("Encaje a los 4 años", "Dados, colores y un recuento sencillo encajan cuando ya aguanta un turno."),
-                            note("Cooperación", "Competitivo: gana quien llega y recoge más cristales."),
-                            note("Lectura", "No exige leer; el adulto explica el recorrido y el conteo."),
-                            note("Componentes", "Madera de haya y cristales pequeños; no apto para menores de 3 años.")
+                            note("Encaje a los 4 años", "Turnos cortos y reglas visuales encajan cuando ya aguanta esperar."),
+                            note("Cooperación", "Competitivo de memoria; se puede jugar en equipo señalando parejas."),
+                            note("Lectura", "No exige leer; el turno se resuelve volteando cartas."),
+                            note("Componentes", "Cartas pequeñas; no apto para menores de 3 años.")
                     )
             ),
             new EditorialEntry(
@@ -412,26 +412,26 @@ public class ComparisonPageService {
                     )
             ),
             new EditorialEntry(
-                    "juego-mesa-unicornio-fiesta-rosalie",
-                    "HABA Unicornio Destello Una Fiesta para Rosalie",
+                    "lectura-three-pigs",
+                    "Goula Los 3 Cerditos",
                     "Un reto cooperativo un poco más estructurado",
-                    "HABA lo presenta como un cooperativo de recolección y movimiento a partir de 4 años: dados y ruleta para reunir cristales e invitados antes de que llegue Rosalie.",
+                    "Juego de mesa de Goula basado en el cuento: dados y turnos para mover a los cerditos, con una modalidad cooperativa para llegar juntos a casa antes que el lobo.",
                     List.of(
-                            "Edad declarada a partir de 4 años.",
-                            "De 2 a 4 jugadores, con dados y ruleta.",
-                            "Cinco unicornios de madera de haya y cristales de nube extragrandes.",
-                            "Un paso más de estructura que El Frutal Mini, sin exigir lectura."
+                            "Edad declarada de 3 a 7 años.",
+                            "De 2 a 4 jugadores, con dado de madera.",
+                            "Tres cerditos y un lobo de madera sobre tablero puzzle.",
+                            "Un paso más de estructura que El Frutalito, sin exigir lectura."
                     ),
                     List.of(
                             "Hay más elementos que en un primer cooperativo; la primera partida necesita un adulto que lleve el ritmo.",
-                            "Si el niño aún se cansa a los pocos minutos, empieza por El Frutal Mini."
+                            "Si el niño aún se cansa a los pocos minutos, empieza por El Frutalito."
                     ),
-                    "Desde 4 años",
+                    "Desde 3 años",
                     List.of(
-                            note("Encaje a los 4 años", "La edad mínima del fabricante es 4 años, alineada con esta página."),
-                            note("Cooperación", "HABA lo describe como cooperativo de recolección y movimiento."),
-                            note("Lectura", "Dados y ruleta; el adulto explica el objetivo común."),
-                            note("Componentes", "Madera y cristales grandes; usar bajo supervisión.")
+                            note("Encaje a los 4 años", "Edad declarada desde 3 años; a los 4 ya entiende el objetivo común."),
+                            note("Cooperación", "Goula incluye modalidad cooperativa para llegar juntos a casa."),
+                            note("Lectura", "Dado y movimiento; el adulto explica el cuento y el objetivo."),
+                            note("Componentes", "Piezas de madera; usar bajo supervisión.")
                     )
             )
     );
@@ -1042,6 +1042,114 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> STEM_4 = List.of(
+            new EditorialEntry(
+                    "stem-geomag-rainbow",
+                    "Geomag Rainbow 32 piezas",
+                    "Construir estructuras y explorar geometría",
+                    "Barras, bolas y paneles magnéticos permiten probar formas, simetrías y estabilidad con un reto que puede crecer añadiendo piezas.",
+                    List.of(
+                            "32 piezas magnéticas para construir en tres dimensiones.",
+                            "Edad declarada de 3 a 8 años.",
+                            "Practica lógica espacial y planificación."
+                    ),
+                    List.of(
+                            "Los imanes deben permanecer encapsulados.",
+                            "A los 4 años conviene empezar con pocas piezas y una consigna concreta."
+                    ),
+                    "3-8 años",
+                    List.of(
+                            note("Reto STEM", "Construcción, geometría y estabilidad."),
+                            note("Uso evolutivo", "Se puede aumentar la dificultad añadiendo piezas."),
+                            note("Seguridad", "Requiere revisar que ningún imán se desprenda.")
+                    )
+            ),
+            new EditorialEntry(
+                    "stem-gears-beginners",
+                    "Learning Resources Gears! principiantes",
+                    "Comprender engranajes, giro y causa-efecto",
+                    "Engranajes y manivelas conectados permiten observar cómo un giro inicial mueve el resto del mecanismo.",
+                    List.of(
+                            "Manivela y piezas encajables para experimentar con movimiento.",
+                            "Juego abierto para montar cadenas de engranajes.",
+                            "Edad declarada de 3 a 7 años."
+                    ),
+                    List.of(
+                            "El aprendizaje depende de proponer retos, no solo de girar la manivela.",
+                            "Las piezas se deben recoger si hay hermanos pequeños."
+                    ),
+                    "3-7 años",
+                    List.of(
+                            note("Reto STEM", "Mecanismos simples y relación causa-efecto."),
+                            note("Uso evolutivo", "Admite cadenas más largas y combinaciones nuevas."),
+                            note("Seguridad", "Supervisión por piezas sueltas.")
+                    )
+            ),
+            new EditorialEntry(
+                    "juego-mesa-animal-sobre-animal",
+                    "HABA Animal sobre Animal",
+                    "Experimentar equilibrio y centro de gravedad",
+                    "Apilar figuras según el dado convierte el equilibrio en un problema visible: probar una posición, observar por qué cae y corregirla.",
+                    List.of(
+                            "Reto directo de equilibrio y planificación espacial.",
+                            "29 figuras de madera para configuraciones variadas.",
+                            "Reglas breves, sin lectura durante el turno."
+                    ),
+                    List.of(
+                            "Es competitivo y exige tolerar que una torre se derrumbe.",
+                            "No desarrolla construcción estructural al nivel de un set de piezas."
+                    ),
+                    "Desde 4 años",
+                    List.of(
+                            note("Reto STEM", "Equilibrio, apoyo y distribución del peso."),
+                            note("Uso evolutivo", "La dificultad cambia con cada apilado."),
+                            note("Seguridad", "No apto para menores de 3 años por piezas pequeñas.")
+                    )
+            ),
+            new EditorialEntry(
+                    "stem-gravitrax-junior",
+                    "GraviTrax Junior Starter Set L",
+                    "Planificar recorridos y observar la gravedad",
+                    "Circuito configurable para colocar piezas, prever el recorrido de la bola y comprobar si la estructura funciona como se esperaba.",
+                    List.of(
+                            "Piezas modulares para montar circuitos distintos.",
+                            "Permite observar gravedad, velocidad y recorrido.",
+                            "Edad declarada de 3 a 7 años."
+                    ),
+                    List.of(
+                            "Requiere espacio en mesa o suelo para montar el circuito.",
+                            "No es un puzle de imagen; el reto es hacer funcionar el recorrido."
+                    ),
+                    "3-7 años",
+                    List.of(
+                            note("Reto STEM", "Planificación espacial, gravedad y resolución de problemas."),
+                            note("Uso evolutivo", "Se pueden añadir piezas y restricciones al circuito."),
+                            note("Seguridad", "Piezas sueltas; supervisión si hay hermanos menores de 3 años.")
+                    )
+            ),
+            new EditorialEntry(
+                    "juego-mesa-dobble-kids",
+                    "Dobble Kids",
+                    "Reconocer patrones con rapidez",
+                    "Buscar el símbolo común entre cartas entrena comparación visual, atención selectiva y clasificación bajo una regla sencilla.",
+                    List.of(
+                            "Partidas declaradas de unos 15 minutos.",
+                            "Regla visual sin necesidad de leer.",
+                            "De 2 a 8 jugadores."
+                    ),
+                    List.of(
+                            "La rapidez puede frustrar a quien necesita más tiempo.",
+                            "Es un juego de observación, no un kit de experimentación."
+                    ),
+                    "Desde 4 años",
+                    List.of(
+                            note("Reto STEM", "Reconocimiento de patrones y clasificación visual."),
+                            note("Uso evolutivo", "La velocidad aumenta con la práctica."),
+                            note("Seguridad", "Las cartas deben mantenerse lejos de menores que puedan morderlas.")
+                    )
+            )
+    );
+
     private static final List<EditorialEntry> MONTESSORI_3 = List.of(
             entry(
                     "montessori-janod-animales",
@@ -1147,84 +1255,84 @@ public class ComparisonPageService {
 
     private static final List<EditorialEntry> MONTESSORI_4 = List.of(
             entry(
-                    "juego-montessori-formas",
-                    "Melissa & Doug cubo de formas",
-                    "Clasificar formas y colores con piezas grandes",
-                    "Cubo de madera con 12 piezas grandes para encajar por la forma. A los 4 años sigue siendo útil si aún clasifica con ayuda; si ya lo domina, Goula o el arca dan más margen.",
+                    "montessori-janod-animales",
+                    "Janod Magneti'Book Animales",
+                    "Formar animales con modelos magnéticos",
+                    "Libro magnético con treinta imanes y diez fichas para recrear animales, de 3 a 8 años. A los 4 años ya elige modelos con menos ayuda y nombra las piezas: más margen que un cubo de doce formas o un tablero de ocho piezas.",
                     List.of(
-                            "Doce piezas grandes, pensadas para manos pequeñas.",
-                            "Clasificación de formas y colores en un solo objeto.",
-                            "Rango declarado de 2 a 4 años."
+                            "Diez modelos para formar animales con dificultad creciente.",
+                            "Treinta piezas magnéticas en formato libro.",
+                            "Rango declarado de 3 a 8 años."
                     ),
                     List.of(
-                            "El máximo declarado es 4 años: si ya clasifica sin esfuerzo, prioriza Goula o el arca.",
-                            "No incluye un segundo nivel de dificultad en la misma caja."
+                            "Las fichas piden un adulto que elija el modelo la primera vez.",
+                            "Las piezas magnéticas se pierden si se abre el libro en el suelo."
                     ),
-                    "2-4 años",
-                    note("Encaje a los 4 años", "Edad declarada hasta 4 años; piezas grandes y consigna clara."),
-                    note("Actividad", "Encajar y nombrar; una sola consigna."),
-                    note("Piezas", "12 piezas grandes de madera."),
-                    note("Seguridad", "Supervisión cercana; no es un juguete para dejar solo.")
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya rota modelos con menos ayuda."),
+                    note("Actividad", "Formar animales siguiendo un modelo, no solo meter en un hueco."),
+                    note("Piezas", "Treinta imanes y diez fichas modelo."),
+                    note("Seguridad", "Supervisión cercana; recuenta las piezas al guardar.")
             ),
             entry(
-                    "montessori-goula-baby-shapes",
-                    "Goula Baby Shapes",
-                    "Aumentar la dificultad sin cambiar de juguete",
-                    "Láminas y piezas de madera para encajar formas y colores con dificultad progresiva. A los 4 años permite empezar por láminas medias y añadir las más exigentes.",
+                    "montessori-melissa-tres-puzzles",
+                    "Melissa & Doug pack de 3 puzzles de encaje",
+                    "Tres escenas de madera para rotar",
+                    "Pack con tres tableros de encaje de granja, safari y vehículos, a partir de 3 años. A los 4 años un solo tablero de ocho pomos se acaba en minutos: aquí se rota el tema sin mezclar piezas ni volver al cubo de formas.",
                     List.of(
-                            "Dificultad progresiva con varias láminas.",
-                            "Piezas de madera para encajar formas y colores.",
-                            "Rango declarado de 2 a 5 años."
+                            "Tres tableros con ilustraciones a todo color.",
+                            "Piezas gruesas de madera fáciles de agarrar.",
+                            "Edad declarada a partir de 3 años."
                     ),
                     List.of(
-                            "Hay que guardar las láminas que no se usan para no mezclar el reto.",
-                            "Un adulto debe proponer el siguiente nivel; no se explica solo."
+                            "Tres cajas distintas: conviene guardar cada puzle por separado.",
+                            "Si ya monta 15 piezas o más, cada tablero puede quedarse corto."
                     ),
-                    "2-5 años",
-                    note("Encaje a los 4 años", "Cabe en 4 años y admite crecer hasta 5."),
-                    note("Actividad", "Encaje con niveles, no un cubo único."),
-                    note("Piezas", "Láminas y piezas de madera."),
-                    note("Seguridad", "Revisa que no falten piezas pequeñas sueltas.")
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; tres escenas dan más margen que un cubo único."),
+                    note("Actividad", "Encajar una escena reconocible y cambiar de tema."),
+                    note("Piezas", "Tres tableros de madera con piezas gruesas."),
+                    note("Seguridad", "Piezas grandes; supervisión si hay hermanos más pequeños.")
             ),
             entry(
-                    "montessori-formas-geometricas",
-                    "Melissa & Doug puzzle de formas geométricas",
-                    "Reconocer ocho formas gruesas",
-                    "Ocho piezas gruesas de madera para reconocer formas y colores. Se termina en una sesión corta, ideal como calentamiento antes de puzles más largos.",
+                    "haba-puzles-cuatro-estaciones",
+                    "HABA Puzzles Las Cuatro Estaciones",
+                    "Quince piezas por escena para subir de nivel",
+                    "Cuatro rompecabezas de 15 piezas a partir de 3 años, con figuras de madera de haya. A los 4 años cubre el tramo en el que los tableros de ocho pomos ya no retan: se termina una estación y se rota sin volver a clasificar con pinzas.",
                     List.of(
-                            "Ocho piezas gruesas de madera.",
-                            "Formas y colores reconocibles.",
-                            "Rango declarado de 2 a 5 años."
+                            "Cuatro puzles de 15 piezas desde 3 años.",
+                            "Figuras de madera de haya sostenible.",
+                            "Cartón resistente."
                     ),
                     List.of(
-                            "Ocho piezas pueden agotarse rápido si ya encaja con soltura.",
-                            "No es un puzle de imagen; es un tablero de formas."
+                            "15 piezas pueden quedarse cortas si ya monta 24 o más.",
+                            "Las figuras son pequeñas: no las dejes con menores de 3 años."
                     ),
-                    "2-5 años",
-                    note("Encaje a los 4 años", "Pocas piezas gruesas, fáciles de completar."),
-                    note("Actividad", "Encajar formas, no montar una escena."),
-                    note("Piezas", "Ocho piezas de madera."),
-                    note("Seguridad", "Piezas gruesas; supervisión si hay hermanos más pequeños.")
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; 15 piezas por escena encajan si ya termina puzles de 8."),
+                    note("Actividad", "Completar una imagen y jugar con las figuras, no clasificar por color."),
+                    note("Piezas", "Cuatro puzles de 15 piezas y figuras de haya."),
+                    note("Seguridad", "Figuras pequeñas; supervisión si hay hermanos menores.")
             ),
             entry(
-                    "montessori-noah-ark",
-                    "Melissa & Doug Arca de Noé clasificadora",
-                    "Clasificar animales por la forma",
-                    "Arca de madera con 26 piezas de animales para clasificar por forma. A los 4 años conviene sacar un subconjunto al empezar y nombrar los animales.",
+                    "vestir-melissa-habilidades",
+                    "Melissa & Doug tablero de habilidades básicas",
+                    "Practicar cierres antes del abrigo real",
+                    "Oso de madera con seis prendas para practicar botones, cremallera, hebilla y cordones, a partir de 3 años. A los 4 años el gesto ya se puede repetir en sesiones más largas: autonomía de vestirse sin volver a ensartar cuentas.",
                     List.of(
-                            "Veintiséis piezas de animales para clasificar.",
-                            "El arca guarda las piezas al terminar.",
-                            "Rango declarado de 2 a 5 años."
+                            "Seis cierres de vestir en un solo tablero.",
+                            "Piezas que se separan para practicar una a una.",
+                            "Edad declarada a partir de 3 años."
                     ),
                     List.of(
-                            "26 piezas son más que un cubo de 12: conviene sacar solo unas pocas al empezar.",
-                            "Si hay menores de 3 años, revisa el tamaño de cada figura."
+                            "No es la chaqueta real: después hay que pasar el gesto a la prenda.",
+                            "39 × 29 cm: pide un sitio en la mesa, no en el bolso."
                     ),
-                    "2-5 años",
-                    note("Encaje a los 4 años", "Útil para nombrar animales y clasificar por silueta."),
-                    note("Actividad", "Clasificar por silueta, no solo encajar un cubo."),
-                    note("Piezas", "26 figuras; saca un subconjunto al inicio."),
-                    note("Seguridad", "Comprueba que ninguna figura sea demasiado pequeña.")
+                    "3-6 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 practica varios cierres con menos ayuda."),
+                    note("Actividad", "Abrochar prendas del oso, no encajar formas."),
+                    note("Madera", "Tablero de madera con tela y cierres reales."),
+                    note("Seguridad", "Cordones y hebillas bajo supervisión.")
             ),
             entry(
                     "plantoys-ata-zapato",
@@ -1450,6 +1558,109 @@ public class ComparisonPageService {
                     note("Encaje a los 3 años", "Indicada desde 3 años; empieza junto y retira ayuda al final."),
                     note("Dificultad", "16 piezas por escena, el recuento más alto de esta lista."),
                     note("Soporte", "Madera; confirma si hay marco en tu edición."),
+                    note("Seguridad", "No mezcles las dos cajas en la misma mesa al empezar.")
+            )
+    );
+
+    private static final List<EditorialEntry> PUZZLES_4 = List.of(
+            entry(
+                    "puzle-ravensburger-toy-story-4en1",
+                    "Ravensburger Toy Story, 4 puzzles en 1",
+                    "Subir de 12 a 24 piezas en la misma caja",
+                    "Cuatro puzles de cartón de 12, 16, 20 y 24 piezas con personajes de Toy Story, a partir de 3 años. A los 4 años el recorrido útil empieza en 16 piezas: cada escena va en su propia bolsa y se puede rotar sin mezclar recuentos.",
+                    List.of(
+                            "Cuatro puzles de 12, 16, 20 y 24 piezas.",
+                            "Cartón grueso Ravensburger con acabado antirreflejos.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "El de 12 piezas puede quedarse corto si ya termina tableros de ocho.",
+                            "Cuatro escenas distintas: guarda cada una aparte."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Empieza por 16 piezas; reserva 20 y 24 para cuando 16 ya no reta."),
+                    note("Dificultad", "Progresión en la misma caja, no un único tablero de silueta."),
+                    note("Soporte", "Cuatro láminas independientes; sin tablero ni marco."),
+                    note("Seguridad", "Guarda cada puzle aparte; supervisión si hay hermanos menores de 3 años.")
+            ),
+            entry(
+                    "puzle-ravensburger-gruffalo-suelo-24",
+                    "Ravensburger Gruffalo, rompecabezas de suelo de 24 piezas",
+                    "Una escena grande de suelo para terminar",
+                    "Rompecabezas de suelo de 24 piezas con El Grúfalo, a partir de 3 años. A los 4 años sirve cuando hace falta una sola imagen grande que ocupe la mesa o el suelo, con piezas más grandes que un puzle de mesa convencional.",
+                    List.of(
+                            "24 piezas de cartón extragrueso.",
+                            "Formato de suelo: unas 50 x 70 cm montado.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "24 piezas pueden frustrar si aún no termina 16 con soltura.",
+                            "Una sola escena: no rota como un pack evolutivo."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "24 piezas en una sesión, con un adulto al principio."),
+                    note("Dificultad", "Una imagen completa, no un tablero con siluetas."),
+                    note("Soporte", "Cartón grueso sin reflejos; piezas sueltas."),
+                    note("Seguridad", "No mezcles con otros puzles en la misma mesa al empezar.")
+            ),
+            entry(
+                    "puzle-clementoni-progresivo-4en1",
+                    "Clementoni 4 puzzles progresivos en 1",
+                    "Subir de 12 a 24 piezas en la misma caja",
+                    "Pack con cuatro puzles de 12, 16, 20 y 24 piezas, a partir de 3 años. A los 4 años cubre el tramo en el que 16 piezas ya no retan: se puede saltar al de 20 o 24 con un adulto al lado.",
+                    List.of(
+                            "Cuatro puzles de 12, 16, 20 y 24 piezas.",
+                            "Cartón resistente para montar y desmontar varias veces.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "24 piezas pueden frustrar si aún no termina 16 con soltura.",
+                            "Cuatro escenas distintas: guarda cada una aparte."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "12 y 16 piezas suelen encajar; 20 y 24 piden más mesa y paciencia."),
+                    note("Dificultad", "El recuento más alto de esta selección, hasta 24 piezas."),
+                    note("Soporte", "Cuatro láminas independientes; no hay tablero ni marco."),
+                    note("Seguridad", "Separa las cajas al empezar para no mezclar piezas.")
+            ),
+            entry(
+                    "puzle-educa-bluey-madera-16",
+                    "Educa Bluey, 2 puzles de madera de 16 piezas",
+                    "Dos escenas de madera cuando el cartón se dobla",
+                    "Dos puzles de 16 piezas de madera con motivo Bluey, a partir de 3 años. A los 4 años aporta madera gruesa y dos escenas rotativas sin volver a los tableros de encaje de ocho piezas.",
+                    List.of(
+                            "Dos puzles de 16 piezas de madera.",
+                            "Piezas marcadas al dorso para distinguir cada caja.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "16 piezas piden más paciencia que un tablero de silueta.",
+                            "El motivo de personaje puede caducar; la madera no."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Indicada desde 3 años; empieza junto y retira ayuda al final."),
+                    note("Dificultad", "16 piezas sueltas de madera, no encaje con pomos."),
+                    note("Soporte", "Madera ecológica; confirma si hay marco en tu edición."),
+                    note("Seguridad", "No mezcles las dos cajas en la misma mesa al empezar.")
+            ),
+            entry(
+                    "puzle-clementoni-dinosaurios-20",
+                    "Clementoni 2 puzzles de dinosaurios de 20 piezas",
+                    "Dos escenas de 20 piezas para alargar la sesión",
+                    "Dos puzles de 20 piezas con dinosaurios, a partir de 3 años. A los 4 años encaja cuando 16 piezas se resuelven sin esfuerzo y hace falta un recuento un poco más alto sin llegar a decenas de piezas diminutas.",
+                    List.of(
+                            "Dos puzles de 20 piezas cada uno.",
+                            "Cartón resistente hecho en Italia.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "20 piezas pueden quedarse cortas si ya monta 24 o más.",
+                            "Dos escenas de dinosaurios: guarda cada caja aparte."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "20 piezas por escena, asumible con un adulto al principio."),
+                    note("Dificultad", "Más pieza que 16, menos que un puzle de 50."),
+                    note("Soporte", "Dos láminas independientes; sin tablero ni marco."),
                     note("Seguridad", "No mezcles las dos cajas en la misma mesa al empezar.")
             )
     );
@@ -2182,6 +2393,110 @@ public class ComparisonPageService {
             )
     );
 
+    private static final List<EditorialEntry> DURABLE_4 = List.of(
+            entry(
+                    "small-foot-grua",
+                    "Small Foot grúa de construcción",
+                    "Madera FSC para el juego de obra que se repite",
+                    "Grúa de madera FSC 100 % a partir de 3 años, giratoria 360°, con manivela, escalera interior y accesorios de obra. A los 4 años el gesto es cargar, girar y repetir el circuito: no es un puzle de siluetas ni un kit de una tarde.",
+                    List.of(
+                            "Madera con certificado FSC 100 %.",
+                            "Edad declarada a partir de 3 años.",
+                            "Pluma móvil con manivela y giro 360°."
+                    ),
+                    List.of(
+                            "Hay piezas sueltas y cuerda: supervisión en cada sesión.",
+                            "No es un juguete de exterior ni de agua."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 la manivela ya se puede repetir con menos ayuda."),
+                    note("Duración", "Se saca y se combina con otros vehículos; no se consume."),
+                    note("Uso", "Juego simbólico de obra en sesiones que se pueden alargar."),
+                    note("Resistencia", "Madera FSC; recoge accesorios y cuerda al terminar.")
+            ),
+            entry(
+                    "green-toys-construccion",
+                    "Green Toys vehículos de construcción",
+                    "Plástico reciclado que se empuja y se lava",
+                    "Tres vehículos de plástico 100 % reciclado, sin BPA, ftalatos ni PVC, lavables en lavavajillas. El rango 24 a 72 meses cubre los 4 años (48 meses): el gesto es empujar, cargar y lavar, no encajar 5 piezas.",
+                    List.of(
+                            "Plástico 100 % reciclado, sin BPA, ftalatos ni PVC.",
+                            "Tres vehículos lavables en lavavajillas.",
+                            "Rango declarado de 24 a 72 meses."
+                    ),
+                    List.of(
+                            "No es madera: la durabilidad aquí es plástico lavable que se vuelve a sacar.",
+                            "Piezas de obra y figuras: supervisión si hay menores de 3 años."
+                    ),
+                    "24-72 meses",
+                    note("Encaje a los 4 años", "48 meses está dentro de 24-72."),
+                    note("Duración", "Tres vehículos para rotar; sin electrónica ni un solo uso."),
+                    note("Uso", "Suelo, arena o bañera; se lava entero."),
+                    note("Resistencia", "Plástico reciclado pensado para agua ocasional y suelo.")
+            ),
+            entry(
+                    "plantoys-ata-zapato",
+                    "PlanToys Ata el zapato",
+                    "Un gesto de autonomía que dura varios cursos",
+                    "Juguete de madera de caucho para 3 a 8 años. A los 4 años el nudo deja de ser un ensayo puntual: el mismo objeto se saca en la rutina de vestirse y acompaña hasta los 8.",
+                    List.of(
+                            "Edad declarada de 3 a 8 años.",
+                            "Madera de caucho y tintes al agua según la ficha.",
+                            "Formato portable para practicar nudos."
+                    ),
+                    List.of(
+                            "No ata el zapato del niño: es un material de ensayo.",
+                            "Un adulto debe mostrar el nudo las primeras veces."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Rango 3-8; a los 4 el nudo pide menos ayuda que a los 3."),
+                    note("Duración", "El mismo objeto acompaña varios cursos; no se gasta en una tarde."),
+                    note("Uso", "Autonomía de vestirse en ratos cortos."),
+                    note("Resistencia", "Madera de caucho; cordones bajo supervisión.")
+            ),
+            entry(
+                    "haba-puzles-cuatro-estaciones",
+                    "HABA Puzzles Las Cuatro Estaciones",
+                    "15 piezas y figuras para encajar y volver a sacar",
+                    "Cuatro rompecabezas de 15 piezas a partir de 3 años, con figuras de madera de haya. A los 4 años cubre el tramo en el que 8 piezas de silueta ya no retan: se termina una escena y se juega encima, sin mezclar 50 piezas sueltas.",
+                    List.of(
+                            "Cuatro puzles de 15 piezas desde 3 años.",
+                            "Figuras de madera de haya sostenible.",
+                            "Cartón resistente."
+                    ),
+                    List.of(
+                            "15 piezas pueden quedarse cortas si ya monta 24 o más.",
+                            "Las figuras son pequeñas: no las dejes con menores de 3 años."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; 15 piezas por escena encajan si ya termina puzles de 8."),
+                    note("Duración", "Cuatro motivos para rotar; no se agota en una tarde."),
+                    note("Uso", "Encajar y juego simbólico con las figuras."),
+                    note("Resistencia", "Cartón grueso y haya; guarda cada puzle aparte.")
+            ),
+            entry(
+                    "simbolico-janod-veterinario",
+                    "Janod maletín de veterinario",
+                    "Juego simbólico que se guarda en el maletín",
+                    "Maletín de tela con dieciséis accesorios de madera FSC para auscultar, vendar y cuidar peluches, de 3 a 8 años. A los 4 años el gesto es una consulta completa con nombres y roles: el mismo maletín se saca muchas veces, no es ensartar cuentas ni un kit de una tarde.",
+                    List.of(
+                            "Dieciséis accesorios de madera FSC según la ficha.",
+                            "Se guarda entero en el maletín de tela.",
+                            "Edad declarada de 3 a 8 años.",
+                            "Juego sin pantallas ni electrónica."
+                    ),
+                    List.of(
+                            "Accesorios sueltos: supervisión y recuento al guardar.",
+                            "No sustituye material veterinario real ni se lleva a la boca."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Rango 3-8; a los 4 ya imita cuidar y nombrar los objetos."),
+                    note("Duración", "Se saca el maletín, se juega y se vuelve a guardar."),
+                    note("Uso", "Juego simbólico de consulta en sesiones que se alargan."),
+                    note("Resistencia", "Madera FSC y tela; recuento de accesorios al terminar.")
+            )
+    );
+
     private static final List<EditorialEntry> ARTS_NATURAL_3 = List.of(
             entry(
                     "arte-ses-eco-mega-7",
@@ -2279,6 +2594,109 @@ public class ComparisonPageService {
                     ),
                     "3-10 años",
                     note("Encaje a los 3 años", "Edad mínima 3 años; un adulto recorta o sujeta la hoja si hace falta."),
+                    note("Materiales", "Ceras y papel según la ficha del maletín."),
+                    note("Uso", "Mesa; se guarda en el maletín."),
+                    note("Cuidado", "Revisa que no haya piezas pequeñas sueltas de adorno.")
+            )
+    );
+
+    private static final List<EditorialEntry> ARTS_NATURAL_4 = List.of(
+            entry(
+                    "kit-manualidades-natural",
+                    "Kit de manualidades con materiales naturales",
+                    "Modelar con plastilina ecológica y madera",
+                    "SES Creative Eco: plastilina de materias primas naturales y herramientas de madera, a partir de 3 años. A los 4 años el gesto es aplastar, enrollar y cortar formas con un adulto al lado; no es un set de pegatinas de un solo uso.",
+                    List.of(
+                            "Materias primas naturales y herramientas de madera según la ficha.",
+                            "Uso sin pantalla.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "La plastilina se gasta; no es un objeto permanente.",
+                            "Los cortadores son piezas pequeñas: supervisión en cada sesión."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; sesiones que ya pueden alargarse un poco."),
+                    note("Materiales", "Plastilina ecológica y herramientas de madera."),
+                    note("Uso", "Modelar en mesa, con un adulto cerca."),
+                    note("Cuidado", "Superficie fácil de limpiar; cerrar los botes al terminar.")
+            ),
+            entry(
+                    "arte-crayola-tempera-6",
+                    "Crayola témpera lavable, 6 colores",
+                    "Pintar con pincel y témpera al agua",
+                    "Seis botes de pintura al agua lavable para papel y materiales porosos, a partir de 3 años. A los 4 años el gesto es dosificar con un adulto, pintar con pincel y cerrar los botes: base fiable antes de probar acabados especiales.",
+                    List.of(
+                            "Seis colores lavables según la ficha.",
+                            "Pintura al agua para papel y cartón.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "Mancha mesa y ropa si no hay mantel o babero.",
+                            "No es plastilina ni pintura de dedos: pide pincel y dosificación."
+                    ),
+                    "3-10 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya aguanta una sesión con pincel."),
+                    note("Materiales", "Témpera lavable al agua."),
+                    note("Uso", "Papel o cartón con pincel; no paredes."),
+                    note("Cuidado", "Lavable; cierra los botes al terminar.")
+            ),
+            entry(
+                    "arte-jovi-pintura-dedos-6",
+                    "Jovi pintura de dedos lavable, 6 colores",
+                    "Pintar con los dedos e ingredientes naturales",
+                    "Seis botes de pintura de dedos lavable a base de ingredientes naturales, sin gluten, a partir de 2 años. A los 4 años el gesto es untar con el dedo y mezclar colores en papel, sin depender del pincel fino.",
+                    List.of(
+                            "Pintura de dedos 100 % lavable según la ficha.",
+                            "Seis colores mezclables.",
+                            "Sin gluten y libre de los principales alérgenos declarados."
+                    ),
+                    List.of(
+                            "Mancha mesa y ropa si no hay babero o mantel.",
+                            "No es témpera con pincel: el gesto es con el dedo."
+                    ),
+                    "2-10 años",
+                    note("Encaje a los 4 años", "Edad mínima 2 años; a los 4 puede combinar colores con menos ayuda."),
+                    note("Materiales", "Base de ingredientes naturales, según la ficha."),
+                    note("Uso", "Papel o cartón con los dedos; no paredes."),
+                    note("Cuidado", "Se lava de piel y, según la ficha, de la mayoría de tejidos.")
+            ),
+            entry(
+                    "arte-jovi-plastilina-vegetal-12",
+                    "Jovi plastilina vegetal, 12 pastillas",
+                    "Modelar con base vegetal y muchos colores",
+                    "Doce pastillas de plastilina de base vegetal, no tóxica y sin gluten, a partir de 3 años. A los 4 años permite mezclar ocho colores básicos y cuatro fluorescentes sin abrir botes de pintura.",
+                    List.of(
+                            "Doce pastillas de 50 g en colores básicos y fluorescentes.",
+                            "Base vegetal, sin gluten según la ficha.",
+                            "No se seca: se puede guardar y volver a usar."
+                    ),
+                    List.of(
+                            "No incluye rodillo ni cortadores; el gesto es manual.",
+                            "Las pastillas pequeñas piden recoger al terminar."
+                    ),
+                    "3-10 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya modela figuras más definidas."),
+                    note("Materiales", "Plastilina vegetal, no tóxica."),
+                    note("Uso", "Modelar en mesa; no comer ni mezclar con comida."),
+                    note("Cuidado", "Guardar las pastillas en su estuche; limpiar la mesa al terminar.")
+            ),
+            entry(
+                    "arte-crayola-paw-patrol",
+                    "Crayola maletín Patrulla Canina",
+                    "Colorear con un maletín que se guarda",
+                    "Maletín con material para colorear y hojas temáticas, de 3 a 10 años. A los 4 años el valor es poder recoger ceras y hojas en una caja y volver a sacarlo: no depende de un bote concreto de pintura.",
+                    List.of(
+                            "Maletín para guardar y transportar.",
+                            "Hojas y material para colorear.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "El motivo de personaje puede cansarse; las ceras siguen sirviendo.",
+                            "No es pintura ni plastilina: es colorear."
+                    ),
+                    "3-10 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya colorea dentro del contorno con menos ayuda."),
                     note("Materiales", "Ceras y papel según la ficha del maletín."),
                     note("Uso", "Mesa; se guarda en el maletín."),
                     note("Cuidado", "Revisa que no haya piezas pequeñas sueltas de adorno.")
@@ -2384,6 +2802,109 @@ public class ComparisonPageService {
                     note("Encaje a los 3 años", "Reglas cortas y edad declarada desde 3 años."),
                     note("Madera", "Piezas de madera según la ficha."),
                     note("Uso", "Turnos y cooperación, no ensartar cordones."),
+                    note("Duración", "Partidas cortas; se guarda en la caja.")
+            )
+    );
+
+    private static final List<EditorialEntry> MONTESSORI_WOOD_4 = List.of(
+            entry(
+                    "montessori-janod-animales",
+                    "Janod Magneti'Book Animales",
+                    "Formar animales con modelos magnéticos",
+                    "Libro magnético con treinta imanes y diez fichas para recrear animales, de 3 a 8 años. A los 4 años ya elige modelos con menos ayuda y nombra las piezas: más margen que clasificar con pinzas o un cubo de doce formas.",
+                    List.of(
+                            "Diez modelos para formar animales con dificultad creciente.",
+                            "Treinta piezas magnéticas en formato libro.",
+                            "Rango declarado de 3 a 8 años."
+                    ),
+                    List.of(
+                            "Las fichas piden un adulto que elija el modelo la primera vez.",
+                            "Las piezas magnéticas se pierden si se abre el libro en el suelo."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya rota modelos con menos ayuda."),
+                    note("Madera", "Formato libro con piezas magnéticas según la ficha."),
+                    note("Uso", "Formar animales siguiendo un modelo, no clasificar con pinzas."),
+                    note("Duración", "Se guarda en el libro; se saca en sesiones que se pueden alargar.")
+            ),
+            entry(
+                    "montessori-melissa-tres-puzzles",
+                    "Melissa & Doug pack de 3 puzzles de encaje",
+                    "Tres escenas de madera para rotar",
+                    "Pack con tres tableros de encaje de granja, safari y vehículos, a partir de 3 años. A los 4 años un solo tablero de ocho pomos se acaba en minutos: aquí se rota el tema sin mezclar piezas ni volver al cubo de formas.",
+                    List.of(
+                            "Tres tableros con ilustraciones a todo color.",
+                            "Piezas gruesas de madera fáciles de agarrar.",
+                            "Edad declarada a partir de 3 años."
+                    ),
+                    List.of(
+                            "Tres cajas distintas: conviene guardar cada puzle por separado.",
+                            "Si ya monta 15 piezas o más, cada tablero puede quedarse corto."
+                    ),
+                    "Desde 3 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; tres escenas dan más margen que un cubo único."),
+                    note("Madera", "Tres tableros de madera con piezas gruesas."),
+                    note("Uso", "Encajar una escena reconocible y cambiar de tema."),
+                    note("Duración", "Se rota el pack; no se agota en una tarde.")
+            ),
+            entry(
+                    "simbolico-sundaymot-33",
+                    "Sundaymot maletín médico de madera",
+                    "Imitar la consulta con piezas de madera",
+                    "Maletín de médico y dentista con bata, estetoscopio y accesorios de madera, de 3 a 8 años. A los 4 años el gesto es una consulta con nombres y turnos: abrir, «auscultar», nombrar el utensilio y recoger; no ensartar cuentas ni encajar un cubo.",
+                    List.of(
+                            "Maletín con bata y accesorios de consulta.",
+                            "33 piezas de madera según la ficha.",
+                            "Edad declarada de 3 a 8 años."
+                    ),
+                    List.of(
+                            "Tantos accesorios abruman si se vuelcan de golpe.",
+                            "No sustituye un clasificador ni un puzle de escena."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Edad mínima 3 años; a los 4 ya imita cuidar y nombrar los objetos."),
+                    note("Madera", "Maletín y accesorios de madera según la ficha del lote vigente."),
+                    note("Uso", "Juego simbólico; recuento al guardar."),
+                    note("Duración", "Se guarda en el maletín; no es de un solo uso.")
+            ),
+            entry(
+                    "plantoys-ata-zapato",
+                    "PlanToys Ata el zapato",
+                    "Practicar nudos en madera de caucho",
+                    "Juguete de madera de caucho para 3 a 8 años, con tintes al agua. A los 4 años el nudo deja de ser un ensayo puntual: el mismo objeto se saca en la rutina de vestirse y acompaña varios cursos, no un arca de 26 piezas sueltas.",
+                    List.of(
+                            "Edad declarada de 3 a 8 años.",
+                            "Madera de caucho y tintes al agua según la ficha.",
+                            "Formato portable para practicar nudos."
+                    ),
+                    List.of(
+                            "No ata el zapato del niño: es un material de ensayo.",
+                            "Un adulto debe mostrar el nudo las primeras veces."
+                    ),
+                    "3-8 años",
+                    note("Encaje a los 4 años", "Rango 3-8; a los 4 el nudo pide menos ayuda que a los 3."),
+                    note("Madera", "Caucho y tintes al agua."),
+                    note("Uso", "Autonomía de vestirse; no clasificar animales."),
+                    note("Duración", "El mismo objeto acompaña varios cursos; no se gasta en una tarde.")
+            ),
+            entry(
+                    "lectura-three-pigs",
+                    "Goula Los 3 Cerditos",
+                    "Llegar juntos a casa con piezas de madera",
+                    "Juego de mesa de Goula basado en el cuento: turnos, vocabulario y una modalidad cooperativa para llegar juntos a casa, de 3 a 7 años. A los 4 años ya sigue el turno y nombra personajes; las partidas siguen siendo cortas.",
+                    List.of(
+                            "Relato conocido con turnos y vocabulario.",
+                            "Edad declarada de 3 a 7 años.",
+                            "Modalidad cooperativa para llegar juntos a casa."
+                    ),
+                    List.of(
+                            "El dado introduce azar; un adulto explica el objetivo la primera vez.",
+                            "Piezas pequeñas: supervisión y recogida al terminar."
+                    ),
+                    "3-7 años",
+                    note("Encaje a los 4 años", "Reglas cortas y edad declarada desde 3 años."),
+                    note("Madera", "Piezas de madera según la ficha."),
+                    note("Uso", "Turnos y cooperación, no clasificar por color."),
                     note("Duración", "Partidas cortas; se guarda en la caja.")
             )
     );
@@ -3375,13 +3896,13 @@ public class ComparisonPageService {
                 List.of(
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para empezar a cooperar",
-                                "juego-mesa-el-frutal-mini",
+                                "lectura-frutalito",
                                 "Reglas mínimas y un objetivo común frente al cuervo."
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
-                                "Para colores y primeros conteos",
-                                "juego-mesa-unicornio-tesoro",
-                                "Dados, tablero a doble cara y cristales de nube."
+                                "Para memoria y turnos",
+                                "lectura-unicornio-memo",
+                                "Cartas ilustradas para emparejar y nombrar."
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para pulso y motricidad fina",
@@ -3395,8 +3916,8 @@ public class ComparisonPageService {
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para un cooperativo más estructurado",
-                                "juego-mesa-unicornio-fiesta-rosalie",
-                                "Dados, ruleta y un objetivo compartido a partir de 4 años."
+                                "lectura-three-pigs",
+                                "Dados, cuento conocido y un objetivo compartido a partir de 3 años."
                         )
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -3429,7 +3950,7 @@ public class ComparisonPageService {
                         new ComparisonPageResponse.Section(
                                 "Empieza por cómo jugáis en casa",
                                 List.of(
-                                        "Si las derrotas individuales acaban en llanto, un cooperativo como El Frutal Mini suele encajar mejor que un juego de rapidez.",
+                                        "Si las derrotas individuales acaban en llanto, un cooperativo como El Frutalito suele encajar mejor que un juego de rapidez.",
                                         "Si ya aguanta turnos y le gusta competir un rato, Dobble Kids o Animal sobre Animal cubren observación y pulso sin partidas largas."
                                 )
                         ),
@@ -3444,13 +3965,13 @@ public class ComparisonPageService {
                                 "Lectura, idioma y piezas",
                                 List.of(
                                         "Dobble Kids está en español. Los HABA de esta lista se juegan con símbolos, dados o ruleta; confirma que el reglamento de tu caja está en un idioma que puedes explicar.",
-                                        "Revisa avisos de piezas pequeñas, sobre todo cristales y cartas, si hay hermanos menores de 3 años."
+                                        "Revisa avisos de piezas pequeñas, sobre todo cartas y piezas de madera, si hay hermanos menores de 3 años."
                                 )
                         ),
                         new ComparisonPageResponse.Section(
                                 "Qué no usamos para ordenar",
                                 List.of(
-                                        "No ordenamos por precio, número de reseñas ni estrellas. El orden editorial cubre roles distintos: cooperar, contar, apilar, observar y un cooperativo más largo.",
+                                        "No ordenamos por precio, número de reseñas ni estrellas. El orden editorial cubre roles distintos: cooperar, memoria, apilar, observar y un cooperativo más largo.",
                                         "Comprueba la ficha vigente en Amazon.es antes de comprar: ediciones y contenidos pueden cambiar."
                                 )
                         )
@@ -3469,8 +3990,8 @@ public class ComparisonPageService {
                                 "No en estos cinco. Hace falta un adulto que explique el objetivo y vigile piezas. Dobble Kids se resuelve señalando un dibujo."
                         ),
                         new ComparisonPageResponse.Faq(
-                                "¿El Frutal Mini es el mismo que el Frutal grande?",
-                                "Comparte la idea (recoger fruta antes de que llegue el cuervo) en formato de viaje: menos piezas y hasta 4 jugadores. No es la caja clásica de hasta 8."
+                                "¿El Frutalito es el mismo que el Frutal grande?",
+                                "Comparte la idea (recoger fruta antes de que llegue el cuervo) en un formato más compacto. No es la caja clásica de hasta 8 jugadores."
                         ),
                         new ComparisonPageResponse.Faq(
                                 "¿Por qué no aparecen importes ni valoraciones?",
@@ -5579,7 +6100,7 @@ public class ComparisonPageService {
                 DURABLE_4_SLUG,
                 DURABLE_4_CANONICAL,
                 AGE_4,
-                DURABLE_3,
+                DURABLE_4,
                 "Mejores regalos duraderos para 4 años | Bebes Felices",
                 "Comparamos cinco regalos reales para 4 años pensados para aguantar el juego intenso y seguir usándose, con metodología y afiliación transparentes.",
                 "Regalos duraderos para 4 años",
@@ -5589,7 +6110,7 @@ public class ComparisonPageService {
                         List.of(
                                 "Duradero, aquí, significa un objeto que se saca muchas veces: madera, plástico lavable o cartón grueso, sin pantallas ni kits que se consumen en una tarde. No es un sello de «irrompible» ni una garantía de años que no podamos verificar.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Cuentas, cordones y figuras pequeñas piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
+                                "Accesorios sueltos y figuras pequeñas piden supervisión. Que un juguete aguante no elimina piezas pequeñas ni el acompañamiento de un adulto."
                         )
                 ),
                 "Los cinco regalos",
@@ -5598,7 +6119,7 @@ public class ComparisonPageService {
                         summary("Para empujar y lavar", "green-toys-construccion", "Tres vehículos lavables, de 24 a 72 meses."),
                         summary("Para un gesto que dura años", "plantoys-ata-zapato", "Madera de caucho para practicar nudos hasta los 8."),
                         summary("Para encajar y volver a sacar", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas y figuras de madera."),
-                        summary("Para ensartar muchas veces", "cuentas-melissa-doug", "27 cuentas de madera y 2 cordones.")
+                        summary("Para imitar la consulta", "simbolico-janod-veterinario", "Maletín con 16 accesorios de madera FSC.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos si el objeto se puede repetir a los 4 años. No asignamos una nota de durabilidad ni prometemos una vida útil en años.",
@@ -5607,12 +6128,12 @@ public class ComparisonPageService {
                                 criterion("Duración", "Si se guarda y se saca. Evitamos kits de un solo uso que no están en esta lista."),
                                 criterion("Uso real", "Qué se hace con el objeto: no basta con que sea de madera."),
                                 criterion("Resistencia", "Material que aguante caídas, agua ocasional o el suelo, según la ficha."),
-                                criterion("Seguridad", "Cordones, cuentas y figuras. Un objeto duradero no elimina el riesgo.")
+                                criterion("Seguridad", "Accesorios sueltos y figuras. Un objeto duradero no elimina el riesgo.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto que se va a repetir", List.of(
-                                "Obra: Small Foot. Empujar y lavar: Green Toys. Atar: PlanToys. Encajar: HABA. Ensartar: las cuentas.",
+                                "Obra: Small Foot. Empujar y lavar: Green Toys. Atar: PlanToys. Encajar: HABA. Cuidar: maletín Janod.",
                                 "Si ya tiene un cubo de formas o un puzle de una sola escena, prioriza un objeto que se use en la rutina o al aire libre."
                         )),
                         section("Duradero no es lo mismo que sostenible", List.of(
@@ -5620,13 +6141,13 @@ public class ComparisonPageService {
                                 "Un kit de plastilina puede ser de materias primas naturales y, aun así, gastarse. Por eso no está en esta lista."
                         )),
                         section("Supervisión", List.of(
-                                "Cordones, cuentas y figuras no se dejan con menores de 4 años.",
+                                "Accesorios del maletín y figuras de puzle no se dejan con menores de 4 años sin un adulto cerca.",
                                 "Un regalo duradero se usa en sesiones; no tiene por qué entretener dos horas solo."
                         ))
                 )),
                 List.of(
                         faqItem("¿Qué es un regalo duradero a los 4 años?",
-                                "Uno que se saca muchas veces: encajar, empujar, atar o ensartar. No publicamos una vida útil en años ni un sello de irrompible."),
+                                "Uno que se saca muchas veces: encajar, empujar, atar o imitar. No publicamos una vida útil en años ni un sello de irrompible."),
                         faqItem("¿Por qué no está el kit de manualidades?",
                                 "La plastilina se gasta. Encaja como actividad para crear sin pantallas, y está en la comparativa de regalos sostenibles, no en esta lista de objetos que se vuelven a usar."),
                         faqItem("¿Madera siempre dura más que plástico?",
@@ -5725,7 +6246,7 @@ public class ComparisonPageService {
                 ARTS_NATURAL_4_SLUG,
                 ARTS_NATURAL_4_CANONICAL,
                 AGE_4,
-                ARTS_NATURAL_3,
+                ARTS_NATURAL_4,
                 "Arte y manualidades con materiales naturales para 4 años | Bebes Felices",
                 "Comparamos cinco opciones reales para crear a los 4 años: plastilina ecológica, témpera lavable y un maletín para colorear, con metodología y afiliación transparentes.",
                 "Arte y manualidades para 4 años",
@@ -5742,8 +6263,8 @@ public class ComparisonPageService {
                 List.of(
                         summary("Para modelar sin pantallas", "kit-manualidades-natural", "Plastilina ecológica y herramientas de madera."),
                         summary("Para pintar con agua", "arte-crayola-tempera-6", "Seis botes de témpera lavable."),
-                        summary("Para un extra de brillo", "arte-crayola-effects", "Diez témperas con efectos, si ya pinta."),
-                        summary("Para acabado metal", "arte-crayola-metallic", "Seis colores metálicos lavables."),
+                        summary("Para pintar con los dedos", "arte-jovi-pintura-dedos-6", "Seis botes con ingredientes naturales."),
+                        summary("Para modelar muchos colores", "arte-jovi-plastilina-vegetal-12", "Doce pastillas de base vegetal."),
                         summary("Para colorear y guardar", "arte-crayola-paw-patrol", "Maletín con ceras y hojas.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -5758,7 +6279,7 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Empieza por el gesto", List.of(
-                                "Modelar: el kit. Pintar: témpera de 6. Colorear: el maletín. Efectos y metal, si ya aguanta pintar."
+                                "Modelar: el kit o la plastilina vegetal. Pintar: témpera de 6 o pintura de dedos Jovi. Colorear: el maletín."
                         )),
                         section("Natural no es lo mismo que lavable", List.of(
                                 "El kit declara materias primas naturales y madera. Las témperas Crayola declaran lavabilidad, no un sello de material natural."
@@ -5865,57 +6386,57 @@ public class ComparisonPageService {
                 MONTESSORI_WOOD_4_SLUG,
                 MONTESSORI_WOOD_4_CANONICAL,
                 AGE_4,
-                MONTESSORI_WOOD_3,
+                MONTESSORI_WOOD_4,
                 "Juegos Montessori de madera para 4 años | Bebes Felices",
-                "Comparamos cinco juguetes de madera para 4 años: cubo de formas, láminas, maletín médico, puzle de granja y cuento cooperativo, con metodología y afiliación transparentes.",
+                "Comparamos cinco juguetes de madera para 4 años: Magneti'Book de animales, pack de tres puzles, maletín médico, PlanToys para atar y cuento cooperativo, con metodología y afiliación transparentes.",
                 "Montessori de madera para 4 años",
                 new ComparisonPageResponse.Header(
                         "Juegos Montessori de madera para 4 años",
-                        "Cinco objetos de madera para encajar, imitar o recoger",
+                        "Cinco objetos de madera para formar, encajar, imitar o recoger",
                         List.of(
-                                "Montessori, aquí, es actividad clara con madera: encajar, imitar la consulta o jugar el cuento en equipo. No es un certificado oficial ni repetir la grúa o las cuentas de otra comparativa.",
+                                "Montessori, aquí, es actividad clara con madera: formar animales con imanes, encajar escenas, imitar la consulta, practicar nudos o jugar el cuento en equipo. No es un certificado oficial ni repetir el cubo de formas, las láminas de bebé o las cuentas de otra comparativa.",
                                 "La selección reúne cinco productos del catálogo. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Los accesorios del maletín y las piezas del juego de mesa piden supervisión. La madera no elimina piezas pequeñas."
+                                "Los accesorios del maletín, los imanes y las piezas del juego de mesa piden supervisión. La madera no elimina piezas pequeñas."
                         )
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas de madera."),
-                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas de madera de 2 a 5 años."),
+                        summary("Para formar animales con modelos", "montessori-janod-animales", "Treinta imanes y diez modelos de 3 a 8 años."),
+                        summary("Para tres escenas de encaje", "montessori-melissa-tres-puzzles", "Granja, safari y vehículos a partir de 3 años."),
                         summary("Para imitar la consulta", "simbolico-sundaymot-33", "Maletín médico de madera con 33 piezas."),
-                        summary("Para ocho piezas con pomos", "puzle-melissa-granja-peg", "Tablero de granja de 2 a 4 años."),
+                        summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho de 3 a 8 años."),
                         summary("Para jugar el cuento en equipo", "lectura-three-pigs", "Los 3 Cerditos de Goula, de 3 a 7 años.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos madera y gesto para un niño de 4 años. No es la comparativa de formas y encajes: aquí entra también el maletín médico y el juego cooperativo.",
                         List.of(
-                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto cabe en sesiones cortas."),
+                                criterion("Encaje a los 4 años", "Edad declarada y si el gesto cabe en sesiones que ya se pueden alargar."),
                                 criterion("Madera", "Madera, caucho o figuras declaradas en la ficha."),
-                                criterion("Actividad", "Encajar, imitar o recoger: no repetimos el mismo cubo."),
+                                criterion("Actividad", "Formar, encajar, imitar o recoger: no repetimos el mismo cubo."),
                                 criterion("Duración", "Si el objeto se saca más de una tarde."),
-                                criterion("Seguridad", "Figuras pequeñas y utensilios sueltos.")
+                                criterion("Seguridad", "Figuras pequeñas, imanes y utensilios sueltos.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el gesto, no la etiqueta Montessori", List.of(
-                                "Encajar: cubo de 12, Goula o puzle de granja. Imitar: Sundaymot. Cooperar: Los 3 Cerditos."
+                                "Formar: Magneti'Book Animales. Encajar escenas: pack de tres puzles. Imitar: Sundaymot. Atar: PlanToys. Cooperar: Los 3 Cerditos."
                         )),
-                        section("Si ya tienes el cubo de 12 piezas", List.of(
-                                "No lo dupliques en la comparativa de formas y encajes. Aquí priorizamos madera con otro uso."
+                        section("Si ya tienes el cubo o las láminas de bebé", List.of(
+                                "No los dupliques. El cubo y Goula Baby Shapes están en la comparativa de madera para 3 años. Aquí priorizamos madera con otro uso."
                         )),
                         section("Supervisión", List.of(
-                                "Limita los accesorios del maletín al empezar. Las piezas del juego de mesa piden recoger al terminar."
+                                "Limita los accesorios del maletín y los imanes al empezar. Cordones y piezas del juego de mesa piden recoger al terminar."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta el sello Montessori?",
                                 "No. Cuenta la actividad y la madera, no el nombre comercial."),
-                        faqItem("¿Dónde está el Janod Tropik?",
-                                "En la comparativa de formas y encajes. Aquí priorizamos el cubo de 12 piezas."),
+                        faqItem("¿Dónde está Goula Baby Shapes?",
+                                "En la comparativa de madera para 3 años. Aquí priorizamos formar animales y practicar nudos."),
                         faqItem("¿Dónde está el cubo Melissa & Doug?",
-                                "En la comparativa de formas y encajes, que compara ese gesto con más piezas de encaje."),
+                                "En la comparativa de madera para 3 años. Si buscas encaje de formas, mira también la de 5 años."),
                         faqItem("¿Todo lo de madera es igual?",
-                                "No. Cubo, láminas, maletín médico, puzle de granja y cuento cooperativo no son intercambiables. Elige según el gesto."),
+                                "No. Magneti'Book, pack de tres puzles, maletín médico, PlanToys y cuento cooperativo no son intercambiables. Elige según el gesto."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -6007,58 +6528,58 @@ public class ComparisonPageService {
                 AGE_4,
                 MONTESSORI_4,
                 "Mejores juegos Montessori de formas y encajes para 4 años | Bebes Felices",
-                "Comparamos cinco juegos de encaje y clasificación reales para 4 años por piezas, actividad y margen de dificultad, con metodología y afiliación transparentes.",
+                "Comparamos cinco juegos Montessori reales para 4 años por actividad, piezas y margen de dificultad, con metodología y afiliación transparentes.",
                 "Juegos Montessori para 4 años",
                 new ComparisonPageResponse.Header(
                         "Mejores juegos Montessori de formas y encajes para 4 años",
-                        "Cinco materiales reales para clasificar formas y colores",
+                        "Cinco materiales reales para formar, encajar, completar escenas y practicar autonomía",
                         List.of(
-                                "A los 4 años el encaje útil es el que se entiende sin un manual: coger una pieza, nombrar la forma y meterla. El adjetivo «Montessori» no sustituye piezas grandes ni una consigna clara.",
+                                "A los 4 años el material útil es el que se entiende sin un manual: formar un animal, encajar una escena, montar quince piezas o abrochar un cierre. El adjetivo «Montessori» no sustituye una consigna clara ni piezas seguras.",
                                 "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
-                                "Un adulto cercano sigue haciendo falta. Si hay hermanos más pequeños, revisa el tamaño de cada figura antes de dejar el set en el suelo."
+                                "Un adulto cercano sigue haciendo falta. Imanes, figuras pequeñas y cierres piden supervisión y recuento al guardar."
                         )
                 ),
                 "Los cinco juegos",
                 List.of(
-                        summary("Para empezar con piezas grandes", "juego-montessori-formas", "Cubo de 12 piezas y una sola consigna."),
-                        summary("Para subir la dificultad", "montessori-goula-baby-shapes", "Láminas progresivas de 2 a 5 años."),
-                        summary("Para ocho formas gruesas", "montessori-formas-geometricas", "Se termina en una sesión corta."),
-                        summary("Para clasificar animales", "montessori-noah-ark", "26 piezas; saca un subconjunto al inicio."),
+                        summary("Para formar animales con modelos", "montessori-janod-animales", "Treinta imanes y diez modelos de 3 a 8 años."),
+                        summary("Para tres escenas de encaje", "montessori-melissa-tres-puzzles", "Granja, safari y vehículos a partir de 3 años."),
+                        summary("Para quince piezas por escena", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de haya."),
+                        summary("Para practicar cierres", "vestir-melissa-habilidades", "Botones, cremallera, hebilla y cordones."),
                         summary("Para practicar nudos", "plantoys-ata-zapato", "Madera de caucho para autonomía.")
                 ),
                 new ComparisonPageResponse.Methodology(
-                        "Comparamos la actividad de encaje y su utilidad para un niño de 4 años. No asignamos una nota «Montessori» ni completamos certificaciones que la ficha no muestre.",
+                        "Comparamos la actividad Montessori y su utilidad para un niño de 4 años. No asignamos una nota «Montessori» ni completamos certificaciones que la ficha no muestre.",
                         List.of(
                                 criterion("Encaje a los 4 años", "Edad declarada y si se puede terminar una ronda sin frustración."),
-                                criterion("Actividad", "Clasificar y encajar, no un set con diez modos."),
-                                criterion("Piezas", "Número y tamaño. 12 piezas no son 26."),
+                                criterion("Actividad", "Formar, encajar, montar o abrochar: no un set con diez modos."),
+                                criterion("Piezas", "Número y tamaño. Tres tableros no son quince piezas sueltas."),
                                 criterion("Margen de dificultad", "Si el material se queda corto en semanas o admite un siguiente nivel."),
-                                criterion("Seguridad", "Piezas grandes y supervisión. El nombre comercial no elimina el riesgo.")
+                                criterion("Seguridad", "Imanes, figuras pequeñas y cierres piden supervisión. El nombre comercial no elimina el riesgo.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Empieza por lo que ya hace", List.of(
-                                "Si aún encaja con ayuda, el cubo de 12 piezas o Janod bastan. Si ya clasifica sin esfuerzo, Goula o el arca dan más margen.",
+                                "Si aún encaja con ayuda, el pack de tres puzles basta. Si ya termina ocho piezas sin esfuerzo, Magneti'Book o HABA dan más margen.",
                                 "No elijas por el sello Montessori. Elige por si el niño puede completar una ronda hoy."
                         )),
                         section("Cuántas piezas sacar", List.of(
-                                "Con 26 figuras, saca cuatro o cinco al empezar. El arca guarda el resto.",
-                                "Mezclar todas las láminas de Goula a la vez convierte el reto en un desorden."
+                                "Con HABA, monta un puzle de 15 piezas a la vez. Mezclar las cuatro cajas abruma.",
+                                "Con Magneti'Book, elige un modelo sencillo antes de abrir las diez fichas."
                         )),
                         section("Supervisión", List.of(
                                 "Es un material de mesa o de suelo con un adulto cerca, no un juguete para la habitación a solas.",
-                                "Revisa piezas pequeñas si hay menores de 4 años en casa."
+                                "Revisa imanes, figuras pequeñas y cordones si hay menores de 4 años en casa."
                         ))
                 )),
                 List.of(
                         faqItem("¿Hace falta un material certificado Montessori?",
-                                "No. Lo útil es clasificar y encajar con piezas seguras. El nombre comercial no sustituye el criterio de edad."),
+                                "No. Lo útil es una actividad clara con piezas seguras. El nombre comercial no sustituye el criterio de edad."),
                         faqItem("¿Cuántas piezas son demasiadas a los 4 años?",
-                                "Si no puede terminar una ronda, sobran. Empieza por un cubo reducido y añade dificultad después."),
-                        faqItem("¿Janod sirve si ya tiene 4 años cumplidos?",
-                                "Está en el tope de su rango. Si ya clasifica con soltura, Goula o el cubo de 12 dan más recorrido."),
+                                "Si no puede terminar una ronda, sobran. Empieza por un tablero del pack o un puzle de quince piezas y añade dificultad después."),
+                        faqItem("¿Dónde está el cubo Melissa & Doug o Goula Baby Shapes?",
+                                "En la comparativa de madera para 3 años. Aquí priorizamos materiales con más margen a los 4."),
                         faqItem("¿Se puede usar sin un adulto?",
-                                "Con supervisión cercana, sí, cuando las piezas son grandes. No es un juguete para dejar solo."),
+                                "Con supervisión cercana, sí, cuando las piezas son grandes. Imanes, figuras pequeñas y cierres no se dejan solos."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
@@ -6151,7 +6672,7 @@ public class ComparisonPageService {
                 PUZZLES_4_SLUG,
                 PUZZLES_4_CANONICAL,
                 AGE_4,
-                PUZZLES_3,
+                PUZZLES_4,
                 "Mejores puzles de piezas grandes para 4 años | Bebes Felices",
                 "Comparamos cinco puzles reales para 4 años por número de piezas, soporte y si se pueden terminar en una sesión, con metodología y afiliación transparentes.",
                 "Puzles para 4 años",
@@ -6160,59 +6681,59 @@ public class ComparisonPageService {
                         "Cinco puzles reales para encajar sin piezas diminutas",
                         List.of(
                                 "A los 4 años un puzle sirve para encajar, nombrar lo que se ve y terminar. No es un puzzle de 100 piezas ni un reto de paciencia adulta.",
-                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 14 de agosto de 2026.",
+                                "La selección reúne cinco productos disponibles en Amazon.es. No usamos precios, valoraciones ni puntuaciones; el orden es editorial y parte de datos revisados el 3 de septiembre de 2026.",
                                 "Empieza junto, nombra las piezas que faltan y guarda cada escena aparte. El éxito repetible importa más que el recuento impreso en la caja."
                         )
                 ),
                 "Los cinco puzles",
                 List.of(
-                        summary("Para piezas grandes de safari", "puzle-madera-animales", "Una escena de madera y animales reconocibles."),
-                        summary("Para encajar en tablero", "puzle-melissa-mascotas", "Ocho mascotas de madera sobre tablero."),
-                        summary("Para empezar por 5 piezas", "puzle-educa-selva", "Cuatro puzles de 5 a 8 piezas."),
-                        summary("Para 15 piezas y haya", "haba-puzles-cuatro-estaciones", "Cuatro estaciones y figuras de madera."),
-                        summary("Para 16 piezas de madera", "puzle-educa-disney-madera", "Dos escenas cuando 8 piezas ya no retan.")
+                        summary("Para progresar de 12 a 24 piezas", "puzle-ravensburger-toy-story-4en1", "Cuatro escenas Toy Story en una caja."),
+                        summary("Para una escena grande de suelo", "puzle-ravensburger-gruffalo-suelo-24", "24 piezas de cartón extragrueso."),
+                        summary("Para subir hasta 24 piezas", "puzle-clementoni-progresivo-4en1", "Cuatro puzles de 12 a 24 piezas."),
+                        summary("Para 16 piezas de madera", "puzle-educa-bluey-madera-16", "Dos escenas Bluey en madera."),
+                        summary("Para dos escenas de 20 piezas", "puzle-clementoni-dinosaurios-20", "Dos láminas de dinosaurios.")
                 ),
                 new ComparisonPageResponse.Methodology(
                         "Comparamos el número de piezas, el soporte y si un niño de 4 años puede terminar. No asignamos notas ni inventamos recuentos que la ficha no declare.",
                         List.of(
                                 criterion("Encaje a los 4 años", "Edad declarada y si la sesión puede acabarse."),
-                                criterion("Dificultad", "De silueta con tablero a 16 piezas sueltas."),
-                                criterion("Soporte", "Tablero, marco o piezas sueltas; madera o cartón cuando figura."),
-                                criterion("Progresión", "Un pack de 4 puzles no es lo mismo que una sola escena."),
-                                criterion("Seguridad", "Piezas y figuras pequeñas fuera del alcance de menores de 4 años.")
+                                criterion("Dificultad", "De 16 piezas sueltas a packs evolutivos de hasta 24."),
+                                criterion("Soporte", "Maletín, láminas sueltas o madera; cartón grueso cuando figura."),
+                                criterion("Progresión", "Un pack evolutivo no es lo mismo que dos escenas fijas de 20 piezas."),
+                                criterion("Seguridad", "Piezas pequeñas fuera del alcance de menores de 4 años; guarda cada caja aparte.")
                         )
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige según lo que ya monta", List.of(
-                                "Si aún encaja siluetas, mascotas o safari. Si termina 8 piezas en un minuto, HABA o Educa Disney.",
-                                "Un recuento alto no es un regalo mejor: es un riesgo de dejarlo a medias."
+                                "Si aún encaja tableros de ocho piezas, empieza por Ravensburger Toy Story (12 o 16) o Educa Bluey (16).",
+                                "Si 16 piezas se resuelven sin esfuerzo, prueba Clementoni progresivo (20 o 24), Gruffalo de suelo (24) o el pack de 20 de dinosaurios."
                         )),
                         section("Cartón o madera", List.of(
                                 "Ambos valen si son gruesos. La madera suele durar más en un uso intenso.",
-                                "Un tablero sujeta las piezas; un puzle suelto de 16 pide más mesa y más paciencia."
+                                "Un puzle suelto de 20 o 24 pide más mesa y más paciencia que un maletín evolutivo."
                         )),
                         section("Si se rinde a mitad", List.of(
                                 "Reduce las piezas a la vista, nombra lo que falta y termina juntos.",
-                                "Guarda cada puzle en su bolsa. Mezclar 15 + 16 piezas acaba con la sesión."
+                                "Guarda cada puzle en su bolsa. Mezclar 16 + 20 piezas acaba con la sesión."
                         ))
                 )),
                 List.of(
                         faqItem("¿Cuántas piezas recomendáis a los 4 años?",
-                                "Las justas para terminar. Un puzle de silueta o de 5-8 piezas suele encajar mejor que uno de decenas de piezas pequeñas."),
+                                "Las justas para terminar. Entre 12 y 20 piezas suele encajar mejor que uno de decenas de piezas pequeñas."),
                         faqItem("¿Cartón o madera?",
                                 "Ambos si son gruesos. El cartón fino se dobla y frustra."),
-                        faqItem("¿Cuándo pasar a 15 o 16 piezas?",
-                                "Cuando 8 piezas se resuelven sin esfuerzo. HABA y Educa Disney cubren ese paso, con un adulto al principio."),
-                        faqItem("¿El puzle de mascotas es lo mismo que el de safari?",
-                                "No. Las mascotas son tablero con siluetas y piezas que se sostienen de pie; el safari es una escena de piezas grandes. Cubren el mismo tramo de edad con gestos distintos."),
+                        faqItem("¿Cuándo pasar a 20 o 24 piezas?",
+                                "Cuando 16 piezas se resuelven sin esfuerzo. Clementoni progresivo y el pack de dinosaurios cubren ese paso, con un adulto al principio."),
+                        faqItem("¿Ravensburger Toy Story es lo mismo que Clementoni progresivo?",
+                                "No. Ambos suben de 12 a 24 piezas en cuatro láminas, pero son marcas y escenas distintas. Sirven para rotar el motivo sin repetir la misma caja."),
                         faqItem("¿Por qué no aparecen importes ni valoraciones?",
                                 "Porque cambian y no forman parte de esta evaluación editorial.")
                 ),
                 List.of(
                         hub4Link(),
                         new LinkItem(
-                                "Juegos Montessori de formas y encajes",
-                                "/comparativas/" + PUZZLES_4_SLUG + "/",
+                                "Juegos Montessori de formas y encajes para 4 años",
+                                "/comparativas/" + MONTESSORI_4_SLUG + "/",
                                 "Clasificar formas, no montar una imagen."
                         ),
                         chooseByAgeLink()
@@ -7669,7 +8190,7 @@ public class ComparisonPageService {
                 STEM_4_SLUG,
                 STEM_4_CANONICAL,
                 AGE_4,
-                STEM_5,
+                STEM_4,
                 "Mejores juguetes STEM para 4 años | Bebes Felices",
                 "Comparamos cinco juguetes existentes aptos para 4 años por lógica, construcción, patrones y uso evolutivo.",
                 "Juguetes STEM para 4 años",
@@ -7677,17 +8198,17 @@ public class ComparisonPageService {
                         "Mejores juguetes STEM para 4 años",
                         "Cinco opciones reales para construir, observar patrones y resolver problemas",
                         List.of(
-                                "A los 4 años un juguete STEM útil plantea un problema visible: levantar una carga, mantener una torre, completar un patrón o construir una estructura.",
-                                "Reutilizamos productos ya presentes en el catálogo y aptos para esta edad. No añadimos precios, estrellas ni enlaces comerciales inventados.",
+                                "A los 4 años un juguete STEM útil plantea un problema visible: mantener una torre, hacer girar engranajes, completar un circuito o reconocer un patrón.",
+                                "Reutilizamos productos del catálogo con ficha en Amazon España y aptos para esta edad. No añadimos precios, estrellas ni enlaces comerciales inventados.",
                                 "STEM no significa dejar al niño solo: los imanes, piezas y reglas requieren revisar la seguridad y acompañar el primer uso."
                         )
                 ),
                 "Los cinco juguetes",
                 List.of(
-                        summary("Para construcción tridimensional", "set-construccion-magnetico", "Formas, simetría y estabilidad con piezas magnéticas."),
-                        summary("Para mecanismos sencillos", "small-foot-grua", "Giro, manivela y transporte de cargas."),
+                        summary("Para construcción tridimensional", "stem-geomag-rainbow", "Formas, simetría y estabilidad con barras y paneles magnéticos."),
+                        summary("Para mecanismos sencillos", "stem-gears-beginners", "Engranajes, manivela y cadenas de movimiento."),
                         summary("Para equilibrio", "juego-mesa-animal-sobre-animal", "Apilado, apoyo y distribución del peso."),
-                        summary("Para orientación espacial", "haba-puzles-cuatro-estaciones", "Cuatro puzles de 15 piezas."),
+                        summary("Para planificar recorridos", "stem-gravitrax-junior", "Circuito modular con gravedad y velocidad."),
                         summary("Para reconocer patrones", "juego-mesa-dobble-kids", "Comparación visual con una regla breve.")
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -7702,8 +8223,8 @@ public class ComparisonPageService {
                 ),
                 new ComparisonPageResponse.BuyingGuide(List.of(
                         section("Elige el tipo de problema", List.of(
-                                "Para construir, prioriza el set magnético; para mecanismos, la grúa; para equilibrio, Animal sobre Animal.",
-                                "Los puzles y Dobble cubren orientación y patrones, pero no sustituyen una experiencia de construcción."
+                                "Para construir, prioriza Geomag; para mecanismos, Gears!; para equilibrio, Animal sobre Animal.",
+                                "GraviTrax y Dobble cubren planificación y patrones, pero no sustituyen una experiencia de construcción."
                         )),
                         section("Busca dificultad ajustable", List.of(
                                 "Empieza con pocas piezas o una regla y aumenta el reto cuando pueda terminar sin ayuda constante.",
@@ -7716,8 +8237,8 @@ public class ComparisonPageService {
                 )),
                 List.of(
                         faqItem("¿Qué significa STEM a los 4 años?", "Resolver problemas de ciencia, tecnología, ingeniería o matemáticas mediante juego: construir, observar mecanismos, equilibrar o reconocer patrones."),
-                        faqItem("¿Hace falta un juguete electrónico?", "No. Una grúa con manivela, un apilado o una construcción magnética permiten observar principios físicos sin pantalla."),
-                        faqItem("¿Cuál admite más dificultad?", "La construcción magnética ofrece el margen más directo: se pueden añadir piezas, restricciones y estructuras más complejas."),
+                        faqItem("¿Hace falta un juguete electrónico?", "No. Engranajes, un apilado o una construcción magnética permiten observar principios físicos sin pantalla."),
+                        faqItem("¿Cuál admite más dificultad?", "Geomag ofrece el margen más directo: se pueden añadir piezas, restricciones y estructuras más complejas."),
                         faqItem("¿Todos sirven para jugar sin adulto?", "No. Conviene explicar el primer reto, acompañar las reglas y revisar imanes y piezas."),
                         faqItem("¿Por qué no aparecen precios ni estrellas?", "Porque cambian y no forman parte del criterio editorial estable.")
                 ),
@@ -7764,13 +8285,13 @@ public class ComparisonPageService {
                 List.of(
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para empezar a cooperar",
-                                "juego-mesa-el-frutal-mini",
+                                "lectura-frutalito",
                                 "Reglas mínimas y un objetivo común frente al cuervo."
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
-                                "Para colores y primeros conteos",
-                                "juego-mesa-unicornio-tesoro",
-                                "Dados, tablero a doble cara y cristales de nube."
+                                "Para memoria y turnos",
+                                "lectura-unicornio-memo",
+                                "Cartas ilustradas para emparejar y nombrar."
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para pulso y motricidad fina",
@@ -7784,8 +8305,8 @@ public class ComparisonPageService {
                         ),
                         new ComparisonPageResponse.QuickSummaryItem(
                                 "Para un cooperativo más estructurado",
-                                "juego-mesa-unicornio-fiesta-rosalie",
-                                "Dados, ruleta y un objetivo compartido a partir de 5 años."
+                                "lectura-three-pigs",
+                                "Dados, cuento conocido y un objetivo compartido a partir de 3 años."
                         )
                 ),
                 new ComparisonPageResponse.Methodology(
@@ -7818,7 +8339,7 @@ public class ComparisonPageService {
                         new ComparisonPageResponse.Section(
                                 "Empieza por cómo jugáis en casa",
                                 List.of(
-                                        "Si las derrotas individuales acaban en llanto, un cooperativo como El Frutal Mini suele encajar mejor que un juego de rapidez.",
+                                        "Si las derrotas individuales acaban en llanto, un cooperativo como El Frutalito suele encajar mejor que un juego de rapidez.",
                                         "Si ya aguanta turnos y le gusta competir un rato, Dobble Kids o Animal sobre Animal cubren observación y pulso sin partidas largas."
                                 )
                         ),
@@ -7833,13 +8354,13 @@ public class ComparisonPageService {
                                 "Lectura, idioma y piezas",
                                 List.of(
                                         "Dobble Kids está en español. Los HABA de esta lista se juegan con símbolos, dados o ruleta; confirma que el reglamento de tu caja está en un idioma que puedes explicar.",
-                                        "Revisa avisos de piezas pequeñas, sobre todo cristales y cartas, si hay hermanos menores de 3 años."
+                                        "Revisa avisos de piezas pequeñas, sobre todo cartas y piezas de madera, si hay hermanos menores de 3 años."
                                 )
                         ),
                         new ComparisonPageResponse.Section(
                                 "Qué no usamos para ordenar",
                                 List.of(
-                                        "No ordenamos por precio, número de reseñas ni estrellas. El orden editorial cubre roles distintos: cooperar, contar, apilar, observar y un cooperativo más largo.",
+                                        "No ordenamos por precio, número de reseñas ni estrellas. El orden editorial cubre roles distintos: cooperar, memoria, apilar, observar y un cooperativo más largo.",
                                         "Comprueba la ficha vigente en Amazon.es antes de comprar: ediciones y contenidos pueden cambiar."
                                 )
                         )
@@ -7858,8 +8379,8 @@ public class ComparisonPageService {
                                 "No en estos cinco. Hace falta un adulto que explique el objetivo y vigile piezas. Dobble Kids se resuelve señalando un dibujo."
                         ),
                         new ComparisonPageResponse.Faq(
-                                "¿El Frutal Mini es el mismo que el Frutal grande?",
-                                "Comparte la idea (recoger fruta antes de que llegue el cuervo) en formato de viaje: menos piezas y hasta 4 jugadores. No es la caja clásica de hasta 8."
+                                "¿El Frutalito es el mismo que el Frutal grande?",
+                                "Comparte la idea (recoger fruta antes de que llegue el cuervo) en un formato más compacto. No es la caja clásica de hasta 8 jugadores."
                         ),
                         new ComparisonPageResponse.Faq(
                                 "¿Por qué no aparecen importes ni valoraciones?",

@@ -160,11 +160,11 @@ class ComparisonPageServiceTest {
         assertThat(page.updatedAt()).isEqualTo("2026-08-14");
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::productId)
                 .containsExactly(
-                        "juego-mesa-el-frutal-mini",
-                        "juego-mesa-unicornio-tesoro",
+                        "lectura-frutalito",
+                        "lectura-unicornio-memo",
                         "juego-mesa-animal-sobre-animal",
                         "juego-mesa-dobble-kids",
-                        "juego-mesa-unicornio-fiesta-rosalie"
+                        "lectura-three-pigs"
                 );
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::rank)
                 .containsExactly(1, 2, 3, 4, 5);
@@ -485,6 +485,7 @@ class ComparisonPageServiceTest {
         ComparisonPageResponse stem4 = service.getBySlug(ComparisonPageService.STEM_4_SLUG).orElseThrow();
         ComparisonPageResponse balance4 = service.getBySlug(ComparisonPageService.BALANCE_BIKES_4_SLUG).orElseThrow();
         ComparisonPageResponse gifts4 = service.getBySlug(ComparisonPageService.GIFTS_4_SLUG).orElseThrow();
+        ComparisonPageResponse puzzles4 = service.getBySlug(ComparisonPageService.PUZZLES_4_SLUG).orElseThrow();
 
         ComparisonPageResponse durable5 = service.getBySlug(ComparisonPageService.DURABLE_5_SLUG).orElseThrow();
         ComparisonPageResponse montessori5 = service.getBySlug(ComparisonPageService.MONTESSORI_5_SLUG).orElseThrow();
@@ -495,8 +496,101 @@ class ComparisonPageServiceTest {
         assertThat(durable4.targetAge()).isEqualTo(4);
         assertThat(durable4.updatedAt()).isEqualTo("2026-08-14");
         assertThat(durable4.breadcrumbs().get(1).href()).isEqualTo("/por-edad/4-anos/");
+        assertThat(durable4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "small-foot-grua",
+                        "green-toys-construccion",
+                        "plantoys-ata-zapato",
+                        "haba-puzles-cuatro-estaciones",
+                        "simbolico-janod-veterinario"
+                );
+        ComparisonPageResponse artsNatural4 = service.getBySlug(ComparisonPageService.ARTS_NATURAL_4_SLUG).orElseThrow();
+        assertThat(artsNatural4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "kit-manualidades-natural",
+                        "arte-crayola-tempera-6",
+                        "arte-jovi-pintura-dedos-6",
+                        "arte-jovi-plastilina-vegetal-12",
+                        "arte-crayola-paw-patrol"
+                );
+        ComparisonPageResponse wood4 = service.getBySlug(ComparisonPageService.MONTESSORI_WOOD_4_SLUG).orElseThrow();
+        assertThat(wood4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "montessori-janod-animales",
+                        "montessori-melissa-tres-puzzles",
+                        "simbolico-sundaymot-33",
+                        "plantoys-ata-zapato",
+                        "lectura-three-pigs"
+                );
+        assertThat(wood4.entries()).extracting(ComparisonPageResponse.Entry::title)
+                .doesNotContain(
+                        "Melissa & Doug cuentas de madera",
+                        "Goula Baby Shapes",
+                        "Janod clasificar ballenas por colores",
+                        "Melissa & Doug Arca de Noé clasificadora"
+                );
+        assertThat(montessori4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "montessori-janod-animales",
+                        "montessori-melissa-tres-puzzles",
+                        "haba-puzles-cuatro-estaciones",
+                        "vestir-melissa-habilidades",
+                        "plantoys-ata-zapato"
+                );
+        assertThat(montessori4.entries()).extracting(ComparisonPageResponse.Entry::title)
+                .doesNotContain(
+                        "Melissa & Doug cubo de formas",
+                        "Goula Baby Shapes",
+                        "Melissa & Doug puzzle de formas geométricas",
+                        "Melissa & Doug Arca de Noé clasificadora",
+                        "Janod clasificar ballenas por colores",
+                        "Melissa & Doug cuentas de madera"
+                );
+        assertThat(puzzles4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "puzle-ravensburger-toy-story-4en1",
+                        "puzle-ravensburger-gruffalo-suelo-24",
+                        "puzle-clementoni-progresivo-4en1",
+                        "puzle-educa-bluey-madera-16",
+                        "puzle-clementoni-dinosaurios-20"
+                );
+        assertThat(puzzles4.entries()).extracting(ComparisonPageResponse.Entry::title)
+                .doesNotContain(
+                        "Melissa & Doug pack de 3 puzzles de encaje",
+                        "Melissa & Doug puzle de mascotas",
+                        "HABA Puzzles Las Cuatro Estaciones",
+                        "Educa Disney Animals, 2 puzles de madera",
+                        "Educa My First animales de la selva",
+                        "Janod 4 puzles evolutivos dinosaurios",
+                        "Ravensburger Elmer, rompecabezas de 16 piezas",
+                        "Educa Cars, 2 puzles de madera de 16 piezas"
+                );
+        List<String> puzzles4ProductIds = puzzles4.entries().stream()
+                .map(ComparisonPageResponse.Entry::productId)
+                .toList();
+        assertThat(puzzles4ProductIds).doesNotHaveDuplicates();
+        assertThat(puzzles4ProductIds).doesNotContain(
+                "montessori-melissa-tres-puzzles",
+                "puzle-melissa-mascotas",
+                "haba-puzles-cuatro-estaciones",
+                "puzle-educa-disney-madera",
+                "puzle-janod-evolutivos-granja"
+        );
         assertThat(montessori4.entries()).hasSize(5);
-        assertThat(stem4.entries()).hasSize(5);
+        assertThat(stem4.entries()).extracting(ComparisonPageResponse.Entry::productId)
+                .containsExactly(
+                        "stem-geomag-rainbow",
+                        "stem-gears-beginners",
+                        "juego-mesa-animal-sobre-animal",
+                        "stem-gravitrax-junior",
+                        "juego-mesa-dobble-kids"
+                );
+        assertThat(stem4.entries()).extracting(ComparisonPageResponse.Entry::title)
+                .doesNotContain(
+                        "Set de construcción magnético",
+                        "Small Foot grúa de construcción",
+                        "HABA Puzzles Las Cuatro Estaciones"
+                );
         assertThat(balance4.entries()).hasSize(5);
         assertThat(gifts4.entries()).hasSize(5);
 
@@ -508,7 +602,7 @@ class ComparisonPageServiceTest {
         assertThat(balance5.entries()).hasSize(5);
         assertThat(gifts5.entries()).hasSize(5);
 
-        assertThat(List.of(durable4, montessori4, stem4, balance4, gifts4, durable5, montessori5, board5, balance5, gifts5))
+        assertThat(List.of(durable4, montessori4, stem4, balance4, gifts4, puzzles4, durable5, montessori5, board5, balance5, gifts5))
                 .allSatisfy(page -> {
                     assertThat(page.status()).isEqualTo(PageStatus.PUBLISHED);
                     assertThat(page.entries()).allSatisfy(entry -> {
@@ -592,11 +686,11 @@ class ComparisonPageServiceTest {
         AmazonCreatorsProperties properties = new AmazonCreatorsProperties();
         properties.setPartnerTag("bebesfelices-21");
         properties.setProductAsins(Map.of(
-                "juego-mesa-el-frutal-mini", "B08R3YTDPQ",
-                "juego-mesa-unicornio-tesoro", "B01MRA4YCR",
+                "lectura-frutalito", "B0088MES78",
+                "lectura-unicornio-memo", "B086FCQT6M",
                 "juego-mesa-animal-sobre-animal", "B00D6J9SJQ",
                 "juego-mesa-dobble-kids", "B00OM7VIC6",
-                "juego-mesa-unicornio-fiesta-rosalie", "B06XCLF568"
+                "lectura-three-pigs", "B07B37TT7F"
         ));
         AtomicInteger creatorsApiCalls = new AtomicInteger();
         ProductCatalog catalog = new AmazonEnrichedProductCatalog(
@@ -615,11 +709,11 @@ class ComparisonPageServiceTest {
         assertThat(creatorsApiCalls).hasValue(0);
         assertThat(page.entries()).extracting(ComparisonPageResponse.Entry::affiliateHref)
                 .containsExactly(
-                        "https://www.amazon.es/dp/B08R3YTDPQ?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B01MRA4YCR?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B0088MES78?tag=bebesfelices-21",
+                        "https://www.amazon.es/dp/B086FCQT6M?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B00D6J9SJQ?tag=bebesfelices-21",
                         "https://www.amazon.es/dp/B00OM7VIC6?tag=bebesfelices-21",
-                        "https://www.amazon.es/dp/B06XCLF568?tag=bebesfelices-21"
+                        "https://www.amazon.es/dp/B07B37TT7F?tag=bebesfelices-21"
                 );
     }
 

@@ -288,7 +288,7 @@ class AgePageServiceTest {
                         "YOLEO Transformer",
                         "Twistshake plato con compartimentos",
                         "Set de construcción magnético",
-                        "HABA El Frutal Mini",
+                        "HABA El Frutalito",
                         "Janod maletín de veterinario"
                 );
         assertThat(page5.featuredSelection())
@@ -330,10 +330,10 @@ class AgePageServiceTest {
                         .href())
                 .isEqualTo("/comparativas/mejores-patinetes-4-anos/");
         assertThat(page4.featuredSelection())
-                .filteredOn(product -> product.title().equals("HABA El Frutal Mini"))
+                .filteredOn(product -> product.title().equals("HABA El Frutalito"))
                 .allSatisfy(product -> {
                     assertThat(product.href()).isEqualTo(
-                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-juego-mesa-el-frutal-mini"
+                            "/comparativas/mejores-juegos-de-mesa-4-anos/#producto-lectura-frutalito"
                     );
                     assertThat(product.ctaLabel()).isEqualTo("Ver comparativa completa");
                 });

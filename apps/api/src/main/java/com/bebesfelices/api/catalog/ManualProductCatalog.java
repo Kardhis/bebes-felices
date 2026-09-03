@@ -311,32 +311,6 @@ public class ManualProductCatalog implements ProductCatalog {
                 LocalDate.of(2026, 7, 23)
         ));
         register(new Product(
-                "juego-mesa-el-frutal-mini",
-                ProductSource.MANUAL,
-                "B08R3YTDPQ",
-                "www.amazon.es",
-                "HABA El Frutal Mini",
-                "Juego cooperativo a partir de 3 años: recoger la fruta de madera antes de que el cuervo Teo llegue a los árboles, en formato mini de 1 a 4 jugadores.",
-                3, Integer.MAX_VALUE,
-                List.of("Juguetes educativos", "Juegos de mesa"),
-                ProductStatus.ACTIVE,
-                null,
-                LocalDate.of(2026, 8, 14)
-        ));
-        register(new Product(
-                "juego-mesa-unicornio-tesoro",
-                ProductSource.MANUAL,
-                "B01MRA4YCR",
-                "www.amazon.es",
-                "HABA Unicornio Destello El Tesoro de las Nubes",
-                "Juego de dados y acumulación a partir de 3 años, con tablero a doble cara para primeros conteos, 4 unicornios de madera y 60 cristales de nube.",
-                3, Integer.MAX_VALUE,
-                List.of("Juguetes educativos", "Juegos de mesa"),
-                ProductStatus.ACTIVE,
-                null,
-                LocalDate.of(2026, 8, 14)
-        ));
-        register(new Product(
                 "juego-mesa-animal-sobre-animal",
                 ProductSource.MANUAL,
                 "B00D6J9SJQ",
@@ -361,19 +335,6 @@ public class ManualProductCatalog implements ProductCatalog {
                 ProductStatus.ACTIVE,
                 null,
                 LocalDate.of(2026, 8, 17)
-        ));
-        register(new Product(
-                "juego-mesa-unicornio-fiesta-rosalie",
-                ProductSource.MANUAL,
-                "B06XCLF568",
-                "www.amazon.es",
-                "HABA Unicornio Destello Una Fiesta para Rosalie",
-                "Juego cooperativo de recolección y movimiento a partir de 4 años, para 2 a 4 jugadores, con dados, ruleta y unicornios de madera.",
-                4, Integer.MAX_VALUE,
-                List.of("Juguetes educativos", "Juegos de mesa"),
-                ProductStatus.ACTIVE,
-                null,
-                LocalDate.of(2026, 8, 14)
         ));
         register(new Product(
                 "kit-manualidades-natural",
